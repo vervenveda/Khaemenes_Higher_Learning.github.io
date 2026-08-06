@@ -1,0 +1,21 @@
+{
+  "unit": 5,
+  "standards": [
+    "Improper integrals",
+    "Infinite intervals",
+    "Unbounded integrands",
+    "p-integrals",
+    "Comparison",
+    "Trapezoidal rule",
+    "Midpoint rule",
+    "Simpson’s rule",
+    "Error analysis"
+  ],
+  "evidence": [
+    "lesson derivations",
+    "pathway problem set",
+    "investigation",
+    "mastery check",
+    "portfolio correction"
+  ]
+}
