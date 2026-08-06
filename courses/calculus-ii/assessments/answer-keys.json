@@ -1,0 +1,3326 @@
+{
+  "questions": [
+    {
+      "id": "u01-l01-q1",
+      "unit": 1,
+      "lesson": "u01-l01",
+      "skill": "reconstructing antiderivative families and using initial conditions to determine constants",
+      "prompt": "Find F if F′(x)=6x²−4 and F(1)=5.",
+      "options": [
+        "F(x)=2x³−4x+C; F(1)=5 gives C=7, so F(x)=2x³−4x+7.",
+        "Differentiate the integrand and omit the constant of integration.",
+        "Use a geometric-series formula regardless of structure.",
+        "Treat signed change as total change without checking sign."
+      ],
+      "answer": 0,
+      "explanation": "F(x)=2x³−4x+C; F(1)=5 gives C=7, so F(x)=2x³−4x+7."
+    },
+    {
+      "id": "u01-l01-q2",
+      "unit": 1,
+      "lesson": "u01-l01",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Antiderivative Families, Constants & Initial Conditions?",
+      "options": [
+        "Differentiate the integrand and omit the constant of integration.",
+        "Use a geometric-series formula regardless of structure.",
+        "Treat signed change as total change without checking sign.",
+        "Use reconstructing antiderivative families and using initial conditions to determine constants, show the governing structure, preserve conditions and units, and verify the conclusion."
+      ],
+      "answer": 3,
+      "explanation": "Use reconstructing antiderivative families and using initial conditions to determine constants, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u01-l02-q1",
+      "unit": 1,
+      "lesson": "u01-l02",
+      "skill": "connecting derivative and integral forms of the Fundamental Theorem",
+      "prompt": "Evaluate ∫₀²(3x²+1)dx.",
+      "options": [
+        "Differentiate the integrand and omit the constant of integration.",
+        "Use a geometric-series formula regardless of structure.",
+        "Treat signed change as total change without checking sign.",
+        "An antiderivative is x³+x; the value is 10."
+      ],
+      "answer": 3,
+      "explanation": "An antiderivative is x³+x; the value is 10."
+    },
+    {
+      "id": "u01-l02-q2",
+      "unit": 1,
+      "lesson": "u01-l02",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in The Fundamental Theorem as an Evaluation and Accumulation Principle?",
+      "options": [
+        "Use a geometric-series formula regardless of structure.",
+        "Treat signed change as total change without checking sign.",
+        "Use connecting derivative and integral forms of the Fundamental Theorem, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Differentiate the integrand and omit the constant of integration."
+      ],
+      "answer": 2,
+      "explanation": "Use connecting derivative and integral forms of the Fundamental Theorem, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u01-l03-q1",
+      "unit": 1,
+      "lesson": "u01-l03",
+      "skill": "distinguishing signed accumulation from total accumulation and preserving units",
+      "prompt": "A velocity is v(t)=3t−6 on 0≤t≤4. Find displacement.",
+      "options": [
+        "Use a geometric-series formula regardless of structure.",
+        "Treat signed change as total change without checking sign.",
+        "∫₀⁴(3t−6)dt=0, so displacement is 0.",
+        "Differentiate the integrand and omit the constant of integration."
+      ],
+      "answer": 2,
+      "explanation": "∫₀⁴(3t−6)dt=0, so displacement is 0."
+    },
+    {
+      "id": "u01-l03-q2",
+      "unit": 1,
+      "lesson": "u01-l03",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Net Change, Total Change & Units?",
+      "options": [
+        "Treat signed change as total change without checking sign.",
+        "Use distinguishing signed accumulation from total accumulation and preserving units, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Differentiate the integrand and omit the constant of integration.",
+        "Use a geometric-series formula regardless of structure."
+      ],
+      "answer": 1,
+      "explanation": "Use distinguishing signed accumulation from total accumulation and preserving units, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u01-l04-q1",
+      "unit": 1,
+      "lesson": "u01-l04",
+      "skill": "identifying inner-function and differential structure before integrating",
+      "prompt": "Evaluate ∫2x(x²+5)^4 dx.",
+      "options": [
+        "Treat signed change as total change without checking sign.",
+        "Let u=x²+5; the integral is u⁵/5+C=(x²+5)⁵/5+C.",
+        "Differentiate the integrand and omit the constant of integration.",
+        "Use a geometric-series formula regardless of structure."
+      ],
+      "answer": 1,
+      "explanation": "Let u=x²+5; the integral is u⁵/5+C=(x²+5)⁵/5+C."
+    },
+    {
+      "id": "u01-l04-q2",
+      "unit": 1,
+      "lesson": "u01-l04",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Substitution with Algebraic Structure?",
+      "options": [
+        "Use identifying inner-function and differential structure before integrating, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Differentiate the integrand and omit the constant of integration.",
+        "Use a geometric-series formula regardless of structure.",
+        "Treat signed change as total change without checking sign."
+      ],
+      "answer": 0,
+      "explanation": "Use identifying inner-function and differential structure before integrating, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u01-l05-q1",
+      "unit": 1,
+      "lesson": "u01-l05",
+      "skill": "recognizing reverse-chain patterns in transcendental integrals",
+      "prompt": "Evaluate ∫6x e^{3x²}dx.",
+      "options": [
+        "Let u=3x²; the result is e^{3x²}+C.",
+        "Differentiate the integrand and omit the constant of integration.",
+        "Use a geometric-series formula regardless of structure.",
+        "Treat signed change as total change without checking sign."
+      ],
+      "answer": 0,
+      "explanation": "Let u=3x²; the result is e^{3x²}+C."
+    },
+    {
+      "id": "u01-l05-q2",
+      "unit": 1,
+      "lesson": "u01-l05",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Substitution with Exponential, Logarithmic & Trigonometric Forms?",
+      "options": [
+        "Differentiate the integrand and omit the constant of integration.",
+        "Use a geometric-series formula regardless of structure.",
+        "Treat signed change as total change without checking sign.",
+        "Use recognizing reverse-chain patterns in transcendental integrals, show the governing structure, preserve conditions and units, and verify the conclusion."
+      ],
+      "answer": 3,
+      "explanation": "Use recognizing reverse-chain patterns in transcendental integrals, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u01-l06-q1",
+      "unit": 1,
+      "lesson": "u01-l06",
+      "skill": "selecting simplification, substitution, direct integration, or a later Calculus II technique",
+      "prompt": "Choose a first step for ∫(x²+2x)/x dx.",
+      "options": [
+        "Differentiate the integrand and omit the constant of integration.",
+        "Use a geometric-series formula regardless of structure.",
+        "Treat signed change as total change without checking sign.",
+        "Simplify to ∫(x+2)dx before integrating."
+      ],
+      "answer": 3,
+      "explanation": "Simplify to ∫(x+2)dx before integrating."
+    },
+    {
+      "id": "u01-l06-q2",
+      "unit": 1,
+      "lesson": "u01-l06",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Integration Strategy Triage?",
+      "options": [
+        "Use a geometric-series formula regardless of structure.",
+        "Treat signed change as total change without checking sign.",
+        "Use selecting simplification, substitution, direct integration, or a later Calculus II technique, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Differentiate the integrand and omit the constant of integration."
+      ],
+      "answer": 2,
+      "explanation": "Use selecting simplification, substitution, direct integration, or a later Calculus II technique, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u01-l07-q1",
+      "unit": 1,
+      "lesson": "u01-l07",
+      "skill": "coordinating exact work, numerical checks, graph evidence, and written justification",
+      "prompt": "A student claims ∫2x/(x²+1)dx=2ln(x²+1)+C. Diagnose the error.",
+      "options": [
+        "Use a geometric-series formula regardless of structure.",
+        "Treat signed change as total change without checking sign.",
+        "The substitution differential is 2x dx, so the coefficient should be 1: ln(x²+1)+C.",
+        "Differentiate the integrand and omit the constant of integration."
+      ],
+      "answer": 2,
+      "explanation": "The substitution differential is 2x dx, so the coefficient should be 1: ln(x²+1)+C."
+    },
+    {
+      "id": "u01-l07-q2",
+      "unit": 1,
+      "lesson": "u01-l07",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Readiness Synthesis, Error Analysis & Technology Verification?",
+      "options": [
+        "Treat signed change as total change without checking sign.",
+        "Use coordinating exact work, numerical checks, graph evidence, and written justification, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Differentiate the integrand and omit the constant of integration.",
+        "Use a geometric-series formula regardless of structure."
+      ],
+      "answer": 1,
+      "explanation": "Use coordinating exact work, numerical checks, graph evidence, and written justification, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u02-l01-q1",
+      "unit": 2,
+      "lesson": "u02-l01",
+      "skill": "deriving and applying integration by parts from the product rule",
+      "prompt": "Evaluate ∫x e^x dx.",
+      "options": [
+        "Drop the boundary term in a definite integral.",
+        "Take u=x and dv=e^x dx; the result is xe^x−e^x+C=e^x(x−1)+C.",
+        "Differentiate both factors and multiply the results.",
+        "Choose u so that differentiation increases complexity."
+      ],
+      "answer": 1,
+      "explanation": "Take u=x and dv=e^x dx; the result is xe^x−e^x+C=e^x(x−1)+C."
+    },
+    {
+      "id": "u02-l01-q2",
+      "unit": 2,
+      "lesson": "u02-l01",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Reversing the Product Rule?",
+      "options": [
+        "Use deriving and applying integration by parts from the product rule, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Differentiate both factors and multiply the results.",
+        "Choose u so that differentiation increases complexity.",
+        "Drop the boundary term in a definite integral."
+      ],
+      "answer": 0,
+      "explanation": "Use deriving and applying integration by parts from the product rule, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u02-l02-q1",
+      "unit": 2,
+      "lesson": "u02-l02",
+      "skill": "selecting factors so differentiation simplifies and integration remains possible",
+      "prompt": "Evaluate ∫ln x dx.",
+      "options": [
+        "Use u=ln x and dv=dx; result xln x−x+C.",
+        "Differentiate both factors and multiply the results.",
+        "Choose u so that differentiation increases complexity.",
+        "Drop the boundary term in a definite integral."
+      ],
+      "answer": 0,
+      "explanation": "Use u=ln x and dv=dx; result xln x−x+C."
+    },
+    {
+      "id": "u02-l02-q2",
+      "unit": 2,
+      "lesson": "u02-l02",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Choosing u and dv Strategically?",
+      "options": [
+        "Differentiate both factors and multiply the results.",
+        "Choose u so that differentiation increases complexity.",
+        "Drop the boundary term in a definite integral.",
+        "Use selecting factors so differentiation simplifies and integration remains possible, show the governing structure, preserve conditions and units, and verify the conclusion."
+      ],
+      "answer": 3,
+      "explanation": "Use selecting factors so differentiation simplifies and integration remains possible, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u02-l03-q1",
+      "unit": 2,
+      "lesson": "u02-l03",
+      "skill": "organizing repeated product-rule reversal efficiently",
+      "prompt": "Evaluate ∫x²e^x dx.",
+      "options": [
+        "Differentiate both factors and multiply the results.",
+        "Choose u so that differentiation increases complexity.",
+        "Drop the boundary term in a definite integral.",
+        "e^x(x²−2x+2)+C."
+      ],
+      "answer": 3,
+      "explanation": "e^x(x²−2x+2)+C."
+    },
+    {
+      "id": "u02-l03-q2",
+      "unit": 2,
+      "lesson": "u02-l03",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Repeated and Tabular Integration by Parts?",
+      "options": [
+        "Choose u so that differentiation increases complexity.",
+        "Drop the boundary term in a definite integral.",
+        "Use organizing repeated product-rule reversal efficiently, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Differentiate both factors and multiply the results."
+      ],
+      "answer": 2,
+      "explanation": "Use organizing repeated product-rule reversal efficiently, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u02-l04-q1",
+      "unit": 2,
+      "lesson": "u02-l04",
+      "skill": "tracking boundary terms and exact values in definite products",
+      "prompt": "Evaluate ∫₀¹ x e^x dx.",
+      "options": [
+        "Choose u so that differentiation increases complexity.",
+        "Drop the boundary term in a definite integral.",
+        "[e^x(x−1)]₀¹=1.",
+        "Differentiate both factors and multiply the results."
+      ],
+      "answer": 2,
+      "explanation": "[e^x(x−1)]₀¹=1."
+    },
+    {
+      "id": "u02-l04-q2",
+      "unit": 2,
+      "lesson": "u02-l04",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Definite Integration by Parts?",
+      "options": [
+        "Drop the boundary term in a definite integral.",
+        "Use tracking boundary terms and exact values in definite products, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Differentiate both factors and multiply the results.",
+        "Choose u so that differentiation increases complexity."
+      ],
+      "answer": 1,
+      "explanation": "Use tracking boundary terms and exact values in definite products, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u02-l05-q1",
+      "unit": 2,
+      "lesson": "u02-l05",
+      "skill": "building recurrences that lower powers or complexity",
+      "prompt": "Derive I_n=∫x^n e^x dx in terms of I_{n−1}.",
+      "options": [
+        "Drop the boundary term in a definite integral.",
+        "I_n=x^n e^x−nI_{n−1}.",
+        "Differentiate both factors and multiply the results.",
+        "Choose u so that differentiation increases complexity."
+      ],
+      "answer": 1,
+      "explanation": "I_n=x^n e^x−nI_{n−1}."
+    },
+    {
+      "id": "u02-l05-q2",
+      "unit": 2,
+      "lesson": "u02-l05",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Reduction Formulas & Recursive Integrals?",
+      "options": [
+        "Use building recurrences that lower powers or complexity, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Differentiate both factors and multiply the results.",
+        "Choose u so that differentiation increases complexity.",
+        "Drop the boundary term in a definite integral."
+      ],
+      "answer": 0,
+      "explanation": "Use building recurrences that lower powers or complexity, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u02-l06-q1",
+      "unit": 2,
+      "lesson": "u02-l06",
+      "skill": "solving integrals that return to themselves after repeated integration by parts",
+      "prompt": "Evaluate ∫e^x cos x dx.",
+      "options": [
+        "(e^x/2)(sin x+cos x)+C.",
+        "Differentiate both factors and multiply the results.",
+        "Choose u so that differentiation increases complexity.",
+        "Drop the boundary term in a definite integral."
+      ],
+      "answer": 0,
+      "explanation": "(e^x/2)(sin x+cos x)+C."
+    },
+    {
+      "id": "u02-l06-q2",
+      "unit": 2,
+      "lesson": "u02-l06",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Cyclic Exponential–Trigonometric Integrals?",
+      "options": [
+        "Differentiate both factors and multiply the results.",
+        "Choose u so that differentiation increases complexity.",
+        "Drop the boundary term in a definite integral.",
+        "Use solving integrals that return to themselves after repeated integration by parts, show the governing structure, preserve conditions and units, and verify the conclusion."
+      ],
+      "answer": 3,
+      "explanation": "Use solving integrals that return to themselves after repeated integration by parts, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u02-l07-q1",
+      "unit": 2,
+      "lesson": "u02-l07",
+      "skill": "defending method choice and validating integration-by-parts results",
+      "prompt": "Evaluate ∫₁^e ln x dx and interpret the signed area.",
+      "options": [
+        "Differentiate both factors and multiply the results.",
+        "Choose u so that differentiation increases complexity.",
+        "Drop the boundary term in a definite integral.",
+        "[xln x−x]₁^e=1 square unit."
+      ],
+      "answer": 3,
+      "explanation": "[xln x−x]₁^e=1 square unit."
+    },
+    {
+      "id": "u02-l07-q2",
+      "unit": 2,
+      "lesson": "u02-l07",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Applications, Method Comparison & Proof of Verification?",
+      "options": [
+        "Choose u so that differentiation increases complexity.",
+        "Drop the boundary term in a definite integral.",
+        "Use defending method choice and validating integration-by-parts results, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Differentiate both factors and multiply the results."
+      ],
+      "answer": 2,
+      "explanation": "Use defending method choice and validating integration-by-parts results, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u03-l01-q1",
+      "unit": 3,
+      "lesson": "u03-l01",
+      "skill": "using odd-power separation or even-power reduction",
+      "prompt": "Evaluate ∫sin³x cos²x dx.",
+      "options": [
+        "Use x=a tanθ for every radical form.",
+        "Back-substitute without checking the reference-triangle signs.",
+        "Write sin³x=(1−cos²x)sin x and use u=cos x; result −cos³x/3+cos⁵x/5+C.",
+        "Replace every trigonometric power by 1."
+      ],
+      "answer": 2,
+      "explanation": "Write sin³x=(1−cos²x)sin x and use u=cos x; result −cos³x/3+cos⁵x/5+C."
+    },
+    {
+      "id": "u03-l01-q2",
+      "unit": 3,
+      "lesson": "u03-l01",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Powers of Sine and Cosine?",
+      "options": [
+        "Back-substitute without checking the reference-triangle signs.",
+        "Use using odd-power separation or even-power reduction, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Replace every trigonometric power by 1.",
+        "Use x=a tanθ for every radical form."
+      ],
+      "answer": 1,
+      "explanation": "Use using odd-power separation or even-power reduction, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u03-l02-q1",
+      "unit": 3,
+      "lesson": "u03-l02",
+      "skill": "using sec²x or sec x tan x factors and identity conversion",
+      "prompt": "Evaluate ∫tan³x sec²x dx.",
+      "options": [
+        "Back-substitute without checking the reference-triangle signs.",
+        "Let u=tan x; result tan⁴x/4+C.",
+        "Replace every trigonometric power by 1.",
+        "Use x=a tanθ for every radical form."
+      ],
+      "answer": 1,
+      "explanation": "Let u=tan x; result tan⁴x/4+C."
+    },
+    {
+      "id": "u03-l02-q2",
+      "unit": 3,
+      "lesson": "u03-l02",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Powers of Tangent and Secant?",
+      "options": [
+        "Use using sec²x or sec x tan x factors and identity conversion, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Replace every trigonometric power by 1.",
+        "Use x=a tanθ for every radical form.",
+        "Back-substitute without checking the reference-triangle signs."
+      ],
+      "answer": 0,
+      "explanation": "Use using sec²x or sec x tan x factors and identity conversion, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u03-l03-q1",
+      "unit": 3,
+      "lesson": "u03-l03",
+      "skill": "rewriting products before integration",
+      "prompt": "Evaluate ∫sin(3x)cos(2x)dx.",
+      "options": [
+        "Use product-to-sum: −cos(5x)/10−cos x/2+C.",
+        "Replace every trigonometric power by 1.",
+        "Use x=a tanθ for every radical form.",
+        "Back-substitute without checking the reference-triangle signs."
+      ],
+      "answer": 0,
+      "explanation": "Use product-to-sum: −cos(5x)/10−cos x/2+C."
+    },
+    {
+      "id": "u03-l03-q2",
+      "unit": 3,
+      "lesson": "u03-l03",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Products, Multiple Angles & Identity Selection?",
+      "options": [
+        "Replace every trigonometric power by 1.",
+        "Use x=a tanθ for every radical form.",
+        "Back-substitute without checking the reference-triangle signs.",
+        "Use rewriting products before integration, show the governing structure, preserve conditions and units, and verify the conclusion."
+      ],
+      "answer": 3,
+      "explanation": "Use rewriting products before integration, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u03-l04-q1",
+      "unit": 3,
+      "lesson": "u03-l04",
+      "skill": "using x=a sin θ and a reference triangle",
+      "prompt": "Evaluate ∫dx/√(9−x²).",
+      "options": [
+        "Replace every trigonometric power by 1.",
+        "Use x=a tanθ for every radical form.",
+        "Back-substitute without checking the reference-triangle signs.",
+        "arcsin(x/3)+C."
+      ],
+      "answer": 3,
+      "explanation": "arcsin(x/3)+C."
+    },
+    {
+      "id": "u03-l04-q2",
+      "unit": 3,
+      "lesson": "u03-l04",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Substitution for √(a²−x²)?",
+      "options": [
+        "Use x=a tanθ for every radical form.",
+        "Back-substitute without checking the reference-triangle signs.",
+        "Use using x=a sin θ and a reference triangle, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Replace every trigonometric power by 1."
+      ],
+      "answer": 2,
+      "explanation": "Use using x=a sin θ and a reference triangle, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u03-l05-q1",
+      "unit": 3,
+      "lesson": "u03-l05",
+      "skill": "using x=a tan θ and secant structure",
+      "prompt": "Evaluate ∫dx/(x²+4)^{3/2}.",
+      "options": [
+        "Use x=a tanθ for every radical form.",
+        "Back-substitute without checking the reference-triangle signs.",
+        "x/(4√(x²+4))+C.",
+        "Replace every trigonometric power by 1."
+      ],
+      "answer": 2,
+      "explanation": "x/(4√(x²+4))+C."
+    },
+    {
+      "id": "u03-l05-q2",
+      "unit": 3,
+      "lesson": "u03-l05",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Substitution for √(a²+x²)?",
+      "options": [
+        "Back-substitute without checking the reference-triangle signs.",
+        "Use using x=a tan θ and secant structure, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Replace every trigonometric power by 1.",
+        "Use x=a tanθ for every radical form."
+      ],
+      "answer": 1,
+      "explanation": "Use using x=a tan θ and secant structure, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u03-l06-q1",
+      "unit": 3,
+      "lesson": "u03-l06",
+      "skill": "using x=a sec θ and careful domains",
+      "prompt": "Evaluate ∫dx/√(x²−25).",
+      "options": [
+        "Back-substitute without checking the reference-triangle signs.",
+        "ln|x+√(x²−25)|+C on |x|>5.",
+        "Replace every trigonometric power by 1.",
+        "Use x=a tanθ for every radical form."
+      ],
+      "answer": 1,
+      "explanation": "ln|x+√(x²−25)|+C on |x|>5."
+    },
+    {
+      "id": "u03-l06-q2",
+      "unit": 3,
+      "lesson": "u03-l06",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Substitution for √(x²−a²)?",
+      "options": [
+        "Use using x=a sec θ and careful domains, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Replace every trigonometric power by 1.",
+        "Use x=a tanθ for every radical form.",
+        "Back-substitute without checking the reference-triangle signs."
+      ],
+      "answer": 0,
+      "explanation": "Use using x=a sec θ and careful domains, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u03-l07-q1",
+      "unit": 3,
+      "lesson": "u03-l07",
+      "skill": "reconstructing x-forms and checking interval conditions",
+      "prompt": "For x=3tanθ, express secθ in x.",
+      "options": [
+        "secθ=√(x²+9)/3 on the principal interval.",
+        "Replace every trigonometric power by 1.",
+        "Use x=a tanθ for every radical form.",
+        "Back-substitute without checking the reference-triangle signs."
+      ],
+      "answer": 0,
+      "explanation": "secθ=√(x²+9)/3 on the principal interval."
+    },
+    {
+      "id": "u03-l07-q2",
+      "unit": 3,
+      "lesson": "u03-l07",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Back-Substitution, Domain Analysis & Verification?",
+      "options": [
+        "Replace every trigonometric power by 1.",
+        "Use x=a tanθ for every radical form.",
+        "Back-substitute without checking the reference-triangle signs.",
+        "Use reconstructing x-forms and checking interval conditions, show the governing structure, preserve conditions and units, and verify the conclusion."
+      ],
+      "answer": 3,
+      "explanation": "Use reconstructing x-forms and checking interval conditions, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u04-l01-q1",
+      "unit": 4,
+      "lesson": "u04-l01",
+      "skill": "separating polynomial and proper-rational parts",
+      "prompt": "Evaluate ∫(x³+1)/(x²+1) dx.",
+      "options": [
+        "Decompose before polynomial division even when the fraction is improper.",
+        "Use constants over irreducible quadratic factors instead of linear numerators.",
+        "Remove absolute values from logarithms without a domain argument.",
+        "Divide: x+(1−x)/(x²+1); result x²/2+arctan x−(1/2)ln(x²+1)+C."
+      ],
+      "answer": 3,
+      "explanation": "Divide: x+(1−x)/(x²+1); result x²/2+arctan x−(1/2)ln(x²+1)+C."
+    },
+    {
+      "id": "u04-l01-q2",
+      "unit": 4,
+      "lesson": "u04-l01",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Polynomial Division Before Decomposition?",
+      "options": [
+        "Use constants over irreducible quadratic factors instead of linear numerators.",
+        "Remove absolute values from logarithms without a domain argument.",
+        "Use separating polynomial and proper-rational parts, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Decompose before polynomial division even when the fraction is improper."
+      ],
+      "answer": 2,
+      "explanation": "Use separating polynomial and proper-rational parts, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u04-l02-q1",
+      "unit": 4,
+      "lesson": "u04-l02",
+      "skill": "decomposing into simple logarithmic pieces",
+      "prompt": "Evaluate ∫1/[(x−1)(x+2)]dx.",
+      "options": [
+        "Use constants over irreducible quadratic factors instead of linear numerators.",
+        "Remove absolute values from logarithms without a domain argument.",
+        "(1/3)ln|x−1|−(1/3)ln|x+2|+C.",
+        "Decompose before polynomial division even when the fraction is improper."
+      ],
+      "answer": 2,
+      "explanation": "(1/3)ln|x−1|−(1/3)ln|x+2|+C."
+    },
+    {
+      "id": "u04-l02-q2",
+      "unit": 4,
+      "lesson": "u04-l02",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Distinct Linear Factors?",
+      "options": [
+        "Remove absolute values from logarithms without a domain argument.",
+        "Use decomposing into simple logarithmic pieces, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Decompose before polynomial division even when the fraction is improper.",
+        "Use constants over irreducible quadratic factors instead of linear numerators."
+      ],
+      "answer": 1,
+      "explanation": "Use decomposing into simple logarithmic pieces, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u04-l03-q1",
+      "unit": 4,
+      "lesson": "u04-l03",
+      "skill": "including every power through the multiplicity",
+      "prompt": "Decompose 1/[x(x−1)²].",
+      "options": [
+        "Remove absolute values from logarithms without a domain argument.",
+        "1/x−1/(x−1)+1/(x−1)².",
+        "Decompose before polynomial division even when the fraction is improper.",
+        "Use constants over irreducible quadratic factors instead of linear numerators."
+      ],
+      "answer": 1,
+      "explanation": "1/x−1/(x−1)+1/(x−1)²."
+    },
+    {
+      "id": "u04-l03-q2",
+      "unit": 4,
+      "lesson": "u04-l03",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Repeated Linear Factors?",
+      "options": [
+        "Use including every power through the multiplicity, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Decompose before polynomial division even when the fraction is improper.",
+        "Use constants over irreducible quadratic factors instead of linear numerators.",
+        "Remove absolute values from logarithms without a domain argument."
+      ],
+      "answer": 0,
+      "explanation": "Use including every power through the multiplicity, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u04-l04-q1",
+      "unit": 4,
+      "lesson": "u04-l04",
+      "skill": "using linear numerators over irreducible quadratics",
+      "prompt": "Evaluate ∫(2x+3)/(x²+4)dx.",
+      "options": [
+        "ln(x²+4)+(3/2)arctan(x/2)+C.",
+        "Decompose before polynomial division even when the fraction is improper.",
+        "Use constants over irreducible quadratic factors instead of linear numerators.",
+        "Remove absolute values from logarithms without a domain argument."
+      ],
+      "answer": 0,
+      "explanation": "ln(x²+4)+(3/2)arctan(x/2)+C."
+    },
+    {
+      "id": "u04-l04-q2",
+      "unit": 4,
+      "lesson": "u04-l04",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Irreducible Quadratic Factors?",
+      "options": [
+        "Decompose before polynomial division even when the fraction is improper.",
+        "Use constants over irreducible quadratic factors instead of linear numerators.",
+        "Remove absolute values from logarithms without a domain argument.",
+        "Use using linear numerators over irreducible quadratics, show the governing structure, preserve conditions and units, and verify the conclusion."
+      ],
+      "answer": 3,
+      "explanation": "Use using linear numerators over irreducible quadratics, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u04-l05-q1",
+      "unit": 4,
+      "lesson": "u04-l05",
+      "skill": "building all required numerator layers",
+      "prompt": "State the form for (3x+1)/(x²+1)².",
+      "options": [
+        "Decompose before polynomial division even when the fraction is improper.",
+        "Use constants over irreducible quadratic factors instead of linear numerators.",
+        "Remove absolute values from logarithms without a domain argument.",
+        "It is already a single repeated-quadratic term with linear numerator."
+      ],
+      "answer": 3,
+      "explanation": "It is already a single repeated-quadratic term with linear numerator."
+    },
+    {
+      "id": "u04-l05-q2",
+      "unit": 4,
+      "lesson": "u04-l05",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Repeated Irreducible Quadratics?",
+      "options": [
+        "Use constants over irreducible quadratic factors instead of linear numerators.",
+        "Remove absolute values from logarithms without a domain argument.",
+        "Use building all required numerator layers, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Decompose before polynomial division even when the fraction is improper."
+      ],
+      "answer": 2,
+      "explanation": "Use building all required numerator layers, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u04-l06-q1",
+      "unit": 4,
+      "lesson": "u04-l06",
+      "skill": "coordinating linear and quadratic components",
+      "prompt": "Set up the decomposition of 1/[x(x²+1)].",
+      "options": [
+        "Use constants over irreducible quadratic factors instead of linear numerators.",
+        "Remove absolute values from logarithms without a domain argument.",
+        "A/x+(Bx+C)/(x²+1).",
+        "Decompose before polynomial division even when the fraction is improper."
+      ],
+      "answer": 2,
+      "explanation": "A/x+(Bx+C)/(x²+1)."
+    },
+    {
+      "id": "u04-l06-q2",
+      "unit": 4,
+      "lesson": "u04-l06",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Mixed Factorizations & Coefficient Systems?",
+      "options": [
+        "Remove absolute values from logarithms without a domain argument.",
+        "Use coordinating linear and quadratic components, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Decompose before polynomial division even when the fraction is improper.",
+        "Use constants over irreducible quadratic factors instead of linear numerators."
+      ],
+      "answer": 1,
+      "explanation": "Use coordinating linear and quadratic components, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u04-l07-q1",
+      "unit": 4,
+      "lesson": "u04-l07",
+      "skill": "using technology to check—not replace—algebraic decomposition",
+      "prompt": "A CAS returns ln(x−1)−ln(x+2) for an integral across x<1. What is missing?",
+      "options": [
+        "Remove absolute values from logarithms without a domain argument.",
+        "Absolute values and interval/domain discussion are required.",
+        "Decompose before polynomial division even when the fraction is improper.",
+        "Use constants over irreducible quadratic factors instead of linear numerators."
+      ],
+      "answer": 1,
+      "explanation": "Absolute values and interval/domain discussion are required."
+    },
+    {
+      "id": "u04-l07-q2",
+      "unit": 4,
+      "lesson": "u04-l07",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Strategy, CAS Comparison & Domain-Safe Verification?",
+      "options": [
+        "Use using technology to check—not replace—algebraic decomposition, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Decompose before polynomial division even when the fraction is improper.",
+        "Use constants over irreducible quadratic factors instead of linear numerators.",
+        "Remove absolute values from logarithms without a domain argument."
+      ],
+      "answer": 0,
+      "explanation": "Use using technology to check—not replace—algebraic decomposition, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u05-l01-q1",
+      "unit": 5,
+      "lesson": "u05-l01",
+      "skill": "defining infinite bounds through limits",
+      "prompt": "Evaluate ∫₁^∞1/x² dx.",
+      "options": [
+        "lim_{b→∞}(1−1/b)=1.",
+        "Replace infinity with a large number and declare the result exact.",
+        "Assume every positive decreasing integrand converges.",
+        "Use Simpson’s rule with an odd number of subintervals."
+      ],
+      "answer": 0,
+      "explanation": "lim_{b→∞}(1−1/b)=1."
+    },
+    {
+      "id": "u05-l01-q2",
+      "unit": 5,
+      "lesson": "u05-l01",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Infinite-Interval Improper Integrals?",
+      "options": [
+        "Replace infinity with a large number and declare the result exact.",
+        "Assume every positive decreasing integrand converges.",
+        "Use Simpson’s rule with an odd number of subintervals.",
+        "Use defining infinite bounds through limits, show the governing structure, preserve conditions and units, and verify the conclusion."
+      ],
+      "answer": 3,
+      "explanation": "Use defining infinite bounds through limits, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u05-l02-q1",
+      "unit": 5,
+      "lesson": "u05-l02",
+      "skill": "splitting at vertical singularities and taking one-sided limits",
+      "prompt": "Evaluate ∫₀¹x^{-1/2}dx.",
+      "options": [
+        "Replace infinity with a large number and declare the result exact.",
+        "Assume every positive decreasing integrand converges.",
+        "Use Simpson’s rule with an odd number of subintervals.",
+        "lim_{a→0+}[2√x]_a^1=2."
+      ],
+      "answer": 3,
+      "explanation": "lim_{a→0+}[2√x]_a^1=2."
+    },
+    {
+      "id": "u05-l02-q2",
+      "unit": 5,
+      "lesson": "u05-l02",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Unbounded Integrands on Finite Intervals?",
+      "options": [
+        "Assume every positive decreasing integrand converges.",
+        "Use Simpson’s rule with an odd number of subintervals.",
+        "Use splitting at vertical singularities and taking one-sided limits, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Replace infinity with a large number and declare the result exact."
+      ],
+      "answer": 2,
+      "explanation": "Use splitting at vertical singularities and taking one-sided limits, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u05-l03-q1",
+      "unit": 5,
+      "lesson": "u05-l03",
+      "skill": "bounding positive integrands by known convergent or divergent models",
+      "prompt": "Does ∫₁^∞1/(x²+1)dx converge?",
+      "options": [
+        "Assume every positive decreasing integrand converges.",
+        "Use Simpson’s rule with an odd number of subintervals.",
+        "Yes, because 0<1/(x²+1)<1/x².",
+        "Replace infinity with a large number and declare the result exact."
+      ],
+      "answer": 2,
+      "explanation": "Yes, because 0<1/(x²+1)<1/x²."
+    },
+    {
+      "id": "u05-l03-q2",
+      "unit": 5,
+      "lesson": "u05-l03",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Comparison for Improper Integrals?",
+      "options": [
+        "Use Simpson’s rule with an odd number of subintervals.",
+        "Use bounding positive integrands by known convergent or divergent models, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Replace infinity with a large number and declare the result exact.",
+        "Assume every positive decreasing integrand converges."
+      ],
+      "answer": 1,
+      "explanation": "Use bounding positive integrands by known convergent or divergent models, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u05-l04-q1",
+      "unit": 5,
+      "lesson": "u05-l04",
+      "skill": "using the exponent threshold for improper power integrals",
+      "prompt": "Determine ∫₁^∞x^{-3/2}dx.",
+      "options": [
+        "Use Simpson’s rule with an odd number of subintervals.",
+        "It converges to 2.",
+        "Replace infinity with a large number and declare the result exact.",
+        "Assume every positive decreasing integrand converges."
+      ],
+      "answer": 1,
+      "explanation": "It converges to 2."
+    },
+    {
+      "id": "u05-l04-q2",
+      "unit": 5,
+      "lesson": "u05-l04",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in p-Integrals & Threshold Reasoning?",
+      "options": [
+        "Use using the exponent threshold for improper power integrals, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Replace infinity with a large number and declare the result exact.",
+        "Assume every positive decreasing integrand converges.",
+        "Use Simpson’s rule with an odd number of subintervals."
+      ],
+      "answer": 0,
+      "explanation": "Use using the exponent threshold for improper power integrals, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u05-l05-q1",
+      "unit": 5,
+      "lesson": "u05-l05",
+      "skill": "approximating signed area from sampled function values",
+      "prompt": "Use T₂ for ∫₀²x²dx.",
+      "options": [
+        "Δx=1; T₂=(1/2)(0+4)+1=3.",
+        "Replace infinity with a large number and declare the result exact.",
+        "Assume every positive decreasing integrand converges.",
+        "Use Simpson’s rule with an odd number of subintervals."
+      ],
+      "answer": 0,
+      "explanation": "Δx=1; T₂=(1/2)(0+4)+1=3."
+    },
+    {
+      "id": "u05-l05-q2",
+      "unit": 5,
+      "lesson": "u05-l05",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Midpoint & Trapezoidal Rules?",
+      "options": [
+        "Replace infinity with a large number and declare the result exact.",
+        "Assume every positive decreasing integrand converges.",
+        "Use Simpson’s rule with an odd number of subintervals.",
+        "Use approximating signed area from sampled function values, show the governing structure, preserve conditions and units, and verify the conclusion."
+      ],
+      "answer": 3,
+      "explanation": "Use approximating signed area from sampled function values, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u05-l06-q1",
+      "unit": 5,
+      "lesson": "u05-l06",
+      "skill": "combining quadratic local models and recognizing requirements",
+      "prompt": "Use S₂ for ∫₀²x²dx.",
+      "options": [
+        "Replace infinity with a large number and declare the result exact.",
+        "Assume every positive decreasing integrand converges.",
+        "Use Simpson’s rule with an odd number of subintervals.",
+        "(1/3)[0+4(1)+4]=8/3, exact."
+      ],
+      "answer": 3,
+      "explanation": "(1/3)[0+4(1)+4]=8/3, exact."
+    },
+    {
+      "id": "u05-l06-q2",
+      "unit": 5,
+      "lesson": "u05-l06",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Simpson’s Rule & Error Structure?",
+      "options": [
+        "Assume every positive decreasing integrand converges.",
+        "Use Simpson’s rule with an odd number of subintervals.",
+        "Use combining quadratic local models and recognizing requirements, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Replace infinity with a large number and declare the result exact."
+      ],
+      "answer": 2,
+      "explanation": "Use combining quadratic local models and recognizing requirements, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u05-l07-q1",
+      "unit": 5,
+      "lesson": "u05-l07",
+      "skill": "selecting truncation and quadrature with reasoned error control",
+      "prompt": "Why is ∫₀¹e^{-x²}dx usually evaluated numerically?",
+      "options": [
+        "Assume every positive decreasing integrand converges.",
+        "Use Simpson’s rule with an odd number of subintervals.",
+        "It has no elementary antiderivative.",
+        "Replace infinity with a large number and declare the result exact."
+      ],
+      "answer": 2,
+      "explanation": "It has no elementary antiderivative."
+    },
+    {
+      "id": "u05-l07-q2",
+      "unit": 5,
+      "lesson": "u05-l07",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Adaptive Strategy, Nonelementary Integrals & Validation?",
+      "options": [
+        "Use Simpson’s rule with an odd number of subintervals.",
+        "Use selecting truncation and quadrature with reasoned error control, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Replace infinity with a large number and declare the result exact.",
+        "Assume every positive decreasing integrand converges."
+      ],
+      "answer": 1,
+      "explanation": "Use selecting truncation and quadrature with reasoned error control, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u06-l01-q1",
+      "unit": 6,
+      "lesson": "u06-l01",
+      "skill": "finding intersections, ordering curves, and splitting intervals",
+      "prompt": "Find the area between y=x and y=x² on [0,1].",
+      "options": [
+        "Choose a rotation method without drawing the radius and height.",
+        "∫₀¹(x−x²)dx=1/6.",
+        "Integrate top plus bottom rather than top minus bottom.",
+        "Use square units for a volume."
+      ],
+      "answer": 1,
+      "explanation": "∫₀¹(x−x²)dx=1/6."
+    },
+    {
+      "id": "u06-l01-q2",
+      "unit": 6,
+      "lesson": "u06-l01",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Area Between Curves & Intersection Analysis?",
+      "options": [
+        "Use finding intersections, ordering curves, and splitting intervals, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Integrate top plus bottom rather than top minus bottom.",
+        "Use square units for a volume.",
+        "Choose a rotation method without drawing the radius and height."
+      ],
+      "answer": 0,
+      "explanation": "Use finding intersections, ordering curves, and splitting intervals, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u06-l02-q1",
+      "unit": 6,
+      "lesson": "u06-l02",
+      "skill": "expressing volume as the integral of cross-sectional area",
+      "prompt": "A solid has square cross-sections perpendicular to x-axis over 0≤x≤2 with side x. Find V.",
+      "options": [
+        "∫₀²x²dx=8/3.",
+        "Integrate top plus bottom rather than top minus bottom.",
+        "Use square units for a volume.",
+        "Choose a rotation method without drawing the radius and height."
+      ],
+      "answer": 0,
+      "explanation": "∫₀²x²dx=8/3."
+    },
+    {
+      "id": "u06-l02-q2",
+      "unit": 6,
+      "lesson": "u06-l02",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Volumes by General Slicing?",
+      "options": [
+        "Integrate top plus bottom rather than top minus bottom.",
+        "Use square units for a volume.",
+        "Choose a rotation method without drawing the radius and height.",
+        "Use expressing volume as the integral of cross-sectional area, show the governing structure, preserve conditions and units, and verify the conclusion."
+      ],
+      "answer": 3,
+      "explanation": "Use expressing volume as the integral of cross-sectional area, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u06-l03-q1",
+      "unit": 6,
+      "lesson": "u06-l03",
+      "skill": "measuring radial cross-sections around an axis",
+      "prompt": "Rotate y=√x, 0≤x≤4, about the x-axis.",
+      "options": [
+        "Integrate top plus bottom rather than top minus bottom.",
+        "Use square units for a volume.",
+        "Choose a rotation method without drawing the radius and height.",
+        "V=π∫₀⁴x dx=8π."
+      ],
+      "answer": 3,
+      "explanation": "V=π∫₀⁴x dx=8π."
+    },
+    {
+      "id": "u06-l03-q2",
+      "unit": 6,
+      "lesson": "u06-l03",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Disks & Washers?",
+      "options": [
+        "Use square units for a volume.",
+        "Choose a rotation method without drawing the radius and height.",
+        "Use measuring radial cross-sections around an axis, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Integrate top plus bottom rather than top minus bottom."
+      ],
+      "answer": 2,
+      "explanation": "Use measuring radial cross-sections around an axis, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u06-l04-q1",
+      "unit": 6,
+      "lesson": "u06-l04",
+      "skill": "using radius-times-height when shells simplify the setup",
+      "prompt": "Rotate y=x², 0≤x≤1, about the y-axis.",
+      "options": [
+        "Use square units for a volume.",
+        "Choose a rotation method without drawing the radius and height.",
+        "V=2π∫₀¹x·x²dx=π/2.",
+        "Integrate top plus bottom rather than top minus bottom."
+      ],
+      "answer": 2,
+      "explanation": "V=2π∫₀¹x·x²dx=π/2."
+    },
+    {
+      "id": "u06-l04-q2",
+      "unit": 6,
+      "lesson": "u06-l04",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Cylindrical Shells?",
+      "options": [
+        "Choose a rotation method without drawing the radius and height.",
+        "Use using radius-times-height when shells simplify the setup, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Integrate top plus bottom rather than top minus bottom.",
+        "Use square units for a volume."
+      ],
+      "answer": 1,
+      "explanation": "Use using radius-times-height when shells simplify the setup, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u06-l05-q1",
+      "unit": 6,
+      "lesson": "u06-l05",
+      "skill": "accumulating differential distance along a smooth curve",
+      "prompt": "Find the length of y=(2/3)x^{3/2} from 0 to 1.",
+      "options": [
+        "Choose a rotation method without drawing the radius and height.",
+        "y′=√x; L=∫₀¹√(1+x)dx=(2/3)(2√2−1).",
+        "Integrate top plus bottom rather than top minus bottom.",
+        "Use square units for a volume."
+      ],
+      "answer": 1,
+      "explanation": "y′=√x; L=∫₀¹√(1+x)dx=(2/3)(2√2−1)."
+    },
+    {
+      "id": "u06-l05-q2",
+      "unit": 6,
+      "lesson": "u06-l05",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Arc Length?",
+      "options": [
+        "Use accumulating differential distance along a smooth curve, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Integrate top plus bottom rather than top minus bottom.",
+        "Use square units for a volume.",
+        "Choose a rotation method without drawing the radius and height."
+      ],
+      "answer": 0,
+      "explanation": "Use accumulating differential distance along a smooth curve, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u06-l06-q1",
+      "unit": 6,
+      "lesson": "u06-l06",
+      "skill": "accumulating circumference times differential arc length",
+      "prompt": "Rotate y=x, 0≤x≤1, about the x-axis.",
+      "options": [
+        "S=2π∫₀¹x√2 dx=π√2.",
+        "Integrate top plus bottom rather than top minus bottom.",
+        "Use square units for a volume.",
+        "Choose a rotation method without drawing the radius and height."
+      ],
+      "answer": 0,
+      "explanation": "S=2π∫₀¹x√2 dx=π√2."
+    },
+    {
+      "id": "u06-l06-q2",
+      "unit": 6,
+      "lesson": "u06-l06",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Surface Area of Revolution?",
+      "options": [
+        "Integrate top plus bottom rather than top minus bottom.",
+        "Use square units for a volume.",
+        "Choose a rotation method without drawing the radius and height.",
+        "Use accumulating circumference times differential arc length, show the governing structure, preserve conditions and units, and verify the conclusion."
+      ],
+      "answer": 3,
+      "explanation": "Use accumulating circumference times differential arc length, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u06-l07-q1",
+      "unit": 6,
+      "lesson": "u06-l07",
+      "skill": "defending bounds, method, orientation, and reasonableness",
+      "prompt": "Which method is usually simpler for rotating y=x², 0≤x≤1, about y-axis?",
+      "options": [
+        "Integrate top plus bottom rather than top minus bottom.",
+        "Use square units for a volume.",
+        "Choose a rotation method without drawing the radius and height.",
+        "Cylindrical shells in x avoid solving x=√y."
+      ],
+      "answer": 3,
+      "explanation": "Cylindrical shells in x avoid solving x=√y."
+    },
+    {
+      "id": "u06-l07-q2",
+      "unit": 6,
+      "lesson": "u06-l07",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Method Selection, Units & Geometric Verification?",
+      "options": [
+        "Use square units for a volume.",
+        "Choose a rotation method without drawing the radius and height.",
+        "Use defending bounds, method, orientation, and reasonableness, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Integrate top plus bottom rather than top minus bottom."
+      ],
+      "answer": 2,
+      "explanation": "Use defending bounds, method, orientation, and reasonableness, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u07-l01-q1",
+      "unit": 7,
+      "lesson": "u07-l01",
+      "skill": "integrating force over displacement",
+      "prompt": "A spring with k=20 N/m is stretched from 0.1 m to 0.3 m. Find work.",
+      "options": [
+        "Ignore density and dimensional units.",
+        "Treat a probability density value as a probability without integrating.",
+        "∫_.1^.3 20x dx=0.8 J.",
+        "Use constant force when the force varies with position."
+      ],
+      "answer": 2,
+      "explanation": "∫_.1^.3 20x dx=0.8 J."
+    },
+    {
+      "id": "u07-l01-q2",
+      "unit": 7,
+      "lesson": "u07-l01",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Work by a Variable Force & Hooke’s Law?",
+      "options": [
+        "Treat a probability density value as a probability without integrating.",
+        "Use integrating force over displacement, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Use constant force when the force varies with position.",
+        "Ignore density and dimensional units."
+      ],
+      "answer": 1,
+      "explanation": "Use integrating force over displacement, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u07-l02-q1",
+      "unit": 7,
+      "lesson": "u07-l02",
+      "skill": "slicing fluid by depth and multiplying weight by lift distance",
+      "prompt": "A cylindrical tank of radius 1 m and height 2 m is full of water; pump to the top. Set up work.",
+      "options": [
+        "Treat a probability density value as a probability without integrating.",
+        "W=9800π∫₀²(2−y)dy joules.",
+        "Use constant force when the force varies with position.",
+        "Ignore density and dimensional units."
+      ],
+      "answer": 1,
+      "explanation": "W=9800π∫₀²(2−y)dy joules."
+    },
+    {
+      "id": "u07-l02-q2",
+      "unit": 7,
+      "lesson": "u07-l02",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Pumping Fluids & Distributed Lifting?",
+      "options": [
+        "Use slicing fluid by depth and multiplying weight by lift distance, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Use constant force when the force varies with position.",
+        "Ignore density and dimensional units.",
+        "Treat a probability density value as a probability without integrating."
+      ],
+      "answer": 0,
+      "explanation": "Use slicing fluid by depth and multiplying weight by lift distance, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u07-l03-q1",
+      "unit": 7,
+      "lesson": "u07-l03",
+      "skill": "integrating pressure times width at depth",
+      "prompt": "A vertical 2 m by 3 m plate has its top at water surface. Find force.",
+      "options": [
+        "F=9800·2∫₀³y dy=88200 N.",
+        "Use constant force when the force varies with position.",
+        "Ignore density and dimensional units.",
+        "Treat a probability density value as a probability without integrating."
+      ],
+      "answer": 0,
+      "explanation": "F=9800·2∫₀³y dy=88200 N."
+    },
+    {
+      "id": "u07-l03-q2",
+      "unit": 7,
+      "lesson": "u07-l03",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Hydrostatic Force on Submerged Surfaces?",
+      "options": [
+        "Use constant force when the force varies with position.",
+        "Ignore density and dimensional units.",
+        "Treat a probability density value as a probability without integrating.",
+        "Use integrating pressure times width at depth, show the governing structure, preserve conditions and units, and verify the conclusion."
+      ],
+      "answer": 3,
+      "explanation": "Use integrating pressure times width at depth, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u07-l04-q1",
+      "unit": 7,
+      "lesson": "u07-l04",
+      "skill": "using weighted averages of distributed mass",
+      "prompt": "A rod on [0,2] has density ρ(x)=x+1. Find mass.",
+      "options": [
+        "Use constant force when the force varies with position.",
+        "Ignore density and dimensional units.",
+        "Treat a probability density value as a probability without integrating.",
+        "m=∫₀²(x+1)dx=4."
+      ],
+      "answer": 3,
+      "explanation": "m=∫₀²(x+1)dx=4."
+    },
+    {
+      "id": "u07-l04-q2",
+      "unit": 7,
+      "lesson": "u07-l04",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Moments, Centroids & Centers of Mass?",
+      "options": [
+        "Ignore density and dimensional units.",
+        "Treat a probability density value as a probability without integrating.",
+        "Use using weighted averages of distributed mass, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Use constant force when the force varies with position."
+      ],
+      "answer": 2,
+      "explanation": "Use using weighted averages of distributed mass, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u07-l05-q1",
+      "unit": 7,
+      "lesson": "u07-l05",
+      "skill": "using nonnegative integrals of total area one",
+      "prompt": "For f(x)=2x on [0,1], find P(X≤1/2).",
+      "options": [
+        "Ignore density and dimensional units.",
+        "Treat a probability density value as a probability without integrating.",
+        "∫₀^{1/2}2x dx=1/4.",
+        "Use constant force when the force varies with position."
+      ],
+      "answer": 2,
+      "explanation": "∫₀^{1/2}2x dx=1/4."
+    },
+    {
+      "id": "u07-l05-q2",
+      "unit": 7,
+      "lesson": "u07-l05",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Probability Density Functions?",
+      "options": [
+        "Treat a probability density value as a probability without integrating.",
+        "Use using nonnegative integrals of total area one, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Use constant force when the force varies with position.",
+        "Ignore density and dimensional units."
+      ],
+      "answer": 1,
+      "explanation": "Use using nonnegative integrals of total area one, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u07-l06-q1",
+      "unit": 7,
+      "lesson": "u07-l06",
+      "skill": "integrating outcomes weighted by probability density",
+      "prompt": "For f(x)=2x on [0,1], find E[X].",
+      "options": [
+        "Treat a probability density value as a probability without integrating.",
+        "∫₀¹2x²dx=2/3.",
+        "Use constant force when the force varies with position.",
+        "Ignore density and dimensional units."
+      ],
+      "answer": 1,
+      "explanation": "∫₀¹2x²dx=2/3."
+    },
+    {
+      "id": "u07-l06-q2",
+      "unit": 7,
+      "lesson": "u07-l06",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Expected Value, Variance & Risk Interpretation?",
+      "options": [
+        "Use integrating outcomes weighted by probability density, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Use constant force when the force varies with position.",
+        "Ignore density and dimensional units.",
+        "Treat a probability density value as a probability without integrating."
+      ],
+      "answer": 0,
+      "explanation": "Use integrating outcomes weighted by probability density, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u07-l07-q1",
+      "unit": 7,
+      "lesson": "u07-l07",
+      "skill": "documenting geometry, density, units, uncertainty, and limitations",
+      "prompt": "A pumping model assumes constant density. Name one situation where this may fail.",
+      "options": [
+        "Temperature or concentration gradients can make density vary with depth.",
+        "Use constant force when the force varies with position.",
+        "Ignore density and dimensional units.",
+        "Treat a probability density value as a probability without integrating."
+      ],
+      "answer": 0,
+      "explanation": "Temperature or concentration gradients can make density vary with depth."
+    },
+    {
+      "id": "u07-l07-q2",
+      "unit": 7,
+      "lesson": "u07-l07",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Engineering Model Assumptions, Sensitivity & Reporting?",
+      "options": [
+        "Use constant force when the force varies with position.",
+        "Ignore density and dimensional units.",
+        "Treat a probability density value as a probability without integrating.",
+        "Use documenting geometry, density, units, uncertainty, and limitations, show the governing structure, preserve conditions and units, and verify the conclusion."
+      ],
+      "answer": 3,
+      "explanation": "Use documenting geometry, density, units, uncertainty, and limitations, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u08-l01-q1",
+      "unit": 8,
+      "lesson": "u08-l01",
+      "skill": "reading solution behavior without first solving symbolically",
+      "prompt": "For y′=y(2−y), identify equilibria.",
+      "options": [
+        "Solve a differential equation without an initial condition and claim uniqueness.",
+        "Use Euler’s method without reporting the step size.",
+        "Interpret every equilibrium as stable.",
+        "y=0 and y=2."
+      ],
+      "answer": 3,
+      "explanation": "y=0 and y=2."
+    },
+    {
+      "id": "u08-l01-q2",
+      "unit": 8,
+      "lesson": "u08-l01",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Direction Fields, Equilibria & Qualitative Behavior?",
+      "options": [
+        "Use Euler’s method without reporting the step size.",
+        "Interpret every equilibrium as stable.",
+        "Use reading solution behavior without first solving symbolically, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Solve a differential equation without an initial condition and claim uniqueness."
+      ],
+      "answer": 2,
+      "explanation": "Use reading solution behavior without first solving symbolically, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u08-l02-q1",
+      "unit": 8,
+      "lesson": "u08-l02",
+      "skill": "building numerical solution estimates from local slopes",
+      "prompt": "Use one Euler step with h=0.1 for y′=x+y, y(0)=1.",
+      "options": [
+        "Use Euler’s method without reporting the step size.",
+        "Interpret every equilibrium as stable.",
+        "y₁=1+0.1(1)=1.1 at x=.1.",
+        "Solve a differential equation without an initial condition and claim uniqueness."
+      ],
+      "answer": 2,
+      "explanation": "y₁=1+0.1(1)=1.1 at x=.1."
+    },
+    {
+      "id": "u08-l02-q2",
+      "unit": 8,
+      "lesson": "u08-l02",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Euler’s Method & Global Error?",
+      "options": [
+        "Interpret every equilibrium as stable.",
+        "Use building numerical solution estimates from local slopes, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Solve a differential equation without an initial condition and claim uniqueness.",
+        "Use Euler’s method without reporting the step size."
+      ],
+      "answer": 1,
+      "explanation": "Use building numerical solution estimates from local slopes, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u08-l03-q1",
+      "unit": 8,
+      "lesson": "u08-l03",
+      "skill": "separating dependent and independent variables before integrating",
+      "prompt": "Solve y′=xy, y(0)=3.",
+      "options": [
+        "Interpret every equilibrium as stable.",
+        "ln|y|=x²/2+C; y=3e^{x²/2}.",
+        "Solve a differential equation without an initial condition and claim uniqueness.",
+        "Use Euler’s method without reporting the step size."
+      ],
+      "answer": 1,
+      "explanation": "ln|y|=x²/2+C; y=3e^{x²/2}."
+    },
+    {
+      "id": "u08-l03-q2",
+      "unit": 8,
+      "lesson": "u08-l03",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Separable Differential Equations?",
+      "options": [
+        "Use separating dependent and independent variables before integrating, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Solve a differential equation without an initial condition and claim uniqueness.",
+        "Use Euler’s method without reporting the step size.",
+        "Interpret every equilibrium as stable."
+      ],
+      "answer": 0,
+      "explanation": "Use separating dependent and independent variables before integrating, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u08-l04-q1",
+      "unit": 8,
+      "lesson": "u08-l04",
+      "skill": "deriving and interpreting proportional-rate models",
+      "prompt": "A population doubles in 6 years. Find k.",
+      "options": [
+        "k=ln2/6.",
+        "Solve a differential equation without an initial condition and claim uniqueness.",
+        "Use Euler’s method without reporting the step size.",
+        "Interpret every equilibrium as stable."
+      ],
+      "answer": 0,
+      "explanation": "k=ln2/6."
+    },
+    {
+      "id": "u08-l04-q2",
+      "unit": 8,
+      "lesson": "u08-l04",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Exponential Growth, Decay & Half-Life?",
+      "options": [
+        "Solve a differential equation without an initial condition and claim uniqueness.",
+        "Use Euler’s method without reporting the step size.",
+        "Interpret every equilibrium as stable.",
+        "Use deriving and interpreting proportional-rate models, show the governing structure, preserve conditions and units, and verify the conclusion."
+      ],
+      "answer": 3,
+      "explanation": "Use deriving and interpreting proportional-rate models, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u08-l05-q1",
+      "unit": 8,
+      "lesson": "u08-l05",
+      "skill": "modelling self-limiting proportional growth",
+      "prompt": "For P′=.2P(1−P/1000), when is growth fastest?",
+      "options": [
+        "Solve a differential equation without an initial condition and claim uniqueness.",
+        "Use Euler’s method without reporting the step size.",
+        "Interpret every equilibrium as stable.",
+        "At P=K/2=500."
+      ],
+      "answer": 3,
+      "explanation": "At P=K/2=500."
+    },
+    {
+      "id": "u08-l05-q2",
+      "unit": 8,
+      "lesson": "u08-l05",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Logistic Growth & Carrying Capacity?",
+      "options": [
+        "Use Euler’s method without reporting the step size.",
+        "Interpret every equilibrium as stable.",
+        "Use modelling self-limiting proportional growth, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Solve a differential equation without an initial condition and claim uniqueness."
+      ],
+      "answer": 2,
+      "explanation": "Use modelling self-limiting proportional growth, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u08-l06-q1",
+      "unit": 8,
+      "lesson": "u08-l06",
+      "skill": "solving y′+p(x)y=q(x) systematically",
+      "prompt": "Solve y′+y=e^x.",
+      "options": [
+        "Use Euler’s method without reporting the step size.",
+        "Interpret every equilibrium as stable.",
+        "μ=e^x; (e^x y)′=e^{2x}; y=(1/2)e^x+Ce^{-x}.",
+        "Solve a differential equation without an initial condition and claim uniqueness."
+      ],
+      "answer": 2,
+      "explanation": "μ=e^x; (e^x y)′=e^{2x}; y=(1/2)e^x+Ce^{-x}."
+    },
+    {
+      "id": "u08-l06-q2",
+      "unit": 8,
+      "lesson": "u08-l06",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in First-Order Linear Equations & Integrating Factors?",
+      "options": [
+        "Interpret every equilibrium as stable.",
+        "Use solving y′+p(x)y=q(x) systematically, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Solve a differential equation without an initial condition and claim uniqueness.",
+        "Use Euler’s method without reporting the step size."
+      ],
+      "answer": 1,
+      "explanation": "Use solving y′+p(x)y=q(x) systematically, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u08-l07-q1",
+      "unit": 8,
+      "lesson": "u08-l07",
+      "skill": "using data to estimate parameters and inspect model error",
+      "prompt": "Data follow y=y₀e^{kt}; explain a linearizing plot.",
+      "options": [
+        "Interpret every equilibrium as stable.",
+        "Plot ln y versus t; slope estimates k and intercept estimates ln y₀.",
+        "Solve a differential equation without an initial condition and claim uniqueness.",
+        "Use Euler’s method without reporting the step size."
+      ],
+      "answer": 1,
+      "explanation": "Plot ln y versus t; slope estimates k and intercept estimates ln y₀."
+    },
+    {
+      "id": "u08-l07-q2",
+      "unit": 8,
+      "lesson": "u08-l07",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Parameter Estimation, Residuals & Model Comparison?",
+      "options": [
+        "Use using data to estimate parameters and inspect model error, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Solve a differential equation without an initial condition and claim uniqueness.",
+        "Use Euler’s method without reporting the step size.",
+        "Interpret every equilibrium as stable."
+      ],
+      "answer": 0,
+      "explanation": "Use using data to estimate parameters and inspect model error, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u09-l01-q1",
+      "unit": 9,
+      "lesson": "u09-l01",
+      "skill": "reading a curve as coordinated functions of a parameter",
+      "prompt": "Eliminate t from x=2t+1, y=t².",
+      "options": [
+        "t=(x−1)/2, so y=(x−1)²/4.",
+        "Compute dy/dx as dy/dt·dx/dt.",
+        "Ignore orientation when computing signed area.",
+        "Confuse speed with a velocity component."
+      ],
+      "answer": 0,
+      "explanation": "t=(x−1)/2, so y=(x−1)²/4."
+    },
+    {
+      "id": "u09-l01-q2",
+      "unit": 9,
+      "lesson": "u09-l01",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Parametric Representation, Elimination & Orientation?",
+      "options": [
+        "Compute dy/dx as dy/dt·dx/dt.",
+        "Ignore orientation when computing signed area.",
+        "Confuse speed with a velocity component.",
+        "Use reading a curve as coordinated functions of a parameter, show the governing structure, preserve conditions and units, and verify the conclusion."
+      ],
+      "answer": 3,
+      "explanation": "Use reading a curve as coordinated functions of a parameter, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u09-l02-q1",
+      "unit": 9,
+      "lesson": "u09-l02",
+      "skill": "computing dy/dx from parameter derivatives",
+      "prompt": "For x=t²+1,y=t³, find dy/dx.",
+      "options": [
+        "Compute dy/dx as dy/dt·dx/dt.",
+        "Ignore orientation when computing signed area.",
+        "Confuse speed with a velocity component.",
+        "(3t²)/(2t)=3t/2 for t≠0."
+      ],
+      "answer": 3,
+      "explanation": "(3t²)/(2t)=3t/2 for t≠0."
+    },
+    {
+      "id": "u09-l02-q2",
+      "unit": 9,
+      "lesson": "u09-l02",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in First Derivatives & Tangent Lines?",
+      "options": [
+        "Ignore orientation when computing signed area.",
+        "Confuse speed with a velocity component.",
+        "Use computing dy/dx from parameter derivatives, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Compute dy/dx as dy/dt·dx/dt."
+      ],
+      "answer": 2,
+      "explanation": "Use computing dy/dx from parameter derivatives, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u09-l03-q1",
+      "unit": 9,
+      "lesson": "u09-l03",
+      "skill": "differentiating dy/dx with respect to t and dividing by dx/dt",
+      "prompt": "For x=t,y=t³, find d²y/dx².",
+      "options": [
+        "Ignore orientation when computing signed area.",
+        "Confuse speed with a velocity component.",
+        "6t.",
+        "Compute dy/dx as dy/dt·dx/dt."
+      ],
+      "answer": 2,
+      "explanation": "6t."
+    },
+    {
+      "id": "u09-l03-q2",
+      "unit": 9,
+      "lesson": "u09-l03",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Second Derivatives & Concavity?",
+      "options": [
+        "Confuse speed with a velocity component.",
+        "Use differentiating dy/dx with respect to t and dividing by dx/dt, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Compute dy/dx as dy/dt·dx/dt.",
+        "Ignore orientation when computing signed area."
+      ],
+      "answer": 1,
+      "explanation": "Use differentiating dy/dx with respect to t and dividing by dx/dt, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u09-l04-q1",
+      "unit": 9,
+      "lesson": "u09-l04",
+      "skill": "accumulating y dx with orientation",
+      "prompt": "Find area under x=t²,y=t³ for 0≤t≤1.",
+      "options": [
+        "Confuse speed with a velocity component.",
+        "∫₀¹t³·2t dt=2/5.",
+        "Compute dy/dx as dy/dt·dx/dt.",
+        "Ignore orientation when computing signed area."
+      ],
+      "answer": 1,
+      "explanation": "∫₀¹t³·2t dt=2/5."
+    },
+    {
+      "id": "u09-l04-q2",
+      "unit": 9,
+      "lesson": "u09-l04",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Area from Parametric Curves?",
+      "options": [
+        "Use accumulating y dx with orientation, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Compute dy/dx as dy/dt·dx/dt.",
+        "Ignore orientation when computing signed area.",
+        "Confuse speed with a velocity component."
+      ],
+      "answer": 0,
+      "explanation": "Use accumulating y dx with orientation, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u09-l05-q1",
+      "unit": 9,
+      "lesson": "u09-l05",
+      "skill": "integrating speed along a parametric curve",
+      "prompt": "Find length of x=3t,y=4t,0≤t≤2.",
+      "options": [
+        "Speed=5; L=10.",
+        "Compute dy/dx as dy/dt·dx/dt.",
+        "Ignore orientation when computing signed area.",
+        "Confuse speed with a velocity component."
+      ],
+      "answer": 0,
+      "explanation": "Speed=5; L=10."
+    },
+    {
+      "id": "u09-l05-q2",
+      "unit": 9,
+      "lesson": "u09-l05",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Parametric Arc Length?",
+      "options": [
+        "Compute dy/dx as dy/dt·dx/dt.",
+        "Ignore orientation when computing signed area.",
+        "Confuse speed with a velocity component.",
+        "Use integrating speed along a parametric curve, show the governing structure, preserve conditions and units, and verify the conclusion."
+      ],
+      "answer": 3,
+      "explanation": "Use integrating speed along a parametric curve, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u09-l06-q1",
+      "unit": 9,
+      "lesson": "u09-l06",
+      "skill": "differentiating vectors componentwise",
+      "prompt": "For r(t)=⟨t²,3t⟩, find v and a.",
+      "options": [
+        "Compute dy/dx as dy/dt·dx/dt.",
+        "Ignore orientation when computing signed area.",
+        "Confuse speed with a velocity component.",
+        "v=⟨2t,3⟩, a=⟨2,0⟩."
+      ],
+      "answer": 3,
+      "explanation": "v=⟨2t,3⟩, a=⟨2,0⟩."
+    },
+    {
+      "id": "u09-l06-q2",
+      "unit": 9,
+      "lesson": "u09-l06",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Vector-Valued Position, Velocity & Acceleration?",
+      "options": [
+        "Ignore orientation when computing signed area.",
+        "Confuse speed with a velocity component.",
+        "Use differentiating vectors componentwise, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Compute dy/dx as dy/dt·dx/dt."
+      ],
+      "answer": 2,
+      "explanation": "Use differentiating vectors componentwise, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u09-l07-q1",
+      "unit": 9,
+      "lesson": "u09-l07",
+      "skill": "connecting equations, parameter bounds, and physical interpretation",
+      "prompt": "For r(t)=⟨10t,20t−4.9t²⟩, when does the projectile return to height 0?",
+      "options": [
+        "Ignore orientation when computing signed area.",
+        "Confuse speed with a velocity component.",
+        "t=0 or t=20/4.9≈4.082 s.",
+        "Compute dy/dx as dy/dt·dx/dt."
+      ],
+      "answer": 2,
+      "explanation": "t=0 or t=20/4.9≈4.082 s."
+    },
+    {
+      "id": "u09-l07-q2",
+      "unit": 9,
+      "lesson": "u09-l07",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Projectile, Cycloid & Trajectory Modelling?",
+      "options": [
+        "Confuse speed with a velocity component.",
+        "Use connecting equations, parameter bounds, and physical interpretation, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Compute dy/dx as dy/dt·dx/dt.",
+        "Ignore orientation when computing signed area."
+      ],
+      "answer": 1,
+      "explanation": "Use connecting equations, parameter bounds, and physical interpretation, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u10-l01-q1",
+      "unit": 10,
+      "lesson": "u10-l01",
+      "skill": "moving between Cartesian and polar descriptions",
+      "prompt": "Convert (r,θ)=(2,π/3) to Cartesian.",
+      "options": [
+        "Find intersections only by setting r-values equal and ignore the pole.",
+        "(1,√3).",
+        "Assume one polar point has only one coordinate pair.",
+        "Use A=∫r dθ for polar area."
+      ],
+      "answer": 1,
+      "explanation": "(1,√3)."
+    },
+    {
+      "id": "u10-l01-q2",
+      "unit": 10,
+      "lesson": "u10-l01",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Polar Coordinates, Equivalence & Conversion?",
+      "options": [
+        "Use moving between Cartesian and polar descriptions, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Assume one polar point has only one coordinate pair.",
+        "Use A=∫r dθ for polar area.",
+        "Find intersections only by setting r-values equal and ignore the pole."
+      ],
+      "answer": 0,
+      "explanation": "Use moving between Cartesian and polar descriptions, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u10-l02-q1",
+      "unit": 10,
+      "lesson": "u10-l02",
+      "skill": "using key angles, sign, periodicity, and symmetry",
+      "prompt": "Identify r=2cosθ.",
+      "options": [
+        "A circle of radius 1 centered at (1,0).",
+        "Assume one polar point has only one coordinate pair.",
+        "Use A=∫r dθ for polar area.",
+        "Find intersections only by setting r-values equal and ignore the pole."
+      ],
+      "answer": 0,
+      "explanation": "A circle of radius 1 centered at (1,0)."
+    },
+    {
+      "id": "u10-l02-q2",
+      "unit": 10,
+      "lesson": "u10-l02",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Graphing Polar Curves & Symmetry Tests?",
+      "options": [
+        "Assume one polar point has only one coordinate pair.",
+        "Use A=∫r dθ for polar area.",
+        "Find intersections only by setting r-values equal and ignore the pole.",
+        "Use using key angles, sign, periodicity, and symmetry, show the governing structure, preserve conditions and units, and verify the conclusion."
+      ],
+      "answer": 3,
+      "explanation": "Use using key angles, sign, periodicity, and symmetry, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u10-l03-q1",
+      "unit": 10,
+      "lesson": "u10-l03",
+      "skill": "deriving dy/dx through parametric x(θ),y(θ)",
+      "prompt": "For r=2θ, find r′.",
+      "options": [
+        "Assume one polar point has only one coordinate pair.",
+        "Use A=∫r dθ for polar area.",
+        "Find intersections only by setting r-values equal and ignore the pole.",
+        "r′=2."
+      ],
+      "answer": 3,
+      "explanation": "r′=2."
+    },
+    {
+      "id": "u10-l03-q2",
+      "unit": 10,
+      "lesson": "u10-l03",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Polar Derivatives & Tangent Slopes?",
+      "options": [
+        "Use A=∫r dθ for polar area.",
+        "Find intersections only by setting r-values equal and ignore the pole.",
+        "Use deriving dy/dx through parametric x(θ),y(θ), show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Assume one polar point has only one coordinate pair."
+      ],
+      "answer": 2,
+      "explanation": "Use deriving dy/dx through parametric x(θ),y(θ), show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u10-l04-q1",
+      "unit": 10,
+      "lesson": "u10-l04",
+      "skill": "integrating sector-area differentials",
+      "prompt": "Find area inside r=2, 0≤θ≤π.",
+      "options": [
+        "Use A=∫r dθ for polar area.",
+        "Find intersections only by setting r-values equal and ignore the pole.",
+        "(1/2)∫₀^π4dθ=2π.",
+        "Assume one polar point has only one coordinate pair."
+      ],
+      "answer": 2,
+      "explanation": "(1/2)∫₀^π4dθ=2π."
+    },
+    {
+      "id": "u10-l04-q2",
+      "unit": 10,
+      "lesson": "u10-l04",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Area in Polar Coordinates?",
+      "options": [
+        "Find intersections only by setting r-values equal and ignore the pole.",
+        "Use integrating sector-area differentials, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Assume one polar point has only one coordinate pair.",
+        "Use A=∫r dθ for polar area."
+      ],
+      "answer": 1,
+      "explanation": "Use integrating sector-area differentials, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u10-l05-q1",
+      "unit": 10,
+      "lesson": "u10-l05",
+      "skill": "solving geometric intersections while accounting for the pole and alternate representations",
+      "prompt": "Find non-pole intersections of r=2cosθ and r=1.",
+      "options": [
+        "Find intersections only by setting r-values equal and ignore the pole.",
+        "cosθ=1/2, so θ=±π/3.",
+        "Assume one polar point has only one coordinate pair.",
+        "Use A=∫r dθ for polar area."
+      ],
+      "answer": 1,
+      "explanation": "cosθ=1/2, so θ=±π/3."
+    },
+    {
+      "id": "u10-l05-q2",
+      "unit": 10,
+      "lesson": "u10-l05",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Intersections, Loops & Overlap?",
+      "options": [
+        "Use solving geometric intersections while accounting for the pole and alternate representations, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Assume one polar point has only one coordinate pair.",
+        "Use A=∫r dθ for polar area.",
+        "Find intersections only by setting r-values equal and ignore the pole."
+      ],
+      "answer": 0,
+      "explanation": "Use solving geometric intersections while accounting for the pole and alternate representations, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u10-l06-q1",
+      "unit": 10,
+      "lesson": "u10-l06",
+      "skill": "accumulating radial and angular change",
+      "prompt": "Find length of r=2 on 0≤θ≤π.",
+      "options": [
+        "∫₀^π2dθ=2π.",
+        "Assume one polar point has only one coordinate pair.",
+        "Use A=∫r dθ for polar area.",
+        "Find intersections only by setting r-values equal and ignore the pole."
+      ],
+      "answer": 0,
+      "explanation": "∫₀^π2dθ=2π."
+    },
+    {
+      "id": "u10-l06-q2",
+      "unit": 10,
+      "lesson": "u10-l06",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Polar Arc Length?",
+      "options": [
+        "Assume one polar point has only one coordinate pair.",
+        "Use A=∫r dθ for polar area.",
+        "Find intersections only by setting r-values equal and ignore the pole.",
+        "Use accumulating radial and angular change, show the governing structure, preserve conditions and units, and verify the conclusion."
+      ],
+      "answer": 3,
+      "explanation": "Use accumulating radial and angular change, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u10-l07-q1",
+      "unit": 10,
+      "lesson": "u10-l07",
+      "skill": "interpreting focus-directrix forms and radial growth",
+      "prompt": "Classify a conic with eccentricity e=1/2.",
+      "options": [
+        "Assume one polar point has only one coordinate pair.",
+        "Use A=∫r dθ for polar area.",
+        "Find intersections only by setting r-values equal and ignore the pole.",
+        "Ellipse."
+      ],
+      "answer": 3,
+      "explanation": "Ellipse."
+    },
+    {
+      "id": "u10-l07-q2",
+      "unit": 10,
+      "lesson": "u10-l07",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Polar Conics, Spirals & Applied Modelling?",
+      "options": [
+        "Use A=∫r dθ for polar area.",
+        "Find intersections only by setting r-values equal and ignore the pole.",
+        "Use interpreting focus-directrix forms and radial growth, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Assume one polar point has only one coordinate pair."
+      ],
+      "answer": 2,
+      "explanation": "Use interpreting focus-directrix forms and radial growth, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u11-l01-q1",
+      "unit": 11,
+      "lesson": "u11-l01",
+      "skill": "evaluating indexed limits with algebra and dominant terms",
+      "prompt": "Find lim n/(n+1).",
+      "options": [
+        "Replace a series by its first term.",
+        "Confuse the sequence of terms with the sequence of partial sums.",
+        "1.",
+        "Conclude convergence only because terms approach zero."
+      ],
+      "answer": 2,
+      "explanation": "1."
+    },
+    {
+      "id": "u11-l01-q2",
+      "unit": 11,
+      "lesson": "u11-l01",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Sequence Limits & Long-Run Behavior?",
+      "options": [
+        "Confuse the sequence of terms with the sequence of partial sums.",
+        "Use evaluating indexed limits with algebra and dominant terms, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Conclude convergence only because terms approach zero.",
+        "Replace a series by its first term."
+      ],
+      "answer": 1,
+      "explanation": "Use evaluating indexed limits with algebra and dominant terms, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u11-l02-q1",
+      "unit": 11,
+      "lesson": "u11-l02",
+      "skill": "using structural properties to prove convergence",
+      "prompt": "Is a_n=1−1/n increasing and bounded?",
+      "options": [
+        "Confuse the sequence of terms with the sequence of partial sums.",
+        "Yes; it increases and is bounded above by 1, so it converges to 1.",
+        "Conclude convergence only because terms approach zero.",
+        "Replace a series by its first term."
+      ],
+      "answer": 1,
+      "explanation": "Yes; it increases and is bounded above by 1, so it converges to 1."
+    },
+    {
+      "id": "u11-l02-q2",
+      "unit": 11,
+      "lesson": "u11-l02",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Monotone, Bounded & Recursive Sequences?",
+      "options": [
+        "Use using structural properties to prove convergence, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Conclude convergence only because terms approach zero.",
+        "Replace a series by its first term.",
+        "Confuse the sequence of terms with the sequence of partial sums."
+      ],
+      "answer": 0,
+      "explanation": "Use using structural properties to prove convergence, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u11-l03-q1",
+      "unit": 11,
+      "lesson": "u11-l03",
+      "skill": "defining a series through the limit of partial sums",
+      "prompt": "Find S_N for Σ_{n=1}^N1/[n(n+1)].",
+      "options": [
+        "S_N=1−1/(N+1).",
+        "Conclude convergence only because terms approach zero.",
+        "Replace a series by its first term.",
+        "Confuse the sequence of terms with the sequence of partial sums."
+      ],
+      "answer": 0,
+      "explanation": "S_N=1−1/(N+1)."
+    },
+    {
+      "id": "u11-l03-q2",
+      "unit": 11,
+      "lesson": "u11-l03",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Infinite Series & Partial-Sum Sequences?",
+      "options": [
+        "Conclude convergence only because terms approach zero.",
+        "Replace a series by its first term.",
+        "Confuse the sequence of terms with the sequence of partial sums.",
+        "Use defining a series through the limit of partial sums, show the governing structure, preserve conditions and units, and verify the conclusion."
+      ],
+      "answer": 3,
+      "explanation": "Use defining a series through the limit of partial sums, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u11-l04-q1",
+      "unit": 11,
+      "lesson": "u11-l04",
+      "skill": "recognizing exact sum structures",
+      "prompt": "Find Σ_{n=0}∞3(1/4)^n.",
+      "options": [
+        "Conclude convergence only because terms approach zero.",
+        "Replace a series by its first term.",
+        "Confuse the sequence of terms with the sequence of partial sums.",
+        "4."
+      ],
+      "answer": 3,
+      "explanation": "4."
+    },
+    {
+      "id": "u11-l04-q2",
+      "unit": 11,
+      "lesson": "u11-l04",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Geometric & Telescoping Series?",
+      "options": [
+        "Replace a series by its first term.",
+        "Confuse the sequence of terms with the sequence of partial sums.",
+        "Use recognizing exact sum structures, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Conclude convergence only because terms approach zero."
+      ],
+      "answer": 2,
+      "explanation": "Use recognizing exact sum structures, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u11-l05-q1",
+      "unit": 11,
+      "lesson": "u11-l05",
+      "skill": "using the necessary condition a_n→0",
+      "prompt": "Determine Σ n/(n+1).",
+      "options": [
+        "Replace a series by its first term.",
+        "Confuse the sequence of terms with the sequence of partial sums.",
+        "Diverges because terms approach 1, not 0.",
+        "Conclude convergence only because terms approach zero."
+      ],
+      "answer": 2,
+      "explanation": "Diverges because terms approach 1, not 0."
+    },
+    {
+      "id": "u11-l05-q2",
+      "unit": 11,
+      "lesson": "u11-l05",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in The nth-Term Divergence Test?",
+      "options": [
+        "Confuse the sequence of terms with the sequence of partial sums.",
+        "Use using the necessary condition a_n→0, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Conclude convergence only because terms approach zero.",
+        "Replace a series by its first term."
+      ],
+      "answer": 1,
+      "explanation": "Use using the necessary condition a_n→0, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u11-l06-q1",
+      "unit": 11,
+      "lesson": "u11-l06",
+      "skill": "connecting decreasing positive terms to improper integrals",
+      "prompt": "Determine Σ1/n^{3/2}.",
+      "options": [
+        "Confuse the sequence of terms with the sequence of partial sums.",
+        "Converges.",
+        "Conclude convergence only because terms approach zero.",
+        "Replace a series by its first term."
+      ],
+      "answer": 1,
+      "explanation": "Converges."
+    },
+    {
+      "id": "u11-l06-q2",
+      "unit": 11,
+      "lesson": "u11-l06",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Integral Test, p-Series & Continuous Comparison?",
+      "options": [
+        "Use connecting decreasing positive terms to improper integrals, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Conclude convergence only because terms approach zero.",
+        "Replace a series by its first term.",
+        "Confuse the sequence of terms with the sequence of partial sums."
+      ],
+      "answer": 0,
+      "explanation": "Use connecting decreasing positive terms to improper integrals, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u11-l07-q1",
+      "unit": 11,
+      "lesson": "u11-l07",
+      "skill": "bounding the tail after a finite partial sum",
+      "prompt": "For Σ1/n², bound R_10.",
+      "options": [
+        "1/11≤R_10≤1/10.",
+        "Conclude convergence only because terms approach zero.",
+        "Replace a series by its first term.",
+        "Confuse the sequence of terms with the sequence of partial sums."
+      ],
+      "answer": 0,
+      "explanation": "1/11≤R_10≤1/10."
+    },
+    {
+      "id": "u11-l07-q2",
+      "unit": 11,
+      "lesson": "u11-l07",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Integral-Test Remainders & Approximation?",
+      "options": [
+        "Conclude convergence only because terms approach zero.",
+        "Replace a series by its first term.",
+        "Confuse the sequence of terms with the sequence of partial sums.",
+        "Use bounding the tail after a finite partial sum, show the governing structure, preserve conditions and units, and verify the conclusion."
+      ],
+      "answer": 3,
+      "explanation": "Use bounding the tail after a finite partial sum, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u12-l01-q1",
+      "unit": 12,
+      "lesson": "u12-l01",
+      "skill": "building inequalities against known benchmark series",
+      "prompt": "Determine Σ1/(n²+3).",
+      "options": [
+        "Use the ratio test result L=1 as proof of convergence.",
+        "Call conditional convergence absolute.",
+        "Compare with a benchmark having unrelated asymptotic order.",
+        "Converges by comparison with 1/n²."
+      ],
+      "answer": 3,
+      "explanation": "Converges by comparison with 1/n²."
+    },
+    {
+      "id": "u12-l01-q2",
+      "unit": 12,
+      "lesson": "u12-l01",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Direct Comparison Test?",
+      "options": [
+        "Call conditional convergence absolute.",
+        "Compare with a benchmark having unrelated asymptotic order.",
+        "Use building inequalities against known benchmark series, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Use the ratio test result L=1 as proof of convergence."
+      ],
+      "answer": 2,
+      "explanation": "Use building inequalities against known benchmark series, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u12-l02-q1",
+      "unit": 12,
+      "lesson": "u12-l02",
+      "skill": "comparing asymptotic size when direct inequalities are awkward",
+      "prompt": "Test Σ(3n+1)/(n³+2).",
+      "options": [
+        "Call conditional convergence absolute.",
+        "Compare with a benchmark having unrelated asymptotic order.",
+        "Compare with 1/n²; limit is 3, so it converges.",
+        "Use the ratio test result L=1 as proof of convergence."
+      ],
+      "answer": 2,
+      "explanation": "Compare with 1/n²; limit is 3, so it converges."
+    },
+    {
+      "id": "u12-l02-q2",
+      "unit": 12,
+      "lesson": "u12-l02",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Limit Comparison Test?",
+      "options": [
+        "Compare with a benchmark having unrelated asymptotic order.",
+        "Use comparing asymptotic size when direct inequalities are awkward, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Use the ratio test result L=1 as proof of convergence.",
+        "Call conditional convergence absolute."
+      ],
+      "answer": 1,
+      "explanation": "Use comparing asymptotic size when direct inequalities are awkward, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u12-l03-q1",
+      "unit": 12,
+      "lesson": "u12-l03",
+      "skill": "using decreasing magnitudes and a zero limit",
+      "prompt": "Test Σ(−1)^{n+1}/n.",
+      "options": [
+        "Compare with a benchmark having unrelated asymptotic order.",
+        "Converges by the alternating-series test.",
+        "Use the ratio test result L=1 as proof of convergence.",
+        "Call conditional convergence absolute."
+      ],
+      "answer": 1,
+      "explanation": "Converges by the alternating-series test."
+    },
+    {
+      "id": "u12-l03-q2",
+      "unit": 12,
+      "lesson": "u12-l03",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Alternating Series & Error Bounds?",
+      "options": [
+        "Use using decreasing magnitudes and a zero limit, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Use the ratio test result L=1 as proof of convergence.",
+        "Call conditional convergence absolute.",
+        "Compare with a benchmark having unrelated asymptotic order."
+      ],
+      "answer": 0,
+      "explanation": "Use using decreasing magnitudes and a zero limit, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u12-l04-q1",
+      "unit": 12,
+      "lesson": "u12-l04",
+      "skill": "distinguishing convergence of Σa_n from Σ|a_n|",
+      "prompt": "Classify Σ(−1)^{n+1}/n.",
+      "options": [
+        "Conditionally convergent.",
+        "Use the ratio test result L=1 as proof of convergence.",
+        "Call conditional convergence absolute.",
+        "Compare with a benchmark having unrelated asymptotic order."
+      ],
+      "answer": 0,
+      "explanation": "Conditionally convergent."
+    },
+    {
+      "id": "u12-l04-q2",
+      "unit": 12,
+      "lesson": "u12-l04",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Absolute vs Conditional Convergence?",
+      "options": [
+        "Use the ratio test result L=1 as proof of convergence.",
+        "Call conditional convergence absolute.",
+        "Compare with a benchmark having unrelated asymptotic order.",
+        "Use distinguishing convergence of Σa_n from Σ|a_n|, show the governing structure, preserve conditions and units, and verify the conclusion."
+      ],
+      "answer": 3,
+      "explanation": "Use distinguishing convergence of Σa_n from Σ|a_n|, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u12-l05-q1",
+      "unit": 12,
+      "lesson": "u12-l05",
+      "skill": "measuring factorial and exponential growth",
+      "prompt": "Test Σ3^n/n!.",
+      "options": [
+        "Use the ratio test result L=1 as proof of convergence.",
+        "Call conditional convergence absolute.",
+        "Compare with a benchmark having unrelated asymptotic order.",
+        "L=0, so it converges absolutely."
+      ],
+      "answer": 3,
+      "explanation": "L=0, so it converges absolutely."
+    },
+    {
+      "id": "u12-l05-q2",
+      "unit": 12,
+      "lesson": "u12-l05",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Ratio Test?",
+      "options": [
+        "Call conditional convergence absolute.",
+        "Compare with a benchmark having unrelated asymptotic order.",
+        "Use measuring factorial and exponential growth, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Use the ratio test result L=1 as proof of convergence."
+      ],
+      "answer": 2,
+      "explanation": "Use measuring factorial and exponential growth, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u12-l06-q1",
+      "unit": 12,
+      "lesson": "u12-l06",
+      "skill": "measuring nth-power growth",
+      "prompt": "Test Σ[(2n+1)/(3n)]^n.",
+      "options": [
+        "Call conditional convergence absolute.",
+        "Compare with a benchmark having unrelated asymptotic order.",
+        "Root limit is 2/3, so it converges.",
+        "Use the ratio test result L=1 as proof of convergence."
+      ],
+      "answer": 2,
+      "explanation": "Root limit is 2/3, so it converges."
+    },
+    {
+      "id": "u12-l06-q2",
+      "unit": 12,
+      "lesson": "u12-l06",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Root Test?",
+      "options": [
+        "Compare with a benchmark having unrelated asymptotic order.",
+        "Use measuring nth-power growth, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Use the ratio test result L=1 as proof of convergence.",
+        "Call conditional convergence absolute."
+      ],
+      "answer": 1,
+      "explanation": "Use measuring nth-power growth, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u12-l07-q1",
+      "unit": 12,
+      "lesson": "u12-l07",
+      "skill": "selecting a test from structure and explaining inconclusive outcomes",
+      "prompt": "Why is the ratio test inconclusive for Σ1/n²?",
+      "options": [
+        "Compare with a benchmark having unrelated asymptotic order.",
+        "The ratio limit is 1.",
+        "Use the ratio test result L=1 as proof of convergence.",
+        "Call conditional convergence absolute."
+      ],
+      "answer": 1,
+      "explanation": "The ratio limit is 1."
+    },
+    {
+      "id": "u12-l07-q2",
+      "unit": 12,
+      "lesson": "u12-l07",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Test Selection, Counterexamples & Decision Logic?",
+      "options": [
+        "Use selecting a test from structure and explaining inconclusive outcomes, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Use the ratio test result L=1 as proof of convergence.",
+        "Call conditional convergence absolute.",
+        "Compare with a benchmark having unrelated asymptotic order."
+      ],
+      "answer": 0,
+      "explanation": "Use selecting a test from structure and explaining inconclusive outcomes, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u13-l01-q1",
+      "unit": 13,
+      "lesson": "u13-l01",
+      "skill": "using ratio or root behavior to determine where a power series converges",
+      "prompt": "Find the radius of Σx^n/3^n.",
+      "options": [
+        "R=3.",
+        "Use the radius result as the endpoint conclusion.",
+        "Apply a Taylor polynomial without stating center or error evidence.",
+        "Differentiate a power series outside its interval of convergence."
+      ],
+      "answer": 0,
+      "explanation": "R=3."
+    },
+    {
+      "id": "u13-l01-q2",
+      "unit": 13,
+      "lesson": "u13-l01",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Power Series & Radius of Convergence?",
+      "options": [
+        "Use the radius result as the endpoint conclusion.",
+        "Apply a Taylor polynomial without stating center or error evidence.",
+        "Differentiate a power series outside its interval of convergence.",
+        "Use using ratio or root behavior to determine where a power series converges, show the governing structure, preserve conditions and units, and verify the conclusion."
+      ],
+      "answer": 3,
+      "explanation": "Use using ratio or root behavior to determine where a power series converges, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u13-l02-q1",
+      "unit": 13,
+      "lesson": "u13-l02",
+      "skill": "testing boundary points separately after finding radius",
+      "prompt": "Find interval for Σ(x−2)^n/n.",
+      "options": [
+        "Use the radius result as the endpoint conclusion.",
+        "Apply a Taylor polynomial without stating center or error evidence.",
+        "Differentiate a power series outside its interval of convergence.",
+        "R=1; at x=3 harmonic diverges, at x=1 alternating converges, so [1,3)."
+      ],
+      "answer": 3,
+      "explanation": "R=1; at x=3 harmonic diverges, at x=1 alternating converges, so [1,3)."
+    },
+    {
+      "id": "u13-l02-q2",
+      "unit": 13,
+      "lesson": "u13-l02",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Endpoint Testing & Interval of Convergence?",
+      "options": [
+        "Apply a Taylor polynomial without stating center or error evidence.",
+        "Differentiate a power series outside its interval of convergence.",
+        "Use testing boundary points separately after finding radius, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Use the radius result as the endpoint conclusion."
+      ],
+      "answer": 2,
+      "explanation": "Use testing boundary points separately after finding radius, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u13-l03-q1",
+      "unit": 13,
+      "lesson": "u13-l03",
+      "skill": "differentiating, integrating, multiplying, and shifting within convergence intervals",
+      "prompt": "From 1/(1−x)=Σx^n, derive a series for 1/(1−x)².",
+      "options": [
+        "Apply a Taylor polynomial without stating center or error evidence.",
+        "Differentiate a power series outside its interval of convergence.",
+        "Differentiate: Σ_{n=1}∞ n x^{n−1}.",
+        "Use the radius result as the endpoint conclusion."
+      ],
+      "answer": 2,
+      "explanation": "Differentiate: Σ_{n=1}∞ n x^{n−1}."
+    },
+    {
+      "id": "u13-l03-q2",
+      "unit": 13,
+      "lesson": "u13-l03",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Operations on Power Series?",
+      "options": [
+        "Differentiate a power series outside its interval of convergence.",
+        "Use differentiating, integrating, multiplying, and shifting within convergence intervals, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Use the radius result as the endpoint conclusion.",
+        "Apply a Taylor polynomial without stating center or error evidence."
+      ],
+      "answer": 1,
+      "explanation": "Use differentiating, integrating, multiplying, and shifting within convergence intervals, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u13-l04-q1",
+      "unit": 13,
+      "lesson": "u13-l04",
+      "skill": "matching derivatives at a center",
+      "prompt": "Find the degree-3 Maclaurin polynomial for e^x.",
+      "options": [
+        "Differentiate a power series outside its interval of convergence.",
+        "1+x+x²/2+x³/6.",
+        "Use the radius result as the endpoint conclusion.",
+        "Apply a Taylor polynomial without stating center or error evidence."
+      ],
+      "answer": 1,
+      "explanation": "1+x+x²/2+x³/6."
+    },
+    {
+      "id": "u13-l04-q2",
+      "unit": 13,
+      "lesson": "u13-l04",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Taylor Polynomials & Local Approximation?",
+      "options": [
+        "Use matching derivatives at a center, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Use the radius result as the endpoint conclusion.",
+        "Apply a Taylor polynomial without stating center or error evidence.",
+        "Differentiate a power series outside its interval of convergence."
+      ],
+      "answer": 0,
+      "explanation": "Use matching derivatives at a center, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u13-l05-q1",
+      "unit": 13,
+      "lesson": "u13-l05",
+      "skill": "using canonical series for exponential, trigonometric, logarithmic, and inverse-trigonometric functions",
+      "prompt": "Write four nonzero terms of cos x.",
+      "options": [
+        "1−x²/2!+x⁴/4!−x⁶/6!.",
+        "Use the radius result as the endpoint conclusion.",
+        "Apply a Taylor polynomial without stating center or error evidence.",
+        "Differentiate a power series outside its interval of convergence."
+      ],
+      "answer": 0,
+      "explanation": "1−x²/2!+x⁴/4!−x⁶/6!."
+    },
+    {
+      "id": "u13-l05-q2",
+      "unit": 13,
+      "lesson": "u13-l05",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Benchmark Maclaurin Series?",
+      "options": [
+        "Use the radius result as the endpoint conclusion.",
+        "Apply a Taylor polynomial without stating center or error evidence.",
+        "Differentiate a power series outside its interval of convergence.",
+        "Use using canonical series for exponential, trigonometric, logarithmic, and inverse-trigonometric functions, show the governing structure, preserve conditions and units, and verify the conclusion."
+      ],
+      "answer": 3,
+      "explanation": "Use using canonical series for exponential, trigonometric, logarithmic, and inverse-trigonometric functions, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u13-l06-q1",
+      "unit": 13,
+      "lesson": "u13-l06",
+      "skill": "using derivative bounds to certify approximation accuracy",
+      "prompt": "Bound the error of 1+x+x²/2 approximating e^x at x=.1 using M=e^{.1}.",
+      "options": [
+        "Use the radius result as the endpoint conclusion.",
+        "Apply a Taylor polynomial without stating center or error evidence.",
+        "Differentiate a power series outside its interval of convergence.",
+        "Error ≤e^{.1}(.1)^3/6≈0.000184."
+      ],
+      "answer": 3,
+      "explanation": "Error ≤e^{.1}(.1)^3/6≈0.000184."
+    },
+    {
+      "id": "u13-l06-q2",
+      "unit": 13,
+      "lesson": "u13-l06",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Taylor Remainder & Error Bounds?",
+      "options": [
+        "Apply a Taylor polynomial without stating center or error evidence.",
+        "Differentiate a power series outside its interval of convergence.",
+        "Use using derivative bounds to certify approximation accuracy, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Use the radius result as the endpoint conclusion."
+      ],
+      "answer": 2,
+      "explanation": "Use using derivative bounds to certify approximation accuracy, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u13-l07-q1",
+      "unit": 13,
+      "lesson": "u13-l07",
+      "skill": "using series where elementary antiderivatives or closed forms are unavailable",
+      "prompt": "Approximate ∫₀^{.5}e^{-x²}dx using terms through x⁴ in e^{-x²}.",
+      "options": [
+        "Apply a Taylor polynomial without stating center or error evidence.",
+        "Differentiate a power series outside its interval of convergence.",
+        "Integrand≈1−x²+x⁴/2; integral≈0.5−0.125/3+0.03125/10=0.4614583.",
+        "Use the radius result as the endpoint conclusion."
+      ],
+      "answer": 2,
+      "explanation": "Integrand≈1−x²+x⁴/2; integral≈0.5−0.125/3+0.03125/10=0.4614583."
+    },
+    {
+      "id": "u13-l07-q2",
+      "unit": 13,
+      "lesson": "u13-l07",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Series in Integration & Differential Equations?",
+      "options": [
+        "Differentiate a power series outside its interval of convergence.",
+        "Use using series where elementary antiderivatives or closed forms are unavailable, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Use the radius result as the endpoint conclusion.",
+        "Apply a Taylor polynomial without stating center or error evidence."
+      ],
+      "answer": 1,
+      "explanation": "Use using series where elementary antiderivatives or closed forms are unavailable, show the governing structure, preserve conditions and units, and verify the conclusion."
+    },
+    {
+      "id": "u13-l08-q1",
+      "unit": 13,
+      "lesson": "u13-l08",
+      "skill": "integrating methods, convergence, modelling, communication, and responsible technology use",
+      "prompt": "Name four required elements of the capstone defense.",
+      "options": [
+        "Differentiate a power series outside its interval of convergence.",
+        "Mathematical model, justified method, validated result, and limitation/sensitivity analysis.",
+        "Use the radius result as the endpoint conclusion.",
+        "Apply a Taylor polynomial without stating center or error evidence."
+      ],
+      "answer": 1,
+      "explanation": "Mathematical model, justified method, validated result, and limitation/sensitivity analysis."
+    },
+    {
+      "id": "u13-l08-q2",
+      "unit": 13,
+      "lesson": "u13-l08",
+      "skill": "reasoning and justification",
+      "prompt": "Which statement best describes the central reasoning in Capstone Synthesis, Oral Defense & Calculus III Bridge?",
+      "options": [
+        "Use integrating methods, convergence, modelling, communication, and responsible technology use, show the governing structure, preserve conditions and units, and verify the conclusion.",
+        "Use the radius result as the endpoint conclusion.",
+        "Apply a Taylor polynomial without stating center or error evidence.",
+        "Differentiate a power series outside its interval of convergence."
+      ],
+      "answer": 0,
+      "explanation": "Use integrating methods, convergence, modelling, communication, and responsible technology use, show the governing structure, preserve conditions and units, and verify the conclusion."
+    }
+  ],
+  "diagnostic": [
+    {
+      "id": "diag-01",
+      "unit": 0,
+      "skill": "Algebra and domain",
+      "prompt": "Simplify (x²−9)/(x−3) and state the restriction.",
+      "options": [
+        "x−3, with x≠−3",
+        "x+3 for every real x",
+        "x²−6, with x≠3",
+        "x+3, with x≠3"
+      ],
+      "answer": 3,
+      "explanation": "Factor x²−9=(x−3)(x+3), cancel only for x≠3, and retain the original restriction."
+    },
+    {
+      "id": "diag-02",
+      "unit": 0,
+      "skill": "Algebra and functions",
+      "prompt": "Solve 2e^(3x)=10 for x.",
+      "options": [
+        "x=3ln(5)",
+        "x=5/3",
+        "x=ln(5)/3",
+        "x=ln(10)/6"
+      ],
+      "answer": 2,
+      "explanation": "Divide by 2, take natural logarithms, and solve 3x=ln(5)."
+    },
+    {
+      "id": "diag-03",
+      "unit": 0,
+      "skill": "Function composition",
+      "prompt": "If f(x)=x²+1 and g(x)=3x−2, what is (f∘g)(x)?",
+      "options": [
+        "(x²+1)(3x−2)",
+        "(3x−2)²+1",
+        "3x²−1",
+        "3(x²+1)−2"
+      ],
+      "answer": 1,
+      "explanation": "Composition means substitute g(x) into every x of f."
+    },
+    {
+      "id": "diag-04",
+      "unit": 0,
+      "skill": "Inverse functions",
+      "prompt": "What is the inverse of f(x)=4x−7?",
+      "options": [
+        "f⁻¹(x)=(x+7)/4",
+        "f⁻¹(x)=4x+7",
+        "f⁻¹(x)=(x−7)/4",
+        "f⁻¹(x)=1/(4x−7)"
+      ],
+      "answer": 0,
+      "explanation": "Exchange x and y and solve for y."
+    },
+    {
+      "id": "diag-05",
+      "unit": 0,
+      "skill": "Radians and trigonometry",
+      "prompt": "Convert 150° to radians.",
+      "options": [
+        "3π/5",
+        "5π/3",
+        "6π/5",
+        "5π/6"
+      ],
+      "answer": 3,
+      "explanation": "Multiply degrees by π/180 and reduce."
+    },
+    {
+      "id": "diag-06",
+      "unit": 0,
+      "skill": "Exact trigonometry",
+      "prompt": "Evaluate sin(7π/6).",
+      "options": [
+        "−√3/2",
+        "√3/2",
+        "−1/2",
+        "1/2"
+      ],
+      "answer": 2,
+      "explanation": "The reference angle is π/6 and sine is negative in quadrant III."
+    },
+    {
+      "id": "diag-07",
+      "unit": 0,
+      "skill": "Power-rule differentiation",
+      "prompt": "Differentiate f(x)=4x⁵−3x²+7.",
+      "options": [
+        "f′(x)=5x⁴−2x",
+        "f′(x)=20x⁴−6x",
+        "f′(x)=4x⁴−3x",
+        "f′(x)=20x⁵−6x²"
+      ],
+      "answer": 1,
+      "explanation": "Apply the power rule term by term; the derivative of a constant is zero."
+    },
+    {
+      "id": "diag-08",
+      "unit": 0,
+      "skill": "Product rule",
+      "prompt": "Differentiate y=x²eˣ.",
+      "options": [
+        "y′=eˣ(x²+2x)",
+        "y′=2xeˣ",
+        "y′=x²eˣ",
+        "y′=eˣ(x²−2x)"
+      ],
+      "answer": 0,
+      "explanation": "Use y′=(x²)′eˣ+x²(eˣ)′ and factor eˣ."
+    },
+    {
+      "id": "diag-09",
+      "unit": 0,
+      "skill": "Quotient rule",
+      "prompt": "Differentiate y=(x+1)/(x−2).",
+      "options": [
+        "y′=3/(x−2)²",
+        "y′=1",
+        "y′=(2x−1)/(x−2)²",
+        "y′=−3/(x−2)²"
+      ],
+      "answer": 3,
+      "explanation": "Apply the quotient rule: [(x−2)−(x+1)]/(x−2)²."
+    },
+    {
+      "id": "diag-10",
+      "unit": 0,
+      "skill": "Chain rule",
+      "prompt": "Differentiate y=cos(3x²).",
+      "options": [
+        "y′=6x cos(3x²)",
+        "y′=−3x² sin(6x)",
+        "y′=−6x sin(3x²)",
+        "y′=−sin(3x²)"
+      ],
+      "answer": 2,
+      "explanation": "Differentiate the outer cosine, retain the inner expression, and multiply by 6x."
+    },
+    {
+      "id": "diag-11",
+      "unit": 0,
+      "skill": "Implicit differentiation",
+      "prompt": "For x²+y²=25, find dy/dx.",
+      "options": [
+        "dy/dx=2x+2y",
+        "dy/dx=−x/y",
+        "dy/dx=−y/x",
+        "dy/dx=x/y"
+      ],
+      "answer": 1,
+      "explanation": "Differentiate both sides with respect to x and solve 2x+2y y′=0."
+    },
+    {
+      "id": "diag-12",
+      "unit": 0,
+      "skill": "Logarithmic differentiation",
+      "prompt": "Differentiate y=ln(x²+4).",
+      "options": [
+        "y′=2x/(x²+4)",
+        "y′=1/(x²+4)",
+        "y′=2/(x²+4)",
+        "y′=ln(2x)"
+      ],
+      "answer": 0,
+      "explanation": "Use the chain rule for ln(u): u′/u."
+    },
+    {
+      "id": "diag-13",
+      "unit": 0,
+      "skill": "Limit by factoring",
+      "prompt": "Evaluate lim(x→4)(x²−16)/(x−4).",
+      "options": [
+        "4",
+        "16",
+        "0",
+        "8"
+      ],
+      "answer": 3,
+      "explanation": "Factor the numerator, cancel for x≠4, and evaluate x+4 at x=4."
+    },
+    {
+      "id": "diag-14",
+      "unit": 0,
+      "skill": "Trigonometric limit",
+      "prompt": "Evaluate lim(x→0) sin(5x)/x.",
+      "options": [
+        "1",
+        "1/5",
+        "5",
+        "0"
+      ],
+      "answer": 2,
+      "explanation": "Rewrite as 5·sin(5x)/(5x) and use the fundamental sine limit."
+    },
+    {
+      "id": "diag-15",
+      "unit": 0,
+      "skill": "Continuity",
+      "prompt": "Choose k so f(x)={(x²−1)/(x−1), x≠1; k, x=1} is continuous at x=1.",
+      "options": [
+        "k=−2",
+        "k=2",
+        "k=0",
+        "k=1"
+      ],
+      "answer": 1,
+      "explanation": "The limit simplifies to x+1 and equals 2 at x=1."
+    },
+    {
+      "id": "diag-16",
+      "unit": 0,
+      "skill": "Tangent lines",
+      "prompt": "Find the tangent line to y=x² at x=3.",
+      "options": [
+        "y−9=6(x−3)",
+        "y−3=9(x−3)",
+        "y−9=3(x−3)",
+        "y=6x+9"
+      ],
+      "answer": 0,
+      "explanation": "The point is (3,9) and the derivative 2x gives slope 6."
+    },
+    {
+      "id": "diag-17",
+      "unit": 0,
+      "skill": "Critical points",
+      "prompt": "Which values are critical numbers of f(x)=x³−3x?",
+      "options": [
+        "x=0 only",
+        "x=−3 and x=3",
+        "There are no critical numbers",
+        "x=−1 and x=1"
+      ],
+      "answer": 3,
+      "explanation": "Set f′(x)=3x²−3 equal to zero."
+    },
+    {
+      "id": "diag-18",
+      "unit": 0,
+      "skill": "Absolute extrema",
+      "prompt": "For f(x)=x²−4x on [0,5], where is the absolute minimum?",
+      "options": [
+        "At x=4",
+        "At x=5",
+        "At x=2",
+        "At x=0"
+      ],
+      "answer": 2,
+      "explanation": "Evaluate the critical point x=2 and both endpoints; f(2)=−4 is least."
+    },
+    {
+      "id": "diag-19",
+      "unit": 0,
+      "skill": "Mean Value Theorem",
+      "prompt": "Which hypotheses are required for the Mean Value Theorem on [a,b]?",
+      "options": [
+        "Bounded and monotone on [a,b]",
+        "Continuous on [a,b] and differentiable on (a,b)",
+        "Differentiable only at a and b",
+        "Continuous only on (a,b)"
+      ],
+      "answer": 1,
+      "explanation": "These are the theorem’s exact continuity and differentiability hypotheses."
+    },
+    {
+      "id": "diag-20",
+      "unit": 0,
+      "skill": "Linearization",
+      "prompt": "Use linearization at x=4 to approximate √4.1.",
+      "options": [
+        "2.025",
+        "2.1",
+        "2.05",
+        "2.0025"
+      ],
+      "answer": 0,
+      "explanation": "For f(x)=√x, L(x)=2+(1/4)(x−4), so L(4.1)=2.025."
+    },
+    {
+      "id": "diag-21",
+      "unit": 0,
+      "skill": "Related rates",
+      "prompt": "A circle’s radius grows at 2 cm/s. Which equation gives dA/dt?",
+      "options": [
+        "dA/dt=π(dr/dt)²",
+        "dA/dt=2π·dr/dt",
+        "dA/dt=πr²·dr/dt",
+        "dA/dt=2πr·dr/dt"
+      ],
+      "answer": 3,
+      "explanation": "Differentiate A=πr² with respect to time before substituting rates."
+    },
+    {
+      "id": "diag-22",
+      "unit": 0,
+      "skill": "Optimization",
+      "prompt": "For a differentiable model on a closed interval, what evidence is required for an absolute maximum?",
+      "options": [
+        "Use the largest x-coordinate",
+        "Check one critical point and ignore endpoints",
+        "Compare all interior critical values and endpoint values",
+        "Solve f′′(x)=0 only"
+      ],
+      "answer": 2,
+      "explanation": "The closed-interval method compares the function at every candidate."
+    },
+    {
+      "id": "diag-23",
+      "unit": 0,
+      "skill": "Antiderivatives",
+      "prompt": "Find F if F′(x)=6x−4 and F(0)=3.",
+      "options": [
+        "F(x)=6−4x+3",
+        "F(x)=3x²−4x+3",
+        "F(x)=6x²−4x+3",
+        "F(x)=3x²−4x"
+      ],
+      "answer": 1,
+      "explanation": "Integrate and use F(0)=3 to determine the constant."
+    },
+    {
+      "id": "diag-24",
+      "unit": 0,
+      "skill": "Definite integrals",
+      "prompt": "Evaluate ∫₀²(3x²+1)dx.",
+      "options": [
+        "10",
+        "8",
+        "9",
+        "12"
+      ],
+      "answer": 0,
+      "explanation": "An antiderivative is x³+x; evaluate at 2 and 0."
+    },
+    {
+      "id": "diag-25",
+      "unit": 0,
+      "skill": "Motion and accumulation",
+      "prompt": "If velocity is negative on an interval, which statement is correct?",
+      "options": [
+        "Both displacement and distance decrease",
+        "Displacement and distance are always equal",
+        "Velocity sign has no effect on displacement",
+        "Displacement decreases, while distance still accumulates positively"
+      ],
+      "answer": 3,
+      "explanation": "Displacement is signed accumulation; distance integrates the speed |v|."
+    },
+    {
+      "id": "diag-26",
+      "unit": 0,
+      "skill": "Fundamental Theorem",
+      "prompt": "If G(x)=∫₁^{x²} cos(t)dt, what is G′(x)?",
+      "options": [
+        "x²cos(x)",
+        "2x sin(x²)",
+        "2x cos(x²)",
+        "cos(x²)"
+      ],
+      "answer": 2,
+      "explanation": "Use the Fundamental Theorem followed by the chain rule."
+    },
+    {
+      "id": "diag-27",
+      "unit": 0,
+      "skill": "Substitution",
+      "prompt": "Evaluate ∫2x(x²+5)⁴dx.",
+      "options": [
+        "x²(x²+5)⁵+C",
+        "(x²+5)⁵/5+C",
+        "2(x²+5)⁵+C",
+        "(x²+5)⁴/4+C"
+      ],
+      "answer": 1,
+      "explanation": "Let u=x²+5, so du=2x dx."
+    },
+    {
+      "id": "diag-28",
+      "unit": 0,
+      "skill": "Exponential integration",
+      "prompt": "Evaluate ∫e^(3x)dx.",
+      "options": [
+        "(1/3)e^(3x)+C",
+        "3e^(3x)+C",
+        "e^(3x)+C",
+        "(1/3)eˣ+C"
+      ],
+      "answer": 0,
+      "explanation": "Reverse the chain rule by dividing by the inner derivative 3."
+    },
+    {
+      "id": "diag-29",
+      "unit": 0,
+      "skill": "Trigonometric integration",
+      "prompt": "Evaluate ∫sec²(4x)dx.",
+      "options": [
+        "4tan(4x)+C",
+        "tan(x)+C",
+        "(1/4)sec(4x)tan(4x)+C",
+        "(1/4)tan(4x)+C"
+      ],
+      "answer": 3,
+      "explanation": "Use u=4x or recognize the reverse derivative of tangent."
+    },
+    {
+      "id": "diag-30",
+      "unit": 0,
+      "skill": "Area setup",
+      "prompt": "Which integral gives the area between y=2x and y=x² on [0,2]?",
+      "options": [
+        "∫₀²(2x+x²)dx",
+        "∫₀²|2−x|dx",
+        "∫₀²(2x−x²)dx",
+        "∫₀²(x²−2x)dx"
+      ],
+      "answer": 2,
+      "explanation": "On [0,2], the line is above the parabola, so integrate top minus bottom."
+    },
+    {
+      "id": "diag-31",
+      "unit": 0,
+      "skill": "Volume setup",
+      "prompt": "Rotate y=√x, 0≤x≤4, about the x-axis. Which washer integral gives the volume?",
+      "options": [
+        "π∫₀⁴x² dx",
+        "π∫₀⁴x dx",
+        "2π∫₀⁴√x dx",
+        "π∫₀⁴√x dx"
+      ],
+      "answer": 1,
+      "explanation": "The washer radius is √x, so radius squared is x."
+    },
+    {
+      "id": "diag-32",
+      "unit": 0,
+      "skill": "Average value",
+      "prompt": "What is the average value of f on [a,b]?",
+      "options": [
+        "(1/(b−a))∫ₐᵇf(x)dx",
+        "(b−a)∫ₐᵇf(x)dx",
+        "(f(a)+f(b))/2 for every function",
+        "∫ₐᵇf′(x)dx"
+      ],
+      "answer": 0,
+      "explanation": "Average value is total signed accumulation divided by interval length."
+    },
+    {
+      "id": "diag-33",
+      "unit": 0,
+      "skill": "Differential equations",
+      "prompt": "Solve dy/dx=3y with y(0)=2.",
+      "options": [
+        "y=3e^(2x)",
+        "y=2+3x",
+        "y=6eˣ",
+        "y=2e^(3x)"
+      ],
+      "answer": 3,
+      "explanation": "Separation or the exponential growth model gives y=Ce^(3x); the initial condition gives C=2."
+    },
+    {
+      "id": "diag-34",
+      "unit": 0,
+      "skill": "Growth and decay",
+      "prompt": "A quantity has half-life h. Which model has initial amount A₀?",
+      "options": [
+        "A(t)=A₀e^(ht)",
+        "A(t)=A₀(1−t/h)",
+        "A(t)=A₀(1/2)^(t/h)",
+        "A(t)=A₀2^(t/h)"
+      ],
+      "answer": 2,
+      "explanation": "Each elapsed half-life multiplies the amount by 1/2."
+    },
+    {
+      "id": "diag-35",
+      "unit": 0,
+      "skill": "Logistic models",
+      "prompt": "For dP/dt=rP(1−P/K), which constant population levels are equilibria?",
+      "options": [
+        "P=−K and P=K",
+        "P=0 and P=K",
+        "P=r and P=K",
+        "P=K/2 only"
+      ],
+      "answer": 1,
+      "explanation": "Equilibria make the right-hand side zero."
+    },
+    {
+      "id": "diag-36",
+      "unit": 0,
+      "skill": "Numerical integration",
+      "prompt": "What restriction does composite Simpson’s Rule place on n?",
+      "options": [
+        "n must be even",
+        "n must be odd",
+        "n must equal 1",
+        "n may be any positive real number"
+      ],
+      "answer": 0,
+      "explanation": "Simpson panels use pairs of subintervals, so the subinterval count must be even."
+    },
+    {
+      "id": "diag-37",
+      "unit": 0,
+      "skill": "Dimensional reasoning",
+      "prompt": "If r(t) is measured in liters per minute, what units does ∫₀ᵀr(t)dt have?",
+      "options": [
+        "liters per minute",
+        "minutes per liter",
+        "liters squared",
+        "liters"
+      ],
+      "answer": 3,
+      "explanation": "Rate multiplied by time accumulates an amount."
+    },
+    {
+      "id": "diag-38",
+      "unit": 0,
+      "skill": "Integral interpretation",
+      "prompt": "What does ∫ₐᵇv(t)dt represent when v is velocity?",
+      "options": [
+        "Final velocity minus initial velocity",
+        "Average acceleration",
+        "Net displacement from time a to b",
+        "Total distance in every case"
+      ],
+      "answer": 2,
+      "explanation": "The signed integral of velocity is change in position."
+    },
+    {
+      "id": "diag-39",
+      "unit": 0,
+      "skill": "Verification",
+      "prompt": "Which is the strongest verification of an indefinite integral result F(x)+C?",
+      "options": [
+        "Graph F without differentiating",
+        "Differentiate F and simplify to the original integrand on the stated domain",
+        "Compare only one decimal value",
+        "Check that F has the same units and stop"
+      ],
+      "answer": 1,
+      "explanation": "Differentiation directly tests the defining inverse relationship."
+    },
+    {
+      "id": "diag-40",
+      "unit": 0,
+      "skill": "Mathematical communication",
+      "prompt": "Which response is most complete for a contextual calculus result?",
+      "options": [
+        "A value with method, hypotheses, units, interpretation, and an independent check",
+        "A calculator decimal with no setup",
+        "A formula name without substitution",
+        "A final number without units"
+      ],
+      "answer": 0,
+      "explanation": "College-level evidence includes validity conditions, reasoning, context, and verification."
+    }
+  ]
+}
