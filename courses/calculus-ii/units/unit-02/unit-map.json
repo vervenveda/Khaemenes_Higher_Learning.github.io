@@ -1,0 +1,201 @@
+{
+  "unit": 2,
+  "title": "Integration by Parts, Reduction & Cyclic Structure",
+  "weeks": [
+    3,
+    4,
+    5
+  ],
+  "lessons": [
+    {
+      "id": "u02-l01",
+      "number": 1,
+      "title": "Reversing the Product Rule",
+      "focus": "deriving and applying integration by parts from the product rule",
+      "formulas": [
+        "∫u dv=uv−∫v du"
+      ],
+      "example1": "Evaluate ∫x e^x dx.",
+      "solution1": "Take u=x and dv=e^x dx; the result is xe^x−e^x+C=e^x(x−1)+C.",
+      "example2": "Evaluate ∫x cos x dx.",
+      "solution2": "x sin x+cos x+C.",
+      "week": 3,
+      "unit": 2,
+      "unit_title": "Integration by Parts, Reduction & Cyclic Structure",
+      "essential": "How does reversing the product rule transform products, recursive integrals, and cyclic structures into solvable forms?",
+      "project": "Product-Rule Reversal Laboratory",
+      "application": "work, moments, transform-like integrals, and repeated-product models",
+      "vocabulary": [
+        "integration by parts",
+        "tabular integration",
+        "reduction formula",
+        "cyclic integral",
+        "boundary term",
+        "recursive relation"
+      ]
+    },
+    {
+      "id": "u02-l02",
+      "number": 2,
+      "title": "Choosing u and dv Strategically",
+      "focus": "selecting factors so differentiation simplifies and integration remains possible",
+      "formulas": [
+        "LIATE is a heuristic, not a theorem"
+      ],
+      "example1": "Evaluate ∫ln x dx.",
+      "solution1": "Use u=ln x and dv=dx; result xln x−x+C.",
+      "example2": "Evaluate ∫x² ln x dx.",
+      "solution2": "Use u=ln x, dv=x²dx; result x³ln x/3−x³/9+C.",
+      "week": 3,
+      "unit": 2,
+      "unit_title": "Integration by Parts, Reduction & Cyclic Structure",
+      "essential": "How does reversing the product rule transform products, recursive integrals, and cyclic structures into solvable forms?",
+      "project": "Product-Rule Reversal Laboratory",
+      "application": "work, moments, transform-like integrals, and repeated-product models",
+      "vocabulary": [
+        "integration by parts",
+        "tabular integration",
+        "reduction formula",
+        "cyclic integral",
+        "boundary term",
+        "recursive relation"
+      ]
+    },
+    {
+      "id": "u02-l03",
+      "number": 3,
+      "title": "Repeated and Tabular Integration by Parts",
+      "focus": "organizing repeated product-rule reversal efficiently",
+      "formulas": [
+        "tabular: derivatives of u × antiderivatives of dv"
+      ],
+      "example1": "Evaluate ∫x²e^x dx.",
+      "solution1": "e^x(x²−2x+2)+C.",
+      "example2": "Evaluate ∫x³ sin x dx.",
+      "solution2": "−x³cos x+3x²sin x+6x cos x−6sin x+C.",
+      "week": 3,
+      "unit": 2,
+      "unit_title": "Integration by Parts, Reduction & Cyclic Structure",
+      "essential": "How does reversing the product rule transform products, recursive integrals, and cyclic structures into solvable forms?",
+      "project": "Product-Rule Reversal Laboratory",
+      "application": "work, moments, transform-like integrals, and repeated-product models",
+      "vocabulary": [
+        "integration by parts",
+        "tabular integration",
+        "reduction formula",
+        "cyclic integral",
+        "boundary term",
+        "recursive relation"
+      ]
+    },
+    {
+      "id": "u02-l04",
+      "number": 4,
+      "title": "Definite Integration by Parts",
+      "focus": "tracking boundary terms and exact values in definite products",
+      "formulas": [
+        "∫_a^b u dv=[uv]_a^b−∫_a^b v du"
+      ],
+      "example1": "Evaluate ∫₀¹ x e^x dx.",
+      "solution1": "[e^x(x−1)]₀¹=1.",
+      "example2": "Evaluate ∫₀^π x sin x dx.",
+      "solution2": "[−x cos x+sin x]₀^π=π.",
+      "week": 4,
+      "unit": 2,
+      "unit_title": "Integration by Parts, Reduction & Cyclic Structure",
+      "essential": "How does reversing the product rule transform products, recursive integrals, and cyclic structures into solvable forms?",
+      "project": "Product-Rule Reversal Laboratory",
+      "application": "work, moments, transform-like integrals, and repeated-product models",
+      "vocabulary": [
+        "integration by parts",
+        "tabular integration",
+        "reduction formula",
+        "cyclic integral",
+        "boundary term",
+        "recursive relation"
+      ]
+    },
+    {
+      "id": "u02-l05",
+      "number": 5,
+      "title": "Reduction Formulas & Recursive Integrals",
+      "focus": "building recurrences that lower powers or complexity",
+      "formulas": [
+        "I_n relates to I_{n−1} or I_{n−2}"
+      ],
+      "example1": "Derive I_n=∫x^n e^x dx in terms of I_{n−1}.",
+      "solution1": "I_n=x^n e^x−nI_{n−1}.",
+      "example2": "Use reduction to evaluate ∫x³e^x dx.",
+      "solution2": "e^x(x³−3x²+6x−6)+C.",
+      "week": 4,
+      "unit": 2,
+      "unit_title": "Integration by Parts, Reduction & Cyclic Structure",
+      "essential": "How does reversing the product rule transform products, recursive integrals, and cyclic structures into solvable forms?",
+      "project": "Product-Rule Reversal Laboratory",
+      "application": "work, moments, transform-like integrals, and repeated-product models",
+      "vocabulary": [
+        "integration by parts",
+        "tabular integration",
+        "reduction formula",
+        "cyclic integral",
+        "boundary term",
+        "recursive relation"
+      ]
+    },
+    {
+      "id": "u02-l06",
+      "number": 6,
+      "title": "Cyclic Exponential–Trigonometric Integrals",
+      "focus": "solving integrals that return to themselves after repeated integration by parts",
+      "formulas": [
+        "solve algebraically after the integral reappears"
+      ],
+      "example1": "Evaluate ∫e^x cos x dx.",
+      "solution1": "(e^x/2)(sin x+cos x)+C.",
+      "example2": "Evaluate ∫e^x sin x dx.",
+      "solution2": "(e^x/2)(sin x−cos x)+C.",
+      "week": 5,
+      "unit": 2,
+      "unit_title": "Integration by Parts, Reduction & Cyclic Structure",
+      "essential": "How does reversing the product rule transform products, recursive integrals, and cyclic structures into solvable forms?",
+      "project": "Product-Rule Reversal Laboratory",
+      "application": "work, moments, transform-like integrals, and repeated-product models",
+      "vocabulary": [
+        "integration by parts",
+        "tabular integration",
+        "reduction formula",
+        "cyclic integral",
+        "boundary term",
+        "recursive relation"
+      ]
+    },
+    {
+      "id": "u02-l07",
+      "number": 7,
+      "title": "Applications, Method Comparison & Proof of Verification",
+      "focus": "defending method choice and validating integration-by-parts results",
+      "formulas": [
+        "differentiate the final antiderivative"
+      ],
+      "example1": "Evaluate ∫₁^e ln x dx and interpret the signed area.",
+      "solution1": "[xln x−x]₁^e=1 square unit.",
+      "example2": "Explain why choosing u=e^x and dv=x dx is less efficient for ∫x e^x dx.",
+      "solution2": "Differentiating e^x does not simplify it, while integrating x increases degree; the alternative u=x immediately lowers complexity.",
+      "week": 5,
+      "unit": 2,
+      "unit_title": "Integration by Parts, Reduction & Cyclic Structure",
+      "essential": "How does reversing the product rule transform products, recursive integrals, and cyclic structures into solvable forms?",
+      "project": "Product-Rule Reversal Laboratory",
+      "application": "work, moments, transform-like integrals, and repeated-product models",
+      "vocabulary": [
+        "integration by parts",
+        "tabular integration",
+        "reduction formula",
+        "cyclic integral",
+        "boundary term",
+        "recursive relation"
+      ]
+    }
+  ],
+  "project": "Product-Rule Reversal Laboratory"
+}

@@ -1,0 +1,20 @@
+{
+  "unit": 2,
+  "standards": [
+    "Integration by parts",
+    "Choice of u and dv",
+    "Repeated integration",
+    "Tabular method",
+    "Definite integration by parts",
+    "Reduction formulas",
+    "Cyclic integrals",
+    "Verification"
+  ],
+  "evidence": [
+    "lesson derivations",
+    "pathway problem set",
+    "investigation",
+    "mastery check",
+    "portfolio correction"
+  ]
+}

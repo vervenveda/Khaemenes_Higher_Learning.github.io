@@ -1,0 +1,19 @@
+{
+  "unit": 1,
+  "standards": [
+    "Fundamental Theorem of Calculus",
+    "Antiderivative families",
+    "Definite integrals and net change",
+    "Substitution",
+    "Initial-value problems",
+    "Units and interpretation",
+    "Mathematical justification"
+  ],
+  "evidence": [
+    "lesson derivations",
+    "pathway problem set",
+    "investigation",
+    "mastery check",
+    "portfolio correction"
+  ]
+}
