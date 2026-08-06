@@ -1,0 +1,245 @@
+{
+  "unit": 13,
+  "title": "Power Series, Taylor Series & Modelling Capstone",
+  "weeks": [
+    35,
+    36
+  ],
+  "lessons": [
+    {
+      "id": "u13-l01",
+      "number": 1,
+      "title": "Power Series & Radius of Convergence",
+      "focus": "using ratio or root behavior to determine where a power series converges",
+      "formulas": [
+        "Σc_n(x−a)^n",
+        "|x−a|<R"
+      ],
+      "example1": "Find the radius of Σx^n/3^n.",
+      "solution1": "R=3.",
+      "example2": "Find the radius of Σn x^n.",
+      "solution2": "R=1.",
+      "week": 35,
+      "unit": 13,
+      "unit_title": "Power Series, Taylor Series & Modelling Capstone",
+      "essential": "How do power series represent functions, control approximation error, solve problems, and bridge single-variable calculus to advanced analysis?",
+      "project": "College Calculus II Modelling Capstone & Oral Defense",
+      "application": "scientific approximation, local models, differential equations, computation, and advanced-study preparation",
+      "vocabulary": [
+        "power series",
+        "center",
+        "radius of convergence",
+        "interval of convergence",
+        "Taylor polynomial",
+        "Maclaurin series",
+        "remainder",
+        "analytic"
+      ]
+    },
+    {
+      "id": "u13-l02",
+      "number": 2,
+      "title": "Endpoint Testing & Interval of Convergence",
+      "focus": "testing boundary points separately after finding radius",
+      "formulas": [
+        "ratio/root tests often give no endpoint decision"
+      ],
+      "example1": "Find interval for Σ(x−2)^n/n.",
+      "solution1": "R=1; at x=3 harmonic diverges, at x=1 alternating converges, so [1,3).",
+      "example2": "Find interval for Σx^n/n².",
+      "solution2": "R=1 and both endpoints converge absolutely: [−1,1].",
+      "week": 35,
+      "unit": 13,
+      "unit_title": "Power Series, Taylor Series & Modelling Capstone",
+      "essential": "How do power series represent functions, control approximation error, solve problems, and bridge single-variable calculus to advanced analysis?",
+      "project": "College Calculus II Modelling Capstone & Oral Defense",
+      "application": "scientific approximation, local models, differential equations, computation, and advanced-study preparation",
+      "vocabulary": [
+        "power series",
+        "center",
+        "radius of convergence",
+        "interval of convergence",
+        "Taylor polynomial",
+        "Maclaurin series",
+        "remainder",
+        "analytic"
+      ]
+    },
+    {
+      "id": "u13-l03",
+      "number": 3,
+      "title": "Operations on Power Series",
+      "focus": "differentiating, integrating, multiplying, and shifting within convergence intervals",
+      "formulas": [
+        "termwise operations preserve radius, endpoints need review"
+      ],
+      "example1": "From 1/(1−x)=Σx^n, derive a series for 1/(1−x)².",
+      "solution1": "Differentiate: Σ_{n=1}∞ n x^{n−1}.",
+      "example2": "Derive a series for −ln(1−x).",
+      "solution2": "Integrate: Σ_{n=1}∞x^n/n for |x|<1.",
+      "week": 35,
+      "unit": 13,
+      "unit_title": "Power Series, Taylor Series & Modelling Capstone",
+      "essential": "How do power series represent functions, control approximation error, solve problems, and bridge single-variable calculus to advanced analysis?",
+      "project": "College Calculus II Modelling Capstone & Oral Defense",
+      "application": "scientific approximation, local models, differential equations, computation, and advanced-study preparation",
+      "vocabulary": [
+        "power series",
+        "center",
+        "radius of convergence",
+        "interval of convergence",
+        "Taylor polynomial",
+        "Maclaurin series",
+        "remainder",
+        "analytic"
+      ]
+    },
+    {
+      "id": "u13-l04",
+      "number": 4,
+      "title": "Taylor Polynomials & Local Approximation",
+      "focus": "matching derivatives at a center",
+      "formulas": [
+        "P_n(x)=Σ_{k=0}^n f^{(k)}(a)(x−a)^k/k!"
+      ],
+      "example1": "Find the degree-3 Maclaurin polynomial for e^x.",
+      "solution1": "1+x+x²/2+x³/6.",
+      "example2": "Find the degree-3 Taylor polynomial for ln x at a=1.",
+      "solution2": "(x−1)−(x−1)²/2+(x−1)³/3.",
+      "week": 35,
+      "unit": 13,
+      "unit_title": "Power Series, Taylor Series & Modelling Capstone",
+      "essential": "How do power series represent functions, control approximation error, solve problems, and bridge single-variable calculus to advanced analysis?",
+      "project": "College Calculus II Modelling Capstone & Oral Defense",
+      "application": "scientific approximation, local models, differential equations, computation, and advanced-study preparation",
+      "vocabulary": [
+        "power series",
+        "center",
+        "radius of convergence",
+        "interval of convergence",
+        "Taylor polynomial",
+        "Maclaurin series",
+        "remainder",
+        "analytic"
+      ]
+    },
+    {
+      "id": "u13-l05",
+      "number": 5,
+      "title": "Benchmark Maclaurin Series",
+      "focus": "using canonical series for exponential, trigonometric, logarithmic, and inverse-trigonometric functions",
+      "formulas": [
+        "e^x=Σx^n/n!",
+        "sin x=Σ(−1)^n x^{2n+1}/(2n+1)!"
+      ],
+      "example1": "Write four nonzero terms of cos x.",
+      "solution1": "1−x²/2!+x⁴/4!−x⁶/6!.",
+      "example2": "Write four nonzero terms of arctan x.",
+      "solution2": "x−x³/3+x⁵/5−x⁷/7, for |x|≤1 with endpoint qualifications.",
+      "week": 36,
+      "unit": 13,
+      "unit_title": "Power Series, Taylor Series & Modelling Capstone",
+      "essential": "How do power series represent functions, control approximation error, solve problems, and bridge single-variable calculus to advanced analysis?",
+      "project": "College Calculus II Modelling Capstone & Oral Defense",
+      "application": "scientific approximation, local models, differential equations, computation, and advanced-study preparation",
+      "vocabulary": [
+        "power series",
+        "center",
+        "radius of convergence",
+        "interval of convergence",
+        "Taylor polynomial",
+        "Maclaurin series",
+        "remainder",
+        "analytic"
+      ]
+    },
+    {
+      "id": "u13-l06",
+      "number": 6,
+      "title": "Taylor Remainder & Error Bounds",
+      "focus": "using derivative bounds to certify approximation accuracy",
+      "formulas": [
+        "|R_n(x)|≤M|x−a|^{n+1}/(n+1)!"
+      ],
+      "example1": "Bound the error of 1+x+x²/2 approximating e^x at x=.1 using M=e^{.1}.",
+      "solution1": "Error ≤e^{.1}(.1)^3/6≈0.000184.",
+      "example2": "Why is an error bound stronger than decimal agreement?",
+      "solution2": "It proves the maximum possible error under stated conditions.",
+      "week": 36,
+      "unit": 13,
+      "unit_title": "Power Series, Taylor Series & Modelling Capstone",
+      "essential": "How do power series represent functions, control approximation error, solve problems, and bridge single-variable calculus to advanced analysis?",
+      "project": "College Calculus II Modelling Capstone & Oral Defense",
+      "application": "scientific approximation, local models, differential equations, computation, and advanced-study preparation",
+      "vocabulary": [
+        "power series",
+        "center",
+        "radius of convergence",
+        "interval of convergence",
+        "Taylor polynomial",
+        "Maclaurin series",
+        "remainder",
+        "analytic"
+      ]
+    },
+    {
+      "id": "u13-l07",
+      "number": 7,
+      "title": "Series in Integration & Differential Equations",
+      "focus": "using series where elementary antiderivatives or closed forms are unavailable",
+      "formulas": [
+        "integrate or differentiate termwise inside the interval of convergence"
+      ],
+      "example1": "Approximate ∫₀^{.5}e^{-x²}dx using terms through x⁴ in e^{-x²}.",
+      "solution1": "Integrand≈1−x²+x⁴/2; integral≈0.5−0.125/3+0.03125/10=0.4614583.",
+      "example2": "For y′=y, y(0)=1, what coefficient recurrence leads to e^x?",
+      "solution2": "If y=Σa_nx^n, then (n+1)a_{n+1}=a_n, so a_n=1/n!.",
+      "week": 36,
+      "unit": 13,
+      "unit_title": "Power Series, Taylor Series & Modelling Capstone",
+      "essential": "How do power series represent functions, control approximation error, solve problems, and bridge single-variable calculus to advanced analysis?",
+      "project": "College Calculus II Modelling Capstone & Oral Defense",
+      "application": "scientific approximation, local models, differential equations, computation, and advanced-study preparation",
+      "vocabulary": [
+        "power series",
+        "center",
+        "radius of convergence",
+        "interval of convergence",
+        "Taylor polynomial",
+        "Maclaurin series",
+        "remainder",
+        "analytic"
+      ]
+    },
+    {
+      "id": "u13-l08",
+      "number": 8,
+      "title": "Capstone Synthesis, Oral Defense & Calculus III Bridge",
+      "focus": "integrating methods, convergence, modelling, communication, and responsible technology use",
+      "formulas": [
+        "claim + derivation + evidence + limitation + next question"
+      ],
+      "example1": "Name four required elements of the capstone defense.",
+      "solution1": "Mathematical model, justified method, validated result, and limitation/sensitivity analysis.",
+      "example2": "What topics form the Calculus III bridge?",
+      "solution2": "Vectors in space, multivariable functions, partial derivatives, multiple integrals, and vector fields—previewed but not substituted for Calculus II mastery.",
+      "week": 36,
+      "unit": 13,
+      "unit_title": "Power Series, Taylor Series & Modelling Capstone",
+      "essential": "How do power series represent functions, control approximation error, solve problems, and bridge single-variable calculus to advanced analysis?",
+      "project": "College Calculus II Modelling Capstone & Oral Defense",
+      "application": "scientific approximation, local models, differential equations, computation, and advanced-study preparation",
+      "vocabulary": [
+        "power series",
+        "center",
+        "radius of convergence",
+        "interval of convergence",
+        "Taylor polynomial",
+        "Maclaurin series",
+        "remainder",
+        "analytic"
+      ]
+    }
+  ],
+  "project": "College Calculus II Modelling Capstone & Oral Defense"
+}

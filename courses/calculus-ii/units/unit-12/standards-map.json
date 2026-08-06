@@ -1,0 +1,20 @@
+{
+  "unit": 12,
+  "standards": [
+    "Direct comparison",
+    "Limit comparison",
+    "Alternating series",
+    "Absolute and conditional convergence",
+    "Ratio test",
+    "Root test",
+    "Test selection",
+    "Counterexamples"
+  ],
+  "evidence": [
+    "lesson derivations",
+    "pathway problem set",
+    "investigation",
+    "mastery check",
+    "portfolio correction"
+  ]
+}
