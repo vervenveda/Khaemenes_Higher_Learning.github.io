@@ -1,0 +1,16 @@
+{
+  "name": "Khaemenes Higher Learning Calculus II",
+  "short_name": "Calculus II",
+  "id": "./?course=calculus-ii",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#07111d",
+  "theme_color": "#07111d",
+  "description": "A complete 36-week college Calculus II course by Jennifer Pearl.",
+  "categories": [
+    "education",
+    "mathematics",
+    "productivity"
+  ]
+}
