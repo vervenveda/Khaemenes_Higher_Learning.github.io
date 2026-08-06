@@ -1,0 +1,20 @@
+{
+  "unit": 6,
+  "standards": [
+    "Area between curves",
+    "Slicing",
+    "Disk and washer methods",
+    "Shell method",
+    "Arc length",
+    "Surface area",
+    "Method selection",
+    "Units and reasonableness"
+  ],
+  "evidence": [
+    "lesson derivations",
+    "pathway problem set",
+    "investigation",
+    "mastery check",
+    "portfolio correction"
+  ]
+}

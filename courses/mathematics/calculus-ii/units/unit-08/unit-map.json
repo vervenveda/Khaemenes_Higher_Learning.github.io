@@ -1,0 +1,217 @@
+{
+  "unit": 8,
+  "title": "Differential Equations & Numerical Models",
+  "weeks": [
+    21,
+    22,
+    23
+  ],
+  "lessons": [
+    {
+      "id": "u08-l01",
+      "number": 1,
+      "title": "Direction Fields, Equilibria & Qualitative Behavior",
+      "focus": "reading solution behavior without first solving symbolically",
+      "formulas": [
+        "y′=F(x,y)",
+        "equilibrium where F(x,y)=0"
+      ],
+      "example1": "For y′=y(2−y), identify equilibria.",
+      "solution1": "y=0 and y=2.",
+      "example2": "Describe stability.",
+      "solution2": "y=0 is unstable and y=2 is stable for positive initial data.",
+      "week": 21,
+      "unit": 8,
+      "unit_title": "Differential Equations & Numerical Models",
+      "essential": "How do direction fields, exact methods, numerical methods, and parameter evidence describe systems that change over time?",
+      "project": "Dynamic-System Model & Parameter Defense",
+      "application": "population, cooling, mixing, finance, medicine, circuits, and resource systems",
+      "vocabulary": [
+        "differential equation",
+        "initial-value problem",
+        "direction field",
+        "Euler method",
+        "equilibrium",
+        "separable",
+        "integrating factor",
+        "carrying capacity"
+      ]
+    },
+    {
+      "id": "u08-l02",
+      "number": 2,
+      "title": "Euler’s Method & Global Error",
+      "focus": "building numerical solution estimates from local slopes",
+      "formulas": [
+        "y_{n+1}=y_n+hF(x_n,y_n)"
+      ],
+      "example1": "Use one Euler step with h=0.1 for y′=x+y, y(0)=1.",
+      "solution1": "y₁=1+0.1(1)=1.1 at x=.1.",
+      "example2": "Use a second step.",
+      "solution2": "Slope=.1+1.1=1.2, so y₂=1.22.",
+      "week": 21,
+      "unit": 8,
+      "unit_title": "Differential Equations & Numerical Models",
+      "essential": "How do direction fields, exact methods, numerical methods, and parameter evidence describe systems that change over time?",
+      "project": "Dynamic-System Model & Parameter Defense",
+      "application": "population, cooling, mixing, finance, medicine, circuits, and resource systems",
+      "vocabulary": [
+        "differential equation",
+        "initial-value problem",
+        "direction field",
+        "Euler method",
+        "equilibrium",
+        "separable",
+        "integrating factor",
+        "carrying capacity"
+      ]
+    },
+    {
+      "id": "u08-l03",
+      "number": 3,
+      "title": "Separable Differential Equations",
+      "focus": "separating dependent and independent variables before integrating",
+      "formulas": [
+        "dy/g(y)=f(x)dx"
+      ],
+      "example1": "Solve y′=xy, y(0)=3.",
+      "solution1": "ln|y|=x²/2+C; y=3e^{x²/2}.",
+      "example2": "Solve y′=2x/(1+y), y(0)=0.",
+      "solution2": "y+y²/2=x²; choose the branch satisfying y(0)=0.",
+      "week": 21,
+      "unit": 8,
+      "unit_title": "Differential Equations & Numerical Models",
+      "essential": "How do direction fields, exact methods, numerical methods, and parameter evidence describe systems that change over time?",
+      "project": "Dynamic-System Model & Parameter Defense",
+      "application": "population, cooling, mixing, finance, medicine, circuits, and resource systems",
+      "vocabulary": [
+        "differential equation",
+        "initial-value problem",
+        "direction field",
+        "Euler method",
+        "equilibrium",
+        "separable",
+        "integrating factor",
+        "carrying capacity"
+      ]
+    },
+    {
+      "id": "u08-l04",
+      "number": 4,
+      "title": "Exponential Growth, Decay & Half-Life",
+      "focus": "deriving and interpreting proportional-rate models",
+      "formulas": [
+        "y′=ky",
+        "y=y₀e^{kt}"
+      ],
+      "example1": "A population doubles in 6 years. Find k.",
+      "solution1": "k=ln2/6.",
+      "example2": "A substance has half-life 10 days. What fraction remains after 30 days?",
+      "solution2": "(1/2)^3=1/8.",
+      "week": 22,
+      "unit": 8,
+      "unit_title": "Differential Equations & Numerical Models",
+      "essential": "How do direction fields, exact methods, numerical methods, and parameter evidence describe systems that change over time?",
+      "project": "Dynamic-System Model & Parameter Defense",
+      "application": "population, cooling, mixing, finance, medicine, circuits, and resource systems",
+      "vocabulary": [
+        "differential equation",
+        "initial-value problem",
+        "direction field",
+        "Euler method",
+        "equilibrium",
+        "separable",
+        "integrating factor",
+        "carrying capacity"
+      ]
+    },
+    {
+      "id": "u08-l05",
+      "number": 5,
+      "title": "Logistic Growth & Carrying Capacity",
+      "focus": "modelling self-limiting proportional growth",
+      "formulas": [
+        "P′=rP(1−P/K)"
+      ],
+      "example1": "For P′=.2P(1−P/1000), when is growth fastest?",
+      "solution1": "At P=K/2=500.",
+      "example2": "What is the long-run population for positive initial data?",
+      "solution2": "P approaches K=1000.",
+      "week": 22,
+      "unit": 8,
+      "unit_title": "Differential Equations & Numerical Models",
+      "essential": "How do direction fields, exact methods, numerical methods, and parameter evidence describe systems that change over time?",
+      "project": "Dynamic-System Model & Parameter Defense",
+      "application": "population, cooling, mixing, finance, medicine, circuits, and resource systems",
+      "vocabulary": [
+        "differential equation",
+        "initial-value problem",
+        "direction field",
+        "Euler method",
+        "equilibrium",
+        "separable",
+        "integrating factor",
+        "carrying capacity"
+      ]
+    },
+    {
+      "id": "u08-l06",
+      "number": 6,
+      "title": "First-Order Linear Equations & Integrating Factors",
+      "focus": "solving y′+p(x)y=q(x) systematically",
+      "formulas": [
+        "μ(x)=e^{∫p(x)dx}"
+      ],
+      "example1": "Solve y′+y=e^x.",
+      "solution1": "μ=e^x; (e^x y)′=e^{2x}; y=(1/2)e^x+Ce^{-x}.",
+      "example2": "Solve y′−2y=0, y(0)=5.",
+      "solution2": "y=5e^{2x}.",
+      "week": 23,
+      "unit": 8,
+      "unit_title": "Differential Equations & Numerical Models",
+      "essential": "How do direction fields, exact methods, numerical methods, and parameter evidence describe systems that change over time?",
+      "project": "Dynamic-System Model & Parameter Defense",
+      "application": "population, cooling, mixing, finance, medicine, circuits, and resource systems",
+      "vocabulary": [
+        "differential equation",
+        "initial-value problem",
+        "direction field",
+        "Euler method",
+        "equilibrium",
+        "separable",
+        "integrating factor",
+        "carrying capacity"
+      ]
+    },
+    {
+      "id": "u08-l07",
+      "number": 7,
+      "title": "Parameter Estimation, Residuals & Model Comparison",
+      "focus": "using data to estimate parameters and inspect model error",
+      "formulas": [
+        "residual=observed−predicted"
+      ],
+      "example1": "Data follow y=y₀e^{kt}; explain a linearizing plot.",
+      "solution1": "Plot ln y versus t; slope estimates k and intercept estimates ln y₀.",
+      "example2": "Why inspect residuals after fitting?",
+      "solution2": "Patterns reveal bias, missing structure, changing variance, or invalid assumptions.",
+      "week": 23,
+      "unit": 8,
+      "unit_title": "Differential Equations & Numerical Models",
+      "essential": "How do direction fields, exact methods, numerical methods, and parameter evidence describe systems that change over time?",
+      "project": "Dynamic-System Model & Parameter Defense",
+      "application": "population, cooling, mixing, finance, medicine, circuits, and resource systems",
+      "vocabulary": [
+        "differential equation",
+        "initial-value problem",
+        "direction field",
+        "Euler method",
+        "equilibrium",
+        "separable",
+        "integrating factor",
+        "carrying capacity"
+      ]
+    }
+  ],
+  "project": "Dynamic-System Model & Parameter Defense"
+}

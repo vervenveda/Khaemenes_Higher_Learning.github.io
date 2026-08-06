@@ -1,0 +1,208 @@
+{
+  "unit": 6,
+  "title": "Advanced Applications of Integration",
+  "weeks": [
+    15,
+    16,
+    17
+  ],
+  "lessons": [
+    {
+      "id": "u06-l01",
+      "number": 1,
+      "title": "Area Between Curves & Intersection Analysis",
+      "focus": "finding intersections, ordering curves, and splitting intervals",
+      "formulas": [
+        "area=∫(top−bottom)dx or ∫(right−left)dy"
+      ],
+      "example1": "Find the area between y=x and y=x² on [0,1].",
+      "solution1": "∫₀¹(x−x²)dx=1/6.",
+      "example2": "Find intersections of y=x² and y=2x.",
+      "solution2": "x=0 and x=2.",
+      "week": 15,
+      "unit": 6,
+      "unit_title": "Advanced Applications of Integration",
+      "essential": "How do geometry, slicing, rotation, and metric formulas turn integral setup into defensible area, volume, length, and surface models?",
+      "project": "Integrated Design: Area, Volume & Surface Optimization",
+      "application": "design, manufacturing, architecture, material estimation, and geometric modelling",
+      "vocabulary": [
+        "cross-section",
+        "washer",
+        "shell",
+        "axis of rotation",
+        "arc length",
+        "surface of revolution",
+        "parameter bounds"
+      ]
+    },
+    {
+      "id": "u06-l02",
+      "number": 2,
+      "title": "Volumes by General Slicing",
+      "focus": "expressing volume as the integral of cross-sectional area",
+      "formulas": [
+        "V=∫A(x)dx"
+      ],
+      "example1": "A solid has square cross-sections perpendicular to x-axis over 0≤x≤2 with side x. Find V.",
+      "solution1": "∫₀²x²dx=8/3.",
+      "example2": "If cross-sections are semicircles with diameter f(x), what is A(x)?",
+      "solution2": "A(x)=πf(x)²/8.",
+      "week": 15,
+      "unit": 6,
+      "unit_title": "Advanced Applications of Integration",
+      "essential": "How do geometry, slicing, rotation, and metric formulas turn integral setup into defensible area, volume, length, and surface models?",
+      "project": "Integrated Design: Area, Volume & Surface Optimization",
+      "application": "design, manufacturing, architecture, material estimation, and geometric modelling",
+      "vocabulary": [
+        "cross-section",
+        "washer",
+        "shell",
+        "axis of rotation",
+        "arc length",
+        "surface of revolution",
+        "parameter bounds"
+      ]
+    },
+    {
+      "id": "u06-l03",
+      "number": 3,
+      "title": "Disks & Washers",
+      "focus": "measuring radial cross-sections around an axis",
+      "formulas": [
+        "V=π∫(R²−r²)dx"
+      ],
+      "example1": "Rotate y=√x, 0≤x≤4, about the x-axis.",
+      "solution1": "V=π∫₀⁴x dx=8π.",
+      "example2": "Rotate the region between y=2 and y=x on [0,2] about x-axis.",
+      "solution2": "V=π∫₀²(4−x²)dx=16π/3.",
+      "week": 15,
+      "unit": 6,
+      "unit_title": "Advanced Applications of Integration",
+      "essential": "How do geometry, slicing, rotation, and metric formulas turn integral setup into defensible area, volume, length, and surface models?",
+      "project": "Integrated Design: Area, Volume & Surface Optimization",
+      "application": "design, manufacturing, architecture, material estimation, and geometric modelling",
+      "vocabulary": [
+        "cross-section",
+        "washer",
+        "shell",
+        "axis of rotation",
+        "arc length",
+        "surface of revolution",
+        "parameter bounds"
+      ]
+    },
+    {
+      "id": "u06-l04",
+      "number": 4,
+      "title": "Cylindrical Shells",
+      "focus": "using radius-times-height when shells simplify the setup",
+      "formulas": [
+        "V=2π∫(radius)(height)dx"
+      ],
+      "example1": "Rotate y=x², 0≤x≤1, about the y-axis.",
+      "solution1": "V=2π∫₀¹x·x²dx=π/2.",
+      "example2": "Why can shells avoid solving for x as a function of y?",
+      "solution2": "Vertical shells preserve the original x-description when rotating about a vertical axis.",
+      "week": 16,
+      "unit": 6,
+      "unit_title": "Advanced Applications of Integration",
+      "essential": "How do geometry, slicing, rotation, and metric formulas turn integral setup into defensible area, volume, length, and surface models?",
+      "project": "Integrated Design: Area, Volume & Surface Optimization",
+      "application": "design, manufacturing, architecture, material estimation, and geometric modelling",
+      "vocabulary": [
+        "cross-section",
+        "washer",
+        "shell",
+        "axis of rotation",
+        "arc length",
+        "surface of revolution",
+        "parameter bounds"
+      ]
+    },
+    {
+      "id": "u06-l05",
+      "number": 5,
+      "title": "Arc Length",
+      "focus": "accumulating differential distance along a smooth curve",
+      "formulas": [
+        "L=∫√(1+(y′)²)dx"
+      ],
+      "example1": "Find the length of y=(2/3)x^{3/2} from 0 to 1.",
+      "solution1": "y′=√x; L=∫₀¹√(1+x)dx=(2/3)(2√2−1).",
+      "example2": "State the parametric arc-length formula.",
+      "solution2": "L=∫√((dx/dt)²+(dy/dt)²)dt.",
+      "week": 16,
+      "unit": 6,
+      "unit_title": "Advanced Applications of Integration",
+      "essential": "How do geometry, slicing, rotation, and metric formulas turn integral setup into defensible area, volume, length, and surface models?",
+      "project": "Integrated Design: Area, Volume & Surface Optimization",
+      "application": "design, manufacturing, architecture, material estimation, and geometric modelling",
+      "vocabulary": [
+        "cross-section",
+        "washer",
+        "shell",
+        "axis of rotation",
+        "arc length",
+        "surface of revolution",
+        "parameter bounds"
+      ]
+    },
+    {
+      "id": "u06-l06",
+      "number": 6,
+      "title": "Surface Area of Revolution",
+      "focus": "accumulating circumference times differential arc length",
+      "formulas": [
+        "S=2π∫(radius)ds"
+      ],
+      "example1": "Rotate y=x, 0≤x≤1, about the x-axis.",
+      "solution1": "S=2π∫₀¹x√2 dx=π√2.",
+      "example2": "What radius is used when rotating y=f(x) about y=c?",
+      "solution2": "|f(x)−c|.",
+      "week": 17,
+      "unit": 6,
+      "unit_title": "Advanced Applications of Integration",
+      "essential": "How do geometry, slicing, rotation, and metric formulas turn integral setup into defensible area, volume, length, and surface models?",
+      "project": "Integrated Design: Area, Volume & Surface Optimization",
+      "application": "design, manufacturing, architecture, material estimation, and geometric modelling",
+      "vocabulary": [
+        "cross-section",
+        "washer",
+        "shell",
+        "axis of rotation",
+        "arc length",
+        "surface of revolution",
+        "parameter bounds"
+      ]
+    },
+    {
+      "id": "u06-l07",
+      "number": 7,
+      "title": "Method Selection, Units & Geometric Verification",
+      "focus": "defending bounds, method, orientation, and reasonableness",
+      "formulas": [
+        "draw → label → choose slices → integrate → validate"
+      ],
+      "example1": "Which method is usually simpler for rotating y=x², 0≤x≤1, about y-axis?",
+      "solution1": "Cylindrical shells in x avoid solving x=√y.",
+      "example2": "A volume integral produces units of cm². Diagnose the issue.",
+      "solution2": "A length factor is missing; volume must have cubic units.",
+      "week": 17,
+      "unit": 6,
+      "unit_title": "Advanced Applications of Integration",
+      "essential": "How do geometry, slicing, rotation, and metric formulas turn integral setup into defensible area, volume, length, and surface models?",
+      "project": "Integrated Design: Area, Volume & Surface Optimization",
+      "application": "design, manufacturing, architecture, material estimation, and geometric modelling",
+      "vocabulary": [
+        "cross-section",
+        "washer",
+        "shell",
+        "axis of rotation",
+        "arc length",
+        "surface of revolution",
+        "parameter bounds"
+      ]
+    }
+  ],
+  "project": "Integrated Design: Area, Volume & Surface Optimization"
+}
