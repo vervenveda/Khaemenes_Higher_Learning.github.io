@@ -1,0 +1,21 @@
+{
+  "unit": 11,
+  "standards": [
+    "Sequence limits",
+    "Monotone and bounded sequences",
+    "Infinite series",
+    "Partial sums",
+    "Geometric series",
+    "Telescoping series",
+    "Divergence test",
+    "Integral test",
+    "Remainder estimates"
+  ],
+  "evidence": [
+    "lesson derivations",
+    "pathway problem set",
+    "investigation",
+    "mastery check",
+    "portfolio correction"
+  ]
+}

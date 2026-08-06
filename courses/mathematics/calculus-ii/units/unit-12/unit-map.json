@@ -1,0 +1,207 @@
+{
+  "unit": 12,
+  "title": "Convergence Tests & Conditional Behavior",
+  "weeks": [
+    33,
+    34
+  ],
+  "lessons": [
+    {
+      "id": "u12-l01",
+      "number": 1,
+      "title": "Direct Comparison Test",
+      "focus": "building inequalities against known benchmark series",
+      "formulas": [
+        "0≤a_n≤b_n with Σb_n convergent ⇒ Σa_n convergent"
+      ],
+      "example1": "Determine Σ1/(n²+3).",
+      "solution1": "Converges by comparison with 1/n².",
+      "example2": "Determine Σ1/(2n+1).",
+      "solution2": "Diverges by comparison with a constant multiple of 1/n.",
+      "week": 33,
+      "unit": 12,
+      "unit_title": "Convergence Tests & Conditional Behavior",
+      "essential": "How can comparison, alternation, ratios, roots, and absolute convergence classify series and quantify approximation reliability?",
+      "project": "Convergence Decision Tree & Counterexample Defense",
+      "application": "error control, stability, perturbation methods, and approximation reliability",
+      "vocabulary": [
+        "comparison test",
+        "limit comparison",
+        "alternating series",
+        "absolute convergence",
+        "conditional convergence",
+        "ratio test",
+        "root test"
+      ]
+    },
+    {
+      "id": "u12-l02",
+      "number": 2,
+      "title": "Limit Comparison Test",
+      "focus": "comparing asymptotic size when direct inequalities are awkward",
+      "formulas": [
+        "lim a_n/b_n=c, 0<c<∞"
+      ],
+      "example1": "Test Σ(3n+1)/(n³+2).",
+      "solution1": "Compare with 1/n²; limit is 3, so it converges.",
+      "example2": "Test Σn/(n²+1).",
+      "solution2": "Compare with 1/n; limit is 1, so it diverges.",
+      "week": 33,
+      "unit": 12,
+      "unit_title": "Convergence Tests & Conditional Behavior",
+      "essential": "How can comparison, alternation, ratios, roots, and absolute convergence classify series and quantify approximation reliability?",
+      "project": "Convergence Decision Tree & Counterexample Defense",
+      "application": "error control, stability, perturbation methods, and approximation reliability",
+      "vocabulary": [
+        "comparison test",
+        "limit comparison",
+        "alternating series",
+        "absolute convergence",
+        "conditional convergence",
+        "ratio test",
+        "root test"
+      ]
+    },
+    {
+      "id": "u12-l03",
+      "number": 3,
+      "title": "Alternating Series & Error Bounds",
+      "focus": "using decreasing magnitudes and a zero limit",
+      "formulas": [
+        "alternating remainder ≤ first omitted magnitude"
+      ],
+      "example1": "Test Σ(−1)^{n+1}/n.",
+      "solution1": "Converges by the alternating-series test.",
+      "example2": "How many terms ensure error below .01?",
+      "solution2": "Need 1/(N+1)<.01, so N≥100.",
+      "week": 33,
+      "unit": 12,
+      "unit_title": "Convergence Tests & Conditional Behavior",
+      "essential": "How can comparison, alternation, ratios, roots, and absolute convergence classify series and quantify approximation reliability?",
+      "project": "Convergence Decision Tree & Counterexample Defense",
+      "application": "error control, stability, perturbation methods, and approximation reliability",
+      "vocabulary": [
+        "comparison test",
+        "limit comparison",
+        "alternating series",
+        "absolute convergence",
+        "conditional convergence",
+        "ratio test",
+        "root test"
+      ]
+    },
+    {
+      "id": "u12-l04",
+      "number": 4,
+      "title": "Absolute vs Conditional Convergence",
+      "focus": "distinguishing convergence of Σa_n from Σ|a_n|",
+      "formulas": [
+        "absolute convergence ⇒ convergence"
+      ],
+      "example1": "Classify Σ(−1)^{n+1}/n.",
+      "solution1": "Conditionally convergent.",
+      "example2": "Classify Σ(−1)^n/n².",
+      "solution2": "Absolutely convergent.",
+      "week": 33,
+      "unit": 12,
+      "unit_title": "Convergence Tests & Conditional Behavior",
+      "essential": "How can comparison, alternation, ratios, roots, and absolute convergence classify series and quantify approximation reliability?",
+      "project": "Convergence Decision Tree & Counterexample Defense",
+      "application": "error control, stability, perturbation methods, and approximation reliability",
+      "vocabulary": [
+        "comparison test",
+        "limit comparison",
+        "alternating series",
+        "absolute convergence",
+        "conditional convergence",
+        "ratio test",
+        "root test"
+      ]
+    },
+    {
+      "id": "u12-l05",
+      "number": 5,
+      "title": "Ratio Test",
+      "focus": "measuring factorial and exponential growth",
+      "formulas": [
+        "L=lim|a_{n+1}/a_n|"
+      ],
+      "example1": "Test Σ3^n/n!.",
+      "solution1": "L=0, so it converges absolutely.",
+      "example2": "Test Σn!/2^n.",
+      "solution2": "The ratio tends to infinity, so it diverges.",
+      "week": 34,
+      "unit": 12,
+      "unit_title": "Convergence Tests & Conditional Behavior",
+      "essential": "How can comparison, alternation, ratios, roots, and absolute convergence classify series and quantify approximation reliability?",
+      "project": "Convergence Decision Tree & Counterexample Defense",
+      "application": "error control, stability, perturbation methods, and approximation reliability",
+      "vocabulary": [
+        "comparison test",
+        "limit comparison",
+        "alternating series",
+        "absolute convergence",
+        "conditional convergence",
+        "ratio test",
+        "root test"
+      ]
+    },
+    {
+      "id": "u12-l06",
+      "number": 6,
+      "title": "Root Test",
+      "focus": "measuring nth-power growth",
+      "formulas": [
+        "L=limsup |a_n|^{1/n}"
+      ],
+      "example1": "Test Σ[(2n+1)/(3n)]^n.",
+      "solution1": "Root limit is 2/3, so it converges.",
+      "example2": "Test Σ(1+1/n)^{n²}.",
+      "solution2": "The nth root approaches e>1, so terms do not yield convergence.",
+      "week": 34,
+      "unit": 12,
+      "unit_title": "Convergence Tests & Conditional Behavior",
+      "essential": "How can comparison, alternation, ratios, roots, and absolute convergence classify series and quantify approximation reliability?",
+      "project": "Convergence Decision Tree & Counterexample Defense",
+      "application": "error control, stability, perturbation methods, and approximation reliability",
+      "vocabulary": [
+        "comparison test",
+        "limit comparison",
+        "alternating series",
+        "absolute convergence",
+        "conditional convergence",
+        "ratio test",
+        "root test"
+      ]
+    },
+    {
+      "id": "u12-l07",
+      "number": 7,
+      "title": "Test Selection, Counterexamples & Decision Logic",
+      "focus": "selecting a test from structure and explaining inconclusive outcomes",
+      "formulas": [
+        "structure first; no single test solves every series"
+      ],
+      "example1": "Why is the ratio test inconclusive for Σ1/n²?",
+      "solution1": "The ratio limit is 1.",
+      "example2": "Name a useful first question when testing a series.",
+      "solution2": "Do the terms approach zero? If not, the series diverges immediately.",
+      "week": 34,
+      "unit": 12,
+      "unit_title": "Convergence Tests & Conditional Behavior",
+      "essential": "How can comparison, alternation, ratios, roots, and absolute convergence classify series and quantify approximation reliability?",
+      "project": "Convergence Decision Tree & Counterexample Defense",
+      "application": "error control, stability, perturbation methods, and approximation reliability",
+      "vocabulary": [
+        "comparison test",
+        "limit comparison",
+        "alternating series",
+        "absolute convergence",
+        "conditional convergence",
+        "ratio test",
+        "root test"
+      ]
+    }
+  ],
+  "project": "Convergence Decision Tree & Counterexample Defense"
+}
