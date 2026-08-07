@@ -1,0 +1,16 @@
+{
+  "id": "./",
+  "name": "Khaemenes Higher Learning Linear Algebra",
+  "short_name": "Linear Algebra",
+  "description": "College linear algebra: matrix theory, vector spaces, and linear transformations.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#090b10",
+  "theme_color": "#090b10",
+  "categories": [
+    "education",
+    "mathematics",
+    "productivity"
+  ]
+}
