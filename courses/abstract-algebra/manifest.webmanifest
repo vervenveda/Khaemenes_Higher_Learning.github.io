@@ -1,0 +1,16 @@
+{
+  "id": "./",
+  "name": "Khaemenes Higher Learning Abstract Algebra",
+  "short_name": "Abstract Algebra",
+  "description": "A rigorous advanced sequence in algebraic structures, groups, group actions, quotient theory, Sylow theory, rings, ideals, factorization, fields, finite fields, Galois theory, modules, coding, cryptography, computational algebra, and research-level exposition.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#090b10",
+  "theme_color": "#090b10",
+  "categories": [
+    "education",
+    "mathematics",
+    "research"
+  ]
+}
