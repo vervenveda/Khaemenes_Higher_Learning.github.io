@@ -1,0 +1,15 @@
+{
+  "unit": 4,
+  "title": "Metric Spaces, Topology & Compactness",
+  "standards": [
+    "metrics",
+    "open and closed sets",
+    "interior and closure",
+    "convergence",
+    "completeness",
+    "compactness",
+    "connectedness",
+    "Heine-Borel"
+  ],
+  "essential_question": "How do metric-space ideas generalize distance, convergence, continuity, and compactness beyond the real line?"
+}

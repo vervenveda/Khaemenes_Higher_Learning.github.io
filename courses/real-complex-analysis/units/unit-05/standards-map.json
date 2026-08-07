@@ -1,0 +1,14 @@
+{
+  "unit": 5,
+  "title": "Continuity, Uniform Continuity & Function Spaces",
+  "standards": [
+    "epsilon-delta continuity",
+    "sequential continuity",
+    "uniform continuity",
+    "compact-domain theorems",
+    "function spaces",
+    "sup norm",
+    "equicontinuity"
+  ],
+  "essential_question": "How do local and uniform notions of continuity govern approximation and stability?"
+}

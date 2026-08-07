@@ -1,0 +1,14 @@
+{
+  "unit": 2,
+  "title": "Sequences, Subsequences & Completeness",
+  "standards": [
+    "sequence convergence",
+    "limit uniqueness",
+    "monotone convergence",
+    "subsequences",
+    "Bolzano-Weierstrass",
+    "Cauchy sequences",
+    "limsup and liminf"
+  ],
+  "essential_question": "How do sequences encode limiting behavior, compactness, and completeness on the real line?"
+}

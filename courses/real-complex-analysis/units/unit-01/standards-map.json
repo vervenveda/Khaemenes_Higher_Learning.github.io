@@ -1,0 +1,15 @@
+{
+  "unit": 1,
+  "title": "Proof Foundations & the Real Number System",
+  "standards": [
+    "ordered fields",
+    "absolute value",
+    "supremum",
+    "infimum",
+    "completeness",
+    "Archimedean property",
+    "density",
+    "proof conventions"
+  ],
+  "essential_question": "How do ordered-field axioms and completeness support every rigorous statement about real-variable analysis?"
+}

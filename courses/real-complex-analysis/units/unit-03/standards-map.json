@@ -1,0 +1,15 @@
+{
+  "unit": 3,
+  "title": "Infinite Series & Power Series",
+  "standards": [
+    "series convergence",
+    "Cauchy criterion",
+    "comparison",
+    "ratio and root tests",
+    "absolute convergence",
+    "alternating series",
+    "power series",
+    "radius of convergence"
+  ],
+  "essential_question": "How do convergence tests and power series control infinite accumulation and approximation?"
+}
