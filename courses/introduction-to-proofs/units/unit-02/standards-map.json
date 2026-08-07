@@ -1,0 +1,15 @@
+{
+  "unit": 2,
+  "title": "Logic, Quantifiers & Negation",
+  "standards": [
+    "connectives",
+    "truth tables",
+    "logical equivalence",
+    "implication",
+    "predicates",
+    "universal and existential quantifiers",
+    "negation",
+    "rules of inference"
+  ],
+  "essential_question": "How do propositional and predicate logic expose the exact structure of a mathematical argument?"
+}

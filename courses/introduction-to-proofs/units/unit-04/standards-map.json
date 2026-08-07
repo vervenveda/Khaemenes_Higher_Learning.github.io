@@ -1,0 +1,15 @@
+{
+  "unit": 4,
+  "title": "Direct Proof & Algebraic Structure",
+  "standards": [
+    "direct proof",
+    "parity",
+    "divisibility",
+    "inequalities",
+    "set inclusion",
+    "function properties",
+    "algebraic identities",
+    "proof planning"
+  ],
+  "essential_question": "How can definitions and algebraic identities be organized into transparent direct proofs?"
+}

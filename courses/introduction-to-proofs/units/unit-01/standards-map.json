@@ -1,0 +1,14 @@
+{
+  "unit": 1,
+  "title": "Mathematical Language, Definitions & Claims",
+  "standards": [
+    "mathematical statements",
+    "definitions",
+    "examples and nonexamples",
+    "necessary and sufficient conditions",
+    "theorem structure",
+    "counterexamples",
+    "notation and scope"
+  ],
+  "essential_question": "How does precise mathematical language transform intuition into statements that can be proved, disproved, or refined?"
+}

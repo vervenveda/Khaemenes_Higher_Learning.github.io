@@ -1,0 +1,15 @@
+{
+  "unit": 5,
+  "title": "Contraposition, Contradiction & Minimal Counterexamples",
+  "standards": [
+    "contraposition",
+    "contradiction",
+    "irrationality",
+    "infinitude",
+    "minimal counterexample",
+    "descent",
+    "negation",
+    "proof strategy selection"
+  ],
+  "essential_question": "When do indirect methods expose a proof more clearly than direct calculation?"
+}

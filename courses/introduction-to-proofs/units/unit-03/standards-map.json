@@ -1,0 +1,17 @@
+{
+  "unit": 3,
+  "title": "Sets, Functions & Relations",
+  "standards": [
+    "set operations",
+    "power sets",
+    "Cartesian products",
+    "functions",
+    "injectivity",
+    "surjectivity",
+    "bijections",
+    "relations",
+    "equivalence relations",
+    "orders"
+  ],
+  "essential_question": "How do sets, functions, and relations provide the language in which modern proofs are written?"
+}
