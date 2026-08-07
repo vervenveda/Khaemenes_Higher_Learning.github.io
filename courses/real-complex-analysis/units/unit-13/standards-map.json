@@ -1,0 +1,16 @@
+{
+  "unit": 13,
+  "title": "Harmonic, Conformal & Research-Level Complex Analysis",
+  "standards": [
+    "Poisson kernel",
+    "harmonic mean value",
+    "Schwarz lemma",
+    "Riemann mapping",
+    "analytic continuation",
+    "normal families",
+    "Montel theorem",
+    "special functions",
+    "research exposition"
+  ],
+  "essential_question": "How do harmonic theory, conformal mapping, analytic continuation, and normal families open pathways to advanced research?"
+}

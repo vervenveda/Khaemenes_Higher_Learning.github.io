@@ -1,0 +1,15 @@
+{
+  "unit": 12,
+  "title": "Singularities, Laurent Series & Residues",
+  "standards": [
+    "Laurent series",
+    "isolated singularities",
+    "removable singularities",
+    "poles",
+    "essential singularities",
+    "residues",
+    "residue theorem",
+    "argument principle"
+  ],
+  "essential_question": "How do local singular expansions convert complex integrals into algebraic coefficient calculations?"
+}

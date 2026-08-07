@@ -1,0 +1,15 @@
+{
+  "unit": 11,
+  "title": "Complex Integration & Cauchy Theory",
+  "standards": [
+    "contours",
+    "complex line integrals",
+    "primitives",
+    "Cauchy theorem",
+    "Cauchy integral formula",
+    "derivative estimates",
+    "Liouville theorem",
+    "fundamental theorem of algebra"
+  ],
+  "essential_question": "How does contour integration lead to the central rigidity theorems of complex analysis?"
+}
