@@ -1,0 +1,16 @@
+{
+  "unit": 11,
+  "terms": [
+    "Boolean algebra",
+    "gate",
+    "minterm",
+    "maxterm",
+    "normal form",
+    "state",
+    "transition",
+    "automaton",
+    "accepting state",
+    "language",
+    "invariant"
+  ]
+}

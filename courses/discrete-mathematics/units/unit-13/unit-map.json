@@ -1,0 +1,273 @@
+{
+  "unit": 13,
+  "title": "Discrete Models for Computing & Capstone",
+  "weeks": [
+    34,
+    35,
+    36
+  ],
+  "lessons": [
+    {
+      "title": "Set and Logic Models in Databases and Queries",
+      "focus": "connecting relations, predicates, joins, keys, and quantifiers to data retrieval and integrity",
+      "formulas": [
+        "relation as set of tuples",
+        "selection predicate"
+      ],
+      "id": "u13-l01",
+      "number": 1,
+      "unit": 13,
+      "unit_title": "Discrete Models for Computing & Capstone",
+      "week": 34,
+      "essential": "How can logic, combinatorics, graphs, number theory, probability, and proof combine into a defensible computer-science model?",
+      "project": "Independent Discrete Mathematics Computing Capstone & Oral Defense",
+      "application": "software systems, cybersecurity, databases, coding, networks, operations research, artificial intelligence, and responsible computing",
+      "vocab": [
+        "constraint",
+        "satisfiability",
+        "Hamming distance",
+        "codeword",
+        "syndrome",
+        "optimization",
+        "network centrality",
+        "security property",
+        "reproducibility",
+        "capstone"
+      ],
+      "sequence": 85,
+      "p1": "Give a rigorous example of connecting relations, predicates, joins, keys, and quantifiers to data retrieval and integrity.",
+      "s1": "Define the objects precisely, apply the governing rule for Set and Logic Models in Databases and Queries, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Set and Logic Models in Databases and Queries.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Coding Theory and Hamming Distance",
+      "focus": "measuring separation between codewords and connecting distance to error detection and correction",
+      "formulas": [
+        "d(x,y)=number of differing coordinates"
+      ],
+      "id": "u13-l02",
+      "number": 2,
+      "unit": 13,
+      "unit_title": "Discrete Models for Computing & Capstone",
+      "week": 34,
+      "essential": "How can logic, combinatorics, graphs, number theory, probability, and proof combine into a defensible computer-science model?",
+      "project": "Independent Discrete Mathematics Computing Capstone & Oral Defense",
+      "application": "software systems, cybersecurity, databases, coding, networks, operations research, artificial intelligence, and responsible computing",
+      "vocab": [
+        "constraint",
+        "satisfiability",
+        "Hamming distance",
+        "codeword",
+        "syndrome",
+        "optimization",
+        "network centrality",
+        "security property",
+        "reproducibility",
+        "capstone"
+      ],
+      "sequence": 86,
+      "p1": "Find the Hamming distance between 101101 and 100001.",
+      "s1": "They differ in two positions, so the distance is 2.",
+      "p2": "Identify a common error in Coding Theory and Hamming Distance.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Parity, Check Codes and Error Correction",
+      "focus": "constructing parity checks, syndromes, and simple correcting codes",
+      "formulas": [
+        "minimum distance d detects d−1 errors"
+      ],
+      "id": "u13-l03",
+      "number": 3,
+      "unit": 13,
+      "unit_title": "Discrete Models for Computing & Capstone",
+      "week": 34,
+      "essential": "How can logic, combinatorics, graphs, number theory, probability, and proof combine into a defensible computer-science model?",
+      "project": "Independent Discrete Mathematics Computing Capstone & Oral Defense",
+      "application": "software systems, cybersecurity, databases, coding, networks, operations research, artificial intelligence, and responsible computing",
+      "vocab": [
+        "constraint",
+        "satisfiability",
+        "Hamming distance",
+        "codeword",
+        "syndrome",
+        "optimization",
+        "network centrality",
+        "security property",
+        "reproducibility",
+        "capstone"
+      ],
+      "sequence": 87,
+      "p1": "Give a rigorous example of constructing parity checks, syndromes, and simple correcting codes.",
+      "s1": "Define the objects precisely, apply the governing rule for Parity, Check Codes and Error Correction, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Parity, Check Codes and Error Correction.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Constraint Satisfaction and SAT",
+      "focus": "expressing finite choices and restrictions as variables, domains, clauses, and search",
+      "formulas": [
+        "CNF satisfiability"
+      ],
+      "id": "u13-l04",
+      "number": 4,
+      "unit": 13,
+      "unit_title": "Discrete Models for Computing & Capstone",
+      "week": 35,
+      "essential": "How can logic, combinatorics, graphs, number theory, probability, and proof combine into a defensible computer-science model?",
+      "project": "Independent Discrete Mathematics Computing Capstone & Oral Defense",
+      "application": "software systems, cybersecurity, databases, coding, networks, operations research, artificial intelligence, and responsible computing",
+      "vocab": [
+        "constraint",
+        "satisfiability",
+        "Hamming distance",
+        "codeword",
+        "syndrome",
+        "optimization",
+        "network centrality",
+        "security property",
+        "reproducibility",
+        "capstone"
+      ],
+      "sequence": 88,
+      "p1": "What does a SAT assignment do?",
+      "s1": "It assigns truth values so every clause in the Boolean formula is satisfied.",
+      "p2": "Identify a common error in Constraint Satisfaction and SAT.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Network Analysis, Centrality and Community Structure",
+      "focus": "using graph measures while recognizing modelling and ethical limits",
+      "formulas": [
+        "degree",
+        "distance",
+        "centrality",
+        "cut"
+      ],
+      "id": "u13-l05",
+      "number": 5,
+      "unit": 13,
+      "unit_title": "Discrete Models for Computing & Capstone",
+      "week": 35,
+      "essential": "How can logic, combinatorics, graphs, number theory, probability, and proof combine into a defensible computer-science model?",
+      "project": "Independent Discrete Mathematics Computing Capstone & Oral Defense",
+      "application": "software systems, cybersecurity, databases, coding, networks, operations research, artificial intelligence, and responsible computing",
+      "vocab": [
+        "constraint",
+        "satisfiability",
+        "Hamming distance",
+        "codeword",
+        "syndrome",
+        "optimization",
+        "network centrality",
+        "security property",
+        "reproducibility",
+        "capstone"
+      ],
+      "sequence": 89,
+      "p1": "Give a rigorous example of using graph measures while recognizing modelling and ethical limits.",
+      "s1": "Define the objects precisely, apply the governing rule for Network Analysis, Centrality and Community Structure, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Network Analysis, Centrality and Community Structure.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Security, Privacy and Combinatorial Risk",
+      "focus": "analyzing attack surfaces, anonymity sets, key spaces, and failure combinations without claiming mathematical models are complete security",
+      "formulas": [
+        "key space size",
+        "adversary model"
+      ],
+      "id": "u13-l06",
+      "number": 6,
+      "unit": 13,
+      "unit_title": "Discrete Models for Computing & Capstone",
+      "week": 35,
+      "essential": "How can logic, combinatorics, graphs, number theory, probability, and proof combine into a defensible computer-science model?",
+      "project": "Independent Discrete Mathematics Computing Capstone & Oral Defense",
+      "application": "software systems, cybersecurity, databases, coding, networks, operations research, artificial intelligence, and responsible computing",
+      "vocab": [
+        "constraint",
+        "satisfiability",
+        "Hamming distance",
+        "codeword",
+        "syndrome",
+        "optimization",
+        "network centrality",
+        "security property",
+        "reproducibility",
+        "capstone"
+      ],
+      "sequence": 90,
+      "p1": "Give a rigorous example of analyzing attack surfaces, anonymity sets, key spaces, and failure combinations without claiming mathematical models are complete security.",
+      "s1": "Define the objects precisely, apply the governing rule for Security, Privacy and Combinatorial Risk, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Security, Privacy and Combinatorial Risk.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Capstone Design: Model, Proof and Algorithm",
+      "focus": "forming a feasible computing problem with definitions, model, theorem or invariant, algorithm, complexity, and validation plan",
+      "formulas": [
+        "problem↔model↔proof↔algorithm↔evidence"
+      ],
+      "id": "u13-l07",
+      "number": 7,
+      "unit": 13,
+      "unit_title": "Discrete Models for Computing & Capstone",
+      "week": 36,
+      "essential": "How can logic, combinatorics, graphs, number theory, probability, and proof combine into a defensible computer-science model?",
+      "project": "Independent Discrete Mathematics Computing Capstone & Oral Defense",
+      "application": "software systems, cybersecurity, databases, coding, networks, operations research, artificial intelligence, and responsible computing",
+      "vocab": [
+        "constraint",
+        "satisfiability",
+        "Hamming distance",
+        "codeword",
+        "syndrome",
+        "optimization",
+        "network centrality",
+        "security property",
+        "reproducibility",
+        "capstone"
+      ],
+      "sequence": 91,
+      "p1": "Give a rigorous example of forming a feasible computing problem with definitions, model, theorem or invariant, algorithm, complexity, and validation plan.",
+      "s1": "Define the objects precisely, apply the governing rule for Capstone Design: Model, Proof and Algorithm, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Capstone Design: Model, Proof and Algorithm.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Technical Report, Demonstration and Oral Defense",
+      "focus": "presenting results, limitations, reproducible artifacts, and a bridge to algorithms, theory, cryptography, networks, or data science",
+      "formulas": [
+        "claim↔proof↔experiment↔limitation"
+      ],
+      "id": "u13-l08",
+      "number": 8,
+      "unit": 13,
+      "unit_title": "Discrete Models for Computing & Capstone",
+      "week": 36,
+      "essential": "How can logic, combinatorics, graphs, number theory, probability, and proof combine into a defensible computer-science model?",
+      "project": "Independent Discrete Mathematics Computing Capstone & Oral Defense",
+      "application": "software systems, cybersecurity, databases, coding, networks, operations research, artificial intelligence, and responsible computing",
+      "vocab": [
+        "constraint",
+        "satisfiability",
+        "Hamming distance",
+        "codeword",
+        "syndrome",
+        "optimization",
+        "network centrality",
+        "security property",
+        "reproducibility",
+        "capstone"
+      ],
+      "sequence": 92,
+      "p1": "Give a rigorous example of presenting results, limitations, reproducible artifacts, and a bridge to algorithms, theory, cryptography, networks, or data science.",
+      "s1": "Define the objects precisely, apply the governing rule for Technical Report, Demonstration and Oral Defense, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Technical Report, Demonstration and Oral Defense.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    }
+  ],
+  "investigation": "Independent Discrete Mathematics Computing Capstone & Oral Defense"
+}

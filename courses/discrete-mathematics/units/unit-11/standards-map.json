@@ -1,0 +1,19 @@
+{
+  "unit": 11,
+  "title": "Boolean Algebra, Circuits & Finite-State Systems",
+  "standards": [
+    "Boolean algebra",
+    "Duality",
+    "Logic gates",
+    "Circuit equivalence",
+    "Disjunctive and conjunctive normal forms",
+    "Karnaugh maps",
+    "Finite-state machines",
+    "Deterministic finite automata",
+    "Regular languages",
+    "State invariants",
+    "Transition systems",
+    "Model-checking foundations"
+  ],
+  "essential_question": "How do Boolean algebra and finite-state models connect mathematical logic to hardware, software, and protocol behavior?"
+}

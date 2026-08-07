@@ -1,0 +1,248 @@
+{
+  "unit": 11,
+  "title": "Boolean Algebra, Circuits & Finite-State Systems",
+  "weeks": [
+    30,
+    31
+  ],
+  "lessons": [
+    {
+      "title": "Boolean Algebra and Duality",
+      "focus": "simplifying Boolean expressions with identities, complements, absorption, and duality",
+      "formulas": [
+        "x+x=x",
+        "x·1=x",
+        "x+x·y=x"
+      ],
+      "id": "u11-l01",
+      "number": 1,
+      "unit": 11,
+      "unit_title": "Boolean Algebra, Circuits & Finite-State Systems",
+      "week": 30,
+      "essential": "How do Boolean algebra and finite-state models connect mathematical logic to hardware, software, and protocol behavior?",
+      "project": "Boolean Circuit & State-Machine Verification Project",
+      "application": "digital circuits, controllers, parsers, communication protocols, user-interface states, embedded systems, and software verification",
+      "vocab": [
+        "Boolean algebra",
+        "gate",
+        "minterm",
+        "maxterm",
+        "normal form",
+        "state",
+        "transition",
+        "automaton",
+        "accepting state",
+        "language",
+        "invariant"
+      ],
+      "sequence": 71,
+      "p1": "Simplify x+x·y.",
+      "s1": "x by absorption.",
+      "p2": "Identify a common error in Boolean Algebra and Duality.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Logic Gates and Combinational Circuits",
+      "focus": "translating between Boolean expressions, gate diagrams, and truth tables",
+      "formulas": [
+        "AND",
+        "OR",
+        "NOT",
+        "XOR"
+      ],
+      "id": "u11-l02",
+      "number": 2,
+      "unit": 11,
+      "unit_title": "Boolean Algebra, Circuits & Finite-State Systems",
+      "week": 30,
+      "essential": "How do Boolean algebra and finite-state models connect mathematical logic to hardware, software, and protocol behavior?",
+      "project": "Boolean Circuit & State-Machine Verification Project",
+      "application": "digital circuits, controllers, parsers, communication protocols, user-interface states, embedded systems, and software verification",
+      "vocab": [
+        "Boolean algebra",
+        "gate",
+        "minterm",
+        "maxterm",
+        "normal form",
+        "state",
+        "transition",
+        "automaton",
+        "accepting state",
+        "language",
+        "invariant"
+      ],
+      "sequence": 72,
+      "p1": "Give a rigorous example of translating between Boolean expressions, gate diagrams, and truth tables.",
+      "s1": "Define the objects precisely, apply the governing rule for Logic Gates and Combinational Circuits, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Logic Gates and Combinational Circuits.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Normal Forms and Karnaugh-Map Minimization",
+      "focus": "constructing canonical forms and grouping adjacent minterms to reduce circuits",
+      "formulas": [
+        "DNF/SOP",
+        "CNF/POS"
+      ],
+      "id": "u11-l03",
+      "number": 3,
+      "unit": 11,
+      "unit_title": "Boolean Algebra, Circuits & Finite-State Systems",
+      "week": 30,
+      "essential": "How do Boolean algebra and finite-state models connect mathematical logic to hardware, software, and protocol behavior?",
+      "project": "Boolean Circuit & State-Machine Verification Project",
+      "application": "digital circuits, controllers, parsers, communication protocols, user-interface states, embedded systems, and software verification",
+      "vocab": [
+        "Boolean algebra",
+        "gate",
+        "minterm",
+        "maxterm",
+        "normal form",
+        "state",
+        "transition",
+        "automaton",
+        "accepting state",
+        "language",
+        "invariant"
+      ],
+      "sequence": 73,
+      "p1": "Give a rigorous example of constructing canonical forms and grouping adjacent minterms to reduce circuits.",
+      "s1": "Define the objects precisely, apply the governing rule for Normal Forms and Karnaugh-Map Minimization, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Normal Forms and Karnaugh-Map Minimization.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Finite-State Machines and Transition Tables",
+      "focus": "modelling systems with a finite state set, input alphabet, and transition function",
+      "formulas": [
+        "M=(S,Σ,δ,s_0)"
+      ],
+      "id": "u11-l04",
+      "number": 4,
+      "unit": 11,
+      "unit_title": "Boolean Algebra, Circuits & Finite-State Systems",
+      "week": 30,
+      "essential": "How do Boolean algebra and finite-state models connect mathematical logic to hardware, software, and protocol behavior?",
+      "project": "Boolean Circuit & State-Machine Verification Project",
+      "application": "digital circuits, controllers, parsers, communication protocols, user-interface states, embedded systems, and software verification",
+      "vocab": [
+        "Boolean algebra",
+        "gate",
+        "minterm",
+        "maxterm",
+        "normal form",
+        "state",
+        "transition",
+        "automaton",
+        "accepting state",
+        "language",
+        "invariant"
+      ],
+      "sequence": 74,
+      "p1": "What defines a deterministic transition?",
+      "s1": "Each state and input symbol determine exactly one next state.",
+      "p2": "Identify a common error in Finite-State Machines and Transition Tables.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Deterministic and Nondeterministic Automata",
+      "focus": "comparing DFA and NFA descriptions and tracing accepted strings",
+      "formulas": [
+        "δ:S×Σ→S"
+      ],
+      "id": "u11-l05",
+      "number": 5,
+      "unit": 11,
+      "unit_title": "Boolean Algebra, Circuits & Finite-State Systems",
+      "week": 31,
+      "essential": "How do Boolean algebra and finite-state models connect mathematical logic to hardware, software, and protocol behavior?",
+      "project": "Boolean Circuit & State-Machine Verification Project",
+      "application": "digital circuits, controllers, parsers, communication protocols, user-interface states, embedded systems, and software verification",
+      "vocab": [
+        "Boolean algebra",
+        "gate",
+        "minterm",
+        "maxterm",
+        "normal form",
+        "state",
+        "transition",
+        "automaton",
+        "accepting state",
+        "language",
+        "invariant"
+      ],
+      "sequence": 75,
+      "p1": "Give a rigorous example of comparing DFA and NFA descriptions and tracing accepted strings.",
+      "s1": "Define the objects precisely, apply the governing rule for Deterministic and Nondeterministic Automata, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Deterministic and Nondeterministic Automata.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Regular Languages and Pattern Recognition",
+      "focus": "connecting automata, regular expressions, and closure operations",
+      "formulas": [
+        "regular expression↔finite automaton"
+      ],
+      "id": "u11-l06",
+      "number": 6,
+      "unit": 11,
+      "unit_title": "Boolean Algebra, Circuits & Finite-State Systems",
+      "week": 31,
+      "essential": "How do Boolean algebra and finite-state models connect mathematical logic to hardware, software, and protocol behavior?",
+      "project": "Boolean Circuit & State-Machine Verification Project",
+      "application": "digital circuits, controllers, parsers, communication protocols, user-interface states, embedded systems, and software verification",
+      "vocab": [
+        "Boolean algebra",
+        "gate",
+        "minterm",
+        "maxterm",
+        "normal form",
+        "state",
+        "transition",
+        "automaton",
+        "accepting state",
+        "language",
+        "invariant"
+      ],
+      "sequence": 76,
+      "p1": "Give a rigorous example of connecting automata, regular expressions, and closure operations.",
+      "s1": "Define the objects precisely, apply the governing rule for Regular Languages and Pattern Recognition, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Regular Languages and Pattern Recognition.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "State Invariants, Protocol Verification and Model-Checking Foundations",
+      "focus": "expressing safety properties and exploring reachable states systematically",
+      "formulas": [
+        "invariant true in all reachable states"
+      ],
+      "id": "u11-l07",
+      "number": 7,
+      "unit": 11,
+      "unit_title": "Boolean Algebra, Circuits & Finite-State Systems",
+      "week": 31,
+      "essential": "How do Boolean algebra and finite-state models connect mathematical logic to hardware, software, and protocol behavior?",
+      "project": "Boolean Circuit & State-Machine Verification Project",
+      "application": "digital circuits, controllers, parsers, communication protocols, user-interface states, embedded systems, and software verification",
+      "vocab": [
+        "Boolean algebra",
+        "gate",
+        "minterm",
+        "maxterm",
+        "normal form",
+        "state",
+        "transition",
+        "automaton",
+        "accepting state",
+        "language",
+        "invariant"
+      ],
+      "sequence": 77,
+      "p1": "Give a rigorous example of expressing safety properties and exploring reachable states systematically.",
+      "s1": "Define the objects precisely, apply the governing rule for State Invariants, Protocol Verification and Model-Checking Foundations, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in State Invariants, Protocol Verification and Model-Checking Foundations.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    }
+  ],
+  "investigation": "Boolean Circuit & State-Machine Verification Project"
+}

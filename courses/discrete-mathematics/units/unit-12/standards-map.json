@@ -1,0 +1,19 @@
+{
+  "unit": 12,
+  "title": "Asymptotic Growth, Algorithm Analysis & Computability",
+  "standards": [
+    "Asymptotic notation",
+    "Growth rates",
+    "Summations",
+    "Loop analysis",
+    "Recurrence analysis",
+    "Correctness proofs",
+    "Complexity classes",
+    "Reductions",
+    "Countability",
+    "Diagonalization",
+    "Decidability",
+    "P and NP foundations"
+  ],
+  "essential_question": "How do discrete mathematics and proof distinguish feasible algorithms, correct programs, and fundamentally undecidable problems?"
+}

@@ -1,0 +1,16 @@
+{
+  "unit": 12,
+  "terms": [
+    "Big O",
+    "Big Omega",
+    "Big Theta",
+    "worst case",
+    "invariant",
+    "reduction",
+    "countable",
+    "uncountable",
+    "decidable",
+    "recognizable",
+    "NP-complete"
+  ]
+}

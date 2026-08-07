@@ -1,0 +1,19 @@
+{
+  "unit": 13,
+  "title": "Discrete Models for Computing & Capstone",
+  "standards": [
+    "Database logic",
+    "Coding theory",
+    "Hamming distance",
+    "Error detection and correction",
+    "Constraint satisfaction",
+    "SAT",
+    "Network analysis",
+    "Security models",
+    "Combinatorial optimization",
+    "Technical proof writing",
+    "Reproducibility",
+    "Ethics and limitations"
+  ],
+  "essential_question": "How can logic, combinatorics, graphs, number theory, probability, and proof combine into a defensible computer-science model?"
+}

@@ -1,0 +1,246 @@
+{
+  "unit": 12,
+  "title": "Asymptotic Growth, Algorithm Analysis & Computability",
+  "weeks": [
+    32,
+    33
+  ],
+  "lessons": [
+    {
+      "title": "Growth of Functions and Asymptotic Notation",
+      "focus": "comparing long-run growth with O, Ω, and Θ while ignoring irrelevant constant factors responsibly",
+      "formulas": [
+        "f∈O(g)",
+        "f∈Ω(g)",
+        "f∈Θ(g)"
+      ],
+      "id": "u12-l01",
+      "number": 1,
+      "unit": 12,
+      "unit_title": "Asymptotic Growth, Algorithm Analysis & Computability",
+      "week": 32,
+      "essential": "How do discrete mathematics and proof distinguish feasible algorithms, correct programs, and fundamentally undecidable problems?",
+      "project": "Algorithm Analysis & Computability Position Paper",
+      "application": "algorithm design, performance engineering, complexity theory, program verification, optimization, and limits of computation",
+      "vocab": [
+        "Big O",
+        "Big Omega",
+        "Big Theta",
+        "worst case",
+        "invariant",
+        "reduction",
+        "countable",
+        "uncountable",
+        "decidable",
+        "recognizable",
+        "NP-complete"
+      ],
+      "sequence": 78,
+      "p1": "Compare 4n²+7n+1 with n² asymptotically.",
+      "s1": "It is Θ(n²).",
+      "p2": "Identify a common error in Growth of Functions and Asymptotic Notation.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Summations and Loop Analysis",
+      "focus": "translating nested loops and repeated work into sums and asymptotic bounds",
+      "formulas": [
+        "Σ_{i=1}^n i=n(n+1)/2"
+      ],
+      "id": "u12-l02",
+      "number": 2,
+      "unit": 12,
+      "unit_title": "Asymptotic Growth, Algorithm Analysis & Computability",
+      "week": 32,
+      "essential": "How do discrete mathematics and proof distinguish feasible algorithms, correct programs, and fundamentally undecidable problems?",
+      "project": "Algorithm Analysis & Computability Position Paper",
+      "application": "algorithm design, performance engineering, complexity theory, program verification, optimization, and limits of computation",
+      "vocab": [
+        "Big O",
+        "Big Omega",
+        "Big Theta",
+        "worst case",
+        "invariant",
+        "reduction",
+        "countable",
+        "uncountable",
+        "decidable",
+        "recognizable",
+        "NP-complete"
+      ],
+      "sequence": 79,
+      "p1": "What is Σ_{i=1}^n i?",
+      "s1": "n(n+1)/2, hence Θ(n²).",
+      "p2": "Identify a common error in Summations and Loop Analysis.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Recurrences in Algorithm Analysis",
+      "focus": "solving and bounding recursive running times",
+      "formulas": [
+        "T(n)=aT(n/b)+f(n)"
+      ],
+      "id": "u12-l03",
+      "number": 3,
+      "unit": 12,
+      "unit_title": "Asymptotic Growth, Algorithm Analysis & Computability",
+      "week": 32,
+      "essential": "How do discrete mathematics and proof distinguish feasible algorithms, correct programs, and fundamentally undecidable problems?",
+      "project": "Algorithm Analysis & Computability Position Paper",
+      "application": "algorithm design, performance engineering, complexity theory, program verification, optimization, and limits of computation",
+      "vocab": [
+        "Big O",
+        "Big Omega",
+        "Big Theta",
+        "worst case",
+        "invariant",
+        "reduction",
+        "countable",
+        "uncountable",
+        "decidable",
+        "recognizable",
+        "NP-complete"
+      ],
+      "sequence": 80,
+      "p1": "Give a rigorous example of solving and bounding recursive running times.",
+      "s1": "Define the objects precisely, apply the governing rule for Recurrences in Algorithm Analysis, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Recurrences in Algorithm Analysis.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Algorithm Correctness with Preconditions, Postconditions and Invariants",
+      "focus": "proving partial and total correctness for iterative and recursive procedures",
+      "formulas": [
+        "precondition→invariant→postcondition"
+      ],
+      "id": "u12-l04",
+      "number": 4,
+      "unit": 12,
+      "unit_title": "Asymptotic Growth, Algorithm Analysis & Computability",
+      "week": 32,
+      "essential": "How do discrete mathematics and proof distinguish feasible algorithms, correct programs, and fundamentally undecidable problems?",
+      "project": "Algorithm Analysis & Computability Position Paper",
+      "application": "algorithm design, performance engineering, complexity theory, program verification, optimization, and limits of computation",
+      "vocab": [
+        "Big O",
+        "Big Omega",
+        "Big Theta",
+        "worst case",
+        "invariant",
+        "reduction",
+        "countable",
+        "uncountable",
+        "decidable",
+        "recognizable",
+        "NP-complete"
+      ],
+      "sequence": 81,
+      "p1": "Give a rigorous example of proving partial and total correctness for iterative and recursive procedures.",
+      "s1": "Define the objects precisely, apply the governing rule for Algorithm Correctness with Preconditions, Postconditions and Invariants, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Algorithm Correctness with Preconditions, Postconditions and Invariants.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Countability and Diagonal Reasoning",
+      "focus": "constructing enumerations and understanding why some infinite sets are larger than others",
+      "formulas": [
+        "bijection with N",
+        "Cantor diagonal argument"
+      ],
+      "id": "u12-l05",
+      "number": 5,
+      "unit": 12,
+      "unit_title": "Asymptotic Growth, Algorithm Analysis & Computability",
+      "week": 33,
+      "essential": "How do discrete mathematics and proof distinguish feasible algorithms, correct programs, and fundamentally undecidable problems?",
+      "project": "Algorithm Analysis & Computability Position Paper",
+      "application": "algorithm design, performance engineering, complexity theory, program verification, optimization, and limits of computation",
+      "vocab": [
+        "Big O",
+        "Big Omega",
+        "Big Theta",
+        "worst case",
+        "invariant",
+        "reduction",
+        "countable",
+        "uncountable",
+        "decidable",
+        "recognizable",
+        "NP-complete"
+      ],
+      "sequence": 82,
+      "p1": "Give a rigorous example of constructing enumerations and understanding why some infinite sets are larger than others.",
+      "s1": "Define the objects precisely, apply the governing rule for Countability and Diagonal Reasoning, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Countability and Diagonal Reasoning.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Decidability, Recognizability and Reductions",
+      "focus": "using mapping reductions to transfer impossibility or hardness between problems",
+      "formulas": [
+        "A≤_m B"
+      ],
+      "id": "u12-l06",
+      "number": 6,
+      "unit": 12,
+      "unit_title": "Asymptotic Growth, Algorithm Analysis & Computability",
+      "week": 33,
+      "essential": "How do discrete mathematics and proof distinguish feasible algorithms, correct programs, and fundamentally undecidable problems?",
+      "project": "Algorithm Analysis & Computability Position Paper",
+      "application": "algorithm design, performance engineering, complexity theory, program verification, optimization, and limits of computation",
+      "vocab": [
+        "Big O",
+        "Big Omega",
+        "Big Theta",
+        "worst case",
+        "invariant",
+        "reduction",
+        "countable",
+        "uncountable",
+        "decidable",
+        "recognizable",
+        "NP-complete"
+      ],
+      "sequence": 83,
+      "p1": "Give a rigorous example of using mapping reductions to transfer impossibility or hardness between problems.",
+      "s1": "Define the objects precisely, apply the governing rule for Decidability, Recognizability and Reductions, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Decidability, Recognizability and Reductions.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "P, NP and NP-Completeness Foundations",
+      "focus": "separating verification from known efficient solution and stating the unresolved P versus NP question accurately",
+      "formulas": [
+        "P⊆NP",
+        "NP-complete via polynomial reduction"
+      ],
+      "id": "u12-l07",
+      "number": 7,
+      "unit": 12,
+      "unit_title": "Asymptotic Growth, Algorithm Analysis & Computability",
+      "week": 33,
+      "essential": "How do discrete mathematics and proof distinguish feasible algorithms, correct programs, and fundamentally undecidable problems?",
+      "project": "Algorithm Analysis & Computability Position Paper",
+      "application": "algorithm design, performance engineering, complexity theory, program verification, optimization, and limits of computation",
+      "vocab": [
+        "Big O",
+        "Big Omega",
+        "Big Theta",
+        "worst case",
+        "invariant",
+        "reduction",
+        "countable",
+        "uncountable",
+        "decidable",
+        "recognizable",
+        "NP-complete"
+      ],
+      "sequence": 84,
+      "p1": "Give a rigorous example of separating verification from known efficient solution and stating the unresolved P versus NP question accurately.",
+      "s1": "Define the objects precisely, apply the governing rule for P, NP and NP-Completeness Foundations, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in P, NP and NP-Completeness Foundations.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    }
+  ],
+  "investigation": "Algorithm Analysis & Computability Position Paper"
+}
