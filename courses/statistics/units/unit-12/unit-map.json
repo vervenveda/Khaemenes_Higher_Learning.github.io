@@ -1,0 +1,221 @@
+{
+  "unit": 12,
+  "title": "Resampling, Nonparametric Methods & Bayesian Foundations",
+  "weeks": [
+    32,
+    33
+  ],
+  "lessons": [
+    {
+      "title": "Bootstrap Distributions and Standard Errors",
+      "focus": "resampling observed cases with replacement to approximate sampling variation",
+      "formulas": [
+        "bootstrap SE=SD of bootstrap statistics"
+      ],
+      "id": "u12-l01",
+      "number": 1,
+      "unit": 12,
+      "unit_title": "Resampling, Nonparametric Methods & Bayesian Foundations",
+      "week": 32,
+      "essential": "How do resampling, rank-based methods, and Bayesian updating extend inference when classical assumptions or interpretations are limiting?",
+      "project": "Resampling & Bayesian Evidence Laboratory",
+      "application": "small samples, robust analysis, clinical evidence, quality studies, decision science, and adaptive learning",
+      "vocab": [
+        "resample",
+        "bootstrap",
+        "permutation",
+        "rank",
+        "prior",
+        "likelihood",
+        "posterior",
+        "credible interval"
+      ],
+      "sequence": 78,
+      "p1": "What does one bootstrap sample do?",
+      "s1": "It resamples n observed cases with replacement and recomputes the statistic.",
+      "p2": "Identify a common error in Bootstrap Distributions and Standard Errors.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Permutation Tests and Exchangeability",
+      "focus": "reshuffling labels under a null model to obtain a reference distribution",
+      "formulas": [
+        "exchangeability supports permutation"
+      ],
+      "id": "u12-l02",
+      "number": 2,
+      "unit": 12,
+      "unit_title": "Resampling, Nonparametric Methods & Bayesian Foundations",
+      "week": 32,
+      "essential": "How do resampling, rank-based methods, and Bayesian updating extend inference when classical assumptions or interpretations are limiting?",
+      "project": "Resampling & Bayesian Evidence Laboratory",
+      "application": "small samples, robust analysis, clinical evidence, quality studies, decision science, and adaptive learning",
+      "vocab": [
+        "resample",
+        "bootstrap",
+        "permutation",
+        "rank",
+        "prior",
+        "likelihood",
+        "posterior",
+        "credible interval"
+      ],
+      "sequence": 79,
+      "p1": "Give one defensible analysis step for Permutation Tests and Exchangeability.",
+      "s1": "State the question and data structure, apply reshuffling labels under a null model to obtain a reference distribution, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Permutation Tests and Exchangeability.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Sign and Rank-Based Methods",
+      "focus": "using order and sign information when scale assumptions are doubtful",
+      "formulas": [
+        "median and rank procedures"
+      ],
+      "id": "u12-l03",
+      "number": 3,
+      "unit": 12,
+      "unit_title": "Resampling, Nonparametric Methods & Bayesian Foundations",
+      "week": 32,
+      "essential": "How do resampling, rank-based methods, and Bayesian updating extend inference when classical assumptions or interpretations are limiting?",
+      "project": "Resampling & Bayesian Evidence Laboratory",
+      "application": "small samples, robust analysis, clinical evidence, quality studies, decision science, and adaptive learning",
+      "vocab": [
+        "resample",
+        "bootstrap",
+        "permutation",
+        "rank",
+        "prior",
+        "likelihood",
+        "posterior",
+        "credible interval"
+      ],
+      "sequence": 80,
+      "p1": "Give one defensible analysis step for Sign and Rank-Based Methods.",
+      "s1": "State the question and data structure, apply using order and sign information when scale assumptions are doubtful, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Sign and Rank-Based Methods.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Bayesian Updating: Prior, Likelihood and Posterior",
+      "focus": "updating uncertainty about parameters after observing data",
+      "formulas": [
+        "posterior ∝ likelihood×prior"
+      ],
+      "id": "u12-l04",
+      "number": 4,
+      "unit": 12,
+      "unit_title": "Resampling, Nonparametric Methods & Bayesian Foundations",
+      "week": 32,
+      "essential": "How do resampling, rank-based methods, and Bayesian updating extend inference when classical assumptions or interpretations are limiting?",
+      "project": "Resampling & Bayesian Evidence Laboratory",
+      "application": "small samples, robust analysis, clinical evidence, quality studies, decision science, and adaptive learning",
+      "vocab": [
+        "resample",
+        "bootstrap",
+        "permutation",
+        "rank",
+        "prior",
+        "likelihood",
+        "posterior",
+        "credible interval"
+      ],
+      "sequence": 81,
+      "p1": "A test has 90% sensitivity, 95% specificity, and prevalence 2%. Explain why a positive result may still have modest predictive value.",
+      "s1": "False positives arise among the large non-diseased group; Bayes theorem combines prevalence with test performance.",
+      "p2": "Identify a common error in Bayesian Updating: Prior, Likelihood and Posterior.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Bayesian Estimation and Credible Intervals",
+      "focus": "summarizing posterior uncertainty in directly probabilistic language",
+      "formulas": [
+        "P(parameter in interval|data)=credible level"
+      ],
+      "id": "u12-l05",
+      "number": 5,
+      "unit": 12,
+      "unit_title": "Resampling, Nonparametric Methods & Bayesian Foundations",
+      "week": 33,
+      "essential": "How do resampling, rank-based methods, and Bayesian updating extend inference when classical assumptions or interpretations are limiting?",
+      "project": "Resampling & Bayesian Evidence Laboratory",
+      "application": "small samples, robust analysis, clinical evidence, quality studies, decision science, and adaptive learning",
+      "vocab": [
+        "resample",
+        "bootstrap",
+        "permutation",
+        "rank",
+        "prior",
+        "likelihood",
+        "posterior",
+        "credible interval"
+      ],
+      "sequence": 82,
+      "p1": "A test has 90% sensitivity, 95% specificity, and prevalence 2%. Explain why a positive result may still have modest predictive value.",
+      "s1": "False positives arise among the large non-diseased group; Bayes theorem combines prevalence with test performance.",
+      "p2": "Identify a common error in Bayesian Estimation and Credible Intervals.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Posterior Predictive Checks and Model Criticism",
+      "focus": "comparing replicated data from the fitted model with observed patterns",
+      "formulas": [
+        "simulate y_rep from posterior predictive"
+      ],
+      "id": "u12-l06",
+      "number": 6,
+      "unit": 12,
+      "unit_title": "Resampling, Nonparametric Methods & Bayesian Foundations",
+      "week": 33,
+      "essential": "How do resampling, rank-based methods, and Bayesian updating extend inference when classical assumptions or interpretations are limiting?",
+      "project": "Resampling & Bayesian Evidence Laboratory",
+      "application": "small samples, robust analysis, clinical evidence, quality studies, decision science, and adaptive learning",
+      "vocab": [
+        "resample",
+        "bootstrap",
+        "permutation",
+        "rank",
+        "prior",
+        "likelihood",
+        "posterior",
+        "credible interval"
+      ],
+      "sequence": 83,
+      "p1": "Give one defensible analysis step for Posterior Predictive Checks and Model Criticism.",
+      "s1": "State the question and data structure, apply comparing replicated data from the fitted model with observed patterns, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Posterior Predictive Checks and Model Criticism.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Frequentist and Bayesian Evidence in Context",
+      "focus": "comparing goals, assumptions, outputs, calibration, and decision use",
+      "formulas": [
+        "method choice should match question and transparency needs"
+      ],
+      "id": "u12-l07",
+      "number": 7,
+      "unit": 12,
+      "unit_title": "Resampling, Nonparametric Methods & Bayesian Foundations",
+      "week": 33,
+      "essential": "How do resampling, rank-based methods, and Bayesian updating extend inference when classical assumptions or interpretations are limiting?",
+      "project": "Resampling & Bayesian Evidence Laboratory",
+      "application": "small samples, robust analysis, clinical evidence, quality studies, decision science, and adaptive learning",
+      "vocab": [
+        "resample",
+        "bootstrap",
+        "permutation",
+        "rank",
+        "prior",
+        "likelihood",
+        "posterior",
+        "credible interval"
+      ],
+      "sequence": 84,
+      "p1": "A test has 90% sensitivity, 95% specificity, and prevalence 2%. Explain why a positive result may still have modest predictive value.",
+      "s1": "False positives arise among the large non-diseased group; Bayes theorem combines prevalence with test performance.",
+      "p2": "Identify a common error in Frequentist and Bayesian Evidence in Context.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    }
+  ],
+  "investigation": "Resampling & Bayesian Evidence Laboratory"
+}

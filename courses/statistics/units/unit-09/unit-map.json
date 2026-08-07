@@ -1,0 +1,229 @@
+{
+  "unit": 9,
+  "title": "Hypothesis Testing & Decision Frameworks",
+  "weeks": [
+    25,
+    26,
+    27
+  ],
+  "lessons": [
+    {
+      "title": "Logic of Significance Tests",
+      "focus": "translating a claim into null and alternative hypotheses and measuring incompatibility with the null",
+      "formulas": [
+        "p-value=P(result at least as extreme|null)"
+      ],
+      "id": "u09-l01",
+      "number": 1,
+      "unit": 9,
+      "unit_title": "Hypothesis Testing & Decision Frameworks",
+      "week": 25,
+      "essential": "How do null models, test statistics, p-values, errors, power, and effect sizes support disciplined decisions?",
+      "project": "Inference Decision Memo & Error Analysis",
+      "application": "clinical research, product decisions, public policy, quality assurance, and scientific evidence",
+      "vocab": [
+        "null hypothesis",
+        "alternative",
+        "test statistic",
+        "p-value",
+        "significance",
+        "Type I error",
+        "Type II error",
+        "power",
+        "effect size"
+      ],
+      "sequence": 57,
+      "p1": "Interpret p=0.03.",
+      "s1": "Assuming the null model is true, results at least this incompatible with the null would occur about 3% of the time; it is not the probability the null is true.",
+      "p2": "Identify a common error in Logic of Significance Tests.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Errors, Power and Study Planning",
+      "focus": "connecting α, β, power, effect size, variability, and sample size",
+      "formulas": [
+        "power=1−β"
+      ],
+      "id": "u09-l02",
+      "number": 2,
+      "unit": 9,
+      "unit_title": "Hypothesis Testing & Decision Frameworks",
+      "week": 25,
+      "essential": "How do null models, test statistics, p-values, errors, power, and effect sizes support disciplined decisions?",
+      "project": "Inference Decision Memo & Error Analysis",
+      "application": "clinical research, product decisions, public policy, quality assurance, and scientific evidence",
+      "vocab": [
+        "null hypothesis",
+        "alternative",
+        "test statistic",
+        "p-value",
+        "significance",
+        "Type I error",
+        "Type II error",
+        "power",
+        "effect size"
+      ],
+      "sequence": 58,
+      "p1": "What raises power while holding other factors fixed?",
+      "s1": "A larger sample, larger true effect, smaller variability, or larger α raises power.",
+      "p2": "Identify a common error in Errors, Power and Study Planning.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "One-Proportion and One-Mean Tests",
+      "focus": "conducting and interpreting one-sample z or t procedures",
+      "formulas": [
+        "test statistic=(estimate−null)/SE"
+      ],
+      "id": "u09-l03",
+      "number": 3,
+      "unit": 9,
+      "unit_title": "Hypothesis Testing & Decision Frameworks",
+      "week": 25,
+      "essential": "How do null models, test statistics, p-values, errors, power, and effect sizes support disciplined decisions?",
+      "project": "Inference Decision Memo & Error Analysis",
+      "application": "clinical research, product decisions, public policy, quality assurance, and scientific evidence",
+      "vocab": [
+        "null hypothesis",
+        "alternative",
+        "test statistic",
+        "p-value",
+        "significance",
+        "Type I error",
+        "Type II error",
+        "power",
+        "effect size"
+      ],
+      "sequence": 59,
+      "p1": "Give one defensible analysis step for One-Proportion and One-Mean Tests.",
+      "s1": "State the question and data structure, apply conducting and interpreting one-sample z or t procedures, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in One-Proportion and One-Mean Tests.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Two-Proportion and Two-Mean Tests",
+      "focus": "comparing independent groups with appropriate standard errors",
+      "formulas": [
+        "difference under H0 compared with SE"
+      ],
+      "id": "u09-l04",
+      "number": 4,
+      "unit": 9,
+      "unit_title": "Hypothesis Testing & Decision Frameworks",
+      "week": 26,
+      "essential": "How do null models, test statistics, p-values, errors, power, and effect sizes support disciplined decisions?",
+      "project": "Inference Decision Memo & Error Analysis",
+      "application": "clinical research, product decisions, public policy, quality assurance, and scientific evidence",
+      "vocab": [
+        "null hypothesis",
+        "alternative",
+        "test statistic",
+        "p-value",
+        "significance",
+        "Type I error",
+        "Type II error",
+        "power",
+        "effect size"
+      ],
+      "sequence": 60,
+      "p1": "Give one defensible analysis step for Two-Proportion and Two-Mean Tests.",
+      "s1": "State the question and data structure, apply comparing independent groups with appropriate standard errors, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Two-Proportion and Two-Mean Tests.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Paired Tests and Within-Subject Designs",
+      "focus": "testing the mean of paired differences",
+      "formulas": [
+        "t=d̄/(s_d/√n)"
+      ],
+      "id": "u09-l05",
+      "number": 5,
+      "unit": 9,
+      "unit_title": "Hypothesis Testing & Decision Frameworks",
+      "week": 26,
+      "essential": "How do null models, test statistics, p-values, errors, power, and effect sizes support disciplined decisions?",
+      "project": "Inference Decision Memo & Error Analysis",
+      "application": "clinical research, product decisions, public policy, quality assurance, and scientific evidence",
+      "vocab": [
+        "null hypothesis",
+        "alternative",
+        "test statistic",
+        "p-value",
+        "significance",
+        "Type I error",
+        "Type II error",
+        "power",
+        "effect size"
+      ],
+      "sequence": 61,
+      "p1": "Give one defensible analysis step for Paired Tests and Within-Subject Designs.",
+      "s1": "State the question and data structure, apply testing the mean of paired differences, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Paired Tests and Within-Subject Designs.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Randomization and Permutation Tests",
+      "focus": "constructing a null distribution by reshuffling labels or signs",
+      "formulas": [
+        "simulate statistic under exchangeability"
+      ],
+      "id": "u09-l06",
+      "number": 6,
+      "unit": 9,
+      "unit_title": "Hypothesis Testing & Decision Frameworks",
+      "week": 27,
+      "essential": "How do null models, test statistics, p-values, errors, power, and effect sizes support disciplined decisions?",
+      "project": "Inference Decision Memo & Error Analysis",
+      "application": "clinical research, product decisions, public policy, quality assurance, and scientific evidence",
+      "vocab": [
+        "null hypothesis",
+        "alternative",
+        "test statistic",
+        "p-value",
+        "significance",
+        "Type I error",
+        "Type II error",
+        "power",
+        "effect size"
+      ],
+      "sequence": 62,
+      "p1": "Give one defensible analysis step for Randomization and Permutation Tests.",
+      "s1": "State the question and data structure, apply constructing a null distribution by reshuffling labels or signs, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Randomization and Permutation Tests.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Practical Significance, Multiplicity and Evidence Quality",
+      "focus": "separating statistical detectability from importance and controlling false discoveries",
+      "formulas": [
+        "report effect size and interval"
+      ],
+      "id": "u09-l07",
+      "number": 7,
+      "unit": 9,
+      "unit_title": "Hypothesis Testing & Decision Frameworks",
+      "week": 27,
+      "essential": "How do null models, test statistics, p-values, errors, power, and effect sizes support disciplined decisions?",
+      "project": "Inference Decision Memo & Error Analysis",
+      "application": "clinical research, product decisions, public policy, quality assurance, and scientific evidence",
+      "vocab": [
+        "null hypothesis",
+        "alternative",
+        "test statistic",
+        "p-value",
+        "significance",
+        "Type I error",
+        "Type II error",
+        "power",
+        "effect size"
+      ],
+      "sequence": 63,
+      "p1": "Give one defensible analysis step for Practical Significance, Multiplicity and Evidence Quality.",
+      "s1": "State the question and data structure, apply separating statistical detectability from importance and controlling false discoveries, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Practical Significance, Multiplicity and Evidence Quality.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    }
+  ],
+  "investigation": "Inference Decision Memo & Error Analysis"
+}

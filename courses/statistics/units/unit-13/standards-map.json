@@ -1,0 +1,19 @@
+{
+  "unit": 13,
+  "title": "Data Science, Reproducibility & Capstone",
+  "standards": [
+    "Data cleaning",
+    "Tidy data",
+    "Missing data",
+    "Visualization design",
+    "Simulation",
+    "Monte Carlo",
+    "Reproducible workflows",
+    "Fairness",
+    "Sensitivity analysis",
+    "Technical reporting",
+    "Oral defense",
+    "Advanced statistics bridge"
+  ],
+  "essential_question": "How can a statistical investigation become an auditable, ethical, reproducible argument that withstands technical and public scrutiny?"
+}

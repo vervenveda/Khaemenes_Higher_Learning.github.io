@@ -1,0 +1,13 @@
+{
+  "unit": 12,
+  "terms": [
+    "resample",
+    "bootstrap",
+    "permutation",
+    "rank",
+    "prior",
+    "likelihood",
+    "posterior",
+    "credible interval"
+  ]
+}

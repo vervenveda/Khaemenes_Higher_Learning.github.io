@@ -1,0 +1,262 @@
+{
+  "unit": 13,
+  "title": "Data Science, Reproducibility & Capstone",
+  "weeks": [
+    34,
+    35,
+    36
+  ],
+  "lessons": [
+    {
+      "title": "Data Cleaning, Tidy Structure and Metadata",
+      "focus": "documenting transformations, units, labels, exclusions, and provenance",
+      "formulas": [
+        "one variable per column",
+        "one case per row"
+      ],
+      "id": "u13-l01",
+      "number": 1,
+      "unit": 13,
+      "unit_title": "Data Science, Reproducibility & Capstone",
+      "week": 34,
+      "essential": "How can a statistical investigation become an auditable, ethical, reproducible argument that withstands technical and public scrutiny?",
+      "project": "Independent Statistical Investigation, Technical Report & Oral Defense",
+      "application": "original research in science, policy, education, environment, business, health, engineering, or civic data",
+      "vocab": [
+        "tidy data",
+        "workflow",
+        "metadata",
+        "imputation",
+        "sensitivity",
+        "fairness",
+        "reproducibility",
+        "audit trail",
+        "capstone"
+      ],
+      "sequence": 85,
+      "p1": "Give one defensible analysis step for Data Cleaning, Tidy Structure and Metadata.",
+      "s1": "State the question and data structure, apply documenting transformations, units, labels, exclusions, and provenance, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Data Cleaning, Tidy Structure and Metadata.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Missing Data, Imputation and Sensitivity",
+      "focus": "distinguishing missingness mechanisms and testing how conclusions change",
+      "formulas": [
+        "MCAR, MAR, MNAR"
+      ],
+      "id": "u13-l02",
+      "number": 2,
+      "unit": 13,
+      "unit_title": "Data Science, Reproducibility & Capstone",
+      "week": 34,
+      "essential": "How can a statistical investigation become an auditable, ethical, reproducible argument that withstands technical and public scrutiny?",
+      "project": "Independent Statistical Investigation, Technical Report & Oral Defense",
+      "application": "original research in science, policy, education, environment, business, health, engineering, or civic data",
+      "vocab": [
+        "tidy data",
+        "workflow",
+        "metadata",
+        "imputation",
+        "sensitivity",
+        "fairness",
+        "reproducibility",
+        "audit trail",
+        "capstone"
+      ],
+      "sequence": 86,
+      "p1": "Give one defensible analysis step for Missing Data, Imputation and Sensitivity.",
+      "s1": "State the question and data structure, apply distinguishing missingness mechanisms and testing how conclusions change, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Missing Data, Imputation and Sensitivity.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Visualization Design and Statistical Storytelling",
+      "focus": "matching visual form to question while avoiding distortion and chartjunk",
+      "formulas": [
+        "show scale, uncertainty, and context"
+      ],
+      "id": "u13-l03",
+      "number": 3,
+      "unit": 13,
+      "unit_title": "Data Science, Reproducibility & Capstone",
+      "week": 34,
+      "essential": "How can a statistical investigation become an auditable, ethical, reproducible argument that withstands technical and public scrutiny?",
+      "project": "Independent Statistical Investigation, Technical Report & Oral Defense",
+      "application": "original research in science, policy, education, environment, business, health, engineering, or civic data",
+      "vocab": [
+        "tidy data",
+        "workflow",
+        "metadata",
+        "imputation",
+        "sensitivity",
+        "fairness",
+        "reproducibility",
+        "audit trail",
+        "capstone"
+      ],
+      "sequence": 87,
+      "p1": "Give one defensible analysis step for Visualization Design and Statistical Storytelling.",
+      "s1": "State the question and data structure, apply matching visual form to question while avoiding distortion and chartjunk, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Visualization Design and Statistical Storytelling.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Simulation, Monte Carlo and Computational Experiments",
+      "focus": "using repeated computation to estimate probability, uncertainty, and operating characteristics",
+      "formulas": [
+        "Monte Carlo error decreases about 1/√N"
+      ],
+      "id": "u13-l04",
+      "number": 4,
+      "unit": 13,
+      "unit_title": "Data Science, Reproducibility & Capstone",
+      "week": 35,
+      "essential": "How can a statistical investigation become an auditable, ethical, reproducible argument that withstands technical and public scrutiny?",
+      "project": "Independent Statistical Investigation, Technical Report & Oral Defense",
+      "application": "original research in science, policy, education, environment, business, health, engineering, or civic data",
+      "vocab": [
+        "tidy data",
+        "workflow",
+        "metadata",
+        "imputation",
+        "sensitivity",
+        "fairness",
+        "reproducibility",
+        "audit trail",
+        "capstone"
+      ],
+      "sequence": 88,
+      "p1": "Give one defensible analysis step for Simulation, Monte Carlo and Computational Experiments.",
+      "s1": "State the question and data structure, apply using repeated computation to estimate probability, uncertainty, and operating characteristics, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Simulation, Monte Carlo and Computational Experiments.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Reproducible Workflows, Versioning and Audit Trails",
+      "focus": "preserving data, code, decisions, outputs, and environment information",
+      "formulas": [
+        "raw data immutable",
+        "scripted transformations"
+      ],
+      "id": "u13-l05",
+      "number": 5,
+      "unit": 13,
+      "unit_title": "Data Science, Reproducibility & Capstone",
+      "week": 35,
+      "essential": "How can a statistical investigation become an auditable, ethical, reproducible argument that withstands technical and public scrutiny?",
+      "project": "Independent Statistical Investigation, Technical Report & Oral Defense",
+      "application": "original research in science, policy, education, environment, business, health, engineering, or civic data",
+      "vocab": [
+        "tidy data",
+        "workflow",
+        "metadata",
+        "imputation",
+        "sensitivity",
+        "fairness",
+        "reproducibility",
+        "audit trail",
+        "capstone"
+      ],
+      "sequence": 89,
+      "p1": "Give one defensible analysis step for Reproducible Workflows, Versioning and Audit Trails.",
+      "s1": "State the question and data structure, apply preserving data, code, decisions, outputs, and environment information, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Reproducible Workflows, Versioning and Audit Trails.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Fairness, Responsible AI and Statistical Harm",
+      "focus": "examining subgroup performance, measurement bias, feedback loops, and deployment risk",
+      "formulas": [
+        "overall accuracy can hide subgroup harm"
+      ],
+      "id": "u13-l06",
+      "number": 6,
+      "unit": 13,
+      "unit_title": "Data Science, Reproducibility & Capstone",
+      "week": 35,
+      "essential": "How can a statistical investigation become an auditable, ethical, reproducible argument that withstands technical and public scrutiny?",
+      "project": "Independent Statistical Investigation, Technical Report & Oral Defense",
+      "application": "original research in science, policy, education, environment, business, health, engineering, or civic data",
+      "vocab": [
+        "tidy data",
+        "workflow",
+        "metadata",
+        "imputation",
+        "sensitivity",
+        "fairness",
+        "reproducibility",
+        "audit trail",
+        "capstone"
+      ],
+      "sequence": 90,
+      "p1": "Give one defensible analysis step for Fairness, Responsible AI and Statistical Harm.",
+      "s1": "State the question and data structure, apply examining subgroup performance, measurement bias, feedback loops, and deployment risk, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Fairness, Responsible AI and Statistical Harm.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Capstone Question, Design and Evidence Plan",
+      "focus": "forming a feasible investigative question with design, analysis, ethics, and validation plan",
+      "formulas": [
+        "question ↔ design ↔ method ↔ evidence"
+      ],
+      "id": "u13-l07",
+      "number": 7,
+      "unit": 13,
+      "unit_title": "Data Science, Reproducibility & Capstone",
+      "week": 36,
+      "essential": "How can a statistical investigation become an auditable, ethical, reproducible argument that withstands technical and public scrutiny?",
+      "project": "Independent Statistical Investigation, Technical Report & Oral Defense",
+      "application": "original research in science, policy, education, environment, business, health, engineering, or civic data",
+      "vocab": [
+        "tidy data",
+        "workflow",
+        "metadata",
+        "imputation",
+        "sensitivity",
+        "fairness",
+        "reproducibility",
+        "audit trail",
+        "capstone"
+      ],
+      "sequence": 91,
+      "p1": "Give one defensible analysis step for Capstone Question, Design and Evidence Plan.",
+      "s1": "State the question and data structure, apply forming a feasible investigative question with design, analysis, ethics, and validation plan, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Capstone Question, Design and Evidence Plan.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Technical Report, Oral Defense and Advanced Statistics Bridge",
+      "focus": "defending choices, uncertainty, limitations, and next study in mathematical statistics, data science, biostatistics, econometrics, or machine learning",
+      "formulas": [
+        "claim ↔ estimate ↔ uncertainty ↔ limitation"
+      ],
+      "id": "u13-l08",
+      "number": 8,
+      "unit": 13,
+      "unit_title": "Data Science, Reproducibility & Capstone",
+      "week": 36,
+      "essential": "How can a statistical investigation become an auditable, ethical, reproducible argument that withstands technical and public scrutiny?",
+      "project": "Independent Statistical Investigation, Technical Report & Oral Defense",
+      "application": "original research in science, policy, education, environment, business, health, engineering, or civic data",
+      "vocab": [
+        "tidy data",
+        "workflow",
+        "metadata",
+        "imputation",
+        "sensitivity",
+        "fairness",
+        "reproducibility",
+        "audit trail",
+        "capstone"
+      ],
+      "sequence": 92,
+      "p1": "Give one defensible analysis step for Technical Report, Oral Defense and Advanced Statistics Bridge.",
+      "s1": "State the question and data structure, apply defending choices, uncertainty, limitations, and next study in mathematical statistics, data science, biostatistics, econometrics, or machine learning, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Technical Report, Oral Defense and Advanced Statistics Bridge.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    }
+  ],
+  "investigation": "Independent Statistical Investigation, Technical Report & Oral Defense"
+}

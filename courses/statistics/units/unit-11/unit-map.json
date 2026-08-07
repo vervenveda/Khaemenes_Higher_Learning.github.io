@@ -1,0 +1,214 @@
+{
+  "unit": 11,
+  "title": "Multiple Regression & Model Diagnostics",
+  "weeks": [
+    30,
+    31
+  ],
+  "lessons": [
+    {
+      "title": "Multiple Regression and Partial Effects",
+      "focus": "interpreting a coefficient while holding included predictors fixed",
+      "formulas": [
+        "ŷ=b0+b1x1+…+bkxk"
+      ],
+      "id": "u11-l01",
+      "number": 1,
+      "unit": 11,
+      "unit_title": "Multiple Regression & Model Diagnostics",
+      "week": 30,
+      "essential": "How do multiple predictors, interactions, diagnostics, and validation improve prediction without disguising uncertainty or causality?",
+      "project": "Multivariable Model Audit & Prediction Report",
+      "application": "economics, health, engineering, environmental modelling, education, and operations analytics",
+      "vocab": [
+        "partial slope",
+        "indicator variable",
+        "interaction",
+        "collinearity",
+        "adjusted R²",
+        "prediction interval",
+        "cross-validation"
+      ],
+      "sequence": 71,
+      "p1": "Interpret b1=3.2 in a multiple regression.",
+      "s1": "Holding the other included predictors fixed, a one-unit increase in x1 is associated with a 3.2-unit increase in predicted y.",
+      "p2": "Identify a common error in Multiple Regression and Partial Effects.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Categorical Predictors and Indicator Coding",
+      "focus": "representing group differences with reference categories",
+      "formulas": [
+        "indicator=0/1"
+      ],
+      "id": "u11-l02",
+      "number": 2,
+      "unit": 11,
+      "unit_title": "Multiple Regression & Model Diagnostics",
+      "week": 30,
+      "essential": "How do multiple predictors, interactions, diagnostics, and validation improve prediction without disguising uncertainty or causality?",
+      "project": "Multivariable Model Audit & Prediction Report",
+      "application": "economics, health, engineering, environmental modelling, education, and operations analytics",
+      "vocab": [
+        "partial slope",
+        "indicator variable",
+        "interaction",
+        "collinearity",
+        "adjusted R²",
+        "prediction interval",
+        "cross-validation"
+      ],
+      "sequence": 72,
+      "p1": "Give one defensible analysis step for Categorical Predictors and Indicator Coding.",
+      "s1": "State the question and data structure, apply representing group differences with reference categories, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Categorical Predictors and Indicator Coding.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Interactions and Nonparallel Effects",
+      "focus": "modelling how one predictor changes the effect of another",
+      "formulas": [
+        "include x1x2 term"
+      ],
+      "id": "u11-l03",
+      "number": 3,
+      "unit": 11,
+      "unit_title": "Multiple Regression & Model Diagnostics",
+      "week": 30,
+      "essential": "How do multiple predictors, interactions, diagnostics, and validation improve prediction without disguising uncertainty or causality?",
+      "project": "Multivariable Model Audit & Prediction Report",
+      "application": "economics, health, engineering, environmental modelling, education, and operations analytics",
+      "vocab": [
+        "partial slope",
+        "indicator variable",
+        "interaction",
+        "collinearity",
+        "adjusted R²",
+        "prediction interval",
+        "cross-validation"
+      ],
+      "sequence": 73,
+      "p1": "Give one defensible analysis step for Interactions and Nonparallel Effects.",
+      "s1": "State the question and data structure, apply modelling how one predictor changes the effect of another, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Interactions and Nonparallel Effects.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Residuals, Influence and Collinearity",
+      "focus": "diagnosing model form, leverage, influence, and unstable coefficients",
+      "formulas": [
+        "VIF reflects predictor redundancy"
+      ],
+      "id": "u11-l04",
+      "number": 4,
+      "unit": 11,
+      "unit_title": "Multiple Regression & Model Diagnostics",
+      "week": 30,
+      "essential": "How do multiple predictors, interactions, diagnostics, and validation improve prediction without disguising uncertainty or causality?",
+      "project": "Multivariable Model Audit & Prediction Report",
+      "application": "economics, health, engineering, environmental modelling, education, and operations analytics",
+      "vocab": [
+        "partial slope",
+        "indicator variable",
+        "interaction",
+        "collinearity",
+        "adjusted R²",
+        "prediction interval",
+        "cross-validation"
+      ],
+      "sequence": 74,
+      "p1": "If y=41 and ŷ=37, compute the residual.",
+      "s1": "Residual=41−37=4; the model underpredicted by 4 units.",
+      "p2": "Identify a common error in Residuals, Influence and Collinearity.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Model Selection and Adjusted Fit",
+      "focus": "balancing explanatory value, complexity, subject knowledge, and validation",
+      "formulas": [
+        "adjusted R² penalizes extra predictors"
+      ],
+      "id": "u11-l05",
+      "number": 5,
+      "unit": 11,
+      "unit_title": "Multiple Regression & Model Diagnostics",
+      "week": 31,
+      "essential": "How do multiple predictors, interactions, diagnostics, and validation improve prediction without disguising uncertainty or causality?",
+      "project": "Multivariable Model Audit & Prediction Report",
+      "application": "economics, health, engineering, environmental modelling, education, and operations analytics",
+      "vocab": [
+        "partial slope",
+        "indicator variable",
+        "interaction",
+        "collinearity",
+        "adjusted R²",
+        "prediction interval",
+        "cross-validation"
+      ],
+      "sequence": 75,
+      "p1": "Give one defensible analysis step for Model Selection and Adjusted Fit.",
+      "s1": "State the question and data structure, apply balancing explanatory value, complexity, subject knowledge, and validation, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Model Selection and Adjusted Fit.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Prediction Intervals and Cross-Validation",
+      "focus": "distinguishing uncertainty for a mean response from uncertainty for a new case",
+      "formulas": [
+        "prediction interval wider than mean-response interval"
+      ],
+      "id": "u11-l06",
+      "number": 6,
+      "unit": 11,
+      "unit_title": "Multiple Regression & Model Diagnostics",
+      "week": 31,
+      "essential": "How do multiple predictors, interactions, diagnostics, and validation improve prediction without disguising uncertainty or causality?",
+      "project": "Multivariable Model Audit & Prediction Report",
+      "application": "economics, health, engineering, environmental modelling, education, and operations analytics",
+      "vocab": [
+        "partial slope",
+        "indicator variable",
+        "interaction",
+        "collinearity",
+        "adjusted R²",
+        "prediction interval",
+        "cross-validation"
+      ],
+      "sequence": 76,
+      "p1": "Give one defensible analysis step for Prediction Intervals and Cross-Validation.",
+      "s1": "State the question and data structure, apply distinguishing uncertainty for a mean response from uncertainty for a new case, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Prediction Intervals and Cross-Validation.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Regression Communication and Causal Limits",
+      "focus": "reporting coefficients, intervals, diagnostics, uncertainty, and design-based limits",
+      "formulas": [
+        "prediction model ≠ causal proof"
+      ],
+      "id": "u11-l07",
+      "number": 7,
+      "unit": 11,
+      "unit_title": "Multiple Regression & Model Diagnostics",
+      "week": 31,
+      "essential": "How do multiple predictors, interactions, diagnostics, and validation improve prediction without disguising uncertainty or causality?",
+      "project": "Multivariable Model Audit & Prediction Report",
+      "application": "economics, health, engineering, environmental modelling, education, and operations analytics",
+      "vocab": [
+        "partial slope",
+        "indicator variable",
+        "interaction",
+        "collinearity",
+        "adjusted R²",
+        "prediction interval",
+        "cross-validation"
+      ],
+      "sequence": 77,
+      "p1": "Give one defensible analysis step for Regression Communication and Causal Limits.",
+      "s1": "State the question and data structure, apply reporting coefficients, intervals, diagnostics, uncertainty, and design-based limits, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Regression Communication and Causal Limits.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    }
+  ],
+  "investigation": "Multivariable Model Audit & Prediction Report"
+}

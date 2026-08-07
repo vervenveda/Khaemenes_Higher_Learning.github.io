@@ -1,0 +1,214 @@
+{
+  "unit": 10,
+  "title": "Categorical Data, Chi-Square & ANOVA",
+  "weeks": [
+    28,
+    29
+  ],
+  "lessons": [
+    {
+      "title": "Chi-Square Goodness of Fit",
+      "focus": "comparing observed category counts with a specified distribution",
+      "formulas": [
+        "χ²=Σ(O−E)²/E"
+      ],
+      "id": "u10-l01",
+      "number": 1,
+      "unit": 10,
+      "unit_title": "Categorical Data, Chi-Square & ANOVA",
+      "week": 28,
+      "essential": "How do categorical and multi-group methods compare observed variation with variation expected under a null model?",
+      "project": "Contingency Table & Group-Comparison Investigation",
+      "application": "genetics, market research, medicine, manufacturing, education, and experimental science",
+      "vocab": [
+        "expected count",
+        "chi-square",
+        "degrees of freedom",
+        "ANOVA",
+        "F ratio",
+        "within-group variation",
+        "between-group variation"
+      ],
+      "sequence": 64,
+      "p1": "Observed counts are 30 and 70; expected are 50 and 50. Compute χ².",
+      "s1": "(30−50)²/50+(70−50)²/50=16.",
+      "p2": "Identify a common error in Chi-Square Goodness of Fit.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Chi-Square Homogeneity",
+      "focus": "comparing categorical distributions across populations or treatments",
+      "formulas": [
+        "expected=row total×column total/grand total"
+      ],
+      "id": "u10-l02",
+      "number": 2,
+      "unit": 10,
+      "unit_title": "Categorical Data, Chi-Square & ANOVA",
+      "week": 28,
+      "essential": "How do categorical and multi-group methods compare observed variation with variation expected under a null model?",
+      "project": "Contingency Table & Group-Comparison Investigation",
+      "application": "genetics, market research, medicine, manufacturing, education, and experimental science",
+      "vocab": [
+        "expected count",
+        "chi-square",
+        "degrees of freedom",
+        "ANOVA",
+        "F ratio",
+        "within-group variation",
+        "between-group variation"
+      ],
+      "sequence": 65,
+      "p1": "Observed counts are 30 and 70; expected are 50 and 50. Compute χ².",
+      "s1": "(30−50)²/50+(70−50)²/50=16.",
+      "p2": "Identify a common error in Chi-Square Homogeneity.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Chi-Square Independence",
+      "focus": "testing association between two categorical variables in one population",
+      "formulas": [
+        "df=(r−1)(c−1)"
+      ],
+      "id": "u10-l03",
+      "number": 3,
+      "unit": 10,
+      "unit_title": "Categorical Data, Chi-Square & ANOVA",
+      "week": 28,
+      "essential": "How do categorical and multi-group methods compare observed variation with variation expected under a null model?",
+      "project": "Contingency Table & Group-Comparison Investigation",
+      "application": "genetics, market research, medicine, manufacturing, education, and experimental science",
+      "vocab": [
+        "expected count",
+        "chi-square",
+        "degrees of freedom",
+        "ANOVA",
+        "F ratio",
+        "within-group variation",
+        "between-group variation"
+      ],
+      "sequence": 66,
+      "p1": "Observed counts are 30 and 70; expected are 50 and 50. Compute χ².",
+      "s1": "(30−50)²/50+(70−50)²/50=16.",
+      "p2": "Identify a common error in Chi-Square Independence.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Standardized Residuals and Effect Size",
+      "focus": "identifying cells driving association and quantifying strength",
+      "formulas": [
+        "standardized residual=(O−E)/√E"
+      ],
+      "id": "u10-l04",
+      "number": 4,
+      "unit": 10,
+      "unit_title": "Categorical Data, Chi-Square & ANOVA",
+      "week": 28,
+      "essential": "How do categorical and multi-group methods compare observed variation with variation expected under a null model?",
+      "project": "Contingency Table & Group-Comparison Investigation",
+      "application": "genetics, market research, medicine, manufacturing, education, and experimental science",
+      "vocab": [
+        "expected count",
+        "chi-square",
+        "degrees of freedom",
+        "ANOVA",
+        "F ratio",
+        "within-group variation",
+        "between-group variation"
+      ],
+      "sequence": 67,
+      "p1": "If y=41 and ŷ=37, compute the residual.",
+      "s1": "Residual=41−37=4; the model underpredicted by 4 units.",
+      "p2": "Identify a common error in Standardized Residuals and Effect Size.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "One-Way ANOVA and the F Ratio",
+      "focus": "comparing several population means through between- and within-group variation",
+      "formulas": [
+        "F=MS_between/MS_within"
+      ],
+      "id": "u10-l05",
+      "number": 5,
+      "unit": 10,
+      "unit_title": "Categorical Data, Chi-Square & ANOVA",
+      "week": 29,
+      "essential": "How do categorical and multi-group methods compare observed variation with variation expected under a null model?",
+      "project": "Contingency Table & Group-Comparison Investigation",
+      "application": "genetics, market research, medicine, manufacturing, education, and experimental science",
+      "vocab": [
+        "expected count",
+        "chi-square",
+        "degrees of freedom",
+        "ANOVA",
+        "F ratio",
+        "within-group variation",
+        "between-group variation"
+      ],
+      "sequence": 68,
+      "p1": "What does a large F ratio indicate?",
+      "s1": "Between-group variation is large relative to within-group variation, providing evidence that not all means are equal.",
+      "p2": "Identify a common error in One-Way ANOVA and the F Ratio.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "ANOVA Assumptions, Diagnostics and Robustness",
+      "focus": "checking independence, approximate normality, and comparable spread",
+      "formulas": [
+        "design quality remains primary"
+      ],
+      "id": "u10-l06",
+      "number": 6,
+      "unit": 10,
+      "unit_title": "Categorical Data, Chi-Square & ANOVA",
+      "week": 29,
+      "essential": "How do categorical and multi-group methods compare observed variation with variation expected under a null model?",
+      "project": "Contingency Table & Group-Comparison Investigation",
+      "application": "genetics, market research, medicine, manufacturing, education, and experimental science",
+      "vocab": [
+        "expected count",
+        "chi-square",
+        "degrees of freedom",
+        "ANOVA",
+        "F ratio",
+        "within-group variation",
+        "between-group variation"
+      ],
+      "sequence": 69,
+      "p1": "What does a large F ratio indicate?",
+      "s1": "Between-group variation is large relative to within-group variation, providing evidence that not all means are equal.",
+      "p2": "Identify a common error in ANOVA Assumptions, Diagnostics and Robustness.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Multiple Comparisons and Planned Contrasts",
+      "focus": "locating meaningful group differences while controlling error",
+      "formulas": [
+        "familywise error requires adjustment"
+      ],
+      "id": "u10-l07",
+      "number": 7,
+      "unit": 10,
+      "unit_title": "Categorical Data, Chi-Square & ANOVA",
+      "week": 29,
+      "essential": "How do categorical and multi-group methods compare observed variation with variation expected under a null model?",
+      "project": "Contingency Table & Group-Comparison Investigation",
+      "application": "genetics, market research, medicine, manufacturing, education, and experimental science",
+      "vocab": [
+        "expected count",
+        "chi-square",
+        "degrees of freedom",
+        "ANOVA",
+        "F ratio",
+        "within-group variation",
+        "between-group variation"
+      ],
+      "sequence": 70,
+      "p1": "Give one defensible analysis step for Multiple Comparisons and Planned Contrasts.",
+      "s1": "State the question and data structure, apply locating meaningful group differences while controlling error, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Multiple Comparisons and Planned Contrasts.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    }
+  ],
+  "investigation": "Contingency Table & Group-Comparison Investigation"
+}

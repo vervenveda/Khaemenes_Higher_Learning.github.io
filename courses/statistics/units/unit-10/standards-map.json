@@ -1,0 +1,17 @@
+{
+  "unit": 10,
+  "title": "Categorical Data, Chi-Square & ANOVA",
+  "standards": [
+    "Chi-square goodness of fit",
+    "Chi-square homogeneity",
+    "Chi-square independence",
+    "Expected counts",
+    "Residuals",
+    "One-way ANOVA",
+    "F statistic",
+    "Assumptions",
+    "Multiple comparisons",
+    "Effect sizes"
+  ],
+  "essential_question": "How do categorical and multi-group methods compare observed variation with variation expected under a null model?"
+}

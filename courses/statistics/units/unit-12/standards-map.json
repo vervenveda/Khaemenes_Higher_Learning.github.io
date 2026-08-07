@@ -1,0 +1,18 @@
+{
+  "unit": 12,
+  "title": "Resampling, Nonparametric Methods & Bayesian Foundations",
+  "standards": [
+    "Bootstrap",
+    "Permutation tests",
+    "Randomization inference",
+    "Sign test",
+    "Rank-sum test",
+    "Signed-rank test",
+    "Bayesian updating",
+    "Prior and likelihood",
+    "Posterior distributions",
+    "Credible intervals",
+    "Posterior predictive checks"
+  ],
+  "essential_question": "How do resampling, rank-based methods, and Bayesian updating extend inference when classical assumptions or interpretations are limiting?"
+}

@@ -1,0 +1,18 @@
+{
+  "unit": 11,
+  "title": "Multiple Regression & Model Diagnostics",
+  "standards": [
+    "Multiple regression",
+    "Indicator variables",
+    "Interactions",
+    "Partial slopes",
+    "Adjusted R\u00b2",
+    "Residual diagnostics",
+    "Collinearity",
+    "Model selection",
+    "Prediction intervals",
+    "Cross-validation",
+    "Causal limits"
+  ],
+  "essential_question": "How do multiple predictors, interactions, diagnostics, and validation improve prediction without disguising uncertainty or causality?"
+}

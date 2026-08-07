@@ -1,0 +1,19 @@
+{
+  "unit": 9,
+  "title": "Hypothesis Testing & Decision Frameworks",
+  "standards": [
+    "Null and alternative hypotheses",
+    "Test statistics",
+    "p-values",
+    "Significance level",
+    "Type I and II errors",
+    "Power",
+    "One-sample tests",
+    "Two-sample tests",
+    "Paired tests",
+    "Randomization tests",
+    "Effect size",
+    "Multiple testing"
+  ],
+  "essential_question": "How do null models, test statistics, p-values, errors, power, and effect sizes support disciplined decisions?"
+}
