@@ -1,0 +1,14 @@
+{
+  "unit": 8,
+  "title": "Sequences & Series of Functions",
+  "standards": [
+    "pointwise convergence",
+    "uniform convergence",
+    "uniform Cauchy criterion",
+    "Weierstrass M-test",
+    "continuity preservation",
+    "termwise integration",
+    "termwise differentiation"
+  ],
+  "essential_question": "When may limits, derivatives, integrals, and infinite sums be interchanged safely?"
+}

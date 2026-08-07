@@ -1,0 +1,15 @@
+{
+  "unit": 6,
+  "title": "Differentiation, Mean-Value Theorems & Taylor Theory",
+  "standards": [
+    "derivative definition",
+    "linear approximation",
+    "Rolle theorem",
+    "mean value theorem",
+    "Taylor theorem",
+    "inverse function",
+    "convexity",
+    "higher derivatives"
+  ],
+  "essential_question": "How does differentiability impose local linear structure and global constraints?"
+}

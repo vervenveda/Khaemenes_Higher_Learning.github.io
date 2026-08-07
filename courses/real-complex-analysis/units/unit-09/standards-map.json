@@ -1,0 +1,15 @@
+{
+  "unit": 9,
+  "title": "Measure, Lebesgue Integration & Lp Foundations",
+  "standards": [
+    "sigma-algebras",
+    "measures",
+    "measurable functions",
+    "Lebesgue integral",
+    "Fatou",
+    "monotone convergence",
+    "dominated convergence",
+    "Lp spaces"
+  ],
+  "essential_question": "How do measure and Lebesgue integration extend integration and convergence to broader function classes?"
+}

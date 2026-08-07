@@ -1,0 +1,14 @@
+{
+  "unit": 7,
+  "title": "Riemann Integration & the Fundamental Theorem",
+  "standards": [
+    "partitions",
+    "Riemann sums",
+    "upper and lower integrals",
+    "integrability criteria",
+    "FTC",
+    "change of variables",
+    "improper integrals"
+  ],
+  "essential_question": "How do upper and lower sums make area and accumulation rigorous?"
+}

@@ -1,0 +1,15 @@
+{
+  "unit": 10,
+  "title": "Complex Numbers, Analyticity & Conformal Geometry",
+  "standards": [
+    "complex arithmetic",
+    "polar form",
+    "exponential and logarithm",
+    "complex limits",
+    "holomorphicity",
+    "Cauchy-Riemann equations",
+    "harmonic functions",
+    "conformal maps"
+  ],
+  "essential_question": "How does complex differentiability create stronger structure than real differentiability?"
+}
