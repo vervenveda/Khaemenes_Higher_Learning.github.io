@@ -1,0 +1,21 @@
+{
+  "unit": 4,
+  "title": "Study Design, Sampling & Experiments",
+  "standards": [
+    "Simple random sampling",
+    "Stratified sampling",
+    "Cluster sampling",
+    "Systematic sampling",
+    "Voluntary response",
+    "Nonresponse",
+    "Random assignment",
+    "Control groups",
+    "Blinding",
+    "Blocking",
+    "Matched pairs",
+    "Observational studies",
+    "Confounding",
+    "Simulation"
+  ],
+  "essential_question": "How do sampling, randomization, control, and design determine what conclusions data can support?"
+}

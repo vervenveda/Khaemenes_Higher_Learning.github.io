@@ -1,0 +1,16 @@
+{
+  "unit": 1,
+  "title": "Statistical Problem Solving, Data Ethics & Measurement",
+  "standards": [
+    "Statistical problem-solving process",
+    "Investigative questions",
+    "Cases and variables",
+    "Categorical and quantitative data",
+    "Measurement validity",
+    "Bias and data quality",
+    "Ethics and privacy",
+    "Reproducibility",
+    "Statistical communication"
+  ],
+  "essential_question": "How do strong questions, trustworthy measurements, and ethical decisions turn data into defensible evidence?"
+}

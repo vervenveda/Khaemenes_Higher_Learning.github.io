@@ -1,0 +1,230 @@
+{
+  "unit": 5,
+  "title": "Probability Foundations & Conditional Reasoning",
+  "weeks": [
+    13,
+    14,
+    15
+  ],
+  "lessons": [
+    {
+      "title": "Sample Spaces, Events and Complements",
+      "focus": "representing outcomes and events precisely",
+      "formulas": [
+        "P(Aᶜ)=1−P(A)"
+      ],
+      "id": "u05-l01",
+      "number": 1,
+      "unit": 5,
+      "unit_title": "Probability Foundations & Conditional Reasoning",
+      "week": 13,
+      "essential": "How do probability rules, conditioning, independence, and simulation quantify uncertainty?",
+      "project": "Probability Model & Bayesian Updating Investigation",
+      "application": "risk, reliability, diagnostics, insurance, quality control, genetics, and decision-making",
+      "vocab": [
+        "event",
+        "complement",
+        "union",
+        "intersection",
+        "conditional probability",
+        "independence",
+        "likelihood",
+        "prior",
+        "posterior"
+      ],
+      "sequence": 29,
+      "p1": "Give one defensible analysis step for Sample Spaces, Events and Complements.",
+      "s1": "State the question and data structure, apply representing outcomes and events precisely, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Sample Spaces, Events and Complements.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Addition Rule and Inclusion–Exclusion",
+      "focus": "computing the probability of unions without double counting",
+      "formulas": [
+        "P(A∪B)=P(A)+P(B)−P(A∩B)"
+      ],
+      "id": "u05-l02",
+      "number": 2,
+      "unit": 5,
+      "unit_title": "Probability Foundations & Conditional Reasoning",
+      "week": 13,
+      "essential": "How do probability rules, conditioning, independence, and simulation quantify uncertainty?",
+      "project": "Probability Model & Bayesian Updating Investigation",
+      "application": "risk, reliability, diagnostics, insurance, quality control, genetics, and decision-making",
+      "vocab": [
+        "event",
+        "complement",
+        "union",
+        "intersection",
+        "conditional probability",
+        "independence",
+        "likelihood",
+        "prior",
+        "posterior"
+      ],
+      "sequence": 30,
+      "p1": "Give one defensible analysis step for Addition Rule and Inclusion–Exclusion.",
+      "s1": "State the question and data structure, apply computing the probability of unions without double counting, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Addition Rule and Inclusion–Exclusion.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Conditional Probability and Tree Diagrams",
+      "focus": "updating probabilities after learning information",
+      "formulas": [
+        "P(A|B)=P(A∩B)/P(B)"
+      ],
+      "id": "u05-l03",
+      "number": 3,
+      "unit": 5,
+      "unit_title": "Probability Foundations & Conditional Reasoning",
+      "week": 13,
+      "essential": "How do probability rules, conditioning, independence, and simulation quantify uncertainty?",
+      "project": "Probability Model & Bayesian Updating Investigation",
+      "application": "risk, reliability, diagnostics, insurance, quality control, genetics, and decision-making",
+      "vocab": [
+        "event",
+        "complement",
+        "union",
+        "intersection",
+        "conditional probability",
+        "independence",
+        "likelihood",
+        "prior",
+        "posterior"
+      ],
+      "sequence": 31,
+      "p1": "If P(A∩B)=0.18 and P(B)=0.30, find P(A|B).",
+      "s1": "0.18/0.30=0.60.",
+      "p2": "Identify a common error in Conditional Probability and Tree Diagrams.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Independence and Multiplication Rules",
+      "focus": "distinguishing independence from mutual exclusivity",
+      "formulas": [
+        "independent: P(A∩B)=P(A)P(B)"
+      ],
+      "id": "u05-l04",
+      "number": 4,
+      "unit": 5,
+      "unit_title": "Probability Foundations & Conditional Reasoning",
+      "week": 14,
+      "essential": "How do probability rules, conditioning, independence, and simulation quantify uncertainty?",
+      "project": "Probability Model & Bayesian Updating Investigation",
+      "application": "risk, reliability, diagnostics, insurance, quality control, genetics, and decision-making",
+      "vocab": [
+        "event",
+        "complement",
+        "union",
+        "intersection",
+        "conditional probability",
+        "independence",
+        "likelihood",
+        "prior",
+        "posterior"
+      ],
+      "sequence": 32,
+      "p1": "Give one defensible analysis step for Independence and Multiplication Rules.",
+      "s1": "State the question and data structure, apply distinguishing independence from mutual exclusivity, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Independence and Multiplication Rules.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Bayes Theorem and Diagnostic Reasoning",
+      "focus": "combining prior information with evidence likelihood",
+      "formulas": [
+        "P(A|B)=P(B|A)P(A)/P(B)"
+      ],
+      "id": "u05-l05",
+      "number": 5,
+      "unit": 5,
+      "unit_title": "Probability Foundations & Conditional Reasoning",
+      "week": 14,
+      "essential": "How do probability rules, conditioning, independence, and simulation quantify uncertainty?",
+      "project": "Probability Model & Bayesian Updating Investigation",
+      "application": "risk, reliability, diagnostics, insurance, quality control, genetics, and decision-making",
+      "vocab": [
+        "event",
+        "complement",
+        "union",
+        "intersection",
+        "conditional probability",
+        "independence",
+        "likelihood",
+        "prior",
+        "posterior"
+      ],
+      "sequence": 33,
+      "p1": "A test has 90% sensitivity, 95% specificity, and prevalence 2%. Explain why a positive result may still have modest predictive value.",
+      "s1": "False positives arise among the large non-diseased group; Bayes theorem combines prevalence with test performance.",
+      "p2": "Identify a common error in Bayes Theorem and Diagnostic Reasoning.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Counting, Permutations and Combinations",
+      "focus": "counting equally likely outcomes with and without order",
+      "formulas": [
+        "nPr=n!/(n−r)!",
+        "nCr=n!/[r!(n−r)!]"
+      ],
+      "id": "u05-l06",
+      "number": 6,
+      "unit": 5,
+      "unit_title": "Probability Foundations & Conditional Reasoning",
+      "week": 15,
+      "essential": "How do probability rules, conditioning, independence, and simulation quantify uncertainty?",
+      "project": "Probability Model & Bayesian Updating Investigation",
+      "application": "risk, reliability, diagnostics, insurance, quality control, genetics, and decision-making",
+      "vocab": [
+        "event",
+        "complement",
+        "union",
+        "intersection",
+        "conditional probability",
+        "independence",
+        "likelihood",
+        "prior",
+        "posterior"
+      ],
+      "sequence": 34,
+      "p1": "Give one defensible analysis step for Counting, Permutations and Combinations.",
+      "s1": "State the question and data structure, apply counting equally likely outcomes with and without order, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Counting, Permutations and Combinations.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Monte Carlo Simulation and Probability Validation",
+      "focus": "approximating probabilities and checking models through repeated trials",
+      "formulas": [
+        "estimate probability=successes/trials"
+      ],
+      "id": "u05-l07",
+      "number": 7,
+      "unit": 5,
+      "unit_title": "Probability Foundations & Conditional Reasoning",
+      "week": 15,
+      "essential": "How do probability rules, conditioning, independence, and simulation quantify uncertainty?",
+      "project": "Probability Model & Bayesian Updating Investigation",
+      "application": "risk, reliability, diagnostics, insurance, quality control, genetics, and decision-making",
+      "vocab": [
+        "event",
+        "complement",
+        "union",
+        "intersection",
+        "conditional probability",
+        "independence",
+        "likelihood",
+        "prior",
+        "posterior"
+      ],
+      "sequence": 35,
+      "p1": "Give one defensible analysis step for Monte Carlo Simulation and Probability Validation.",
+      "s1": "State the question and data structure, apply approximating probabilities and checking models through repeated trials, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Monte Carlo Simulation and Probability Validation.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    }
+  ],
+  "investigation": "Probability Model & Bayesian Updating Investigation"
+}

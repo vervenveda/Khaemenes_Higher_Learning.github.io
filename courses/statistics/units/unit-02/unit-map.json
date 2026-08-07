@@ -1,0 +1,249 @@
+{
+  "unit": 2,
+  "title": "Describing One-Variable Distributions",
+  "weeks": [
+    4,
+    5,
+    6
+  ],
+  "lessons": [
+    {
+      "title": "Frequency Tables, Dot Plots and Histograms",
+      "focus": "constructing displays that make scale, frequency, and shape visible",
+      "formulas": [
+        "relative frequency = count/n"
+      ],
+      "id": "u02-l01",
+      "number": 1,
+      "unit": 2,
+      "unit_title": "Describing One-Variable Distributions",
+      "week": 4,
+      "essential": "How do graphs and numerical summaries reveal distribution shape, center, spread, unusual values, and context?",
+      "project": "Distribution Portrait & Resistant-Summary Investigation",
+      "application": "income, climate, manufacturing, sports, education, health, and quality-control data",
+      "vocab": [
+        "distribution",
+        "center",
+        "spread",
+        "shape",
+        "skew",
+        "mode",
+        "quartile",
+        "IQR",
+        "standard deviation",
+        "outlier",
+        "z-score"
+      ],
+      "sequence": 8,
+      "p1": "Give one defensible analysis step for Frequency Tables, Dot Plots and Histograms.",
+      "s1": "State the question and data structure, apply constructing displays that make scale, frequency, and shape visible, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Frequency Tables, Dot Plots and Histograms.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Shape, Modality, Skewness and Unusual Features",
+      "focus": "describing distributions with context rather than labels alone",
+      "formulas": [
+        "symmetric",
+        "left-skewed",
+        "right-skewed",
+        "unimodal/bimodal"
+      ],
+      "id": "u02-l02",
+      "number": 2,
+      "unit": 2,
+      "unit_title": "Describing One-Variable Distributions",
+      "week": 4,
+      "essential": "How do graphs and numerical summaries reveal distribution shape, center, spread, unusual values, and context?",
+      "project": "Distribution Portrait & Resistant-Summary Investigation",
+      "application": "income, climate, manufacturing, sports, education, health, and quality-control data",
+      "vocab": [
+        "distribution",
+        "center",
+        "spread",
+        "shape",
+        "skew",
+        "mode",
+        "quartile",
+        "IQR",
+        "standard deviation",
+        "outlier",
+        "z-score"
+      ],
+      "sequence": 9,
+      "p1": "Give one defensible analysis step for Shape, Modality, Skewness and Unusual Features.",
+      "s1": "State the question and data structure, apply describing distributions with context rather than labels alone, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Shape, Modality, Skewness and Unusual Features.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Mean, Median and Resistant Center",
+      "focus": "choosing and interpreting center in the presence of skew or outliers",
+      "formulas": [
+        "x̄=Σx/n",
+        "median = middle ordered value"
+      ],
+      "id": "u02-l03",
+      "number": 3,
+      "unit": 2,
+      "unit_title": "Describing One-Variable Distributions",
+      "week": 4,
+      "essential": "How do graphs and numerical summaries reveal distribution shape, center, spread, unusual values, and context?",
+      "project": "Distribution Portrait & Resistant-Summary Investigation",
+      "application": "income, climate, manufacturing, sports, education, health, and quality-control data",
+      "vocab": [
+        "distribution",
+        "center",
+        "spread",
+        "shape",
+        "skew",
+        "mode",
+        "quartile",
+        "IQR",
+        "standard deviation",
+        "outlier",
+        "z-score"
+      ],
+      "sequence": 10,
+      "p1": "For 4, 5, 6, 7, 28, compute mean and median.",
+      "s1": "Mean=10 and median=6; the high value pulls the mean upward.",
+      "p2": "Identify a common error in Mean, Median and Resistant Center.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Range, Quartiles, IQR and Box Plots",
+      "focus": "summarizing middle spread and detecting potential outliers",
+      "formulas": [
+        "IQR=Q3−Q1",
+        "fences=Q1−1.5IQR,Q3+1.5IQR"
+      ],
+      "id": "u02-l04",
+      "number": 4,
+      "unit": 2,
+      "unit_title": "Describing One-Variable Distributions",
+      "week": 5,
+      "essential": "How do graphs and numerical summaries reveal distribution shape, center, spread, unusual values, and context?",
+      "project": "Distribution Portrait & Resistant-Summary Investigation",
+      "application": "income, climate, manufacturing, sports, education, health, and quality-control data",
+      "vocab": [
+        "distribution",
+        "center",
+        "spread",
+        "shape",
+        "skew",
+        "mode",
+        "quartile",
+        "IQR",
+        "standard deviation",
+        "outlier",
+        "z-score"
+      ],
+      "sequence": 11,
+      "p1": "Give one defensible analysis step for Range, Quartiles, IQR and Box Plots.",
+      "s1": "State the question and data structure, apply summarizing middle spread and detecting potential outliers, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Range, Quartiles, IQR and Box Plots.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Variance and Standard Deviation",
+      "focus": "measuring typical squared and root-mean-square deviation from the mean",
+      "formulas": [
+        "s²=Σ(x−x̄)²/(n−1)"
+      ],
+      "id": "u02-l05",
+      "number": 5,
+      "unit": 2,
+      "unit_title": "Describing One-Variable Distributions",
+      "week": 5,
+      "essential": "How do graphs and numerical summaries reveal distribution shape, center, spread, unusual values, and context?",
+      "project": "Distribution Portrait & Resistant-Summary Investigation",
+      "application": "income, climate, manufacturing, sports, education, health, and quality-control data",
+      "vocab": [
+        "distribution",
+        "center",
+        "spread",
+        "shape",
+        "skew",
+        "mode",
+        "quartile",
+        "IQR",
+        "standard deviation",
+        "outlier",
+        "z-score"
+      ],
+      "sequence": 12,
+      "p1": "For 2, 4, 6, compute the population standard deviation.",
+      "s1": "The mean is 4; squared deviations total 8, variance is 8/3, and σ≈1.633.",
+      "p2": "Identify a common error in Variance and Standard Deviation.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Standard Scores and Relative Standing",
+      "focus": "standardizing observations to compare relative position across scales",
+      "formulas": [
+        "z=(x−μ)/σ"
+      ],
+      "id": "u02-l06",
+      "number": 6,
+      "unit": 2,
+      "unit_title": "Describing One-Variable Distributions",
+      "week": 6,
+      "essential": "How do graphs and numerical summaries reveal distribution shape, center, spread, unusual values, and context?",
+      "project": "Distribution Portrait & Resistant-Summary Investigation",
+      "application": "income, climate, manufacturing, sports, education, health, and quality-control data",
+      "vocab": [
+        "distribution",
+        "center",
+        "spread",
+        "shape",
+        "skew",
+        "mode",
+        "quartile",
+        "IQR",
+        "standard deviation",
+        "outlier",
+        "z-score"
+      ],
+      "sequence": 13,
+      "p1": "A score is 82 in a distribution with mean 70 and SD 6. Find z.",
+      "s1": "z=(82−70)/6=2, so the score is two standard deviations above the mean.",
+      "p2": "Identify a common error in Standard Scores and Relative Standing.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Transformations and Comparing Distributions",
+      "focus": "predicting how shifts, rescaling, and nonlinear transforms change summaries and shape",
+      "formulas": [
+        "Y=a+bX",
+        "center and spread rescale with |b|"
+      ],
+      "id": "u02-l07",
+      "number": 7,
+      "unit": 2,
+      "unit_title": "Describing One-Variable Distributions",
+      "week": 6,
+      "essential": "How do graphs and numerical summaries reveal distribution shape, center, spread, unusual values, and context?",
+      "project": "Distribution Portrait & Resistant-Summary Investigation",
+      "application": "income, climate, manufacturing, sports, education, health, and quality-control data",
+      "vocab": [
+        "distribution",
+        "center",
+        "spread",
+        "shape",
+        "skew",
+        "mode",
+        "quartile",
+        "IQR",
+        "standard deviation",
+        "outlier",
+        "z-score"
+      ],
+      "sequence": 14,
+      "p1": "Give one defensible analysis step for Transformations and Comparing Distributions.",
+      "s1": "State the question and data structure, apply predicting how shifts, rescaling, and nonlinear transforms change summaries and shape, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Transformations and Comparing Distributions.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    }
+  ],
+  "investigation": "Distribution Portrait & Resistant-Summary Investigation"
+}

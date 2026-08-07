@@ -1,0 +1,229 @@
+{
+  "unit": 3,
+  "title": "Relationships, Correlation & Regression",
+  "weeks": [
+    7,
+    8,
+    9
+  ],
+  "lessons": [
+    {
+      "title": "Scatterplots and Association",
+      "focus": "describing direction, form, strength, clusters, and unusual points in context",
+      "formulas": [
+        "association ≠ causation"
+      ],
+      "id": "u03-l01",
+      "number": 1,
+      "unit": 3,
+      "unit_title": "Relationships, Correlation & Regression",
+      "week": 7,
+      "essential": "How can statistical models describe association, quantify uncertainty, diagnose error, and avoid causal overreach?",
+      "project": "Association, Prediction & Residual Analysis Portfolio",
+      "application": "economics, epidemiology, engineering calibration, environmental science, education, and social research",
+      "vocab": [
+        "association",
+        "correlation",
+        "regression",
+        "residual",
+        "leverage",
+        "influence",
+        "prediction",
+        "extrapolation",
+        "confounding"
+      ],
+      "sequence": 15,
+      "p1": "Give one defensible analysis step for Scatterplots and Association.",
+      "s1": "State the question and data structure, apply describing direction, form, strength, clusters, and unusual points in context, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Scatterplots and Association.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Pearson Correlation and Standardized Association",
+      "focus": "interpreting linear strength and direction while respecting scale and outliers",
+      "formulas": [
+        "−1≤r≤1"
+      ],
+      "id": "u03-l02",
+      "number": 2,
+      "unit": 3,
+      "unit_title": "Relationships, Correlation & Regression",
+      "week": 7,
+      "essential": "How can statistical models describe association, quantify uncertainty, diagnose error, and avoid causal overreach?",
+      "project": "Association, Prediction & Residual Analysis Portfolio",
+      "application": "economics, epidemiology, engineering calibration, environmental science, education, and social research",
+      "vocab": [
+        "association",
+        "correlation",
+        "regression",
+        "residual",
+        "leverage",
+        "influence",
+        "prediction",
+        "extrapolation",
+        "confounding"
+      ],
+      "sequence": 16,
+      "p1": "What does r=−0.84 indicate?",
+      "s1": "A strong negative linear association; it does not establish causation.",
+      "p2": "Identify a common error in Pearson Correlation and Standardized Association.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Least-Squares Regression Line",
+      "focus": "estimating slope and intercept by minimizing squared residuals",
+      "formulas": [
+        "ŷ=b0+b1x"
+      ],
+      "id": "u03-l03",
+      "number": 3,
+      "unit": 3,
+      "unit_title": "Relationships, Correlation & Regression",
+      "week": 7,
+      "essential": "How can statistical models describe association, quantify uncertainty, diagnose error, and avoid causal overreach?",
+      "project": "Association, Prediction & Residual Analysis Portfolio",
+      "application": "economics, epidemiology, engineering calibration, environmental science, education, and social research",
+      "vocab": [
+        "association",
+        "correlation",
+        "regression",
+        "residual",
+        "leverage",
+        "influence",
+        "prediction",
+        "extrapolation",
+        "confounding"
+      ],
+      "sequence": 17,
+      "p1": "Interpret slope 2.4 in ŷ=18+2.4x.",
+      "s1": "For each one-unit increase in x, predicted y rises by 2.4 units on average within the studied range.",
+      "p2": "Identify a common error in Least-Squares Regression Line.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Residuals and Model Diagnostics",
+      "focus": "using residual plots to assess linearity, equal spread, independence, and unusual observations",
+      "formulas": [
+        "residual=y−ŷ"
+      ],
+      "id": "u03-l04",
+      "number": 4,
+      "unit": 3,
+      "unit_title": "Relationships, Correlation & Regression",
+      "week": 8,
+      "essential": "How can statistical models describe association, quantify uncertainty, diagnose error, and avoid causal overreach?",
+      "project": "Association, Prediction & Residual Analysis Portfolio",
+      "application": "economics, epidemiology, engineering calibration, environmental science, education, and social research",
+      "vocab": [
+        "association",
+        "correlation",
+        "regression",
+        "residual",
+        "leverage",
+        "influence",
+        "prediction",
+        "extrapolation",
+        "confounding"
+      ],
+      "sequence": 18,
+      "p1": "If y=41 and ŷ=37, compute the residual.",
+      "s1": "Residual=41−37=4; the model underpredicted by 4 units.",
+      "p2": "Identify a common error in Residuals and Model Diagnostics.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "R², Prediction and Extrapolation",
+      "focus": "interpreting explained variation and distinguishing interpolation from risky extrapolation",
+      "formulas": [
+        "R²=1−SSE/SST"
+      ],
+      "id": "u03-l05",
+      "number": 5,
+      "unit": 3,
+      "unit_title": "Relationships, Correlation & Regression",
+      "week": 8,
+      "essential": "How can statistical models describe association, quantify uncertainty, diagnose error, and avoid causal overreach?",
+      "project": "Association, Prediction & Residual Analysis Portfolio",
+      "application": "economics, epidemiology, engineering calibration, environmental science, education, and social research",
+      "vocab": [
+        "association",
+        "correlation",
+        "regression",
+        "residual",
+        "leverage",
+        "influence",
+        "prediction",
+        "extrapolation",
+        "confounding"
+      ],
+      "sequence": 19,
+      "p1": "Give one defensible analysis step for R², Prediction and Extrapolation.",
+      "s1": "State the question and data structure, apply interpreting explained variation and distinguishing interpolation from risky extrapolation, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in R², Prediction and Extrapolation.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Transformations, Nonlinearity and Influential Points",
+      "focus": "repairing model form and evaluating leverage and influence",
+      "formulas": [
+        "log transforms can linearize multiplicative patterns"
+      ],
+      "id": "u03-l06",
+      "number": 6,
+      "unit": 3,
+      "unit_title": "Relationships, Correlation & Regression",
+      "week": 9,
+      "essential": "How can statistical models describe association, quantify uncertainty, diagnose error, and avoid causal overreach?",
+      "project": "Association, Prediction & Residual Analysis Portfolio",
+      "application": "economics, epidemiology, engineering calibration, environmental science, education, and social research",
+      "vocab": [
+        "association",
+        "correlation",
+        "regression",
+        "residual",
+        "leverage",
+        "influence",
+        "prediction",
+        "extrapolation",
+        "confounding"
+      ],
+      "sequence": 20,
+      "p1": "Give one defensible analysis step for Transformations, Nonlinearity and Influential Points.",
+      "s1": "State the question and data structure, apply repairing model form and evaluating leverage and influence, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Transformations, Nonlinearity and Influential Points.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Categorical Association, Confounding and Causal Claims",
+      "focus": "using conditional percentages and design evidence to separate association from causation",
+      "formulas": [
+        "compare conditional distributions"
+      ],
+      "id": "u03-l07",
+      "number": 7,
+      "unit": 3,
+      "unit_title": "Relationships, Correlation & Regression",
+      "week": 9,
+      "essential": "How can statistical models describe association, quantify uncertainty, diagnose error, and avoid causal overreach?",
+      "project": "Association, Prediction & Residual Analysis Portfolio",
+      "application": "economics, epidemiology, engineering calibration, environmental science, education, and social research",
+      "vocab": [
+        "association",
+        "correlation",
+        "regression",
+        "residual",
+        "leverage",
+        "influence",
+        "prediction",
+        "extrapolation",
+        "confounding"
+      ],
+      "sequence": 21,
+      "p1": "Give one defensible analysis step for Categorical Association, Confounding and Causal Claims.",
+      "s1": "State the question and data structure, apply using conditional percentages and design evidence to separate association from causation, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Categorical Association, Confounding and Causal Claims.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    }
+  ],
+  "investigation": "Association, Prediction & Residual Analysis Portfolio"
+}

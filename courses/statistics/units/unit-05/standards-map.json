@@ -1,0 +1,17 @@
+{
+  "unit": 5,
+  "title": "Probability Foundations & Conditional Reasoning",
+  "standards": [
+    "Sample spaces",
+    "Events",
+    "Addition rule",
+    "Multiplication rule",
+    "Conditional probability",
+    "Independence",
+    "Tree diagrams",
+    "Bayes theorem",
+    "Counting principles",
+    "Simulation"
+  ],
+  "essential_question": "How do probability rules, conditioning, independence, and simulation quantify uncertainty?"
+}

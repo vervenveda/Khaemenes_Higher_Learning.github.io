@@ -1,0 +1,18 @@
+{
+  "unit": 3,
+  "title": "Relationships, Correlation & Regression",
+  "standards": [
+    "Scatterplots",
+    "Direction and form",
+    "Correlation",
+    "Least-squares regression",
+    "Residuals",
+    "Coefficient of determination",
+    "Influential points",
+    "Transformations",
+    "Two-way tables",
+    "Confounding",
+    "Causation"
+  ],
+  "essential_question": "How can statistical models describe association, quantify uncertainty, diagnose error, and avoid causal overreach?"
+}

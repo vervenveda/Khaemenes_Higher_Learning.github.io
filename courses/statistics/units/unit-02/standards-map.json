@@ -1,0 +1,18 @@
+{
+  "unit": 2,
+  "title": "Describing One-Variable Distributions",
+  "standards": [
+    "Frequency tables",
+    "Dot plots",
+    "Histograms",
+    "Box plots",
+    "Shape and modality",
+    "Mean and median",
+    "Quartiles and IQR",
+    "Variance and standard deviation",
+    "Outliers",
+    "Standard scores",
+    "Transformations"
+  ],
+  "essential_question": "How do graphs and numerical summaries reveal distribution shape, center, spread, unusual values, and context?"
+}

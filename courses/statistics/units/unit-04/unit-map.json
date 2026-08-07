@@ -1,0 +1,236 @@
+{
+  "unit": 4,
+  "title": "Study Design, Sampling & Experiments",
+  "weeks": [
+    10,
+    11,
+    12
+  ],
+  "lessons": [
+    {
+      "title": "Sampling Frames and Simple Random Samples",
+      "focus": "connecting the target population to a probability-based selection process",
+      "formulas": [
+        "every sample of size n has known chance"
+      ],
+      "id": "u04-l01",
+      "number": 1,
+      "unit": 4,
+      "unit_title": "Study Design, Sampling & Experiments",
+      "week": 10,
+      "essential": "How do sampling, randomization, control, and design determine what conclusions data can support?",
+      "project": "Survey and Experiment Design Laboratory",
+      "application": "clinical trials, polling, agriculture, product testing, education research, and industrial experimentation",
+      "vocab": [
+        "sampling frame",
+        "random sample",
+        "stratum",
+        "cluster",
+        "random assignment",
+        "control",
+        "blind",
+        "block",
+        "matched pair",
+        "confounder"
+      ],
+      "sequence": 22,
+      "p1": "Why is sampling from a complete roster preferable to a social-media poll?",
+      "s1": "A probability sample from a defined frame reduces voluntary-response and coverage bias and supports design-based inference.",
+      "p2": "Identify a common error in Sampling Frames and Simple Random Samples.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Stratified, Cluster and Systematic Sampling",
+      "focus": "matching sampling structure to population organization and precision needs",
+      "formulas": [
+        "weighted estimate=Σ stratum weight×estimate"
+      ],
+      "id": "u04-l02",
+      "number": 2,
+      "unit": 4,
+      "unit_title": "Study Design, Sampling & Experiments",
+      "week": 10,
+      "essential": "How do sampling, randomization, control, and design determine what conclusions data can support?",
+      "project": "Survey and Experiment Design Laboratory",
+      "application": "clinical trials, polling, agriculture, product testing, education research, and industrial experimentation",
+      "vocab": [
+        "sampling frame",
+        "random sample",
+        "stratum",
+        "cluster",
+        "random assignment",
+        "control",
+        "blind",
+        "block",
+        "matched pair",
+        "confounder"
+      ],
+      "sequence": 23,
+      "p1": "Give one defensible analysis step for Stratified, Cluster and Systematic Sampling.",
+      "s1": "State the question and data structure, apply matching sampling structure to population organization and precision needs, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Stratified, Cluster and Systematic Sampling.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Survey Error, Nonresponse and Question Wording",
+      "focus": "diagnosing coverage, response, measurement, and interviewer effects",
+      "formulas": [
+        "total survey error has multiple sources"
+      ],
+      "id": "u04-l03",
+      "number": 3,
+      "unit": 4,
+      "unit_title": "Study Design, Sampling & Experiments",
+      "week": 10,
+      "essential": "How do sampling, randomization, control, and design determine what conclusions data can support?",
+      "project": "Survey and Experiment Design Laboratory",
+      "application": "clinical trials, polling, agriculture, product testing, education research, and industrial experimentation",
+      "vocab": [
+        "sampling frame",
+        "random sample",
+        "stratum",
+        "cluster",
+        "random assignment",
+        "control",
+        "blind",
+        "block",
+        "matched pair",
+        "confounder"
+      ],
+      "sequence": 24,
+      "p1": "Give one defensible analysis step for Survey Error, Nonresponse and Question Wording.",
+      "s1": "State the question and data structure, apply diagnosing coverage, response, measurement, and interviewer effects, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Survey Error, Nonresponse and Question Wording.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Observational Studies and Confounding",
+      "focus": "identifying lurking variables and limits on causal conclusions",
+      "formulas": [
+        "adjustment cannot guarantee removal of unmeasured confounding"
+      ],
+      "id": "u04-l04",
+      "number": 4,
+      "unit": 4,
+      "unit_title": "Study Design, Sampling & Experiments",
+      "week": 11,
+      "essential": "How do sampling, randomization, control, and design determine what conclusions data can support?",
+      "project": "Survey and Experiment Design Laboratory",
+      "application": "clinical trials, polling, agriculture, product testing, education research, and industrial experimentation",
+      "vocab": [
+        "sampling frame",
+        "random sample",
+        "stratum",
+        "cluster",
+        "random assignment",
+        "control",
+        "blind",
+        "block",
+        "matched pair",
+        "confounder"
+      ],
+      "sequence": 25,
+      "p1": "Give one defensible analysis step for Observational Studies and Confounding.",
+      "s1": "State the question and data structure, apply identifying lurking variables and limits on causal conclusions, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Observational Studies and Confounding.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Randomized Experiments, Control and Replication",
+      "focus": "using random assignment to balance confounders and support causal inference",
+      "formulas": [
+        "treatment effect = outcome difference under comparable groups"
+      ],
+      "id": "u04-l05",
+      "number": 5,
+      "unit": 4,
+      "unit_title": "Study Design, Sampling & Experiments",
+      "week": 11,
+      "essential": "How do sampling, randomization, control, and design determine what conclusions data can support?",
+      "project": "Survey and Experiment Design Laboratory",
+      "application": "clinical trials, polling, agriculture, product testing, education research, and industrial experimentation",
+      "vocab": [
+        "sampling frame",
+        "random sample",
+        "stratum",
+        "cluster",
+        "random assignment",
+        "control",
+        "blind",
+        "block",
+        "matched pair",
+        "confounder"
+      ],
+      "sequence": 26,
+      "p1": "Give one defensible analysis step for Randomized Experiments, Control and Replication.",
+      "s1": "State the question and data structure, apply using random assignment to balance confounders and support causal inference, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Randomized Experiments, Control and Replication.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Blocking, Matching, Blinding and Placebos",
+      "focus": "reducing variation and bias through deliberate design",
+      "formulas": [
+        "compare within blocks or pairs"
+      ],
+      "id": "u04-l06",
+      "number": 6,
+      "unit": 4,
+      "unit_title": "Study Design, Sampling & Experiments",
+      "week": 12,
+      "essential": "How do sampling, randomization, control, and design determine what conclusions data can support?",
+      "project": "Survey and Experiment Design Laboratory",
+      "application": "clinical trials, polling, agriculture, product testing, education research, and industrial experimentation",
+      "vocab": [
+        "sampling frame",
+        "random sample",
+        "stratum",
+        "cluster",
+        "random assignment",
+        "control",
+        "blind",
+        "block",
+        "matched pair",
+        "confounder"
+      ],
+      "sequence": 27,
+      "p1": "Give one defensible analysis step for Blocking, Matching, Blinding and Placebos.",
+      "s1": "State the question and data structure, apply reducing variation and bias through deliberate design, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Blocking, Matching, Blinding and Placebos.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Simulation-Based Design and Randomization Logic",
+      "focus": "using repeated random assignment or sampling to study expected variation",
+      "formulas": [
+        "randomization distribution under the null"
+      ],
+      "id": "u04-l07",
+      "number": 7,
+      "unit": 4,
+      "unit_title": "Study Design, Sampling & Experiments",
+      "week": 12,
+      "essential": "How do sampling, randomization, control, and design determine what conclusions data can support?",
+      "project": "Survey and Experiment Design Laboratory",
+      "application": "clinical trials, polling, agriculture, product testing, education research, and industrial experimentation",
+      "vocab": [
+        "sampling frame",
+        "random sample",
+        "stratum",
+        "cluster",
+        "random assignment",
+        "control",
+        "blind",
+        "block",
+        "matched pair",
+        "confounder"
+      ],
+      "sequence": 28,
+      "p1": "Give one defensible analysis step for Simulation-Based Design and Randomization Logic.",
+      "s1": "State the question and data structure, apply using repeated random assignment or sampling to study expected variation, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Simulation-Based Design and Randomization Logic.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    }
+  ],
+  "investigation": "Survey and Experiment Design Laboratory"
+}

@@ -1,0 +1,240 @@
+{
+  "unit": 1,
+  "title": "Statistical Problem Solving, Data Ethics & Measurement",
+  "weeks": [
+    1,
+    2,
+    3
+  ],
+  "lessons": [
+    {
+      "title": "Statistics as an Evidence Discipline",
+      "focus": "moving from an investigative question to data, analysis, interpretation, and communication",
+      "formulas": [
+        "question → data → analysis → interpretation"
+      ],
+      "id": "u01-l01",
+      "number": 1,
+      "unit": 1,
+      "unit_title": "Statistical Problem Solving, Data Ethics & Measurement",
+      "week": 1,
+      "essential": "How do strong questions, trustworthy measurements, and ethical decisions turn data into defensible evidence?",
+      "project": "Data Provenance, Ethics & Investigative Question Audit",
+      "application": "public policy, health, education, business, environmental monitoring, journalism, and civic decision-making",
+      "vocab": [
+        "case",
+        "variable",
+        "population",
+        "sample",
+        "parameter",
+        "statistic",
+        "validity",
+        "reliability",
+        "bias",
+        "provenance"
+      ],
+      "sequence": 1,
+      "p1": "Give one defensible analysis step for Statistics as an Evidence Discipline.",
+      "s1": "State the question and data structure, apply moving from an investigative question to data, analysis, interpretation, and communication, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Statistics as an Evidence Discipline.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Cases, Variables, Populations and Samples",
+      "focus": "identifying observational units, variables, target populations, samples, parameters, and statistics",
+      "formulas": [
+        "parameter describes population",
+        "statistic describes sample"
+      ],
+      "id": "u01-l02",
+      "number": 2,
+      "unit": 1,
+      "unit_title": "Statistical Problem Solving, Data Ethics & Measurement",
+      "week": 1,
+      "essential": "How do strong questions, trustworthy measurements, and ethical decisions turn data into defensible evidence?",
+      "project": "Data Provenance, Ethics & Investigative Question Audit",
+      "application": "public policy, health, education, business, environmental monitoring, journalism, and civic decision-making",
+      "vocab": [
+        "case",
+        "variable",
+        "population",
+        "sample",
+        "parameter",
+        "statistic",
+        "validity",
+        "reliability",
+        "bias",
+        "provenance"
+      ],
+      "sequence": 2,
+      "p1": "Give one defensible analysis step for Cases, Variables, Populations and Samples.",
+      "s1": "State the question and data structure, apply identifying observational units, variables, target populations, samples, parameters, and statistics, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Cases, Variables, Populations and Samples.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Categorical, Quantitative and Time-Indexed Data",
+      "focus": "classifying variable types and choosing summaries that preserve meaning",
+      "formulas": [
+        "categorical ≠ quantitative",
+        "time order can matter"
+      ],
+      "id": "u01-l03",
+      "number": 3,
+      "unit": 1,
+      "unit_title": "Statistical Problem Solving, Data Ethics & Measurement",
+      "week": 1,
+      "essential": "How do strong questions, trustworthy measurements, and ethical decisions turn data into defensible evidence?",
+      "project": "Data Provenance, Ethics & Investigative Question Audit",
+      "application": "public policy, health, education, business, environmental monitoring, journalism, and civic decision-making",
+      "vocab": [
+        "case",
+        "variable",
+        "population",
+        "sample",
+        "parameter",
+        "statistic",
+        "validity",
+        "reliability",
+        "bias",
+        "provenance"
+      ],
+      "sequence": 3,
+      "p1": "Give one defensible analysis step for Categorical, Quantitative and Time-Indexed Data.",
+      "s1": "State the question and data structure, apply classifying variable types and choosing summaries that preserve meaning, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Categorical, Quantitative and Time-Indexed Data.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Measurement, Operational Definitions and Validity",
+      "focus": "defining constructs so measurements are repeatable, relevant, and honest",
+      "formulas": [
+        "observed value = signal + measurement error"
+      ],
+      "id": "u01-l04",
+      "number": 4,
+      "unit": 1,
+      "unit_title": "Statistical Problem Solving, Data Ethics & Measurement",
+      "week": 2,
+      "essential": "How do strong questions, trustworthy measurements, and ethical decisions turn data into defensible evidence?",
+      "project": "Data Provenance, Ethics & Investigative Question Audit",
+      "application": "public policy, health, education, business, environmental monitoring, journalism, and civic decision-making",
+      "vocab": [
+        "case",
+        "variable",
+        "population",
+        "sample",
+        "parameter",
+        "statistic",
+        "validity",
+        "reliability",
+        "bias",
+        "provenance"
+      ],
+      "sequence": 4,
+      "p1": "Give one defensible analysis step for Measurement, Operational Definitions and Validity.",
+      "s1": "State the question and data structure, apply defining constructs so measurements are repeatable, relevant, and honest, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Measurement, Operational Definitions and Validity.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Data Quality, Missingness and Bias",
+      "focus": "diagnosing selection, response, measurement, processing, and survivorship bias",
+      "formulas": [
+        "bias is systematic error",
+        "missingness mechanism matters"
+      ],
+      "id": "u01-l05",
+      "number": 5,
+      "unit": 1,
+      "unit_title": "Statistical Problem Solving, Data Ethics & Measurement",
+      "week": 2,
+      "essential": "How do strong questions, trustworthy measurements, and ethical decisions turn data into defensible evidence?",
+      "project": "Data Provenance, Ethics & Investigative Question Audit",
+      "application": "public policy, health, education, business, environmental monitoring, journalism, and civic decision-making",
+      "vocab": [
+        "case",
+        "variable",
+        "population",
+        "sample",
+        "parameter",
+        "statistic",
+        "validity",
+        "reliability",
+        "bias",
+        "provenance"
+      ],
+      "sequence": 5,
+      "p1": "Give one defensible analysis step for Data Quality, Missingness and Bias.",
+      "s1": "State the question and data structure, apply diagnosing selection, response, measurement, processing, and survivorship bias, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Data Quality, Missingness and Bias.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Ethics, Privacy, Consent and Responsible Use",
+      "focus": "balancing analytic value with consent, privacy, fairness, and harm prevention",
+      "formulas": [
+        "minimum necessary data",
+        "document intended use"
+      ],
+      "id": "u01-l06",
+      "number": 6,
+      "unit": 1,
+      "unit_title": "Statistical Problem Solving, Data Ethics & Measurement",
+      "week": 3,
+      "essential": "How do strong questions, trustworthy measurements, and ethical decisions turn data into defensible evidence?",
+      "project": "Data Provenance, Ethics & Investigative Question Audit",
+      "application": "public policy, health, education, business, environmental monitoring, journalism, and civic decision-making",
+      "vocab": [
+        "case",
+        "variable",
+        "population",
+        "sample",
+        "parameter",
+        "statistic",
+        "validity",
+        "reliability",
+        "bias",
+        "provenance"
+      ],
+      "sequence": 6,
+      "p1": "Give one defensible analysis step for Ethics, Privacy, Consent and Responsible Use.",
+      "s1": "State the question and data structure, apply balancing analytic value with consent, privacy, fairness, and harm prevention, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Ethics, Privacy, Consent and Responsible Use.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Reproducible Statistical Communication",
+      "focus": "building an auditable chain from source and code to table, graph, conclusion, and limitation",
+      "formulas": [
+        "claim ↔ evidence ↔ method ↔ limitation"
+      ],
+      "id": "u01-l07",
+      "number": 7,
+      "unit": 1,
+      "unit_title": "Statistical Problem Solving, Data Ethics & Measurement",
+      "week": 3,
+      "essential": "How do strong questions, trustworthy measurements, and ethical decisions turn data into defensible evidence?",
+      "project": "Data Provenance, Ethics & Investigative Question Audit",
+      "application": "public policy, health, education, business, environmental monitoring, journalism, and civic decision-making",
+      "vocab": [
+        "case",
+        "variable",
+        "population",
+        "sample",
+        "parameter",
+        "statistic",
+        "validity",
+        "reliability",
+        "bias",
+        "provenance"
+      ],
+      "sequence": 7,
+      "p1": "Give one defensible analysis step for Reproducible Statistical Communication.",
+      "s1": "State the question and data structure, apply building an auditable chain from source and code to table, graph, conclusion, and limitation, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Reproducible Statistical Communication.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    }
+  ],
+  "investigation": "Data Provenance, Ethics & Investigative Question Audit"
+}
