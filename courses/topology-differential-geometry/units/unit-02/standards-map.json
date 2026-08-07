@@ -1,0 +1,14 @@
+{
+  "unit": 2,
+  "title": "Metric Spaces, Countability & Separation",
+  "standards": [
+    "Metric topology",
+    "Convergence and Cauchy sequences",
+    "First and second countability",
+    "T0, T1 and Hausdorff spaces",
+    "Regular and normal spaces",
+    "Urysohn-type separation ideas",
+    "Metrization foundations"
+  ],
+  "essential_question": "Which local and separation properties distinguish well-behaved spaces?"
+}

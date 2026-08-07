@@ -1,0 +1,15 @@
+{
+  "unit": 3,
+  "title": "Compactness, Connectedness, Products & Quotients",
+  "standards": [
+    "Open-cover compactness",
+    "Sequential compactness in metric spaces",
+    "Local compactness",
+    "Connectedness and path connectedness",
+    "Components",
+    "Product topology",
+    "Quotient topology",
+    "Gluing constructions"
+  ],
+  "essential_question": "How do global topological properties survive continuous maps and constructions?"
+}

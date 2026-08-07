@@ -1,0 +1,15 @@
+{
+  "unit": 5,
+  "title": "Cell Complexes, Homology & Cohomology Foundations",
+  "standards": [
+    "Simplicial and CW complexes",
+    "Chain groups and boundary maps",
+    "Homology groups",
+    "Exact sequences",
+    "Euler characteristic",
+    "Cohomology foundations",
+    "Mayer\u2013Vietoris ideas",
+    "Poincar\u00e9 duality preview"
+  ],
+  "essential_question": "How can algebraic invariants measure holes in every dimension?"
+}

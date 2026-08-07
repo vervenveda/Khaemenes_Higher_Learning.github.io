@@ -1,0 +1,15 @@
+{
+  "unit": 1,
+  "title": "Topological Spaces, Bases & Continuous Maps",
+  "standards": [
+    "Topological spaces and axioms",
+    "Open and closed sets",
+    "Neighborhoods",
+    "Bases and subbases",
+    "Interior, closure and boundary",
+    "Continuous maps",
+    "Homeomorphisms",
+    "Initial examples and counterexamples"
+  ],
+  "essential_question": "How do open sets encode nearness and continuity without requiring distance?"
+}

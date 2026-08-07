@@ -1,0 +1,15 @@
+{
+  "unit": 6,
+  "title": "Smooth Manifolds, Charts & Tangent Spaces",
+  "standards": [
+    "Topological manifolds",
+    "Smooth atlases",
+    "Smooth compatibility",
+    "Smooth maps",
+    "Tangent vectors",
+    "Cotangent spaces",
+    "Vector fields",
+    "Lie brackets"
+  ],
+  "essential_question": "How do local Euclidean coordinates assemble into globally curved spaces?"
+}

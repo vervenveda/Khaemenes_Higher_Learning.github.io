@@ -1,0 +1,15 @@
+{
+  "unit": 4,
+  "title": "Homotopy, Fundamental Groups & Covering Spaces",
+  "standards": [
+    "Homotopy of maps",
+    "Path homotopy",
+    "Fundamental group",
+    "Van Kampen foundations",
+    "Covering maps",
+    "Lifting properties",
+    "Deck transformations",
+    "Classification examples"
+  ],
+  "essential_question": "How can loops and deformations detect holes that ordinary coordinates cannot?"
+}
