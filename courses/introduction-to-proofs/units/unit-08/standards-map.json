@@ -1,0 +1,15 @@
+{
+  "unit": 8,
+  "title": "Recursive Structures, Invariants & Algorithmic Proof",
+  "standards": [
+    "recursive definitions",
+    "structural recursion",
+    "loop invariants",
+    "preconditions",
+    "postconditions",
+    "partial correctness",
+    "termination",
+    "well-founded measures"
+  ],
+  "essential_question": "How can recursive definitions and invariants establish the correctness and termination of mathematical processes?"
+}

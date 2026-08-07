@@ -1,0 +1,16 @@
+{
+  "unit": 10,
+  "title": "Proofs in Real Analysis",
+  "standards": [
+    "absolute value",
+    "bounds",
+    "supremum",
+    "sequences",
+    "limits",
+    "epsilon language",
+    "continuity",
+    "Cauchy sequences",
+    "completeness"
+  ],
+  "essential_question": "How do definitions with inequalities and quantifiers create the rigorous foundations of calculus?"
+}

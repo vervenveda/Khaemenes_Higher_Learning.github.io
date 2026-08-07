@@ -1,0 +1,15 @@
+{
+  "unit": 6,
+  "title": "Cases, Existence, Uniqueness & Construction",
+  "standards": [
+    "proof by cases",
+    "exhaustiveness",
+    "constructive existence",
+    "nonconstructive existence",
+    "uniqueness",
+    "existence and uniqueness",
+    "classification",
+    "edge cases"
+  ],
+  "essential_question": "How do proofs establish that objects exist, are unique, or exhaust every possible case?"
+}

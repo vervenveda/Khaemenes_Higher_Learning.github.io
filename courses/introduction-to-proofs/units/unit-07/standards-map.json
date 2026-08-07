@@ -1,0 +1,15 @@
+{
+  "unit": 7,
+  "title": "Induction, Strong Induction & Well-Ordering",
+  "standards": [
+    "ordinary induction",
+    "strong induction",
+    "well-ordering",
+    "recursive structures",
+    "inequalities",
+    "divisibility",
+    "summation identities",
+    "minimal counterexample"
+  ],
+  "essential_question": "How do induction and well-ordering prove infinitely many linked statements from finite reasoning?"
+}

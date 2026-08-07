@@ -1,0 +1,15 @@
+{
+  "unit": 9,
+  "title": "Proofs in Number Theory",
+  "standards": [
+    "division algorithm",
+    "gcd",
+    "B\u00e9zout identity",
+    "prime factorization",
+    "congruence",
+    "modular inverse",
+    "Diophantine equations",
+    "infinitude"
+  ],
+  "essential_question": "How do divisibility, primes, and congruence provide a rich laboratory for rigorous proof?"
+}
