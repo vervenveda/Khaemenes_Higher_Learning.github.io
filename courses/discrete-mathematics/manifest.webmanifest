@@ -1,0 +1,17 @@
+{
+  "id": "./",
+  "name": "Khaemenes Higher Learning Discrete Mathematics",
+  "short_name": "Discrete Math",
+  "description": "College discrete mathematics for computer science: logic, proof, combinatorics, graphs, algorithms, automata, and computability.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#090b10",
+  "theme_color": "#090b10",
+  "categories": [
+    "education",
+    "mathematics",
+    "computer science",
+    "algorithms"
+  ]
+}
