@@ -1,0 +1,16 @@
+{
+  "unit": 2,
+  "title": "Groups, Subgroups & Cyclic Structure",
+  "standards": [
+    "Group axioms",
+    "Abelian groups",
+    "Subgroup tests",
+    "Generated subgroups",
+    "Cyclic groups",
+    "Element order",
+    "Direct products",
+    "Finitely generated abelian examples",
+    "Matrix and symmetry groups"
+  ],
+  "essential_question": "How do group axioms encode reversible symmetry and repeated action?"
+}

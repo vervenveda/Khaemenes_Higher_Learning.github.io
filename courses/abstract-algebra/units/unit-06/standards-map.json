@@ -1,0 +1,17 @@
+{
+  "unit": 6,
+  "title": "Finite Groups, Sylow Theory & Abelian Classification",
+  "standards": [
+    "p-groups",
+    "Cauchy theorem",
+    "Sylow existence",
+    "Sylow conjugacy",
+    "Sylow counting",
+    "Finite abelian groups",
+    "Direct sums",
+    "Simple groups foundations",
+    "Solvable groups foundations",
+    "Semidirect products"
+  ],
+  "essential_question": "How do prime-power subgroups and decomposition theorems constrain finite group structure?"
+}

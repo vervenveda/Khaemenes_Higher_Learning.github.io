@@ -1,0 +1,16 @@
+{
+  "unit": 5,
+  "title": "Homomorphisms, Normal Subgroups & Quotient Groups",
+  "standards": [
+    "Group homomorphisms",
+    "Kernels and images",
+    "Normal subgroups",
+    "Quotient groups",
+    "Well-defined operations",
+    "First isomorphism theorem",
+    "Second and third isomorphism theorems",
+    "Correspondence theorem",
+    "Automorphisms"
+  ],
+  "essential_question": "How do kernels, images, and quotients expose the internal architecture of groups?"
+}

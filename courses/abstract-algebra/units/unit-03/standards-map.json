@@ -1,0 +1,15 @@
+{
+  "unit": 3,
+  "title": "Cosets, Lagrange Theory & Quotient Counting",
+  "standards": [
+    "Left and right cosets",
+    "Coset partitions",
+    "Lagrange theorem",
+    "Index",
+    "Element-order consequences",
+    "Euler and Fermat applications",
+    "Normality preview",
+    "Quotient-set intuition"
+  ],
+  "essential_question": "How do cosets partition groups and convert local subgroup information into global counting theorems?"
+}

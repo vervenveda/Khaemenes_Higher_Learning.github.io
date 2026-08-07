@@ -1,0 +1,17 @@
+{
+  "unit": 4,
+  "title": "Permutation Groups, Group Actions & Symmetry Counting",
+  "standards": [
+    "Permutation notation",
+    "Cycle decompositions",
+    "Parity",
+    "Alternating groups",
+    "Group actions",
+    "Orbits and stabilizers",
+    "Cayley theorem",
+    "Class equation",
+    "Burnside lemma",
+    "Conjugacy"
+  ],
+  "essential_question": "How do group actions translate abstract symmetry into permutations, orbits, stabilizers, and counting formulas?"
+}

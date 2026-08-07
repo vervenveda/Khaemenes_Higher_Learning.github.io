@@ -1,0 +1,15 @@
+{
+  "unit": 1,
+  "title": "Algebraic Structures, Operations & Proof Foundations",
+  "standards": [
+    "Binary operations and closure",
+    "Associativity, identity, and inverses",
+    "Algebraic structures and examples",
+    "Cayley tables",
+    "Isomorphism as structural sameness",
+    "Substructures",
+    "Counterexamples and proof obligations",
+    "Universal-property foundations"
+  ],
+  "essential_question": "How do axioms, examples, and structure-preserving maps turn familiar arithmetic into abstract algebra?"
+}
