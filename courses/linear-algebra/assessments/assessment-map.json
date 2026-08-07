@@ -1,0 +1,41 @@
+{
+  "diagnostic": {
+    "count": 40,
+    "source": "diagnostic"
+  },
+  "unit_mastery": {
+    "count_each": 12,
+    "units": 13
+  },
+  "midterm": {
+    "count": 60,
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "final": {
+    "count": 100,
+    "units": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ]
+  },
+  "question_bank_count": 368
+}

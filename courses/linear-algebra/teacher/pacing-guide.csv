@@ -1,0 +1,37 @@
+Week,Unit,Unit Title,Lesson IDs,Focus
+1,1,"Vectors, Linear Systems & Geometric Structure",u01-l01 | u01-l02 | u01-l03,"Vectors and Coordinates in Rⁿ; Dot Products, Norms, Distance & Angle; Linear Combinations and Span"
+2,1,"Vectors, Linear Systems & Geometric Structure",u01-l04 | u01-l05,Systems as Intersections and Constraints; The Matrix Equation Ax=b
+3,1,"Vectors, Linear Systems & Geometric Structure",u01-l06 | u01-l07,"Consistency and Parametric Solution Sets; Systems Modelling, Residuals & Verification"
+4,2,"Matrix Algebra, Elimination & Invertibility",u02-l01 | u02-l02 | u02-l03,"Elementary Row Operations and Echelon Form; Reduced Row Echelon Form and Pivot Structure; Matrix Addition, Multiplication & Composition"
+5,2,"Matrix Algebra, Elimination & Invertibility",u02-l04 | u02-l05,Inverse Matrices and Solving Ax=b; The Invertible Matrix Theorem
+6,2,"Matrix Algebra, Elimination & Invertibility",u02-l06 | u02-l07,"Elementary Matrices and Row-Operation Algebra; LU Factorization, Repeated Solves & Sensitivity"
+7,3,Matrix Factorizations & Computational Structure,u03-l01 | u03-l02 | u03-l03 | u03-l04,Block Matrices and Structured Products; Permutation Matrices and Pivoting; Computational Cost and Matrix Algorithms; LU with Partial Pivoting
+8,3,Matrix Factorizations & Computational Structure,u03-l05 | u03-l06 | u03-l07,"QR Factorization Preview; Choosing a Factorization; Norms, Backward Error & Verification"
+9,4,"Vector Spaces, Subspaces & Generated Structure",u04-l01 | u04-l02 | u04-l03,Vector-Space Axioms and Examples; The Subspace Test; Column Space and Solvability
+10,4,"Vector Spaces, Subspaces & Generated Structure",u04-l04 | u04-l05,"Nullspace and Homogeneous Solutions; Row Space, Left Nullspace & Orthogonality"
+11,4,"Vector Spaces, Subspaces & Generated Structure",u04-l06 | u04-l07,"Polynomial, Function & Matrix Spaces; Sums, Intersections & the Four Subspaces"
+12,5,"Linear Independence, Basis, Dimension & Rank",u05-l01 | u05-l02 | u05-l03,Linear Independence and Dependence Relations; Spanning Sets and Basis Extraction; Coordinate Vectors Relative to a Basis
+13,5,"Linear Independence, Basis, Dimension & Rank",u05-l04 | u05-l05,Dimension and Extension/Reduction Theorems; The Rank–Nullity Theorem
+14,5,"Linear Independence, Basis, Dimension & Rank",u05-l06 | u05-l07,Change-of-Basis Matrices; Basis Construction Algorithms & Proof
+15,6,Linear Transformations & Matrix Representations,u06-l01 | u06-l02 | u06-l03,"Definition and Tests for Linearity; Kernel, Image & Rank–Nullity for Transformations; The Standard Matrix of a Transformation"
+16,6,Linear Transformations & Matrix Representations,u06-l04 | u06-l05,Composition and Inverse Transformations; Geometric Transformations in the Plane and Space
+17,6,Linear Transformations & Matrix Representations,u06-l06 | u06-l07,"Matrix Representations Relative to Bases; Isomorphisms, Similarity & Structural Equivalence"
+18,7,"Determinants, Orientation & Volume",u07-l01 | u07-l02 | u07-l03 | u07-l04,"Determinant Properties and Transformations; Cofactor Expansion and Recursive Structure; Determinants by Elimination; Signed Area, Volume & Orientation"
+19,7,"Determinants, Orientation & Volume",u07-l05 | u07-l06 | u07-l07,"Cramer’s Rule and Theoretical Solves; Determinant, Invertibility & Eigenvalue Zero; Multilinearity, Alternation & Proof"
+20,8,"Eigenvalues, Eigenvectors & Diagonalization",u08-l01 | u08-l02 | u08-l03,Invariant Directions and Eigenpairs; Characteristic Polynomial and Spectrum; Eigenspaces and Multiplicity
+21,8,"Eigenvalues, Eigenvectors & Diagonalization",u08-l04 | u08-l05,"Diagonalization Criteria and Construction; Matrix Powers, Difference Equations & Long-Term Behavior"
+22,8,"Eigenvalues, Eigenvectors & Diagonalization",u08-l06 | u08-l07,"Complex Eigenvalues, Rotations & Real Dynamics; Defective Matrices and Jordan-Form Preview"
+23,9,"Inner Products, Orthogonality & Least Squares",u09-l01 | u09-l02 | u09-l03,Inner Products and Orthogonality; Orthogonal Complements and Decomposition; Projection onto a Vector or Subspace
+24,9,"Inner Products, Orthogonality & Least Squares",u09-l04 | u09-l05,Least Squares and the Normal Equations; Gram–Schmidt Orthonormalization
+25,9,"Inner Products, Orthogonality & Least Squares",u09-l06 | u09-l07,"Orthogonal Matrices and QR Factorization; Linear Regression, Residual Diagnostics & Model Limits"
+26,10,"Symmetric Matrices, Quadratic Forms & the Spectral Theorem",u10-l01 | u10-l02 | u10-l03,Symmetric Matrices and Orthogonal Eigenvectors; The Spectral Theorem; Positive Definite Matrices and Tests
+27,10,"Symmetric Matrices, Quadratic Forms & the Spectral Theorem",u10-l04 | u10-l05,Quadratic Forms and Classification; Cholesky Factorization
+28,10,"Symmetric Matrices, Quadratic Forms & the Spectral Theorem",u10-l06 | u10-l07,"Rayleigh Quotients and Constrained Optimization; Principal Axes, Covariance & Geometric Interpretation"
+29,11,Singular Value Decomposition & Data Geometry,u11-l01 | u11-l02 | u11-l03,Constructing the Singular Value Decomposition; Geometry of the SVD; The Moore–Penrose Pseudoinverse
+30,11,Singular Value Decomposition & Data Geometry,u11-l04 | u11-l05,Low-Rank Approximation and Eckart–Young; Principal Component Analysis
+31,11,Singular Value Decomposition & Data Geometry,u11-l06 | u11-l07,"Image Compression and Reconstruction; Conditioning, Noise & Truncated SVD"
+32,12,"Applications: Markov Models, Networks, Graphics & Coding",u12-l01 | u12-l02 | u12-l03,"Markov Chains and Stationary Distributions; Graphs, Incidence Matrices & Laplacians; Network Flows and Conservation"
+33,12,"Applications: Markov Models, Networks, Graphics & Coding",u12-l04 | u12-l05,Computer Graphics and Homogeneous Coordinates; Error-Correcting Codes over Finite Fields
+34,12,"Applications: Markov Models, Networks, Graphics & Coding",u12-l06 | u12-l07,"PageRank, Ranking & Recommendation Models; Coupled Differential Systems and Matrix Exponentials"
+35,13,"Numerical Linear Algebra, Proof & Capstone",u13-l01 | u13-l02 | u13-l03 | u13-l04,Floating-Point Arithmetic and Error Propagation; Iterative Methods for Linear Systems; Sparse Matrices and Large-Scale Structure; Proof Strategies in Linear Algebra
+36,13,"Numerical Linear Algebra, Proof & Capstone",u13-l05 | u13-l06 | u13-l07 | u13-l08,"Capstone Question, Data, Assumptions & Method; Capstone Computation, Verification & Reproducibility; Written Report and Oral Mathematical Defense; Second-Course Bridge: Abstract, Numerical & Applied Directions"
