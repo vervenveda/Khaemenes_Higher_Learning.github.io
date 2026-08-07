@@ -1,0 +1,16 @@
+{
+  "id": "./",
+  "name": "Khaemenes Higher Learning Introduction to Proofs",
+  "short_name": "Introduction to Proofs",
+  "description": "A rigorous transition from calculation to theorem-level reasoning: definitions, logic, quantifiers, sets, direct and indirect proof, induction, invariants, number theory, analysis proofs, mathematical writing, peer review, and an independent theorem defense.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#090b10",
+  "theme_color": "#090b10",
+  "categories": [
+    "education",
+    "mathematics",
+    "research"
+  ]
+}

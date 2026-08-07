@@ -1,0 +1,2062 @@
+{
+  "schema_version": "1.0",
+  "course": {
+    "id": "higher-learning-introduction-to-proofs",
+    "profile_course_id": "introduction-to-proofs",
+    "code": "KH-HL-MATH-PROOF1",
+    "title": "Khaemenes Higher Learning Introduction to Proofs",
+    "short_title": "Introduction to Proofs",
+    "duration_weeks": 36,
+    "sessions": 180,
+    "lesson_count": 92,
+    "mastery_target": 80,
+    "pathways": [
+      "Foundation",
+      "Core",
+      "Research / Graduate"
+    ],
+    "storage_key": "khaemenes-introduction-to-proofs-course-v1",
+    "assessment_key": "khaemenes-introduction-to-proofs-assessment-v1",
+    "pin_key": "khaemenes-higher-learning-pinned-courses-v1",
+    "audience": "Advanced undergraduates, independent learners, and prospective graduate students preparing for proof-based mathematics and research.",
+    "prerequisite": "Algebra fluency and willingness to read and write mathematical arguments. Calculus or Discrete Mathematics is recommended but not required.",
+    "calculator": "https://vervenveda.com/Khaemenes_High.github.io/courses/mathematics/tools/calculator",
+    "cad": "https://vervenveda.com/proresource_hub.github.io/Protools/Ohmic_CAD_Studio.html",
+    "arcade": "https://vervenveda.com/arcade.github.io/",
+    "version": "1.0.0",
+    "credit_guidance": "Designed as an advanced transition-to-proof course. It prepares learners for upper-level and graduate-preparatory mathematics but does not claim to be a graduate core course."
+  },
+  "units": [
+    {
+      "number": 1,
+      "title": "Mathematical Language, Definitions & Claims",
+      "essential": "How does precise mathematical language transform intuition into statements that can be proved, disproved, or refined?",
+      "project": "Definition Laboratory & Claim Classification Portfolio",
+      "standards": [
+        "mathematical statements",
+        "definitions",
+        "examples and nonexamples",
+        "necessary and sufficient conditions",
+        "theorem structure",
+        "counterexamples",
+        "notation and scope"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        1,
+        2,
+        3
+      ],
+      "lessons": [
+        {
+          "id": "u01-l01",
+          "number": 1,
+          "title": "Statements, Open Sentences and Mathematical Claims",
+          "week": 1,
+          "unit": 1,
+          "unit_title": "Mathematical Language, Definitions & Claims",
+          "essential": "How does precise mathematical language transform intuition into statements that can be proved, disproved, or refined?",
+          "project": "Definition Laboratory & Claim Classification Portfolio",
+          "focus": "distinguishing truth-valued statements from expressions, commands, questions, and parameterized claims"
+        },
+        {
+          "id": "u01-l02",
+          "number": 2,
+          "title": "Definitions as Mathematical Contracts",
+          "week": 1,
+          "unit": 1,
+          "unit_title": "Mathematical Language, Definitions & Claims",
+          "essential": "How does precise mathematical language transform intuition into statements that can be proved, disproved, or refined?",
+          "project": "Definition Laboratory & Claim Classification Portfolio",
+          "focus": "reading definitions bidirectionally and testing whether examples satisfy every condition"
+        },
+        {
+          "id": "u01-l03",
+          "number": 3,
+          "title": "Examples, Nonexamples and Boundary Cases",
+          "week": 1,
+          "unit": 1,
+          "unit_title": "Mathematical Language, Definitions & Claims",
+          "essential": "How does precise mathematical language transform intuition into statements that can be proved, disproved, or refined?",
+          "project": "Definition Laboratory & Claim Classification Portfolio",
+          "focus": "using carefully chosen cases to reveal the exact reach of a definition"
+        },
+        {
+          "id": "u01-l04",
+          "number": 4,
+          "title": "Necessary, Sufficient and Equivalent Conditions",
+          "week": 2,
+          "unit": 1,
+          "unit_title": "Mathematical Language, Definitions & Claims",
+          "essential": "How does precise mathematical language transform intuition into statements that can be proved, disproved, or refined?",
+          "project": "Definition Laboratory & Claim Classification Portfolio",
+          "focus": "separating one-way implications from biconditional characterizations"
+        },
+        {
+          "id": "u01-l05",
+          "number": 5,
+          "title": "Theorems, Lemmas, Corollaries and Conjectures",
+          "week": 2,
+          "unit": 1,
+          "unit_title": "Mathematical Language, Definitions & Claims",
+          "essential": "How does precise mathematical language transform intuition into statements that can be proved, disproved, or refined?",
+          "project": "Definition Laboratory & Claim Classification Portfolio",
+          "focus": "identifying the logical roles of mathematical statements and supporting results"
+        },
+        {
+          "id": "u01-l06",
+          "number": 6,
+          "title": "Counterexamples and the Limits of Evidence",
+          "week": 3,
+          "unit": 1,
+          "unit_title": "Mathematical Language, Definitions & Claims",
+          "essential": "How does precise mathematical language transform intuition into statements that can be proved, disproved, or refined?",
+          "project": "Definition Laboratory & Claim Classification Portfolio",
+          "focus": "refuting universal claims while distinguishing evidence from proof"
+        },
+        {
+          "id": "u01-l07",
+          "number": 7,
+          "title": "Well-Defined Objects and Ambiguous Notation",
+          "week": 3,
+          "unit": 1,
+          "unit_title": "Mathematical Language, Definitions & Claims",
+          "essential": "How does precise mathematical language transform intuition into statements that can be proved, disproved, or refined?",
+          "project": "Definition Laboratory & Claim Classification Portfolio",
+          "focus": "checking that a definition assigns one unambiguous object independent of representation"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Logic, Quantifiers & Negation",
+      "essential": "How do propositional and predicate logic expose the exact structure of a mathematical argument?",
+      "project": "Quantifier Translation & Logical Equivalence Audit",
+      "standards": [
+        "connectives",
+        "truth tables",
+        "logical equivalence",
+        "implication",
+        "predicates",
+        "universal and existential quantifiers",
+        "negation",
+        "rules of inference"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        4,
+        5,
+        6
+      ],
+      "lessons": [
+        {
+          "id": "u02-l01",
+          "number": 1,
+          "title": "Propositions and Logical Connectives",
+          "week": 4,
+          "unit": 2,
+          "unit_title": "Logic, Quantifiers & Negation",
+          "essential": "How do propositional and predicate logic expose the exact structure of a mathematical argument?",
+          "project": "Quantifier Translation & Logical Equivalence Audit",
+          "focus": "constructing compound statements with negation, conjunction, disjunction, implication, and biconditional"
+        },
+        {
+          "id": "u02-l02",
+          "number": 2,
+          "title": "Truth Tables and Logical Equivalence",
+          "week": 4,
+          "unit": 2,
+          "unit_title": "Logic, Quantifiers & Negation",
+          "essential": "How do propositional and predicate logic expose the exact structure of a mathematical argument?",
+          "project": "Quantifier Translation & Logical Equivalence Audit",
+          "focus": "testing compound propositions across all truth assignments"
+        },
+        {
+          "id": "u02-l03",
+          "number": 3,
+          "title": "Implication, Converse, Inverse and Contrapositive",
+          "week": 4,
+          "unit": 2,
+          "unit_title": "Logic, Quantifiers & Negation",
+          "essential": "How do propositional and predicate logic expose the exact structure of a mathematical argument?",
+          "project": "Quantifier Translation & Logical Equivalence Audit",
+          "focus": "separating related conditionals and identifying the logically equivalent contrapositive"
+        },
+        {
+          "id": "u02-l04",
+          "number": 4,
+          "title": "Predicates, Domains and Quantifier Scope",
+          "week": 5,
+          "unit": 2,
+          "unit_title": "Logic, Quantifiers & Negation",
+          "essential": "How do propositional and predicate logic expose the exact structure of a mathematical argument?",
+          "project": "Quantifier Translation & Logical Equivalence Audit",
+          "focus": "translating open sentences into precisely quantified statements"
+        },
+        {
+          "id": "u02-l05",
+          "number": 5,
+          "title": "Negating Quantified Statements",
+          "week": 5,
+          "unit": 2,
+          "unit_title": "Logic, Quantifiers & Negation",
+          "essential": "How do propositional and predicate logic expose the exact structure of a mathematical argument?",
+          "project": "Quantifier Translation & Logical Equivalence Audit",
+          "focus": "moving negation through quantifiers and connectives without changing meaning"
+        },
+        {
+          "id": "u02-l06",
+          "number": 6,
+          "title": "Nested Quantifiers and Order Dependence",
+          "week": 6,
+          "unit": 2,
+          "unit_title": "Logic, Quantifiers & Negation",
+          "essential": "How do propositional and predicate logic expose the exact structure of a mathematical argument?",
+          "project": "Quantifier Translation & Logical Equivalence Audit",
+          "focus": "comparing statements whose meaning changes when quantifiers are reordered"
+        },
+        {
+          "id": "u02-l07",
+          "number": 7,
+          "title": "Rules of Inference and Invalid Argument Forms",
+          "week": 6,
+          "unit": 2,
+          "unit_title": "Logic, Quantifiers & Negation",
+          "essential": "How do propositional and predicate logic expose the exact structure of a mathematical argument?",
+          "project": "Quantifier Translation & Logical Equivalence Audit",
+          "focus": "using valid inference rules and diagnosing affirming the consequent, denying the antecedent, and quantifier errors"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Sets, Functions & Relations",
+      "essential": "How do sets, functions, and relations provide the language in which modern proofs are written?",
+      "project": "Structure Map of Sets, Maps & Relations",
+      "standards": [
+        "set operations",
+        "power sets",
+        "Cartesian products",
+        "functions",
+        "injectivity",
+        "surjectivity",
+        "bijections",
+        "relations",
+        "equivalence relations",
+        "orders"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        7,
+        8,
+        9
+      ],
+      "lessons": [
+        {
+          "id": "u03-l01",
+          "number": 1,
+          "title": "Set Equality, Inclusion and Extensional Reasoning",
+          "week": 7,
+          "unit": 3,
+          "unit_title": "Sets, Functions & Relations",
+          "essential": "How do sets, functions, and relations provide the language in which modern proofs are written?",
+          "project": "Structure Map of Sets, Maps & Relations",
+          "focus": "proving sets equal by double inclusion and translating membership statements"
+        },
+        {
+          "id": "u03-l02",
+          "number": 2,
+          "title": "Set Operations and De Morgan Laws",
+          "week": 7,
+          "unit": 3,
+          "unit_title": "Sets, Functions & Relations",
+          "essential": "How do sets, functions, and relations provide the language in which modern proofs are written?",
+          "project": "Structure Map of Sets, Maps & Relations",
+          "focus": "proving identities involving unions, intersections, complements, and differences"
+        },
+        {
+          "id": "u03-l03",
+          "number": 3,
+          "title": "Power Sets, Products and Indexed Families",
+          "week": 7,
+          "unit": 3,
+          "unit_title": "Sets, Functions & Relations",
+          "essential": "How do sets, functions, and relations provide the language in which modern proofs are written?",
+          "project": "Structure Map of Sets, Maps & Relations",
+          "focus": "working with collections of subsets, ordered pairs, and arbitrary unions and intersections"
+        },
+        {
+          "id": "u03-l04",
+          "number": 4,
+          "title": "Functions, Images and Preimages",
+          "week": 8,
+          "unit": 3,
+          "unit_title": "Sets, Functions & Relations",
+          "essential": "How do sets, functions, and relations provide the language in which modern proofs are written?",
+          "project": "Structure Map of Sets, Maps & Relations",
+          "focus": "proving identities for images and preimages while respecting domains and codomains"
+        },
+        {
+          "id": "u03-l05",
+          "number": 5,
+          "title": "Injective, Surjective and Bijective Maps",
+          "week": 8,
+          "unit": 3,
+          "unit_title": "Sets, Functions & Relations",
+          "essential": "How do sets, functions, and relations provide the language in which modern proofs are written?",
+          "project": "Structure Map of Sets, Maps & Relations",
+          "focus": "proving mapping properties and understanding inverse functions"
+        },
+        {
+          "id": "u03-l06",
+          "number": 6,
+          "title": "Relations, Equivalence Classes and Partitions",
+          "week": 9,
+          "unit": 3,
+          "unit_title": "Sets, Functions & Relations",
+          "essential": "How do sets, functions, and relations provide the language in which modern proofs are written?",
+          "project": "Structure Map of Sets, Maps & Relations",
+          "focus": "proving relation properties and connecting equivalence relations to partitions"
+        },
+        {
+          "id": "u03-l07",
+          "number": 7,
+          "title": "Partial Orders, Maximality and Comparability",
+          "week": 9,
+          "unit": 3,
+          "unit_title": "Sets, Functions & Relations",
+          "essential": "How do sets, functions, and relations provide the language in which modern proofs are written?",
+          "project": "Structure Map of Sets, Maps & Relations",
+          "focus": "reasoning within ordered structures and distinguishing maximal from greatest elements"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Direct Proof & Algebraic Structure",
+      "essential": "How can definitions and algebraic identities be organized into transparent direct proofs?",
+      "project": "Direct-Proof Portfolio with Line-by-Line Justification",
+      "standards": [
+        "direct proof",
+        "parity",
+        "divisibility",
+        "inequalities",
+        "set inclusion",
+        "function properties",
+        "algebraic identities",
+        "proof planning"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        10,
+        11,
+        12
+      ],
+      "lessons": [
+        {
+          "id": "u04-l01",
+          "number": 1,
+          "title": "Anatomy of a Direct Proof",
+          "week": 10,
+          "unit": 4,
+          "unit_title": "Direct Proof & Algebraic Structure",
+          "essential": "How can definitions and algebraic identities be organized into transparent direct proofs?",
+          "project": "Direct-Proof Portfolio with Line-by-Line Justification",
+          "focus": "moving from hypotheses through definitions and known results to a stated conclusion"
+        },
+        {
+          "id": "u04-l02",
+          "number": 2,
+          "title": "Parity and Divisibility Proofs",
+          "week": 10,
+          "unit": 4,
+          "unit_title": "Direct Proof & Algebraic Structure",
+          "essential": "How can definitions and algebraic identities be organized into transparent direct proofs?",
+          "project": "Direct-Proof Portfolio with Line-by-Line Justification",
+          "focus": "unpacking evenness, oddness, and divisibility into algebraic witnesses"
+        },
+        {
+          "id": "u04-l03",
+          "number": 3,
+          "title": "Proving Set Inclusion and Equality",
+          "week": 10,
+          "unit": 4,
+          "unit_title": "Direct Proof & Algebraic Structure",
+          "essential": "How can definitions and algebraic identities be organized into transparent direct proofs?",
+          "project": "Direct-Proof Portfolio with Line-by-Line Justification",
+          "focus": "using arbitrary elements and double inclusion instead of diagrammatic intuition"
+        },
+        {
+          "id": "u04-l04",
+          "number": 4,
+          "title": "Inequalities and Order Arguments",
+          "week": 11,
+          "unit": 4,
+          "unit_title": "Direct Proof & Algebraic Structure",
+          "essential": "How can definitions and algebraic identities be organized into transparent direct proofs?",
+          "project": "Direct-Proof Portfolio with Line-by-Line Justification",
+          "focus": "building inequality chains while preserving hypotheses and equality conditions"
+        },
+        {
+          "id": "u04-l05",
+          "number": 5,
+          "title": "Function Properties by Direct Argument",
+          "week": 11,
+          "unit": 4,
+          "unit_title": "Direct Proof & Algebraic Structure",
+          "essential": "How can definitions and algebraic identities be organized into transparent direct proofs?",
+          "project": "Direct-Proof Portfolio with Line-by-Line Justification",
+          "focus": "proving injectivity, surjectivity, and identities involving composition"
+        },
+        {
+          "id": "u04-l06",
+          "number": 6,
+          "title": "Algebraic Identities and Structural Closure",
+          "week": 12,
+          "unit": 4,
+          "unit_title": "Direct Proof & Algebraic Structure",
+          "essential": "How can definitions and algebraic identities be organized into transparent direct proofs?",
+          "project": "Direct-Proof Portfolio with Line-by-Line Justification",
+          "focus": "proving closure and identities in familiar algebraic systems"
+        },
+        {
+          "id": "u04-l07",
+          "number": 7,
+          "title": "Proof Planning, Backward Analysis and Final Presentation",
+          "week": 12,
+          "unit": 4,
+          "unit_title": "Direct Proof & Algebraic Structure",
+          "essential": "How can definitions and algebraic identities be organized into transparent direct proofs?",
+          "project": "Direct-Proof Portfolio with Line-by-Line Justification",
+          "focus": "working backward privately while presenting a clean forward argument"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Contraposition, Contradiction & Minimal Counterexamples",
+      "essential": "When do indirect methods expose a proof more clearly than direct calculation?",
+      "project": "Indirect-Proof Strategy Comparison",
+      "standards": [
+        "contraposition",
+        "contradiction",
+        "irrationality",
+        "infinitude",
+        "minimal counterexample",
+        "descent",
+        "negation",
+        "proof strategy selection"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        13,
+        14,
+        15
+      ],
+      "lessons": [
+        {
+          "id": "u05-l01",
+          "number": 1,
+          "title": "Proof by Contraposition",
+          "week": 13,
+          "unit": 5,
+          "unit_title": "Contraposition, Contradiction & Minimal Counterexamples",
+          "essential": "When do indirect methods expose a proof more clearly than direct calculation?",
+          "project": "Indirect-Proof Strategy Comparison",
+          "focus": "proving an implication through the logically equivalent contrapositive"
+        },
+        {
+          "id": "u05-l02",
+          "number": 2,
+          "title": "Proof by Contradiction",
+          "week": 13,
+          "unit": 5,
+          "unit_title": "Contraposition, Contradiction & Minimal Counterexamples",
+          "essential": "When do indirect methods expose a proof more clearly than direct calculation?",
+          "project": "Indirect-Proof Strategy Comparison",
+          "focus": "assuming the negation of a claim and deriving an impossibility"
+        },
+        {
+          "id": "u05-l03",
+          "number": 3,
+          "title": "Irrationality and Divisibility Contradictions",
+          "week": 13,
+          "unit": 5,
+          "unit_title": "Contraposition, Contradiction & Minimal Counterexamples",
+          "essential": "When do indirect methods expose a proof more clearly than direct calculation?",
+          "project": "Indirect-Proof Strategy Comparison",
+          "focus": "using reduced fractions, parity, and prime divisibility in classical arguments"
+        },
+        {
+          "id": "u05-l04",
+          "number": 4,
+          "title": "Infinitude and Existence by Contradiction",
+          "week": 14,
+          "unit": 5,
+          "unit_title": "Contraposition, Contradiction & Minimal Counterexamples",
+          "essential": "When do indirect methods expose a proof more clearly than direct calculation?",
+          "project": "Indirect-Proof Strategy Comparison",
+          "focus": "showing that finite or nonexistent alternatives force contradictions"
+        },
+        {
+          "id": "u05-l05",
+          "number": 5,
+          "title": "Minimal Counterexamples and Infinite Descent",
+          "week": 14,
+          "unit": 5,
+          "unit_title": "Contraposition, Contradiction & Minimal Counterexamples",
+          "essential": "When do indirect methods expose a proof more clearly than direct calculation?",
+          "project": "Indirect-Proof Strategy Comparison",
+          "focus": "choosing a least failure and constructing a smaller one"
+        },
+        {
+          "id": "u05-l06",
+          "number": 6,
+          "title": "Contradiction versus Contraposition",
+          "week": 15,
+          "unit": 5,
+          "unit_title": "Contraposition, Contradiction & Minimal Counterexamples",
+          "essential": "When do indirect methods expose a proof more clearly than direct calculation?",
+          "project": "Indirect-Proof Strategy Comparison",
+          "focus": "selecting the indirect form that best exposes the mathematical mechanism"
+        },
+        {
+          "id": "u05-l07",
+          "number": 7,
+          "title": "Debugging Circular and Hidden-Assumption Proofs",
+          "week": 15,
+          "unit": 5,
+          "unit_title": "Contraposition, Contradiction & Minimal Counterexamples",
+          "essential": "When do indirect methods expose a proof more clearly than direct calculation?",
+          "project": "Indirect-Proof Strategy Comparison",
+          "focus": "locating circularity, unjustified existence, and illicit cancellation"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Cases, Existence, Uniqueness & Construction",
+      "essential": "How do proofs establish that objects exist, are unique, or exhaust every possible case?",
+      "project": "Existence–Uniqueness Construction Dossier",
+      "standards": [
+        "proof by cases",
+        "exhaustiveness",
+        "constructive existence",
+        "nonconstructive existence",
+        "uniqueness",
+        "existence and uniqueness",
+        "classification",
+        "edge cases"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        16,
+        17,
+        18
+      ],
+      "lessons": [
+        {
+          "id": "u06-l01",
+          "number": 1,
+          "title": "Proof by Exhaustive Cases",
+          "week": 16,
+          "unit": 6,
+          "unit_title": "Cases, Existence, Uniqueness & Construction",
+          "essential": "How do proofs establish that objects exist, are unique, or exhaust every possible case?",
+          "project": "Existence–Uniqueness Construction Dossier",
+          "focus": "partitioning a domain into complete and nonoverlapping cases"
+        },
+        {
+          "id": "u06-l02",
+          "number": 2,
+          "title": "Parity, Sign and Congruence Case Splits",
+          "week": 16,
+          "unit": 6,
+          "unit_title": "Cases, Existence, Uniqueness & Construction",
+          "essential": "How do proofs establish that objects exist, are unique, or exhaust every possible case?",
+          "project": "Existence–Uniqueness Construction Dossier",
+          "focus": "choosing natural classifications that simplify an argument"
+        },
+        {
+          "id": "u06-l03",
+          "number": 3,
+          "title": "Constructive Existence Proofs",
+          "week": 16,
+          "unit": 6,
+          "unit_title": "Cases, Existence, Uniqueness & Construction",
+          "essential": "How do proofs establish that objects exist, are unique, or exhaust every possible case?",
+          "project": "Existence–Uniqueness Construction Dossier",
+          "focus": "producing an explicit witness and verifying every required property"
+        },
+        {
+          "id": "u06-l04",
+          "number": 4,
+          "title": "Nonconstructive Existence Proofs",
+          "week": 17,
+          "unit": 6,
+          "unit_title": "Cases, Existence, Uniqueness & Construction",
+          "essential": "How do proofs establish that objects exist, are unique, or exhaust every possible case?",
+          "project": "Existence–Uniqueness Construction Dossier",
+          "focus": "establishing existence without explicitly identifying the object"
+        },
+        {
+          "id": "u06-l05",
+          "number": 5,
+          "title": "Uniqueness Proofs",
+          "week": 17,
+          "unit": 6,
+          "unit_title": "Cases, Existence, Uniqueness & Construction",
+          "essential": "How do proofs establish that objects exist, are unique, or exhaust every possible case?",
+          "project": "Existence–Uniqueness Construction Dossier",
+          "focus": "assuming two candidates and proving they coincide"
+        },
+        {
+          "id": "u06-l06",
+          "number": 6,
+          "title": "Existence and Uniqueness Together",
+          "week": 18,
+          "unit": 6,
+          "unit_title": "Cases, Existence, Uniqueness & Construction",
+          "essential": "How do proofs establish that objects exist, are unique, or exhaust every possible case?",
+          "project": "Existence–Uniqueness Construction Dossier",
+          "focus": "separating construction from the argument that no second object works"
+        },
+        {
+          "id": "u06-l07",
+          "number": 7,
+          "title": "Classification Theorems and Edge Cases",
+          "week": 18,
+          "unit": 6,
+          "unit_title": "Cases, Existence, Uniqueness & Construction",
+          "essential": "How do proofs establish that objects exist, are unique, or exhaust every possible case?",
+          "project": "Existence–Uniqueness Construction Dossier",
+          "focus": "showing that a list of cases is both exhaustive and correctly distinguished"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Induction, Strong Induction & Well-Ordering",
+      "essential": "How do induction and well-ordering prove infinitely many linked statements from finite reasoning?",
+      "project": "Induction Method Portfolio & Peer Defense",
+      "standards": [
+        "ordinary induction",
+        "strong induction",
+        "well-ordering",
+        "recursive structures",
+        "inequalities",
+        "divisibility",
+        "summation identities",
+        "minimal counterexample"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        19,
+        20,
+        21
+      ],
+      "lessons": [
+        {
+          "id": "u07-l01",
+          "number": 1,
+          "title": "Ordinary Mathematical Induction",
+          "week": 19,
+          "unit": 7,
+          "unit_title": "Induction, Strong Induction & Well-Ordering",
+          "essential": "How do induction and well-ordering prove infinitely many linked statements from finite reasoning?",
+          "project": "Induction Method Portfolio & Peer Defense",
+          "focus": "proving a base case and successor implication"
+        },
+        {
+          "id": "u07-l02",
+          "number": 2,
+          "title": "Summation and Product Identities",
+          "week": 19,
+          "unit": 7,
+          "unit_title": "Induction, Strong Induction & Well-Ordering",
+          "essential": "How do induction and well-ordering prove infinitely many linked statements from finite reasoning?",
+          "project": "Induction Method Portfolio & Peer Defense",
+          "focus": "using induction to verify finite formulas"
+        },
+        {
+          "id": "u07-l03",
+          "number": 3,
+          "title": "Inductive Inequalities and Thresholds",
+          "week": 19,
+          "unit": 7,
+          "unit_title": "Induction, Strong Induction & Well-Ordering",
+          "essential": "How do induction and well-ordering prove infinitely many linked statements from finite reasoning?",
+          "project": "Induction Method Portfolio & Peer Defense",
+          "focus": "tracking when an inequality begins and preserving it in the step"
+        },
+        {
+          "id": "u07-l04",
+          "number": 4,
+          "title": "Divisibility and Congruence by Induction",
+          "week": 20,
+          "unit": 7,
+          "unit_title": "Induction, Strong Induction & Well-Ordering",
+          "essential": "How do induction and well-ordering prove infinitely many linked statements from finite reasoning?",
+          "project": "Induction Method Portfolio & Peer Defense",
+          "focus": "proving arithmetic patterns for all integers in a range"
+        },
+        {
+          "id": "u07-l05",
+          "number": 5,
+          "title": "Strong Induction",
+          "week": 20,
+          "unit": 7,
+          "unit_title": "Induction, Strong Induction & Well-Ordering",
+          "essential": "How do induction and well-ordering prove infinitely many linked statements from finite reasoning?",
+          "project": "Induction Method Portfolio & Peer Defense",
+          "focus": "using all earlier cases when one predecessor is insufficient"
+        },
+        {
+          "id": "u07-l06",
+          "number": 6,
+          "title": "Well-Ordering and Minimal Counterexample Arguments",
+          "week": 21,
+          "unit": 7,
+          "unit_title": "Induction, Strong Induction & Well-Ordering",
+          "essential": "How do induction and well-ordering prove infinitely many linked statements from finite reasoning?",
+          "project": "Induction Method Portfolio & Peer Defense",
+          "focus": "deriving induction-style conclusions from least elements"
+        },
+        {
+          "id": "u07-l07",
+          "number": 7,
+          "title": "Structural Induction on Recursively Defined Objects",
+          "week": 21,
+          "unit": 7,
+          "unit_title": "Induction, Strong Induction & Well-Ordering",
+          "essential": "How do induction and well-ordering prove infinitely many linked statements from finite reasoning?",
+          "project": "Induction Method Portfolio & Peer Defense",
+          "focus": "proving properties of strings, trees, formulas, and expressions"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Recursive Structures, Invariants & Algorithmic Proof",
+      "essential": "How can recursive definitions and invariants establish the correctness and termination of mathematical processes?",
+      "project": "Algorithm Correctness & Termination Certificate",
+      "standards": [
+        "recursive definitions",
+        "structural recursion",
+        "loop invariants",
+        "preconditions",
+        "postconditions",
+        "partial correctness",
+        "termination",
+        "well-founded measures"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        22,
+        23,
+        24
+      ],
+      "lessons": [
+        {
+          "id": "u08-l01",
+          "number": 1,
+          "title": "Recursive Definitions and Recursive Proofs",
+          "week": 22,
+          "unit": 8,
+          "unit_title": "Recursive Structures, Invariants & Algorithmic Proof",
+          "essential": "How can recursive definitions and invariants establish the correctness and termination of mathematical processes?",
+          "project": "Algorithm Correctness & Termination Certificate",
+          "focus": "defining sequences and structures from base objects and constructors"
+        },
+        {
+          "id": "u08-l02",
+          "number": 2,
+          "title": "Structural Recursion on Strings and Trees",
+          "week": 22,
+          "unit": 8,
+          "unit_title": "Recursive Structures, Invariants & Algorithmic Proof",
+          "essential": "How can recursive definitions and invariants establish the correctness and termination of mathematical processes?",
+          "project": "Algorithm Correctness & Termination Certificate",
+          "focus": "designing recursive functions aligned with inductive data"
+        },
+        {
+          "id": "u08-l03",
+          "number": 3,
+          "title": "Loop Invariants: Initialization",
+          "week": 22,
+          "unit": 8,
+          "unit_title": "Recursive Structures, Invariants & Algorithmic Proof",
+          "essential": "How can recursive definitions and invariants establish the correctness and termination of mathematical processes?",
+          "project": "Algorithm Correctness & Termination Certificate",
+          "focus": "choosing a statement true before the first iteration"
+        },
+        {
+          "id": "u08-l04",
+          "number": 4,
+          "title": "Loop Invariants: Maintenance and Use",
+          "week": 23,
+          "unit": 8,
+          "unit_title": "Recursive Structures, Invariants & Algorithmic Proof",
+          "essential": "How can recursive definitions and invariants establish the correctness and termination of mathematical processes?",
+          "project": "Algorithm Correctness & Termination Certificate",
+          "focus": "proving preservation and deriving the postcondition at termination"
+        },
+        {
+          "id": "u08-l05",
+          "number": 5,
+          "title": "Termination and Well-Founded Measures",
+          "week": 23,
+          "unit": 8,
+          "unit_title": "Recursive Structures, Invariants & Algorithmic Proof",
+          "essential": "How can recursive definitions and invariants establish the correctness and termination of mathematical processes?",
+          "project": "Algorithm Correctness & Termination Certificate",
+          "focus": "showing that a nonnegative measure decreases and cannot decrease forever"
+        },
+        {
+          "id": "u08-l06",
+          "number": 6,
+          "title": "Recursive Algorithm Correctness",
+          "week": 24,
+          "unit": 8,
+          "unit_title": "Recursive Structures, Invariants & Algorithmic Proof",
+          "essential": "How can recursive definitions and invariants establish the correctness and termination of mathematical processes?",
+          "project": "Algorithm Correctness & Termination Certificate",
+          "focus": "combining induction with recursive calls and contracts"
+        },
+        {
+          "id": "u08-l07",
+          "number": 7,
+          "title": "Proof Obligations, Testing and Formal Verification",
+          "week": 24,
+          "unit": 8,
+          "unit_title": "Recursive Structures, Invariants & Algorithmic Proof",
+          "essential": "How can recursive definitions and invariants establish the correctness and termination of mathematical processes?",
+          "project": "Algorithm Correctness & Termination Certificate",
+          "focus": "distinguishing testing evidence from universal correctness proofs"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Proofs in Number Theory",
+      "essential": "How do divisibility, primes, and congruence provide a rich laboratory for rigorous proof?",
+      "project": "Elementary Number Theory Theorem Portfolio",
+      "standards": [
+        "division algorithm",
+        "gcd",
+        "Bézout identity",
+        "prime factorization",
+        "congruence",
+        "modular inverse",
+        "Diophantine equations",
+        "infinitude"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        25,
+        26,
+        27
+      ],
+      "lessons": [
+        {
+          "id": "u09-l01",
+          "number": 1,
+          "title": "The Division Algorithm and Quotient–Remainder Proofs",
+          "week": 25,
+          "unit": 9,
+          "unit_title": "Proofs in Number Theory",
+          "essential": "How do divisibility, primes, and congruence provide a rich laboratory for rigorous proof?",
+          "project": "Elementary Number Theory Theorem Portfolio",
+          "focus": "using unique quotient and remainder representations"
+        },
+        {
+          "id": "u09-l02",
+          "number": 2,
+          "title": "Greatest Common Divisors and Bézout Identity",
+          "week": 25,
+          "unit": 9,
+          "unit_title": "Proofs in Number Theory",
+          "essential": "How do divisibility, primes, and congruence provide a rich laboratory for rigorous proof?",
+          "project": "Elementary Number Theory Theorem Portfolio",
+          "focus": "proving gcd properties with linear combinations"
+        },
+        {
+          "id": "u09-l03",
+          "number": 3,
+          "title": "Prime Divisibility and Euclid’s Lemma",
+          "week": 25,
+          "unit": 9,
+          "unit_title": "Proofs in Number Theory",
+          "essential": "How do divisibility, primes, and congruence provide a rich laboratory for rigorous proof?",
+          "project": "Elementary Number Theory Theorem Portfolio",
+          "focus": "showing how primes interact with products"
+        },
+        {
+          "id": "u09-l04",
+          "number": 4,
+          "title": "Unique Factorization Arguments",
+          "week": 26,
+          "unit": 9,
+          "unit_title": "Proofs in Number Theory",
+          "essential": "How do divisibility, primes, and congruence provide a rich laboratory for rigorous proof?",
+          "project": "Elementary Number Theory Theorem Portfolio",
+          "focus": "using prime exponents and divisibility valuations"
+        },
+        {
+          "id": "u09-l05",
+          "number": 5,
+          "title": "Congruence Proofs and Modular Arithmetic",
+          "week": 26,
+          "unit": 9,
+          "unit_title": "Proofs in Number Theory",
+          "essential": "How do divisibility, primes, and congruence provide a rich laboratory for rigorous proof?",
+          "project": "Elementary Number Theory Theorem Portfolio",
+          "focus": "proving equivalence and compatibility under operations"
+        },
+        {
+          "id": "u09-l06",
+          "number": 6,
+          "title": "Linear Diophantine Equations and Modular Inverses",
+          "week": 27,
+          "unit": 9,
+          "unit_title": "Proofs in Number Theory",
+          "essential": "How do divisibility, primes, and congruence provide a rich laboratory for rigorous proof?",
+          "project": "Elementary Number Theory Theorem Portfolio",
+          "focus": "characterizing solvability through gcd conditions"
+        },
+        {
+          "id": "u09-l07",
+          "number": 7,
+          "title": "Infinitely Many Primes and Related Constructions",
+          "week": 27,
+          "unit": 9,
+          "unit_title": "Proofs in Number Theory",
+          "essential": "How do divisibility, primes, and congruence provide a rich laboratory for rigorous proof?",
+          "project": "Elementary Number Theory Theorem Portfolio",
+          "focus": "building contradiction and construction arguments from finite prime lists"
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Proofs in Real Analysis",
+      "essential": "How do definitions with inequalities and quantifiers create the rigorous foundations of calculus?",
+      "project": "Epsilon–Delta & Sequence Proof Portfolio",
+      "standards": [
+        "absolute value",
+        "bounds",
+        "supremum",
+        "sequences",
+        "limits",
+        "epsilon language",
+        "continuity",
+        "Cauchy sequences",
+        "completeness"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        28,
+        29,
+        30
+      ],
+      "lessons": [
+        {
+          "id": "u10-l01",
+          "number": 1,
+          "title": "Absolute Value and Inequality Proofs",
+          "week": 28,
+          "unit": 10,
+          "unit_title": "Proofs in Real Analysis",
+          "essential": "How do definitions with inequalities and quantifiers create the rigorous foundations of calculus?",
+          "project": "Epsilon–Delta & Sequence Proof Portfolio",
+          "focus": "using triangle inequalities and interval translations"
+        },
+        {
+          "id": "u10-l02",
+          "number": 2,
+          "title": "Bounds, Suprema and Infima",
+          "week": 28,
+          "unit": 10,
+          "unit_title": "Proofs in Real Analysis",
+          "essential": "How do definitions with inequalities and quantifiers create the rigorous foundations of calculus?",
+          "project": "Epsilon–Delta & Sequence Proof Portfolio",
+          "focus": "proving upper-bound properties and least-upper-bound conclusions"
+        },
+        {
+          "id": "u10-l03",
+          "number": 3,
+          "title": "Sequence Convergence from the Definition",
+          "week": 28,
+          "unit": 10,
+          "unit_title": "Proofs in Real Analysis",
+          "essential": "How do definitions with inequalities and quantifiers create the rigorous foundations of calculus?",
+          "project": "Epsilon–Delta & Sequence Proof Portfolio",
+          "focus": "working directly with epsilon and an index threshold"
+        },
+        {
+          "id": "u10-l04",
+          "number": 4,
+          "title": "Limit Laws for Sequences",
+          "week": 29,
+          "unit": 10,
+          "unit_title": "Proofs in Real Analysis",
+          "essential": "How do definitions with inequalities and quantifiers create the rigorous foundations of calculus?",
+          "project": "Epsilon–Delta & Sequence Proof Portfolio",
+          "focus": "proving sum, product, and quotient laws from estimates"
+        },
+        {
+          "id": "u10-l05",
+          "number": 5,
+          "title": "Cauchy Sequences and Completeness",
+          "week": 29,
+          "unit": 10,
+          "unit_title": "Proofs in Real Analysis",
+          "essential": "How do definitions with inequalities and quantifiers create the rigorous foundations of calculus?",
+          "project": "Epsilon–Delta & Sequence Proof Portfolio",
+          "focus": "proving internal closeness and understanding completeness of R"
+        },
+        {
+          "id": "u10-l06",
+          "number": 6,
+          "title": "Epsilon–Delta Limits",
+          "week": 30,
+          "unit": 10,
+          "unit_title": "Proofs in Real Analysis",
+          "essential": "How do definitions with inequalities and quantifiers create the rigorous foundations of calculus?",
+          "project": "Epsilon–Delta & Sequence Proof Portfolio",
+          "focus": "constructing delta choices from a target epsilon"
+        },
+        {
+          "id": "u10-l07",
+          "number": 7,
+          "title": "Continuity and Sequential Characterizations",
+          "week": 30,
+          "unit": 10,
+          "unit_title": "Proofs in Real Analysis",
+          "essential": "How do definitions with inequalities and quantifiers create the rigorous foundations of calculus?",
+          "project": "Epsilon–Delta & Sequence Proof Portfolio",
+          "focus": "connecting pointwise definitions with convergent sequences"
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Proofs in Algebra, Combinatorics & Graphs",
+      "essential": "How do proof strategies change across algebraic structures, counting arguments, and finite graphs?",
+      "project": "Cross-Disciplinary Proof Anthology",
+      "standards": [
+        "group-style axioms",
+        "substructures",
+        "counting arguments",
+        "bijections",
+        "pigeonhole principle",
+        "graph invariants",
+        "trees",
+        "extremal arguments"
+      ],
+      "weeks": 2,
+      "week_numbers": [
+        31,
+        32
+      ],
+      "lessons": [
+        {
+          "id": "u11-l01",
+          "number": 1,
+          "title": "Proofs from Algebraic Axioms",
+          "week": 31,
+          "unit": 11,
+          "unit_title": "Proofs in Algebra, Combinatorics & Graphs",
+          "essential": "How do proof strategies change across algebraic structures, counting arguments, and finite graphs?",
+          "project": "Cross-Disciplinary Proof Anthology",
+          "focus": "deriving cancellation, uniqueness of identity, and inverse properties"
+        },
+        {
+          "id": "u11-l02",
+          "number": 2,
+          "title": "Substructures and Closure Tests",
+          "week": 31,
+          "unit": 11,
+          "unit_title": "Proofs in Algebra, Combinatorics & Graphs",
+          "essential": "How do proof strategies change across algebraic structures, counting arguments, and finite graphs?",
+          "project": "Cross-Disciplinary Proof Anthology",
+          "focus": "proving a subset inherits an algebraic structure"
+        },
+        {
+          "id": "u11-l03",
+          "number": 3,
+          "title": "Bijections and Combinatorial Proofs",
+          "week": 31,
+          "unit": 11,
+          "unit_title": "Proofs in Algebra, Combinatorics & Graphs",
+          "essential": "How do proof strategies change across algebraic structures, counting arguments, and finite graphs?",
+          "project": "Cross-Disciplinary Proof Anthology",
+          "focus": "proving identities by counting the same set in two ways"
+        },
+        {
+          "id": "u11-l04",
+          "number": 4,
+          "title": "Pigeonhole and Extremal Arguments",
+          "week": 31,
+          "unit": 11,
+          "unit_title": "Proofs in Algebra, Combinatorics & Graphs",
+          "essential": "How do proof strategies change across algebraic structures, counting arguments, and finite graphs?",
+          "project": "Cross-Disciplinary Proof Anthology",
+          "focus": "forcing repetition or choosing an extreme object to reveal structure"
+        },
+        {
+          "id": "u11-l05",
+          "number": 5,
+          "title": "Double Counting and Inclusion–Exclusion",
+          "week": 32,
+          "unit": 11,
+          "unit_title": "Proofs in Algebra, Combinatorics & Graphs",
+          "essential": "How do proof strategies change across algebraic structures, counting arguments, and finite graphs?",
+          "project": "Cross-Disciplinary Proof Anthology",
+          "focus": "equating two counts of the same incidence set"
+        },
+        {
+          "id": "u11-l06",
+          "number": 6,
+          "title": "Graph Proofs with Degrees and Paths",
+          "week": 32,
+          "unit": 11,
+          "unit_title": "Proofs in Algebra, Combinatorics & Graphs",
+          "essential": "How do proof strategies change across algebraic structures, counting arguments, and finite graphs?",
+          "project": "Cross-Disciplinary Proof Anthology",
+          "focus": "using invariants, parity, and connectivity"
+        },
+        {
+          "id": "u11-l07",
+          "number": 7,
+          "title": "Trees, Cycles and Inductive Graph Proofs",
+          "week": 32,
+          "unit": 11,
+          "unit_title": "Proofs in Algebra, Combinatorics & Graphs",
+          "essential": "How do proof strategies change across algebraic structures, counting arguments, and finite graphs?",
+          "project": "Cross-Disciplinary Proof Anthology",
+          "focus": "proving equivalent characterizations of trees"
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Mathematical Writing, LaTeX, Peer Review & Research Ethics",
+      "essential": "How does rigorous exposition make a proof inspectable, reproducible, and ethically responsible?",
+      "project": "Journal-Style Proof Revision & Referee Report",
+      "standards": [
+        "proof exposition",
+        "notation",
+        "LaTeX",
+        "citations",
+        "peer review",
+        "revision",
+        "research integrity",
+        "AI disclosure",
+        "reproducibility"
+      ],
+      "weeks": 2,
+      "week_numbers": [
+        33,
+        34
+      ],
+      "lessons": [
+        {
+          "id": "u12-l01",
+          "number": 1,
+          "title": "Writing Definitions and Theorem Statements",
+          "week": 33,
+          "unit": 12,
+          "unit_title": "Mathematical Writing, LaTeX, Peer Review & Research Ethics",
+          "essential": "How does rigorous exposition make a proof inspectable, reproducible, and ethically responsible?",
+          "project": "Journal-Style Proof Revision & Referee Report",
+          "focus": "making scope, hypotheses, variables, and conclusions explicit"
+        },
+        {
+          "id": "u12-l02",
+          "number": 2,
+          "title": "Proof Architecture and Paragraph-Level Logic",
+          "week": 33,
+          "unit": 12,
+          "unit_title": "Mathematical Writing, LaTeX, Peer Review & Research Ethics",
+          "essential": "How does rigorous exposition make a proof inspectable, reproducible, and ethically responsible?",
+          "project": "Journal-Style Proof Revision & Referee Report",
+          "focus": "organizing a proof so each sentence has a clear mathematical role"
+        },
+        {
+          "id": "u12-l03",
+          "number": 3,
+          "title": "Notation, Display Mathematics and LaTeX Practice",
+          "week": 33,
+          "unit": 12,
+          "unit_title": "Mathematical Writing, LaTeX, Peer Review & Research Ethics",
+          "essential": "How does rigorous exposition make a proof inspectable, reproducible, and ethically responsible?",
+          "project": "Journal-Style Proof Revision & Referee Report",
+          "focus": "using notation consistently and typesetting mathematics accessibly"
+        },
+        {
+          "id": "u12-l04",
+          "number": 4,
+          "title": "Citations, Attribution and Source Verification",
+          "week": 33,
+          "unit": 12,
+          "unit_title": "Mathematical Writing, LaTeX, Peer Review & Research Ethics",
+          "essential": "How does rigorous exposition make a proof inspectable, reproducible, and ethically responsible?",
+          "project": "Journal-Style Proof Revision & Referee Report",
+          "focus": "distinguishing original reasoning from borrowed results and checking sources"
+        },
+        {
+          "id": "u12-l05",
+          "number": 5,
+          "title": "Peer Review and Constructive Referee Reports",
+          "week": 34,
+          "unit": 12,
+          "unit_title": "Mathematical Writing, LaTeX, Peer Review & Research Ethics",
+          "essential": "How does rigorous exposition make a proof inspectable, reproducible, and ethically responsible?",
+          "project": "Journal-Style Proof Revision & Referee Report",
+          "focus": "evaluating correctness, clarity, completeness, and significance"
+        },
+        {
+          "id": "u12-l06",
+          "number": 6,
+          "title": "Revision from Mathematical Feedback",
+          "week": 34,
+          "unit": 12,
+          "unit_title": "Mathematical Writing, LaTeX, Peer Review & Research Ethics",
+          "essential": "How does rigorous exposition make a proof inspectable, reproducible, and ethically responsible?",
+          "project": "Journal-Style Proof Revision & Referee Report",
+          "focus": "repairing gaps, improving definitions, and restructuring arguments"
+        },
+        {
+          "id": "u12-l07",
+          "number": 7,
+          "title": "Research Ethics, AI Use and Reproducibility",
+          "week": 34,
+          "unit": 12,
+          "unit_title": "Mathematical Writing, LaTeX, Peer Review & Research Ethics",
+          "essential": "How does rigorous exposition make a proof inspectable, reproducible, and ethically responsible?",
+          "project": "Journal-Style Proof Revision & Referee Report",
+          "focus": "disclosing tools, verifying generated claims, and preserving an audit trail"
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Independent Theorem Project & Oral Defense",
+      "essential": "How can a learner formulate, prove, revise, and defend an original theorem-level investigation?",
+      "project": "Independent Theorem Project, Research Paper & Oral Defense",
+      "standards": [
+        "problem formulation",
+        "literature search",
+        "definitions",
+        "lemma design",
+        "proof strategy",
+        "counterexample search",
+        "revision",
+        "oral defense",
+        "future research"
+      ],
+      "weeks": 2,
+      "week_numbers": [
+        35,
+        36
+      ],
+      "lessons": [
+        {
+          "id": "u13-l01",
+          "number": 1,
+          "title": "Selecting a Feasible Theorem-Level Question",
+          "week": 35,
+          "unit": 13,
+          "unit_title": "Independent Theorem Project & Oral Defense",
+          "essential": "How can a learner formulate, prove, revise, and defend an original theorem-level investigation?",
+          "project": "Independent Theorem Project, Research Paper & Oral Defense",
+          "focus": "narrowing a topic to a precise and defensible claim"
+        },
+        {
+          "id": "u13-l02",
+          "number": 2,
+          "title": "Literature Search and Mathematical Source Map",
+          "week": 35,
+          "unit": 13,
+          "unit_title": "Independent Theorem Project & Oral Defense",
+          "essential": "How can a learner formulate, prove, revise, and defend an original theorem-level investigation?",
+          "project": "Independent Theorem Project, Research Paper & Oral Defense",
+          "focus": "locating definitions, known results, and prerequisite lemmas"
+        },
+        {
+          "id": "u13-l03",
+          "number": 3,
+          "title": "Definitions, Examples and Conjecture Refinement",
+          "week": 35,
+          "unit": 13,
+          "unit_title": "Independent Theorem Project & Oral Defense",
+          "essential": "How can a learner formulate, prove, revise, and defend an original theorem-level investigation?",
+          "project": "Independent Theorem Project, Research Paper & Oral Defense",
+          "focus": "stress-testing a proposed statement with examples and boundary cases"
+        },
+        {
+          "id": "u13-l04",
+          "number": 4,
+          "title": "Lemma Design and Dependency Planning",
+          "week": 35,
+          "unit": 13,
+          "unit_title": "Independent Theorem Project & Oral Defense",
+          "essential": "How can a learner formulate, prove, revise, and defend an original theorem-level investigation?",
+          "project": "Independent Theorem Project, Research Paper & Oral Defense",
+          "focus": "breaking the main result into useful intermediate claims"
+        },
+        {
+          "id": "u13-l05",
+          "number": 5,
+          "title": "Proof Construction and Counterexample Search",
+          "week": 36,
+          "unit": 13,
+          "unit_title": "Independent Theorem Project & Oral Defense",
+          "essential": "How can a learner formulate, prove, revise, and defend an original theorem-level investigation?",
+          "project": "Independent Theorem Project, Research Paper & Oral Defense",
+          "focus": "building the argument while actively trying to disprove it"
+        },
+        {
+          "id": "u13-l06",
+          "number": 6,
+          "title": "Peer Review, Gap Repair and Exposition Revision",
+          "week": 36,
+          "unit": 13,
+          "unit_title": "Independent Theorem Project & Oral Defense",
+          "essential": "How can a learner formulate, prove, revise, and defend an original theorem-level investigation?",
+          "project": "Independent Theorem Project, Research Paper & Oral Defense",
+          "focus": "responding to criticism with documented mathematical changes"
+        },
+        {
+          "id": "u13-l07",
+          "number": 7,
+          "title": "Research Paper, Reproducible Appendix and Limitations",
+          "week": 36,
+          "unit": 13,
+          "unit_title": "Independent Theorem Project & Oral Defense",
+          "essential": "How can a learner formulate, prove, revise, and defend an original theorem-level investigation?",
+          "project": "Independent Theorem Project, Research Paper & Oral Defense",
+          "focus": "presenting the result, methods, references, and limits responsibly"
+        },
+        {
+          "id": "u13-l08",
+          "number": 8,
+          "title": "Oral Defense and Advanced Analysis Bridge",
+          "week": 36,
+          "unit": 13,
+          "unit_title": "Independent Theorem Project & Oral Defense",
+          "essential": "How can a learner formulate, prove, revise, and defend an original theorem-level investigation?",
+          "project": "Independent Theorem Project, Research Paper & Oral Defense",
+          "focus": "defending definitions and proof choices while planning the next analysis sequence"
+        }
+      ]
+    }
+  ],
+  "weeks": [
+    {
+      "week": 1,
+      "unit": 1,
+      "title": "Mathematical Language, Definitions & Claims",
+      "essential": "How does precise mathematical language transform intuition into statements that can be proved, disproved, or refined?",
+      "focus": "Statements, Open Sentences and Mathematical Claims; Definitions as Mathematical Contracts; Examples, Nonexamples and Boundary Cases",
+      "lesson_ids": [
+        "u01-l01",
+        "u01-l02",
+        "u01-l03"
+      ],
+      "unit_path": "units/unit-01/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 2,
+      "unit": 1,
+      "title": "Mathematical Language, Definitions & Claims",
+      "essential": "How does precise mathematical language transform intuition into statements that can be proved, disproved, or refined?",
+      "focus": "Necessary, Sufficient and Equivalent Conditions; Theorems, Lemmas, Corollaries and Conjectures",
+      "lesson_ids": [
+        "u01-l04",
+        "u01-l05"
+      ],
+      "unit_path": "units/unit-01/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 3,
+      "unit": 1,
+      "title": "Mathematical Language, Definitions & Claims",
+      "essential": "How does precise mathematical language transform intuition into statements that can be proved, disproved, or refined?",
+      "focus": "Counterexamples and the Limits of Evidence; Well-Defined Objects and Ambiguous Notation",
+      "lesson_ids": [
+        "u01-l06",
+        "u01-l07"
+      ],
+      "unit_path": "units/unit-01/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 4,
+      "unit": 2,
+      "title": "Logic, Quantifiers & Negation",
+      "essential": "How do propositional and predicate logic expose the exact structure of a mathematical argument?",
+      "focus": "Propositions and Logical Connectives; Truth Tables and Logical Equivalence; Implication, Converse, Inverse and Contrapositive",
+      "lesson_ids": [
+        "u02-l01",
+        "u02-l02",
+        "u02-l03"
+      ],
+      "unit_path": "units/unit-02/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 5,
+      "unit": 2,
+      "title": "Logic, Quantifiers & Negation",
+      "essential": "How do propositional and predicate logic expose the exact structure of a mathematical argument?",
+      "focus": "Predicates, Domains and Quantifier Scope; Negating Quantified Statements",
+      "lesson_ids": [
+        "u02-l04",
+        "u02-l05"
+      ],
+      "unit_path": "units/unit-02/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 6,
+      "unit": 2,
+      "title": "Logic, Quantifiers & Negation",
+      "essential": "How do propositional and predicate logic expose the exact structure of a mathematical argument?",
+      "focus": "Nested Quantifiers and Order Dependence; Rules of Inference and Invalid Argument Forms",
+      "lesson_ids": [
+        "u02-l06",
+        "u02-l07"
+      ],
+      "unit_path": "units/unit-02/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 7,
+      "unit": 3,
+      "title": "Sets, Functions & Relations",
+      "essential": "How do sets, functions, and relations provide the language in which modern proofs are written?",
+      "focus": "Set Equality, Inclusion and Extensional Reasoning; Set Operations and De Morgan Laws; Power Sets, Products and Indexed Families",
+      "lesson_ids": [
+        "u03-l01",
+        "u03-l02",
+        "u03-l03"
+      ],
+      "unit_path": "units/unit-03/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 8,
+      "unit": 3,
+      "title": "Sets, Functions & Relations",
+      "essential": "How do sets, functions, and relations provide the language in which modern proofs are written?",
+      "focus": "Functions, Images and Preimages; Injective, Surjective and Bijective Maps",
+      "lesson_ids": [
+        "u03-l04",
+        "u03-l05"
+      ],
+      "unit_path": "units/unit-03/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 9,
+      "unit": 3,
+      "title": "Sets, Functions & Relations",
+      "essential": "How do sets, functions, and relations provide the language in which modern proofs are written?",
+      "focus": "Relations, Equivalence Classes and Partitions; Partial Orders, Maximality and Comparability",
+      "lesson_ids": [
+        "u03-l06",
+        "u03-l07"
+      ],
+      "unit_path": "units/unit-03/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 10,
+      "unit": 4,
+      "title": "Direct Proof & Algebraic Structure",
+      "essential": "How can definitions and algebraic identities be organized into transparent direct proofs?",
+      "focus": "Anatomy of a Direct Proof; Parity and Divisibility Proofs; Proving Set Inclusion and Equality",
+      "lesson_ids": [
+        "u04-l01",
+        "u04-l02",
+        "u04-l03"
+      ],
+      "unit_path": "units/unit-04/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 11,
+      "unit": 4,
+      "title": "Direct Proof & Algebraic Structure",
+      "essential": "How can definitions and algebraic identities be organized into transparent direct proofs?",
+      "focus": "Inequalities and Order Arguments; Function Properties by Direct Argument",
+      "lesson_ids": [
+        "u04-l04",
+        "u04-l05"
+      ],
+      "unit_path": "units/unit-04/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 12,
+      "unit": 4,
+      "title": "Direct Proof & Algebraic Structure",
+      "essential": "How can definitions and algebraic identities be organized into transparent direct proofs?",
+      "focus": "Algebraic Identities and Structural Closure; Proof Planning, Backward Analysis and Final Presentation",
+      "lesson_ids": [
+        "u04-l06",
+        "u04-l07"
+      ],
+      "unit_path": "units/unit-04/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 13,
+      "unit": 5,
+      "title": "Contraposition, Contradiction & Minimal Counterexamples",
+      "essential": "When do indirect methods expose a proof more clearly than direct calculation?",
+      "focus": "Proof by Contraposition; Proof by Contradiction; Irrationality and Divisibility Contradictions",
+      "lesson_ids": [
+        "u05-l01",
+        "u05-l02",
+        "u05-l03"
+      ],
+      "unit_path": "units/unit-05/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 14,
+      "unit": 5,
+      "title": "Contraposition, Contradiction & Minimal Counterexamples",
+      "essential": "When do indirect methods expose a proof more clearly than direct calculation?",
+      "focus": "Infinitude and Existence by Contradiction; Minimal Counterexamples and Infinite Descent",
+      "lesson_ids": [
+        "u05-l04",
+        "u05-l05"
+      ],
+      "unit_path": "units/unit-05/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 15,
+      "unit": 5,
+      "title": "Contraposition, Contradiction & Minimal Counterexamples",
+      "essential": "When do indirect methods expose a proof more clearly than direct calculation?",
+      "focus": "Contradiction versus Contraposition; Debugging Circular and Hidden-Assumption Proofs",
+      "lesson_ids": [
+        "u05-l06",
+        "u05-l07"
+      ],
+      "unit_path": "units/unit-05/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 16,
+      "unit": 6,
+      "title": "Cases, Existence, Uniqueness & Construction",
+      "essential": "How do proofs establish that objects exist, are unique, or exhaust every possible case?",
+      "focus": "Proof by Exhaustive Cases; Parity, Sign and Congruence Case Splits; Constructive Existence Proofs",
+      "lesson_ids": [
+        "u06-l01",
+        "u06-l02",
+        "u06-l03"
+      ],
+      "unit_path": "units/unit-06/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 17,
+      "unit": 6,
+      "title": "Cases, Existence, Uniqueness & Construction",
+      "essential": "How do proofs establish that objects exist, are unique, or exhaust every possible case?",
+      "focus": "Nonconstructive Existence Proofs; Uniqueness Proofs",
+      "lesson_ids": [
+        "u06-l04",
+        "u06-l05"
+      ],
+      "unit_path": "units/unit-06/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 18,
+      "unit": 6,
+      "title": "Cases, Existence, Uniqueness & Construction",
+      "essential": "How do proofs establish that objects exist, are unique, or exhaust every possible case?",
+      "focus": "Existence and Uniqueness Together; Classification Theorems and Edge Cases",
+      "lesson_ids": [
+        "u06-l06",
+        "u06-l07"
+      ],
+      "unit_path": "units/unit-06/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 19,
+      "unit": 7,
+      "title": "Induction, Strong Induction & Well-Ordering",
+      "essential": "How do induction and well-ordering prove infinitely many linked statements from finite reasoning?",
+      "focus": "Ordinary Mathematical Induction; Summation and Product Identities; Inductive Inequalities and Thresholds",
+      "lesson_ids": [
+        "u07-l01",
+        "u07-l02",
+        "u07-l03"
+      ],
+      "unit_path": "units/unit-07/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 20,
+      "unit": 7,
+      "title": "Induction, Strong Induction & Well-Ordering",
+      "essential": "How do induction and well-ordering prove infinitely many linked statements from finite reasoning?",
+      "focus": "Divisibility and Congruence by Induction; Strong Induction",
+      "lesson_ids": [
+        "u07-l04",
+        "u07-l05"
+      ],
+      "unit_path": "units/unit-07/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 21,
+      "unit": 7,
+      "title": "Induction, Strong Induction & Well-Ordering",
+      "essential": "How do induction and well-ordering prove infinitely many linked statements from finite reasoning?",
+      "focus": "Well-Ordering and Minimal Counterexample Arguments; Structural Induction on Recursively Defined Objects",
+      "lesson_ids": [
+        "u07-l06",
+        "u07-l07"
+      ],
+      "unit_path": "units/unit-07/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 22,
+      "unit": 8,
+      "title": "Recursive Structures, Invariants & Algorithmic Proof",
+      "essential": "How can recursive definitions and invariants establish the correctness and termination of mathematical processes?",
+      "focus": "Recursive Definitions and Recursive Proofs; Structural Recursion on Strings and Trees; Loop Invariants: Initialization",
+      "lesson_ids": [
+        "u08-l01",
+        "u08-l02",
+        "u08-l03"
+      ],
+      "unit_path": "units/unit-08/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 23,
+      "unit": 8,
+      "title": "Recursive Structures, Invariants & Algorithmic Proof",
+      "essential": "How can recursive definitions and invariants establish the correctness and termination of mathematical processes?",
+      "focus": "Loop Invariants: Maintenance and Use; Termination and Well-Founded Measures",
+      "lesson_ids": [
+        "u08-l04",
+        "u08-l05"
+      ],
+      "unit_path": "units/unit-08/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 24,
+      "unit": 8,
+      "title": "Recursive Structures, Invariants & Algorithmic Proof",
+      "essential": "How can recursive definitions and invariants establish the correctness and termination of mathematical processes?",
+      "focus": "Recursive Algorithm Correctness; Proof Obligations, Testing and Formal Verification",
+      "lesson_ids": [
+        "u08-l06",
+        "u08-l07"
+      ],
+      "unit_path": "units/unit-08/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 25,
+      "unit": 9,
+      "title": "Proofs in Number Theory",
+      "essential": "How do divisibility, primes, and congruence provide a rich laboratory for rigorous proof?",
+      "focus": "The Division Algorithm and Quotient–Remainder Proofs; Greatest Common Divisors and Bézout Identity; Prime Divisibility and Euclid’s Lemma",
+      "lesson_ids": [
+        "u09-l01",
+        "u09-l02",
+        "u09-l03"
+      ],
+      "unit_path": "units/unit-09/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 26,
+      "unit": 9,
+      "title": "Proofs in Number Theory",
+      "essential": "How do divisibility, primes, and congruence provide a rich laboratory for rigorous proof?",
+      "focus": "Unique Factorization Arguments; Congruence Proofs and Modular Arithmetic",
+      "lesson_ids": [
+        "u09-l04",
+        "u09-l05"
+      ],
+      "unit_path": "units/unit-09/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 27,
+      "unit": 9,
+      "title": "Proofs in Number Theory",
+      "essential": "How do divisibility, primes, and congruence provide a rich laboratory for rigorous proof?",
+      "focus": "Linear Diophantine Equations and Modular Inverses; Infinitely Many Primes and Related Constructions",
+      "lesson_ids": [
+        "u09-l06",
+        "u09-l07"
+      ],
+      "unit_path": "units/unit-09/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 28,
+      "unit": 10,
+      "title": "Proofs in Real Analysis",
+      "essential": "How do definitions with inequalities and quantifiers create the rigorous foundations of calculus?",
+      "focus": "Absolute Value and Inequality Proofs; Bounds, Suprema and Infima; Sequence Convergence from the Definition",
+      "lesson_ids": [
+        "u10-l01",
+        "u10-l02",
+        "u10-l03"
+      ],
+      "unit_path": "units/unit-10/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 29,
+      "unit": 10,
+      "title": "Proofs in Real Analysis",
+      "essential": "How do definitions with inequalities and quantifiers create the rigorous foundations of calculus?",
+      "focus": "Limit Laws for Sequences; Cauchy Sequences and Completeness",
+      "lesson_ids": [
+        "u10-l04",
+        "u10-l05"
+      ],
+      "unit_path": "units/unit-10/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 30,
+      "unit": 10,
+      "title": "Proofs in Real Analysis",
+      "essential": "How do definitions with inequalities and quantifiers create the rigorous foundations of calculus?",
+      "focus": "Epsilon–Delta Limits; Continuity and Sequential Characterizations",
+      "lesson_ids": [
+        "u10-l06",
+        "u10-l07"
+      ],
+      "unit_path": "units/unit-10/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 31,
+      "unit": 11,
+      "title": "Proofs in Algebra, Combinatorics & Graphs",
+      "essential": "How do proof strategies change across algebraic structures, counting arguments, and finite graphs?",
+      "focus": "Proofs from Algebraic Axioms; Substructures and Closure Tests; Bijections and Combinatorial Proofs; Pigeonhole and Extremal Arguments",
+      "lesson_ids": [
+        "u11-l01",
+        "u11-l02",
+        "u11-l03",
+        "u11-l04"
+      ],
+      "unit_path": "units/unit-11/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 32,
+      "unit": 11,
+      "title": "Proofs in Algebra, Combinatorics & Graphs",
+      "essential": "How do proof strategies change across algebraic structures, counting arguments, and finite graphs?",
+      "focus": "Double Counting and Inclusion–Exclusion; Graph Proofs with Degrees and Paths; Trees, Cycles and Inductive Graph Proofs",
+      "lesson_ids": [
+        "u11-l05",
+        "u11-l06",
+        "u11-l07"
+      ],
+      "unit_path": "units/unit-11/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 33,
+      "unit": 12,
+      "title": "Mathematical Writing, LaTeX, Peer Review & Research Ethics",
+      "essential": "How does rigorous exposition make a proof inspectable, reproducible, and ethically responsible?",
+      "focus": "Writing Definitions and Theorem Statements; Proof Architecture and Paragraph-Level Logic; Notation, Display Mathematics and LaTeX Practice; Citations, Attribution and Source Verification",
+      "lesson_ids": [
+        "u12-l01",
+        "u12-l02",
+        "u12-l03",
+        "u12-l04"
+      ],
+      "unit_path": "units/unit-12/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 34,
+      "unit": 12,
+      "title": "Mathematical Writing, LaTeX, Peer Review & Research Ethics",
+      "essential": "How does rigorous exposition make a proof inspectable, reproducible, and ethically responsible?",
+      "focus": "Peer Review and Constructive Referee Reports; Revision from Mathematical Feedback; Research Ethics, AI Use and Reproducibility",
+      "lesson_ids": [
+        "u12-l05",
+        "u12-l06",
+        "u12-l07"
+      ],
+      "unit_path": "units/unit-12/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 35,
+      "unit": 13,
+      "title": "Independent Theorem Project & Oral Defense",
+      "essential": "How can a learner formulate, prove, revise, and defend an original theorem-level investigation?",
+      "focus": "Selecting a Feasible Theorem-Level Question; Literature Search and Mathematical Source Map; Definitions, Examples and Conjecture Refinement; Lemma Design and Dependency Planning",
+      "lesson_ids": [
+        "u13-l01",
+        "u13-l02",
+        "u13-l03",
+        "u13-l04"
+      ],
+      "unit_path": "units/unit-13/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 36,
+      "unit": 13,
+      "title": "Independent Theorem Project & Oral Defense",
+      "essential": "How can a learner formulate, prove, revise, and defend an original theorem-level investigation?",
+      "focus": "Proof Construction and Counterexample Search; Peer Review, Gap Repair and Exposition Revision; Research Paper, Reproducible Appendix and Limitations; Oral Defense and Advanced Analysis Bridge",
+      "lesson_ids": [
+        "u13-l05",
+        "u13-l06",
+        "u13-l07",
+        "u13-l08"
+      ],
+      "unit_path": "units/unit-13/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    }
+  ]
+}
