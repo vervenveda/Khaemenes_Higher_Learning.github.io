@@ -1,0 +1,15 @@
+{
+  "unit": 7,
+  "title": "Submanifolds, Transversality & Differential Topology",
+  "standards": [
+    "Inverse function theorem",
+    "Implicit function theorem",
+    "Immersions and submersions",
+    "Embedded submanifolds",
+    "Regular values",
+    "Sard theorem",
+    "Transversality",
+    "Degree and index foundations"
+  ],
+  "essential_question": "How do smooth maps create and classify geometric subspaces?"
+}

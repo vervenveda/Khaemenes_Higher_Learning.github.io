@@ -1,0 +1,15 @@
+{
+  "unit": 12,
+  "title": "Morse Theory, Global Theorems & Topological Curvature",
+  "standards": [
+    "Morse functions",
+    "Handle attachment",
+    "Morse inequalities",
+    "Gauss\u2013Bonnet",
+    "Poincar\u00e9\u2013Hopf",
+    "Jacobi fields",
+    "Comparison geometry",
+    "Global rigidity"
+  ],
+  "essential_question": "How do critical points, curvature, and index formulas reveal global shape?"
+}

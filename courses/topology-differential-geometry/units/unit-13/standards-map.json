@@ -1,0 +1,14 @@
+{
+  "unit": 13,
+  "title": "Geometric Topology, Applications & Research Capstone",
+  "standards": [
+    "Surface classification",
+    "Knot and link foundations",
+    "Computational topology",
+    "Persistent homology",
+    "Geometric analysis",
+    "Relativity and gauge applications",
+    "Research design and exposition"
+  ],
+  "essential_question": "How can topology and geometry guide original research across mathematics, physics, computation, and data?"
+}

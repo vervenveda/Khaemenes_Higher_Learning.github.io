@@ -1,0 +1,14 @@
+{
+  "unit": 11,
+  "title": "Vector Bundles, Lie Groups & Connections",
+  "standards": [
+    "Vector bundles",
+    "Sections and transition functions",
+    "Tangent and cotangent bundles",
+    "Principal bundles",
+    "Lie groups and Lie algebras",
+    "Connections and curvature",
+    "Holonomy foundations"
+  ],
+  "essential_question": "How do local linear data and symmetry groups assemble over curved spaces?"
+}

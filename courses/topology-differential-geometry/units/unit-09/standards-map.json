@@ -1,0 +1,15 @@
+{
+  "unit": 9,
+  "title": "Riemannian Metrics, Connections & Geodesics",
+  "standards": [
+    "Riemannian metrics",
+    "Length and energy",
+    "Levi\u2013Civita connection",
+    "Covariant derivatives",
+    "Geodesic equation",
+    "Exponential map",
+    "Geodesic completeness",
+    "Curvature tensors"
+  ],
+  "essential_question": "How does a varying inner product determine distance, motion, and curvature on a manifold?"
+}

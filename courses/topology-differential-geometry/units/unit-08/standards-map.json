@@ -1,0 +1,15 @@
+{
+  "unit": 8,
+  "title": "Curves, Surfaces & Classical Differential Geometry",
+  "standards": [
+    "Regular curves",
+    "Arc length",
+    "Frenet frame",
+    "Surface parametrizations",
+    "First fundamental form",
+    "Second fundamental form",
+    "Principal curvatures",
+    "Gaussian and mean curvature"
+  ],
+  "essential_question": "How do derivatives measure bending, twisting, and intrinsic surface geometry?"
+}
