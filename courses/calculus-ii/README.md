@@ -8,7 +8,7 @@ A complete 36-week, 180-session, 92-lesson second-semester college calculus cour
 
 Upload the intact `calculus-ii/` folder to:
 
-`Khaemenes_Higher_Learning.github.io/courses/mathematics/calculus-ii/`
+
 
 ## Included
 
