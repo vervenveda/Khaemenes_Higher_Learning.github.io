@@ -1,0 +1,17 @@
+{
+  "unit": 8,
+  "title": "Estimation & Confidence Intervals",
+  "standards": [
+    "Point estimation",
+    "Confidence level",
+    "Margin of error",
+    "One proportion interval",
+    "One mean interval",
+    "Two proportions",
+    "Two means",
+    "Paired data",
+    "Bootstrap intervals",
+    "Sample size planning"
+  ],
+  "essential_question": "How do confidence intervals combine an estimate, standard error, confidence level, and design assumptions?"
+}

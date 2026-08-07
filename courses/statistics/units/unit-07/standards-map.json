@@ -1,0 +1,16 @@
+{
+  "unit": 7,
+  "title": "Continuous Distributions & Sampling Distributions",
+  "standards": [
+    "Density curves",
+    "Normal distribution",
+    "Standardization",
+    "Percentiles",
+    "Sampling distributions",
+    "Standard error",
+    "Central limit theorem",
+    "t distribution",
+    "Bootstrap intuition"
+  ],
+  "essential_question": "How do density models and repeated sampling explain normal approximation, standard error, and the central limit theorem?"
+}

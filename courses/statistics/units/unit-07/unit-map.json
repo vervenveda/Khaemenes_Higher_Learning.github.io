@@ -1,0 +1,215 @@
+{
+  "unit": 7,
+  "title": "Continuous Distributions & Sampling Distributions",
+  "weeks": [
+    19,
+    20,
+    21
+  ],
+  "lessons": [
+    {
+      "title": "Continuous Random Variables and Density Curves",
+      "focus": "interpreting area as probability and distinguishing density from probability",
+      "formulas": [
+        "P(a≤X≤b)=area under density"
+      ],
+      "id": "u07-l01",
+      "number": 1,
+      "unit": 7,
+      "unit_title": "Continuous Distributions & Sampling Distributions",
+      "week": 19,
+      "essential": "How do density models and repeated sampling explain normal approximation, standard error, and the central limit theorem?",
+      "project": "Sampling Distribution & Central Limit Simulation",
+      "application": "measurement error, manufacturing, biology, finance, quality control, and repeated-study reasoning",
+      "vocab": [
+        "density",
+        "normal distribution",
+        "percentile",
+        "sampling distribution",
+        "standard error",
+        "central limit theorem",
+        "t distribution"
+      ],
+      "sequence": 43,
+      "p1": "Give one defensible analysis step for Continuous Random Variables and Density Curves.",
+      "s1": "State the question and data structure, apply interpreting area as probability and distinguishing density from probability, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Continuous Random Variables and Density Curves.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Normal Models and the Empirical Rule",
+      "focus": "using mean and standard deviation to model symmetric bell-shaped variation",
+      "formulas": [
+        "about 68%,95%,99.7% within 1,2,3σ"
+      ],
+      "id": "u07-l02",
+      "number": 2,
+      "unit": 7,
+      "unit_title": "Continuous Distributions & Sampling Distributions",
+      "week": 19,
+      "essential": "How do density models and repeated sampling explain normal approximation, standard error, and the central limit theorem?",
+      "project": "Sampling Distribution & Central Limit Simulation",
+      "application": "measurement error, manufacturing, biology, finance, quality control, and repeated-study reasoning",
+      "vocab": [
+        "density",
+        "normal distribution",
+        "percentile",
+        "sampling distribution",
+        "standard error",
+        "central limit theorem",
+        "t distribution"
+      ],
+      "sequence": 44,
+      "p1": "A normal variable has μ=100 and σ=15. What value has z=1.2?",
+      "s1": "x=100+1.2(15)=118.",
+      "p2": "Identify a common error in Normal Models and the Empirical Rule.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Standard Normal Probabilities and Percentiles",
+      "focus": "converting values to z-scores and back",
+      "formulas": [
+        "z=(x−μ)/σ"
+      ],
+      "id": "u07-l03",
+      "number": 3,
+      "unit": 7,
+      "unit_title": "Continuous Distributions & Sampling Distributions",
+      "week": 19,
+      "essential": "How do density models and repeated sampling explain normal approximation, standard error, and the central limit theorem?",
+      "project": "Sampling Distribution & Central Limit Simulation",
+      "application": "measurement error, manufacturing, biology, finance, quality control, and repeated-study reasoning",
+      "vocab": [
+        "density",
+        "normal distribution",
+        "percentile",
+        "sampling distribution",
+        "standard error",
+        "central limit theorem",
+        "t distribution"
+      ],
+      "sequence": 45,
+      "p1": "A normal variable has μ=100 and σ=15. What value has z=1.2?",
+      "s1": "x=100+1.2(15)=118.",
+      "p2": "Identify a common error in Standard Normal Probabilities and Percentiles.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Sampling Distribution of a Proportion",
+      "focus": "describing the center and standard error of p̂",
+      "formulas": [
+        "SE(p̂)=√[p(1−p)/n]"
+      ],
+      "id": "u07-l04",
+      "number": 4,
+      "unit": 7,
+      "unit_title": "Continuous Distributions & Sampling Distributions",
+      "week": 20,
+      "essential": "How do density models and repeated sampling explain normal approximation, standard error, and the central limit theorem?",
+      "project": "Sampling Distribution & Central Limit Simulation",
+      "application": "measurement error, manufacturing, biology, finance, quality control, and repeated-study reasoning",
+      "vocab": [
+        "density",
+        "normal distribution",
+        "percentile",
+        "sampling distribution",
+        "standard error",
+        "central limit theorem",
+        "t distribution"
+      ],
+      "sequence": 46,
+      "p1": "For p=0.40 and n=100, find SE(p̂).",
+      "s1": "√[0.4(0.6)/100]≈0.0490.",
+      "p2": "Identify a common error in Sampling Distribution of a Proportion.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Sampling Distribution of a Mean",
+      "focus": "describing the center and standard error of x̄",
+      "formulas": [
+        "SE(x̄)=σ/√n"
+      ],
+      "id": "u07-l05",
+      "number": 5,
+      "unit": 7,
+      "unit_title": "Continuous Distributions & Sampling Distributions",
+      "week": 20,
+      "essential": "How do density models and repeated sampling explain normal approximation, standard error, and the central limit theorem?",
+      "project": "Sampling Distribution & Central Limit Simulation",
+      "application": "measurement error, manufacturing, biology, finance, quality control, and repeated-study reasoning",
+      "vocab": [
+        "density",
+        "normal distribution",
+        "percentile",
+        "sampling distribution",
+        "standard error",
+        "central limit theorem",
+        "t distribution"
+      ],
+      "sequence": 47,
+      "p1": "For σ=12 and n=36, find SE(x̄).",
+      "s1": "12/√36=2.",
+      "p2": "Identify a common error in Sampling Distribution of a Mean.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Central Limit Theorem and Normal Approximation",
+      "focus": "explaining why averages become approximately normal under broad conditions",
+      "formulas": [
+        "standardized mean approaches N(0,1)"
+      ],
+      "id": "u07-l06",
+      "number": 6,
+      "unit": 7,
+      "unit_title": "Continuous Distributions & Sampling Distributions",
+      "week": 21,
+      "essential": "How do density models and repeated sampling explain normal approximation, standard error, and the central limit theorem?",
+      "project": "Sampling Distribution & Central Limit Simulation",
+      "application": "measurement error, manufacturing, biology, finance, quality control, and repeated-study reasoning",
+      "vocab": [
+        "density",
+        "normal distribution",
+        "percentile",
+        "sampling distribution",
+        "standard error",
+        "central limit theorem",
+        "t distribution"
+      ],
+      "sequence": 48,
+      "p1": "A normal variable has μ=100 and σ=15. What value has z=1.2?",
+      "s1": "x=100+1.2(15)=118.",
+      "p2": "Identify a common error in Central Limit Theorem and Normal Approximation.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "t Distributions and Bootstrap Intuition",
+      "focus": "accounting for estimated standard deviation and using resampling to approximate sampling variation",
+      "formulas": [
+        "t=(x̄−μ)/(s/√n)"
+      ],
+      "id": "u07-l07",
+      "number": 7,
+      "unit": 7,
+      "unit_title": "Continuous Distributions & Sampling Distributions",
+      "week": 21,
+      "essential": "How do density models and repeated sampling explain normal approximation, standard error, and the central limit theorem?",
+      "project": "Sampling Distribution & Central Limit Simulation",
+      "application": "measurement error, manufacturing, biology, finance, quality control, and repeated-study reasoning",
+      "vocab": [
+        "density",
+        "normal distribution",
+        "percentile",
+        "sampling distribution",
+        "standard error",
+        "central limit theorem",
+        "t distribution"
+      ],
+      "sequence": 49,
+      "p1": "What does one bootstrap sample do?",
+      "s1": "It resamples n observed cases with replacement and recomputes the statistic.",
+      "p2": "Identify a common error in t Distributions and Bootstrap Intuition.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    }
+  ],
+  "investigation": "Sampling Distribution & Central Limit Simulation"
+}

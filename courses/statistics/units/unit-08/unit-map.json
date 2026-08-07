@@ -1,0 +1,215 @@
+{
+  "unit": 8,
+  "title": "Estimation & Confidence Intervals",
+  "weeks": [
+    22,
+    23,
+    24
+  ],
+  "lessons": [
+    {
+      "title": "Confidence-Interval Logic and Interpretation",
+      "focus": "distinguishing the long-run success rate of a method from probability statements about a fixed parameter",
+      "formulas": [
+        "estimate ± critical×SE"
+      ],
+      "id": "u08-l01",
+      "number": 1,
+      "unit": 8,
+      "unit_title": "Estimation & Confidence Intervals",
+      "week": 22,
+      "essential": "How do confidence intervals combine an estimate, standard error, confidence level, and design assumptions?",
+      "project": "Interval Estimation & Margin-of-Error Portfolio",
+      "application": "polling, manufacturing, medicine, environmental monitoring, education, and business analytics",
+      "vocab": [
+        "estimate",
+        "standard error",
+        "critical value",
+        "margin of error",
+        "confidence interval",
+        "paired data",
+        "bootstrap"
+      ],
+      "sequence": 50,
+      "p1": "Give one defensible analysis step for Confidence-Interval Logic and Interpretation.",
+      "s1": "State the question and data structure, apply distinguishing the long-run success rate of a method from probability statements about a fixed parameter, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Confidence-Interval Logic and Interpretation.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "One-Proportion Confidence Intervals",
+      "focus": "estimating a population proportion with design and count conditions",
+      "formulas": [
+        "p̂±z*√[p̂(1−p̂)/n]"
+      ],
+      "id": "u08-l02",
+      "number": 2,
+      "unit": 8,
+      "unit_title": "Estimation & Confidence Intervals",
+      "week": 22,
+      "essential": "How do confidence intervals combine an estimate, standard error, confidence level, and design assumptions?",
+      "project": "Interval Estimation & Margin-of-Error Portfolio",
+      "application": "polling, manufacturing, medicine, environmental monitoring, education, and business analytics",
+      "vocab": [
+        "estimate",
+        "standard error",
+        "critical value",
+        "margin of error",
+        "confidence interval",
+        "paired data",
+        "bootstrap"
+      ],
+      "sequence": 51,
+      "p1": "A sample has 120 successes out of 200. Give the estimate and approximate 95% margin.",
+      "s1": "p̂=0.60; ME≈1.96√[0.6(0.4)/200]≈0.068.",
+      "p2": "Identify a common error in One-Proportion Confidence Intervals.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "One-Mean t Intervals",
+      "focus": "estimating a population mean when σ is unknown",
+      "formulas": [
+        "x̄±t*s/√n"
+      ],
+      "id": "u08-l03",
+      "number": 3,
+      "unit": 8,
+      "unit_title": "Estimation & Confidence Intervals",
+      "week": 22,
+      "essential": "How do confidence intervals combine an estimate, standard error, confidence level, and design assumptions?",
+      "project": "Interval Estimation & Margin-of-Error Portfolio",
+      "application": "polling, manufacturing, medicine, environmental monitoring, education, and business analytics",
+      "vocab": [
+        "estimate",
+        "standard error",
+        "critical value",
+        "margin of error",
+        "confidence interval",
+        "paired data",
+        "bootstrap"
+      ],
+      "sequence": 52,
+      "p1": "Why use t rather than z when σ is unknown?",
+      "s1": "Replacing σ with s adds uncertainty; the t distribution has heavier tails, especially for small samples.",
+      "p2": "Identify a common error in One-Mean t Intervals.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Two-Proportion Intervals",
+      "focus": "estimating a difference in population proportions",
+      "formulas": [
+        "(p̂1−p̂2)±z*SE"
+      ],
+      "id": "u08-l04",
+      "number": 4,
+      "unit": 8,
+      "unit_title": "Estimation & Confidence Intervals",
+      "week": 23,
+      "essential": "How do confidence intervals combine an estimate, standard error, confidence level, and design assumptions?",
+      "project": "Interval Estimation & Margin-of-Error Portfolio",
+      "application": "polling, manufacturing, medicine, environmental monitoring, education, and business analytics",
+      "vocab": [
+        "estimate",
+        "standard error",
+        "critical value",
+        "margin of error",
+        "confidence interval",
+        "paired data",
+        "bootstrap"
+      ],
+      "sequence": 53,
+      "p1": "Give one defensible analysis step for Two-Proportion Intervals.",
+      "s1": "State the question and data structure, apply estimating a difference in population proportions, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Two-Proportion Intervals.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Two-Mean and Paired Intervals",
+      "focus": "choosing between independent-group and within-pair analysis",
+      "formulas": [
+        "paired interval uses differences"
+      ],
+      "id": "u08-l05",
+      "number": 5,
+      "unit": 8,
+      "unit_title": "Estimation & Confidence Intervals",
+      "week": 23,
+      "essential": "How do confidence intervals combine an estimate, standard error, confidence level, and design assumptions?",
+      "project": "Interval Estimation & Margin-of-Error Portfolio",
+      "application": "polling, manufacturing, medicine, environmental monitoring, education, and business analytics",
+      "vocab": [
+        "estimate",
+        "standard error",
+        "critical value",
+        "margin of error",
+        "confidence interval",
+        "paired data",
+        "bootstrap"
+      ],
+      "sequence": 54,
+      "p1": "Give one defensible analysis step for Two-Mean and Paired Intervals.",
+      "s1": "State the question and data structure, apply choosing between independent-group and within-pair analysis, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Two-Mean and Paired Intervals.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Bootstrap Confidence Intervals",
+      "focus": "using resampled statistics to approximate uncertainty and interval endpoints",
+      "formulas": [
+        "percentile bootstrap interval"
+      ],
+      "id": "u08-l06",
+      "number": 6,
+      "unit": 8,
+      "unit_title": "Estimation & Confidence Intervals",
+      "week": 24,
+      "essential": "How do confidence intervals combine an estimate, standard error, confidence level, and design assumptions?",
+      "project": "Interval Estimation & Margin-of-Error Portfolio",
+      "application": "polling, manufacturing, medicine, environmental monitoring, education, and business analytics",
+      "vocab": [
+        "estimate",
+        "standard error",
+        "critical value",
+        "margin of error",
+        "confidence interval",
+        "paired data",
+        "bootstrap"
+      ],
+      "sequence": 55,
+      "p1": "What does one bootstrap sample do?",
+      "s1": "It resamples n observed cases with replacement and recomputes the statistic.",
+      "p2": "Identify a common error in Bootstrap Confidence Intervals.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Margin of Error, Sample Size and Practical Precision",
+      "focus": "planning studies to meet a desired uncertainty target",
+      "formulas": [
+        "n grows roughly with 1/ME²"
+      ],
+      "id": "u08-l07",
+      "number": 7,
+      "unit": 8,
+      "unit_title": "Estimation & Confidence Intervals",
+      "week": 24,
+      "essential": "How do confidence intervals combine an estimate, standard error, confidence level, and design assumptions?",
+      "project": "Interval Estimation & Margin-of-Error Portfolio",
+      "application": "polling, manufacturing, medicine, environmental monitoring, education, and business analytics",
+      "vocab": [
+        "estimate",
+        "standard error",
+        "critical value",
+        "margin of error",
+        "confidence interval",
+        "paired data",
+        "bootstrap"
+      ],
+      "sequence": 56,
+      "p1": "Give one defensible analysis step for Margin of Error, Sample Size and Practical Precision.",
+      "s1": "State the question and data structure, apply planning studies to meet a desired uncertainty target, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Margin of Error, Sample Size and Practical Precision.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    }
+  ],
+  "investigation": "Interval Estimation & Margin-of-Error Portfolio"
+}

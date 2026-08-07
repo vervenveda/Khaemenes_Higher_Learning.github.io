@@ -1,0 +1,222 @@
+{
+  "unit": 6,
+  "title": "Random Variables & Discrete Distributions",
+  "weeks": [
+    16,
+    17,
+    18
+  ],
+  "lessons": [
+    {
+      "title": "Random Variables and Probability Mass Functions",
+      "focus": "mapping outcomes to numerical values and validating a discrete distribution",
+      "formulas": [
+        "Σp(x)=1"
+      ],
+      "id": "u06-l01",
+      "number": 1,
+      "unit": 6,
+      "unit_title": "Random Variables & Discrete Distributions",
+      "week": 16,
+      "essential": "How do random variables and probability distributions connect uncertain outcomes to expected value, variation, and decisions?",
+      "project": "Discrete Distribution & Expected-Value Modelling Project",
+      "application": "inventory, reliability, queues, insurance, epidemiology, finance, and operations research",
+      "vocab": [
+        "random variable",
+        "pmf",
+        "expected value",
+        "variance",
+        "binomial",
+        "geometric",
+        "Poisson",
+        "covariance"
+      ],
+      "sequence": 36,
+      "p1": "Give one defensible analysis step for Random Variables and Probability Mass Functions.",
+      "s1": "State the question and data structure, apply mapping outcomes to numerical values and validating a discrete distribution, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Random Variables and Probability Mass Functions.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Expected Value as Long-Run Balance",
+      "focus": "computing and interpreting probability-weighted averages",
+      "formulas": [
+        "E(X)=Σxp(x)"
+      ],
+      "id": "u06-l02",
+      "number": 2,
+      "unit": 6,
+      "unit_title": "Random Variables & Discrete Distributions",
+      "week": 16,
+      "essential": "How do random variables and probability distributions connect uncertain outcomes to expected value, variation, and decisions?",
+      "project": "Discrete Distribution & Expected-Value Modelling Project",
+      "application": "inventory, reliability, queues, insurance, epidemiology, finance, and operations research",
+      "vocab": [
+        "random variable",
+        "pmf",
+        "expected value",
+        "variance",
+        "binomial",
+        "geometric",
+        "Poisson",
+        "covariance"
+      ],
+      "sequence": 37,
+      "p1": "Give one defensible analysis step for Expected Value as Long-Run Balance.",
+      "s1": "State the question and data structure, apply computing and interpreting probability-weighted averages, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Expected Value as Long-Run Balance.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Variance, Standard Deviation and Linear Transformations",
+      "focus": "quantifying uncertainty and understanding effects of rescaling",
+      "formulas": [
+        "Var(a+bX)=b²Var(X)"
+      ],
+      "id": "u06-l03",
+      "number": 3,
+      "unit": 6,
+      "unit_title": "Random Variables & Discrete Distributions",
+      "week": 16,
+      "essential": "How do random variables and probability distributions connect uncertain outcomes to expected value, variation, and decisions?",
+      "project": "Discrete Distribution & Expected-Value Modelling Project",
+      "application": "inventory, reliability, queues, insurance, epidemiology, finance, and operations research",
+      "vocab": [
+        "random variable",
+        "pmf",
+        "expected value",
+        "variance",
+        "binomial",
+        "geometric",
+        "Poisson",
+        "covariance"
+      ],
+      "sequence": 38,
+      "p1": "Give one defensible analysis step for Variance, Standard Deviation and Linear Transformations.",
+      "s1": "State the question and data structure, apply quantifying uncertainty and understanding effects of rescaling, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Variance, Standard Deviation and Linear Transformations.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Binomial Distribution",
+      "focus": "modelling a fixed number of independent binary trials",
+      "formulas": [
+        "P(X=k)=C(n,k)p^k(1−p)^(n−k)"
+      ],
+      "id": "u06-l04",
+      "number": 4,
+      "unit": 6,
+      "unit_title": "Random Variables & Discrete Distributions",
+      "week": 17,
+      "essential": "How do random variables and probability distributions connect uncertain outcomes to expected value, variation, and decisions?",
+      "project": "Discrete Distribution & Expected-Value Modelling Project",
+      "application": "inventory, reliability, queues, insurance, epidemiology, finance, and operations research",
+      "vocab": [
+        "random variable",
+        "pmf",
+        "expected value",
+        "variance",
+        "binomial",
+        "geometric",
+        "Poisson",
+        "covariance"
+      ],
+      "sequence": 39,
+      "p1": "For n=10 and p=0.3, find E(X) and SD(X).",
+      "s1": "E(X)=np=3 and SD=√[np(1−p)]=√2.1≈1.449.",
+      "p2": "Identify a common error in Binomial Distribution.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Geometric and Waiting-Time Models",
+      "focus": "modelling the trial count until first success",
+      "formulas": [
+        "P(X=k)=(1−p)^(k−1)p"
+      ],
+      "id": "u06-l05",
+      "number": 5,
+      "unit": 6,
+      "unit_title": "Random Variables & Discrete Distributions",
+      "week": 17,
+      "essential": "How do random variables and probability distributions connect uncertain outcomes to expected value, variation, and decisions?",
+      "project": "Discrete Distribution & Expected-Value Modelling Project",
+      "application": "inventory, reliability, queues, insurance, epidemiology, finance, and operations research",
+      "vocab": [
+        "random variable",
+        "pmf",
+        "expected value",
+        "variance",
+        "binomial",
+        "geometric",
+        "Poisson",
+        "covariance"
+      ],
+      "sequence": 40,
+      "p1": "Give one defensible analysis step for Geometric and Waiting-Time Models.",
+      "s1": "State the question and data structure, apply modelling the trial count until first success, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Geometric and Waiting-Time Models.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Poisson Counts and Rate Models",
+      "focus": "modelling counts over time, area, or opportunity",
+      "formulas": [
+        "P(X=k)=e^(−λ)λ^k/k!"
+      ],
+      "id": "u06-l06",
+      "number": 6,
+      "unit": 6,
+      "unit_title": "Random Variables & Discrete Distributions",
+      "week": 18,
+      "essential": "How do random variables and probability distributions connect uncertain outcomes to expected value, variation, and decisions?",
+      "project": "Discrete Distribution & Expected-Value Modelling Project",
+      "application": "inventory, reliability, queues, insurance, epidemiology, finance, and operations research",
+      "vocab": [
+        "random variable",
+        "pmf",
+        "expected value",
+        "variance",
+        "binomial",
+        "geometric",
+        "Poisson",
+        "covariance"
+      ],
+      "sequence": 41,
+      "p1": "Calls arrive at mean 4 per hour. What is P(X=0)?",
+      "s1": "e^(−4)≈0.0183.",
+      "p2": "Identify a common error in Poisson Counts and Rate Models.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    },
+    {
+      "title": "Covariance, Sums and Decision Applications",
+      "focus": "combining random variables while tracking dependence",
+      "formulas": [
+        "Var(X+Y)=VarX+VarY+2Cov(X,Y)"
+      ],
+      "id": "u06-l07",
+      "number": 7,
+      "unit": 6,
+      "unit_title": "Random Variables & Discrete Distributions",
+      "week": 18,
+      "essential": "How do random variables and probability distributions connect uncertain outcomes to expected value, variation, and decisions?",
+      "project": "Discrete Distribution & Expected-Value Modelling Project",
+      "application": "inventory, reliability, queues, insurance, epidemiology, finance, and operations research",
+      "vocab": [
+        "random variable",
+        "pmf",
+        "expected value",
+        "variance",
+        "binomial",
+        "geometric",
+        "Poisson",
+        "covariance"
+      ],
+      "sequence": 42,
+      "p1": "Give one defensible analysis step for Covariance, Sums and Decision Applications.",
+      "s1": "State the question and data structure, apply combining random variables while tracking dependence, check assumptions or design conditions, quantify uncertainty, and interpret the result in context.",
+      "p2": "Identify a common error in Covariance, Sums and Decision Applications.",
+      "s2": "A common error is to report a calculation without identifying the population, design, assumptions, uncertainty, context, or limits on causal and generalizing claims."
+    }
+  ],
+  "investigation": "Discrete Distribution & Expected-Value Modelling Project"
+}

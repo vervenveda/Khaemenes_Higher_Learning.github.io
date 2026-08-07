@@ -1,0 +1,17 @@
+{
+  "unit": 6,
+  "title": "Random Variables & Discrete Distributions",
+  "standards": [
+    "Random variables",
+    "Probability mass functions",
+    "Expected value",
+    "Variance",
+    "Linear transformations",
+    "Binomial distribution",
+    "Geometric distribution",
+    "Poisson distribution",
+    "Covariance",
+    "Simulation"
+  ],
+  "essential_question": "How do random variables and probability distributions connect uncertain outcomes to expected value, variation, and decisions?"
+}
