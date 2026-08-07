@@ -1,0 +1,2055 @@
+{
+  "schema_version": "1.0",
+  "course": {
+    "id": "higher-learning-real-complex-analysis",
+    "profile_course_id": "real-complex-analysis",
+    "code": "KH-HL-MATH-RCA1",
+    "title": "Khaemenes Higher Learning Real & Complex Analysis",
+    "short_title": "Real & Complex Analysis",
+    "duration_weeks": 36,
+    "sessions": 180,
+    "lesson_count": 92,
+    "mastery_target": 80,
+    "pathways": [
+      "Foundation",
+      "Core",
+      "Research / Graduate"
+    ],
+    "storage_key": "khaemenes-real-complex-analysis-course-v1",
+    "assessment_key": "khaemenes-real-complex-analysis-assessment-v1",
+    "pin_key": "khaemenes-higher-learning-pinned-courses-v1",
+    "audience": "Advanced undergraduates, graduate-preparatory learners, and independent researchers entering analysis, mathematical physics, PDE, probability, or complex variables.",
+    "prerequisite": "A completed Introduction to Proofs course or equivalent proof fluency, single-variable calculus, and mathematical maturity. Linear algebra is strongly recommended.",
+    "calculator": "https://vervenveda.com/Khaemenes_High.github.io/courses/mathematics/tools/calculator",
+    "cad": "https://vervenveda.com/proresource_hub.github.io/Protools/Ohmic_CAD_Studio.html",
+    "arcade": "https://vervenveda.com/arcade.github.io/",
+    "version": "1.0.0",
+    "credit_guidance": "An advanced upper-level and graduate-preparatory sequence with selected beginning-graduate topics. It is not represented as a replacement for a university graduate qualifying sequence."
+  },
+  "units": [
+    {
+      "number": 1,
+      "title": "Proof Foundations & the Real Number System",
+      "essential": "How do ordered-field axioms and completeness support every rigorous statement about real-variable analysis?",
+      "project": "Real Number Axiom & Completeness Proof Portfolio",
+      "standards": [
+        "ordered fields",
+        "absolute value",
+        "supremum",
+        "infimum",
+        "completeness",
+        "Archimedean property",
+        "density",
+        "proof conventions"
+      ],
+      "weeks": 2,
+      "week_numbers": [
+        1,
+        2
+      ],
+      "lessons": [
+        {
+          "id": "u01-l01",
+          "number": 1,
+          "title": "Ordered-Field Axioms and Consequences",
+          "week": 1,
+          "unit": 1,
+          "unit_title": "Proof Foundations & the Real Number System",
+          "essential": "How do ordered-field axioms and completeness support every rigorous statement about real-variable analysis?",
+          "project": "Real Number Axiom & Completeness Proof Portfolio",
+          "focus": "deriving sign, order, and algebraic properties from axioms"
+        },
+        {
+          "id": "u01-l02",
+          "number": 2,
+          "title": "Absolute Value, Intervals and the Triangle Inequality",
+          "week": 1,
+          "unit": 1,
+          "unit_title": "Proof Foundations & the Real Number System",
+          "essential": "How do ordered-field axioms and completeness support every rigorous statement about real-variable analysis?",
+          "project": "Real Number Axiom & Completeness Proof Portfolio",
+          "focus": "proving inequalities and translating neighborhoods"
+        },
+        {
+          "id": "u01-l03",
+          "number": 3,
+          "title": "Upper Bounds, Suprema and Infima",
+          "week": 1,
+          "unit": 1,
+          "unit_title": "Proof Foundations & the Real Number System",
+          "essential": "How do ordered-field axioms and completeness support every rigorous statement about real-variable analysis?",
+          "project": "Real Number Axiom & Completeness Proof Portfolio",
+          "focus": "working with least upper bounds and greatest lower bounds"
+        },
+        {
+          "id": "u01-l04",
+          "number": 4,
+          "title": "The Completeness Axiom",
+          "week": 1,
+          "unit": 1,
+          "unit_title": "Proof Foundations & the Real Number System",
+          "essential": "How do ordered-field axioms and completeness support every rigorous statement about real-variable analysis?",
+          "project": "Real Number Axiom & Completeness Proof Portfolio",
+          "focus": "using least-upper-bound completeness to prove existence results"
+        },
+        {
+          "id": "u01-l05",
+          "number": 5,
+          "title": "Archimedean Property and Density of the Rationals",
+          "week": 2,
+          "unit": 1,
+          "unit_title": "Proof Foundations & the Real Number System",
+          "essential": "How do ordered-field axioms and completeness support every rigorous statement about real-variable analysis?",
+          "project": "Real Number Axiom & Completeness Proof Portfolio",
+          "focus": "proving scale and approximation results"
+        },
+        {
+          "id": "u01-l06",
+          "number": 6,
+          "title": "Nested Intervals and Monotone Completeness",
+          "week": 2,
+          "unit": 1,
+          "unit_title": "Proof Foundations & the Real Number System",
+          "essential": "How do ordered-field axioms and completeness support every rigorous statement about real-variable analysis?",
+          "project": "Real Number Axiom & Completeness Proof Portfolio",
+          "focus": "connecting alternative forms of completeness"
+        },
+        {
+          "id": "u01-l07",
+          "number": 7,
+          "title": "Proof Synthesis: Foundations of R",
+          "week": 2,
+          "unit": 1,
+          "unit_title": "Proof Foundations & the Real Number System",
+          "essential": "How do ordered-field axioms and completeness support every rigorous statement about real-variable analysis?",
+          "project": "Real Number Axiom & Completeness Proof Portfolio",
+          "focus": "assembling axioms, bounds, and completeness into a coherent theorem proof"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Sequences, Subsequences & Completeness",
+      "essential": "How do sequences encode limiting behavior, compactness, and completeness on the real line?",
+      "project": "Sequence Convergence & Compactness Dossier",
+      "standards": [
+        "sequence convergence",
+        "limit uniqueness",
+        "monotone convergence",
+        "subsequences",
+        "Bolzano-Weierstrass",
+        "Cauchy sequences",
+        "limsup and liminf"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        3,
+        4,
+        5
+      ],
+      "lessons": [
+        {
+          "id": "u02-l01",
+          "number": 1,
+          "title": "Sequence Limits from the Epsilon Definition",
+          "week": 3,
+          "unit": 2,
+          "unit_title": "Sequences, Subsequences & Completeness",
+          "essential": "How do sequences encode limiting behavior, compactness, and completeness on the real line?",
+          "project": "Sequence Convergence & Compactness Dossier",
+          "focus": "constructing index thresholds and proving convergence"
+        },
+        {
+          "id": "u02-l02",
+          "number": 2,
+          "title": "Limit Uniqueness and Algebra of Limits",
+          "week": 3,
+          "unit": 2,
+          "unit_title": "Sequences, Subsequences & Completeness",
+          "essential": "How do sequences encode limiting behavior, compactness, and completeness on the real line?",
+          "project": "Sequence Convergence & Compactness Dossier",
+          "focus": "proving uniqueness and limit laws for sums, products, and quotients"
+        },
+        {
+          "id": "u02-l03",
+          "number": 3,
+          "title": "Monotone Convergence Theorem",
+          "week": 3,
+          "unit": 2,
+          "unit_title": "Sequences, Subsequences & Completeness",
+          "essential": "How do sequences encode limiting behavior, compactness, and completeness on the real line?",
+          "project": "Sequence Convergence & Compactness Dossier",
+          "focus": "combining monotonicity and boundedness to establish convergence"
+        },
+        {
+          "id": "u02-l04",
+          "number": 4,
+          "title": "Subsequences and Cluster Points",
+          "week": 4,
+          "unit": 2,
+          "unit_title": "Sequences, Subsequences & Completeness",
+          "essential": "How do sequences encode limiting behavior, compactness, and completeness on the real line?",
+          "project": "Sequence Convergence & Compactness Dossier",
+          "focus": "tracking inherited convergence and multiple limiting behaviors"
+        },
+        {
+          "id": "u02-l05",
+          "number": 5,
+          "title": "Bolzano–Weierstrass Theorem",
+          "week": 4,
+          "unit": 2,
+          "unit_title": "Sequences, Subsequences & Completeness",
+          "essential": "How do sequences encode limiting behavior, compactness, and completeness on the real line?",
+          "project": "Sequence Convergence & Compactness Dossier",
+          "focus": "extracting convergent subsequences from bounded sequences"
+        },
+        {
+          "id": "u02-l06",
+          "number": 6,
+          "title": "Cauchy Sequences and Completeness",
+          "week": 5,
+          "unit": 2,
+          "unit_title": "Sequences, Subsequences & Completeness",
+          "essential": "How do sequences encode limiting behavior, compactness, and completeness on the real line?",
+          "project": "Sequence Convergence & Compactness Dossier",
+          "focus": "characterizing convergence without knowing the limit in advance"
+        },
+        {
+          "id": "u02-l07",
+          "number": 7,
+          "title": "Limit Superior, Limit Inferior and Oscillation",
+          "week": 5,
+          "unit": 2,
+          "unit_title": "Sequences, Subsequences & Completeness",
+          "essential": "How do sequences encode limiting behavior, compactness, and completeness on the real line?",
+          "project": "Sequence Convergence & Compactness Dossier",
+          "focus": "describing asymptotic upper and lower envelopes"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Infinite Series & Power Series",
+      "essential": "How do convergence tests and power series control infinite accumulation and approximation?",
+      "project": "Series Convergence Strategy & Approximation Portfolio",
+      "standards": [
+        "series convergence",
+        "Cauchy criterion",
+        "comparison",
+        "ratio and root tests",
+        "absolute convergence",
+        "alternating series",
+        "power series",
+        "radius of convergence"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        6,
+        7,
+        8
+      ],
+      "lessons": [
+        {
+          "id": "u03-l01",
+          "number": 1,
+          "title": "Series, Partial Sums and the Cauchy Criterion",
+          "week": 6,
+          "unit": 3,
+          "unit_title": "Infinite Series & Power Series",
+          "essential": "How do convergence tests and power series control infinite accumulation and approximation?",
+          "project": "Series Convergence Strategy & Approximation Portfolio",
+          "focus": "defining series convergence through partial sums and tails"
+        },
+        {
+          "id": "u03-l02",
+          "number": 2,
+          "title": "Positive-Term Comparison Tests",
+          "week": 6,
+          "unit": 3,
+          "unit_title": "Infinite Series & Power Series",
+          "essential": "How do convergence tests and power series control infinite accumulation and approximation?",
+          "project": "Series Convergence Strategy & Approximation Portfolio",
+          "focus": "using direct and limit comparisons"
+        },
+        {
+          "id": "u03-l03",
+          "number": 3,
+          "title": "Ratio, Root and Integral Tests",
+          "week": 6,
+          "unit": 3,
+          "unit_title": "Infinite Series & Power Series",
+          "essential": "How do convergence tests and power series control infinite accumulation and approximation?",
+          "project": "Series Convergence Strategy & Approximation Portfolio",
+          "focus": "selecting tests that match factorial, exponential, or monotone structure"
+        },
+        {
+          "id": "u03-l04",
+          "number": 4,
+          "title": "Absolute and Conditional Convergence",
+          "week": 7,
+          "unit": 3,
+          "unit_title": "Infinite Series & Power Series",
+          "essential": "How do convergence tests and power series control infinite accumulation and approximation?",
+          "project": "Series Convergence Strategy & Approximation Portfolio",
+          "focus": "separating convergence of a series from convergence of absolute values"
+        },
+        {
+          "id": "u03-l05",
+          "number": 5,
+          "title": "Alternating Series and Error Bounds",
+          "week": 7,
+          "unit": 3,
+          "unit_title": "Infinite Series & Power Series",
+          "essential": "How do convergence tests and power series control infinite accumulation and approximation?",
+          "project": "Series Convergence Strategy & Approximation Portfolio",
+          "focus": "using monotone decay and first-omitted-term bounds"
+        },
+        {
+          "id": "u03-l06",
+          "number": 6,
+          "title": "Power Series and Radius of Convergence",
+          "week": 8,
+          "unit": 3,
+          "unit_title": "Infinite Series & Power Series",
+          "essential": "How do convergence tests and power series control infinite accumulation and approximation?",
+          "project": "Series Convergence Strategy & Approximation Portfolio",
+          "focus": "finding convergence disks and endpoint behavior"
+        },
+        {
+          "id": "u03-l07",
+          "number": 7,
+          "title": "Operations on Power Series",
+          "week": 8,
+          "unit": 3,
+          "unit_title": "Infinite Series & Power Series",
+          "essential": "How do convergence tests and power series control infinite accumulation and approximation?",
+          "project": "Series Convergence Strategy & Approximation Portfolio",
+          "focus": "justifying differentiation, integration, products, and uniqueness inside the radius"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Metric Spaces, Topology & Compactness",
+      "essential": "How do metric-space ideas generalize distance, convergence, continuity, and compactness beyond the real line?",
+      "project": "Metric-Space Topology Atlas",
+      "standards": [
+        "metrics",
+        "open and closed sets",
+        "interior and closure",
+        "convergence",
+        "completeness",
+        "compactness",
+        "connectedness",
+        "Heine-Borel"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        9,
+        10,
+        11
+      ],
+      "lessons": [
+        {
+          "id": "u04-l01",
+          "number": 1,
+          "title": "Metrics and Open Balls",
+          "week": 9,
+          "unit": 4,
+          "unit_title": "Metric Spaces, Topology & Compactness",
+          "essential": "How do metric-space ideas generalize distance, convergence, continuity, and compactness beyond the real line?",
+          "project": "Metric-Space Topology Atlas",
+          "focus": "verifying metric axioms and comparing induced geometries"
+        },
+        {
+          "id": "u04-l02",
+          "number": 2,
+          "title": "Open Sets, Closed Sets and Neighborhoods",
+          "week": 9,
+          "unit": 4,
+          "unit_title": "Metric Spaces, Topology & Compactness",
+          "essential": "How do metric-space ideas generalize distance, convergence, continuity, and compactness beyond the real line?",
+          "project": "Metric-Space Topology Atlas",
+          "focus": "proving topological properties from metric definitions"
+        },
+        {
+          "id": "u04-l03",
+          "number": 3,
+          "title": "Interior, Closure, Boundary and Accumulation Points",
+          "week": 9,
+          "unit": 4,
+          "unit_title": "Metric Spaces, Topology & Compactness",
+          "essential": "How do metric-space ideas generalize distance, convergence, continuity, and compactness beyond the real line?",
+          "project": "Metric-Space Topology Atlas",
+          "focus": "relating local and global structure of subsets"
+        },
+        {
+          "id": "u04-l04",
+          "number": 4,
+          "title": "Convergence and Continuity in Metric Spaces",
+          "week": 10,
+          "unit": 4,
+          "unit_title": "Metric Spaces, Topology & Compactness",
+          "essential": "How do metric-space ideas generalize distance, convergence, continuity, and compactness beyond the real line?",
+          "project": "Metric-Space Topology Atlas",
+          "focus": "rewriting familiar real-variable definitions in metric form"
+        },
+        {
+          "id": "u04-l05",
+          "number": 5,
+          "title": "Completeness and Completion",
+          "week": 10,
+          "unit": 4,
+          "unit_title": "Metric Spaces, Topology & Compactness",
+          "essential": "How do metric-space ideas generalize distance, convergence, continuity, and compactness beyond the real line?",
+          "project": "Metric-Space Topology Atlas",
+          "focus": "distinguishing complete spaces from incomplete subspaces"
+        },
+        {
+          "id": "u04-l06",
+          "number": 6,
+          "title": "Compactness and Sequential Compactness",
+          "week": 11,
+          "unit": 4,
+          "unit_title": "Metric Spaces, Topology & Compactness",
+          "essential": "How do metric-space ideas generalize distance, convergence, continuity, and compactness beyond the real line?",
+          "project": "Metric-Space Topology Atlas",
+          "focus": "proving finite-subcover and subsequence characterizations"
+        },
+        {
+          "id": "u04-l07",
+          "number": 7,
+          "title": "Connectedness, Heine–Borel and Continuous Images",
+          "week": 11,
+          "unit": 4,
+          "unit_title": "Metric Spaces, Topology & Compactness",
+          "essential": "How do metric-space ideas generalize distance, convergence, continuity, and compactness beyond the real line?",
+          "project": "Metric-Space Topology Atlas",
+          "focus": "proving interval and compact-image results"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Continuity, Uniform Continuity & Function Spaces",
+      "essential": "How do local and uniform notions of continuity govern approximation and stability?",
+      "project": "Continuity & Uniformity Theorem Portfolio",
+      "standards": [
+        "epsilon-delta continuity",
+        "sequential continuity",
+        "uniform continuity",
+        "compact-domain theorems",
+        "function spaces",
+        "sup norm",
+        "equicontinuity"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        12,
+        13,
+        14
+      ],
+      "lessons": [
+        {
+          "id": "u05-l01",
+          "number": 1,
+          "title": "Epsilon–Delta Continuity",
+          "week": 12,
+          "unit": 5,
+          "unit_title": "Continuity, Uniform Continuity & Function Spaces",
+          "essential": "How do local and uniform notions of continuity govern approximation and stability?",
+          "project": "Continuity & Uniformity Theorem Portfolio",
+          "focus": "proving continuity directly at a point"
+        },
+        {
+          "id": "u05-l02",
+          "number": 2,
+          "title": "Sequential Characterization of Continuity",
+          "week": 12,
+          "unit": 5,
+          "unit_title": "Continuity, Uniform Continuity & Function Spaces",
+          "essential": "How do local and uniform notions of continuity govern approximation and stability?",
+          "project": "Continuity & Uniformity Theorem Portfolio",
+          "focus": "using sequences to prove or disprove continuity"
+        },
+        {
+          "id": "u05-l03",
+          "number": 3,
+          "title": "Algebra and Composition of Continuous Functions",
+          "week": 12,
+          "unit": 5,
+          "unit_title": "Continuity, Uniform Continuity & Function Spaces",
+          "essential": "How do local and uniform notions of continuity govern approximation and stability?",
+          "project": "Continuity & Uniformity Theorem Portfolio",
+          "focus": "building continuous maps from known ones"
+        },
+        {
+          "id": "u05-l04",
+          "number": 4,
+          "title": "Extreme and Intermediate Value Theorems",
+          "week": 13,
+          "unit": 5,
+          "unit_title": "Continuity, Uniform Continuity & Function Spaces",
+          "essential": "How do local and uniform notions of continuity govern approximation and stability?",
+          "project": "Continuity & Uniformity Theorem Portfolio",
+          "focus": "using compactness and connectedness to guarantee values"
+        },
+        {
+          "id": "u05-l05",
+          "number": 5,
+          "title": "Uniform Continuity and Compact Domains",
+          "week": 13,
+          "unit": 5,
+          "unit_title": "Continuity, Uniform Continuity & Function Spaces",
+          "essential": "How do local and uniform notions of continuity govern approximation and stability?",
+          "project": "Continuity & Uniformity Theorem Portfolio",
+          "focus": "distinguishing pointwise delta choices from global ones"
+        },
+        {
+          "id": "u05-l06",
+          "number": 6,
+          "title": "Function Spaces and the Supremum Norm",
+          "week": 14,
+          "unit": 5,
+          "unit_title": "Continuity, Uniform Continuity & Function Spaces",
+          "essential": "How do local and uniform notions of continuity govern approximation and stability?",
+          "project": "Continuity & Uniformity Theorem Portfolio",
+          "focus": "treating continuous functions as points in a metric space"
+        },
+        {
+          "id": "u05-l07",
+          "number": 7,
+          "title": "Equicontinuity and Arzelà–Ascoli Preview",
+          "week": 14,
+          "unit": 5,
+          "unit_title": "Continuity, Uniform Continuity & Function Spaces",
+          "essential": "How do local and uniform notions of continuity govern approximation and stability?",
+          "project": "Continuity & Uniformity Theorem Portfolio",
+          "focus": "understanding compactness of families of functions"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Differentiation, Mean-Value Theorems & Taylor Theory",
+      "essential": "How does differentiability impose local linear structure and global constraints?",
+      "project": "Differentiation Theorem & Taylor Error Portfolio",
+      "standards": [
+        "derivative definition",
+        "linear approximation",
+        "Rolle theorem",
+        "mean value theorem",
+        "Taylor theorem",
+        "inverse function",
+        "convexity",
+        "higher derivatives"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        15,
+        16,
+        17
+      ],
+      "lessons": [
+        {
+          "id": "u06-l01",
+          "number": 1,
+          "title": "Derivative as a Limit and Linear Approximation",
+          "week": 15,
+          "unit": 6,
+          "unit_title": "Differentiation, Mean-Value Theorems & Taylor Theory",
+          "essential": "How does differentiability impose local linear structure and global constraints?",
+          "project": "Differentiation Theorem & Taylor Error Portfolio",
+          "focus": "proving differentiability from difference quotients"
+        },
+        {
+          "id": "u06-l02",
+          "number": 2,
+          "title": "Algebra of Derivatives and Chain Rule",
+          "week": 15,
+          "unit": 6,
+          "unit_title": "Differentiation, Mean-Value Theorems & Taylor Theory",
+          "essential": "How does differentiability impose local linear structure and global constraints?",
+          "project": "Differentiation Theorem & Taylor Error Portfolio",
+          "focus": "proving derivative rules from first principles"
+        },
+        {
+          "id": "u06-l03",
+          "number": 3,
+          "title": "Rolle’s Theorem and Mean Value Theorem",
+          "week": 15,
+          "unit": 6,
+          "unit_title": "Differentiation, Mean-Value Theorems & Taylor Theory",
+          "essential": "How does differentiability impose local linear structure and global constraints?",
+          "project": "Differentiation Theorem & Taylor Error Portfolio",
+          "focus": "deriving global conclusions from local derivatives"
+        },
+        {
+          "id": "u06-l04",
+          "number": 4,
+          "title": "Consequences of the Mean Value Theorem",
+          "week": 16,
+          "unit": 6,
+          "unit_title": "Differentiation, Mean-Value Theorems & Taylor Theory",
+          "essential": "How does differentiability impose local linear structure and global constraints?",
+          "project": "Differentiation Theorem & Taylor Error Portfolio",
+          "focus": "proving monotonicity, constancy, and Lipschitz estimates"
+        },
+        {
+          "id": "u06-l05",
+          "number": 5,
+          "title": "Taylor’s Theorem with Remainder",
+          "week": 16,
+          "unit": 6,
+          "unit_title": "Differentiation, Mean-Value Theorems & Taylor Theory",
+          "essential": "How does differentiability impose local linear structure and global constraints?",
+          "project": "Differentiation Theorem & Taylor Error Portfolio",
+          "focus": "controlling polynomial approximation error"
+        },
+        {
+          "id": "u06-l06",
+          "number": 6,
+          "title": "Convexity and Supporting Lines",
+          "week": 17,
+          "unit": 6,
+          "unit_title": "Differentiation, Mean-Value Theorems & Taylor Theory",
+          "essential": "How does differentiability impose local linear structure and global constraints?",
+          "project": "Differentiation Theorem & Taylor Error Portfolio",
+          "focus": "connecting second derivatives, secant slopes, and Jensen-type inequalities"
+        },
+        {
+          "id": "u06-l07",
+          "number": 7,
+          "title": "Inverse and Implicit Function Preview",
+          "week": 17,
+          "unit": 6,
+          "unit_title": "Differentiation, Mean-Value Theorems & Taylor Theory",
+          "essential": "How does differentiability impose local linear structure and global constraints?",
+          "project": "Differentiation Theorem & Taylor Error Portfolio",
+          "focus": "understanding local invertibility and nonvanishing derivatives"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Riemann Integration & the Fundamental Theorem",
+      "essential": "How do upper and lower sums make area and accumulation rigorous?",
+      "project": "Riemann Integrability & Fundamental Theorem Dossier",
+      "standards": [
+        "partitions",
+        "Riemann sums",
+        "upper and lower integrals",
+        "integrability criteria",
+        "FTC",
+        "change of variables",
+        "improper integrals"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        18,
+        19,
+        20
+      ],
+      "lessons": [
+        {
+          "id": "u07-l01",
+          "number": 1,
+          "title": "Partitions, Upper Sums and Lower Sums",
+          "week": 18,
+          "unit": 7,
+          "unit_title": "Riemann Integration & the Fundamental Theorem",
+          "essential": "How do upper and lower sums make area and accumulation rigorous?",
+          "project": "Riemann Integrability & Fundamental Theorem Dossier",
+          "focus": "constructing Darboux sums and comparing refinements"
+        },
+        {
+          "id": "u07-l02",
+          "number": 2,
+          "title": "Riemann Integrability Criteria",
+          "week": 18,
+          "unit": 7,
+          "unit_title": "Riemann Integration & the Fundamental Theorem",
+          "essential": "How do upper and lower sums make area and accumulation rigorous?",
+          "project": "Riemann Integrability & Fundamental Theorem Dossier",
+          "focus": "proving integrability through oscillation and upper–lower gaps"
+        },
+        {
+          "id": "u07-l03",
+          "number": 3,
+          "title": "Continuous and Monotone Functions Are Integrable",
+          "week": 18,
+          "unit": 7,
+          "unit_title": "Riemann Integration & the Fundamental Theorem",
+          "essential": "How do upper and lower sums make area and accumulation rigorous?",
+          "project": "Riemann Integrability & Fundamental Theorem Dossier",
+          "focus": "establishing broad integrability classes"
+        },
+        {
+          "id": "u07-l04",
+          "number": 4,
+          "title": "Properties of the Riemann Integral",
+          "week": 19,
+          "unit": 7,
+          "unit_title": "Riemann Integration & the Fundamental Theorem",
+          "essential": "How do upper and lower sums make area and accumulation rigorous?",
+          "project": "Riemann Integrability & Fundamental Theorem Dossier",
+          "focus": "proving linearity, monotonicity, and estimates"
+        },
+        {
+          "id": "u07-l05",
+          "number": 5,
+          "title": "Fundamental Theorem of Calculus, Part I",
+          "week": 19,
+          "unit": 7,
+          "unit_title": "Riemann Integration & the Fundamental Theorem",
+          "essential": "How do upper and lower sums make area and accumulation rigorous?",
+          "project": "Riemann Integrability & Fundamental Theorem Dossier",
+          "focus": "differentiating accumulation functions"
+        },
+        {
+          "id": "u07-l06",
+          "number": 6,
+          "title": "Fundamental Theorem of Calculus, Part II and Substitution",
+          "week": 20,
+          "unit": 7,
+          "unit_title": "Riemann Integration & the Fundamental Theorem",
+          "essential": "How do upper and lower sums make area and accumulation rigorous?",
+          "project": "Riemann Integrability & Fundamental Theorem Dossier",
+          "focus": "evaluating integrals from antiderivatives and justified changes of variables"
+        },
+        {
+          "id": "u07-l07",
+          "number": 7,
+          "title": "Improper Integrals and Convergence",
+          "week": 20,
+          "unit": 7,
+          "unit_title": "Riemann Integration & the Fundamental Theorem",
+          "essential": "How do upper and lower sums make area and accumulation rigorous?",
+          "project": "Riemann Integrability & Fundamental Theorem Dossier",
+          "focus": "defining integrals over unbounded domains or singularities through limits"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Sequences & Series of Functions",
+      "essential": "When may limits, derivatives, integrals, and infinite sums be interchanged safely?",
+      "project": "Uniform Convergence & Interchange-of-Limits Portfolio",
+      "standards": [
+        "pointwise convergence",
+        "uniform convergence",
+        "uniform Cauchy criterion",
+        "Weierstrass M-test",
+        "continuity preservation",
+        "termwise integration",
+        "termwise differentiation"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        21,
+        22,
+        23
+      ],
+      "lessons": [
+        {
+          "id": "u08-l01",
+          "number": 1,
+          "title": "Pointwise versus Uniform Convergence",
+          "week": 21,
+          "unit": 8,
+          "unit_title": "Sequences & Series of Functions",
+          "essential": "When may limits, derivatives, integrals, and infinite sums be interchanged safely?",
+          "project": "Uniform Convergence & Interchange-of-Limits Portfolio",
+          "focus": "distinguishing convergence at each point from a global rate"
+        },
+        {
+          "id": "u08-l02",
+          "number": 2,
+          "title": "Uniform Cauchy Criterion",
+          "week": 21,
+          "unit": 8,
+          "unit_title": "Sequences & Series of Functions",
+          "essential": "When may limits, derivatives, integrals, and infinite sums be interchanged safely?",
+          "project": "Uniform Convergence & Interchange-of-Limits Portfolio",
+          "focus": "testing uniform convergence without knowing the limit"
+        },
+        {
+          "id": "u08-l03",
+          "number": 3,
+          "title": "Weierstrass M-Test",
+          "week": 21,
+          "unit": 8,
+          "unit_title": "Sequences & Series of Functions",
+          "essential": "When may limits, derivatives, integrals, and infinite sums be interchanged safely?",
+          "project": "Uniform Convergence & Interchange-of-Limits Portfolio",
+          "focus": "dominating a function series by a convergent numerical series"
+        },
+        {
+          "id": "u08-l04",
+          "number": 4,
+          "title": "Continuity under Uniform Limits",
+          "week": 22,
+          "unit": 8,
+          "unit_title": "Sequences & Series of Functions",
+          "essential": "When may limits, derivatives, integrals, and infinite sums be interchanged safely?",
+          "project": "Uniform Convergence & Interchange-of-Limits Portfolio",
+          "focus": "proving that uniform limits of continuous functions are continuous"
+        },
+        {
+          "id": "u08-l05",
+          "number": 5,
+          "title": "Interchanging Limits and Integrals",
+          "week": 22,
+          "unit": 8,
+          "unit_title": "Sequences & Series of Functions",
+          "essential": "When may limits, derivatives, integrals, and infinite sums be interchanged safely?",
+          "project": "Uniform Convergence & Interchange-of-Limits Portfolio",
+          "focus": "justifying termwise Riemann integration"
+        },
+        {
+          "id": "u08-l06",
+          "number": 6,
+          "title": "Interchanging Limits and Derivatives",
+          "week": 23,
+          "unit": 8,
+          "unit_title": "Sequences & Series of Functions",
+          "essential": "When may limits, derivatives, integrals, and infinite sums be interchanged safely?",
+          "project": "Uniform Convergence & Interchange-of-Limits Portfolio",
+          "focus": "using derivative convergence plus one anchored point"
+        },
+        {
+          "id": "u08-l07",
+          "number": 7,
+          "title": "Power-Series Uniformity and Analytic Preview",
+          "week": 23,
+          "unit": 8,
+          "unit_title": "Sequences & Series of Functions",
+          "essential": "When may limits, derivatives, integrals, and infinite sums be interchanged safely?",
+          "project": "Uniform Convergence & Interchange-of-Limits Portfolio",
+          "focus": "connecting compact subinterval convergence with termwise operations"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Measure, Lebesgue Integration & Lp Foundations",
+      "essential": "How do measure and Lebesgue integration extend integration and convergence to broader function classes?",
+      "project": "Measure-Theoretic Convergence & Lp Portfolio",
+      "standards": [
+        "sigma-algebras",
+        "measures",
+        "measurable functions",
+        "Lebesgue integral",
+        "Fatou",
+        "monotone convergence",
+        "dominated convergence",
+        "Lp spaces"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        24,
+        25,
+        26
+      ],
+      "lessons": [
+        {
+          "id": "u09-l01",
+          "number": 1,
+          "title": "Sigma-Algebras and Measures",
+          "week": 24,
+          "unit": 9,
+          "unit_title": "Measure, Lebesgue Integration & Lp Foundations",
+          "essential": "How do measure and Lebesgue integration extend integration and convergence to broader function classes?",
+          "project": "Measure-Theoretic Convergence & Lp Portfolio",
+          "focus": "constructing measurable collections and countably additive size functions"
+        },
+        {
+          "id": "u09-l02",
+          "number": 2,
+          "title": "Outer Measure and Measurable Sets",
+          "week": 24,
+          "unit": 9,
+          "unit_title": "Measure, Lebesgue Integration & Lp Foundations",
+          "essential": "How do measure and Lebesgue integration extend integration and convergence to broader function classes?",
+          "project": "Measure-Theoretic Convergence & Lp Portfolio",
+          "focus": "understanding the extension from interval length to Lebesgue measure"
+        },
+        {
+          "id": "u09-l03",
+          "number": 3,
+          "title": "Measurable Functions and Almost-Everywhere Statements",
+          "week": 24,
+          "unit": 9,
+          "unit_title": "Measure, Lebesgue Integration & Lp Foundations",
+          "essential": "How do measure and Lebesgue integration extend integration and convergence to broader function classes?",
+          "project": "Measure-Theoretic Convergence & Lp Portfolio",
+          "focus": "characterizing measurable maps and null-set exceptions"
+        },
+        {
+          "id": "u09-l04",
+          "number": 4,
+          "title": "Lebesgue Integral of Simple and Nonnegative Functions",
+          "week": 25,
+          "unit": 9,
+          "unit_title": "Measure, Lebesgue Integration & Lp Foundations",
+          "essential": "How do measure and Lebesgue integration extend integration and convergence to broader function classes?",
+          "project": "Measure-Theoretic Convergence & Lp Portfolio",
+          "focus": "building integration from measurable step approximations"
+        },
+        {
+          "id": "u09-l05",
+          "number": 5,
+          "title": "Integrable Functions and Comparison with Riemann Integration",
+          "week": 25,
+          "unit": 9,
+          "unit_title": "Measure, Lebesgue Integration & Lp Foundations",
+          "essential": "How do measure and Lebesgue integration extend integration and convergence to broader function classes?",
+          "project": "Measure-Theoretic Convergence & Lp Portfolio",
+          "focus": "integrating positive and negative parts"
+        },
+        {
+          "id": "u09-l06",
+          "number": 6,
+          "title": "Fatou, Monotone Convergence and Dominated Convergence",
+          "week": 26,
+          "unit": 9,
+          "unit_title": "Measure, Lebesgue Integration & Lp Foundations",
+          "essential": "How do measure and Lebesgue integration extend integration and convergence to broader function classes?",
+          "project": "Measure-Theoretic Convergence & Lp Portfolio",
+          "focus": "selecting the correct theorem for interchanging limits and integrals"
+        },
+        {
+          "id": "u09-l07",
+          "number": 7,
+          "title": "Lp Spaces, Hölder and Minkowski Inequalities",
+          "week": 26,
+          "unit": 9,
+          "unit_title": "Measure, Lebesgue Integration & Lp Foundations",
+          "essential": "How do measure and Lebesgue integration extend integration and convergence to broader function classes?",
+          "project": "Measure-Theoretic Convergence & Lp Portfolio",
+          "focus": "measuring functions by p-power integrability"
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Complex Numbers, Analyticity & Conformal Geometry",
+      "essential": "How does complex differentiability create stronger structure than real differentiability?",
+      "project": "Holomorphic Function & Mapping Atlas",
+      "standards": [
+        "complex arithmetic",
+        "polar form",
+        "exponential and logarithm",
+        "complex limits",
+        "holomorphicity",
+        "Cauchy-Riemann equations",
+        "harmonic functions",
+        "conformal maps"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        27,
+        28,
+        29
+      ],
+      "lessons": [
+        {
+          "id": "u10-l01",
+          "number": 1,
+          "title": "Complex Arithmetic, Geometry and Polar Form",
+          "week": 27,
+          "unit": 10,
+          "unit_title": "Complex Numbers, Analyticity & Conformal Geometry",
+          "essential": "How does complex differentiability create stronger structure than real differentiability?",
+          "project": "Holomorphic Function & Mapping Atlas",
+          "focus": "interpreting multiplication, powers, and roots geometrically"
+        },
+        {
+          "id": "u10-l02",
+          "number": 2,
+          "title": "Complex Exponential, Logarithm and Branches",
+          "week": 27,
+          "unit": 10,
+          "unit_title": "Complex Numbers, Analyticity & Conformal Geometry",
+          "essential": "How does complex differentiability create stronger structure than real differentiability?",
+          "project": "Holomorphic Function & Mapping Atlas",
+          "focus": "handling multivalued arguments and branch cuts"
+        },
+        {
+          "id": "u10-l03",
+          "number": 3,
+          "title": "Complex Limits and Continuity",
+          "week": 27,
+          "unit": 10,
+          "unit_title": "Complex Numbers, Analyticity & Conformal Geometry",
+          "essential": "How does complex differentiability create stronger structure than real differentiability?",
+          "project": "Holomorphic Function & Mapping Atlas",
+          "focus": "using the planar metric and path tests"
+        },
+        {
+          "id": "u10-l04",
+          "number": 4,
+          "title": "Complex Differentiability and Holomorphic Functions",
+          "week": 28,
+          "unit": 10,
+          "unit_title": "Complex Numbers, Analyticity & Conformal Geometry",
+          "essential": "How does complex differentiability create stronger structure than real differentiability?",
+          "project": "Holomorphic Function & Mapping Atlas",
+          "focus": "requiring one derivative independent of approach direction"
+        },
+        {
+          "id": "u10-l05",
+          "number": 5,
+          "title": "Cauchy–Riemann Equations",
+          "week": 28,
+          "unit": 10,
+          "unit_title": "Complex Numbers, Analyticity & Conformal Geometry",
+          "essential": "How does complex differentiability create stronger structure than real differentiability?",
+          "project": "Holomorphic Function & Mapping Atlas",
+          "focus": "deriving necessary conditions and applying sufficient regularity conditions"
+        },
+        {
+          "id": "u10-l06",
+          "number": 6,
+          "title": "Harmonic Functions and Harmonic Conjugates",
+          "week": 29,
+          "unit": 10,
+          "unit_title": "Complex Numbers, Analyticity & Conformal Geometry",
+          "essential": "How does complex differentiability create stronger structure than real differentiability?",
+          "project": "Holomorphic Function & Mapping Atlas",
+          "focus": "connecting holomorphic functions with Laplace’s equation"
+        },
+        {
+          "id": "u10-l07",
+          "number": 7,
+          "title": "Conformal Maps and Möbius Transformations",
+          "week": 29,
+          "unit": 10,
+          "unit_title": "Complex Numbers, Analyticity & Conformal Geometry",
+          "essential": "How does complex differentiability create stronger structure than real differentiability?",
+          "project": "Holomorphic Function & Mapping Atlas",
+          "focus": "studying angle-preserving maps and fractional linear transformations"
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Complex Integration & Cauchy Theory",
+      "essential": "How does contour integration lead to the central rigidity theorems of complex analysis?",
+      "project": "Contour Integration & Cauchy-Theory Proof Portfolio",
+      "standards": [
+        "contours",
+        "complex line integrals",
+        "primitives",
+        "Cauchy theorem",
+        "Cauchy integral formula",
+        "derivative estimates",
+        "Liouville theorem",
+        "fundamental theorem of algebra"
+      ],
+      "weeks": 2,
+      "week_numbers": [
+        30,
+        31
+      ],
+      "lessons": [
+        {
+          "id": "u11-l01",
+          "number": 1,
+          "title": "Contours and Complex Line Integrals",
+          "week": 30,
+          "unit": 11,
+          "unit_title": "Complex Integration & Cauchy Theory",
+          "essential": "How does contour integration lead to the central rigidity theorems of complex analysis?",
+          "project": "Contour Integration & Cauchy-Theory Proof Portfolio",
+          "focus": "parameterizing curves and integrating complex-valued functions"
+        },
+        {
+          "id": "u11-l02",
+          "number": 2,
+          "title": "Primitives and Path Independence",
+          "week": 30,
+          "unit": 11,
+          "unit_title": "Complex Integration & Cauchy Theory",
+          "essential": "How does contour integration lead to the central rigidity theorems of complex analysis?",
+          "project": "Contour Integration & Cauchy-Theory Proof Portfolio",
+          "focus": "connecting antiderivatives with zero integrals on closed curves"
+        },
+        {
+          "id": "u11-l03",
+          "number": 3,
+          "title": "Cauchy–Goursat Theorem",
+          "week": 30,
+          "unit": 11,
+          "unit_title": "Complex Integration & Cauchy Theory",
+          "essential": "How does contour integration lead to the central rigidity theorems of complex analysis?",
+          "project": "Contour Integration & Cauchy-Theory Proof Portfolio",
+          "focus": "proving vanishing contour integrals for holomorphic functions"
+        },
+        {
+          "id": "u11-l04",
+          "number": 4,
+          "title": "Cauchy Integral Formula",
+          "week": 30,
+          "unit": 11,
+          "unit_title": "Complex Integration & Cauchy Theory",
+          "essential": "How does contour integration lead to the central rigidity theorems of complex analysis?",
+          "project": "Contour Integration & Cauchy-Theory Proof Portfolio",
+          "focus": "recovering interior values from boundary data"
+        },
+        {
+          "id": "u11-l05",
+          "number": 5,
+          "title": "Higher Derivatives and Cauchy Estimates",
+          "week": 31,
+          "unit": 11,
+          "unit_title": "Complex Integration & Cauchy Theory",
+          "essential": "How does contour integration lead to the central rigidity theorems of complex analysis?",
+          "project": "Contour Integration & Cauchy-Theory Proof Portfolio",
+          "focus": "deriving analyticity and quantitative derivative bounds"
+        },
+        {
+          "id": "u11-l06",
+          "number": 6,
+          "title": "Liouville’s Theorem and Fundamental Theorem of Algebra",
+          "week": 31,
+          "unit": 11,
+          "unit_title": "Complex Integration & Cauchy Theory",
+          "essential": "How does contour integration lead to the central rigidity theorems of complex analysis?",
+          "project": "Contour Integration & Cauchy-Theory Proof Portfolio",
+          "focus": "using bounded entire functions to prove polynomial root existence"
+        },
+        {
+          "id": "u11-l07",
+          "number": 7,
+          "title": "Maximum Modulus, Open Mapping and Identity Theorems",
+          "week": 31,
+          "unit": 11,
+          "unit_title": "Complex Integration & Cauchy Theory",
+          "essential": "How does contour integration lead to the central rigidity theorems of complex analysis?",
+          "project": "Contour Integration & Cauchy-Theory Proof Portfolio",
+          "focus": "establishing rigidity and uniqueness of holomorphic functions"
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Singularities, Laurent Series & Residues",
+      "essential": "How do local singular expansions convert complex integrals into algebraic coefficient calculations?",
+      "project": "Singularity Classification & Residue Calculation Portfolio",
+      "standards": [
+        "Laurent series",
+        "isolated singularities",
+        "removable singularities",
+        "poles",
+        "essential singularities",
+        "residues",
+        "residue theorem",
+        "argument principle"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        32,
+        33,
+        34
+      ],
+      "lessons": [
+        {
+          "id": "u12-l01",
+          "number": 1,
+          "title": "Laurent Series and Annuli of Convergence",
+          "week": 32,
+          "unit": 12,
+          "unit_title": "Singularities, Laurent Series & Residues",
+          "essential": "How do local singular expansions convert complex integrals into algebraic coefficient calculations?",
+          "project": "Singularity Classification & Residue Calculation Portfolio",
+          "focus": "expanding holomorphic functions on annular regions"
+        },
+        {
+          "id": "u12-l02",
+          "number": 2,
+          "title": "Classification of Isolated Singularities",
+          "week": 32,
+          "unit": 12,
+          "unit_title": "Singularities, Laurent Series & Residues",
+          "essential": "How do local singular expansions convert complex integrals into algebraic coefficient calculations?",
+          "project": "Singularity Classification & Residue Calculation Portfolio",
+          "focus": "reading removable singularities, poles, and essential singularities from principal parts"
+        },
+        {
+          "id": "u12-l03",
+          "number": 3,
+          "title": "Residues and Coefficient Formulas",
+          "week": 32,
+          "unit": 12,
+          "unit_title": "Singularities, Laurent Series & Residues",
+          "essential": "How do local singular expansions convert complex integrals into algebraic coefficient calculations?",
+          "project": "Singularity Classification & Residue Calculation Portfolio",
+          "focus": "computing the coefficient of (z-z_0)^{-1}"
+        },
+        {
+          "id": "u12-l04",
+          "number": 4,
+          "title": "Residue Theorem",
+          "week": 33,
+          "unit": 12,
+          "unit_title": "Singularities, Laurent Series & Residues",
+          "essential": "How do local singular expansions convert complex integrals into algebraic coefficient calculations?",
+          "project": "Singularity Classification & Residue Calculation Portfolio",
+          "focus": "evaluating contour integrals from enclosed residues"
+        },
+        {
+          "id": "u12-l05",
+          "number": 5,
+          "title": "Real Integrals by Residues",
+          "week": 33,
+          "unit": 12,
+          "unit_title": "Singularities, Laurent Series & Residues",
+          "essential": "How do local singular expansions convert complex integrals into algebraic coefficient calculations?",
+          "project": "Singularity Classification & Residue Calculation Portfolio",
+          "focus": "designing contours for rational, trigonometric, and transform integrals"
+        },
+        {
+          "id": "u12-l06",
+          "number": 6,
+          "title": "Argument Principle and Rouché’s Theorem",
+          "week": 34,
+          "unit": 12,
+          "unit_title": "Singularities, Laurent Series & Residues",
+          "essential": "How do local singular expansions convert complex integrals into algebraic coefficient calculations?",
+          "project": "Singularity Classification & Residue Calculation Portfolio",
+          "focus": "counting zeros and poles through winding and comparison"
+        },
+        {
+          "id": "u12-l07",
+          "number": 7,
+          "title": "Meromorphic Functions and Partial Fractions",
+          "week": 34,
+          "unit": 12,
+          "unit_title": "Singularities, Laurent Series & Residues",
+          "essential": "How do local singular expansions convert complex integrals into algebraic coefficient calculations?",
+          "project": "Singularity Classification & Residue Calculation Portfolio",
+          "focus": "relating poles, residues, and global expansions"
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Harmonic, Conformal & Research-Level Complex Analysis",
+      "essential": "How do harmonic theory, conformal mapping, analytic continuation, and normal families open pathways to advanced research?",
+      "project": "Advanced Analysis Research Exposition & Oral Defense",
+      "standards": [
+        "Poisson kernel",
+        "harmonic mean value",
+        "Schwarz lemma",
+        "Riemann mapping",
+        "analytic continuation",
+        "normal families",
+        "Montel theorem",
+        "special functions",
+        "research exposition"
+      ],
+      "weeks": 2,
+      "week_numbers": [
+        35,
+        36
+      ],
+      "lessons": [
+        {
+          "id": "u13-l01",
+          "number": 1,
+          "title": "Mean-Value Property and Poisson Kernel",
+          "week": 35,
+          "unit": 13,
+          "unit_title": "Harmonic, Conformal & Research-Level Complex Analysis",
+          "essential": "How do harmonic theory, conformal mapping, analytic continuation, and normal families open pathways to advanced research?",
+          "project": "Advanced Analysis Research Exposition & Oral Defense",
+          "focus": "reconstructing harmonic functions from boundary data"
+        },
+        {
+          "id": "u13-l02",
+          "number": 2,
+          "title": "Schwarz Lemma and Automorphisms of the Disk",
+          "week": 35,
+          "unit": 13,
+          "unit_title": "Harmonic, Conformal & Research-Level Complex Analysis",
+          "essential": "How do harmonic theory, conformal mapping, analytic continuation, and normal families open pathways to advanced research?",
+          "project": "Advanced Analysis Research Exposition & Oral Defense",
+          "focus": "proving sharp bounds for holomorphic self-maps"
+        },
+        {
+          "id": "u13-l03",
+          "number": 3,
+          "title": "Riemann Mapping Theorem: Statement and Consequences",
+          "week": 35,
+          "unit": 13,
+          "unit_title": "Harmonic, Conformal & Research-Level Complex Analysis",
+          "essential": "How do harmonic theory, conformal mapping, analytic continuation, and normal families open pathways to advanced research?",
+          "project": "Advanced Analysis Research Exposition & Oral Defense",
+          "focus": "understanding conformal equivalence of simply connected planar domains"
+        },
+        {
+          "id": "u13-l04",
+          "number": 4,
+          "title": "Analytic Continuation and Monodromy Preview",
+          "week": 35,
+          "unit": 13,
+          "unit_title": "Harmonic, Conformal & Research-Level Complex Analysis",
+          "essential": "How do harmonic theory, conformal mapping, analytic continuation, and normal families open pathways to advanced research?",
+          "project": "Advanced Analysis Research Exposition & Oral Defense",
+          "focus": "extending analytic elements along paths and tracking uniqueness"
+        },
+        {
+          "id": "u13-l05",
+          "number": 5,
+          "title": "Normal Families, Montel and Compactness Methods",
+          "week": 36,
+          "unit": 13,
+          "unit_title": "Harmonic, Conformal & Research-Level Complex Analysis",
+          "essential": "How do harmonic theory, conformal mapping, analytic continuation, and normal families open pathways to advanced research?",
+          "project": "Advanced Analysis Research Exposition & Oral Defense",
+          "focus": "using subsequential compactness of holomorphic families"
+        },
+        {
+          "id": "u13-l06",
+          "number": 6,
+          "title": "Special Functions, Gamma and Zeta Previews",
+          "week": 36,
+          "unit": 13,
+          "unit_title": "Harmonic, Conformal & Research-Level Complex Analysis",
+          "essential": "How do harmonic theory, conformal mapping, analytic continuation, and normal families open pathways to advanced research?",
+          "project": "Advanced Analysis Research Exposition & Oral Defense",
+          "focus": "connecting analytic continuation, products, and residues to classical functions"
+        },
+        {
+          "id": "u13-l07",
+          "number": 7,
+          "title": "Research Problem Design and Literature Architecture",
+          "week": 36,
+          "unit": 13,
+          "unit_title": "Harmonic, Conformal & Research-Level Complex Analysis",
+          "essential": "How do harmonic theory, conformal mapping, analytic continuation, and normal families open pathways to advanced research?",
+          "project": "Advanced Analysis Research Exposition & Oral Defense",
+          "focus": "forming a feasible advanced-analysis question with prerequisite theorem map"
+        },
+        {
+          "id": "u13-l08",
+          "number": 8,
+          "title": "Expository Paper, Proof Defense and Graduate Bridge",
+          "week": 36,
+          "unit": 13,
+          "unit_title": "Harmonic, Conformal & Research-Level Complex Analysis",
+          "essential": "How do harmonic theory, conformal mapping, analytic continuation, and normal families open pathways to advanced research?",
+          "project": "Advanced Analysis Research Exposition & Oral Defense",
+          "focus": "presenting a rigorous theorem sequence, limitations, and next research steps"
+        }
+      ]
+    }
+  ],
+  "weeks": [
+    {
+      "week": 1,
+      "unit": 1,
+      "title": "Proof Foundations & the Real Number System",
+      "essential": "How do ordered-field axioms and completeness support every rigorous statement about real-variable analysis?",
+      "focus": "Ordered-Field Axioms and Consequences; Absolute Value, Intervals and the Triangle Inequality; Upper Bounds, Suprema and Infima; The Completeness Axiom",
+      "lesson_ids": [
+        "u01-l01",
+        "u01-l02",
+        "u01-l03",
+        "u01-l04"
+      ],
+      "unit_path": "units/unit-01/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 2,
+      "unit": 1,
+      "title": "Proof Foundations & the Real Number System",
+      "essential": "How do ordered-field axioms and completeness support every rigorous statement about real-variable analysis?",
+      "focus": "Archimedean Property and Density of the Rationals; Nested Intervals and Monotone Completeness; Proof Synthesis: Foundations of R",
+      "lesson_ids": [
+        "u01-l05",
+        "u01-l06",
+        "u01-l07"
+      ],
+      "unit_path": "units/unit-01/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 3,
+      "unit": 2,
+      "title": "Sequences, Subsequences & Completeness",
+      "essential": "How do sequences encode limiting behavior, compactness, and completeness on the real line?",
+      "focus": "Sequence Limits from the Epsilon Definition; Limit Uniqueness and Algebra of Limits; Monotone Convergence Theorem",
+      "lesson_ids": [
+        "u02-l01",
+        "u02-l02",
+        "u02-l03"
+      ],
+      "unit_path": "units/unit-02/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 4,
+      "unit": 2,
+      "title": "Sequences, Subsequences & Completeness",
+      "essential": "How do sequences encode limiting behavior, compactness, and completeness on the real line?",
+      "focus": "Subsequences and Cluster Points; Bolzano–Weierstrass Theorem",
+      "lesson_ids": [
+        "u02-l04",
+        "u02-l05"
+      ],
+      "unit_path": "units/unit-02/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 5,
+      "unit": 2,
+      "title": "Sequences, Subsequences & Completeness",
+      "essential": "How do sequences encode limiting behavior, compactness, and completeness on the real line?",
+      "focus": "Cauchy Sequences and Completeness; Limit Superior, Limit Inferior and Oscillation",
+      "lesson_ids": [
+        "u02-l06",
+        "u02-l07"
+      ],
+      "unit_path": "units/unit-02/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 6,
+      "unit": 3,
+      "title": "Infinite Series & Power Series",
+      "essential": "How do convergence tests and power series control infinite accumulation and approximation?",
+      "focus": "Series, Partial Sums and the Cauchy Criterion; Positive-Term Comparison Tests; Ratio, Root and Integral Tests",
+      "lesson_ids": [
+        "u03-l01",
+        "u03-l02",
+        "u03-l03"
+      ],
+      "unit_path": "units/unit-03/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 7,
+      "unit": 3,
+      "title": "Infinite Series & Power Series",
+      "essential": "How do convergence tests and power series control infinite accumulation and approximation?",
+      "focus": "Absolute and Conditional Convergence; Alternating Series and Error Bounds",
+      "lesson_ids": [
+        "u03-l04",
+        "u03-l05"
+      ],
+      "unit_path": "units/unit-03/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 8,
+      "unit": 3,
+      "title": "Infinite Series & Power Series",
+      "essential": "How do convergence tests and power series control infinite accumulation and approximation?",
+      "focus": "Power Series and Radius of Convergence; Operations on Power Series",
+      "lesson_ids": [
+        "u03-l06",
+        "u03-l07"
+      ],
+      "unit_path": "units/unit-03/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 9,
+      "unit": 4,
+      "title": "Metric Spaces, Topology & Compactness",
+      "essential": "How do metric-space ideas generalize distance, convergence, continuity, and compactness beyond the real line?",
+      "focus": "Metrics and Open Balls; Open Sets, Closed Sets and Neighborhoods; Interior, Closure, Boundary and Accumulation Points",
+      "lesson_ids": [
+        "u04-l01",
+        "u04-l02",
+        "u04-l03"
+      ],
+      "unit_path": "units/unit-04/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 10,
+      "unit": 4,
+      "title": "Metric Spaces, Topology & Compactness",
+      "essential": "How do metric-space ideas generalize distance, convergence, continuity, and compactness beyond the real line?",
+      "focus": "Convergence and Continuity in Metric Spaces; Completeness and Completion",
+      "lesson_ids": [
+        "u04-l04",
+        "u04-l05"
+      ],
+      "unit_path": "units/unit-04/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 11,
+      "unit": 4,
+      "title": "Metric Spaces, Topology & Compactness",
+      "essential": "How do metric-space ideas generalize distance, convergence, continuity, and compactness beyond the real line?",
+      "focus": "Compactness and Sequential Compactness; Connectedness, Heine–Borel and Continuous Images",
+      "lesson_ids": [
+        "u04-l06",
+        "u04-l07"
+      ],
+      "unit_path": "units/unit-04/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 12,
+      "unit": 5,
+      "title": "Continuity, Uniform Continuity & Function Spaces",
+      "essential": "How do local and uniform notions of continuity govern approximation and stability?",
+      "focus": "Epsilon–Delta Continuity; Sequential Characterization of Continuity; Algebra and Composition of Continuous Functions",
+      "lesson_ids": [
+        "u05-l01",
+        "u05-l02",
+        "u05-l03"
+      ],
+      "unit_path": "units/unit-05/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 13,
+      "unit": 5,
+      "title": "Continuity, Uniform Continuity & Function Spaces",
+      "essential": "How do local and uniform notions of continuity govern approximation and stability?",
+      "focus": "Extreme and Intermediate Value Theorems; Uniform Continuity and Compact Domains",
+      "lesson_ids": [
+        "u05-l04",
+        "u05-l05"
+      ],
+      "unit_path": "units/unit-05/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 14,
+      "unit": 5,
+      "title": "Continuity, Uniform Continuity & Function Spaces",
+      "essential": "How do local and uniform notions of continuity govern approximation and stability?",
+      "focus": "Function Spaces and the Supremum Norm; Equicontinuity and Arzelà–Ascoli Preview",
+      "lesson_ids": [
+        "u05-l06",
+        "u05-l07"
+      ],
+      "unit_path": "units/unit-05/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 15,
+      "unit": 6,
+      "title": "Differentiation, Mean-Value Theorems & Taylor Theory",
+      "essential": "How does differentiability impose local linear structure and global constraints?",
+      "focus": "Derivative as a Limit and Linear Approximation; Algebra of Derivatives and Chain Rule; Rolle’s Theorem and Mean Value Theorem",
+      "lesson_ids": [
+        "u06-l01",
+        "u06-l02",
+        "u06-l03"
+      ],
+      "unit_path": "units/unit-06/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 16,
+      "unit": 6,
+      "title": "Differentiation, Mean-Value Theorems & Taylor Theory",
+      "essential": "How does differentiability impose local linear structure and global constraints?",
+      "focus": "Consequences of the Mean Value Theorem; Taylor’s Theorem with Remainder",
+      "lesson_ids": [
+        "u06-l04",
+        "u06-l05"
+      ],
+      "unit_path": "units/unit-06/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 17,
+      "unit": 6,
+      "title": "Differentiation, Mean-Value Theorems & Taylor Theory",
+      "essential": "How does differentiability impose local linear structure and global constraints?",
+      "focus": "Convexity and Supporting Lines; Inverse and Implicit Function Preview",
+      "lesson_ids": [
+        "u06-l06",
+        "u06-l07"
+      ],
+      "unit_path": "units/unit-06/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 18,
+      "unit": 7,
+      "title": "Riemann Integration & the Fundamental Theorem",
+      "essential": "How do upper and lower sums make area and accumulation rigorous?",
+      "focus": "Partitions, Upper Sums and Lower Sums; Riemann Integrability Criteria; Continuous and Monotone Functions Are Integrable",
+      "lesson_ids": [
+        "u07-l01",
+        "u07-l02",
+        "u07-l03"
+      ],
+      "unit_path": "units/unit-07/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 19,
+      "unit": 7,
+      "title": "Riemann Integration & the Fundamental Theorem",
+      "essential": "How do upper and lower sums make area and accumulation rigorous?",
+      "focus": "Properties of the Riemann Integral; Fundamental Theorem of Calculus, Part I",
+      "lesson_ids": [
+        "u07-l04",
+        "u07-l05"
+      ],
+      "unit_path": "units/unit-07/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 20,
+      "unit": 7,
+      "title": "Riemann Integration & the Fundamental Theorem",
+      "essential": "How do upper and lower sums make area and accumulation rigorous?",
+      "focus": "Fundamental Theorem of Calculus, Part II and Substitution; Improper Integrals and Convergence",
+      "lesson_ids": [
+        "u07-l06",
+        "u07-l07"
+      ],
+      "unit_path": "units/unit-07/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 21,
+      "unit": 8,
+      "title": "Sequences & Series of Functions",
+      "essential": "When may limits, derivatives, integrals, and infinite sums be interchanged safely?",
+      "focus": "Pointwise versus Uniform Convergence; Uniform Cauchy Criterion; Weierstrass M-Test",
+      "lesson_ids": [
+        "u08-l01",
+        "u08-l02",
+        "u08-l03"
+      ],
+      "unit_path": "units/unit-08/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 22,
+      "unit": 8,
+      "title": "Sequences & Series of Functions",
+      "essential": "When may limits, derivatives, integrals, and infinite sums be interchanged safely?",
+      "focus": "Continuity under Uniform Limits; Interchanging Limits and Integrals",
+      "lesson_ids": [
+        "u08-l04",
+        "u08-l05"
+      ],
+      "unit_path": "units/unit-08/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 23,
+      "unit": 8,
+      "title": "Sequences & Series of Functions",
+      "essential": "When may limits, derivatives, integrals, and infinite sums be interchanged safely?",
+      "focus": "Interchanging Limits and Derivatives; Power-Series Uniformity and Analytic Preview",
+      "lesson_ids": [
+        "u08-l06",
+        "u08-l07"
+      ],
+      "unit_path": "units/unit-08/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 24,
+      "unit": 9,
+      "title": "Measure, Lebesgue Integration & Lp Foundations",
+      "essential": "How do measure and Lebesgue integration extend integration and convergence to broader function classes?",
+      "focus": "Sigma-Algebras and Measures; Outer Measure and Measurable Sets; Measurable Functions and Almost-Everywhere Statements",
+      "lesson_ids": [
+        "u09-l01",
+        "u09-l02",
+        "u09-l03"
+      ],
+      "unit_path": "units/unit-09/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 25,
+      "unit": 9,
+      "title": "Measure, Lebesgue Integration & Lp Foundations",
+      "essential": "How do measure and Lebesgue integration extend integration and convergence to broader function classes?",
+      "focus": "Lebesgue Integral of Simple and Nonnegative Functions; Integrable Functions and Comparison with Riemann Integration",
+      "lesson_ids": [
+        "u09-l04",
+        "u09-l05"
+      ],
+      "unit_path": "units/unit-09/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 26,
+      "unit": 9,
+      "title": "Measure, Lebesgue Integration & Lp Foundations",
+      "essential": "How do measure and Lebesgue integration extend integration and convergence to broader function classes?",
+      "focus": "Fatou, Monotone Convergence and Dominated Convergence; Lp Spaces, Hölder and Minkowski Inequalities",
+      "lesson_ids": [
+        "u09-l06",
+        "u09-l07"
+      ],
+      "unit_path": "units/unit-09/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 27,
+      "unit": 10,
+      "title": "Complex Numbers, Analyticity & Conformal Geometry",
+      "essential": "How does complex differentiability create stronger structure than real differentiability?",
+      "focus": "Complex Arithmetic, Geometry and Polar Form; Complex Exponential, Logarithm and Branches; Complex Limits and Continuity",
+      "lesson_ids": [
+        "u10-l01",
+        "u10-l02",
+        "u10-l03"
+      ],
+      "unit_path": "units/unit-10/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 28,
+      "unit": 10,
+      "title": "Complex Numbers, Analyticity & Conformal Geometry",
+      "essential": "How does complex differentiability create stronger structure than real differentiability?",
+      "focus": "Complex Differentiability and Holomorphic Functions; Cauchy–Riemann Equations",
+      "lesson_ids": [
+        "u10-l04",
+        "u10-l05"
+      ],
+      "unit_path": "units/unit-10/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 29,
+      "unit": 10,
+      "title": "Complex Numbers, Analyticity & Conformal Geometry",
+      "essential": "How does complex differentiability create stronger structure than real differentiability?",
+      "focus": "Harmonic Functions and Harmonic Conjugates; Conformal Maps and Möbius Transformations",
+      "lesson_ids": [
+        "u10-l06",
+        "u10-l07"
+      ],
+      "unit_path": "units/unit-10/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 30,
+      "unit": 11,
+      "title": "Complex Integration & Cauchy Theory",
+      "essential": "How does contour integration lead to the central rigidity theorems of complex analysis?",
+      "focus": "Contours and Complex Line Integrals; Primitives and Path Independence; Cauchy–Goursat Theorem; Cauchy Integral Formula",
+      "lesson_ids": [
+        "u11-l01",
+        "u11-l02",
+        "u11-l03",
+        "u11-l04"
+      ],
+      "unit_path": "units/unit-11/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 31,
+      "unit": 11,
+      "title": "Complex Integration & Cauchy Theory",
+      "essential": "How does contour integration lead to the central rigidity theorems of complex analysis?",
+      "focus": "Higher Derivatives and Cauchy Estimates; Liouville’s Theorem and Fundamental Theorem of Algebra; Maximum Modulus, Open Mapping and Identity Theorems",
+      "lesson_ids": [
+        "u11-l05",
+        "u11-l06",
+        "u11-l07"
+      ],
+      "unit_path": "units/unit-11/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 32,
+      "unit": 12,
+      "title": "Singularities, Laurent Series & Residues",
+      "essential": "How do local singular expansions convert complex integrals into algebraic coefficient calculations?",
+      "focus": "Laurent Series and Annuli of Convergence; Classification of Isolated Singularities; Residues and Coefficient Formulas",
+      "lesson_ids": [
+        "u12-l01",
+        "u12-l02",
+        "u12-l03"
+      ],
+      "unit_path": "units/unit-12/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 33,
+      "unit": 12,
+      "title": "Singularities, Laurent Series & Residues",
+      "essential": "How do local singular expansions convert complex integrals into algebraic coefficient calculations?",
+      "focus": "Residue Theorem; Real Integrals by Residues",
+      "lesson_ids": [
+        "u12-l04",
+        "u12-l05"
+      ],
+      "unit_path": "units/unit-12/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 34,
+      "unit": 12,
+      "title": "Singularities, Laurent Series & Residues",
+      "essential": "How do local singular expansions convert complex integrals into algebraic coefficient calculations?",
+      "focus": "Argument Principle and Rouché’s Theorem; Meromorphic Functions and Partial Fractions",
+      "lesson_ids": [
+        "u12-l06",
+        "u12-l07"
+      ],
+      "unit_path": "units/unit-12/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 35,
+      "unit": 13,
+      "title": "Harmonic, Conformal & Research-Level Complex Analysis",
+      "essential": "How do harmonic theory, conformal mapping, analytic continuation, and normal families open pathways to advanced research?",
+      "focus": "Mean-Value Property and Poisson Kernel; Schwarz Lemma and Automorphisms of the Disk; Riemann Mapping Theorem: Statement and Consequences; Analytic Continuation and Monodromy Preview",
+      "lesson_ids": [
+        "u13-l01",
+        "u13-l02",
+        "u13-l03",
+        "u13-l04"
+      ],
+      "unit_path": "units/unit-13/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 36,
+      "unit": 13,
+      "title": "Harmonic, Conformal & Research-Level Complex Analysis",
+      "essential": "How do harmonic theory, conformal mapping, analytic continuation, and normal families open pathways to advanced research?",
+      "focus": "Normal Families, Montel and Compactness Methods; Special Functions, Gamma and Zeta Previews; Research Problem Design and Literature Architecture; Expository Paper, Proof Defense and Graduate Bridge",
+      "lesson_ids": [
+        "u13-l05",
+        "u13-l06",
+        "u13-l07",
+        "u13-l08"
+      ],
+      "unit_path": "units/unit-13/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    }
+  ]
+}

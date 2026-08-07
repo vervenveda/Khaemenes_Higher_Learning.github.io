@@ -1,0 +1,16 @@
+{
+  "id": "./",
+  "name": "Khaemenes Higher Learning Real & Complex Analysis",
+  "short_name": "Real & Complex Analysis",
+  "description": "A rigorous advanced sequence in completeness, sequences and series, metric spaces, continuity, differentiation, integration, function convergence, measure and Lebesgue integration, holomorphic functions, Cauchy theory, residues, conformal mapping, and research-level exposition.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#090b10",
+  "theme_color": "#090b10",
+  "categories": [
+    "education",
+    "mathematics",
+    "research"
+  ]
+}
