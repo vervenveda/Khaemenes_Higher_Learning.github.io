@@ -1,0 +1,16 @@
+{
+  "unit": 12,
+  "title": "Mathematical Writing, LaTeX, Peer Review & Research Ethics",
+  "standards": [
+    "proof exposition",
+    "notation",
+    "LaTeX",
+    "citations",
+    "peer review",
+    "revision",
+    "research integrity",
+    "AI disclosure",
+    "reproducibility"
+  ],
+  "essential_question": "How does rigorous exposition make a proof inspectable, reproducible, and ethically responsible?"
+}

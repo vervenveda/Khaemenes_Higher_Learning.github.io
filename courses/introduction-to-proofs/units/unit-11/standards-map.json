@@ -1,0 +1,15 @@
+{
+  "unit": 11,
+  "title": "Proofs in Algebra, Combinatorics & Graphs",
+  "standards": [
+    "group-style axioms",
+    "substructures",
+    "counting arguments",
+    "bijections",
+    "pigeonhole principle",
+    "graph invariants",
+    "trees",
+    "extremal arguments"
+  ],
+  "essential_question": "How do proof strategies change across algebraic structures, counting arguments, and finite graphs?"
+}
