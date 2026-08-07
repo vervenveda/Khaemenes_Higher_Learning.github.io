@@ -1,0 +1,2055 @@
+{
+  "schema_version": "1.0",
+  "course": {
+    "id": "higher-learning-topology-differential-geometry",
+    "profile_course_id": "topology-differential-geometry",
+    "code": "KH-HL-MATH-TDG1",
+    "title": "Khaemenes Higher Learning Topology & Differential Geometry",
+    "short_title": "Topology & Differential Geometry",
+    "duration_weeks": 36,
+    "sessions": 180,
+    "lesson_count": 92,
+    "mastery_target": 80,
+    "pathways": [
+      "Foundation",
+      "Core",
+      "Research / Graduate"
+    ],
+    "storage_key": "khaemenes-topology-differential-geometry-course-v1",
+    "assessment_key": "khaemenes-topology-differential-geometry-assessment-v1",
+    "pin_key": "khaemenes-higher-learning-pinned-courses-v1",
+    "audience": "Advanced undergraduates, graduate-preparatory learners, and independent researchers entering topology, geometry, mathematical physics, relativity, geometric analysis, robotics, topological data analysis, or related fields.",
+    "prerequisite": "Introduction to Proofs or equivalent proof fluency, Real Analysis, multivariable calculus, and Linear Algebra are required. Abstract Algebra is strongly recommended for fundamental groups, homology, and bundle theory",
+    "calculator": "https://vervenveda.com/Khaemenes_High.github.io/courses/mathematics/tools/calculator",
+    "cad": "https://vervenveda.com/proresource_hub.github.io/Protools/Ohmic_CAD_Studio.html",
+    "arcade": "https://vervenveda.com/arcade.github.io/",
+    "version": "1.0.0",
+    "credit_guidance": "An advanced upper-level and graduate-preparatory topology and differential geometry sequence with selected beginning-graduate topics. It is not represented as a replacement for a university graduate topology or geometry qualifying sequence."
+  },
+  "units": [
+    {
+      "number": 1,
+      "title": "Topological Spaces, Bases & Continuous Maps",
+      "essential": "How do open sets encode nearness and continuity without requiring distance?",
+      "project": "Topology Atlas & Basis Audit",
+      "standards": [
+        "Topological spaces and axioms",
+        "Open and closed sets",
+        "Neighborhoods",
+        "Bases and subbases",
+        "Interior, closure and boundary",
+        "Continuous maps",
+        "Homeomorphisms",
+        "Initial examples and counterexamples"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        1,
+        2,
+        3
+      ],
+      "lessons": [
+        {
+          "id": "u01-l01",
+          "number": 1,
+          "title": "Why Topology? Space Beyond Distance",
+          "week": 1,
+          "unit": 1,
+          "unit_title": "Topological Spaces, Bases & Continuous Maps",
+          "essential": "How do open sets encode nearness and continuity without requiring distance?",
+          "project": "Topology Atlas & Basis Audit",
+          "focus": "distinguishing topological structure from metric, affine, and algebraic structure"
+        },
+        {
+          "id": "u01-l02",
+          "number": 2,
+          "title": "Topological Spaces and the Open-Set Axioms",
+          "week": 1,
+          "unit": 1,
+          "unit_title": "Topological Spaces, Bases & Continuous Maps",
+          "essential": "How do open sets encode nearness and continuity without requiring distance?",
+          "project": "Topology Atlas & Basis Audit",
+          "focus": "verifying arbitrary unions, finite intersections, and the empty and whole sets"
+        },
+        {
+          "id": "u01-l03",
+          "number": 3,
+          "title": "Closed Sets, Complements and Dual Axioms",
+          "week": 1,
+          "unit": 1,
+          "unit_title": "Topological Spaces, Bases & Continuous Maps",
+          "essential": "How do open sets encode nearness and continuity without requiring distance?",
+          "project": "Topology Atlas & Basis Audit",
+          "focus": "translating open-set statements into closed-set language"
+        },
+        {
+          "id": "u01-l04",
+          "number": 4,
+          "title": "Neighborhoods, Interior, Closure and Boundary",
+          "week": 2,
+          "unit": 1,
+          "unit_title": "Topological Spaces, Bases & Continuous Maps",
+          "essential": "How do open sets encode nearness and continuity without requiring distance?",
+          "project": "Topology Atlas & Basis Audit",
+          "focus": "computing local and global set operators and proving their identities"
+        },
+        {
+          "id": "u01-l05",
+          "number": 5,
+          "title": "Bases and Local Descriptions of Topology",
+          "week": 2,
+          "unit": 1,
+          "unit_title": "Topological Spaces, Bases & Continuous Maps",
+          "essential": "How do open sets encode nearness and continuity without requiring distance?",
+          "project": "Topology Atlas & Basis Audit",
+          "focus": "generating a topology from basic open sets and testing the basis axioms"
+        },
+        {
+          "id": "u01-l06",
+          "number": 6,
+          "title": "Subbases and Generated Topologies",
+          "week": 2,
+          "unit": 1,
+          "unit_title": "Topological Spaces, Bases & Continuous Maps",
+          "essential": "How do open sets encode nearness and continuity without requiring distance?",
+          "project": "Topology Atlas & Basis Audit",
+          "focus": "constructing topologies from finite intersections of subbasic sets"
+        },
+        {
+          "id": "u01-l07",
+          "number": 7,
+          "title": "Continuity Through Preimages",
+          "week": 3,
+          "unit": 1,
+          "unit_title": "Topological Spaces, Bases & Continuous Maps",
+          "essential": "How do open sets encode nearness and continuity without requiring distance?",
+          "project": "Topology Atlas & Basis Audit",
+          "focus": "proving continuity using inverse images of open sets"
+        },
+        {
+          "id": "u01-l08",
+          "number": 8,
+          "title": "Homeomorphisms and Topological Equivalence",
+          "week": 3,
+          "unit": 1,
+          "unit_title": "Topological Spaces, Bases & Continuous Maps",
+          "essential": "How do open sets encode nearness and continuity without requiring distance?",
+          "project": "Topology Atlas & Basis Audit",
+          "focus": "proving bijective continuous maps have continuous inverses"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Metric Spaces, Countability & Separation",
+      "essential": "Which local and separation properties distinguish well-behaved spaces?",
+      "project": "Metric and Separation Property Laboratory",
+      "standards": [
+        "Metric topology",
+        "Convergence and Cauchy sequences",
+        "First and second countability",
+        "T0, T1 and Hausdorff spaces",
+        "Regular and normal spaces",
+        "Urysohn-type separation ideas",
+        "Metrization foundations"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        4,
+        5,
+        6
+      ],
+      "lessons": [
+        {
+          "id": "u02-l01",
+          "number": 1,
+          "title": "Metrics, Open Balls and Induced Topologies",
+          "week": 4,
+          "unit": 2,
+          "unit_title": "Metric Spaces, Countability & Separation",
+          "essential": "Which local and separation properties distinguish well-behaved spaces?",
+          "project": "Metric and Separation Property Laboratory",
+          "focus": "proving a metric generates a topology and comparing different metrics"
+        },
+        {
+          "id": "u02-l02",
+          "number": 2,
+          "title": "Convergence, Cauchy Sequences and Completeness",
+          "week": 4,
+          "unit": 2,
+          "unit_title": "Metric Spaces, Countability & Separation",
+          "essential": "Which local and separation properties distinguish well-behaved spaces?",
+          "project": "Metric and Separation Property Laboratory",
+          "focus": "separating convergence from completeness and testing examples"
+        },
+        {
+          "id": "u02-l03",
+          "number": 3,
+          "title": "Equivalent Metrics and Topological Invariance",
+          "week": 4,
+          "unit": 2,
+          "unit_title": "Metric Spaces, Countability & Separation",
+          "essential": "Which local and separation properties distinguish well-behaved spaces?",
+          "project": "Metric and Separation Property Laboratory",
+          "focus": "showing distinct metrics can determine the same open sets"
+        },
+        {
+          "id": "u02-l04",
+          "number": 4,
+          "title": "First Countability and Sequence Tests",
+          "week": 5,
+          "unit": 2,
+          "unit_title": "Metric Spaces, Countability & Separation",
+          "essential": "Which local and separation properties distinguish well-behaved spaces?",
+          "project": "Metric and Separation Property Laboratory",
+          "focus": "using countable local bases to characterize closure and continuity"
+        },
+        {
+          "id": "u02-l05",
+          "number": 5,
+          "title": "Second Countability, Separability and Lindelöf Ideas",
+          "week": 5,
+          "unit": 2,
+          "unit_title": "Metric Spaces, Countability & Separation",
+          "essential": "Which local and separation properties distinguish well-behaved spaces?",
+          "project": "Metric and Separation Property Laboratory",
+          "focus": "relating global countable bases, dense sets, and countable subcovers"
+        },
+        {
+          "id": "u02-l06",
+          "number": 6,
+          "title": "Separation Axioms from T₀ to Hausdorff",
+          "week": 6,
+          "unit": 2,
+          "unit_title": "Metric Spaces, Countability & Separation",
+          "essential": "Which local and separation properties distinguish well-behaved spaces?",
+          "project": "Metric and Separation Property Laboratory",
+          "focus": "proving points and closed sets can be distinguished by neighborhoods"
+        },
+        {
+          "id": "u02-l07",
+          "number": 7,
+          "title": "Regularity, Normality and Metrization Foundations",
+          "week": 6,
+          "unit": 2,
+          "unit_title": "Metric Spaces, Countability & Separation",
+          "essential": "Which local and separation properties distinguish well-behaved spaces?",
+          "project": "Metric and Separation Property Laboratory",
+          "focus": "organizing stronger separation properties and their role in analysis"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Compactness, Connectedness, Products & Quotients",
+      "essential": "How do global topological properties survive continuous maps and constructions?",
+      "project": "Compactness–Connectedness Construction Portfolio",
+      "standards": [
+        "Open-cover compactness",
+        "Sequential compactness in metric spaces",
+        "Local compactness",
+        "Connectedness and path connectedness",
+        "Components",
+        "Product topology",
+        "Quotient topology",
+        "Gluing constructions"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        7,
+        8,
+        9
+      ],
+      "lessons": [
+        {
+          "id": "u03-l01",
+          "number": 1,
+          "title": "Compactness by Open Covers",
+          "week": 7,
+          "unit": 3,
+          "unit_title": "Compactness, Connectedness, Products & Quotients",
+          "essential": "How do global topological properties survive continuous maps and constructions?",
+          "project": "Compactness–Connectedness Construction Portfolio",
+          "focus": "proving finite subcover statements and recognizing noncompact spaces"
+        },
+        {
+          "id": "u03-l02",
+          "number": 2,
+          "title": "Compactness in Metric and Euclidean Spaces",
+          "week": 7,
+          "unit": 3,
+          "unit_title": "Compactness, Connectedness, Products & Quotients",
+          "essential": "How do global topological properties survive continuous maps and constructions?",
+          "project": "Compactness–Connectedness Construction Portfolio",
+          "focus": "connecting compactness, sequential compactness, completeness, and total boundedness"
+        },
+        {
+          "id": "u03-l03",
+          "number": 3,
+          "title": "Continuous Images and Extreme-Value Consequences",
+          "week": 7,
+          "unit": 3,
+          "unit_title": "Compactness, Connectedness, Products & Quotients",
+          "essential": "How do global topological properties survive continuous maps and constructions?",
+          "project": "Compactness–Connectedness Construction Portfolio",
+          "focus": "using compactness to prove closedness, boundedness, and extrema"
+        },
+        {
+          "id": "u03-l04",
+          "number": 4,
+          "title": "Connectedness and Separation",
+          "week": 8,
+          "unit": 3,
+          "unit_title": "Compactness, Connectedness, Products & Quotients",
+          "essential": "How do global topological properties survive continuous maps and constructions?",
+          "project": "Compactness–Connectedness Construction Portfolio",
+          "focus": "proving a space cannot be partitioned into disjoint nonempty open sets"
+        },
+        {
+          "id": "u03-l05",
+          "number": 5,
+          "title": "Path Connectedness and Components",
+          "week": 8,
+          "unit": 3,
+          "unit_title": "Compactness, Connectedness, Products & Quotients",
+          "essential": "How do global topological properties survive continuous maps and constructions?",
+          "project": "Compactness–Connectedness Construction Portfolio",
+          "focus": "distinguishing paths, connected components, and local connectedness"
+        },
+        {
+          "id": "u03-l06",
+          "number": 6,
+          "title": "Product Spaces and Universal Coordinates",
+          "week": 9,
+          "unit": 3,
+          "unit_title": "Compactness, Connectedness, Products & Quotients",
+          "essential": "How do global topological properties survive continuous maps and constructions?",
+          "project": "Compactness–Connectedness Construction Portfolio",
+          "focus": "constructing product topology and proving continuity componentwise"
+        },
+        {
+          "id": "u03-l07",
+          "number": 7,
+          "title": "Quotient Spaces, Identifications and Gluing",
+          "week": 9,
+          "unit": 3,
+          "unit_title": "Compactness, Connectedness, Products & Quotients",
+          "essential": "How do global topological properties survive continuous maps and constructions?",
+          "project": "Compactness–Connectedness Construction Portfolio",
+          "focus": "building circles, cylinders, tori, and projective spaces from equivalence relations"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Homotopy, Fundamental Groups & Covering Spaces",
+      "essential": "How can loops and deformations detect holes that ordinary coordinates cannot?",
+      "project": "Loop, Covering and Fundamental-Group Dossier",
+      "standards": [
+        "Homotopy of maps",
+        "Path homotopy",
+        "Fundamental group",
+        "Van Kampen foundations",
+        "Covering maps",
+        "Lifting properties",
+        "Deck transformations",
+        "Classification examples"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        10,
+        11,
+        12
+      ],
+      "lessons": [
+        {
+          "id": "u04-l01",
+          "number": 1,
+          "title": "Homotopy as Continuous Deformation",
+          "week": 10,
+          "unit": 4,
+          "unit_title": "Homotopy, Fundamental Groups & Covering Spaces",
+          "essential": "How can loops and deformations detect holes that ordinary coordinates cannot?",
+          "project": "Loop, Covering and Fundamental-Group Dossier",
+          "focus": "constructing homotopies and proving homotopy is an equivalence relation"
+        },
+        {
+          "id": "u04-l02",
+          "number": 2,
+          "title": "Loops, Concatenation and Path Homotopy",
+          "week": 10,
+          "unit": 4,
+          "unit_title": "Homotopy, Fundamental Groups & Covering Spaces",
+          "essential": "How can loops and deformations detect holes that ordinary coordinates cannot?",
+          "project": "Loop, Covering and Fundamental-Group Dossier",
+          "focus": "defining loop multiplication and verifying well-defined classes"
+        },
+        {
+          "id": "u04-l03",
+          "number": 3,
+          "title": "The Fundamental Group",
+          "week": 10,
+          "unit": 4,
+          "unit_title": "Homotopy, Fundamental Groups & Covering Spaces",
+          "essential": "How can loops and deformations detect holes that ordinary coordinates cannot?",
+          "project": "Loop, Covering and Fundamental-Group Dossier",
+          "focus": "computing π₁ for basic spaces and interpreting algebraic invariants"
+        },
+        {
+          "id": "u04-l04",
+          "number": 4,
+          "title": "Simply Connected Spaces and Contractibility",
+          "week": 11,
+          "unit": 4,
+          "unit_title": "Homotopy, Fundamental Groups & Covering Spaces",
+          "essential": "How can loops and deformations detect holes that ordinary coordinates cannot?",
+          "project": "Loop, Covering and Fundamental-Group Dossier",
+          "focus": "distinguishing contractible, simply connected, and path connected spaces"
+        },
+        {
+          "id": "u04-l05",
+          "number": 5,
+          "title": "Seifert–van Kampen Strategy",
+          "week": 11,
+          "unit": 4,
+          "unit_title": "Homotopy, Fundamental Groups & Covering Spaces",
+          "essential": "How can loops and deformations detect holes that ordinary coordinates cannot?",
+          "project": "Loop, Covering and Fundamental-Group Dossier",
+          "focus": "decomposing spaces into open sets and assembling fundamental groups"
+        },
+        {
+          "id": "u04-l06",
+          "number": 6,
+          "title": "Covering Spaces and Lifting",
+          "week": 12,
+          "unit": 4,
+          "unit_title": "Homotopy, Fundamental Groups & Covering Spaces",
+          "essential": "How can loops and deformations detect holes that ordinary coordinates cannot?",
+          "project": "Loop, Covering and Fundamental-Group Dossier",
+          "focus": "using unique path and homotopy lifting to analyze maps"
+        },
+        {
+          "id": "u04-l07",
+          "number": 7,
+          "title": "Deck Transformations and Classification Examples",
+          "week": 12,
+          "unit": 4,
+          "unit_title": "Homotopy, Fundamental Groups & Covering Spaces",
+          "essential": "How can loops and deformations detect holes that ordinary coordinates cannot?",
+          "project": "Loop, Covering and Fundamental-Group Dossier",
+          "focus": "relating subgroups of π₁ to connected coverings in standard settings"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Cell Complexes, Homology & Cohomology Foundations",
+      "essential": "How can algebraic invariants measure holes in every dimension?",
+      "project": "Cellular Invariant & Homology Computation Portfolio",
+      "standards": [
+        "Simplicial and CW complexes",
+        "Chain groups and boundary maps",
+        "Homology groups",
+        "Exact sequences",
+        "Euler characteristic",
+        "Cohomology foundations",
+        "Mayer–Vietoris ideas",
+        "Poincaré duality preview"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        13,
+        14,
+        15
+      ],
+      "lessons": [
+        {
+          "id": "u05-l01",
+          "number": 1,
+          "title": "Simplicial Complexes and Triangulated Spaces",
+          "week": 13,
+          "unit": 5,
+          "unit_title": "Cell Complexes, Homology & Cohomology Foundations",
+          "essential": "How can algebraic invariants measure holes in every dimension?",
+          "project": "Cellular Invariant & Homology Computation Portfolio",
+          "focus": "encoding spaces combinatorially with vertices, edges, faces, and higher simplices"
+        },
+        {
+          "id": "u05-l02",
+          "number": 2,
+          "title": "CW Complexes and Cell Attachments",
+          "week": 13,
+          "unit": 5,
+          "unit_title": "Cell Complexes, Homology & Cohomology Foundations",
+          "essential": "How can algebraic invariants measure holes in every dimension?",
+          "project": "Cellular Invariant & Homology Computation Portfolio",
+          "focus": "constructing spaces inductively from disks attached along boundaries"
+        },
+        {
+          "id": "u05-l03",
+          "number": 3,
+          "title": "Chains, Boundaries and the Identity ∂²=0",
+          "week": 13,
+          "unit": 5,
+          "unit_title": "Cell Complexes, Homology & Cohomology Foundations",
+          "essential": "How can algebraic invariants measure holes in every dimension?",
+          "project": "Cellular Invariant & Homology Computation Portfolio",
+          "focus": "building chain complexes and proving boundaries have zero boundary"
+        },
+        {
+          "id": "u05-l04",
+          "number": 4,
+          "title": "Homology Groups and Dimensional Holes",
+          "week": 14,
+          "unit": 5,
+          "unit_title": "Cell Complexes, Homology & Cohomology Foundations",
+          "essential": "How can algebraic invariants measure holes in every dimension?",
+          "project": "Cellular Invariant & Homology Computation Portfolio",
+          "focus": "forming cycles modulo boundaries and computing basic examples"
+        },
+        {
+          "id": "u05-l05",
+          "number": 5,
+          "title": "Exact Sequences and Mayer–Vietoris Strategy",
+          "week": 14,
+          "unit": 5,
+          "unit_title": "Cell Complexes, Homology & Cohomology Foundations",
+          "essential": "How can algebraic invariants measure holes in every dimension?",
+          "project": "Cellular Invariant & Homology Computation Portfolio",
+          "focus": "using exactness to connect local and global invariants"
+        },
+        {
+          "id": "u05-l06",
+          "number": 6,
+          "title": "Euler Characteristic and Homological Counting",
+          "week": 15,
+          "unit": 5,
+          "unit_title": "Cell Complexes, Homology & Cohomology Foundations",
+          "essential": "How can algebraic invariants measure holes in every dimension?",
+          "project": "Cellular Invariant & Homology Computation Portfolio",
+          "focus": "proving alternating cell counts agree with alternating Betti numbers"
+        },
+        {
+          "id": "u05-l07",
+          "number": 7,
+          "title": "Cohomology, Products and Duality Preview",
+          "week": 15,
+          "unit": 5,
+          "unit_title": "Cell Complexes, Homology & Cohomology Foundations",
+          "essential": "How can algebraic invariants measure holes in every dimension?",
+          "project": "Cellular Invariant & Homology Computation Portfolio",
+          "focus": "introducing cochains, cup products, and manifold duality"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Smooth Manifolds, Charts & Tangent Spaces",
+      "essential": "How do local Euclidean coordinates assemble into globally curved spaces?",
+      "project": "Smooth Atlas & Tangent-Space Construction",
+      "standards": [
+        "Topological manifolds",
+        "Smooth atlases",
+        "Smooth compatibility",
+        "Smooth maps",
+        "Tangent vectors",
+        "Cotangent spaces",
+        "Vector fields",
+        "Lie brackets"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        16,
+        17,
+        18
+      ],
+      "lessons": [
+        {
+          "id": "u06-l01",
+          "number": 1,
+          "title": "Topological Manifolds and Local Euclidean Structure",
+          "week": 16,
+          "unit": 6,
+          "unit_title": "Smooth Manifolds, Charts & Tangent Spaces",
+          "essential": "How do local Euclidean coordinates assemble into globally curved spaces?",
+          "project": "Smooth Atlas & Tangent-Space Construction",
+          "focus": "checking Hausdorff, second-countable, and locally Euclidean conditions"
+        },
+        {
+          "id": "u06-l02",
+          "number": 2,
+          "title": "Charts, Atlases and Smooth Compatibility",
+          "week": 16,
+          "unit": 6,
+          "unit_title": "Smooth Manifolds, Charts & Tangent Spaces",
+          "essential": "How do local Euclidean coordinates assemble into globally curved spaces?",
+          "project": "Smooth Atlas & Tangent-Space Construction",
+          "focus": "proving transition maps are smooth and constructing maximal atlases"
+        },
+        {
+          "id": "u06-l03",
+          "number": 3,
+          "title": "Smooth Maps and Diffeomorphisms",
+          "week": 16,
+          "unit": 6,
+          "unit_title": "Smooth Manifolds, Charts & Tangent Spaces",
+          "essential": "How do local Euclidean coordinates assemble into globally curved spaces?",
+          "project": "Smooth Atlas & Tangent-Space Construction",
+          "focus": "testing smoothness in coordinates and identifying smooth equivalence"
+        },
+        {
+          "id": "u06-l04",
+          "number": 4,
+          "title": "Tangent Vectors as Velocities and Derivations",
+          "week": 17,
+          "unit": 6,
+          "unit_title": "Smooth Manifolds, Charts & Tangent Spaces",
+          "essential": "How do local Euclidean coordinates assemble into globally curved spaces?",
+          "project": "Smooth Atlas & Tangent-Space Construction",
+          "focus": "proving equivalent definitions of tangent vectors"
+        },
+        {
+          "id": "u06-l05",
+          "number": 5,
+          "title": "Differentials, Rank and the Chain Rule",
+          "week": 17,
+          "unit": 6,
+          "unit_title": "Smooth Manifolds, Charts & Tangent Spaces",
+          "essential": "How do local Euclidean coordinates assemble into globally curved spaces?",
+          "project": "Smooth Atlas & Tangent-Space Construction",
+          "focus": "computing pushforwards and interpreting rank geometrically"
+        },
+        {
+          "id": "u06-l06",
+          "number": 6,
+          "title": "Cotangent Spaces, Covectors and Tensors",
+          "week": 18,
+          "unit": 6,
+          "unit_title": "Smooth Manifolds, Charts & Tangent Spaces",
+          "essential": "How do local Euclidean coordinates assemble into globally curved spaces?",
+          "project": "Smooth Atlas & Tangent-Space Construction",
+          "focus": "building dual spaces and tensor products at each point"
+        },
+        {
+          "id": "u06-l07",
+          "number": 7,
+          "title": "Vector Fields, Flows and Lie Brackets",
+          "week": 18,
+          "unit": 6,
+          "unit_title": "Smooth Manifolds, Charts & Tangent Spaces",
+          "essential": "How do local Euclidean coordinates assemble into globally curved spaces?",
+          "project": "Smooth Atlas & Tangent-Space Construction",
+          "focus": "relating infinitesimal motion, flows, and noncommutativity"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Submanifolds, Transversality & Differential Topology",
+      "essential": "How do smooth maps create and classify geometric subspaces?",
+      "project": "Regular-Value and Transversality Case Study",
+      "standards": [
+        "Inverse function theorem",
+        "Implicit function theorem",
+        "Immersions and submersions",
+        "Embedded submanifolds",
+        "Regular values",
+        "Sard theorem",
+        "Transversality",
+        "Degree and index foundations"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        19,
+        20,
+        21
+      ],
+      "lessons": [
+        {
+          "id": "u07-l01",
+          "number": 1,
+          "title": "Inverse and Implicit Function Theorems on Manifolds",
+          "week": 19,
+          "unit": 7,
+          "unit_title": "Submanifolds, Transversality & Differential Topology",
+          "essential": "How do smooth maps create and classify geometric subspaces?",
+          "project": "Regular-Value and Transversality Case Study",
+          "focus": "translating local rank conditions into coordinate normal forms"
+        },
+        {
+          "id": "u07-l02",
+          "number": 2,
+          "title": "Immersions, Submersions and Embeddings",
+          "week": 19,
+          "unit": 7,
+          "unit_title": "Submanifolds, Transversality & Differential Topology",
+          "essential": "How do smooth maps create and classify geometric subspaces?",
+          "project": "Regular-Value and Transversality Case Study",
+          "focus": "distinguishing locally injective differentials from global embeddings"
+        },
+        {
+          "id": "u07-l03",
+          "number": 3,
+          "title": "Regular Values and the Preimage Theorem",
+          "week": 19,
+          "unit": 7,
+          "unit_title": "Submanifolds, Transversality & Differential Topology",
+          "essential": "How do smooth maps create and classify geometric subspaces?",
+          "project": "Regular-Value and Transversality Case Study",
+          "focus": "proving level sets are embedded submanifolds"
+        },
+        {
+          "id": "u07-l04",
+          "number": 4,
+          "title": "Critical Points, Sard’s Theorem and Genericity",
+          "week": 20,
+          "unit": 7,
+          "unit_title": "Submanifolds, Transversality & Differential Topology",
+          "essential": "How do smooth maps create and classify geometric subspaces?",
+          "project": "Regular-Value and Transversality Case Study",
+          "focus": "understanding why critical values are small and regular values abundant"
+        },
+        {
+          "id": "u07-l05",
+          "number": 5,
+          "title": "Transversality and Stable Intersections",
+          "week": 20,
+          "unit": 7,
+          "unit_title": "Submanifolds, Transversality & Differential Topology",
+          "essential": "How do smooth maps create and classify geometric subspaces?",
+          "project": "Regular-Value and Transversality Case Study",
+          "focus": "computing tangent-space sums and expected dimensions"
+        },
+        {
+          "id": "u07-l06",
+          "number": 6,
+          "title": "Orientation, Degree and Winding",
+          "week": 21,
+          "unit": 7,
+          "unit_title": "Submanifolds, Transversality & Differential Topology",
+          "essential": "How do smooth maps create and classify geometric subspaces?",
+          "project": "Regular-Value and Transversality Case Study",
+          "focus": "defining signed counting invariants for smooth maps"
+        },
+        {
+          "id": "u07-l07",
+          "number": 7,
+          "title": "Vector-Field Index and Poincaré–Hopf Preview",
+          "week": 21,
+          "unit": 7,
+          "unit_title": "Submanifolds, Transversality & Differential Topology",
+          "essential": "How do smooth maps create and classify geometric subspaces?",
+          "project": "Regular-Value and Transversality Case Study",
+          "focus": "relating isolated zeros to global topology"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Curves, Surfaces & Classical Differential Geometry",
+      "essential": "How do derivatives measure bending, twisting, and intrinsic surface geometry?",
+      "project": "Curvature Atlas for Curves and Surfaces",
+      "standards": [
+        "Regular curves",
+        "Arc length",
+        "Frenet frame",
+        "Surface parametrizations",
+        "First fundamental form",
+        "Second fundamental form",
+        "Principal curvatures",
+        "Gaussian and mean curvature"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        22,
+        23,
+        24
+      ],
+      "lessons": [
+        {
+          "id": "u08-l01",
+          "number": 1,
+          "title": "Regular Curves and Arc-Length Parametrization",
+          "week": 22,
+          "unit": 8,
+          "unit_title": "Curves, Surfaces & Classical Differential Geometry",
+          "essential": "How do derivatives measure bending, twisting, and intrinsic surface geometry?",
+          "project": "Curvature Atlas for Curves and Surfaces",
+          "focus": "reparametrizing curves by distance and proving invariance of length"
+        },
+        {
+          "id": "u08-l02",
+          "number": 2,
+          "title": "Curvature, Torsion and the Frenet Frame",
+          "week": 22,
+          "unit": 8,
+          "unit_title": "Curves, Surfaces & Classical Differential Geometry",
+          "essential": "How do derivatives measure bending, twisting, and intrinsic surface geometry?",
+          "project": "Curvature Atlas for Curves and Surfaces",
+          "focus": "computing tangent, normal, binormal, curvature, and torsion"
+        },
+        {
+          "id": "u08-l03",
+          "number": 3,
+          "title": "Local and Global Geometry of Plane Curves",
+          "week": 22,
+          "unit": 8,
+          "unit_title": "Curves, Surfaces & Classical Differential Geometry",
+          "essential": "How do derivatives measure bending, twisting, and intrinsic surface geometry?",
+          "project": "Curvature Atlas for Curves and Surfaces",
+          "focus": "studying turning number, convexity, and total curvature"
+        },
+        {
+          "id": "u08-l04",
+          "number": 4,
+          "title": "Parametrized Surfaces and Tangent Planes",
+          "week": 23,
+          "unit": 8,
+          "unit_title": "Curves, Surfaces & Classical Differential Geometry",
+          "essential": "How do derivatives measure bending, twisting, and intrinsic surface geometry?",
+          "project": "Curvature Atlas for Curves and Surfaces",
+          "focus": "checking regular patches and computing normal fields"
+        },
+        {
+          "id": "u08-l05",
+          "number": 5,
+          "title": "The First Fundamental Form",
+          "week": 23,
+          "unit": 8,
+          "unit_title": "Curves, Surfaces & Classical Differential Geometry",
+          "essential": "How do derivatives measure bending, twisting, and intrinsic surface geometry?",
+          "project": "Curvature Atlas for Curves and Surfaces",
+          "focus": "measuring length, angle, and area intrinsically"
+        },
+        {
+          "id": "u08-l06",
+          "number": 6,
+          "title": "The Second Fundamental Form and Shape Operator",
+          "week": 24,
+          "unit": 8,
+          "unit_title": "Curves, Surfaces & Classical Differential Geometry",
+          "essential": "How do derivatives measure bending, twisting, and intrinsic surface geometry?",
+          "project": "Curvature Atlas for Curves and Surfaces",
+          "focus": "measuring normal variation and principal directions"
+        },
+        {
+          "id": "u08-l07",
+          "number": 7,
+          "title": "Gaussian Curvature, Mean Curvature and Theorema Egregium",
+          "week": 24,
+          "unit": 8,
+          "unit_title": "Curves, Surfaces & Classical Differential Geometry",
+          "essential": "How do derivatives measure bending, twisting, and intrinsic surface geometry?",
+          "project": "Curvature Atlas for Curves and Surfaces",
+          "focus": "comparing intrinsic and extrinsic bending"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Riemannian Metrics, Connections & Geodesics",
+      "essential": "How does a varying inner product determine distance, motion, and curvature on a manifold?",
+      "project": "Riemannian Metric and Geodesic Investigation",
+      "standards": [
+        "Riemannian metrics",
+        "Length and energy",
+        "Levi–Civita connection",
+        "Covariant derivatives",
+        "Geodesic equation",
+        "Exponential map",
+        "Geodesic completeness",
+        "Curvature tensors"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        25,
+        26,
+        27
+      ],
+      "lessons": [
+        {
+          "id": "u09-l01",
+          "number": 1,
+          "title": "Riemannian Metrics and Smooth Inner Products",
+          "week": 25,
+          "unit": 9,
+          "unit_title": "Riemannian Metrics, Connections & Geodesics",
+          "essential": "How does a varying inner product determine distance, motion, and curvature on a manifold?",
+          "project": "Riemannian Metric and Geodesic Investigation",
+          "focus": "constructing point-dependent inner products and induced norms"
+        },
+        {
+          "id": "u09-l02",
+          "number": 2,
+          "title": "Length, Energy and Riemannian Distance",
+          "week": 25,
+          "unit": 9,
+          "unit_title": "Riemannian Metrics, Connections & Geodesics",
+          "essential": "How does a varying inner product determine distance, motion, and curvature on a manifold?",
+          "project": "Riemannian Metric and Geodesic Investigation",
+          "focus": "comparing variational functionals and induced metric distance"
+        },
+        {
+          "id": "u09-l03",
+          "number": 3,
+          "title": "Connections and Covariant Differentiation",
+          "week": 25,
+          "unit": 9,
+          "unit_title": "Riemannian Metrics, Connections & Geodesics",
+          "essential": "How does a varying inner product determine distance, motion, and curvature on a manifold?",
+          "project": "Riemannian Metric and Geodesic Investigation",
+          "focus": "differentiating vector fields while respecting manifold structure"
+        },
+        {
+          "id": "u09-l04",
+          "number": 4,
+          "title": "The Levi–Civita Connection",
+          "week": 26,
+          "unit": 9,
+          "unit_title": "Riemannian Metrics, Connections & Geodesics",
+          "essential": "How does a varying inner product determine distance, motion, and curvature on a manifold?",
+          "project": "Riemannian Metric and Geodesic Investigation",
+          "focus": "proving existence and uniqueness from metric compatibility and zero torsion"
+        },
+        {
+          "id": "u09-l05",
+          "number": 5,
+          "title": "Geodesics and the Geodesic Equation",
+          "week": 26,
+          "unit": 9,
+          "unit_title": "Riemannian Metrics, Connections & Geodesics",
+          "essential": "How does a varying inner product determine distance, motion, and curvature on a manifold?",
+          "project": "Riemannian Metric and Geodesic Investigation",
+          "focus": "deriving locally length-stationary curves"
+        },
+        {
+          "id": "u09-l06",
+          "number": 6,
+          "title": "Exponential Maps, Normal Coordinates and Completeness",
+          "week": 27,
+          "unit": 9,
+          "unit_title": "Riemannian Metrics, Connections & Geodesics",
+          "essential": "How does a varying inner product determine distance, motion, and curvature on a manifold?",
+          "project": "Riemannian Metric and Geodesic Investigation",
+          "focus": "studying geodesic flow and Hopf–Rinow consequences"
+        },
+        {
+          "id": "u09-l07",
+          "number": 7,
+          "title": "Riemann, Sectional, Ricci and Scalar Curvature",
+          "week": 27,
+          "unit": 9,
+          "unit_title": "Riemannian Metrics, Connections & Geodesics",
+          "essential": "How does a varying inner product determine distance, motion, and curvature on a manifold?",
+          "project": "Riemannian Metric and Geodesic Investigation",
+          "focus": "organizing curvature contractions and geometric meaning"
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Differential Forms, Integration & de Rham Theory",
+      "essential": "How does exterior calculus unify vector calculus, integration, topology, and geometry?",
+      "project": "Differential Forms & Stokes Theorem Portfolio",
+      "standards": [
+        "Exterior algebra",
+        "Differential forms",
+        "Exterior derivative",
+        "Pullbacks",
+        "Orientation and integration",
+        "Stokes theorem",
+        "de Rham cohomology",
+        "Poincaré lemma"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        28,
+        29,
+        30
+      ],
+      "lessons": [
+        {
+          "id": "u10-l01",
+          "number": 1,
+          "title": "Alternating Tensors and the Exterior Algebra",
+          "week": 28,
+          "unit": 10,
+          "unit_title": "Differential Forms, Integration & de Rham Theory",
+          "essential": "How does exterior calculus unify vector calculus, integration, topology, and geometry?",
+          "project": "Differential Forms & Stokes Theorem Portfolio",
+          "focus": "constructing wedge products and orientation forms"
+        },
+        {
+          "id": "u10-l02",
+          "number": 2,
+          "title": "Differential Forms and Pullbacks",
+          "week": 28,
+          "unit": 10,
+          "unit_title": "Differential Forms, Integration & de Rham Theory",
+          "essential": "How does exterior calculus unify vector calculus, integration, topology, and geometry?",
+          "project": "Differential Forms & Stokes Theorem Portfolio",
+          "focus": "transforming forms naturally under smooth maps"
+        },
+        {
+          "id": "u10-l03",
+          "number": 3,
+          "title": "The Exterior Derivative",
+          "week": 28,
+          "unit": 10,
+          "unit_title": "Differential Forms, Integration & de Rham Theory",
+          "essential": "How does exterior calculus unify vector calculus, integration, topology, and geometry?",
+          "project": "Differential Forms & Stokes Theorem Portfolio",
+          "focus": "proving d²=0 and computing coordinate formulas"
+        },
+        {
+          "id": "u10-l04",
+          "number": 4,
+          "title": "Integration on Oriented Manifolds",
+          "week": 29,
+          "unit": 10,
+          "unit_title": "Differential Forms, Integration & de Rham Theory",
+          "essential": "How does exterior calculus unify vector calculus, integration, topology, and geometry?",
+          "project": "Differential Forms & Stokes Theorem Portfolio",
+          "focus": "defining integration with partitions of unity and coordinate invariance"
+        },
+        {
+          "id": "u10-l05",
+          "number": 5,
+          "title": "Generalized Stokes Theorem",
+          "week": 29,
+          "unit": 10,
+          "unit_title": "Differential Forms, Integration & de Rham Theory",
+          "essential": "How does exterior calculus unify vector calculus, integration, topology, and geometry?",
+          "project": "Differential Forms & Stokes Theorem Portfolio",
+          "focus": "unifying fundamental theorem, Green, divergence, and classical Stokes"
+        },
+        {
+          "id": "u10-l06",
+          "number": 6,
+          "title": "Closed, Exact and de Rham Cohomology",
+          "week": 30,
+          "unit": 10,
+          "unit_title": "Differential Forms, Integration & de Rham Theory",
+          "essential": "How does exterior calculus unify vector calculus, integration, topology, and geometry?",
+          "project": "Differential Forms & Stokes Theorem Portfolio",
+          "focus": "forming topological invariants from differential forms"
+        },
+        {
+          "id": "u10-l07",
+          "number": 7,
+          "title": "Poincaré Lemma and de Rham Correspondence",
+          "week": 30,
+          "unit": 10,
+          "unit_title": "Differential Forms, Integration & de Rham Theory",
+          "essential": "How does exterior calculus unify vector calculus, integration, topology, and geometry?",
+          "project": "Differential Forms & Stokes Theorem Portfolio",
+          "focus": "proving local exactness and connecting forms to singular cohomology"
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Vector Bundles, Lie Groups & Connections",
+      "essential": "How do local linear data and symmetry groups assemble over curved spaces?",
+      "project": "Bundle, Connection & Holonomy Research Note",
+      "standards": [
+        "Vector bundles",
+        "Sections and transition functions",
+        "Tangent and cotangent bundles",
+        "Principal bundles",
+        "Lie groups and Lie algebras",
+        "Connections and curvature",
+        "Holonomy foundations"
+      ],
+      "weeks": 2,
+      "week_numbers": [
+        31,
+        32
+      ],
+      "lessons": [
+        {
+          "id": "u11-l01",
+          "number": 1,
+          "title": "Vector Bundles, Local Triviality and Sections",
+          "week": 31,
+          "unit": 11,
+          "unit_title": "Vector Bundles, Lie Groups & Connections",
+          "essential": "How do local linear data and symmetry groups assemble over curved spaces?",
+          "project": "Bundle, Connection & Holonomy Research Note",
+          "focus": "constructing bundles from compatible local products"
+        },
+        {
+          "id": "u11-l02",
+          "number": 2,
+          "title": "Transition Functions and Bundle Gluing",
+          "week": 31,
+          "unit": 11,
+          "unit_title": "Vector Bundles, Lie Groups & Connections",
+          "essential": "How do local linear data and symmetry groups assemble over curved spaces?",
+          "project": "Bundle, Connection & Holonomy Research Note",
+          "focus": "encoding global twisting through cocycle data"
+        },
+        {
+          "id": "u11-l03",
+          "number": 3,
+          "title": "Tangent, Cotangent and Tensor Bundles",
+          "week": 31,
+          "unit": 11,
+          "unit_title": "Vector Bundles, Lie Groups & Connections",
+          "essential": "How do local linear data and symmetry groups assemble over curved spaces?",
+          "project": "Bundle, Connection & Holonomy Research Note",
+          "focus": "organizing natural bundles associated with manifolds"
+        },
+        {
+          "id": "u11-l04",
+          "number": 4,
+          "title": "Lie Groups, Lie Algebras and Exponential Maps",
+          "week": 31,
+          "unit": 11,
+          "unit_title": "Vector Bundles, Lie Groups & Connections",
+          "essential": "How do local linear data and symmetry groups assemble over curved spaces?",
+          "project": "Bundle, Connection & Holonomy Research Note",
+          "focus": "connecting global symmetry with infinitesimal brackets"
+        },
+        {
+          "id": "u11-l05",
+          "number": 5,
+          "title": "Principal Bundles and Gauge Symmetry",
+          "week": 32,
+          "unit": 11,
+          "unit_title": "Vector Bundles, Lie Groups & Connections",
+          "essential": "How do local linear data and symmetry groups assemble over curved spaces?",
+          "project": "Bundle, Connection & Holonomy Research Note",
+          "focus": "describing free group actions and local gauge choices"
+        },
+        {
+          "id": "u11-l06",
+          "number": 6,
+          "title": "Connections, Curvature Forms and Holonomy",
+          "week": 32,
+          "unit": 11,
+          "unit_title": "Vector Bundles, Lie Groups & Connections",
+          "essential": "How do local linear data and symmetry groups assemble over curved spaces?",
+          "project": "Bundle, Connection & Holonomy Research Note",
+          "focus": "computing parallel transport and curvature obstruction"
+        },
+        {
+          "id": "u11-l07",
+          "number": 7,
+          "title": "Characteristic-Class Foundations",
+          "week": 32,
+          "unit": 11,
+          "unit_title": "Vector Bundles, Lie Groups & Connections",
+          "essential": "How do local linear data and symmetry groups assemble over curved spaces?",
+          "project": "Bundle, Connection & Holonomy Research Note",
+          "focus": "using curvature and topology to distinguish bundles"
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Morse Theory, Global Theorems & Topological Curvature",
+      "essential": "How do critical points, curvature, and index formulas reveal global shape?",
+      "project": "Global Geometry Theorem Defense",
+      "standards": [
+        "Morse functions",
+        "Handle attachment",
+        "Morse inequalities",
+        "Gauss–Bonnet",
+        "Poincaré–Hopf",
+        "Jacobi fields",
+        "Comparison geometry",
+        "Global rigidity"
+      ],
+      "weeks": 2,
+      "week_numbers": [
+        33,
+        34
+      ],
+      "lessons": [
+        {
+          "id": "u12-l01",
+          "number": 1,
+          "title": "Morse Functions and Nondegenerate Critical Points",
+          "week": 33,
+          "unit": 12,
+          "unit_title": "Morse Theory, Global Theorems & Topological Curvature",
+          "essential": "How do critical points, curvature, and index formulas reveal global shape?",
+          "project": "Global Geometry Theorem Defense",
+          "focus": "using Hessians to classify local topology changes"
+        },
+        {
+          "id": "u12-l02",
+          "number": 2,
+          "title": "Handles, Cell Attachments and Morse Inequalities",
+          "week": 33,
+          "unit": 12,
+          "unit_title": "Morse Theory, Global Theorems & Topological Curvature",
+          "essential": "How do critical points, curvature, and index formulas reveal global shape?",
+          "project": "Global Geometry Theorem Defense",
+          "focus": "relating critical points to homology and manifold construction"
+        },
+        {
+          "id": "u12-l03",
+          "number": 3,
+          "title": "Gauss–Bonnet for Surfaces",
+          "week": 33,
+          "unit": 12,
+          "unit_title": "Morse Theory, Global Theorems & Topological Curvature",
+          "essential": "How do critical points, curvature, and index formulas reveal global shape?",
+          "project": "Global Geometry Theorem Defense",
+          "focus": "connecting integrated Gaussian curvature to Euler characteristic"
+        },
+        {
+          "id": "u12-l04",
+          "number": 4,
+          "title": "Poincaré–Hopf and Vector-Field Indices",
+          "week": 33,
+          "unit": 12,
+          "unit_title": "Morse Theory, Global Theorems & Topological Curvature",
+          "essential": "How do critical points, curvature, and index formulas reveal global shape?",
+          "project": "Global Geometry Theorem Defense",
+          "focus": "proving local zeros sum to a global invariant"
+        },
+        {
+          "id": "u12-l05",
+          "number": 5,
+          "title": "Jacobi Fields and Geodesic Variation",
+          "week": 34,
+          "unit": 12,
+          "unit_title": "Morse Theory, Global Theorems & Topological Curvature",
+          "essential": "How do critical points, curvature, and index formulas reveal global shape?",
+          "project": "Global Geometry Theorem Defense",
+          "focus": "measuring infinitesimal geodesic spread and conjugate points"
+        },
+        {
+          "id": "u12-l06",
+          "number": 6,
+          "title": "Comparison Geometry and Curvature Bounds",
+          "week": 34,
+          "unit": 12,
+          "unit_title": "Morse Theory, Global Theorems & Topological Curvature",
+          "essential": "How do critical points, curvature, and index formulas reveal global shape?",
+          "project": "Global Geometry Theorem Defense",
+          "focus": "comparing triangles, volumes, and geodesics under curvature hypotheses"
+        },
+        {
+          "id": "u12-l07",
+          "number": 7,
+          "title": "Global Rigidity, Finiteness and Research Frontiers",
+          "week": 34,
+          "unit": 12,
+          "unit_title": "Morse Theory, Global Theorems & Topological Curvature",
+          "essential": "How do critical points, curvature, and index formulas reveal global shape?",
+          "project": "Global Geometry Theorem Defense",
+          "focus": "synthesizing local tensors with global topology"
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Geometric Topology, Applications & Research Capstone",
+      "essential": "How can topology and geometry guide original research across mathematics, physics, computation, and data?",
+      "project": "Topology & Differential Geometry Research Capstone and Oral Defense",
+      "standards": [
+        "Surface classification",
+        "Knot and link foundations",
+        "Computational topology",
+        "Persistent homology",
+        "Geometric analysis",
+        "Relativity and gauge applications",
+        "Research design and exposition"
+      ],
+      "weeks": 2,
+      "week_numbers": [
+        35,
+        36
+      ],
+      "lessons": [
+        {
+          "id": "u13-l01",
+          "number": 1,
+          "title": "Classification of Compact Surfaces",
+          "week": 35,
+          "unit": 13,
+          "unit_title": "Geometric Topology, Applications & Research Capstone",
+          "essential": "How can topology and geometry guide original research across mathematics, physics, computation, and data?",
+          "project": "Topology & Differential Geometry Research Capstone and Oral Defense",
+          "focus": "using orientability, connected sums, and Euler characteristic"
+        },
+        {
+          "id": "u13-l02",
+          "number": 2,
+          "title": "Knots, Links and Reidemeister Moves",
+          "week": 35,
+          "unit": 13,
+          "unit_title": "Geometric Topology, Applications & Research Capstone",
+          "essential": "How can topology and geometry guide original research across mathematics, physics, computation, and data?",
+          "project": "Topology & Differential Geometry Research Capstone and Oral Defense",
+          "focus": "studying ambient isotopy and diagrammatic invariants"
+        },
+        {
+          "id": "u13-l03",
+          "number": 3,
+          "title": "Computational Topology and Persistent Homology",
+          "week": 35,
+          "unit": 13,
+          "unit_title": "Geometric Topology, Applications & Research Capstone",
+          "essential": "How can topology and geometry guide original research across mathematics, physics, computation, and data?",
+          "project": "Topology & Differential Geometry Research Capstone and Oral Defense",
+          "focus": "tracking homological features across filtrations"
+        },
+        {
+          "id": "u13-l04",
+          "number": 4,
+          "title": "Geometric Flows and Shape Evolution",
+          "week": 35,
+          "unit": 13,
+          "unit_title": "Geometric Topology, Applications & Research Capstone",
+          "essential": "How can topology and geometry guide original research across mathematics, physics, computation, and data?",
+          "project": "Topology & Differential Geometry Research Capstone and Oral Defense",
+          "focus": "connecting curvature-driven PDE with canonical geometry"
+        },
+        {
+          "id": "u13-l05",
+          "number": 5,
+          "title": "Geometry in Relativity, Gauge Theory and Physics",
+          "week": 36,
+          "unit": 13,
+          "unit_title": "Geometric Topology, Applications & Research Capstone",
+          "essential": "How can topology and geometry guide original research across mathematics, physics, computation, and data?",
+          "project": "Topology & Differential Geometry Research Capstone and Oral Defense",
+          "focus": "interpreting metrics, connections, curvature, and bundles physically"
+        },
+        {
+          "id": "u13-l06",
+          "number": 6,
+          "title": "Research Design, Literature and Reproducibility",
+          "week": 36,
+          "unit": 13,
+          "unit_title": "Geometric Topology, Applications & Research Capstone",
+          "essential": "How can topology and geometry guide original research across mathematics, physics, computation, and data?",
+          "project": "Topology & Differential Geometry Research Capstone and Oral Defense",
+          "focus": "building a defensible question, dependency graph, computational record, and source architecture"
+        },
+        {
+          "id": "u13-l07",
+          "number": 7,
+          "title": "Capstone Synthesis and Oral Defense",
+          "week": 36,
+          "unit": 13,
+          "unit_title": "Geometric Topology, Applications & Research Capstone",
+          "essential": "How can topology and geometry guide original research across mathematics, physics, computation, and data?",
+          "project": "Topology & Differential Geometry Research Capstone and Oral Defense",
+          "focus": "presenting a theorem-centered geometric investigation and answering objections"
+        }
+      ]
+    }
+  ],
+  "weeks": [
+    {
+      "week": 1,
+      "unit": 1,
+      "title": "Topological Spaces, Bases & Continuous Maps",
+      "essential": "How do open sets encode nearness and continuity without requiring distance?",
+      "focus": "Why Topology? Space Beyond Distance; Topological Spaces and the Open-Set Axioms; Closed Sets, Complements and Dual Axioms",
+      "lesson_ids": [
+        "u01-l01",
+        "u01-l02",
+        "u01-l03"
+      ],
+      "unit_path": "units/unit-01/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 2,
+      "unit": 1,
+      "title": "Topological Spaces, Bases & Continuous Maps",
+      "essential": "How do open sets encode nearness and continuity without requiring distance?",
+      "focus": "Neighborhoods, Interior, Closure and Boundary; Bases and Local Descriptions of Topology; Subbases and Generated Topologies",
+      "lesson_ids": [
+        "u01-l04",
+        "u01-l05",
+        "u01-l06"
+      ],
+      "unit_path": "units/unit-01/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 3,
+      "unit": 1,
+      "title": "Topological Spaces, Bases & Continuous Maps",
+      "essential": "How do open sets encode nearness and continuity without requiring distance?",
+      "focus": "Continuity Through Preimages; Homeomorphisms and Topological Equivalence",
+      "lesson_ids": [
+        "u01-l07",
+        "u01-l08"
+      ],
+      "unit_path": "units/unit-01/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 4,
+      "unit": 2,
+      "title": "Metric Spaces, Countability & Separation",
+      "essential": "Which local and separation properties distinguish well-behaved spaces?",
+      "focus": "Metrics, Open Balls and Induced Topologies; Convergence, Cauchy Sequences and Completeness; Equivalent Metrics and Topological Invariance",
+      "lesson_ids": [
+        "u02-l01",
+        "u02-l02",
+        "u02-l03"
+      ],
+      "unit_path": "units/unit-02/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 5,
+      "unit": 2,
+      "title": "Metric Spaces, Countability & Separation",
+      "essential": "Which local and separation properties distinguish well-behaved spaces?",
+      "focus": "First Countability and Sequence Tests; Second Countability, Separability and Lindelöf Ideas",
+      "lesson_ids": [
+        "u02-l04",
+        "u02-l05"
+      ],
+      "unit_path": "units/unit-02/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 6,
+      "unit": 2,
+      "title": "Metric Spaces, Countability & Separation",
+      "essential": "Which local and separation properties distinguish well-behaved spaces?",
+      "focus": "Separation Axioms from T₀ to Hausdorff; Regularity, Normality and Metrization Foundations",
+      "lesson_ids": [
+        "u02-l06",
+        "u02-l07"
+      ],
+      "unit_path": "units/unit-02/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 7,
+      "unit": 3,
+      "title": "Compactness, Connectedness, Products & Quotients",
+      "essential": "How do global topological properties survive continuous maps and constructions?",
+      "focus": "Compactness by Open Covers; Compactness in Metric and Euclidean Spaces; Continuous Images and Extreme-Value Consequences",
+      "lesson_ids": [
+        "u03-l01",
+        "u03-l02",
+        "u03-l03"
+      ],
+      "unit_path": "units/unit-03/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 8,
+      "unit": 3,
+      "title": "Compactness, Connectedness, Products & Quotients",
+      "essential": "How do global topological properties survive continuous maps and constructions?",
+      "focus": "Connectedness and Separation; Path Connectedness and Components",
+      "lesson_ids": [
+        "u03-l04",
+        "u03-l05"
+      ],
+      "unit_path": "units/unit-03/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 9,
+      "unit": 3,
+      "title": "Compactness, Connectedness, Products & Quotients",
+      "essential": "How do global topological properties survive continuous maps and constructions?",
+      "focus": "Product Spaces and Universal Coordinates; Quotient Spaces, Identifications and Gluing",
+      "lesson_ids": [
+        "u03-l06",
+        "u03-l07"
+      ],
+      "unit_path": "units/unit-03/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 10,
+      "unit": 4,
+      "title": "Homotopy, Fundamental Groups & Covering Spaces",
+      "essential": "How can loops and deformations detect holes that ordinary coordinates cannot?",
+      "focus": "Homotopy as Continuous Deformation; Loops, Concatenation and Path Homotopy; The Fundamental Group",
+      "lesson_ids": [
+        "u04-l01",
+        "u04-l02",
+        "u04-l03"
+      ],
+      "unit_path": "units/unit-04/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 11,
+      "unit": 4,
+      "title": "Homotopy, Fundamental Groups & Covering Spaces",
+      "essential": "How can loops and deformations detect holes that ordinary coordinates cannot?",
+      "focus": "Simply Connected Spaces and Contractibility; Seifert–van Kampen Strategy",
+      "lesson_ids": [
+        "u04-l04",
+        "u04-l05"
+      ],
+      "unit_path": "units/unit-04/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 12,
+      "unit": 4,
+      "title": "Homotopy, Fundamental Groups & Covering Spaces",
+      "essential": "How can loops and deformations detect holes that ordinary coordinates cannot?",
+      "focus": "Covering Spaces and Lifting; Deck Transformations and Classification Examples",
+      "lesson_ids": [
+        "u04-l06",
+        "u04-l07"
+      ],
+      "unit_path": "units/unit-04/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 13,
+      "unit": 5,
+      "title": "Cell Complexes, Homology & Cohomology Foundations",
+      "essential": "How can algebraic invariants measure holes in every dimension?",
+      "focus": "Simplicial Complexes and Triangulated Spaces; CW Complexes and Cell Attachments; Chains, Boundaries and the Identity ∂²=0",
+      "lesson_ids": [
+        "u05-l01",
+        "u05-l02",
+        "u05-l03"
+      ],
+      "unit_path": "units/unit-05/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 14,
+      "unit": 5,
+      "title": "Cell Complexes, Homology & Cohomology Foundations",
+      "essential": "How can algebraic invariants measure holes in every dimension?",
+      "focus": "Homology Groups and Dimensional Holes; Exact Sequences and Mayer–Vietoris Strategy",
+      "lesson_ids": [
+        "u05-l04",
+        "u05-l05"
+      ],
+      "unit_path": "units/unit-05/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 15,
+      "unit": 5,
+      "title": "Cell Complexes, Homology & Cohomology Foundations",
+      "essential": "How can algebraic invariants measure holes in every dimension?",
+      "focus": "Euler Characteristic and Homological Counting; Cohomology, Products and Duality Preview",
+      "lesson_ids": [
+        "u05-l06",
+        "u05-l07"
+      ],
+      "unit_path": "units/unit-05/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 16,
+      "unit": 6,
+      "title": "Smooth Manifolds, Charts & Tangent Spaces",
+      "essential": "How do local Euclidean coordinates assemble into globally curved spaces?",
+      "focus": "Topological Manifolds and Local Euclidean Structure; Charts, Atlases and Smooth Compatibility; Smooth Maps and Diffeomorphisms",
+      "lesson_ids": [
+        "u06-l01",
+        "u06-l02",
+        "u06-l03"
+      ],
+      "unit_path": "units/unit-06/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 17,
+      "unit": 6,
+      "title": "Smooth Manifolds, Charts & Tangent Spaces",
+      "essential": "How do local Euclidean coordinates assemble into globally curved spaces?",
+      "focus": "Tangent Vectors as Velocities and Derivations; Differentials, Rank and the Chain Rule",
+      "lesson_ids": [
+        "u06-l04",
+        "u06-l05"
+      ],
+      "unit_path": "units/unit-06/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 18,
+      "unit": 6,
+      "title": "Smooth Manifolds, Charts & Tangent Spaces",
+      "essential": "How do local Euclidean coordinates assemble into globally curved spaces?",
+      "focus": "Cotangent Spaces, Covectors and Tensors; Vector Fields, Flows and Lie Brackets",
+      "lesson_ids": [
+        "u06-l06",
+        "u06-l07"
+      ],
+      "unit_path": "units/unit-06/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 19,
+      "unit": 7,
+      "title": "Submanifolds, Transversality & Differential Topology",
+      "essential": "How do smooth maps create and classify geometric subspaces?",
+      "focus": "Inverse and Implicit Function Theorems on Manifolds; Immersions, Submersions and Embeddings; Regular Values and the Preimage Theorem",
+      "lesson_ids": [
+        "u07-l01",
+        "u07-l02",
+        "u07-l03"
+      ],
+      "unit_path": "units/unit-07/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 20,
+      "unit": 7,
+      "title": "Submanifolds, Transversality & Differential Topology",
+      "essential": "How do smooth maps create and classify geometric subspaces?",
+      "focus": "Critical Points, Sard’s Theorem and Genericity; Transversality and Stable Intersections",
+      "lesson_ids": [
+        "u07-l04",
+        "u07-l05"
+      ],
+      "unit_path": "units/unit-07/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 21,
+      "unit": 7,
+      "title": "Submanifolds, Transversality & Differential Topology",
+      "essential": "How do smooth maps create and classify geometric subspaces?",
+      "focus": "Orientation, Degree and Winding; Vector-Field Index and Poincaré–Hopf Preview",
+      "lesson_ids": [
+        "u07-l06",
+        "u07-l07"
+      ],
+      "unit_path": "units/unit-07/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 22,
+      "unit": 8,
+      "title": "Curves, Surfaces & Classical Differential Geometry",
+      "essential": "How do derivatives measure bending, twisting, and intrinsic surface geometry?",
+      "focus": "Regular Curves and Arc-Length Parametrization; Curvature, Torsion and the Frenet Frame; Local and Global Geometry of Plane Curves",
+      "lesson_ids": [
+        "u08-l01",
+        "u08-l02",
+        "u08-l03"
+      ],
+      "unit_path": "units/unit-08/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 23,
+      "unit": 8,
+      "title": "Curves, Surfaces & Classical Differential Geometry",
+      "essential": "How do derivatives measure bending, twisting, and intrinsic surface geometry?",
+      "focus": "Parametrized Surfaces and Tangent Planes; The First Fundamental Form",
+      "lesson_ids": [
+        "u08-l04",
+        "u08-l05"
+      ],
+      "unit_path": "units/unit-08/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 24,
+      "unit": 8,
+      "title": "Curves, Surfaces & Classical Differential Geometry",
+      "essential": "How do derivatives measure bending, twisting, and intrinsic surface geometry?",
+      "focus": "The Second Fundamental Form and Shape Operator; Gaussian Curvature, Mean Curvature and Theorema Egregium",
+      "lesson_ids": [
+        "u08-l06",
+        "u08-l07"
+      ],
+      "unit_path": "units/unit-08/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 25,
+      "unit": 9,
+      "title": "Riemannian Metrics, Connections & Geodesics",
+      "essential": "How does a varying inner product determine distance, motion, and curvature on a manifold?",
+      "focus": "Riemannian Metrics and Smooth Inner Products; Length, Energy and Riemannian Distance; Connections and Covariant Differentiation",
+      "lesson_ids": [
+        "u09-l01",
+        "u09-l02",
+        "u09-l03"
+      ],
+      "unit_path": "units/unit-09/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 26,
+      "unit": 9,
+      "title": "Riemannian Metrics, Connections & Geodesics",
+      "essential": "How does a varying inner product determine distance, motion, and curvature on a manifold?",
+      "focus": "The Levi–Civita Connection; Geodesics and the Geodesic Equation",
+      "lesson_ids": [
+        "u09-l04",
+        "u09-l05"
+      ],
+      "unit_path": "units/unit-09/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 27,
+      "unit": 9,
+      "title": "Riemannian Metrics, Connections & Geodesics",
+      "essential": "How does a varying inner product determine distance, motion, and curvature on a manifold?",
+      "focus": "Exponential Maps, Normal Coordinates and Completeness; Riemann, Sectional, Ricci and Scalar Curvature",
+      "lesson_ids": [
+        "u09-l06",
+        "u09-l07"
+      ],
+      "unit_path": "units/unit-09/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 28,
+      "unit": 10,
+      "title": "Differential Forms, Integration & de Rham Theory",
+      "essential": "How does exterior calculus unify vector calculus, integration, topology, and geometry?",
+      "focus": "Alternating Tensors and the Exterior Algebra; Differential Forms and Pullbacks; The Exterior Derivative",
+      "lesson_ids": [
+        "u10-l01",
+        "u10-l02",
+        "u10-l03"
+      ],
+      "unit_path": "units/unit-10/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 29,
+      "unit": 10,
+      "title": "Differential Forms, Integration & de Rham Theory",
+      "essential": "How does exterior calculus unify vector calculus, integration, topology, and geometry?",
+      "focus": "Integration on Oriented Manifolds; Generalized Stokes Theorem",
+      "lesson_ids": [
+        "u10-l04",
+        "u10-l05"
+      ],
+      "unit_path": "units/unit-10/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 30,
+      "unit": 10,
+      "title": "Differential Forms, Integration & de Rham Theory",
+      "essential": "How does exterior calculus unify vector calculus, integration, topology, and geometry?",
+      "focus": "Closed, Exact and de Rham Cohomology; Poincaré Lemma and de Rham Correspondence",
+      "lesson_ids": [
+        "u10-l06",
+        "u10-l07"
+      ],
+      "unit_path": "units/unit-10/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 31,
+      "unit": 11,
+      "title": "Vector Bundles, Lie Groups & Connections",
+      "essential": "How do local linear data and symmetry groups assemble over curved spaces?",
+      "focus": "Vector Bundles, Local Triviality and Sections; Transition Functions and Bundle Gluing; Tangent, Cotangent and Tensor Bundles; Lie Groups, Lie Algebras and Exponential Maps",
+      "lesson_ids": [
+        "u11-l01",
+        "u11-l02",
+        "u11-l03",
+        "u11-l04"
+      ],
+      "unit_path": "units/unit-11/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 32,
+      "unit": 11,
+      "title": "Vector Bundles, Lie Groups & Connections",
+      "essential": "How do local linear data and symmetry groups assemble over curved spaces?",
+      "focus": "Principal Bundles and Gauge Symmetry; Connections, Curvature Forms and Holonomy; Characteristic-Class Foundations",
+      "lesson_ids": [
+        "u11-l05",
+        "u11-l06",
+        "u11-l07"
+      ],
+      "unit_path": "units/unit-11/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 33,
+      "unit": 12,
+      "title": "Morse Theory, Global Theorems & Topological Curvature",
+      "essential": "How do critical points, curvature, and index formulas reveal global shape?",
+      "focus": "Morse Functions and Nondegenerate Critical Points; Handles, Cell Attachments and Morse Inequalities; Gauss–Bonnet for Surfaces; Poincaré–Hopf and Vector-Field Indices",
+      "lesson_ids": [
+        "u12-l01",
+        "u12-l02",
+        "u12-l03",
+        "u12-l04"
+      ],
+      "unit_path": "units/unit-12/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 34,
+      "unit": 12,
+      "title": "Morse Theory, Global Theorems & Topological Curvature",
+      "essential": "How do critical points, curvature, and index formulas reveal global shape?",
+      "focus": "Jacobi Fields and Geodesic Variation; Comparison Geometry and Curvature Bounds; Global Rigidity, Finiteness and Research Frontiers",
+      "lesson_ids": [
+        "u12-l05",
+        "u12-l06",
+        "u12-l07"
+      ],
+      "unit_path": "units/unit-12/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 35,
+      "unit": 13,
+      "title": "Geometric Topology, Applications & Research Capstone",
+      "essential": "How can topology and geometry guide original research across mathematics, physics, computation, and data?",
+      "focus": "Classification of Compact Surfaces; Knots, Links and Reidemeister Moves; Computational Topology and Persistent Homology; Geometric Flows and Shape Evolution",
+      "lesson_ids": [
+        "u13-l01",
+        "u13-l02",
+        "u13-l03",
+        "u13-l04"
+      ],
+      "unit_path": "units/unit-13/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    },
+    {
+      "week": 36,
+      "unit": 13,
+      "title": "Geometric Topology, Applications & Research Capstone",
+      "essential": "How can topology and geometry guide original research across mathematics, physics, computation, and data?",
+      "focus": "Geometry in Relativity, Gauge Theory and Physics; Research Design, Literature and Reproducibility; Capstone Synthesis and Oral Defense",
+      "lesson_ids": [
+        "u13-l05",
+        "u13-l06",
+        "u13-l07"
+      ],
+      "unit_path": "units/unit-13/index.html",
+      "sessions": [
+        "Definitions, retrieval and notation",
+        "Theorem development and proof reconstruction",
+        "Interactive representation or counterexample search",
+        "Application, critique and research connection",
+        "Mastery evidence, correction, reflection and portfolio update"
+      ]
+    }
+  ]
+}

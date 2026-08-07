@@ -1,0 +1,16 @@
+{
+  "id": "./",
+  "name": "Khaemenes Higher Learning Topology & Differential Geometry",
+  "short_name": "Topology & Differential Geometry",
+  "description": "A rigorous advanced sequence in point-set topology, compactness and connectedness, homotopy, fundamental groups, covering spaces, homology foundations, smooth manifolds, differential topology, curves and surfaces, Riemannian metrics, geodesics, differential forms, de Rham theory, bundles, curvature, global theorems, and research-level geometric exposition.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#090b10",
+  "theme_color": "#090b10",
+  "categories": [
+    "education",
+    "mathematics",
+    "research"
+  ]
+}

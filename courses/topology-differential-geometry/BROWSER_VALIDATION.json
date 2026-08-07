@@ -1,0 +1,23 @@
+{
+  "h1": "TOPOLOGY & DIFFERENTIAL GEOMETRY",
+  "dashboard_rendered": true,
+  "weeks": 36,
+  "unit_cards": 14,
+  "labs_page_visible": true,
+  "pin_pressed_after_add": "true",
+  "theme_changed": true,
+  "desktop_overflow": false,
+  "mobile_overflow": false,
+  "lesson_questions": 4,
+  "lesson_score": "4/4 correct \u00b7 100%",
+  "lesson_status": "Completed locally \u00b7 Quick check 100%.",
+  "labs": {
+    "finite_topology": true,
+    "surface_curvature": true,
+    "geodesic_global": true
+  },
+  "midterm_questions": 60,
+  "page_errors": [],
+  "console_errors": [],
+  "screenshot": "/mnt/data/topology_differential_geometry_landing_preview.png"
+}
