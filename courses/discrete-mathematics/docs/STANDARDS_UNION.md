@@ -1,0 +1,3 @@
+# Standards and Curriculum Union
+
+The course synthesizes the CS2023 ACM/IEEE-CS/AAAI Mathematical and Statistical Foundations discrete-mathematics core—sets, relations, functions, cardinality, recursive definitions, proof techniques, counting, modular arithmetic, logic, graphs, and order notation—with the established undergraduate mathematics-for-computer-science sequence represented by MIT 6.1200J/6.042J. The Khaemenes course extends that foundation through graph algorithms, Boolean circuits, finite automata, coding theory, computability foundations, security applications, reproducible computing work, and a substantial capstone.

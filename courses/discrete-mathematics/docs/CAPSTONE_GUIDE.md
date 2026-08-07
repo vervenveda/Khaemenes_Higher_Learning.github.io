@@ -1,0 +1,3 @@
+# Discrete Mathematics Capstone Guide
+
+The capstone must define a meaningful computer-science problem; specify sets, relations, graph, logic, recurrence, probability, automaton, or number-theoretic model; state assumptions and constraints; present a theorem, invariant, correctness claim, or counting result; design an algorithm or formal procedure; analyze edge cases and complexity; validate on finite examples without confusing tests with proof; document code and diagrams; discuss security, privacy, fairness, or modelling limitations where relevant; provide reproducible artifacts; and conclude with a 6–10 minute oral defense.

@@ -1,0 +1,3 @@
+# Course Outcomes
+
+Learners will formalize statements with logic and quantifiers; operate with sets, functions, relations, and cardinality; construct and critique proofs; use induction, recursion, and invariants; solve modular-arithmetic problems; count configurations with combinatorial principles; solve recurrences; reason with discrete probability; model and analyze graphs and trees; simplify Boolean systems; design and verify finite-state machines; analyze algorithm correctness and asymptotic complexity; explain foundational computability limits; and complete a reproducible discrete-mathematics computing capstone.
