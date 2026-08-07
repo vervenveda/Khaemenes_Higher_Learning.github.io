@@ -1,0 +1,2094 @@
+{
+  "schema_version": "1.0",
+  "course": {
+    "id": "higher-learning-statistics",
+    "profile_course_id": "statistics",
+    "code": "KH-HL-MATH-STAT1",
+    "title": "Khaemenes Higher Learning Statistics",
+    "short_title": "Statistics",
+    "duration_weeks": 36,
+    "sessions": 180,
+    "lesson_count": 92,
+    "mastery_target": 80,
+    "pathways": [
+      "Foundation",
+      "Core",
+      "Honors / Extended"
+    ],
+    "storage_key": "khaemenes-statistics-college-course-v1",
+    "assessment_key": "khaemenes-statistics-assessment-records-v1",
+    "pin_key": "khaemenes-higher-learning-pinned-courses-v1",
+    "audience": "College and advanced independent learners seeking rigorous statistical literacy, data analysis, probability, inference, modelling, and reproducible research",
+    "prerequisite": "Algebra I fluency is required; Algebra II is recommended. Calculus is not required for the core course.",
+    "calculator": "https://vervenveda.com/Khaemenes_High.github.io/courses/mathematics/tools/calculator",
+    "cad": "https://vervenveda.com/proresource_hub.github.io/Protools/Ohmic_CAD_Studio.html",
+    "arcade": "https://vervenveda.com/arcade.github.io/",
+    "version": "1.0.0",
+    "credit_guidance": "Designed as a rigorous introductory college statistics course aligned to current statistical education recommendations; institutional credit decisions remain with the receiving institution."
+  },
+  "units": [
+    {
+      "number": 1,
+      "title": "Statistical Problem Solving, Data Ethics & Measurement",
+      "essential": "How do strong questions, trustworthy measurements, and ethical decisions turn data into defensible evidence?",
+      "project": "Data Provenance, Ethics & Investigative Question Audit",
+      "standards": [
+        "Statistical problem-solving process",
+        "Investigative questions",
+        "Cases and variables",
+        "Categorical and quantitative data",
+        "Measurement validity",
+        "Bias and data quality",
+        "Ethics and privacy",
+        "Reproducibility",
+        "Statistical communication"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        1,
+        2,
+        3
+      ],
+      "lessons": [
+        {
+          "id": "u01-l01",
+          "number": 1,
+          "title": "Statistics as an Evidence Discipline",
+          "week": 1,
+          "unit": 1,
+          "unit_title": "Statistical Problem Solving, Data Ethics & Measurement",
+          "essential": "How do strong questions, trustworthy measurements, and ethical decisions turn data into defensible evidence?",
+          "project": "Data Provenance, Ethics & Investigative Question Audit",
+          "focus": "moving from an investigative question to data, analysis, interpretation, and communication"
+        },
+        {
+          "id": "u01-l02",
+          "number": 2,
+          "title": "Cases, Variables, Populations and Samples",
+          "week": 1,
+          "unit": 1,
+          "unit_title": "Statistical Problem Solving, Data Ethics & Measurement",
+          "essential": "How do strong questions, trustworthy measurements, and ethical decisions turn data into defensible evidence?",
+          "project": "Data Provenance, Ethics & Investigative Question Audit",
+          "focus": "identifying observational units, variables, target populations, samples, parameters, and statistics"
+        },
+        {
+          "id": "u01-l03",
+          "number": 3,
+          "title": "Categorical, Quantitative and Time-Indexed Data",
+          "week": 1,
+          "unit": 1,
+          "unit_title": "Statistical Problem Solving, Data Ethics & Measurement",
+          "essential": "How do strong questions, trustworthy measurements, and ethical decisions turn data into defensible evidence?",
+          "project": "Data Provenance, Ethics & Investigative Question Audit",
+          "focus": "classifying variable types and choosing summaries that preserve meaning"
+        },
+        {
+          "id": "u01-l04",
+          "number": 4,
+          "title": "Measurement, Operational Definitions and Validity",
+          "week": 2,
+          "unit": 1,
+          "unit_title": "Statistical Problem Solving, Data Ethics & Measurement",
+          "essential": "How do strong questions, trustworthy measurements, and ethical decisions turn data into defensible evidence?",
+          "project": "Data Provenance, Ethics & Investigative Question Audit",
+          "focus": "defining constructs so measurements are repeatable, relevant, and honest"
+        },
+        {
+          "id": "u01-l05",
+          "number": 5,
+          "title": "Data Quality, Missingness and Bias",
+          "week": 2,
+          "unit": 1,
+          "unit_title": "Statistical Problem Solving, Data Ethics & Measurement",
+          "essential": "How do strong questions, trustworthy measurements, and ethical decisions turn data into defensible evidence?",
+          "project": "Data Provenance, Ethics & Investigative Question Audit",
+          "focus": "diagnosing selection, response, measurement, processing, and survivorship bias"
+        },
+        {
+          "id": "u01-l06",
+          "number": 6,
+          "title": "Ethics, Privacy, Consent and Responsible Use",
+          "week": 3,
+          "unit": 1,
+          "unit_title": "Statistical Problem Solving, Data Ethics & Measurement",
+          "essential": "How do strong questions, trustworthy measurements, and ethical decisions turn data into defensible evidence?",
+          "project": "Data Provenance, Ethics & Investigative Question Audit",
+          "focus": "balancing analytic value with consent, privacy, fairness, and harm prevention"
+        },
+        {
+          "id": "u01-l07",
+          "number": 7,
+          "title": "Reproducible Statistical Communication",
+          "week": 3,
+          "unit": 1,
+          "unit_title": "Statistical Problem Solving, Data Ethics & Measurement",
+          "essential": "How do strong questions, trustworthy measurements, and ethical decisions turn data into defensible evidence?",
+          "project": "Data Provenance, Ethics & Investigative Question Audit",
+          "focus": "building an auditable chain from source and code to table, graph, conclusion, and limitation"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Describing One-Variable Distributions",
+      "essential": "How do graphs and numerical summaries reveal distribution shape, center, spread, unusual values, and context?",
+      "project": "Distribution Portrait & Resistant-Summary Investigation",
+      "standards": [
+        "Frequency tables",
+        "Dot plots",
+        "Histograms",
+        "Box plots",
+        "Shape and modality",
+        "Mean and median",
+        "Quartiles and IQR",
+        "Variance and standard deviation",
+        "Outliers",
+        "Standard scores",
+        "Transformations"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        4,
+        5,
+        6
+      ],
+      "lessons": [
+        {
+          "id": "u02-l01",
+          "number": 1,
+          "title": "Frequency Tables, Dot Plots and Histograms",
+          "week": 4,
+          "unit": 2,
+          "unit_title": "Describing One-Variable Distributions",
+          "essential": "How do graphs and numerical summaries reveal distribution shape, center, spread, unusual values, and context?",
+          "project": "Distribution Portrait & Resistant-Summary Investigation",
+          "focus": "constructing displays that make scale, frequency, and shape visible"
+        },
+        {
+          "id": "u02-l02",
+          "number": 2,
+          "title": "Shape, Modality, Skewness and Unusual Features",
+          "week": 4,
+          "unit": 2,
+          "unit_title": "Describing One-Variable Distributions",
+          "essential": "How do graphs and numerical summaries reveal distribution shape, center, spread, unusual values, and context?",
+          "project": "Distribution Portrait & Resistant-Summary Investigation",
+          "focus": "describing distributions with context rather than labels alone"
+        },
+        {
+          "id": "u02-l03",
+          "number": 3,
+          "title": "Mean, Median and Resistant Center",
+          "week": 4,
+          "unit": 2,
+          "unit_title": "Describing One-Variable Distributions",
+          "essential": "How do graphs and numerical summaries reveal distribution shape, center, spread, unusual values, and context?",
+          "project": "Distribution Portrait & Resistant-Summary Investigation",
+          "focus": "choosing and interpreting center in the presence of skew or outliers"
+        },
+        {
+          "id": "u02-l04",
+          "number": 4,
+          "title": "Range, Quartiles, IQR and Box Plots",
+          "week": 5,
+          "unit": 2,
+          "unit_title": "Describing One-Variable Distributions",
+          "essential": "How do graphs and numerical summaries reveal distribution shape, center, spread, unusual values, and context?",
+          "project": "Distribution Portrait & Resistant-Summary Investigation",
+          "focus": "summarizing middle spread and detecting potential outliers"
+        },
+        {
+          "id": "u02-l05",
+          "number": 5,
+          "title": "Variance and Standard Deviation",
+          "week": 5,
+          "unit": 2,
+          "unit_title": "Describing One-Variable Distributions",
+          "essential": "How do graphs and numerical summaries reveal distribution shape, center, spread, unusual values, and context?",
+          "project": "Distribution Portrait & Resistant-Summary Investigation",
+          "focus": "measuring typical squared and root-mean-square deviation from the mean"
+        },
+        {
+          "id": "u02-l06",
+          "number": 6,
+          "title": "Standard Scores and Relative Standing",
+          "week": 6,
+          "unit": 2,
+          "unit_title": "Describing One-Variable Distributions",
+          "essential": "How do graphs and numerical summaries reveal distribution shape, center, spread, unusual values, and context?",
+          "project": "Distribution Portrait & Resistant-Summary Investigation",
+          "focus": "standardizing observations to compare relative position across scales"
+        },
+        {
+          "id": "u02-l07",
+          "number": 7,
+          "title": "Transformations and Comparing Distributions",
+          "week": 6,
+          "unit": 2,
+          "unit_title": "Describing One-Variable Distributions",
+          "essential": "How do graphs and numerical summaries reveal distribution shape, center, spread, unusual values, and context?",
+          "project": "Distribution Portrait & Resistant-Summary Investigation",
+          "focus": "predicting how shifts, rescaling, and nonlinear transforms change summaries and shape"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Relationships, Correlation & Regression",
+      "essential": "How can statistical models describe association, quantify uncertainty, diagnose error, and avoid causal overreach?",
+      "project": "Association, Prediction & Residual Analysis Portfolio",
+      "standards": [
+        "Scatterplots",
+        "Direction and form",
+        "Correlation",
+        "Least-squares regression",
+        "Residuals",
+        "Coefficient of determination",
+        "Influential points",
+        "Transformations",
+        "Two-way tables",
+        "Confounding",
+        "Causation"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        7,
+        8,
+        9
+      ],
+      "lessons": [
+        {
+          "id": "u03-l01",
+          "number": 1,
+          "title": "Scatterplots and Association",
+          "week": 7,
+          "unit": 3,
+          "unit_title": "Relationships, Correlation & Regression",
+          "essential": "How can statistical models describe association, quantify uncertainty, diagnose error, and avoid causal overreach?",
+          "project": "Association, Prediction & Residual Analysis Portfolio",
+          "focus": "describing direction, form, strength, clusters, and unusual points in context"
+        },
+        {
+          "id": "u03-l02",
+          "number": 2,
+          "title": "Pearson Correlation and Standardized Association",
+          "week": 7,
+          "unit": 3,
+          "unit_title": "Relationships, Correlation & Regression",
+          "essential": "How can statistical models describe association, quantify uncertainty, diagnose error, and avoid causal overreach?",
+          "project": "Association, Prediction & Residual Analysis Portfolio",
+          "focus": "interpreting linear strength and direction while respecting scale and outliers"
+        },
+        {
+          "id": "u03-l03",
+          "number": 3,
+          "title": "Least-Squares Regression Line",
+          "week": 7,
+          "unit": 3,
+          "unit_title": "Relationships, Correlation & Regression",
+          "essential": "How can statistical models describe association, quantify uncertainty, diagnose error, and avoid causal overreach?",
+          "project": "Association, Prediction & Residual Analysis Portfolio",
+          "focus": "estimating slope and intercept by minimizing squared residuals"
+        },
+        {
+          "id": "u03-l04",
+          "number": 4,
+          "title": "Residuals and Model Diagnostics",
+          "week": 8,
+          "unit": 3,
+          "unit_title": "Relationships, Correlation & Regression",
+          "essential": "How can statistical models describe association, quantify uncertainty, diagnose error, and avoid causal overreach?",
+          "project": "Association, Prediction & Residual Analysis Portfolio",
+          "focus": "using residual plots to assess linearity, equal spread, independence, and unusual observations"
+        },
+        {
+          "id": "u03-l05",
+          "number": 5,
+          "title": "R², Prediction and Extrapolation",
+          "week": 8,
+          "unit": 3,
+          "unit_title": "Relationships, Correlation & Regression",
+          "essential": "How can statistical models describe association, quantify uncertainty, diagnose error, and avoid causal overreach?",
+          "project": "Association, Prediction & Residual Analysis Portfolio",
+          "focus": "interpreting explained variation and distinguishing interpolation from risky extrapolation"
+        },
+        {
+          "id": "u03-l06",
+          "number": 6,
+          "title": "Transformations, Nonlinearity and Influential Points",
+          "week": 9,
+          "unit": 3,
+          "unit_title": "Relationships, Correlation & Regression",
+          "essential": "How can statistical models describe association, quantify uncertainty, diagnose error, and avoid causal overreach?",
+          "project": "Association, Prediction & Residual Analysis Portfolio",
+          "focus": "repairing model form and evaluating leverage and influence"
+        },
+        {
+          "id": "u03-l07",
+          "number": 7,
+          "title": "Categorical Association, Confounding and Causal Claims",
+          "week": 9,
+          "unit": 3,
+          "unit_title": "Relationships, Correlation & Regression",
+          "essential": "How can statistical models describe association, quantify uncertainty, diagnose error, and avoid causal overreach?",
+          "project": "Association, Prediction & Residual Analysis Portfolio",
+          "focus": "using conditional percentages and design evidence to separate association from causation"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Study Design, Sampling & Experiments",
+      "essential": "How do sampling, randomization, control, and design determine what conclusions data can support?",
+      "project": "Survey and Experiment Design Laboratory",
+      "standards": [
+        "Simple random sampling",
+        "Stratified sampling",
+        "Cluster sampling",
+        "Systematic sampling",
+        "Voluntary response",
+        "Nonresponse",
+        "Random assignment",
+        "Control groups",
+        "Blinding",
+        "Blocking",
+        "Matched pairs",
+        "Observational studies",
+        "Confounding",
+        "Simulation"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        10,
+        11,
+        12
+      ],
+      "lessons": [
+        {
+          "id": "u04-l01",
+          "number": 1,
+          "title": "Sampling Frames and Simple Random Samples",
+          "week": 10,
+          "unit": 4,
+          "unit_title": "Study Design, Sampling & Experiments",
+          "essential": "How do sampling, randomization, control, and design determine what conclusions data can support?",
+          "project": "Survey and Experiment Design Laboratory",
+          "focus": "connecting the target population to a probability-based selection process"
+        },
+        {
+          "id": "u04-l02",
+          "number": 2,
+          "title": "Stratified, Cluster and Systematic Sampling",
+          "week": 10,
+          "unit": 4,
+          "unit_title": "Study Design, Sampling & Experiments",
+          "essential": "How do sampling, randomization, control, and design determine what conclusions data can support?",
+          "project": "Survey and Experiment Design Laboratory",
+          "focus": "matching sampling structure to population organization and precision needs"
+        },
+        {
+          "id": "u04-l03",
+          "number": 3,
+          "title": "Survey Error, Nonresponse and Question Wording",
+          "week": 10,
+          "unit": 4,
+          "unit_title": "Study Design, Sampling & Experiments",
+          "essential": "How do sampling, randomization, control, and design determine what conclusions data can support?",
+          "project": "Survey and Experiment Design Laboratory",
+          "focus": "diagnosing coverage, response, measurement, and interviewer effects"
+        },
+        {
+          "id": "u04-l04",
+          "number": 4,
+          "title": "Observational Studies and Confounding",
+          "week": 11,
+          "unit": 4,
+          "unit_title": "Study Design, Sampling & Experiments",
+          "essential": "How do sampling, randomization, control, and design determine what conclusions data can support?",
+          "project": "Survey and Experiment Design Laboratory",
+          "focus": "identifying lurking variables and limits on causal conclusions"
+        },
+        {
+          "id": "u04-l05",
+          "number": 5,
+          "title": "Randomized Experiments, Control and Replication",
+          "week": 11,
+          "unit": 4,
+          "unit_title": "Study Design, Sampling & Experiments",
+          "essential": "How do sampling, randomization, control, and design determine what conclusions data can support?",
+          "project": "Survey and Experiment Design Laboratory",
+          "focus": "using random assignment to balance confounders and support causal inference"
+        },
+        {
+          "id": "u04-l06",
+          "number": 6,
+          "title": "Blocking, Matching, Blinding and Placebos",
+          "week": 12,
+          "unit": 4,
+          "unit_title": "Study Design, Sampling & Experiments",
+          "essential": "How do sampling, randomization, control, and design determine what conclusions data can support?",
+          "project": "Survey and Experiment Design Laboratory",
+          "focus": "reducing variation and bias through deliberate design"
+        },
+        {
+          "id": "u04-l07",
+          "number": 7,
+          "title": "Simulation-Based Design and Randomization Logic",
+          "week": 12,
+          "unit": 4,
+          "unit_title": "Study Design, Sampling & Experiments",
+          "essential": "How do sampling, randomization, control, and design determine what conclusions data can support?",
+          "project": "Survey and Experiment Design Laboratory",
+          "focus": "using repeated random assignment or sampling to study expected variation"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Probability Foundations & Conditional Reasoning",
+      "essential": "How do probability rules, conditioning, independence, and simulation quantify uncertainty?",
+      "project": "Probability Model & Bayesian Updating Investigation",
+      "standards": [
+        "Sample spaces",
+        "Events",
+        "Addition rule",
+        "Multiplication rule",
+        "Conditional probability",
+        "Independence",
+        "Tree diagrams",
+        "Bayes theorem",
+        "Counting principles",
+        "Simulation"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        13,
+        14,
+        15
+      ],
+      "lessons": [
+        {
+          "id": "u05-l01",
+          "number": 1,
+          "title": "Sample Spaces, Events and Complements",
+          "week": 13,
+          "unit": 5,
+          "unit_title": "Probability Foundations & Conditional Reasoning",
+          "essential": "How do probability rules, conditioning, independence, and simulation quantify uncertainty?",
+          "project": "Probability Model & Bayesian Updating Investigation",
+          "focus": "representing outcomes and events precisely"
+        },
+        {
+          "id": "u05-l02",
+          "number": 2,
+          "title": "Addition Rule and Inclusion–Exclusion",
+          "week": 13,
+          "unit": 5,
+          "unit_title": "Probability Foundations & Conditional Reasoning",
+          "essential": "How do probability rules, conditioning, independence, and simulation quantify uncertainty?",
+          "project": "Probability Model & Bayesian Updating Investigation",
+          "focus": "computing the probability of unions without double counting"
+        },
+        {
+          "id": "u05-l03",
+          "number": 3,
+          "title": "Conditional Probability and Tree Diagrams",
+          "week": 13,
+          "unit": 5,
+          "unit_title": "Probability Foundations & Conditional Reasoning",
+          "essential": "How do probability rules, conditioning, independence, and simulation quantify uncertainty?",
+          "project": "Probability Model & Bayesian Updating Investigation",
+          "focus": "updating probabilities after learning information"
+        },
+        {
+          "id": "u05-l04",
+          "number": 4,
+          "title": "Independence and Multiplication Rules",
+          "week": 14,
+          "unit": 5,
+          "unit_title": "Probability Foundations & Conditional Reasoning",
+          "essential": "How do probability rules, conditioning, independence, and simulation quantify uncertainty?",
+          "project": "Probability Model & Bayesian Updating Investigation",
+          "focus": "distinguishing independence from mutual exclusivity"
+        },
+        {
+          "id": "u05-l05",
+          "number": 5,
+          "title": "Bayes Theorem and Diagnostic Reasoning",
+          "week": 14,
+          "unit": 5,
+          "unit_title": "Probability Foundations & Conditional Reasoning",
+          "essential": "How do probability rules, conditioning, independence, and simulation quantify uncertainty?",
+          "project": "Probability Model & Bayesian Updating Investigation",
+          "focus": "combining prior information with evidence likelihood"
+        },
+        {
+          "id": "u05-l06",
+          "number": 6,
+          "title": "Counting, Permutations and Combinations",
+          "week": 15,
+          "unit": 5,
+          "unit_title": "Probability Foundations & Conditional Reasoning",
+          "essential": "How do probability rules, conditioning, independence, and simulation quantify uncertainty?",
+          "project": "Probability Model & Bayesian Updating Investigation",
+          "focus": "counting equally likely outcomes with and without order"
+        },
+        {
+          "id": "u05-l07",
+          "number": 7,
+          "title": "Monte Carlo Simulation and Probability Validation",
+          "week": 15,
+          "unit": 5,
+          "unit_title": "Probability Foundations & Conditional Reasoning",
+          "essential": "How do probability rules, conditioning, independence, and simulation quantify uncertainty?",
+          "project": "Probability Model & Bayesian Updating Investigation",
+          "focus": "approximating probabilities and checking models through repeated trials"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Random Variables & Discrete Distributions",
+      "essential": "How do random variables and probability distributions connect uncertain outcomes to expected value, variation, and decisions?",
+      "project": "Discrete Distribution & Expected-Value Modelling Project",
+      "standards": [
+        "Random variables",
+        "Probability mass functions",
+        "Expected value",
+        "Variance",
+        "Linear transformations",
+        "Binomial distribution",
+        "Geometric distribution",
+        "Poisson distribution",
+        "Covariance",
+        "Simulation"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        16,
+        17,
+        18
+      ],
+      "lessons": [
+        {
+          "id": "u06-l01",
+          "number": 1,
+          "title": "Random Variables and Probability Mass Functions",
+          "week": 16,
+          "unit": 6,
+          "unit_title": "Random Variables & Discrete Distributions",
+          "essential": "How do random variables and probability distributions connect uncertain outcomes to expected value, variation, and decisions?",
+          "project": "Discrete Distribution & Expected-Value Modelling Project",
+          "focus": "mapping outcomes to numerical values and validating a discrete distribution"
+        },
+        {
+          "id": "u06-l02",
+          "number": 2,
+          "title": "Expected Value as Long-Run Balance",
+          "week": 16,
+          "unit": 6,
+          "unit_title": "Random Variables & Discrete Distributions",
+          "essential": "How do random variables and probability distributions connect uncertain outcomes to expected value, variation, and decisions?",
+          "project": "Discrete Distribution & Expected-Value Modelling Project",
+          "focus": "computing and interpreting probability-weighted averages"
+        },
+        {
+          "id": "u06-l03",
+          "number": 3,
+          "title": "Variance, Standard Deviation and Linear Transformations",
+          "week": 16,
+          "unit": 6,
+          "unit_title": "Random Variables & Discrete Distributions",
+          "essential": "How do random variables and probability distributions connect uncertain outcomes to expected value, variation, and decisions?",
+          "project": "Discrete Distribution & Expected-Value Modelling Project",
+          "focus": "quantifying uncertainty and understanding effects of rescaling"
+        },
+        {
+          "id": "u06-l04",
+          "number": 4,
+          "title": "Binomial Distribution",
+          "week": 17,
+          "unit": 6,
+          "unit_title": "Random Variables & Discrete Distributions",
+          "essential": "How do random variables and probability distributions connect uncertain outcomes to expected value, variation, and decisions?",
+          "project": "Discrete Distribution & Expected-Value Modelling Project",
+          "focus": "modelling a fixed number of independent binary trials"
+        },
+        {
+          "id": "u06-l05",
+          "number": 5,
+          "title": "Geometric and Waiting-Time Models",
+          "week": 17,
+          "unit": 6,
+          "unit_title": "Random Variables & Discrete Distributions",
+          "essential": "How do random variables and probability distributions connect uncertain outcomes to expected value, variation, and decisions?",
+          "project": "Discrete Distribution & Expected-Value Modelling Project",
+          "focus": "modelling the trial count until first success"
+        },
+        {
+          "id": "u06-l06",
+          "number": 6,
+          "title": "Poisson Counts and Rate Models",
+          "week": 18,
+          "unit": 6,
+          "unit_title": "Random Variables & Discrete Distributions",
+          "essential": "How do random variables and probability distributions connect uncertain outcomes to expected value, variation, and decisions?",
+          "project": "Discrete Distribution & Expected-Value Modelling Project",
+          "focus": "modelling counts over time, area, or opportunity"
+        },
+        {
+          "id": "u06-l07",
+          "number": 7,
+          "title": "Covariance, Sums and Decision Applications",
+          "week": 18,
+          "unit": 6,
+          "unit_title": "Random Variables & Discrete Distributions",
+          "essential": "How do random variables and probability distributions connect uncertain outcomes to expected value, variation, and decisions?",
+          "project": "Discrete Distribution & Expected-Value Modelling Project",
+          "focus": "combining random variables while tracking dependence"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Continuous Distributions & Sampling Distributions",
+      "essential": "How do density models and repeated sampling explain normal approximation, standard error, and the central limit theorem?",
+      "project": "Sampling Distribution & Central Limit Simulation",
+      "standards": [
+        "Density curves",
+        "Normal distribution",
+        "Standardization",
+        "Percentiles",
+        "Sampling distributions",
+        "Standard error",
+        "Central limit theorem",
+        "t distribution",
+        "Bootstrap intuition"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        19,
+        20,
+        21
+      ],
+      "lessons": [
+        {
+          "id": "u07-l01",
+          "number": 1,
+          "title": "Continuous Random Variables and Density Curves",
+          "week": 19,
+          "unit": 7,
+          "unit_title": "Continuous Distributions & Sampling Distributions",
+          "essential": "How do density models and repeated sampling explain normal approximation, standard error, and the central limit theorem?",
+          "project": "Sampling Distribution & Central Limit Simulation",
+          "focus": "interpreting area as probability and distinguishing density from probability"
+        },
+        {
+          "id": "u07-l02",
+          "number": 2,
+          "title": "Normal Models and the Empirical Rule",
+          "week": 19,
+          "unit": 7,
+          "unit_title": "Continuous Distributions & Sampling Distributions",
+          "essential": "How do density models and repeated sampling explain normal approximation, standard error, and the central limit theorem?",
+          "project": "Sampling Distribution & Central Limit Simulation",
+          "focus": "using mean and standard deviation to model symmetric bell-shaped variation"
+        },
+        {
+          "id": "u07-l03",
+          "number": 3,
+          "title": "Standard Normal Probabilities and Percentiles",
+          "week": 19,
+          "unit": 7,
+          "unit_title": "Continuous Distributions & Sampling Distributions",
+          "essential": "How do density models and repeated sampling explain normal approximation, standard error, and the central limit theorem?",
+          "project": "Sampling Distribution & Central Limit Simulation",
+          "focus": "converting values to z-scores and back"
+        },
+        {
+          "id": "u07-l04",
+          "number": 4,
+          "title": "Sampling Distribution of a Proportion",
+          "week": 20,
+          "unit": 7,
+          "unit_title": "Continuous Distributions & Sampling Distributions",
+          "essential": "How do density models and repeated sampling explain normal approximation, standard error, and the central limit theorem?",
+          "project": "Sampling Distribution & Central Limit Simulation",
+          "focus": "describing the center and standard error of p̂"
+        },
+        {
+          "id": "u07-l05",
+          "number": 5,
+          "title": "Sampling Distribution of a Mean",
+          "week": 20,
+          "unit": 7,
+          "unit_title": "Continuous Distributions & Sampling Distributions",
+          "essential": "How do density models and repeated sampling explain normal approximation, standard error, and the central limit theorem?",
+          "project": "Sampling Distribution & Central Limit Simulation",
+          "focus": "describing the center and standard error of x̄"
+        },
+        {
+          "id": "u07-l06",
+          "number": 6,
+          "title": "Central Limit Theorem and Normal Approximation",
+          "week": 21,
+          "unit": 7,
+          "unit_title": "Continuous Distributions & Sampling Distributions",
+          "essential": "How do density models and repeated sampling explain normal approximation, standard error, and the central limit theorem?",
+          "project": "Sampling Distribution & Central Limit Simulation",
+          "focus": "explaining why averages become approximately normal under broad conditions"
+        },
+        {
+          "id": "u07-l07",
+          "number": 7,
+          "title": "t Distributions and Bootstrap Intuition",
+          "week": 21,
+          "unit": 7,
+          "unit_title": "Continuous Distributions & Sampling Distributions",
+          "essential": "How do density models and repeated sampling explain normal approximation, standard error, and the central limit theorem?",
+          "project": "Sampling Distribution & Central Limit Simulation",
+          "focus": "accounting for estimated standard deviation and using resampling to approximate sampling variation"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Estimation & Confidence Intervals",
+      "essential": "How do confidence intervals combine an estimate, standard error, confidence level, and design assumptions?",
+      "project": "Interval Estimation & Margin-of-Error Portfolio",
+      "standards": [
+        "Point estimation",
+        "Confidence level",
+        "Margin of error",
+        "One proportion interval",
+        "One mean interval",
+        "Two proportions",
+        "Two means",
+        "Paired data",
+        "Bootstrap intervals",
+        "Sample size planning"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        22,
+        23,
+        24
+      ],
+      "lessons": [
+        {
+          "id": "u08-l01",
+          "number": 1,
+          "title": "Confidence-Interval Logic and Interpretation",
+          "week": 22,
+          "unit": 8,
+          "unit_title": "Estimation & Confidence Intervals",
+          "essential": "How do confidence intervals combine an estimate, standard error, confidence level, and design assumptions?",
+          "project": "Interval Estimation & Margin-of-Error Portfolio",
+          "focus": "distinguishing the long-run success rate of a method from probability statements about a fixed parameter"
+        },
+        {
+          "id": "u08-l02",
+          "number": 2,
+          "title": "One-Proportion Confidence Intervals",
+          "week": 22,
+          "unit": 8,
+          "unit_title": "Estimation & Confidence Intervals",
+          "essential": "How do confidence intervals combine an estimate, standard error, confidence level, and design assumptions?",
+          "project": "Interval Estimation & Margin-of-Error Portfolio",
+          "focus": "estimating a population proportion with design and count conditions"
+        },
+        {
+          "id": "u08-l03",
+          "number": 3,
+          "title": "One-Mean t Intervals",
+          "week": 22,
+          "unit": 8,
+          "unit_title": "Estimation & Confidence Intervals",
+          "essential": "How do confidence intervals combine an estimate, standard error, confidence level, and design assumptions?",
+          "project": "Interval Estimation & Margin-of-Error Portfolio",
+          "focus": "estimating a population mean when σ is unknown"
+        },
+        {
+          "id": "u08-l04",
+          "number": 4,
+          "title": "Two-Proportion Intervals",
+          "week": 23,
+          "unit": 8,
+          "unit_title": "Estimation & Confidence Intervals",
+          "essential": "How do confidence intervals combine an estimate, standard error, confidence level, and design assumptions?",
+          "project": "Interval Estimation & Margin-of-Error Portfolio",
+          "focus": "estimating a difference in population proportions"
+        },
+        {
+          "id": "u08-l05",
+          "number": 5,
+          "title": "Two-Mean and Paired Intervals",
+          "week": 23,
+          "unit": 8,
+          "unit_title": "Estimation & Confidence Intervals",
+          "essential": "How do confidence intervals combine an estimate, standard error, confidence level, and design assumptions?",
+          "project": "Interval Estimation & Margin-of-Error Portfolio",
+          "focus": "choosing between independent-group and within-pair analysis"
+        },
+        {
+          "id": "u08-l06",
+          "number": 6,
+          "title": "Bootstrap Confidence Intervals",
+          "week": 24,
+          "unit": 8,
+          "unit_title": "Estimation & Confidence Intervals",
+          "essential": "How do confidence intervals combine an estimate, standard error, confidence level, and design assumptions?",
+          "project": "Interval Estimation & Margin-of-Error Portfolio",
+          "focus": "using resampled statistics to approximate uncertainty and interval endpoints"
+        },
+        {
+          "id": "u08-l07",
+          "number": 7,
+          "title": "Margin of Error, Sample Size and Practical Precision",
+          "week": 24,
+          "unit": 8,
+          "unit_title": "Estimation & Confidence Intervals",
+          "essential": "How do confidence intervals combine an estimate, standard error, confidence level, and design assumptions?",
+          "project": "Interval Estimation & Margin-of-Error Portfolio",
+          "focus": "planning studies to meet a desired uncertainty target"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Hypothesis Testing & Decision Frameworks",
+      "essential": "How do null models, test statistics, p-values, errors, power, and effect sizes support disciplined decisions?",
+      "project": "Inference Decision Memo & Error Analysis",
+      "standards": [
+        "Null and alternative hypotheses",
+        "Test statistics",
+        "p-values",
+        "Significance level",
+        "Type I and II errors",
+        "Power",
+        "One-sample tests",
+        "Two-sample tests",
+        "Paired tests",
+        "Randomization tests",
+        "Effect size",
+        "Multiple testing"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        25,
+        26,
+        27
+      ],
+      "lessons": [
+        {
+          "id": "u09-l01",
+          "number": 1,
+          "title": "Logic of Significance Tests",
+          "week": 25,
+          "unit": 9,
+          "unit_title": "Hypothesis Testing & Decision Frameworks",
+          "essential": "How do null models, test statistics, p-values, errors, power, and effect sizes support disciplined decisions?",
+          "project": "Inference Decision Memo & Error Analysis",
+          "focus": "translating a claim into null and alternative hypotheses and measuring incompatibility with the null"
+        },
+        {
+          "id": "u09-l02",
+          "number": 2,
+          "title": "Errors, Power and Study Planning",
+          "week": 25,
+          "unit": 9,
+          "unit_title": "Hypothesis Testing & Decision Frameworks",
+          "essential": "How do null models, test statistics, p-values, errors, power, and effect sizes support disciplined decisions?",
+          "project": "Inference Decision Memo & Error Analysis",
+          "focus": "connecting α, β, power, effect size, variability, and sample size"
+        },
+        {
+          "id": "u09-l03",
+          "number": 3,
+          "title": "One-Proportion and One-Mean Tests",
+          "week": 25,
+          "unit": 9,
+          "unit_title": "Hypothesis Testing & Decision Frameworks",
+          "essential": "How do null models, test statistics, p-values, errors, power, and effect sizes support disciplined decisions?",
+          "project": "Inference Decision Memo & Error Analysis",
+          "focus": "conducting and interpreting one-sample z or t procedures"
+        },
+        {
+          "id": "u09-l04",
+          "number": 4,
+          "title": "Two-Proportion and Two-Mean Tests",
+          "week": 26,
+          "unit": 9,
+          "unit_title": "Hypothesis Testing & Decision Frameworks",
+          "essential": "How do null models, test statistics, p-values, errors, power, and effect sizes support disciplined decisions?",
+          "project": "Inference Decision Memo & Error Analysis",
+          "focus": "comparing independent groups with appropriate standard errors"
+        },
+        {
+          "id": "u09-l05",
+          "number": 5,
+          "title": "Paired Tests and Within-Subject Designs",
+          "week": 26,
+          "unit": 9,
+          "unit_title": "Hypothesis Testing & Decision Frameworks",
+          "essential": "How do null models, test statistics, p-values, errors, power, and effect sizes support disciplined decisions?",
+          "project": "Inference Decision Memo & Error Analysis",
+          "focus": "testing the mean of paired differences"
+        },
+        {
+          "id": "u09-l06",
+          "number": 6,
+          "title": "Randomization and Permutation Tests",
+          "week": 27,
+          "unit": 9,
+          "unit_title": "Hypothesis Testing & Decision Frameworks",
+          "essential": "How do null models, test statistics, p-values, errors, power, and effect sizes support disciplined decisions?",
+          "project": "Inference Decision Memo & Error Analysis",
+          "focus": "constructing a null distribution by reshuffling labels or signs"
+        },
+        {
+          "id": "u09-l07",
+          "number": 7,
+          "title": "Practical Significance, Multiplicity and Evidence Quality",
+          "week": 27,
+          "unit": 9,
+          "unit_title": "Hypothesis Testing & Decision Frameworks",
+          "essential": "How do null models, test statistics, p-values, errors, power, and effect sizes support disciplined decisions?",
+          "project": "Inference Decision Memo & Error Analysis",
+          "focus": "separating statistical detectability from importance and controlling false discoveries"
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Categorical Data, Chi-Square & ANOVA",
+      "essential": "How do categorical and multi-group methods compare observed variation with variation expected under a null model?",
+      "project": "Contingency Table & Group-Comparison Investigation",
+      "standards": [
+        "Chi-square goodness of fit",
+        "Chi-square homogeneity",
+        "Chi-square independence",
+        "Expected counts",
+        "Residuals",
+        "One-way ANOVA",
+        "F statistic",
+        "Assumptions",
+        "Multiple comparisons",
+        "Effect sizes"
+      ],
+      "weeks": 2,
+      "week_numbers": [
+        28,
+        29
+      ],
+      "lessons": [
+        {
+          "id": "u10-l01",
+          "number": 1,
+          "title": "Chi-Square Goodness of Fit",
+          "week": 28,
+          "unit": 10,
+          "unit_title": "Categorical Data, Chi-Square & ANOVA",
+          "essential": "How do categorical and multi-group methods compare observed variation with variation expected under a null model?",
+          "project": "Contingency Table & Group-Comparison Investigation",
+          "focus": "comparing observed category counts with a specified distribution"
+        },
+        {
+          "id": "u10-l02",
+          "number": 2,
+          "title": "Chi-Square Homogeneity",
+          "week": 28,
+          "unit": 10,
+          "unit_title": "Categorical Data, Chi-Square & ANOVA",
+          "essential": "How do categorical and multi-group methods compare observed variation with variation expected under a null model?",
+          "project": "Contingency Table & Group-Comparison Investigation",
+          "focus": "comparing categorical distributions across populations or treatments"
+        },
+        {
+          "id": "u10-l03",
+          "number": 3,
+          "title": "Chi-Square Independence",
+          "week": 28,
+          "unit": 10,
+          "unit_title": "Categorical Data, Chi-Square & ANOVA",
+          "essential": "How do categorical and multi-group methods compare observed variation with variation expected under a null model?",
+          "project": "Contingency Table & Group-Comparison Investigation",
+          "focus": "testing association between two categorical variables in one population"
+        },
+        {
+          "id": "u10-l04",
+          "number": 4,
+          "title": "Standardized Residuals and Effect Size",
+          "week": 28,
+          "unit": 10,
+          "unit_title": "Categorical Data, Chi-Square & ANOVA",
+          "essential": "How do categorical and multi-group methods compare observed variation with variation expected under a null model?",
+          "project": "Contingency Table & Group-Comparison Investigation",
+          "focus": "identifying cells driving association and quantifying strength"
+        },
+        {
+          "id": "u10-l05",
+          "number": 5,
+          "title": "One-Way ANOVA and the F Ratio",
+          "week": 29,
+          "unit": 10,
+          "unit_title": "Categorical Data, Chi-Square & ANOVA",
+          "essential": "How do categorical and multi-group methods compare observed variation with variation expected under a null model?",
+          "project": "Contingency Table & Group-Comparison Investigation",
+          "focus": "comparing several population means through between- and within-group variation"
+        },
+        {
+          "id": "u10-l06",
+          "number": 6,
+          "title": "ANOVA Assumptions, Diagnostics and Robustness",
+          "week": 29,
+          "unit": 10,
+          "unit_title": "Categorical Data, Chi-Square & ANOVA",
+          "essential": "How do categorical and multi-group methods compare observed variation with variation expected under a null model?",
+          "project": "Contingency Table & Group-Comparison Investigation",
+          "focus": "checking independence, approximate normality, and comparable spread"
+        },
+        {
+          "id": "u10-l07",
+          "number": 7,
+          "title": "Multiple Comparisons and Planned Contrasts",
+          "week": 29,
+          "unit": 10,
+          "unit_title": "Categorical Data, Chi-Square & ANOVA",
+          "essential": "How do categorical and multi-group methods compare observed variation with variation expected under a null model?",
+          "project": "Contingency Table & Group-Comparison Investigation",
+          "focus": "locating meaningful group differences while controlling error"
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Multiple Regression & Model Diagnostics",
+      "essential": "How do multiple predictors, interactions, diagnostics, and validation improve prediction without disguising uncertainty or causality?",
+      "project": "Multivariable Model Audit & Prediction Report",
+      "standards": [
+        "Multiple regression",
+        "Indicator variables",
+        "Interactions",
+        "Partial slopes",
+        "Adjusted R²",
+        "Residual diagnostics",
+        "Collinearity",
+        "Model selection",
+        "Prediction intervals",
+        "Cross-validation",
+        "Causal limits"
+      ],
+      "weeks": 2,
+      "week_numbers": [
+        30,
+        31
+      ],
+      "lessons": [
+        {
+          "id": "u11-l01",
+          "number": 1,
+          "title": "Multiple Regression and Partial Effects",
+          "week": 30,
+          "unit": 11,
+          "unit_title": "Multiple Regression & Model Diagnostics",
+          "essential": "How do multiple predictors, interactions, diagnostics, and validation improve prediction without disguising uncertainty or causality?",
+          "project": "Multivariable Model Audit & Prediction Report",
+          "focus": "interpreting a coefficient while holding included predictors fixed"
+        },
+        {
+          "id": "u11-l02",
+          "number": 2,
+          "title": "Categorical Predictors and Indicator Coding",
+          "week": 30,
+          "unit": 11,
+          "unit_title": "Multiple Regression & Model Diagnostics",
+          "essential": "How do multiple predictors, interactions, diagnostics, and validation improve prediction without disguising uncertainty or causality?",
+          "project": "Multivariable Model Audit & Prediction Report",
+          "focus": "representing group differences with reference categories"
+        },
+        {
+          "id": "u11-l03",
+          "number": 3,
+          "title": "Interactions and Nonparallel Effects",
+          "week": 30,
+          "unit": 11,
+          "unit_title": "Multiple Regression & Model Diagnostics",
+          "essential": "How do multiple predictors, interactions, diagnostics, and validation improve prediction without disguising uncertainty or causality?",
+          "project": "Multivariable Model Audit & Prediction Report",
+          "focus": "modelling how one predictor changes the effect of another"
+        },
+        {
+          "id": "u11-l04",
+          "number": 4,
+          "title": "Residuals, Influence and Collinearity",
+          "week": 30,
+          "unit": 11,
+          "unit_title": "Multiple Regression & Model Diagnostics",
+          "essential": "How do multiple predictors, interactions, diagnostics, and validation improve prediction without disguising uncertainty or causality?",
+          "project": "Multivariable Model Audit & Prediction Report",
+          "focus": "diagnosing model form, leverage, influence, and unstable coefficients"
+        },
+        {
+          "id": "u11-l05",
+          "number": 5,
+          "title": "Model Selection and Adjusted Fit",
+          "week": 31,
+          "unit": 11,
+          "unit_title": "Multiple Regression & Model Diagnostics",
+          "essential": "How do multiple predictors, interactions, diagnostics, and validation improve prediction without disguising uncertainty or causality?",
+          "project": "Multivariable Model Audit & Prediction Report",
+          "focus": "balancing explanatory value, complexity, subject knowledge, and validation"
+        },
+        {
+          "id": "u11-l06",
+          "number": 6,
+          "title": "Prediction Intervals and Cross-Validation",
+          "week": 31,
+          "unit": 11,
+          "unit_title": "Multiple Regression & Model Diagnostics",
+          "essential": "How do multiple predictors, interactions, diagnostics, and validation improve prediction without disguising uncertainty or causality?",
+          "project": "Multivariable Model Audit & Prediction Report",
+          "focus": "distinguishing uncertainty for a mean response from uncertainty for a new case"
+        },
+        {
+          "id": "u11-l07",
+          "number": 7,
+          "title": "Regression Communication and Causal Limits",
+          "week": 31,
+          "unit": 11,
+          "unit_title": "Multiple Regression & Model Diagnostics",
+          "essential": "How do multiple predictors, interactions, diagnostics, and validation improve prediction without disguising uncertainty or causality?",
+          "project": "Multivariable Model Audit & Prediction Report",
+          "focus": "reporting coefficients, intervals, diagnostics, uncertainty, and design-based limits"
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Resampling, Nonparametric Methods & Bayesian Foundations",
+      "essential": "How do resampling, rank-based methods, and Bayesian updating extend inference when classical assumptions or interpretations are limiting?",
+      "project": "Resampling & Bayesian Evidence Laboratory",
+      "standards": [
+        "Bootstrap",
+        "Permutation tests",
+        "Randomization inference",
+        "Sign test",
+        "Rank-sum test",
+        "Signed-rank test",
+        "Bayesian updating",
+        "Prior and likelihood",
+        "Posterior distributions",
+        "Credible intervals",
+        "Posterior predictive checks"
+      ],
+      "weeks": 2,
+      "week_numbers": [
+        32,
+        33
+      ],
+      "lessons": [
+        {
+          "id": "u12-l01",
+          "number": 1,
+          "title": "Bootstrap Distributions and Standard Errors",
+          "week": 32,
+          "unit": 12,
+          "unit_title": "Resampling, Nonparametric Methods & Bayesian Foundations",
+          "essential": "How do resampling, rank-based methods, and Bayesian updating extend inference when classical assumptions or interpretations are limiting?",
+          "project": "Resampling & Bayesian Evidence Laboratory",
+          "focus": "resampling observed cases with replacement to approximate sampling variation"
+        },
+        {
+          "id": "u12-l02",
+          "number": 2,
+          "title": "Permutation Tests and Exchangeability",
+          "week": 32,
+          "unit": 12,
+          "unit_title": "Resampling, Nonparametric Methods & Bayesian Foundations",
+          "essential": "How do resampling, rank-based methods, and Bayesian updating extend inference when classical assumptions or interpretations are limiting?",
+          "project": "Resampling & Bayesian Evidence Laboratory",
+          "focus": "reshuffling labels under a null model to obtain a reference distribution"
+        },
+        {
+          "id": "u12-l03",
+          "number": 3,
+          "title": "Sign and Rank-Based Methods",
+          "week": 32,
+          "unit": 12,
+          "unit_title": "Resampling, Nonparametric Methods & Bayesian Foundations",
+          "essential": "How do resampling, rank-based methods, and Bayesian updating extend inference when classical assumptions or interpretations are limiting?",
+          "project": "Resampling & Bayesian Evidence Laboratory",
+          "focus": "using order and sign information when scale assumptions are doubtful"
+        },
+        {
+          "id": "u12-l04",
+          "number": 4,
+          "title": "Bayesian Updating: Prior, Likelihood and Posterior",
+          "week": 32,
+          "unit": 12,
+          "unit_title": "Resampling, Nonparametric Methods & Bayesian Foundations",
+          "essential": "How do resampling, rank-based methods, and Bayesian updating extend inference when classical assumptions or interpretations are limiting?",
+          "project": "Resampling & Bayesian Evidence Laboratory",
+          "focus": "updating uncertainty about parameters after observing data"
+        },
+        {
+          "id": "u12-l05",
+          "number": 5,
+          "title": "Bayesian Estimation and Credible Intervals",
+          "week": 33,
+          "unit": 12,
+          "unit_title": "Resampling, Nonparametric Methods & Bayesian Foundations",
+          "essential": "How do resampling, rank-based methods, and Bayesian updating extend inference when classical assumptions or interpretations are limiting?",
+          "project": "Resampling & Bayesian Evidence Laboratory",
+          "focus": "summarizing posterior uncertainty in directly probabilistic language"
+        },
+        {
+          "id": "u12-l06",
+          "number": 6,
+          "title": "Posterior Predictive Checks and Model Criticism",
+          "week": 33,
+          "unit": 12,
+          "unit_title": "Resampling, Nonparametric Methods & Bayesian Foundations",
+          "essential": "How do resampling, rank-based methods, and Bayesian updating extend inference when classical assumptions or interpretations are limiting?",
+          "project": "Resampling & Bayesian Evidence Laboratory",
+          "focus": "comparing replicated data from the fitted model with observed patterns"
+        },
+        {
+          "id": "u12-l07",
+          "number": 7,
+          "title": "Frequentist and Bayesian Evidence in Context",
+          "week": 33,
+          "unit": 12,
+          "unit_title": "Resampling, Nonparametric Methods & Bayesian Foundations",
+          "essential": "How do resampling, rank-based methods, and Bayesian updating extend inference when classical assumptions or interpretations are limiting?",
+          "project": "Resampling & Bayesian Evidence Laboratory",
+          "focus": "comparing goals, assumptions, outputs, calibration, and decision use"
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Data Science, Reproducibility & Capstone",
+      "essential": "How can a statistical investigation become an auditable, ethical, reproducible argument that withstands technical and public scrutiny?",
+      "project": "Independent Statistical Investigation, Technical Report & Oral Defense",
+      "standards": [
+        "Data cleaning",
+        "Tidy data",
+        "Missing data",
+        "Visualization design",
+        "Simulation",
+        "Monte Carlo",
+        "Reproducible workflows",
+        "Fairness",
+        "Sensitivity analysis",
+        "Technical reporting",
+        "Oral defense",
+        "Advanced statistics bridge"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        34,
+        35,
+        36
+      ],
+      "lessons": [
+        {
+          "id": "u13-l01",
+          "number": 1,
+          "title": "Data Cleaning, Tidy Structure and Metadata",
+          "week": 34,
+          "unit": 13,
+          "unit_title": "Data Science, Reproducibility & Capstone",
+          "essential": "How can a statistical investigation become an auditable, ethical, reproducible argument that withstands technical and public scrutiny?",
+          "project": "Independent Statistical Investigation, Technical Report & Oral Defense",
+          "focus": "documenting transformations, units, labels, exclusions, and provenance"
+        },
+        {
+          "id": "u13-l02",
+          "number": 2,
+          "title": "Missing Data, Imputation and Sensitivity",
+          "week": 34,
+          "unit": 13,
+          "unit_title": "Data Science, Reproducibility & Capstone",
+          "essential": "How can a statistical investigation become an auditable, ethical, reproducible argument that withstands technical and public scrutiny?",
+          "project": "Independent Statistical Investigation, Technical Report & Oral Defense",
+          "focus": "distinguishing missingness mechanisms and testing how conclusions change"
+        },
+        {
+          "id": "u13-l03",
+          "number": 3,
+          "title": "Visualization Design and Statistical Storytelling",
+          "week": 34,
+          "unit": 13,
+          "unit_title": "Data Science, Reproducibility & Capstone",
+          "essential": "How can a statistical investigation become an auditable, ethical, reproducible argument that withstands technical and public scrutiny?",
+          "project": "Independent Statistical Investigation, Technical Report & Oral Defense",
+          "focus": "matching visual form to question while avoiding distortion and chartjunk"
+        },
+        {
+          "id": "u13-l04",
+          "number": 4,
+          "title": "Simulation, Monte Carlo and Computational Experiments",
+          "week": 35,
+          "unit": 13,
+          "unit_title": "Data Science, Reproducibility & Capstone",
+          "essential": "How can a statistical investigation become an auditable, ethical, reproducible argument that withstands technical and public scrutiny?",
+          "project": "Independent Statistical Investigation, Technical Report & Oral Defense",
+          "focus": "using repeated computation to estimate probability, uncertainty, and operating characteristics"
+        },
+        {
+          "id": "u13-l05",
+          "number": 5,
+          "title": "Reproducible Workflows, Versioning and Audit Trails",
+          "week": 35,
+          "unit": 13,
+          "unit_title": "Data Science, Reproducibility & Capstone",
+          "essential": "How can a statistical investigation become an auditable, ethical, reproducible argument that withstands technical and public scrutiny?",
+          "project": "Independent Statistical Investigation, Technical Report & Oral Defense",
+          "focus": "preserving data, code, decisions, outputs, and environment information"
+        },
+        {
+          "id": "u13-l06",
+          "number": 6,
+          "title": "Fairness, Responsible AI and Statistical Harm",
+          "week": 35,
+          "unit": 13,
+          "unit_title": "Data Science, Reproducibility & Capstone",
+          "essential": "How can a statistical investigation become an auditable, ethical, reproducible argument that withstands technical and public scrutiny?",
+          "project": "Independent Statistical Investigation, Technical Report & Oral Defense",
+          "focus": "examining subgroup performance, measurement bias, feedback loops, and deployment risk"
+        },
+        {
+          "id": "u13-l07",
+          "number": 7,
+          "title": "Capstone Question, Design and Evidence Plan",
+          "week": 36,
+          "unit": 13,
+          "unit_title": "Data Science, Reproducibility & Capstone",
+          "essential": "How can a statistical investigation become an auditable, ethical, reproducible argument that withstands technical and public scrutiny?",
+          "project": "Independent Statistical Investigation, Technical Report & Oral Defense",
+          "focus": "forming a feasible investigative question with design, analysis, ethics, and validation plan"
+        },
+        {
+          "id": "u13-l08",
+          "number": 8,
+          "title": "Technical Report, Oral Defense and Advanced Statistics Bridge",
+          "week": 36,
+          "unit": 13,
+          "unit_title": "Data Science, Reproducibility & Capstone",
+          "essential": "How can a statistical investigation become an auditable, ethical, reproducible argument that withstands technical and public scrutiny?",
+          "project": "Independent Statistical Investigation, Technical Report & Oral Defense",
+          "focus": "defending choices, uncertainty, limitations, and next study in mathematical statistics, data science, biostatistics, econometrics, or machine learning"
+        }
+      ]
+    }
+  ],
+  "weeks": [
+    {
+      "week": 1,
+      "unit": 1,
+      "title": "Statistical Problem Solving, Data Ethics & Measurement",
+      "essential": "How do strong questions, trustworthy measurements, and ethical decisions turn data into defensible evidence?",
+      "focus": "Statistics as an Evidence Discipline; Cases, Variables, Populations and Samples; Categorical, Quantitative and Time-Indexed Data",
+      "lesson_ids": [
+        "u01-l01",
+        "u01-l02",
+        "u01-l03"
+      ],
+      "unit_path": "units/unit-01/index.html",
+      "sessions": [
+        "Investigative question and retrieval warm-up",
+        "Data display, computation, or probability model",
+        "Interactive simulation or software-supported analysis",
+        "Application, design critique, or collaborative investigation",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 2,
+      "unit": 1,
+      "title": "Statistical Problem Solving, Data Ethics & Measurement",
+      "essential": "How do strong questions, trustworthy measurements, and ethical decisions turn data into defensible evidence?",
+      "focus": "Measurement, Operational Definitions and Validity; Data Quality, Missingness and Bias",
+      "lesson_ids": [
+        "u01-l04",
+        "u01-l05"
+      ],
+      "unit_path": "units/unit-01/index.html",
+      "sessions": [
+        "Investigative question and retrieval warm-up",
+        "Data display, computation, or probability model",
+        "Interactive simulation or software-supported analysis",
+        "Application, design critique, or collaborative investigation",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 3,
+      "unit": 1,
+      "title": "Statistical Problem Solving, Data Ethics & Measurement",
+      "essential": "How do strong questions, trustworthy measurements, and ethical decisions turn data into defensible evidence?",
+      "focus": "Ethics, Privacy, Consent and Responsible Use; Reproducible Statistical Communication",
+      "lesson_ids": [
+        "u01-l06",
+        "u01-l07"
+      ],
+      "unit_path": "units/unit-01/index.html",
+      "sessions": [
+        "Investigative question and retrieval warm-up",
+        "Data display, computation, or probability model",
+        "Interactive simulation or software-supported analysis",
+        "Application, design critique, or collaborative investigation",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 4,
+      "unit": 2,
+      "title": "Describing One-Variable Distributions",
+      "essential": "How do graphs and numerical summaries reveal distribution shape, center, spread, unusual values, and context?",
+      "focus": "Frequency Tables, Dot Plots and Histograms; Shape, Modality, Skewness and Unusual Features; Mean, Median and Resistant Center",
+      "lesson_ids": [
+        "u02-l01",
+        "u02-l02",
+        "u02-l03"
+      ],
+      "unit_path": "units/unit-02/index.html",
+      "sessions": [
+        "Investigative question and retrieval warm-up",
+        "Data display, computation, or probability model",
+        "Interactive simulation or software-supported analysis",
+        "Application, design critique, or collaborative investigation",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 5,
+      "unit": 2,
+      "title": "Describing One-Variable Distributions",
+      "essential": "How do graphs and numerical summaries reveal distribution shape, center, spread, unusual values, and context?",
+      "focus": "Range, Quartiles, IQR and Box Plots; Variance and Standard Deviation",
+      "lesson_ids": [
+        "u02-l04",
+        "u02-l05"
+      ],
+      "unit_path": "units/unit-02/index.html",
+      "sessions": [
+        "Investigative question and retrieval warm-up",
+        "Data display, computation, or probability model",
+        "Interactive simulation or software-supported analysis",
+        "Application, design critique, or collaborative investigation",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 6,
+      "unit": 2,
+      "title": "Describing One-Variable Distributions",
+      "essential": "How do graphs and numerical summaries reveal distribution shape, center, spread, unusual values, and context?",
+      "focus": "Standard Scores and Relative Standing; Transformations and Comparing Distributions",
+      "lesson_ids": [
+        "u02-l06",
+        "u02-l07"
+      ],
+      "unit_path": "units/unit-02/index.html",
+      "sessions": [
+        "Investigative question and retrieval warm-up",
+        "Data display, computation, or probability model",
+        "Interactive simulation or software-supported analysis",
+        "Application, design critique, or collaborative investigation",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 7,
+      "unit": 3,
+      "title": "Relationships, Correlation & Regression",
+      "essential": "How can statistical models describe association, quantify uncertainty, diagnose error, and avoid causal overreach?",
+      "focus": "Scatterplots and Association; Pearson Correlation and Standardized Association; Least-Squares Regression Line",
+      "lesson_ids": [
+        "u03-l01",
+        "u03-l02",
+        "u03-l03"
+      ],
+      "unit_path": "units/unit-03/index.html",
+      "sessions": [
+        "Investigative question and retrieval warm-up",
+        "Data display, computation, or probability model",
+        "Interactive simulation or software-supported analysis",
+        "Application, design critique, or collaborative investigation",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 8,
+      "unit": 3,
+      "title": "Relationships, Correlation & Regression",
+      "essential": "How can statistical models describe association, quantify uncertainty, diagnose error, and avoid causal overreach?",
+      "focus": "Residuals and Model Diagnostics; R², Prediction and Extrapolation",
+      "lesson_ids": [
+        "u03-l04",
+        "u03-l05"
+      ],
+      "unit_path": "units/unit-03/index.html",
+      "sessions": [
+        "Investigative question and retrieval warm-up",
+        "Data display, computation, or probability model",
+        "Interactive simulation or software-supported analysis",
+        "Application, design critique, or collaborative investigation",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 9,
+      "unit": 3,
+      "title": "Relationships, Correlation & Regression",
+      "essential": "How can statistical models describe association, quantify uncertainty, diagnose error, and avoid causal overreach?",
+      "focus": "Transformations, Nonlinearity and Influential Points; Categorical Association, Confounding and Causal Claims",
+      "lesson_ids": [
+        "u03-l06",
+        "u03-l07"
+      ],
+      "unit_path": "units/unit-03/index.html",
+      "sessions": [
+        "Investigative question and retrieval warm-up",
+        "Data display, computation, or probability model",
+        "Interactive simulation or software-supported analysis",
+        "Application, design critique, or collaborative investigation",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 10,
+      "unit": 4,
+      "title": "Study Design, Sampling & Experiments",
+      "essential": "How do sampling, randomization, control, and design determine what conclusions data can support?",
+      "focus": "Sampling Frames and Simple Random Samples; Stratified, Cluster and Systematic Sampling; Survey Error, Nonresponse and Question Wording",
+      "lesson_ids": [
+        "u04-l01",
+        "u04-l02",
+        "u04-l03"
+      ],
+      "unit_path": "units/unit-04/index.html",
+      "sessions": [
+        "Investigative question and retrieval warm-up",
+        "Data display, computation, or probability model",
+        "Interactive simulation or software-supported analysis",
+        "Application, design critique, or collaborative investigation",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 11,
+      "unit": 4,
+      "title": "Study Design, Sampling & Experiments",
+      "essential": "How do sampling, randomization, control, and design determine what conclusions data can support?",
+      "focus": "Observational Studies and Confounding; Randomized Experiments, Control and Replication",
+      "lesson_ids": [
+        "u04-l04",
+        "u04-l05"
+      ],
+      "unit_path": "units/unit-04/index.html",
+      "sessions": [
+        "Investigative question and retrieval warm-up",
+        "Data display, computation, or probability model",
+        "Interactive simulation or software-supported analysis",
+        "Application, design critique, or collaborative investigation",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 12,
+      "unit": 4,
+      "title": "Study Design, Sampling & Experiments",
+      "essential": "How do sampling, randomization, control, and design determine what conclusions data can support?",
+      "focus": "Blocking, Matching, Blinding and Placebos; Simulation-Based Design and Randomization Logic",
+      "lesson_ids": [
+        "u04-l06",
+        "u04-l07"
+      ],
+      "unit_path": "units/unit-04/index.html",
+      "sessions": [
+        "Investigative question and retrieval warm-up",
+        "Data display, computation, or probability model",
+        "Interactive simulation or software-supported analysis",
+        "Application, design critique, or collaborative investigation",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 13,
+      "unit": 5,
+      "title": "Probability Foundations & Conditional Reasoning",
+      "essential": "How do probability rules, conditioning, independence, and simulation quantify uncertainty?",
+      "focus": "Sample Spaces, Events and Complements; Addition Rule and Inclusion–Exclusion; Conditional Probability and Tree Diagrams",
+      "lesson_ids": [
+        "u05-l01",
+        "u05-l02",
+        "u05-l03"
+      ],
+      "unit_path": "units/unit-05/index.html",
+      "sessions": [
+        "Investigative question and retrieval warm-up",
+        "Data display, computation, or probability model",
+        "Interactive simulation or software-supported analysis",
+        "Application, design critique, or collaborative investigation",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 14,
+      "unit": 5,
+      "title": "Probability Foundations & Conditional Reasoning",
+      "essential": "How do probability rules, conditioning, independence, and simulation quantify uncertainty?",
+      "focus": "Independence and Multiplication Rules; Bayes Theorem and Diagnostic Reasoning",
+      "lesson_ids": [
+        "u05-l04",
+        "u05-l05"
+      ],
+      "unit_path": "units/unit-05/index.html",
+      "sessions": [
+        "Investigative question and retrieval warm-up",
+        "Data display, computation, or probability model",
+        "Interactive simulation or software-supported analysis",
+        "Application, design critique, or collaborative investigation",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 15,
+      "unit": 5,
+      "title": "Probability Foundations & Conditional Reasoning",
+      "essential": "How do probability rules, conditioning, independence, and simulation quantify uncertainty?",
+      "focus": "Counting, Permutations and Combinations; Monte Carlo Simulation and Probability Validation",
+      "lesson_ids": [
+        "u05-l06",
+        "u05-l07"
+      ],
+      "unit_path": "units/unit-05/index.html",
+      "sessions": [
+        "Investigative question and retrieval warm-up",
+        "Data display, computation, or probability model",
+        "Interactive simulation or software-supported analysis",
+        "Application, design critique, or collaborative investigation",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 16,
+      "unit": 6,
+      "title": "Random Variables & Discrete Distributions",
+      "essential": "How do random variables and probability distributions connect uncertain outcomes to expected value, variation, and decisions?",
+      "focus": "Random Variables and Probability Mass Functions; Expected Value as Long-Run Balance; Variance, Standard Deviation and Linear Transformations",
+      "lesson_ids": [
+        "u06-l01",
+        "u06-l02",
+        "u06-l03"
+      ],
+      "unit_path": "units/unit-06/index.html",
+      "sessions": [
+        "Investigative question and retrieval warm-up",
+        "Data display, computation, or probability model",
+        "Interactive simulation or software-supported analysis",
+        "Application, design critique, or collaborative investigation",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 17,
+      "unit": 6,
+      "title": "Random Variables & Discrete Distributions",
+      "essential": "How do random variables and probability distributions connect uncertain outcomes to expected value, variation, and decisions?",
+      "focus": "Binomial Distribution; Geometric and Waiting-Time Models",
+      "lesson_ids": [
+        "u06-l04",
+        "u06-l05"
+      ],
+      "unit_path": "units/unit-06/index.html",
+      "sessions": [
+        "Investigative question and retrieval warm-up",
+        "Data display, computation, or probability model",
+        "Interactive simulation or software-supported analysis",
+        "Application, design critique, or collaborative investigation",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 18,
+      "unit": 6,
+      "title": "Random Variables & Discrete Distributions",
+      "essential": "How do random variables and probability distributions connect uncertain outcomes to expected value, variation, and decisions?",
+      "focus": "Poisson Counts and Rate Models; Covariance, Sums and Decision Applications",
+      "lesson_ids": [
+        "u06-l06",
+        "u06-l07"
+      ],
+      "unit_path": "units/unit-06/index.html",
+      "sessions": [
+        "Investigative question and retrieval warm-up",
+        "Data display, computation, or probability model",
+        "Interactive simulation or software-supported analysis",
+        "Application, design critique, or collaborative investigation",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 19,
+      "unit": 7,
+      "title": "Continuous Distributions & Sampling Distributions",
+      "essential": "How do density models and repeated sampling explain normal approximation, standard error, and the central limit theorem?",
+      "focus": "Continuous Random Variables and Density Curves; Normal Models and the Empirical Rule; Standard Normal Probabilities and Percentiles",
+      "lesson_ids": [
+        "u07-l01",
+        "u07-l02",
+        "u07-l03"
+      ],
+      "unit_path": "units/unit-07/index.html",
+      "sessions": [
+        "Investigative question and retrieval warm-up",
+        "Data display, computation, or probability model",
+        "Interactive simulation or software-supported analysis",
+        "Application, design critique, or collaborative investigation",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 20,
+      "unit": 7,
+      "title": "Continuous Distributions & Sampling Distributions",
+      "essential": "How do density models and repeated sampling explain normal approximation, standard error, and the central limit theorem?",
+      "focus": "Sampling Distribution of a Proportion; Sampling Distribution of a Mean",
+      "lesson_ids": [
+        "u07-l04",
+        "u07-l05"
+      ],
+      "unit_path": "units/unit-07/index.html",
+      "sessions": [
+        "Investigative question and retrieval warm-up",
+        "Data display, computation, or probability model",
+        "Interactive simulation or software-supported analysis",
+        "Application, design critique, or collaborative investigation",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 21,
+      "unit": 7,
+      "title": "Continuous Distributions & Sampling Distributions",
+      "essential": "How do density models and repeated sampling explain normal approximation, standard error, and the central limit theorem?",
+      "focus": "Central Limit Theorem and Normal Approximation; t Distributions and Bootstrap Intuition",
+      "lesson_ids": [
+        "u07-l06",
+        "u07-l07"
+      ],
+      "unit_path": "units/unit-07/index.html",
+      "sessions": [
+        "Investigative question and retrieval warm-up",
+        "Data display, computation, or probability model",
+        "Interactive simulation or software-supported analysis",
+        "Application, design critique, or collaborative investigation",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 22,
+      "unit": 8,
+      "title": "Estimation & Confidence Intervals",
+      "essential": "How do confidence intervals combine an estimate, standard error, confidence level, and design assumptions?",
+      "focus": "Confidence-Interval Logic and Interpretation; One-Proportion Confidence Intervals; One-Mean t Intervals",
+      "lesson_ids": [
+        "u08-l01",
+        "u08-l02",
+        "u08-l03"
+      ],
+      "unit_path": "units/unit-08/index.html",
+      "sessions": [
+        "Investigative question and retrieval warm-up",
+        "Data display, computation, or probability model",
+        "Interactive simulation or software-supported analysis",
+        "Application, design critique, or collaborative investigation",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 23,
+      "unit": 8,
+      "title": "Estimation & Confidence Intervals",
+      "essential": "How do confidence intervals combine an estimate, standard error, confidence level, and design assumptions?",
+      "focus": "Two-Proportion Intervals; Two-Mean and Paired Intervals",
+      "lesson_ids": [
+        "u08-l04",
+        "u08-l05"
+      ],
+      "unit_path": "units/unit-08/index.html",
+      "sessions": [
+        "Investigative question and retrieval warm-up",
+        "Data display, computation, or probability model",
+        "Interactive simulation or software-supported analysis",
+        "Application, design critique, or collaborative investigation",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 24,
+      "unit": 8,
+      "title": "Estimation & Confidence Intervals",
+      "essential": "How do confidence intervals combine an estimate, standard error, confidence level, and design assumptions?",
+      "focus": "Bootstrap Confidence Intervals; Margin of Error, Sample Size and Practical Precision",
+      "lesson_ids": [
+        "u08-l06",
+        "u08-l07"
+      ],
+      "unit_path": "units/unit-08/index.html",
+      "sessions": [
+        "Investigative question and retrieval warm-up",
+        "Data display, computation, or probability model",
+        "Interactive simulation or software-supported analysis",
+        "Application, design critique, or collaborative investigation",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 25,
+      "unit": 9,
+      "title": "Hypothesis Testing & Decision Frameworks",
+      "essential": "How do null models, test statistics, p-values, errors, power, and effect sizes support disciplined decisions?",
+      "focus": "Logic of Significance Tests; Errors, Power and Study Planning; One-Proportion and One-Mean Tests",
+      "lesson_ids": [
+        "u09-l01",
+        "u09-l02",
+        "u09-l03"
+      ],
+      "unit_path": "units/unit-09/index.html",
+      "sessions": [
+        "Investigative question and retrieval warm-up",
+        "Data display, computation, or probability model",
+        "Interactive simulation or software-supported analysis",
+        "Application, design critique, or collaborative investigation",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 26,
+      "unit": 9,
+      "title": "Hypothesis Testing & Decision Frameworks",
+      "essential": "How do null models, test statistics, p-values, errors, power, and effect sizes support disciplined decisions?",
+      "focus": "Two-Proportion and Two-Mean Tests; Paired Tests and Within-Subject Designs",
+      "lesson_ids": [
+        "u09-l04",
+        "u09-l05"
+      ],
+      "unit_path": "units/unit-09/index.html",
+      "sessions": [
+        "Investigative question and retrieval warm-up",
+        "Data display, computation, or probability model",
+        "Interactive simulation or software-supported analysis",
+        "Application, design critique, or collaborative investigation",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 27,
+      "unit": 9,
+      "title": "Hypothesis Testing & Decision Frameworks",
+      "essential": "How do null models, test statistics, p-values, errors, power, and effect sizes support disciplined decisions?",
+      "focus": "Randomization and Permutation Tests; Practical Significance, Multiplicity and Evidence Quality",
+      "lesson_ids": [
+        "u09-l06",
+        "u09-l07"
+      ],
+      "unit_path": "units/unit-09/index.html",
+      "sessions": [
+        "Investigative question and retrieval warm-up",
+        "Data display, computation, or probability model",
+        "Interactive simulation or software-supported analysis",
+        "Application, design critique, or collaborative investigation",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 28,
+      "unit": 10,
+      "title": "Categorical Data, Chi-Square & ANOVA",
+      "essential": "How do categorical and multi-group methods compare observed variation with variation expected under a null model?",
+      "focus": "Chi-Square Goodness of Fit; Chi-Square Homogeneity; Chi-Square Independence; Standardized Residuals and Effect Size",
+      "lesson_ids": [
+        "u10-l01",
+        "u10-l02",
+        "u10-l03",
+        "u10-l04"
+      ],
+      "unit_path": "units/unit-10/index.html",
+      "sessions": [
+        "Investigative question and retrieval warm-up",
+        "Data display, computation, or probability model",
+        "Interactive simulation or software-supported analysis",
+        "Application, design critique, or collaborative investigation",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 29,
+      "unit": 10,
+      "title": "Categorical Data, Chi-Square & ANOVA",
+      "essential": "How do categorical and multi-group methods compare observed variation with variation expected under a null model?",
+      "focus": "One-Way ANOVA and the F Ratio; ANOVA Assumptions, Diagnostics and Robustness; Multiple Comparisons and Planned Contrasts",
+      "lesson_ids": [
+        "u10-l05",
+        "u10-l06",
+        "u10-l07"
+      ],
+      "unit_path": "units/unit-10/index.html",
+      "sessions": [
+        "Investigative question and retrieval warm-up",
+        "Data display, computation, or probability model",
+        "Interactive simulation or software-supported analysis",
+        "Application, design critique, or collaborative investigation",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 30,
+      "unit": 11,
+      "title": "Multiple Regression & Model Diagnostics",
+      "essential": "How do multiple predictors, interactions, diagnostics, and validation improve prediction without disguising uncertainty or causality?",
+      "focus": "Multiple Regression and Partial Effects; Categorical Predictors and Indicator Coding; Interactions and Nonparallel Effects; Residuals, Influence and Collinearity",
+      "lesson_ids": [
+        "u11-l01",
+        "u11-l02",
+        "u11-l03",
+        "u11-l04"
+      ],
+      "unit_path": "units/unit-11/index.html",
+      "sessions": [
+        "Investigative question and retrieval warm-up",
+        "Data display, computation, or probability model",
+        "Interactive simulation or software-supported analysis",
+        "Application, design critique, or collaborative investigation",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 31,
+      "unit": 11,
+      "title": "Multiple Regression & Model Diagnostics",
+      "essential": "How do multiple predictors, interactions, diagnostics, and validation improve prediction without disguising uncertainty or causality?",
+      "focus": "Model Selection and Adjusted Fit; Prediction Intervals and Cross-Validation; Regression Communication and Causal Limits",
+      "lesson_ids": [
+        "u11-l05",
+        "u11-l06",
+        "u11-l07"
+      ],
+      "unit_path": "units/unit-11/index.html",
+      "sessions": [
+        "Investigative question and retrieval warm-up",
+        "Data display, computation, or probability model",
+        "Interactive simulation or software-supported analysis",
+        "Application, design critique, or collaborative investigation",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 32,
+      "unit": 12,
+      "title": "Resampling, Nonparametric Methods & Bayesian Foundations",
+      "essential": "How do resampling, rank-based methods, and Bayesian updating extend inference when classical assumptions or interpretations are limiting?",
+      "focus": "Bootstrap Distributions and Standard Errors; Permutation Tests and Exchangeability; Sign and Rank-Based Methods; Bayesian Updating: Prior, Likelihood and Posterior",
+      "lesson_ids": [
+        "u12-l01",
+        "u12-l02",
+        "u12-l03",
+        "u12-l04"
+      ],
+      "unit_path": "units/unit-12/index.html",
+      "sessions": [
+        "Investigative question and retrieval warm-up",
+        "Data display, computation, or probability model",
+        "Interactive simulation or software-supported analysis",
+        "Application, design critique, or collaborative investigation",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 33,
+      "unit": 12,
+      "title": "Resampling, Nonparametric Methods & Bayesian Foundations",
+      "essential": "How do resampling, rank-based methods, and Bayesian updating extend inference when classical assumptions or interpretations are limiting?",
+      "focus": "Bayesian Estimation and Credible Intervals; Posterior Predictive Checks and Model Criticism; Frequentist and Bayesian Evidence in Context",
+      "lesson_ids": [
+        "u12-l05",
+        "u12-l06",
+        "u12-l07"
+      ],
+      "unit_path": "units/unit-12/index.html",
+      "sessions": [
+        "Investigative question and retrieval warm-up",
+        "Data display, computation, or probability model",
+        "Interactive simulation or software-supported analysis",
+        "Application, design critique, or collaborative investigation",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 34,
+      "unit": 13,
+      "title": "Data Science, Reproducibility & Capstone",
+      "essential": "How can a statistical investigation become an auditable, ethical, reproducible argument that withstands technical and public scrutiny?",
+      "focus": "Data Cleaning, Tidy Structure and Metadata; Missing Data, Imputation and Sensitivity; Visualization Design and Statistical Storytelling",
+      "lesson_ids": [
+        "u13-l01",
+        "u13-l02",
+        "u13-l03"
+      ],
+      "unit_path": "units/unit-13/index.html",
+      "sessions": [
+        "Investigative question and retrieval warm-up",
+        "Data display, computation, or probability model",
+        "Interactive simulation or software-supported analysis",
+        "Application, design critique, or collaborative investigation",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 35,
+      "unit": 13,
+      "title": "Data Science, Reproducibility & Capstone",
+      "essential": "How can a statistical investigation become an auditable, ethical, reproducible argument that withstands technical and public scrutiny?",
+      "focus": "Simulation, Monte Carlo and Computational Experiments; Reproducible Workflows, Versioning and Audit Trails; Fairness, Responsible AI and Statistical Harm",
+      "lesson_ids": [
+        "u13-l04",
+        "u13-l05",
+        "u13-l06"
+      ],
+      "unit_path": "units/unit-13/index.html",
+      "sessions": [
+        "Investigative question and retrieval warm-up",
+        "Data display, computation, or probability model",
+        "Interactive simulation or software-supported analysis",
+        "Application, design critique, or collaborative investigation",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 36,
+      "unit": 13,
+      "title": "Data Science, Reproducibility & Capstone",
+      "essential": "How can a statistical investigation become an auditable, ethical, reproducible argument that withstands technical and public scrutiny?",
+      "focus": "Capstone Question, Design and Evidence Plan; Technical Report, Oral Defense and Advanced Statistics Bridge",
+      "lesson_ids": [
+        "u13-l07",
+        "u13-l08"
+      ],
+      "unit_path": "units/unit-13/index.html",
+      "sessions": [
+        "Investigative question and retrieval warm-up",
+        "Data display, computation, or probability model",
+        "Interactive simulation or software-supported analysis",
+        "Application, design critique, or collaborative investigation",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    }
+  ]
+}

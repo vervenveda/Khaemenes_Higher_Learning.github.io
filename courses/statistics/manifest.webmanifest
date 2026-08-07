@@ -1,0 +1,17 @@
+{
+  "id": "./",
+  "name": "Khaemenes Higher Learning Statistics",
+  "short_name": "Statistics",
+  "description": "College statistics: data, probability, inference, regression, ethics, and reproducibility.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#090b10",
+  "theme_color": "#090b10",
+  "categories": [
+    "education",
+    "mathematics",
+    "statistics",
+    "data science"
+  ]
+}
