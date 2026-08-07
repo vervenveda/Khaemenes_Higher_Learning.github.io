@@ -1,0 +1,17 @@
+{
+  "unit": 1,
+  "title": "Logic, Propositions & Valid Reasoning",
+  "standards": [
+    "Propositions and truth values",
+    "Logical connectives",
+    "Truth tables",
+    "Logical equivalence",
+    "Implication and contrapositive",
+    "Predicate logic",
+    "Quantifiers",
+    "Rules of inference",
+    "Argument validity",
+    "Normal forms"
+  ],
+  "essential_question": "How does formal logic turn precise statements into verifiable arguments, specifications, and computational decisions?"
+}

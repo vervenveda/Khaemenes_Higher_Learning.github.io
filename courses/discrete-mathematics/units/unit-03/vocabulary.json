@@ -1,0 +1,15 @@
+{
+  "unit": 3,
+  "terms": [
+    "hypothesis",
+    "conclusion",
+    "counterexample",
+    "contrapositive",
+    "contradiction",
+    "induction hypothesis",
+    "base case",
+    "recursive definition",
+    "invariant",
+    "well-founded"
+  ]
+}

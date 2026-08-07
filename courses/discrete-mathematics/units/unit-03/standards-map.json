@@ -1,0 +1,19 @@
+{
+  "unit": 3,
+  "title": "Proof, Induction, Recursion & Invariants",
+  "standards": [
+    "Definitions and theorem structure",
+    "Direct proof",
+    "Contraposition",
+    "Contradiction",
+    "Proof by cases",
+    "Existence and uniqueness",
+    "Mathematical induction",
+    "Strong induction",
+    "Structural induction",
+    "Recursive definitions",
+    "Loop invariants",
+    "Termination"
+  ],
+  "essential_question": "How do proof techniques establish correctness, reveal structure, and guarantee that recursive or iterative processes behave as intended?"
+}

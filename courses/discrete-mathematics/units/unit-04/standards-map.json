@@ -1,0 +1,20 @@
+{
+  "unit": 4,
+  "title": "Number Theory, Modular Arithmetic & Cryptography",
+  "standards": [
+    "Divisibility",
+    "Division algorithm",
+    "Greatest common divisor",
+    "Euclidean algorithm",
+    "B\u00e9zout identity",
+    "Prime numbers",
+    "Unique factorization",
+    "Congruence",
+    "Modular inverses",
+    "Chinese remainder theorem",
+    "Fast exponentiation",
+    "RSA foundations",
+    "Hashing and check digits"
+  ],
+  "essential_question": "How do divisibility and congruence create efficient arithmetic systems for computation, hashing, coding, and cryptography?"
+}

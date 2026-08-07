@@ -1,0 +1,225 @@
+{
+  "unit": 5,
+  "title": "Combinatorics & Counting Principles",
+  "weeks": [
+    13,
+    14,
+    15
+  ],
+  "lessons": [
+    {
+      "title": "Sum and Product Rules",
+      "focus": "decomposing a counting problem into disjoint alternatives and sequential choices",
+      "formulas": [
+        "sum rule",
+        "product rule"
+      ],
+      "id": "u05-l01",
+      "number": 1,
+      "unit": 5,
+      "unit_title": "Combinatorics & Counting Principles",
+      "week": 13,
+      "essential": "How can complex configuration spaces be counted without listing every possibility?",
+      "project": "Combinatorial Design & Counting Argument Portfolio",
+      "application": "passwords, schedules, test generation, search spaces, database queries, coding, resource assignment, and algorithm analysis",
+      "vocab": [
+        "permutation",
+        "combination",
+        "factorial",
+        "binomial coefficient",
+        "multiset",
+        "pigeonhole principle",
+        "inclusion-exclusion",
+        "bijection"
+      ],
+      "sequence": 29,
+      "p1": "Give a rigorous example of decomposing a counting problem into disjoint alternatives and sequential choices.",
+      "s1": "Define the objects precisely, apply the governing rule for Sum and Product Rules, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Sum and Product Rules.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Permutations and Ordered Arrangements",
+      "focus": "counting arrangements with and without repeated objects",
+      "formulas": [
+        "n!",
+        "P(n,r)=n!/(n−r)!"
+      ],
+      "id": "u05-l02",
+      "number": 2,
+      "unit": 5,
+      "unit_title": "Combinatorics & Counting Principles",
+      "week": 13,
+      "essential": "How can complex configuration spaces be counted without listing every possibility?",
+      "project": "Combinatorial Design & Counting Argument Portfolio",
+      "application": "passwords, schedules, test generation, search spaces, database queries, coding, resource assignment, and algorithm analysis",
+      "vocab": [
+        "permutation",
+        "combination",
+        "factorial",
+        "binomial coefficient",
+        "multiset",
+        "pigeonhole principle",
+        "inclusion-exclusion",
+        "bijection"
+      ],
+      "sequence": 30,
+      "p1": "How many ordered 3-character strings can be made from 7 distinct symbols without repetition?",
+      "s1": "P(7,3)=7·6·5=210.",
+      "p2": "Identify a common error in Permutations and Ordered Arrangements.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Combinations and Binomial Coefficients",
+      "focus": "counting unordered selections and connecting coefficients to subsets",
+      "formulas": [
+        "C(n,r)=n!/[r!(n−r)!]"
+      ],
+      "id": "u05-l03",
+      "number": 3,
+      "unit": 5,
+      "unit_title": "Combinatorics & Counting Principles",
+      "week": 13,
+      "essential": "How can complex configuration spaces be counted without listing every possibility?",
+      "project": "Combinatorial Design & Counting Argument Portfolio",
+      "application": "passwords, schedules, test generation, search spaces, database queries, coding, resource assignment, and algorithm analysis",
+      "vocab": [
+        "permutation",
+        "combination",
+        "factorial",
+        "binomial coefficient",
+        "multiset",
+        "pigeonhole principle",
+        "inclusion-exclusion",
+        "bijection"
+      ],
+      "sequence": 31,
+      "p1": "Choose 3 students from 10.",
+      "s1": "C(10,3)=120.",
+      "p2": "Identify a common error in Combinations and Binomial Coefficients.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Multisets and Combinations with Repetition",
+      "focus": "counting selections when categories may repeat",
+      "formulas": [
+        "C(n+r−1,r)"
+      ],
+      "id": "u05-l04",
+      "number": 4,
+      "unit": 5,
+      "unit_title": "Combinatorics & Counting Principles",
+      "week": 14,
+      "essential": "How can complex configuration spaces be counted without listing every possibility?",
+      "project": "Combinatorial Design & Counting Argument Portfolio",
+      "application": "passwords, schedules, test generation, search spaces, database queries, coding, resource assignment, and algorithm analysis",
+      "vocab": [
+        "permutation",
+        "combination",
+        "factorial",
+        "binomial coefficient",
+        "multiset",
+        "pigeonhole principle",
+        "inclusion-exclusion",
+        "bijection"
+      ],
+      "sequence": 32,
+      "p1": "Give a rigorous example of counting selections when categories may repeat.",
+      "s1": "Define the objects precisely, apply the governing rule for Multisets and Combinations with Repetition, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Multisets and Combinations with Repetition.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Pigeonhole Principle and Extremal Guarantees",
+      "focus": "proving that collisions or concentration must occur without locating them explicitly",
+      "formulas": [
+        "⌈N/k⌉ objects in some box"
+      ],
+      "id": "u05-l05",
+      "number": 5,
+      "unit": 5,
+      "unit_title": "Combinatorics & Counting Principles",
+      "week": 14,
+      "essential": "How can complex configuration spaces be counted without listing every possibility?",
+      "project": "Combinatorial Design & Counting Argument Portfolio",
+      "application": "passwords, schedules, test generation, search spaces, database queries, coding, resource assignment, and algorithm analysis",
+      "vocab": [
+        "permutation",
+        "combination",
+        "factorial",
+        "binomial coefficient",
+        "multiset",
+        "pigeonhole principle",
+        "inclusion-exclusion",
+        "bijection"
+      ],
+      "sequence": 33,
+      "p1": "Why must 13 people include two born in the same month?",
+      "s1": "There are 12 months and 13 people, so one month contains at least two birthdays.",
+      "p2": "Identify a common error in Pigeonhole Principle and Extremal Guarantees.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Inclusion–Exclusion and Overlapping Constraints",
+      "focus": "correcting double counting across overlapping sets",
+      "formulas": [
+        "|A∪B|=|A|+|B|−|A∩B|"
+      ],
+      "id": "u05-l06",
+      "number": 6,
+      "unit": 5,
+      "unit_title": "Combinatorics & Counting Principles",
+      "week": 15,
+      "essential": "How can complex configuration spaces be counted without listing every possibility?",
+      "project": "Combinatorial Design & Counting Argument Portfolio",
+      "application": "passwords, schedules, test generation, search spaces, database queries, coding, resource assignment, and algorithm analysis",
+      "vocab": [
+        "permutation",
+        "combination",
+        "factorial",
+        "binomial coefficient",
+        "multiset",
+        "pigeonhole principle",
+        "inclusion-exclusion",
+        "bijection"
+      ],
+      "sequence": 34,
+      "p1": "If |A|=18, |B|=14 and |A∩B|=5, find |A∪B|.",
+      "s1": "18+14−5=27.",
+      "p2": "Identify a common error in Inclusion–Exclusion and Overlapping Constraints.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Combinatorial Proofs and Binomial Identities",
+      "focus": "proving identities by counting the same set in two different ways",
+      "formulas": [
+        "Σ_k C(n,k)=2^n",
+        "Pascal identity"
+      ],
+      "id": "u05-l07",
+      "number": 7,
+      "unit": 5,
+      "unit_title": "Combinatorics & Counting Principles",
+      "week": 15,
+      "essential": "How can complex configuration spaces be counted without listing every possibility?",
+      "project": "Combinatorial Design & Counting Argument Portfolio",
+      "application": "passwords, schedules, test generation, search spaces, database queries, coding, resource assignment, and algorithm analysis",
+      "vocab": [
+        "permutation",
+        "combination",
+        "factorial",
+        "binomial coefficient",
+        "multiset",
+        "pigeonhole principle",
+        "inclusion-exclusion",
+        "bijection"
+      ],
+      "sequence": 35,
+      "p1": "Give a rigorous example of proving identities by counting the same set in two different ways.",
+      "s1": "Define the objects precisely, apply the governing rule for Combinatorial Proofs and Binomial Identities, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Combinatorial Proofs and Binomial Identities.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    }
+  ],
+  "investigation": "Combinatorial Design & Counting Argument Portfolio"
+}

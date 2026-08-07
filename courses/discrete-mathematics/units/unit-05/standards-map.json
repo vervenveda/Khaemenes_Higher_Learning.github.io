@@ -1,0 +1,17 @@
+{
+  "unit": 5,
+  "title": "Combinatorics & Counting Principles",
+  "standards": [
+    "Sum and product rules",
+    "Permutations",
+    "Combinations",
+    "Binomial coefficients",
+    "Multiset counting",
+    "Pigeonhole principle",
+    "Inclusion-exclusion",
+    "Combinatorial identities",
+    "Combinatorial proof",
+    "Counting with restrictions"
+  ],
+  "essential_question": "How can complex configuration spaces be counted without listing every possibility?"
+}

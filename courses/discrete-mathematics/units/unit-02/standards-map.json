@@ -1,0 +1,19 @@
+{
+  "unit": 2,
+  "title": "Sets, Functions, Relations & Cardinality",
+  "standards": [
+    "Set notation",
+    "Subsets and equality",
+    "Set operations",
+    "Power sets",
+    "Cartesian products",
+    "Functions",
+    "Injective and surjective maps",
+    "Composition and inverses",
+    "Relations",
+    "Equivalence relations",
+    "Partial orders",
+    "Cardinality"
+  ],
+  "essential_question": "How do sets, functions, and relations model the objects, mappings, and structural constraints used throughout computer science?"
+}

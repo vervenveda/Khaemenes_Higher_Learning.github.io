@@ -1,0 +1,246 @@
+{
+  "unit": 4,
+  "title": "Number Theory, Modular Arithmetic & Cryptography",
+  "weeks": [
+    10,
+    11,
+    12
+  ],
+  "lessons": [
+    {
+      "title": "Divisibility and the Division Algorithm",
+      "focus": "representing every integer with a quotient and controlled remainder",
+      "formulas": [
+        "a=bq+r, 0≤r<|b|"
+      ],
+      "id": "u04-l01",
+      "number": 1,
+      "unit": 4,
+      "unit_title": "Number Theory, Modular Arithmetic & Cryptography",
+      "week": 10,
+      "essential": "How do divisibility and congruence create efficient arithmetic systems for computation, hashing, coding, and cryptography?",
+      "project": "Modular Arithmetic & Public-Key Cryptography Laboratory",
+      "application": "cryptography, secure communication, hashing, checksums, calendars, cyclic buffers, pseudorandom generation, and coding",
+      "vocab": [
+        "divides",
+        "quotient",
+        "remainder",
+        "gcd",
+        "coprime",
+        "prime",
+        "congruence",
+        "residue",
+        "inverse",
+        "modulus",
+        "ciphertext"
+      ],
+      "sequence": 22,
+      "p1": "Write 47 using divisor 6.",
+      "s1": "47=6·7+5 with 0≤5<6.",
+      "p2": "Identify a common error in Divisibility and the Division Algorithm.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Greatest Common Divisors and the Euclidean Algorithm",
+      "focus": "computing gcd efficiently and expressing it through Bézout coefficients",
+      "formulas": [
+        "gcd(a,b)=gcd(b,a mod b)",
+        "ax+by=gcd(a,b)"
+      ],
+      "id": "u04-l02",
+      "number": 2,
+      "unit": 4,
+      "unit_title": "Number Theory, Modular Arithmetic & Cryptography",
+      "week": 10,
+      "essential": "How do divisibility and congruence create efficient arithmetic systems for computation, hashing, coding, and cryptography?",
+      "project": "Modular Arithmetic & Public-Key Cryptography Laboratory",
+      "application": "cryptography, secure communication, hashing, checksums, calendars, cyclic buffers, pseudorandom generation, and coding",
+      "vocab": [
+        "divides",
+        "quotient",
+        "remainder",
+        "gcd",
+        "coprime",
+        "prime",
+        "congruence",
+        "residue",
+        "inverse",
+        "modulus",
+        "ciphertext"
+      ],
+      "sequence": 23,
+      "p1": "Compute gcd(252,105).",
+      "s1": "252=2·105+42, 105=2·42+21, 42=2·21, so gcd=21.",
+      "p2": "Identify a common error in Greatest Common Divisors and the Euclidean Algorithm.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Prime Numbers and Unique Factorization",
+      "focus": "using primes as multiplicative building blocks and proving consequences of factorization",
+      "formulas": [
+        "n=∏p_i^{e_i}"
+      ],
+      "id": "u04-l03",
+      "number": 3,
+      "unit": 4,
+      "unit_title": "Number Theory, Modular Arithmetic & Cryptography",
+      "week": 10,
+      "essential": "How do divisibility and congruence create efficient arithmetic systems for computation, hashing, coding, and cryptography?",
+      "project": "Modular Arithmetic & Public-Key Cryptography Laboratory",
+      "application": "cryptography, secure communication, hashing, checksums, calendars, cyclic buffers, pseudorandom generation, and coding",
+      "vocab": [
+        "divides",
+        "quotient",
+        "remainder",
+        "gcd",
+        "coprime",
+        "prime",
+        "congruence",
+        "residue",
+        "inverse",
+        "modulus",
+        "ciphertext"
+      ],
+      "sequence": 24,
+      "p1": "Give a rigorous example of using primes as multiplicative building blocks and proving consequences of factorization.",
+      "s1": "Define the objects precisely, apply the governing rule for Prime Numbers and Unique Factorization, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Prime Numbers and Unique Factorization.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Congruence and Modular Arithmetic",
+      "focus": "reasoning with residue classes under addition, subtraction, multiplication, and powers",
+      "formulas": [
+        "a≡b (mod m)⇔m|(a−b)"
+      ],
+      "id": "u04-l04",
+      "number": 4,
+      "unit": 4,
+      "unit_title": "Number Theory, Modular Arithmetic & Cryptography",
+      "week": 11,
+      "essential": "How do divisibility and congruence create efficient arithmetic systems for computation, hashing, coding, and cryptography?",
+      "project": "Modular Arithmetic & Public-Key Cryptography Laboratory",
+      "application": "cryptography, secure communication, hashing, checksums, calendars, cyclic buffers, pseudorandom generation, and coding",
+      "vocab": [
+        "divides",
+        "quotient",
+        "remainder",
+        "gcd",
+        "coprime",
+        "prime",
+        "congruence",
+        "residue",
+        "inverse",
+        "modulus",
+        "ciphertext"
+      ],
+      "sequence": 25,
+      "p1": "Compute 73 mod 8.",
+      "s1": "73=8·9+1, so 73≡1 (mod 8).",
+      "p2": "Identify a common error in Congruence and Modular Arithmetic.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Modular Inverses and Linear Congruences",
+      "focus": "determining solvability and using extended Euclid to find inverses",
+      "formulas": [
+        "ax≡b (mod m)"
+      ],
+      "id": "u04-l05",
+      "number": 5,
+      "unit": 4,
+      "unit_title": "Number Theory, Modular Arithmetic & Cryptography",
+      "week": 11,
+      "essential": "How do divisibility and congruence create efficient arithmetic systems for computation, hashing, coding, and cryptography?",
+      "project": "Modular Arithmetic & Public-Key Cryptography Laboratory",
+      "application": "cryptography, secure communication, hashing, checksums, calendars, cyclic buffers, pseudorandom generation, and coding",
+      "vocab": [
+        "divides",
+        "quotient",
+        "remainder",
+        "gcd",
+        "coprime",
+        "prime",
+        "congruence",
+        "residue",
+        "inverse",
+        "modulus",
+        "ciphertext"
+      ],
+      "sequence": 26,
+      "p1": "Compute 73 mod 8.",
+      "s1": "73=8·9+1, so 73≡1 (mod 8).",
+      "p2": "Identify a common error in Modular Inverses and Linear Congruences.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Chinese Remainder Theorem and Fast Exponentiation",
+      "focus": "reconstructing residues and computing large powers efficiently",
+      "formulas": [
+        "x≡a_i (mod m_i)",
+        "repeated squaring"
+      ],
+      "id": "u04-l06",
+      "number": 6,
+      "unit": 4,
+      "unit_title": "Number Theory, Modular Arithmetic & Cryptography",
+      "week": 12,
+      "essential": "How do divisibility and congruence create efficient arithmetic systems for computation, hashing, coding, and cryptography?",
+      "project": "Modular Arithmetic & Public-Key Cryptography Laboratory",
+      "application": "cryptography, secure communication, hashing, checksums, calendars, cyclic buffers, pseudorandom generation, and coding",
+      "vocab": [
+        "divides",
+        "quotient",
+        "remainder",
+        "gcd",
+        "coprime",
+        "prime",
+        "congruence",
+        "residue",
+        "inverse",
+        "modulus",
+        "ciphertext"
+      ],
+      "sequence": 27,
+      "p1": "Give a rigorous example of reconstructing residues and computing large powers efficiently.",
+      "s1": "Define the objects precisely, apply the governing rule for Chinese Remainder Theorem and Fast Exponentiation, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Chinese Remainder Theorem and Fast Exponentiation.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "RSA Foundations, Hashing and Check Digits",
+      "focus": "connecting modular exponentiation to public-key ideas and integrity checks without overstating security guarantees",
+      "formulas": [
+        "c≡m^e (mod n)",
+        "hash maps input to fixed-size residue"
+      ],
+      "id": "u04-l07",
+      "number": 7,
+      "unit": 4,
+      "unit_title": "Number Theory, Modular Arithmetic & Cryptography",
+      "week": 12,
+      "essential": "How do divisibility and congruence create efficient arithmetic systems for computation, hashing, coding, and cryptography?",
+      "project": "Modular Arithmetic & Public-Key Cryptography Laboratory",
+      "application": "cryptography, secure communication, hashing, checksums, calendars, cyclic buffers, pseudorandom generation, and coding",
+      "vocab": [
+        "divides",
+        "quotient",
+        "remainder",
+        "gcd",
+        "coprime",
+        "prime",
+        "congruence",
+        "residue",
+        "inverse",
+        "modulus",
+        "ciphertext"
+      ],
+      "sequence": 28,
+      "p1": "Give a rigorous example of connecting modular exponentiation to public-key ideas and integrity checks without overstating security guarantees.",
+      "s1": "Define the objects precisely, apply the governing rule for RSA Foundations, Hashing and Check Digits, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in RSA Foundations, Hashing and Check Digits.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    }
+  ],
+  "investigation": "Modular Arithmetic & Public-Key Cryptography Laboratory"
+}

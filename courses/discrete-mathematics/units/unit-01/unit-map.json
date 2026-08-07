@@ -1,0 +1,244 @@
+{
+  "unit": 1,
+  "title": "Logic, Propositions & Valid Reasoning",
+  "weeks": [
+    1,
+    2,
+    3
+  ],
+  "lessons": [
+    {
+      "title": "Statements, Propositions and Truth Values",
+      "focus": "distinguishing propositions from commands, questions, open sentences, and ambiguous claims",
+      "formulas": [
+        "proposition has a definite truth value"
+      ],
+      "id": "u01-l01",
+      "number": 1,
+      "unit": 1,
+      "unit_title": "Logic, Propositions & Valid Reasoning",
+      "week": 1,
+      "essential": "How does formal logic turn precise statements into verifiable arguments, specifications, and computational decisions?",
+      "project": "Logic Specification & Argument Validity Audit",
+      "application": "software requirements, digital decisions, search conditions, access rules, databases, and formal verification",
+      "vocab": [
+        "proposition",
+        "truth value",
+        "negation",
+        "conjunction",
+        "disjunction",
+        "implication",
+        "biconditional",
+        "predicate",
+        "quantifier",
+        "validity"
+      ],
+      "sequence": 1,
+      "p1": "Give a rigorous example of distinguishing propositions from commands, questions, open sentences, and ambiguous claims.",
+      "s1": "Define the objects precisely, apply the governing rule for Statements, Propositions and Truth Values, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Statements, Propositions and Truth Values.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Logical Connectives and Compound Statements",
+      "focus": "constructing compound propositions with negation, conjunction, disjunction, implication, and biconditional",
+      "formulas": [
+        "¬p",
+        "p∧q",
+        "p∨q",
+        "p→q",
+        "p↔q"
+      ],
+      "id": "u01-l02",
+      "number": 2,
+      "unit": 1,
+      "unit_title": "Logic, Propositions & Valid Reasoning",
+      "week": 1,
+      "essential": "How does formal logic turn precise statements into verifiable arguments, specifications, and computational decisions?",
+      "project": "Logic Specification & Argument Validity Audit",
+      "application": "software requirements, digital decisions, search conditions, access rules, databases, and formal verification",
+      "vocab": [
+        "proposition",
+        "truth value",
+        "negation",
+        "conjunction",
+        "disjunction",
+        "implication",
+        "biconditional",
+        "predicate",
+        "quantifier",
+        "validity"
+      ],
+      "sequence": 2,
+      "p1": "Give a rigorous example of constructing compound propositions with negation, conjunction, disjunction, implication, and biconditional.",
+      "s1": "Define the objects precisely, apply the governing rule for Logical Connectives and Compound Statements, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Logical Connectives and Compound Statements.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Truth Tables and Semantic Evaluation",
+      "focus": "evaluating compound statements systematically across all truth assignments",
+      "formulas": [
+        "2^n rows for n variables"
+      ],
+      "id": "u01-l03",
+      "number": 3,
+      "unit": 1,
+      "unit_title": "Logic, Propositions & Valid Reasoning",
+      "week": 1,
+      "essential": "How does formal logic turn precise statements into verifiable arguments, specifications, and computational decisions?",
+      "project": "Logic Specification & Argument Validity Audit",
+      "application": "software requirements, digital decisions, search conditions, access rules, databases, and formal verification",
+      "vocab": [
+        "proposition",
+        "truth value",
+        "negation",
+        "conjunction",
+        "disjunction",
+        "implication",
+        "biconditional",
+        "predicate",
+        "quantifier",
+        "validity"
+      ],
+      "sequence": 3,
+      "p1": "Evaluate (p→q)∧p for p=true and q=false.",
+      "s1": "p→q is false and p is true, so the conjunction is false.",
+      "p2": "Identify a common error in Truth Tables and Semantic Evaluation.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Logical Equivalence and Algebra of Propositions",
+      "focus": "proving equivalent forms with truth tables and laws such as De Morgan and distributivity",
+      "formulas": [
+        "p→q≡¬p∨q",
+        "¬(p∧q)≡¬p∨¬q"
+      ],
+      "id": "u01-l04",
+      "number": 4,
+      "unit": 1,
+      "unit_title": "Logic, Propositions & Valid Reasoning",
+      "week": 2,
+      "essential": "How does formal logic turn precise statements into verifiable arguments, specifications, and computational decisions?",
+      "project": "Logic Specification & Argument Validity Audit",
+      "application": "software requirements, digital decisions, search conditions, access rules, databases, and formal verification",
+      "vocab": [
+        "proposition",
+        "truth value",
+        "negation",
+        "conjunction",
+        "disjunction",
+        "implication",
+        "biconditional",
+        "predicate",
+        "quantifier",
+        "validity"
+      ],
+      "sequence": 4,
+      "p1": "Rewrite p→q without an implication symbol.",
+      "s1": "p→q is logically equivalent to ¬p∨q.",
+      "p2": "Identify a common error in Logical Equivalence and Algebra of Propositions.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Implication, Converse, Inverse and Contrapositive",
+      "focus": "separating an implication from related statements and using the contrapositive correctly",
+      "formulas": [
+        "p→q≡¬q→¬p"
+      ],
+      "id": "u01-l05",
+      "number": 5,
+      "unit": 1,
+      "unit_title": "Logic, Propositions & Valid Reasoning",
+      "week": 2,
+      "essential": "How does formal logic turn precise statements into verifiable arguments, specifications, and computational decisions?",
+      "project": "Logic Specification & Argument Validity Audit",
+      "application": "software requirements, digital decisions, search conditions, access rules, databases, and formal verification",
+      "vocab": [
+        "proposition",
+        "truth value",
+        "negation",
+        "conjunction",
+        "disjunction",
+        "implication",
+        "biconditional",
+        "predicate",
+        "quantifier",
+        "validity"
+      ],
+      "sequence": 5,
+      "p1": "Give a rigorous example of separating an implication from related statements and using the contrapositive correctly.",
+      "s1": "Define the objects precisely, apply the governing rule for Implication, Converse, Inverse and Contrapositive, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Implication, Converse, Inverse and Contrapositive.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Predicates, Quantifiers and Negation",
+      "focus": "translating statements with universal and existential quantifiers and negating them accurately",
+      "formulas": [
+        "¬∀x P(x)≡∃x ¬P(x)",
+        "¬∃x P(x)≡∀x ¬P(x)"
+      ],
+      "id": "u01-l06",
+      "number": 6,
+      "unit": 1,
+      "unit_title": "Logic, Propositions & Valid Reasoning",
+      "week": 3,
+      "essential": "How does formal logic turn precise statements into verifiable arguments, specifications, and computational decisions?",
+      "project": "Logic Specification & Argument Validity Audit",
+      "application": "software requirements, digital decisions, search conditions, access rules, databases, and formal verification",
+      "vocab": [
+        "proposition",
+        "truth value",
+        "negation",
+        "conjunction",
+        "disjunction",
+        "implication",
+        "biconditional",
+        "predicate",
+        "quantifier",
+        "validity"
+      ],
+      "sequence": 6,
+      "p1": "Negate “Every server is online.”",
+      "s1": "There exists at least one server that is not online.",
+      "p2": "Identify a common error in Predicates, Quantifiers and Negation.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Rules of Inference, Valid Arguments and Fallacies",
+      "focus": "testing argument forms and identifying affirming the consequent, denying the antecedent, and quantifier errors",
+      "formulas": [
+        "modus ponens",
+        "modus tollens",
+        "hypothetical syllogism"
+      ],
+      "id": "u01-l07",
+      "number": 7,
+      "unit": 1,
+      "unit_title": "Logic, Propositions & Valid Reasoning",
+      "week": 3,
+      "essential": "How does formal logic turn precise statements into verifiable arguments, specifications, and computational decisions?",
+      "project": "Logic Specification & Argument Validity Audit",
+      "application": "software requirements, digital decisions, search conditions, access rules, databases, and formal verification",
+      "vocab": [
+        "proposition",
+        "truth value",
+        "negation",
+        "conjunction",
+        "disjunction",
+        "implication",
+        "biconditional",
+        "predicate",
+        "quantifier",
+        "validity"
+      ],
+      "sequence": 7,
+      "p1": "From p→q and p, what follows?",
+      "s1": "q follows by modus ponens.",
+      "p2": "Identify a common error in Rules of Inference, Valid Arguments and Fallacies.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    }
+  ],
+  "investigation": "Logic Specification & Argument Validity Audit"
+}

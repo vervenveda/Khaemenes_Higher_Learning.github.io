@@ -1,0 +1,239 @@
+{
+  "unit": 3,
+  "title": "Proof, Induction, Recursion & Invariants",
+  "weeks": [
+    7,
+    8,
+    9
+  ],
+  "lessons": [
+    {
+      "title": "Definitions, Theorems and the Anatomy of Proof",
+      "focus": "unpacking definitions, hypotheses, conclusions, and the difference between evidence and proof",
+      "formulas": [
+        "theorem: hypotheses⇒conclusion"
+      ],
+      "id": "u03-l01",
+      "number": 1,
+      "unit": 3,
+      "unit_title": "Proof, Induction, Recursion & Invariants",
+      "week": 7,
+      "essential": "How do proof techniques establish correctness, reveal structure, and guarantee that recursive or iterative processes behave as intended?",
+      "project": "Proof Portfolio & Algorithm-Correctness Defense",
+      "application": "algorithm verification, recursive programs, data structures, security arguments, protocol correctness, and mathematical software",
+      "vocab": [
+        "hypothesis",
+        "conclusion",
+        "counterexample",
+        "contrapositive",
+        "contradiction",
+        "induction hypothesis",
+        "base case",
+        "recursive definition",
+        "invariant",
+        "well-founded"
+      ],
+      "sequence": 15,
+      "p1": "Give a rigorous example of unpacking definitions, hypotheses, conclusions, and the difference between evidence and proof.",
+      "s1": "Define the objects precisely, apply the governing rule for Definitions, Theorems and the Anatomy of Proof, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Definitions, Theorems and the Anatomy of Proof.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Direct Proof and Constructive Reasoning",
+      "focus": "building a chain from definitions and known facts to the desired conclusion",
+      "formulas": [
+        "assume hypothesis; derive conclusion"
+      ],
+      "id": "u03-l02",
+      "number": 2,
+      "unit": 3,
+      "unit_title": "Proof, Induction, Recursion & Invariants",
+      "week": 7,
+      "essential": "How do proof techniques establish correctness, reveal structure, and guarantee that recursive or iterative processes behave as intended?",
+      "project": "Proof Portfolio & Algorithm-Correctness Defense",
+      "application": "algorithm verification, recursive programs, data structures, security arguments, protocol correctness, and mathematical software",
+      "vocab": [
+        "hypothesis",
+        "conclusion",
+        "counterexample",
+        "contrapositive",
+        "contradiction",
+        "induction hypothesis",
+        "base case",
+        "recursive definition",
+        "invariant",
+        "well-founded"
+      ],
+      "sequence": 16,
+      "p1": "Prove the sum of two even integers is even.",
+      "s1": "Write a=2m and b=2n. Then a+b=2(m+n), which is even.",
+      "p2": "Identify a common error in Direct Proof and Constructive Reasoning.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Proof by Contraposition",
+      "focus": "proving an implication through its logically equivalent contrapositive",
+      "formulas": [
+        "p→q≡¬q→¬p"
+      ],
+      "id": "u03-l03",
+      "number": 3,
+      "unit": 3,
+      "unit_title": "Proof, Induction, Recursion & Invariants",
+      "week": 7,
+      "essential": "How do proof techniques establish correctness, reveal structure, and guarantee that recursive or iterative processes behave as intended?",
+      "project": "Proof Portfolio & Algorithm-Correctness Defense",
+      "application": "algorithm verification, recursive programs, data structures, security arguments, protocol correctness, and mathematical software",
+      "vocab": [
+        "hypothesis",
+        "conclusion",
+        "counterexample",
+        "contrapositive",
+        "contradiction",
+        "induction hypothesis",
+        "base case",
+        "recursive definition",
+        "invariant",
+        "well-founded"
+      ],
+      "sequence": 17,
+      "p1": "Prove: if n² is odd, then n is odd.",
+      "s1": "Prove the contrapositive: if n is even, n=2k and n²=4k² is even.",
+      "p2": "Identify a common error in Proof by Contraposition.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Proof by Contradiction and Counterexample",
+      "focus": "deriving impossibility from a negated claim and refuting universal statements with one valid counterexample",
+      "formulas": [
+        "assume ¬P; derive contradiction"
+      ],
+      "id": "u03-l04",
+      "number": 4,
+      "unit": 3,
+      "unit_title": "Proof, Induction, Recursion & Invariants",
+      "week": 8,
+      "essential": "How do proof techniques establish correctness, reveal structure, and guarantee that recursive or iterative processes behave as intended?",
+      "project": "Proof Portfolio & Algorithm-Correctness Defense",
+      "application": "algorithm verification, recursive programs, data structures, security arguments, protocol correctness, and mathematical software",
+      "vocab": [
+        "hypothesis",
+        "conclusion",
+        "counterexample",
+        "contrapositive",
+        "contradiction",
+        "induction hypothesis",
+        "base case",
+        "recursive definition",
+        "invariant",
+        "well-founded"
+      ],
+      "sequence": 18,
+      "p1": "Why does assuming a smallest positive rational fail?",
+      "s1": "If r>0 were smallest, then r/2 would be a smaller positive rational, a contradiction.",
+      "p2": "Identify a common error in Proof by Contradiction and Counterexample.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Proof by Cases, Existence and Uniqueness",
+      "focus": "partitioning a domain into exhaustive cases and distinguishing existence from uniqueness",
+      "formulas": [
+        "∃x P(x)",
+        "∃!x P(x)"
+      ],
+      "id": "u03-l05",
+      "number": 5,
+      "unit": 3,
+      "unit_title": "Proof, Induction, Recursion & Invariants",
+      "week": 8,
+      "essential": "How do proof techniques establish correctness, reveal structure, and guarantee that recursive or iterative processes behave as intended?",
+      "project": "Proof Portfolio & Algorithm-Correctness Defense",
+      "application": "algorithm verification, recursive programs, data structures, security arguments, protocol correctness, and mathematical software",
+      "vocab": [
+        "hypothesis",
+        "conclusion",
+        "counterexample",
+        "contrapositive",
+        "contradiction",
+        "induction hypothesis",
+        "base case",
+        "recursive definition",
+        "invariant",
+        "well-founded"
+      ],
+      "sequence": 19,
+      "p1": "Give a rigorous example of partitioning a domain into exhaustive cases and distinguishing existence from uniqueness.",
+      "s1": "Define the objects precisely, apply the governing rule for Proof by Cases, Existence and Uniqueness, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Proof by Cases, Existence and Uniqueness.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Mathematical, Strong and Structural Induction",
+      "focus": "choosing an induction framework for integers, recursive objects, and dependency structures",
+      "formulas": [
+        "P(0) and P(k)⇒P(k+1)",
+        "strong induction"
+      ],
+      "id": "u03-l06",
+      "number": 6,
+      "unit": 3,
+      "unit_title": "Proof, Induction, Recursion & Invariants",
+      "week": 9,
+      "essential": "How do proof techniques establish correctness, reveal structure, and guarantee that recursive or iterative processes behave as intended?",
+      "project": "Proof Portfolio & Algorithm-Correctness Defense",
+      "application": "algorithm verification, recursive programs, data structures, security arguments, protocol correctness, and mathematical software",
+      "vocab": [
+        "hypothesis",
+        "conclusion",
+        "counterexample",
+        "contrapositive",
+        "contradiction",
+        "induction hypothesis",
+        "base case",
+        "recursive definition",
+        "invariant",
+        "well-founded"
+      ],
+      "sequence": 20,
+      "p1": "Prove 1+2+…+n=n(n+1)/2.",
+      "s1": "Verify n=1; assume the formula for k; add k+1 and simplify to (k+1)(k+2)/2.",
+      "p2": "Identify a common error in Mathematical, Strong and Structural Induction.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Recursive Definitions, Invariants and Termination",
+      "focus": "specifying recursive objects and proving iterative processes remain correct and eventually stop",
+      "formulas": [
+        "invariant preserved each step",
+        "well-founded measure decreases"
+      ],
+      "id": "u03-l07",
+      "number": 7,
+      "unit": 3,
+      "unit_title": "Proof, Induction, Recursion & Invariants",
+      "week": 9,
+      "essential": "How do proof techniques establish correctness, reveal structure, and guarantee that recursive or iterative processes behave as intended?",
+      "project": "Proof Portfolio & Algorithm-Correctness Defense",
+      "application": "algorithm verification, recursive programs, data structures, security arguments, protocol correctness, and mathematical software",
+      "vocab": [
+        "hypothesis",
+        "conclusion",
+        "counterexample",
+        "contrapositive",
+        "contradiction",
+        "induction hypothesis",
+        "base case",
+        "recursive definition",
+        "invariant",
+        "well-founded"
+      ],
+      "sequence": 21,
+      "p1": "Give a rigorous example of specifying recursive objects and proving iterative processes remain correct and eventually stop.",
+      "s1": "Define the objects precisely, apply the governing rule for Recursive Definitions, Invariants and Termination, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Recursive Definitions, Invariants and Termination.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    }
+  ],
+  "investigation": "Proof Portfolio & Algorithm-Correctness Defense"
+}
