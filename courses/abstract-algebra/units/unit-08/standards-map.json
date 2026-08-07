@@ -1,0 +1,18 @@
+{
+  "unit": 8,
+  "title": "Domains, Factorization & Polynomial Rings",
+  "standards": [
+    "Integral domains",
+    "Fields of fractions",
+    "Divisibility",
+    "Irreducible and prime elements",
+    "Euclidean domains",
+    "Principal ideal domains",
+    "Unique factorization domains",
+    "Polynomial rings",
+    "Gauss lemma",
+    "Irreducibility criteria",
+    "Eisenstein criterion"
+  ],
+  "essential_question": "How do divisibility, ideals, and polynomial structure determine when factorization behaves like integer arithmetic?"
+}

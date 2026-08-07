@@ -1,0 +1,18 @@
+{
+  "unit": 7,
+  "title": "Rings, Ideals & Quotient Rings",
+  "standards": [
+    "Rings and ring axioms",
+    "Commutative rings",
+    "Units and zero divisors",
+    "Subrings",
+    "Ring homomorphisms",
+    "Ideals",
+    "Principal ideals",
+    "Quotient rings",
+    "Prime ideals",
+    "Maximal ideals",
+    "Chinese remainder theorem"
+  ],
+  "essential_question": "How do two compatible operations create ring structure, and how do ideals control quotients and homomorphisms?"
+}

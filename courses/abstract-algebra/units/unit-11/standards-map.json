@@ -1,0 +1,17 @@
+{
+  "unit": 11,
+  "title": "Modules, Canonical Forms & Representation Foundations",
+  "standards": [
+    "Modules and submodules",
+    "Module homomorphisms",
+    "Quotient modules",
+    "Free modules",
+    "Torsion modules",
+    "Modules over PIDs",
+    "Structure theorem",
+    "Rational canonical form",
+    "Jordan form connection",
+    "Representation foundations"
+  ],
+  "essential_question": "How do modules generalize vector spaces and turn linear algebra into ring-based structure theory?"
+}

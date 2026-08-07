@@ -1,0 +1,17 @@
+{
+  "unit": 12,
+  "title": "Applications: Coding, Cryptography, Symmetry & Computation",
+  "standards": [
+    "Linear and cyclic codes",
+    "Generator and parity-check matrices",
+    "Finite-field arithmetic",
+    "Reed\u2013Solomon foundations",
+    "Public-key algebra",
+    "Elliptic-curve foundations",
+    "Symmetry and crystallography",
+    "Computational group theory",
+    "Gr\u00f6bner-basis preview",
+    "Invariant theory preview"
+  ],
+  "essential_question": "How do algebraic structures create reliable codes, secure protocols, symmetry models, and exact algorithms?"
+}

@@ -1,0 +1,17 @@
+{
+  "unit": 13,
+  "title": "Advanced Algebra, Research Methods & Capstone",
+  "standards": [
+    "Category-language foundations",
+    "Universal properties",
+    "Exact sequences foundations",
+    "Representation theory directions",
+    "Commutative algebra directions",
+    "Algebraic number theory directions",
+    "Algebraic geometry directions",
+    "Computational algebra",
+    "Research ethics",
+    "Mathematical exposition"
+  ],
+  "essential_question": "How can groups, rings, fields, modules, and structure-preserving maps support a defensible advanced research program?"
+}

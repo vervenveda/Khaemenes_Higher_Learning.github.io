@@ -1,0 +1,17 @@
+{
+  "unit": 10,
+  "title": "Galois Theory & Polynomial Solvability",
+  "standards": [
+    "Field automorphisms",
+    "Fixed fields",
+    "Galois extensions",
+    "Fundamental theorem of Galois theory",
+    "Normality and separability",
+    "Galois groups of polynomials",
+    "Solvability by radicals",
+    "Cyclotomic extensions",
+    "Finite-field Galois groups",
+    "Classical impossibility results"
+  ],
+  "essential_question": "How does the symmetry of field extensions govern polynomial equations and classical construction problems?"
+}

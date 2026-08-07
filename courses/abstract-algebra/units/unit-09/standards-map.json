@@ -1,0 +1,17 @@
+{
+  "unit": 9,
+  "title": "Fields, Extensions & Finite Fields",
+  "standards": [
+    "Field extensions",
+    "Simple extensions",
+    "Algebraic and transcendental elements",
+    "Minimal polynomials",
+    "Degree and tower law",
+    "Splitting fields",
+    "Algebraic closure foundations",
+    "Finite fields",
+    "Frobenius map",
+    "Constructible numbers"
+  ],
+  "essential_question": "How do adjoining roots create new fields, and how do finite fields organize algebra, coding, and geometry?"
+}
