@@ -6,6 +6,7 @@
   <meta name="description" content="Khaemenes Higher Learning — a collegiate campus for undergraduate study, advanced mathematics, research preparation, professional tools, student records, and lifelong scholarship.">
   <meta name="theme-color" content="#08131f">
   <meta name="color-scheme" content="dark light">
+  <meta name="application-version" content="2026.08.07-higher-learning-campus-v2.2">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Khaemenes Higher Learning | Collegiate Campus</title>
   <link rel="canonical" href="https://vervenveda.com/Khaemenes_Higher_Learning.github.io/">
@@ -247,7 +248,7 @@
 
       <nav class="header-actions" aria-label="Primary navigation">
         <a class="header-link portal" href="#student-portal">Student Profile</a>
-        <a class="header-link" href="./courses/mathematics/index.html">Mathematics</a>
+        <a class="header-link" href="./courses/index.html">Mathematics</a>
         <a class="header-link" href="https://vervenveda.com/arcade.github.io/">Games</a>
         <a class="header-link" href="https://vervenveda.com/proresource_hub.github.io/">ProResources</a>
         <button class="theme-button" id="themeButton" type="button" aria-pressed="false">Light</button>
@@ -285,7 +286,7 @@
           <p class="lead">A scholarly, independent higher-learning campus designed to grow into a complete collegiate curriculum—connecting rigorous courses, research, professional tools, student records, creative study, and advanced pathways in one organized academic environment.</p>
           <div class="actions">
             <a class="btn btn-primary" href="#departments">Enter Academic Departments</a>
-            <a class="btn btn-bronze" href="./courses/mathematics/index.html">Open Mathematics</a>
+            <a class="btn btn-bronze" href="./courses/index.html">Open Mathematics</a>
             <a class="btn" href="#student-portal">Student Profile</a>
             <a class="btn" href="#resources">Campus Resources</a>
           </div>
@@ -320,6 +321,7 @@
                 <option value="Undergraduate">Undergraduate</option>
                 <option value="Advanced Study">Advanced Study</option>
                 <option value="Graduate-Preparatory / Research">Graduate-Preparatory / Research</option>
+                <option value="Independent Research">Independent Research</option>
                 <option value="Continuing / Professional">Continuing / Professional</option>
               </select>
               <label class="sr-only" for="studentField">Primary field of study</label>
@@ -347,7 +349,7 @@
             <h3>Campus Access</h3>
             <p>Move directly into the academic, research, professional, and creative resources that support collegiate study.</p>
             <div class="campus-service-grid">
-              <a class="service-link" href="./courses/mathematics/index.html"><strong>Mathematics</strong><span>Current complete course family</span></a>
+              <a class="service-link" href="./courses/index.html"><strong>Mathematics</strong><span>Current complete course family</span></a>
               <a class="service-link" href="https://vervenveda.com/proresource_hub.github.io/"><strong>ProResources</strong><span>Professional and technical tools</span></a>
               <a class="service-link" href="https://vervenveda.com/arcade.github.io/"><strong>Games & Logic</strong><span>Cognitive and creative practice</span></a>
               <a class="service-link" href="https://vervenveda.github.io/Arshif.github.io/"><strong>ARSHIF</strong><span>Reading, archives, and research</span></a>
@@ -431,7 +433,7 @@
         <p class="kicker">Welcome to the Collegiate Campus</p>
         <h2>Study beyond the requirement. Build toward mastery.</h2>
         <p>Khaemenes Higher Learning is organized to grow course by course into a broad collegiate environment where rigorous academics, research, practical tools, creativity, and independent scholarship remain connected.</p>
-        <div class="actions"><a class="btn btn-primary" href="#departments">Enter the Campus</a><a class="btn" href="./courses/mathematics/index.html">Mathematics Department</a></div>
+        <div class="actions"><a class="btn btn-primary" href="#departments">Enter the Campus</a><a class="btn" href="./courses/index.html">Mathematics Department</a></div>
       </div>
     </section>
   </main>
@@ -440,7 +442,7 @@
     <div class="shell footer-inner">
       <span><strong>Khaemenes Higher Learning</strong><br><small>© <span id="year"></span> Jennifer Pearl · Verve N Veda</small></span>
       <nav class="footer-links" aria-label="Footer navigation">
-        <a href="#student-portal">Student Profile</a><a href="#departments">Departments</a><a href="#pathways">Pathways</a><a href="#resources">Resources</a><a href="./courses/mathematics/index.html">Mathematics</a><a href="https://vervenveda.com/">Verve N Veda</a>
+        <a href="#student-portal">Student Profile</a><a href="#departments">Departments</a><a href="#pathways">Pathways</a><a href="#resources">Resources</a><a href="./courses/index.html">Mathematics</a><a href="https://vervenveda.com/">Verve N Veda</a>
       </nav>
     </div>
   </footer>
@@ -482,7 +484,7 @@
       };
 
       const DEPARTMENTS = [
-        {number:"01",title:"Mathematics",description:"Calculus, linear algebra, differential equations, statistics, discrete mathematics, proof, analysis, abstract algebra, topology, and differential geometry.",status:"Active",url:"./courses/mathematics/index.html",active:true},
+        {number:"01",title:"Mathematics",description:"Calculus, linear algebra, differential equations, statistics, discrete mathematics, proof, analysis, abstract algebra, topology, and differential geometry.",status:"Active",url:"./courses/index.html",active:true},
         {number:"02",title:"Natural Sciences",description:"Biology, chemistry, physics, Earth and environmental science, laboratory reasoning, and quantitative scientific literacy.",status:"Campus Roadmap",key:"Natural Sciences"},
         {number:"03",title:"Engineering & Technology",description:"Engineering foundations, systems, design, electronics, mechanics, CAD, technical communication, and applied computation.",status:"Campus Roadmap",key:"Engineering & Technology"},
         {number:"04",title:"Computer Science & Data",description:"Programming, algorithms, data structures, computing systems, artificial intelligence, cybersecurity, and data science.",status:"Campus Roadmap",key:"Computer Science & Data"},
@@ -532,13 +534,22 @@
       function getPins(){return normalizePins(readJSON(PINNED_KEY,[]))}
       function setPins(value){writeJSON(PINNED_KEY,normalizePins(value));renderProfile()}
 
+      function normalizeLevel(value){
+        const map={
+          "Advanced Undergraduate":"Advanced Study",
+          "Graduate-Preparatory":"Graduate-Preparatory / Research",
+          "Professional / Lifelong Study":"Continuing / Professional"
+        };
+        return map[value]||value||"Undergraduate";
+      }
+
       function renderProfile(){
         const profile=readJSON(PROFILE_KEY,null);
         const pins=getPins();
         const pinMarkup=pins.length?`<div class="pinned-list">${pins.map(id=>`<span class="pinned-chip"><a href="${COURSES[id].url}">${escapeHTML(COURSES[id].title)}</a><button type="button" data-remove-pin="${id}" aria-label="Remove ${escapeHTML(COURSES[id].title)} from pinned courses">×</button></span>`).join("")}</div>`:`<div class="pinned-list"><span>No Higher Learning courses are pinned yet.</span></div>`;
         if(profile){
-          $("profileSummary").innerHTML=`<strong>${escapeHTML(profile.name||"Student")}</strong> · ${escapeHTML(profile.level||"Undergraduate")} · ${escapeHTML(profile.field||"Field not selected")} · ${escapeHTML(profile.term||"Current Term")}${pinMarkup}`;
-          $("studentName").value=profile.name||"";$("studentLevel").value=profile.level||"Undergraduate";$("studentField").value=profile.field||"";$("studentTerm").value=profile.term||"Current Term";
+          $("profileSummary").innerHTML=`<strong>${escapeHTML(profile.name||"Student")}</strong> · ${escapeHTML(normalizeLevel(profile.level))} · ${escapeHTML(profile.field||profile.focus||"Field not selected")} · ${escapeHTML(profile.term||"Current Term")}${pinMarkup}`;
+          $("studentName").value=profile.name||"";$("studentLevel").value=normalizeLevel(profile.level);$("studentField").value=profile.field||profile.focus||"";$("studentTerm").value=profile.term||"Current Term";
         }else{
           $("profileSummary").innerHTML=`No local Higher Learning profile has been saved on this device.${pinMarkup}`;
         }
@@ -547,7 +558,7 @@
 
       $("profileForm").addEventListener("submit",event=>{
         event.preventDefault();
-        const profile={version:1,name:$("studentName").value.trim()||"Student",level:$("studentLevel").value,field:$("studentField").value.trim()||"Undeclared / Interdisciplinary",term:$("studentTerm").value,updatedAt:new Date().toISOString()};
+        const profile={version:1,name:$("studentName").value.trim()||"Student",level:normalizeLevel($("studentLevel").value),field:$("studentField").value.trim()||"Undeclared / Interdisciplinary",term:$("studentTerm").value,updatedAt:new Date().toISOString()};
         writeJSON(PROFILE_KEY,profile);renderProfile();toast("Local Higher Learning profile saved.");
       });
       $("clearProfileButton").addEventListener("click",()=>{localStorage.removeItem(PROFILE_KEY);$("profileForm").reset();renderProfile();toast("Local profile cleared. Course pins were preserved.")});
@@ -588,7 +599,7 @@
         {group:"Campus",icon:"D",title:"Academic Departments",description:"Current and planned collegiate departments",url:"#departments"},
         {group:"Campus",icon:"P",title:"Academic Pathways",description:"Undergraduate through advanced research",url:"#pathways"},
         {group:"Campus",icon:"R",title:"Campus Resources",description:"Research, professional tools, and games",url:"#resources"},
-        {group:"Active Department",icon:"M",title:"Mathematics",description:"Nine complete Higher Learning mathematics courses",url:"./courses/mathematics/index.html"},
+        {group:"Active Department",icon:"M",title:"Mathematics",description:"Nine complete Higher Learning mathematics courses",url:"./courses/index.html"},
         ...Object.entries(COURSES).map(([id,item])=>({group:"Current Mathematics",icon:"M",title:item.title,description:"Current Higher Learning mathematics course",url:item.url})),
         {group:"Connected Halls",icon:"PR",title:"ProResource Hub",description:"Professional and technical tools",url:"https://vervenveda.com/proresource_hub.github.io/"},
         {group:"Connected Halls",icon:"G",title:"Games & Logic",description:"Verve N Veda Arcade",url:"https://vervenveda.com/arcade.github.io/"},
