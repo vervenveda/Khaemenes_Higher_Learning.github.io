@@ -1,0 +1,2078 @@
+{
+  "schema_version": "1.0",
+  "course": {
+    "id": "higher-learning-differential-equations",
+    "profile_course_id": "differential-equations",
+    "code": "KH-HL-MATH-DE1",
+    "title": "Khaemenes Higher Learning Differential Equations",
+    "short_title": "Differential Equations",
+    "duration_weeks": 36,
+    "sessions": 180,
+    "lesson_count": 92,
+    "mastery_target": 80,
+    "pathways": [
+      "Foundation",
+      "Core",
+      "Honors / Extended"
+    ],
+    "storage_key": "khaemenes-differential-equations-college-course-v1",
+    "assessment_key": "khaemenes-differential-equations-assessment-records-v1",
+    "pin_key": "khaemenes-higher-learning-pinned-courses-v1",
+    "audience": "College and advanced independent learners ready to model, solve, simulate, and interpret changing systems in mathematics, physics, and engineering",
+    "prerequisite": "Calculus I fluency in derivatives and integrals is required. Calculus II topics, complex numbers, and basic differential equations are developed or refreshed as needed.",
+    "calculator": "https://vervenveda.com/Khaemenes_High.github.io/courses/mathematics/tools/calculator",
+    "cad": "https://vervenveda.com/proresource_hub.github.io/Protools/Ohmic_CAD_Studio.html",
+    "arcade": "https://vervenveda.com/arcade.github.io/",
+    "version": "1.0.0",
+    "credit_guidance": "Designed as a rigorous first college course in ordinary differential equations; institutional credit decisions remain with the receiving institution."
+  },
+  "units": [
+    {
+      "number": 1,
+      "title": "Differential Equations, Models & Qualitative Structure",
+      "essential": "How do rates of change become mathematical models, and how can solutions be checked before they are solved exactly?",
+      "project": "Dynamic-System Modelling & Validation Portfolio",
+      "standards": [
+        "ODE classification",
+        "Order and linearity",
+        "Initial-value problems",
+        "Solution verification",
+        "Direction fields",
+        "Isoclines",
+        "Existence and uniqueness",
+        "Autonomous equations",
+        "Equilibria and stability",
+        "Dimensional analysis"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        1,
+        2,
+        3
+      ],
+      "lessons": [
+        {
+          "id": "u01-l01",
+          "number": 1,
+          "title": "Rates of Change and Differential-Equation Models",
+          "week": 1,
+          "unit": 1,
+          "unit_title": "Differential Equations, Models & Qualitative Structure",
+          "essential": "How do rates of change become mathematical models, and how can solutions be checked before they are solved exactly?",
+          "project": "Dynamic-System Modelling & Validation Portfolio",
+          "focus": "translating verbal rate laws into dependent and independent variables, parameters, and equations"
+        },
+        {
+          "id": "u01-l02",
+          "number": 2,
+          "title": "Classification: Order, Linearity and Autonomy",
+          "week": 1,
+          "unit": 1,
+          "unit_title": "Differential Equations, Models & Qualitative Structure",
+          "essential": "How do rates of change become mathematical models, and how can solutions be checked before they are solved exactly?",
+          "project": "Dynamic-System Modelling & Validation Portfolio",
+          "focus": "classifying equations by highest derivative, linearity, and explicit dependence on the independent variable"
+        },
+        {
+          "id": "u01-l03",
+          "number": 3,
+          "title": "Solutions, Families and Initial-Value Problems",
+          "week": 1,
+          "unit": 1,
+          "unit_title": "Differential Equations, Models & Qualitative Structure",
+          "essential": "How do rates of change become mathematical models, and how can solutions be checked before they are solved exactly?",
+          "project": "Dynamic-System Modelling & Validation Portfolio",
+          "focus": "distinguishing general, particular, implicit, and singular solutions and applying initial conditions"
+        },
+        {
+          "id": "u01-l04",
+          "number": 4,
+          "title": "Direction Fields and Isoclines",
+          "week": 2,
+          "unit": 1,
+          "unit_title": "Differential Equations, Models & Qualitative Structure",
+          "essential": "How do rates of change become mathematical models, and how can solutions be checked before they are solved exactly?",
+          "project": "Dynamic-System Modelling & Validation Portfolio",
+          "focus": "reading local slopes and sketching solution behavior without an explicit formula"
+        },
+        {
+          "id": "u01-l05",
+          "number": 5,
+          "title": "Existence, Uniqueness and Maximal Intervals",
+          "week": 2,
+          "unit": 1,
+          "unit_title": "Differential Equations, Models & Qualitative Structure",
+          "essential": "How do rates of change become mathematical models, and how can solutions be checked before they are solved exactly?",
+          "project": "Dynamic-System Modelling & Validation Portfolio",
+          "focus": "using continuity and local Lipschitz conditions to judge whether an IVP has one local solution"
+        },
+        {
+          "id": "u01-l06",
+          "number": 6,
+          "title": "Autonomous Equations, Equilibria and Stability",
+          "week": 3,
+          "unit": 1,
+          "unit_title": "Differential Equations, Models & Qualitative Structure",
+          "essential": "How do rates of change become mathematical models, and how can solutions be checked before they are solved exactly?",
+          "project": "Dynamic-System Modelling & Validation Portfolio",
+          "focus": "using sign charts and phase lines to classify long-term behavior"
+        },
+        {
+          "id": "u01-l07",
+          "number": 7,
+          "title": "Units, Scaling, Assumptions and Model Validation",
+          "week": 3,
+          "unit": 1,
+          "unit_title": "Differential Equations, Models & Qualitative Structure",
+          "essential": "How do rates of change become mathematical models, and how can solutions be checked before they are solved exactly?",
+          "project": "Dynamic-System Modelling & Validation Portfolio",
+          "focus": "checking dimensional consistency, plausible limits, and the meaning of parameters"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Separable Equations, Growth, Decay & Nonlinear First-Order Models",
+      "essential": "How does separation expose accumulation laws, thresholds, and long-term behavior in nonlinear first-order models?",
+      "project": "Growth, Decay & Threshold Modelling Laboratory",
+      "standards": [
+        "Separable equations",
+        "Implicit solutions",
+        "Exponential growth and decay",
+        "Half-life and doubling time",
+        "Logistic growth",
+        "Orthogonal trajectories",
+        "Homogeneous substitutions",
+        "Blow-up and maximal intervals"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        4,
+        5,
+        6
+      ],
+      "lessons": [
+        {
+          "id": "u02-l01",
+          "number": 1,
+          "title": "Separation of Variables",
+          "week": 4,
+          "unit": 2,
+          "unit_title": "Separable Equations, Growth, Decay & Nonlinear First-Order Models",
+          "essential": "How does separation expose accumulation laws, thresholds, and long-term behavior in nonlinear first-order models?",
+          "project": "Growth, Decay & Threshold Modelling Laboratory",
+          "focus": "rearranging a first-order equation into one-variable differentials and tracking equilibrium solutions"
+        },
+        {
+          "id": "u02-l02",
+          "number": 2,
+          "title": "Exponential Growth and Decay",
+          "week": 4,
+          "unit": 2,
+          "unit_title": "Separable Equations, Growth, Decay & Nonlinear First-Order Models",
+          "essential": "How does separation expose accumulation laws, thresholds, and long-term behavior in nonlinear first-order models?",
+          "project": "Growth, Decay & Threshold Modelling Laboratory",
+          "focus": "deriving proportional-rate solutions and interpreting the sign and units of the rate constant"
+        },
+        {
+          "id": "u02-l03",
+          "number": 3,
+          "title": "Doubling Time, Half-Life and Parameter Identification",
+          "week": 4,
+          "unit": 2,
+          "unit_title": "Separable Equations, Growth, Decay & Nonlinear First-Order Models",
+          "essential": "How does separation expose accumulation laws, thresholds, and long-term behavior in nonlinear first-order models?",
+          "project": "Growth, Decay & Threshold Modelling Laboratory",
+          "focus": "estimating exponential parameters from time-to-scale or two observations"
+        },
+        {
+          "id": "u02-l04",
+          "number": 4,
+          "title": "Logistic Growth and Carrying Capacity",
+          "week": 5,
+          "unit": 2,
+          "unit_title": "Separable Equations, Growth, Decay & Nonlinear First-Order Models",
+          "essential": "How does separation expose accumulation laws, thresholds, and long-term behavior in nonlinear first-order models?",
+          "project": "Growth, Decay & Threshold Modelling Laboratory",
+          "focus": "solving and interpreting self-limiting growth models"
+        },
+        {
+          "id": "u02-l05",
+          "number": 5,
+          "title": "Threshold, Harvesting and Finite-Time Blow-Up",
+          "week": 5,
+          "unit": 2,
+          "unit_title": "Separable Equations, Growth, Decay & Nonlinear First-Order Models",
+          "essential": "How does separation expose accumulation laws, thresholds, and long-term behavior in nonlinear first-order models?",
+          "project": "Growth, Decay & Threshold Modelling Laboratory",
+          "focus": "using phase lines and implicit solutions to identify tipping points and maximal intervals"
+        },
+        {
+          "id": "u02-l06",
+          "number": 6,
+          "title": "Homogeneous First-Order Substitution",
+          "week": 6,
+          "unit": 2,
+          "unit_title": "Separable Equations, Growth, Decay & Nonlinear First-Order Models",
+          "essential": "How does separation expose accumulation laws, thresholds, and long-term behavior in nonlinear first-order models?",
+          "project": "Growth, Decay & Threshold Modelling Laboratory",
+          "focus": "using v=y/t when the slope depends only on y/t"
+        },
+        {
+          "id": "u02-l07",
+          "number": 7,
+          "title": "Orthogonal Trajectories and Family Geometry",
+          "week": 6,
+          "unit": 2,
+          "unit_title": "Separable Equations, Growth, Decay & Nonlinear First-Order Models",
+          "essential": "How does separation expose accumulation laws, thresholds, and long-term behavior in nonlinear first-order models?",
+          "project": "Growth, Decay & Threshold Modelling Laboratory",
+          "focus": "finding curves that intersect a given family at right angles"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "First-Order Linear, Exact & Transformable Equations",
+      "essential": "How do integrating factors, potential functions, and substitutions convert structured first-order equations into solvable forms?",
+      "project": "First-Order Method Selection & Verification Atlas",
+      "standards": [
+        "Linear first-order equations",
+        "Integrating factors",
+        "Exact equations",
+        "Potential functions",
+        "Integrating factors for nonexact equations",
+        "Bernoulli equations",
+        "Substitution methods",
+        "Intervals of validity"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        7,
+        8,
+        9
+      ],
+      "lessons": [
+        {
+          "id": "u03-l01",
+          "number": 1,
+          "title": "First-Order Linear Equations and Integrating Factors",
+          "week": 7,
+          "unit": 3,
+          "unit_title": "First-Order Linear, Exact & Transformable Equations",
+          "essential": "How do integrating factors, potential functions, and substitutions convert structured first-order equations into solvable forms?",
+          "project": "First-Order Method Selection & Verification Atlas",
+          "focus": "solving y′+p(t)y=q(t) through a product-derivative structure"
+        },
+        {
+          "id": "u03-l02",
+          "number": 2,
+          "title": "Exact Equations and Potential Functions",
+          "week": 7,
+          "unit": 3,
+          "unit_title": "First-Order Linear, Exact & Transformable Equations",
+          "essential": "How do integrating factors, potential functions, and substitutions convert structured first-order equations into solvable forms?",
+          "project": "First-Order Method Selection & Verification Atlas",
+          "focus": "recognizing M dt+N dy=0 as a total differential"
+        },
+        {
+          "id": "u03-l03",
+          "number": 3,
+          "title": "Integrating Factors for Nonexact Equations",
+          "week": 7,
+          "unit": 3,
+          "unit_title": "First-Order Linear, Exact & Transformable Equations",
+          "essential": "How do integrating factors, potential functions, and substitutions convert structured first-order equations into solvable forms?",
+          "project": "First-Order Method Selection & Verification Atlas",
+          "focus": "finding a multiplier depending on one variable when a derivative ratio simplifies"
+        },
+        {
+          "id": "u03-l04",
+          "number": 4,
+          "title": "Bernoulli Equations",
+          "week": 8,
+          "unit": 3,
+          "unit_title": "First-Order Linear, Exact & Transformable Equations",
+          "essential": "How do integrating factors, potential functions, and substitutions convert structured first-order equations into solvable forms?",
+          "project": "First-Order Method Selection & Verification Atlas",
+          "focus": "linearizing y′+py=qy^n by a power substitution"
+        },
+        {
+          "id": "u03-l05",
+          "number": 5,
+          "title": "Substitutions for Shifted and Composite Slopes",
+          "week": 8,
+          "unit": 3,
+          "unit_title": "First-Order Linear, Exact & Transformable Equations",
+          "essential": "How do integrating factors, potential functions, and substitutions convert structured first-order equations into solvable forms?",
+          "project": "First-Order Method Selection & Verification Atlas",
+          "focus": "choosing a new variable that collapses repeated combinations such as at+by"
+        },
+        {
+          "id": "u03-l06",
+          "number": 6,
+          "title": "Singular Solutions and Envelopes",
+          "week": 9,
+          "unit": 3,
+          "unit_title": "First-Order Linear, Exact & Transformable Equations",
+          "essential": "How do integrating factors, potential functions, and substitutions convert structured first-order equations into solvable forms?",
+          "project": "First-Order Method Selection & Verification Atlas",
+          "focus": "distinguishing one-parameter families from solutions lost by division or formed as envelopes"
+        },
+        {
+          "id": "u03-l07",
+          "number": 7,
+          "title": "First-Order Strategy and Interval Audit",
+          "week": 9,
+          "unit": 3,
+          "unit_title": "First-Order Linear, Exact & Transformable Equations",
+          "essential": "How do integrating factors, potential functions, and substitutions convert structured first-order equations into solvable forms?",
+          "project": "First-Order Method Selection & Verification Atlas",
+          "focus": "selecting a method from algebraic structure and defending the maximal solution interval"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Applied First-Order Models in Physics, Engineering & Life Science",
+      "essential": "How do conservation laws and constitutive relations create useful first-order models, and how are assumptions tested?",
+      "project": "Applied Rate-Law Engineering Memorandum",
+      "standards": [
+        "Newton cooling",
+        "Mixing models",
+        "Linear drag",
+        "Terminal velocity",
+        "Population harvesting",
+        "Reaction kinetics",
+        "RC circuits",
+        "Parameter sensitivity",
+        "Model limitations"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        10,
+        11,
+        12
+      ],
+      "lessons": [
+        {
+          "id": "u04-l01",
+          "number": 1,
+          "title": "Newton Cooling and Heating",
+          "week": 10,
+          "unit": 4,
+          "unit_title": "Applied First-Order Models in Physics, Engineering & Life Science",
+          "essential": "How do conservation laws and constitutive relations create useful first-order models, and how are assumptions tested?",
+          "project": "Applied Rate-Law Engineering Memorandum",
+          "focus": "modelling temperature relaxation toward a changing or constant environment"
+        },
+        {
+          "id": "u04-l02",
+          "number": 2,
+          "title": "Mixing Tanks and Conservation of Solute",
+          "week": 10,
+          "unit": 4,
+          "unit_title": "Applied First-Order Models in Physics, Engineering & Life Science",
+          "essential": "How do conservation laws and constitutive relations create useful first-order models, and how are assumptions tested?",
+          "project": "Applied Rate-Law Engineering Memorandum",
+          "focus": "using amount rate = inflow − outflow with concentration = amount/volume"
+        },
+        {
+          "id": "u04-l03",
+          "number": 3,
+          "title": "Falling Bodies with Linear Drag",
+          "week": 10,
+          "unit": 4,
+          "unit_title": "Applied First-Order Models in Physics, Engineering & Life Science",
+          "essential": "How do conservation laws and constitutive relations create useful first-order models, and how are assumptions tested?",
+          "project": "Applied Rate-Law Engineering Memorandum",
+          "focus": "combining gravity and velocity-proportional resistance with sign conventions"
+        },
+        {
+          "id": "u04-l04",
+          "number": 4,
+          "title": "Population Harvesting and Threshold Management",
+          "week": 11,
+          "unit": 4,
+          "unit_title": "Applied First-Order Models in Physics, Engineering & Life Science",
+          "essential": "How do conservation laws and constitutive relations create useful first-order models, and how are assumptions tested?",
+          "project": "Applied Rate-Law Engineering Memorandum",
+          "focus": "analyzing logistic growth modified by constant or proportional removal"
+        },
+        {
+          "id": "u04-l05",
+          "number": 5,
+          "title": "Chemical Kinetics and Compartment Models",
+          "week": 11,
+          "unit": 4,
+          "unit_title": "Applied First-Order Models in Physics, Engineering & Life Science",
+          "essential": "How do conservation laws and constitutive relations create useful first-order models, and how are assumptions tested?",
+          "project": "Applied Rate-Law Engineering Memorandum",
+          "focus": "linking reaction order to rate laws and interpreting clearance"
+        },
+        {
+          "id": "u04-l06",
+          "number": 6,
+          "title": "RC Circuits and Electrical Time Constants",
+          "week": 12,
+          "unit": 4,
+          "unit_title": "Applied First-Order Models in Physics, Engineering & Life Science",
+          "essential": "How do conservation laws and constitutive relations create useful first-order models, and how are assumptions tested?",
+          "project": "Applied Rate-Law Engineering Memorandum",
+          "focus": "deriving a first-order voltage or charge equation from Kirchhoff’s law"
+        },
+        {
+          "id": "u04-l07",
+          "number": 7,
+          "title": "Assumptions, Calibration and Sensitivity in Applied Models",
+          "week": 12,
+          "unit": 4,
+          "unit_title": "Applied First-Order Models in Physics, Engineering & Life Science",
+          "essential": "How do conservation laws and constitutive relations create useful first-order models, and how are assumptions tested?",
+          "project": "Applied Rate-Law Engineering Memorandum",
+          "focus": "testing whether parameters, data, and idealizations support the intended conclusion"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Numerical Methods, Error & Computational Reliability",
+      "essential": "How do numerical solvers approximate differential equations, and how can accuracy, stability, and reproducibility be defended?",
+      "project": "Numerical Solver Comparison & Error Laboratory",
+      "standards": [
+        "Euler method",
+        "Improved Euler/Heun method",
+        "Runge–Kutta methods",
+        "Local truncation error",
+        "Global error",
+        "Step-size refinement",
+        "Stability regions",
+        "Stiffness",
+        "Adaptive methods",
+        "Event detection"
+      ],
+      "weeks": 2,
+      "week_numbers": [
+        13,
+        14
+      ],
+      "lessons": [
+        {
+          "id": "u05-l01",
+          "number": 1,
+          "title": "Euler’s Method from Tangent-Line Prediction",
+          "week": 13,
+          "unit": 5,
+          "unit_title": "Numerical Methods, Error & Computational Reliability",
+          "essential": "How do numerical solvers approximate differential equations, and how can accuracy, stability, and reproducibility be defended?",
+          "project": "Numerical Solver Comparison & Error Laboratory",
+          "focus": "building a numerical solution one slope step at a time"
+        },
+        {
+          "id": "u05-l02",
+          "number": 2,
+          "title": "Improved Euler and Predictor–Corrector Reasoning",
+          "week": 13,
+          "unit": 5,
+          "unit_title": "Numerical Methods, Error & Computational Reliability",
+          "essential": "How do numerical solvers approximate differential equations, and how can accuracy, stability, and reproducibility be defended?",
+          "project": "Numerical Solver Comparison & Error Laboratory",
+          "focus": "averaging beginning and predicted ending slopes"
+        },
+        {
+          "id": "u05-l03",
+          "number": 3,
+          "title": "Classical Fourth-Order Runge–Kutta",
+          "week": 13,
+          "unit": 5,
+          "unit_title": "Numerical Methods, Error & Computational Reliability",
+          "essential": "How do numerical solvers approximate differential equations, and how can accuracy, stability, and reproducibility be defended?",
+          "project": "Numerical Solver Comparison & Error Laboratory",
+          "focus": "combining four slope samples to obtain fourth-order accuracy"
+        },
+        {
+          "id": "u05-l04",
+          "number": 4,
+          "title": "Local Truncation, Global Error and Convergence",
+          "week": 13,
+          "unit": 5,
+          "unit_title": "Numerical Methods, Error & Computational Reliability",
+          "essential": "How do numerical solvers approximate differential equations, and how can accuracy, stability, and reproducibility be defended?",
+          "project": "Numerical Solver Comparison & Error Laboratory",
+          "focus": "separating one-step defect from accumulated solution error"
+        },
+        {
+          "id": "u05-l05",
+          "number": 5,
+          "title": "Absolute Stability and Stiff Equations",
+          "week": 14,
+          "unit": 5,
+          "unit_title": "Numerical Methods, Error & Computational Reliability",
+          "essential": "How do numerical solvers approximate differential equations, and how can accuracy, stability, and reproducibility be defended?",
+          "project": "Numerical Solver Comparison & Error Laboratory",
+          "focus": "using the test equation to understand why a stable exact solution can produce unstable numerics"
+        },
+        {
+          "id": "u05-l06",
+          "number": 6,
+          "title": "Adaptive Step Size and Event Detection",
+          "week": 14,
+          "unit": 5,
+          "unit_title": "Numerical Methods, Error & Computational Reliability",
+          "essential": "How do numerical solvers approximate differential equations, and how can accuracy, stability, and reproducibility be defended?",
+          "project": "Numerical Solver Comparison & Error Laboratory",
+          "focus": "controlling error estimates while locating thresholds or discontinuities"
+        },
+        {
+          "id": "u05-l07",
+          "number": 7,
+          "title": "Reproducible Numerical Experiments",
+          "week": 14,
+          "unit": 5,
+          "unit_title": "Numerical Methods, Error & Computational Reliability",
+          "essential": "How do numerical solvers approximate differential equations, and how can accuracy, stability, and reproducibility be defended?",
+          "project": "Numerical Solver Comparison & Error Laboratory",
+          "focus": "documenting solver, tolerance, initial data, units, diagnostics, and independent checks"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Second-Order Linear Homogeneous Equations & Mechanical Response",
+      "essential": "How do characteristic roots determine transient behavior, oscillation, and the dimension of a second-order solution space?",
+      "project": "Second-Order Response Classification Portfolio",
+      "standards": [
+        "Linear homogeneous ODEs",
+        "Characteristic equations",
+        "Distinct real roots",
+        "Repeated roots",
+        "Complex roots",
+        "Initial conditions",
+        "Wronskian",
+        "Reduction of order",
+        "Linear operators",
+        "Superposition"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        15,
+        16,
+        17
+      ],
+      "lessons": [
+        {
+          "id": "u06-l01",
+          "number": 1,
+          "title": "Second-Order Linear Structure and Characteristic Equations",
+          "week": 15,
+          "unit": 6,
+          "unit_title": "Second-Order Linear Homogeneous Equations & Mechanical Response",
+          "essential": "How do characteristic roots determine transient behavior, oscillation, and the dimension of a second-order solution space?",
+          "project": "Second-Order Response Classification Portfolio",
+          "focus": "turning constant-coefficient homogeneous equations into polynomial root problems"
+        },
+        {
+          "id": "u06-l02",
+          "number": 2,
+          "title": "Distinct Real Roots and Exponential Modes",
+          "week": 15,
+          "unit": 6,
+          "unit_title": "Second-Order Linear Homogeneous Equations & Mechanical Response",
+          "essential": "How do characteristic roots determine transient behavior, oscillation, and the dimension of a second-order solution space?",
+          "project": "Second-Order Response Classification Portfolio",
+          "focus": "combining independent growing or decaying modes"
+        },
+        {
+          "id": "u06-l03",
+          "number": 3,
+          "title": "Repeated Roots and Generalized Modes",
+          "week": 15,
+          "unit": 6,
+          "unit_title": "Second-Order Linear Homogeneous Equations & Mechanical Response",
+          "essential": "How do characteristic roots determine transient behavior, oscillation, and the dimension of a second-order solution space?",
+          "project": "Second-Order Response Classification Portfolio",
+          "focus": "constructing a second solution when the characteristic root repeats"
+        },
+        {
+          "id": "u06-l04",
+          "number": 4,
+          "title": "Complex Roots and Oscillatory Motion",
+          "week": 16,
+          "unit": 6,
+          "unit_title": "Second-Order Linear Homogeneous Equations & Mechanical Response",
+          "essential": "How do characteristic roots determine transient behavior, oscillation, and the dimension of a second-order solution space?",
+          "project": "Second-Order Response Classification Portfolio",
+          "focus": "converting conjugate exponentials into real sine-cosine modes"
+        },
+        {
+          "id": "u06-l05",
+          "number": 5,
+          "title": "Initial Conditions, Amplitude and Phase",
+          "week": 16,
+          "unit": 6,
+          "unit_title": "Second-Order Linear Homogeneous Equations & Mechanical Response",
+          "essential": "How do characteristic roots determine transient behavior, oscillation, and the dimension of a second-order solution space?",
+          "project": "Second-Order Response Classification Portfolio",
+          "focus": "determining constants and converting sine-cosine form to amplitude-phase form"
+        },
+        {
+          "id": "u06-l06",
+          "number": 6,
+          "title": "Wronskians and Fundamental Solution Sets",
+          "week": 17,
+          "unit": 6,
+          "unit_title": "Second-Order Linear Homogeneous Equations & Mechanical Response",
+          "essential": "How do characteristic roots determine transient behavior, oscillation, and the dimension of a second-order solution space?",
+          "project": "Second-Order Response Classification Portfolio",
+          "focus": "testing independence and organizing the homogeneous solution space"
+        },
+        {
+          "id": "u06-l07",
+          "number": 7,
+          "title": "Reduction of Order and Operator Verification",
+          "week": 17,
+          "unit": 6,
+          "unit_title": "Second-Order Linear Homogeneous Equations & Mechanical Response",
+          "essential": "How do characteristic roots determine transient behavior, oscillation, and the dimension of a second-order solution space?",
+          "project": "Second-Order Response Classification Portfolio",
+          "focus": "constructing a second solution from one known solution and checking with the differential operator"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Forced Equations, Oscillation, Resonance & Circuit Models",
+      "essential": "How do external inputs, damping, natural frequencies, and system parameters shape transient and steady-state response?",
+      "project": "Oscillation, Resonance & Frequency-Response Laboratory",
+      "standards": [
+        "Undetermined coefficients",
+        "Variation of parameters",
+        "Mass–spring systems",
+        "Damping regimes",
+        "Forced response",
+        "Resonance",
+        "Amplitude and phase",
+        "RLC circuits",
+        "Energy and power"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        18,
+        19,
+        20
+      ],
+      "lessons": [
+        {
+          "id": "u07-l01",
+          "number": 1,
+          "title": "Undetermined Coefficients for Standard Inputs",
+          "week": 18,
+          "unit": 7,
+          "unit_title": "Forced Equations, Oscillation, Resonance & Circuit Models",
+          "essential": "How do external inputs, damping, natural frequencies, and system parameters shape transient and steady-state response?",
+          "project": "Oscillation, Resonance & Frequency-Response Laboratory",
+          "focus": "choosing a trial form matched to polynomial, exponential, or sinusoidal forcing"
+        },
+        {
+          "id": "u07-l02",
+          "number": 2,
+          "title": "Variation of Parameters",
+          "week": 18,
+          "unit": 7,
+          "unit_title": "Forced Equations, Oscillation, Resonance & Circuit Models",
+          "essential": "How do external inputs, damping, natural frequencies, and system parameters shape transient and steady-state response?",
+          "project": "Oscillation, Resonance & Frequency-Response Laboratory",
+          "focus": "building a particular solution from a fundamental pair for general forcing"
+        },
+        {
+          "id": "u07-l03",
+          "number": 3,
+          "title": "Mass–Spring Models and Natural Frequency",
+          "week": 18,
+          "unit": 7,
+          "unit_title": "Forced Equations, Oscillation, Resonance & Circuit Models",
+          "essential": "How do external inputs, damping, natural frequencies, and system parameters shape transient and steady-state response?",
+          "project": "Oscillation, Resonance & Frequency-Response Laboratory",
+          "focus": "deriving second-order motion from force balance"
+        },
+        {
+          "id": "u07-l04",
+          "number": 4,
+          "title": "Damping Regimes and Transient Design",
+          "week": 19,
+          "unit": 7,
+          "unit_title": "Forced Equations, Oscillation, Resonance & Circuit Models",
+          "essential": "How do external inputs, damping, natural frequencies, and system parameters shape transient and steady-state response?",
+          "project": "Oscillation, Resonance & Frequency-Response Laboratory",
+          "focus": "classifying underdamped, critically damped, and overdamped response"
+        },
+        {
+          "id": "u07-l05",
+          "number": 5,
+          "title": "Sinusoidal Forcing and Resonance",
+          "week": 19,
+          "unit": 7,
+          "unit_title": "Forced Equations, Oscillation, Resonance & Circuit Models",
+          "essential": "How do external inputs, damping, natural frequencies, and system parameters shape transient and steady-state response?",
+          "project": "Oscillation, Resonance & Frequency-Response Laboratory",
+          "focus": "separating transient response from periodic steady state and measuring amplitude"
+        },
+        {
+          "id": "u07-l06",
+          "number": 6,
+          "title": "RLC Circuits as Second-Order Systems",
+          "week": 20,
+          "unit": 7,
+          "unit_title": "Forced Equations, Oscillation, Resonance & Circuit Models",
+          "essential": "How do external inputs, damping, natural frequencies, and system parameters shape transient and steady-state response?",
+          "project": "Oscillation, Resonance & Frequency-Response Laboratory",
+          "focus": "mapping charge/current dynamics to mechanical analogues"
+        },
+        {
+          "id": "u07-l07",
+          "number": 7,
+          "title": "Frequency Response, Energy and Engineering Limits",
+          "week": 20,
+          "unit": 7,
+          "unit_title": "Forced Equations, Oscillation, Resonance & Circuit Models",
+          "essential": "How do external inputs, damping, natural frequencies, and system parameters shape transient and steady-state response?",
+          "project": "Oscillation, Resonance & Frequency-Response Laboratory",
+          "focus": "using gain, phase, bandwidth, and energy balance to judge design behavior"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Laplace Transforms, Discontinuous Inputs & Transfer Functions",
+      "essential": "How do transforms encode initial conditions, switching, impulses, convolution, and input–output behavior?",
+      "project": "Laplace, Impulse & Transfer-Function Analysis Portfolio",
+      "standards": [
+        "Laplace transform",
+        "Inverse transform",
+        "Partial fractions",
+        "Derivative transforms",
+        "Unit-step functions",
+        "Impulse functions",
+        "Convolution",
+        "Transfer functions",
+        "Poles and stability"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        21,
+        22,
+        23
+      ],
+      "lessons": [
+        {
+          "id": "u08-l01",
+          "number": 1,
+          "title": "Laplace Transform Definition and Basic Properties",
+          "week": 21,
+          "unit": 8,
+          "unit_title": "Laplace Transforms, Discontinuous Inputs & Transfer Functions",
+          "essential": "How do transforms encode initial conditions, switching, impulses, convolution, and input–output behavior?",
+          "project": "Laplace, Impulse & Transfer-Function Analysis Portfolio",
+          "focus": "converting time-domain functions into algebraic functions of s"
+        },
+        {
+          "id": "u08-l02",
+          "number": 2,
+          "title": "Inverse Transforms and Partial Fractions",
+          "week": 21,
+          "unit": 8,
+          "unit_title": "Laplace Transforms, Discontinuous Inputs & Transfer Functions",
+          "essential": "How do transforms encode initial conditions, switching, impulses, convolution, and input–output behavior?",
+          "project": "Laplace, Impulse & Transfer-Function Analysis Portfolio",
+          "focus": "decomposing rational functions into recognizable transform pairs"
+        },
+        {
+          "id": "u08-l03",
+          "number": 3,
+          "title": "Transforms of Derivatives and Initial-Value Problems",
+          "week": 21,
+          "unit": 8,
+          "unit_title": "Laplace Transforms, Discontinuous Inputs & Transfer Functions",
+          "essential": "How do transforms encode initial conditions, switching, impulses, convolution, and input–output behavior?",
+          "project": "Laplace, Impulse & Transfer-Function Analysis Portfolio",
+          "focus": "incorporating initial data directly into algebraic equations"
+        },
+        {
+          "id": "u08-l04",
+          "number": 4,
+          "title": "Unit-Step Functions and Piecewise Inputs",
+          "week": 22,
+          "unit": 8,
+          "unit_title": "Laplace Transforms, Discontinuous Inputs & Transfer Functions",
+          "essential": "How do transforms encode initial conditions, switching, impulses, convolution, and input–output behavior?",
+          "project": "Laplace, Impulse & Transfer-Function Analysis Portfolio",
+          "focus": "representing switching with shifted Heaviside functions"
+        },
+        {
+          "id": "u08-l05",
+          "number": 5,
+          "title": "Impulse Inputs and Jump Conditions",
+          "week": 22,
+          "unit": 8,
+          "unit_title": "Laplace Transforms, Discontinuous Inputs & Transfer Functions",
+          "essential": "How do transforms encode initial conditions, switching, impulses, convolution, and input–output behavior?",
+          "project": "Laplace, Impulse & Transfer-Function Analysis Portfolio",
+          "focus": "modelling concentrated input and interpreting instantaneous state changes"
+        },
+        {
+          "id": "u08-l06",
+          "number": 6,
+          "title": "Convolution and Impulse Response",
+          "week": 23,
+          "unit": 8,
+          "unit_title": "Laplace Transforms, Discontinuous Inputs & Transfer Functions",
+          "essential": "How do transforms encode initial conditions, switching, impulses, convolution, and input–output behavior?",
+          "project": "Laplace, Impulse & Transfer-Function Analysis Portfolio",
+          "focus": "expressing the output of a linear time-invariant system as accumulated shifted response"
+        },
+        {
+          "id": "u08-l07",
+          "number": 7,
+          "title": "Transfer Functions, Poles and Stability",
+          "week": 23,
+          "unit": 8,
+          "unit_title": "Laplace Transforms, Discontinuous Inputs & Transfer Functions",
+          "essential": "How do transforms encode initial conditions, switching, impulses, convolution, and input–output behavior?",
+          "project": "Laplace, Impulse & Transfer-Function Analysis Portfolio",
+          "focus": "relating zero-state output to input and interpreting poles as system modes"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Systems of Differential Equations & Matrix Methods",
+      "essential": "How do state vectors, eigenstructure, and matrix exponentials organize coupled dynamic systems?",
+      "project": "Coupled-System State-Space Laboratory",
+      "standards": [
+        "State-space form",
+        "Higher-order to first-order conversion",
+        "Linear systems x′=Ax",
+        "Eigenvalue methods",
+        "Complex eigenpairs",
+        "Repeated eigenvalues",
+        "Fundamental matrices",
+        "Matrix exponential",
+        "Forced systems"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        24,
+        25,
+        26
+      ],
+      "lessons": [
+        {
+          "id": "u09-l01",
+          "number": 1,
+          "title": "From Higher-Order Equations to First-Order Systems",
+          "week": 24,
+          "unit": 9,
+          "unit_title": "Systems of Differential Equations & Matrix Methods",
+          "essential": "How do state vectors, eigenstructure, and matrix exponentials organize coupled dynamic systems?",
+          "project": "Coupled-System State-Space Laboratory",
+          "focus": "introducing state variables to rewrite one nth-order equation as n first-order equations"
+        },
+        {
+          "id": "u09-l02",
+          "number": 2,
+          "title": "Linear Systems and Eigenmode Solutions",
+          "week": 24,
+          "unit": 9,
+          "unit_title": "Systems of Differential Equations & Matrix Methods",
+          "essential": "How do state vectors, eigenstructure, and matrix exponentials organize coupled dynamic systems?",
+          "project": "Coupled-System State-Space Laboratory",
+          "focus": "solving x′=Ax with eigenpairs"
+        },
+        {
+          "id": "u09-l03",
+          "number": 3,
+          "title": "Distinct Real Eigenvalues and Phase Portraits",
+          "week": 24,
+          "unit": 9,
+          "unit_title": "Systems of Differential Equations & Matrix Methods",
+          "essential": "How do state vectors, eigenstructure, and matrix exponentials organize coupled dynamic systems?",
+          "project": "Coupled-System State-Space Laboratory",
+          "focus": "combining eigenvector directions to classify nodes and saddles"
+        },
+        {
+          "id": "u09-l04",
+          "number": 4,
+          "title": "Complex Eigenvalues, Spirals and Centers",
+          "week": 25,
+          "unit": 9,
+          "unit_title": "Systems of Differential Equations & Matrix Methods",
+          "essential": "How do state vectors, eigenstructure, and matrix exponentials organize coupled dynamic systems?",
+          "project": "Coupled-System State-Space Laboratory",
+          "focus": "converting complex eigenmodes into real rotating solutions"
+        },
+        {
+          "id": "u09-l05",
+          "number": 5,
+          "title": "Repeated Eigenvalues and Defective Systems",
+          "week": 25,
+          "unit": 9,
+          "unit_title": "Systems of Differential Equations & Matrix Methods",
+          "essential": "How do state vectors, eigenstructure, and matrix exponentials organize coupled dynamic systems?",
+          "project": "Coupled-System State-Space Laboratory",
+          "focus": "distinguishing complete eigenvector bases from generalized eigenvectors"
+        },
+        {
+          "id": "u09-l06",
+          "number": 6,
+          "title": "Fundamental Matrices and Matrix Exponentials",
+          "week": 26,
+          "unit": 9,
+          "unit_title": "Systems of Differential Equations & Matrix Methods",
+          "essential": "How do state vectors, eigenstructure, and matrix exponentials organize coupled dynamic systems?",
+          "project": "Coupled-System State-Space Laboratory",
+          "focus": "encoding all homogeneous solutions and the state-transition law"
+        },
+        {
+          "id": "u09-l07",
+          "number": 7,
+          "title": "Forced Linear Systems and Variation of Constants",
+          "week": 26,
+          "unit": 9,
+          "unit_title": "Systems of Differential Equations & Matrix Methods",
+          "essential": "How do state vectors, eigenstructure, and matrix exponentials organize coupled dynamic systems?",
+          "project": "Coupled-System State-Space Laboratory",
+          "focus": "combining state transition with an input history"
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Nonlinear Systems, Phase Planes & Stability",
+      "essential": "How do nullclines, linearization, energy ideas, and bifurcations reveal nonlinear dynamics beyond explicit formulas?",
+      "project": "Nonlinear Phase-Plane & Stability Investigation",
+      "standards": [
+        "Autonomous planar systems",
+        "Nullclines",
+        "Equilibria",
+        "Jacobian linearization",
+        "Stability classification",
+        "Predator–prey models",
+        "Competition models",
+        "Nonlinear oscillators",
+        "Lyapunov functions",
+        "Bifurcations",
+        "Limit cycles"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        27,
+        28,
+        29
+      ],
+      "lessons": [
+        {
+          "id": "u10-l01",
+          "number": 1,
+          "title": "Phase Planes, Nullclines and Direction Fields",
+          "week": 27,
+          "unit": 10,
+          "unit_title": "Nonlinear Systems, Phase Planes & Stability",
+          "essential": "How do nullclines, linearization, energy ideas, and bifurcations reveal nonlinear dynamics beyond explicit formulas?",
+          "project": "Nonlinear Phase-Plane & Stability Investigation",
+          "focus": "sketching vector fields and identifying where component rates vanish"
+        },
+        {
+          "id": "u10-l02",
+          "number": 2,
+          "title": "Jacobian Linearization Near Equilibria",
+          "week": 27,
+          "unit": 10,
+          "unit_title": "Nonlinear Systems, Phase Planes & Stability",
+          "essential": "How do nullclines, linearization, energy ideas, and bifurcations reveal nonlinear dynamics beyond explicit formulas?",
+          "project": "Nonlinear Phase-Plane & Stability Investigation",
+          "focus": "using first derivatives to approximate local dynamics"
+        },
+        {
+          "id": "u10-l03",
+          "number": 3,
+          "title": "Competing Species and Invariant Regions",
+          "week": 27,
+          "unit": 10,
+          "unit_title": "Nonlinear Systems, Phase Planes & Stability",
+          "essential": "How do nullclines, linearization, energy ideas, and bifurcations reveal nonlinear dynamics beyond explicit formulas?",
+          "project": "Nonlinear Phase-Plane & Stability Investigation",
+          "focus": "interpreting coexistence, exclusion, and boundaries in competition models"
+        },
+        {
+          "id": "u10-l04",
+          "number": 4,
+          "title": "Predator–Prey Models and Conserved Orbits",
+          "week": 28,
+          "unit": 10,
+          "unit_title": "Nonlinear Systems, Phase Planes & Stability",
+          "essential": "How do nullclines, linearization, energy ideas, and bifurcations reveal nonlinear dynamics beyond explicit formulas?",
+          "project": "Nonlinear Phase-Plane & Stability Investigation",
+          "focus": "analyzing interaction cycles and the limitations of ideal Lotka–Volterra dynamics"
+        },
+        {
+          "id": "u10-l05",
+          "number": 5,
+          "title": "Nonlinear Oscillators and Energy Landscapes",
+          "week": 28,
+          "unit": 10,
+          "unit_title": "Nonlinear Systems, Phase Planes & Stability",
+          "essential": "How do nullclines, linearization, energy ideas, and bifurcations reveal nonlinear dynamics beyond explicit formulas?",
+          "project": "Nonlinear Phase-Plane & Stability Investigation",
+          "focus": "rewriting second-order nonlinear motion as a planar system and tracking energy"
+        },
+        {
+          "id": "u10-l06",
+          "number": 6,
+          "title": "Lyapunov Functions and Stability Certification",
+          "week": 29,
+          "unit": 10,
+          "unit_title": "Nonlinear Systems, Phase Planes & Stability",
+          "essential": "How do nullclines, linearization, energy ideas, and bifurcations reveal nonlinear dynamics beyond explicit formulas?",
+          "project": "Nonlinear Phase-Plane & Stability Investigation",
+          "focus": "using a scalar energy-like function to prove stability without solving trajectories"
+        },
+        {
+          "id": "u10-l07",
+          "number": 7,
+          "title": "Bifurcations, Limit Cycles and Chaos Preview",
+          "week": 29,
+          "unit": 10,
+          "unit_title": "Nonlinear Systems, Phase Planes & Stability",
+          "essential": "How do nullclines, linearization, energy ideas, and bifurcations reveal nonlinear dynamics beyond explicit formulas?",
+          "project": "Nonlinear Phase-Plane & Stability Investigation",
+          "focus": "tracking qualitative changes as parameters vary"
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Power-Series Solutions, Frobenius Methods & Special Functions",
+      "essential": "How do local series expansions solve variable-coefficient equations when elementary formulas are unavailable?",
+      "project": "Series-Solution Recurrence & Error Portfolio",
+      "standards": [
+        "Power-series solutions",
+        "Ordinary points",
+        "Recurrence relations",
+        "Radius of convergence",
+        "Frobenius method",
+        "Regular singular points",
+        "Euler–Cauchy equations",
+        "Bessel equations",
+        "Legendre equations",
+        "Truncation error"
+      ],
+      "weeks": 2,
+      "week_numbers": [
+        30,
+        31
+      ],
+      "lessons": [
+        {
+          "id": "u11-l01",
+          "number": 1,
+          "title": "Power-Series Method at an Ordinary Point",
+          "week": 30,
+          "unit": 11,
+          "unit_title": "Power-Series Solutions, Frobenius Methods & Special Functions",
+          "essential": "How do local series expansions solve variable-coefficient equations when elementary formulas are unavailable?",
+          "project": "Series-Solution Recurrence & Error Portfolio",
+          "focus": "substituting y=Σa_n(t−t₀)^n and matching coefficients"
+        },
+        {
+          "id": "u11-l02",
+          "number": 2,
+          "title": "Recurrences for Second-Order Equations",
+          "week": 30,
+          "unit": 11,
+          "unit_title": "Power-Series Solutions, Frobenius Methods & Special Functions",
+          "essential": "How do local series expansions solve variable-coefficient equations when elementary formulas are unavailable?",
+          "project": "Series-Solution Recurrence & Error Portfolio",
+          "focus": "deriving even/odd coefficient chains and using initial data"
+        },
+        {
+          "id": "u11-l03",
+          "number": 3,
+          "title": "Variable Coefficients and Radius of Convergence",
+          "week": 30,
+          "unit": 11,
+          "unit_title": "Power-Series Solutions, Frobenius Methods & Special Functions",
+          "essential": "How do local series expansions solve variable-coefficient equations when elementary formulas are unavailable?",
+          "project": "Series-Solution Recurrence & Error Portfolio",
+          "focus": "locating ordinary points and estimating where a local series remains valid"
+        },
+        {
+          "id": "u11-l04",
+          "number": 4,
+          "title": "Frobenius Method and Indicial Equations",
+          "week": 30,
+          "unit": 11,
+          "unit_title": "Power-Series Solutions, Frobenius Methods & Special Functions",
+          "essential": "How do local series expansions solve variable-coefficient equations when elementary formulas are unavailable?",
+          "project": "Series-Solution Recurrence & Error Portfolio",
+          "focus": "allowing a leading power x^r near a regular singular point"
+        },
+        {
+          "id": "u11-l05",
+          "number": 5,
+          "title": "Euler–Cauchy Equations",
+          "week": 31,
+          "unit": 11,
+          "unit_title": "Power-Series Solutions, Frobenius Methods & Special Functions",
+          "essential": "How do local series expansions solve variable-coefficient equations when elementary formulas are unavailable?",
+          "project": "Series-Solution Recurrence & Error Portfolio",
+          "focus": "using power-law trial solutions or logarithmic change of variable"
+        },
+        {
+          "id": "u11-l06",
+          "number": 6,
+          "title": "Bessel and Legendre Foundations",
+          "week": 31,
+          "unit": 11,
+          "unit_title": "Power-Series Solutions, Frobenius Methods & Special Functions",
+          "essential": "How do local series expansions solve variable-coefficient equations when elementary formulas are unavailable?",
+          "project": "Series-Solution Recurrence & Error Portfolio",
+          "focus": "recognizing canonical special-function equations from radial and angular models"
+        },
+        {
+          "id": "u11-l07",
+          "number": 7,
+          "title": "Series Truncation, Numerical Comparison and Verification",
+          "week": 31,
+          "unit": 11,
+          "unit_title": "Power-Series Solutions, Frobenius Methods & Special Functions",
+          "essential": "How do local series expansions solve variable-coefficient equations when elementary formulas are unavailable?",
+          "project": "Series-Solution Recurrence & Error Portfolio",
+          "focus": "evaluating partial sums, residuals, and convergence evidence"
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Boundary-Value Problems, Fourier Methods & PDE Bridge",
+      "essential": "How do boundary conditions select discrete modes, and how do ordinary differential equations support heat, wave, and steady-state field models?",
+      "project": "Boundary Modes, Fourier Synthesis & PDE Bridge Portfolio",
+      "standards": [
+        "Boundary-value problems",
+        "Eigenvalue problems",
+        "Sturm–Liouville form",
+        "Orthogonal eigenfunctions",
+        "Fourier series",
+        "Separation of variables",
+        "Heat equation",
+        "Wave equation",
+        "Laplace equation",
+        "Finite-difference bridge"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        32,
+        33,
+        34
+      ],
+      "lessons": [
+        {
+          "id": "u12-l01",
+          "number": 1,
+          "title": "Boundary-Value Problems versus Initial-Value Problems",
+          "week": 32,
+          "unit": 12,
+          "unit_title": "Boundary-Value Problems, Fourier Methods & PDE Bridge",
+          "essential": "How do boundary conditions select discrete modes, and how do ordinary differential equations support heat, wave, and steady-state field models?",
+          "project": "Boundary Modes, Fourier Synthesis & PDE Bridge Portfolio",
+          "focus": "understanding why conditions at separate points can yield zero, one, or many solutions"
+        },
+        {
+          "id": "u12-l02",
+          "number": 2,
+          "title": "Eigenvalue Boundary Problems and Discrete Modes",
+          "week": 32,
+          "unit": 12,
+          "unit_title": "Boundary-Value Problems, Fourier Methods & PDE Bridge",
+          "essential": "How do boundary conditions select discrete modes, and how do ordinary differential equations support heat, wave, and steady-state field models?",
+          "project": "Boundary Modes, Fourier Synthesis & PDE Bridge Portfolio",
+          "focus": "finding parameter values that admit nontrivial solutions"
+        },
+        {
+          "id": "u12-l03",
+          "number": 3,
+          "title": "Sturm–Liouville Structure and Orthogonality",
+          "week": 32,
+          "unit": 12,
+          "unit_title": "Boundary-Value Problems, Fourier Methods & PDE Bridge",
+          "essential": "How do boundary conditions select discrete modes, and how do ordinary differential equations support heat, wave, and steady-state field models?",
+          "project": "Boundary Modes, Fourier Synthesis & PDE Bridge Portfolio",
+          "focus": "placing second-order equations in self-adjoint form and using weighted inner products"
+        },
+        {
+          "id": "u12-l04",
+          "number": 4,
+          "title": "Fourier Series and Periodic Representation",
+          "week": 33,
+          "unit": 12,
+          "unit_title": "Boundary-Value Problems, Fourier Methods & PDE Bridge",
+          "essential": "How do boundary conditions select discrete modes, and how do ordinary differential equations support heat, wave, and steady-state field models?",
+          "project": "Boundary Modes, Fourier Synthesis & PDE Bridge Portfolio",
+          "focus": "computing sine/cosine coefficients and interpreting convergence"
+        },
+        {
+          "id": "u12-l05",
+          "number": 5,
+          "title": "Heat Equation by Separation of Variables",
+          "week": 33,
+          "unit": 12,
+          "unit_title": "Boundary-Value Problems, Fourier Methods & PDE Bridge",
+          "essential": "How do boundary conditions select discrete modes, and how do ordinary differential equations support heat, wave, and steady-state field models?",
+          "project": "Boundary Modes, Fourier Synthesis & PDE Bridge Portfolio",
+          "focus": "splitting diffusion into spatial eigenmodes with exponential decay"
+        },
+        {
+          "id": "u12-l06",
+          "number": 6,
+          "title": "Wave Equation and Modal Oscillation",
+          "week": 34,
+          "unit": 12,
+          "unit_title": "Boundary-Value Problems, Fourier Methods & PDE Bridge",
+          "essential": "How do boundary conditions select discrete modes, and how do ordinary differential equations support heat, wave, and steady-state field models?",
+          "project": "Boundary Modes, Fourier Synthesis & PDE Bridge Portfolio",
+          "focus": "separating a vibrating string into sinusoidal modes"
+        },
+        {
+          "id": "u12-l07",
+          "number": 7,
+          "title": "Laplace Equation and Numerical PDE Bridge",
+          "week": 34,
+          "unit": 12,
+          "unit_title": "Boundary-Value Problems, Fourier Methods & PDE Bridge",
+          "essential": "How do boundary conditions select discrete modes, and how do ordinary differential equations support heat, wave, and steady-state field models?",
+          "project": "Boundary Modes, Fourier Synthesis & PDE Bridge Portfolio",
+          "focus": "connecting steady-state fields to harmonic functions and discretization"
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Engineering Modelling, Parameter Estimation, Control & Capstone",
+      "essential": "How can a differential-equation model become an auditable engineering argument supported by calibration, uncertainty, computation, and oral defense?",
+      "project": "Differential Equations Engineering Capstone & Oral Defense",
+      "standards": [
+        "Parameter estimation",
+        "Nondimensionalization",
+        "Sensitivity analysis",
+        "Uncertainty quantification",
+        "Solver selection",
+        "Reproducibility",
+        "Feedback control",
+        "Model validation",
+        "Capstone design",
+        "Oral defense",
+        "Advanced-course bridge"
+      ],
+      "weeks": 2,
+      "week_numbers": [
+        35,
+        36
+      ],
+      "lessons": [
+        {
+          "id": "u13-l01",
+          "number": 1,
+          "title": "Parameter Estimation from Dynamic Data",
+          "week": 35,
+          "unit": 13,
+          "unit_title": "Engineering Modelling, Parameter Estimation, Control & Capstone",
+          "essential": "How can a differential-equation model become an auditable engineering argument supported by calibration, uncertainty, computation, and oral defense?",
+          "project": "Differential Equations Engineering Capstone & Oral Defense",
+          "focus": "fitting rate constants or model parameters and inspecting residual structure"
+        },
+        {
+          "id": "u13-l02",
+          "number": 2,
+          "title": "Nondimensionalization and Similarity",
+          "week": 35,
+          "unit": 13,
+          "unit_title": "Engineering Modelling, Parameter Estimation, Control & Capstone",
+          "essential": "How can a differential-equation model become an auditable engineering argument supported by calibration, uncertainty, computation, and oral defense?",
+          "project": "Differential Equations Engineering Capstone & Oral Defense",
+          "focus": "reducing parameters and exposing dominant balances through reference scales"
+        },
+        {
+          "id": "u13-l03",
+          "number": 3,
+          "title": "Sensitivity, Identifiability and Uncertainty",
+          "week": 35,
+          "unit": 13,
+          "unit_title": "Engineering Modelling, Parameter Estimation, Control & Capstone",
+          "essential": "How can a differential-equation model become an auditable engineering argument supported by calibration, uncertainty, computation, and oral defense?",
+          "project": "Differential Equations Engineering Capstone & Oral Defense",
+          "focus": "distinguishing parameter influence from the ability to infer parameters uniquely"
+        },
+        {
+          "id": "u13-l04",
+          "number": 4,
+          "title": "Solver Selection and Reproducible Simulation",
+          "week": 35,
+          "unit": 13,
+          "unit_title": "Engineering Modelling, Parameter Estimation, Control & Capstone",
+          "essential": "How can a differential-equation model become an auditable engineering argument supported by calibration, uncertainty, computation, and oral defense?",
+          "project": "Differential Equations Engineering Capstone & Oral Defense",
+          "focus": "matching method, tolerance, stiffness, events, and conservation needs to the model"
+        },
+        {
+          "id": "u13-l05",
+          "number": 5,
+          "title": "Feedback, Stability and Control Interpretation",
+          "week": 36,
+          "unit": 13,
+          "unit_title": "Engineering Modelling, Parameter Estimation, Control & Capstone",
+          "essential": "How can a differential-equation model become an auditable engineering argument supported by calibration, uncertainty, computation, and oral defense?",
+          "project": "Differential Equations Engineering Capstone & Oral Defense",
+          "focus": "using measurement and actuation to shape dynamic response"
+        },
+        {
+          "id": "u13-l06",
+          "number": 6,
+          "title": "Capstone Question, Model and Evidence Plan",
+          "week": 36,
+          "unit": 13,
+          "unit_title": "Engineering Modelling, Parameter Estimation, Control & Capstone",
+          "essential": "How can a differential-equation model become an auditable engineering argument supported by calibration, uncertainty, computation, and oral defense?",
+          "project": "Differential Equations Engineering Capstone & Oral Defense",
+          "focus": "framing a narrow, ethical and testable dynamic-system investigation"
+        },
+        {
+          "id": "u13-l07",
+          "number": 7,
+          "title": "Capstone Computation, Verification and Technical Report",
+          "week": 36,
+          "unit": 13,
+          "unit_title": "Engineering Modelling, Parameter Estimation, Control & Capstone",
+          "essential": "How can a differential-equation model become an auditable engineering argument supported by calibration, uncertainty, computation, and oral defense?",
+          "project": "Differential Equations Engineering Capstone & Oral Defense",
+          "focus": "building an auditable chain from derivation to numerical evidence and limitations"
+        },
+        {
+          "id": "u13-l08",
+          "number": 8,
+          "title": "Oral Defense and Advanced Differential-Equations Bridge",
+          "week": 36,
+          "unit": 13,
+          "unit_title": "Engineering Modelling, Parameter Estimation, Control & Capstone",
+          "essential": "How can a differential-equation model become an auditable engineering argument supported by calibration, uncertainty, computation, and oral defense?",
+          "project": "Differential Equations Engineering Capstone & Oral Defense",
+          "focus": "defending choices and mapping next study into PDEs, dynamical systems, control, and numerical analysis"
+        }
+      ]
+    }
+  ],
+  "weeks": [
+    {
+      "week": 1,
+      "unit": 1,
+      "title": "Differential Equations, Models & Qualitative Structure",
+      "essential": "How do rates of change become mathematical models, and how can solutions be checked before they are solved exactly?",
+      "focus": "Rates of Change and Differential-Equation Models; Classification: Order, Linearity and Autonomy; Solutions, Families and Initial-Value Problems",
+      "lesson_ids": [
+        "u01-l01",
+        "u01-l02",
+        "u01-l03"
+      ],
+      "unit_path": "units/unit-01/index.html",
+      "sessions": [
+        "Concept seminar and retrieval warm-up",
+        "Analytical solution methods and worked examples",
+        "Interactive slope-field or numerical practice",
+        "Physics/engineering modelling laboratory",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 2,
+      "unit": 1,
+      "title": "Differential Equations, Models & Qualitative Structure",
+      "essential": "How do rates of change become mathematical models, and how can solutions be checked before they are solved exactly?",
+      "focus": "Direction Fields and Isoclines; Existence, Uniqueness and Maximal Intervals",
+      "lesson_ids": [
+        "u01-l04",
+        "u01-l05"
+      ],
+      "unit_path": "units/unit-01/index.html",
+      "sessions": [
+        "Concept seminar and retrieval warm-up",
+        "Analytical solution methods and worked examples",
+        "Interactive slope-field or numerical practice",
+        "Physics/engineering modelling laboratory",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 3,
+      "unit": 1,
+      "title": "Differential Equations, Models & Qualitative Structure",
+      "essential": "How do rates of change become mathematical models, and how can solutions be checked before they are solved exactly?",
+      "focus": "Autonomous Equations, Equilibria and Stability; Units, Scaling, Assumptions and Model Validation",
+      "lesson_ids": [
+        "u01-l06",
+        "u01-l07"
+      ],
+      "unit_path": "units/unit-01/index.html",
+      "sessions": [
+        "Concept seminar and retrieval warm-up",
+        "Analytical solution methods and worked examples",
+        "Interactive slope-field or numerical practice",
+        "Physics/engineering modelling laboratory",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 4,
+      "unit": 2,
+      "title": "Separable Equations, Growth, Decay & Nonlinear First-Order Models",
+      "essential": "How does separation expose accumulation laws, thresholds, and long-term behavior in nonlinear first-order models?",
+      "focus": "Separation of Variables; Exponential Growth and Decay; Doubling Time, Half-Life and Parameter Identification",
+      "lesson_ids": [
+        "u02-l01",
+        "u02-l02",
+        "u02-l03"
+      ],
+      "unit_path": "units/unit-02/index.html",
+      "sessions": [
+        "Concept seminar and retrieval warm-up",
+        "Analytical solution methods and worked examples",
+        "Interactive slope-field or numerical practice",
+        "Physics/engineering modelling laboratory",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 5,
+      "unit": 2,
+      "title": "Separable Equations, Growth, Decay & Nonlinear First-Order Models",
+      "essential": "How does separation expose accumulation laws, thresholds, and long-term behavior in nonlinear first-order models?",
+      "focus": "Logistic Growth and Carrying Capacity; Threshold, Harvesting and Finite-Time Blow-Up",
+      "lesson_ids": [
+        "u02-l04",
+        "u02-l05"
+      ],
+      "unit_path": "units/unit-02/index.html",
+      "sessions": [
+        "Concept seminar and retrieval warm-up",
+        "Analytical solution methods and worked examples",
+        "Interactive slope-field or numerical practice",
+        "Physics/engineering modelling laboratory",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 6,
+      "unit": 2,
+      "title": "Separable Equations, Growth, Decay & Nonlinear First-Order Models",
+      "essential": "How does separation expose accumulation laws, thresholds, and long-term behavior in nonlinear first-order models?",
+      "focus": "Homogeneous First-Order Substitution; Orthogonal Trajectories and Family Geometry",
+      "lesson_ids": [
+        "u02-l06",
+        "u02-l07"
+      ],
+      "unit_path": "units/unit-02/index.html",
+      "sessions": [
+        "Concept seminar and retrieval warm-up",
+        "Analytical solution methods and worked examples",
+        "Interactive slope-field or numerical practice",
+        "Physics/engineering modelling laboratory",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 7,
+      "unit": 3,
+      "title": "First-Order Linear, Exact & Transformable Equations",
+      "essential": "How do integrating factors, potential functions, and substitutions convert structured first-order equations into solvable forms?",
+      "focus": "First-Order Linear Equations and Integrating Factors; Exact Equations and Potential Functions; Integrating Factors for Nonexact Equations",
+      "lesson_ids": [
+        "u03-l01",
+        "u03-l02",
+        "u03-l03"
+      ],
+      "unit_path": "units/unit-03/index.html",
+      "sessions": [
+        "Concept seminar and retrieval warm-up",
+        "Analytical solution methods and worked examples",
+        "Interactive slope-field or numerical practice",
+        "Physics/engineering modelling laboratory",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 8,
+      "unit": 3,
+      "title": "First-Order Linear, Exact & Transformable Equations",
+      "essential": "How do integrating factors, potential functions, and substitutions convert structured first-order equations into solvable forms?",
+      "focus": "Bernoulli Equations; Substitutions for Shifted and Composite Slopes",
+      "lesson_ids": [
+        "u03-l04",
+        "u03-l05"
+      ],
+      "unit_path": "units/unit-03/index.html",
+      "sessions": [
+        "Concept seminar and retrieval warm-up",
+        "Analytical solution methods and worked examples",
+        "Interactive slope-field or numerical practice",
+        "Physics/engineering modelling laboratory",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 9,
+      "unit": 3,
+      "title": "First-Order Linear, Exact & Transformable Equations",
+      "essential": "How do integrating factors, potential functions, and substitutions convert structured first-order equations into solvable forms?",
+      "focus": "Singular Solutions and Envelopes; First-Order Strategy and Interval Audit",
+      "lesson_ids": [
+        "u03-l06",
+        "u03-l07"
+      ],
+      "unit_path": "units/unit-03/index.html",
+      "sessions": [
+        "Concept seminar and retrieval warm-up",
+        "Analytical solution methods and worked examples",
+        "Interactive slope-field or numerical practice",
+        "Physics/engineering modelling laboratory",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 10,
+      "unit": 4,
+      "title": "Applied First-Order Models in Physics, Engineering & Life Science",
+      "essential": "How do conservation laws and constitutive relations create useful first-order models, and how are assumptions tested?",
+      "focus": "Newton Cooling and Heating; Mixing Tanks and Conservation of Solute; Falling Bodies with Linear Drag",
+      "lesson_ids": [
+        "u04-l01",
+        "u04-l02",
+        "u04-l03"
+      ],
+      "unit_path": "units/unit-04/index.html",
+      "sessions": [
+        "Concept seminar and retrieval warm-up",
+        "Analytical solution methods and worked examples",
+        "Interactive slope-field or numerical practice",
+        "Physics/engineering modelling laboratory",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 11,
+      "unit": 4,
+      "title": "Applied First-Order Models in Physics, Engineering & Life Science",
+      "essential": "How do conservation laws and constitutive relations create useful first-order models, and how are assumptions tested?",
+      "focus": "Population Harvesting and Threshold Management; Chemical Kinetics and Compartment Models",
+      "lesson_ids": [
+        "u04-l04",
+        "u04-l05"
+      ],
+      "unit_path": "units/unit-04/index.html",
+      "sessions": [
+        "Concept seminar and retrieval warm-up",
+        "Analytical solution methods and worked examples",
+        "Interactive slope-field or numerical practice",
+        "Physics/engineering modelling laboratory",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 12,
+      "unit": 4,
+      "title": "Applied First-Order Models in Physics, Engineering & Life Science",
+      "essential": "How do conservation laws and constitutive relations create useful first-order models, and how are assumptions tested?",
+      "focus": "RC Circuits and Electrical Time Constants; Assumptions, Calibration and Sensitivity in Applied Models",
+      "lesson_ids": [
+        "u04-l06",
+        "u04-l07"
+      ],
+      "unit_path": "units/unit-04/index.html",
+      "sessions": [
+        "Concept seminar and retrieval warm-up",
+        "Analytical solution methods and worked examples",
+        "Interactive slope-field or numerical practice",
+        "Physics/engineering modelling laboratory",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 13,
+      "unit": 5,
+      "title": "Numerical Methods, Error & Computational Reliability",
+      "essential": "How do numerical solvers approximate differential equations, and how can accuracy, stability, and reproducibility be defended?",
+      "focus": "Euler’s Method from Tangent-Line Prediction; Improved Euler and Predictor–Corrector Reasoning; Classical Fourth-Order Runge–Kutta; Local Truncation, Global Error and Convergence",
+      "lesson_ids": [
+        "u05-l01",
+        "u05-l02",
+        "u05-l03",
+        "u05-l04"
+      ],
+      "unit_path": "units/unit-05/index.html",
+      "sessions": [
+        "Concept seminar and retrieval warm-up",
+        "Analytical solution methods and worked examples",
+        "Interactive slope-field or numerical practice",
+        "Physics/engineering modelling laboratory",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 14,
+      "unit": 5,
+      "title": "Numerical Methods, Error & Computational Reliability",
+      "essential": "How do numerical solvers approximate differential equations, and how can accuracy, stability, and reproducibility be defended?",
+      "focus": "Absolute Stability and Stiff Equations; Adaptive Step Size and Event Detection; Reproducible Numerical Experiments",
+      "lesson_ids": [
+        "u05-l05",
+        "u05-l06",
+        "u05-l07"
+      ],
+      "unit_path": "units/unit-05/index.html",
+      "sessions": [
+        "Concept seminar and retrieval warm-up",
+        "Analytical solution methods and worked examples",
+        "Interactive slope-field or numerical practice",
+        "Physics/engineering modelling laboratory",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 15,
+      "unit": 6,
+      "title": "Second-Order Linear Homogeneous Equations & Mechanical Response",
+      "essential": "How do characteristic roots determine transient behavior, oscillation, and the dimension of a second-order solution space?",
+      "focus": "Second-Order Linear Structure and Characteristic Equations; Distinct Real Roots and Exponential Modes; Repeated Roots and Generalized Modes",
+      "lesson_ids": [
+        "u06-l01",
+        "u06-l02",
+        "u06-l03"
+      ],
+      "unit_path": "units/unit-06/index.html",
+      "sessions": [
+        "Concept seminar and retrieval warm-up",
+        "Analytical solution methods and worked examples",
+        "Interactive slope-field or numerical practice",
+        "Physics/engineering modelling laboratory",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 16,
+      "unit": 6,
+      "title": "Second-Order Linear Homogeneous Equations & Mechanical Response",
+      "essential": "How do characteristic roots determine transient behavior, oscillation, and the dimension of a second-order solution space?",
+      "focus": "Complex Roots and Oscillatory Motion; Initial Conditions, Amplitude and Phase",
+      "lesson_ids": [
+        "u06-l04",
+        "u06-l05"
+      ],
+      "unit_path": "units/unit-06/index.html",
+      "sessions": [
+        "Concept seminar and retrieval warm-up",
+        "Analytical solution methods and worked examples",
+        "Interactive slope-field or numerical practice",
+        "Physics/engineering modelling laboratory",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 17,
+      "unit": 6,
+      "title": "Second-Order Linear Homogeneous Equations & Mechanical Response",
+      "essential": "How do characteristic roots determine transient behavior, oscillation, and the dimension of a second-order solution space?",
+      "focus": "Wronskians and Fundamental Solution Sets; Reduction of Order and Operator Verification",
+      "lesson_ids": [
+        "u06-l06",
+        "u06-l07"
+      ],
+      "unit_path": "units/unit-06/index.html",
+      "sessions": [
+        "Concept seminar and retrieval warm-up",
+        "Analytical solution methods and worked examples",
+        "Interactive slope-field or numerical practice",
+        "Physics/engineering modelling laboratory",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 18,
+      "unit": 7,
+      "title": "Forced Equations, Oscillation, Resonance & Circuit Models",
+      "essential": "How do external inputs, damping, natural frequencies, and system parameters shape transient and steady-state response?",
+      "focus": "Undetermined Coefficients for Standard Inputs; Variation of Parameters; Mass–Spring Models and Natural Frequency",
+      "lesson_ids": [
+        "u07-l01",
+        "u07-l02",
+        "u07-l03"
+      ],
+      "unit_path": "units/unit-07/index.html",
+      "sessions": [
+        "Concept seminar and retrieval warm-up",
+        "Analytical solution methods and worked examples",
+        "Interactive slope-field or numerical practice",
+        "Physics/engineering modelling laboratory",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 19,
+      "unit": 7,
+      "title": "Forced Equations, Oscillation, Resonance & Circuit Models",
+      "essential": "How do external inputs, damping, natural frequencies, and system parameters shape transient and steady-state response?",
+      "focus": "Damping Regimes and Transient Design; Sinusoidal Forcing and Resonance",
+      "lesson_ids": [
+        "u07-l04",
+        "u07-l05"
+      ],
+      "unit_path": "units/unit-07/index.html",
+      "sessions": [
+        "Concept seminar and retrieval warm-up",
+        "Analytical solution methods and worked examples",
+        "Interactive slope-field or numerical practice",
+        "Physics/engineering modelling laboratory",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 20,
+      "unit": 7,
+      "title": "Forced Equations, Oscillation, Resonance & Circuit Models",
+      "essential": "How do external inputs, damping, natural frequencies, and system parameters shape transient and steady-state response?",
+      "focus": "RLC Circuits as Second-Order Systems; Frequency Response, Energy and Engineering Limits",
+      "lesson_ids": [
+        "u07-l06",
+        "u07-l07"
+      ],
+      "unit_path": "units/unit-07/index.html",
+      "sessions": [
+        "Concept seminar and retrieval warm-up",
+        "Analytical solution methods and worked examples",
+        "Interactive slope-field or numerical practice",
+        "Physics/engineering modelling laboratory",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 21,
+      "unit": 8,
+      "title": "Laplace Transforms, Discontinuous Inputs & Transfer Functions",
+      "essential": "How do transforms encode initial conditions, switching, impulses, convolution, and input–output behavior?",
+      "focus": "Laplace Transform Definition and Basic Properties; Inverse Transforms and Partial Fractions; Transforms of Derivatives and Initial-Value Problems",
+      "lesson_ids": [
+        "u08-l01",
+        "u08-l02",
+        "u08-l03"
+      ],
+      "unit_path": "units/unit-08/index.html",
+      "sessions": [
+        "Concept seminar and retrieval warm-up",
+        "Analytical solution methods and worked examples",
+        "Interactive slope-field or numerical practice",
+        "Physics/engineering modelling laboratory",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 22,
+      "unit": 8,
+      "title": "Laplace Transforms, Discontinuous Inputs & Transfer Functions",
+      "essential": "How do transforms encode initial conditions, switching, impulses, convolution, and input–output behavior?",
+      "focus": "Unit-Step Functions and Piecewise Inputs; Impulse Inputs and Jump Conditions",
+      "lesson_ids": [
+        "u08-l04",
+        "u08-l05"
+      ],
+      "unit_path": "units/unit-08/index.html",
+      "sessions": [
+        "Concept seminar and retrieval warm-up",
+        "Analytical solution methods and worked examples",
+        "Interactive slope-field or numerical practice",
+        "Physics/engineering modelling laboratory",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 23,
+      "unit": 8,
+      "title": "Laplace Transforms, Discontinuous Inputs & Transfer Functions",
+      "essential": "How do transforms encode initial conditions, switching, impulses, convolution, and input–output behavior?",
+      "focus": "Convolution and Impulse Response; Transfer Functions, Poles and Stability",
+      "lesson_ids": [
+        "u08-l06",
+        "u08-l07"
+      ],
+      "unit_path": "units/unit-08/index.html",
+      "sessions": [
+        "Concept seminar and retrieval warm-up",
+        "Analytical solution methods and worked examples",
+        "Interactive slope-field or numerical practice",
+        "Physics/engineering modelling laboratory",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 24,
+      "unit": 9,
+      "title": "Systems of Differential Equations & Matrix Methods",
+      "essential": "How do state vectors, eigenstructure, and matrix exponentials organize coupled dynamic systems?",
+      "focus": "From Higher-Order Equations to First-Order Systems; Linear Systems and Eigenmode Solutions; Distinct Real Eigenvalues and Phase Portraits",
+      "lesson_ids": [
+        "u09-l01",
+        "u09-l02",
+        "u09-l03"
+      ],
+      "unit_path": "units/unit-09/index.html",
+      "sessions": [
+        "Concept seminar and retrieval warm-up",
+        "Analytical solution methods and worked examples",
+        "Interactive slope-field or numerical practice",
+        "Physics/engineering modelling laboratory",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 25,
+      "unit": 9,
+      "title": "Systems of Differential Equations & Matrix Methods",
+      "essential": "How do state vectors, eigenstructure, and matrix exponentials organize coupled dynamic systems?",
+      "focus": "Complex Eigenvalues, Spirals and Centers; Repeated Eigenvalues and Defective Systems",
+      "lesson_ids": [
+        "u09-l04",
+        "u09-l05"
+      ],
+      "unit_path": "units/unit-09/index.html",
+      "sessions": [
+        "Concept seminar and retrieval warm-up",
+        "Analytical solution methods and worked examples",
+        "Interactive slope-field or numerical practice",
+        "Physics/engineering modelling laboratory",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 26,
+      "unit": 9,
+      "title": "Systems of Differential Equations & Matrix Methods",
+      "essential": "How do state vectors, eigenstructure, and matrix exponentials organize coupled dynamic systems?",
+      "focus": "Fundamental Matrices and Matrix Exponentials; Forced Linear Systems and Variation of Constants",
+      "lesson_ids": [
+        "u09-l06",
+        "u09-l07"
+      ],
+      "unit_path": "units/unit-09/index.html",
+      "sessions": [
+        "Concept seminar and retrieval warm-up",
+        "Analytical solution methods and worked examples",
+        "Interactive slope-field or numerical practice",
+        "Physics/engineering modelling laboratory",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 27,
+      "unit": 10,
+      "title": "Nonlinear Systems, Phase Planes & Stability",
+      "essential": "How do nullclines, linearization, energy ideas, and bifurcations reveal nonlinear dynamics beyond explicit formulas?",
+      "focus": "Phase Planes, Nullclines and Direction Fields; Jacobian Linearization Near Equilibria; Competing Species and Invariant Regions",
+      "lesson_ids": [
+        "u10-l01",
+        "u10-l02",
+        "u10-l03"
+      ],
+      "unit_path": "units/unit-10/index.html",
+      "sessions": [
+        "Concept seminar and retrieval warm-up",
+        "Analytical solution methods and worked examples",
+        "Interactive slope-field or numerical practice",
+        "Physics/engineering modelling laboratory",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 28,
+      "unit": 10,
+      "title": "Nonlinear Systems, Phase Planes & Stability",
+      "essential": "How do nullclines, linearization, energy ideas, and bifurcations reveal nonlinear dynamics beyond explicit formulas?",
+      "focus": "Predator–Prey Models and Conserved Orbits; Nonlinear Oscillators and Energy Landscapes",
+      "lesson_ids": [
+        "u10-l04",
+        "u10-l05"
+      ],
+      "unit_path": "units/unit-10/index.html",
+      "sessions": [
+        "Concept seminar and retrieval warm-up",
+        "Analytical solution methods and worked examples",
+        "Interactive slope-field or numerical practice",
+        "Physics/engineering modelling laboratory",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 29,
+      "unit": 10,
+      "title": "Nonlinear Systems, Phase Planes & Stability",
+      "essential": "How do nullclines, linearization, energy ideas, and bifurcations reveal nonlinear dynamics beyond explicit formulas?",
+      "focus": "Lyapunov Functions and Stability Certification; Bifurcations, Limit Cycles and Chaos Preview",
+      "lesson_ids": [
+        "u10-l06",
+        "u10-l07"
+      ],
+      "unit_path": "units/unit-10/index.html",
+      "sessions": [
+        "Concept seminar and retrieval warm-up",
+        "Analytical solution methods and worked examples",
+        "Interactive slope-field or numerical practice",
+        "Physics/engineering modelling laboratory",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 30,
+      "unit": 11,
+      "title": "Power-Series Solutions, Frobenius Methods & Special Functions",
+      "essential": "How do local series expansions solve variable-coefficient equations when elementary formulas are unavailable?",
+      "focus": "Power-Series Method at an Ordinary Point; Recurrences for Second-Order Equations; Variable Coefficients and Radius of Convergence; Frobenius Method and Indicial Equations",
+      "lesson_ids": [
+        "u11-l01",
+        "u11-l02",
+        "u11-l03",
+        "u11-l04"
+      ],
+      "unit_path": "units/unit-11/index.html",
+      "sessions": [
+        "Concept seminar and retrieval warm-up",
+        "Analytical solution methods and worked examples",
+        "Interactive slope-field or numerical practice",
+        "Physics/engineering modelling laboratory",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 31,
+      "unit": 11,
+      "title": "Power-Series Solutions, Frobenius Methods & Special Functions",
+      "essential": "How do local series expansions solve variable-coefficient equations when elementary formulas are unavailable?",
+      "focus": "Euler–Cauchy Equations; Bessel and Legendre Foundations; Series Truncation, Numerical Comparison and Verification",
+      "lesson_ids": [
+        "u11-l05",
+        "u11-l06",
+        "u11-l07"
+      ],
+      "unit_path": "units/unit-11/index.html",
+      "sessions": [
+        "Concept seminar and retrieval warm-up",
+        "Analytical solution methods and worked examples",
+        "Interactive slope-field or numerical practice",
+        "Physics/engineering modelling laboratory",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 32,
+      "unit": 12,
+      "title": "Boundary-Value Problems, Fourier Methods & PDE Bridge",
+      "essential": "How do boundary conditions select discrete modes, and how do ordinary differential equations support heat, wave, and steady-state field models?",
+      "focus": "Boundary-Value Problems versus Initial-Value Problems; Eigenvalue Boundary Problems and Discrete Modes; Sturm–Liouville Structure and Orthogonality",
+      "lesson_ids": [
+        "u12-l01",
+        "u12-l02",
+        "u12-l03"
+      ],
+      "unit_path": "units/unit-12/index.html",
+      "sessions": [
+        "Concept seminar and retrieval warm-up",
+        "Analytical solution methods and worked examples",
+        "Interactive slope-field or numerical practice",
+        "Physics/engineering modelling laboratory",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 33,
+      "unit": 12,
+      "title": "Boundary-Value Problems, Fourier Methods & PDE Bridge",
+      "essential": "How do boundary conditions select discrete modes, and how do ordinary differential equations support heat, wave, and steady-state field models?",
+      "focus": "Fourier Series and Periodic Representation; Heat Equation by Separation of Variables",
+      "lesson_ids": [
+        "u12-l04",
+        "u12-l05"
+      ],
+      "unit_path": "units/unit-12/index.html",
+      "sessions": [
+        "Concept seminar and retrieval warm-up",
+        "Analytical solution methods and worked examples",
+        "Interactive slope-field or numerical practice",
+        "Physics/engineering modelling laboratory",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 34,
+      "unit": 12,
+      "title": "Boundary-Value Problems, Fourier Methods & PDE Bridge",
+      "essential": "How do boundary conditions select discrete modes, and how do ordinary differential equations support heat, wave, and steady-state field models?",
+      "focus": "Wave Equation and Modal Oscillation; Laplace Equation and Numerical PDE Bridge",
+      "lesson_ids": [
+        "u12-l06",
+        "u12-l07"
+      ],
+      "unit_path": "units/unit-12/index.html",
+      "sessions": [
+        "Concept seminar and retrieval warm-up",
+        "Analytical solution methods and worked examples",
+        "Interactive slope-field or numerical practice",
+        "Physics/engineering modelling laboratory",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 35,
+      "unit": 13,
+      "title": "Engineering Modelling, Parameter Estimation, Control & Capstone",
+      "essential": "How can a differential-equation model become an auditable engineering argument supported by calibration, uncertainty, computation, and oral defense?",
+      "focus": "Parameter Estimation from Dynamic Data; Nondimensionalization and Similarity; Sensitivity, Identifiability and Uncertainty; Solver Selection and Reproducible Simulation",
+      "lesson_ids": [
+        "u13-l01",
+        "u13-l02",
+        "u13-l03",
+        "u13-l04"
+      ],
+      "unit_path": "units/unit-13/index.html",
+      "sessions": [
+        "Concept seminar and retrieval warm-up",
+        "Analytical solution methods and worked examples",
+        "Interactive slope-field or numerical practice",
+        "Physics/engineering modelling laboratory",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    },
+    {
+      "week": 36,
+      "unit": 13,
+      "title": "Engineering Modelling, Parameter Estimation, Control & Capstone",
+      "essential": "How can a differential-equation model become an auditable engineering argument supported by calibration, uncertainty, computation, and oral defense?",
+      "focus": "Feedback, Stability and Control Interpretation; Capstone Question, Model and Evidence Plan; Capstone Computation, Verification and Technical Report; Oral Defense and Advanced Differential-Equations Bridge",
+      "lesson_ids": [
+        "u13-l05",
+        "u13-l06",
+        "u13-l07",
+        "u13-l08"
+      ],
+      "unit_path": "units/unit-13/index.html",
+      "sessions": [
+        "Concept seminar and retrieval warm-up",
+        "Analytical solution methods and worked examples",
+        "Interactive slope-field or numerical practice",
+        "Physics/engineering modelling laboratory",
+        "Mastery evidence, reflection, and portfolio update"
+      ]
+    }
+  ]
+}

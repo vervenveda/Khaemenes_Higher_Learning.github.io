@@ -1,0 +1,17 @@
+{
+  "id": "./",
+  "name": "Khaemenes Higher Learning Differential Equations",
+  "short_name": "Differential Equations",
+  "description": "College differential equations: rates of change, physics, engineering, analytical and numerical methods.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#090b10",
+  "theme_color": "#090b10",
+  "categories": [
+    "education",
+    "mathematics",
+    "engineering",
+    "science"
+  ]
+}

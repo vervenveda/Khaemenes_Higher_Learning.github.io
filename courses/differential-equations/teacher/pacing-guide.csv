@@ -1,0 +1,37 @@
+Week,Unit,Unit Title,Lesson IDs,Focus
+1,1,"Differential Equations, Models & Qualitative Structure",u01-l01 | u01-l02 | u01-l03,"Rates of Change and Differential-Equation Models; Classification: Order, Linearity and Autonomy; Solutions, Families and Initial-Value Problems"
+2,1,"Differential Equations, Models & Qualitative Structure",u01-l04 | u01-l05,"Direction Fields and Isoclines; Existence, Uniqueness and Maximal Intervals"
+3,1,"Differential Equations, Models & Qualitative Structure",u01-l06 | u01-l07,"Autonomous Equations, Equilibria and Stability; Units, Scaling, Assumptions and Model Validation"
+4,2,"Separable Equations, Growth, Decay & Nonlinear First-Order Models",u02-l01 | u02-l02 | u02-l03,"Separation of Variables; Exponential Growth and Decay; Doubling Time, Half-Life and Parameter Identification"
+5,2,"Separable Equations, Growth, Decay & Nonlinear First-Order Models",u02-l04 | u02-l05,"Logistic Growth and Carrying Capacity; Threshold, Harvesting and Finite-Time Blow-Up"
+6,2,"Separable Equations, Growth, Decay & Nonlinear First-Order Models",u02-l06 | u02-l07,Homogeneous First-Order Substitution; Orthogonal Trajectories and Family Geometry
+7,3,"First-Order Linear, Exact & Transformable Equations",u03-l01 | u03-l02 | u03-l03,First-Order Linear Equations and Integrating Factors; Exact Equations and Potential Functions; Integrating Factors for Nonexact Equations
+8,3,"First-Order Linear, Exact & Transformable Equations",u03-l04 | u03-l05,Bernoulli Equations; Substitutions for Shifted and Composite Slopes
+9,3,"First-Order Linear, Exact & Transformable Equations",u03-l06 | u03-l07,Singular Solutions and Envelopes; First-Order Strategy and Interval Audit
+10,4,"Applied First-Order Models in Physics, Engineering & Life Science",u04-l01 | u04-l02 | u04-l03,Newton Cooling and Heating; Mixing Tanks and Conservation of Solute; Falling Bodies with Linear Drag
+11,4,"Applied First-Order Models in Physics, Engineering & Life Science",u04-l04 | u04-l05,Population Harvesting and Threshold Management; Chemical Kinetics and Compartment Models
+12,4,"Applied First-Order Models in Physics, Engineering & Life Science",u04-l06 | u04-l07,"RC Circuits and Electrical Time Constants; Assumptions, Calibration and Sensitivity in Applied Models"
+13,5,"Numerical Methods, Error & Computational Reliability",u05-l01 | u05-l02 | u05-l03 | u05-l04,"Euler’s Method from Tangent-Line Prediction; Improved Euler and Predictor–Corrector Reasoning; Classical Fourth-Order Runge–Kutta; Local Truncation, Global Error and Convergence"
+14,5,"Numerical Methods, Error & Computational Reliability",u05-l05 | u05-l06 | u05-l07,Absolute Stability and Stiff Equations; Adaptive Step Size and Event Detection; Reproducible Numerical Experiments
+15,6,Second-Order Linear Homogeneous Equations & Mechanical Response,u06-l01 | u06-l02 | u06-l03,Second-Order Linear Structure and Characteristic Equations; Distinct Real Roots and Exponential Modes; Repeated Roots and Generalized Modes
+16,6,Second-Order Linear Homogeneous Equations & Mechanical Response,u06-l04 | u06-l05,"Complex Roots and Oscillatory Motion; Initial Conditions, Amplitude and Phase"
+17,6,Second-Order Linear Homogeneous Equations & Mechanical Response,u06-l06 | u06-l07,Wronskians and Fundamental Solution Sets; Reduction of Order and Operator Verification
+18,7,"Forced Equations, Oscillation, Resonance & Circuit Models",u07-l01 | u07-l02 | u07-l03,Undetermined Coefficients for Standard Inputs; Variation of Parameters; Mass–Spring Models and Natural Frequency
+19,7,"Forced Equations, Oscillation, Resonance & Circuit Models",u07-l04 | u07-l05,Damping Regimes and Transient Design; Sinusoidal Forcing and Resonance
+20,7,"Forced Equations, Oscillation, Resonance & Circuit Models",u07-l06 | u07-l07,"RLC Circuits as Second-Order Systems; Frequency Response, Energy and Engineering Limits"
+21,8,"Laplace Transforms, Discontinuous Inputs & Transfer Functions",u08-l01 | u08-l02 | u08-l03,Laplace Transform Definition and Basic Properties; Inverse Transforms and Partial Fractions; Transforms of Derivatives and Initial-Value Problems
+22,8,"Laplace Transforms, Discontinuous Inputs & Transfer Functions",u08-l04 | u08-l05,Unit-Step Functions and Piecewise Inputs; Impulse Inputs and Jump Conditions
+23,8,"Laplace Transforms, Discontinuous Inputs & Transfer Functions",u08-l06 | u08-l07,"Convolution and Impulse Response; Transfer Functions, Poles and Stability"
+24,9,Systems of Differential Equations & Matrix Methods,u09-l01 | u09-l02 | u09-l03,From Higher-Order Equations to First-Order Systems; Linear Systems and Eigenmode Solutions; Distinct Real Eigenvalues and Phase Portraits
+25,9,Systems of Differential Equations & Matrix Methods,u09-l04 | u09-l05,"Complex Eigenvalues, Spirals and Centers; Repeated Eigenvalues and Defective Systems"
+26,9,Systems of Differential Equations & Matrix Methods,u09-l06 | u09-l07,Fundamental Matrices and Matrix Exponentials; Forced Linear Systems and Variation of Constants
+27,10,"Nonlinear Systems, Phase Planes & Stability",u10-l01 | u10-l02 | u10-l03,"Phase Planes, Nullclines and Direction Fields; Jacobian Linearization Near Equilibria; Competing Species and Invariant Regions"
+28,10,"Nonlinear Systems, Phase Planes & Stability",u10-l04 | u10-l05,Predator–Prey Models and Conserved Orbits; Nonlinear Oscillators and Energy Landscapes
+29,10,"Nonlinear Systems, Phase Planes & Stability",u10-l06 | u10-l07,"Lyapunov Functions and Stability Certification; Bifurcations, Limit Cycles and Chaos Preview"
+30,11,"Power-Series Solutions, Frobenius Methods & Special Functions",u11-l01 | u11-l02 | u11-l03 | u11-l04,Power-Series Method at an Ordinary Point; Recurrences for Second-Order Equations; Variable Coefficients and Radius of Convergence; Frobenius Method and Indicial Equations
+31,11,"Power-Series Solutions, Frobenius Methods & Special Functions",u11-l05 | u11-l06 | u11-l07,"Euler–Cauchy Equations; Bessel and Legendre Foundations; Series Truncation, Numerical Comparison and Verification"
+32,12,"Boundary-Value Problems, Fourier Methods & PDE Bridge",u12-l01 | u12-l02 | u12-l03,Boundary-Value Problems versus Initial-Value Problems; Eigenvalue Boundary Problems and Discrete Modes; Sturm–Liouville Structure and Orthogonality
+33,12,"Boundary-Value Problems, Fourier Methods & PDE Bridge",u12-l04 | u12-l05,Fourier Series and Periodic Representation; Heat Equation by Separation of Variables
+34,12,"Boundary-Value Problems, Fourier Methods & PDE Bridge",u12-l06 | u12-l07,Wave Equation and Modal Oscillation; Laplace Equation and Numerical PDE Bridge
+35,13,"Engineering Modelling, Parameter Estimation, Control & Capstone",u13-l01 | u13-l02 | u13-l03 | u13-l04,"Parameter Estimation from Dynamic Data; Nondimensionalization and Similarity; Sensitivity, Identifiability and Uncertainty; Solver Selection and Reproducible Simulation"
+36,13,"Engineering Modelling, Parameter Estimation, Control & Capstone",u13-l05 | u13-l06 | u13-l07 | u13-l08,"Feedback, Stability and Control Interpretation; Capstone Question, Model and Evidence Plan; Capstone Computation, Verification and Technical Report; Oral Defense and Advanced Differential-Equations Bridge"
