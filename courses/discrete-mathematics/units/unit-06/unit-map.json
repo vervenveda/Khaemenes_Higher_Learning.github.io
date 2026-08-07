@@ -1,0 +1,223 @@
+{
+  "unit": 6,
+  "title": "Sequences, Recurrences & Generating Methods",
+  "weeks": [
+    16,
+    17,
+    18
+  ],
+  "lessons": [
+    {
+      "title": "Sequences and Recursive Definitions",
+      "focus": "describing discrete change through explicit and recursive rules",
+      "formulas": [
+        "a_n=f(n)",
+        "a_n=F(a_{n−1},…)"
+      ],
+      "id": "u06-l01",
+      "number": 1,
+      "unit": 6,
+      "unit_title": "Sequences, Recurrences & Generating Methods",
+      "week": 16,
+      "essential": "How do recursive definitions and recurrences describe the time, space, and structure of discrete processes?",
+      "project": "Recurrence Model, Solution & Verification Study",
+      "application": "recursive algorithms, dynamic programming, population models, financial schedules, branching processes, and complexity analysis",
+      "vocab": [
+        "sequence",
+        "recurrence",
+        "initial condition",
+        "closed form",
+        "characteristic root",
+        "homogeneous",
+        "particular solution",
+        "generating function"
+      ],
+      "sequence": 36,
+      "p1": "Give a rigorous example of describing discrete change through explicit and recursive rules.",
+      "s1": "Define the objects precisely, apply the governing rule for Sequences and Recursive Definitions, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Sequences and Recursive Definitions.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Modelling with Recurrence Relations",
+      "focus": "translating repeated decisions or state changes into recurrences and initial conditions",
+      "formulas": [
+        "state_n=transition(state_{n−1})"
+      ],
+      "id": "u06-l02",
+      "number": 2,
+      "unit": 6,
+      "unit_title": "Sequences, Recurrences & Generating Methods",
+      "week": 16,
+      "essential": "How do recursive definitions and recurrences describe the time, space, and structure of discrete processes?",
+      "project": "Recurrence Model, Solution & Verification Study",
+      "application": "recursive algorithms, dynamic programming, population models, financial schedules, branching processes, and complexity analysis",
+      "vocab": [
+        "sequence",
+        "recurrence",
+        "initial condition",
+        "closed form",
+        "characteristic root",
+        "homogeneous",
+        "particular solution",
+        "generating function"
+      ],
+      "sequence": 37,
+      "p1": "Give a rigorous example of translating repeated decisions or state changes into recurrences and initial conditions.",
+      "s1": "Define the objects precisely, apply the governing rule for Modelling with Recurrence Relations, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Modelling with Recurrence Relations.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Iteration, Substitution and First-Order Recurrences",
+      "focus": "unrolling a recurrence to expose a pattern and verify a proposed formula",
+      "formulas": [
+        "a_n=ra_{n−1}+b"
+      ],
+      "id": "u06-l03",
+      "number": 3,
+      "unit": 6,
+      "unit_title": "Sequences, Recurrences & Generating Methods",
+      "week": 16,
+      "essential": "How do recursive definitions and recurrences describe the time, space, and structure of discrete processes?",
+      "project": "Recurrence Model, Solution & Verification Study",
+      "application": "recursive algorithms, dynamic programming, population models, financial schedules, branching processes, and complexity analysis",
+      "vocab": [
+        "sequence",
+        "recurrence",
+        "initial condition",
+        "closed form",
+        "characteristic root",
+        "homogeneous",
+        "particular solution",
+        "generating function"
+      ],
+      "sequence": 38,
+      "p1": "Solve a_n=2a_{n−1}, a_0=3.",
+      "s1": "a_n=3·2^n.",
+      "p2": "Identify a common error in Iteration, Substitution and First-Order Recurrences.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Linear Homogeneous Recurrences and Characteristic Roots",
+      "focus": "solving constant-coefficient recurrences from their characteristic equation",
+      "formulas": [
+        "a_n=c_1r_1^n+c_2r_2^n"
+      ],
+      "id": "u06-l04",
+      "number": 4,
+      "unit": 6,
+      "unit_title": "Sequences, Recurrences & Generating Methods",
+      "week": 17,
+      "essential": "How do recursive definitions and recurrences describe the time, space, and structure of discrete processes?",
+      "project": "Recurrence Model, Solution & Verification Study",
+      "application": "recursive algorithms, dynamic programming, population models, financial schedules, branching processes, and complexity analysis",
+      "vocab": [
+        "sequence",
+        "recurrence",
+        "initial condition",
+        "closed form",
+        "characteristic root",
+        "homogeneous",
+        "particular solution",
+        "generating function"
+      ],
+      "sequence": 39,
+      "p1": "For a_n=5a_{n−1}−6a_{n−2}, find characteristic roots.",
+      "s1": "r²−5r+6=0, so r=2 and r=3.",
+      "p2": "Identify a common error in Linear Homogeneous Recurrences and Characteristic Roots.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Nonhomogeneous Recurrences and Particular Solutions",
+      "focus": "combining homogeneous and particular solutions and applying initial conditions",
+      "formulas": [
+        "general=homogeneous+particular"
+      ],
+      "id": "u06-l05",
+      "number": 5,
+      "unit": 6,
+      "unit_title": "Sequences, Recurrences & Generating Methods",
+      "week": 17,
+      "essential": "How do recursive definitions and recurrences describe the time, space, and structure of discrete processes?",
+      "project": "Recurrence Model, Solution & Verification Study",
+      "application": "recursive algorithms, dynamic programming, population models, financial schedules, branching processes, and complexity analysis",
+      "vocab": [
+        "sequence",
+        "recurrence",
+        "initial condition",
+        "closed form",
+        "characteristic root",
+        "homogeneous",
+        "particular solution",
+        "generating function"
+      ],
+      "sequence": 40,
+      "p1": "Give a rigorous example of combining homogeneous and particular solutions and applying initial conditions.",
+      "s1": "Define the objects precisely, apply the governing rule for Nonhomogeneous Recurrences and Particular Solutions, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Nonhomogeneous Recurrences and Particular Solutions.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Divide-and-Conquer Recurrences and Growth",
+      "focus": "modelling recursive algorithms and comparing recursion-tree and master-theorem reasoning",
+      "formulas": [
+        "T(n)=aT(n/b)+f(n)"
+      ],
+      "id": "u06-l06",
+      "number": 6,
+      "unit": 6,
+      "unit_title": "Sequences, Recurrences & Generating Methods",
+      "week": 18,
+      "essential": "How do recursive definitions and recurrences describe the time, space, and structure of discrete processes?",
+      "project": "Recurrence Model, Solution & Verification Study",
+      "application": "recursive algorithms, dynamic programming, population models, financial schedules, branching processes, and complexity analysis",
+      "vocab": [
+        "sequence",
+        "recurrence",
+        "initial condition",
+        "closed form",
+        "characteristic root",
+        "homogeneous",
+        "particular solution",
+        "generating function"
+      ],
+      "sequence": 41,
+      "p1": "Give a rigorous example of modelling recursive algorithms and comparing recursion-tree and master-theorem reasoning.",
+      "s1": "Define the objects precisely, apply the governing rule for Divide-and-Conquer Recurrences and Growth, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Divide-and-Conquer Recurrences and Growth.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Generating Functions and Recurrence Verification",
+      "focus": "encoding a sequence as a formal power series and checking solutions by substitution or induction",
+      "formulas": [
+        "A(x)=Σa_nx^n"
+      ],
+      "id": "u06-l07",
+      "number": 7,
+      "unit": 6,
+      "unit_title": "Sequences, Recurrences & Generating Methods",
+      "week": 18,
+      "essential": "How do recursive definitions and recurrences describe the time, space, and structure of discrete processes?",
+      "project": "Recurrence Model, Solution & Verification Study",
+      "application": "recursive algorithms, dynamic programming, population models, financial schedules, branching processes, and complexity analysis",
+      "vocab": [
+        "sequence",
+        "recurrence",
+        "initial condition",
+        "closed form",
+        "characteristic root",
+        "homogeneous",
+        "particular solution",
+        "generating function"
+      ],
+      "sequence": 42,
+      "p1": "Give a rigorous example of encoding a sequence as a formal power series and checking solutions by substitution or induction.",
+      "s1": "Define the objects precisely, apply the governing rule for Generating Functions and Recurrence Verification, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Generating Functions and Recurrence Verification.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    }
+  ],
+  "investigation": "Recurrence Model, Solution & Verification Study"
+}

@@ -1,0 +1,20 @@
+{
+  "unit": 9,
+  "title": "Trees, Hierarchies & Spanning Structures",
+  "standards": [
+    "Tree definitions",
+    "Equivalent tree characterizations",
+    "Rooted trees",
+    "Depth and height",
+    "Tree traversal",
+    "Binary trees",
+    "Expression trees",
+    "Spanning trees",
+    "Minimum spanning trees",
+    "Kruskal algorithm",
+    "Prim algorithm",
+    "Tree encodings",
+    "Induction on trees"
+  ],
+  "essential_question": "How do trees represent hierarchy, support efficient search, and connect networks with minimal redundancy?"
+}

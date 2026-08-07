@@ -1,0 +1,19 @@
+{
+  "unit": 7,
+  "title": "Discrete Probability & Randomized Reasoning",
+  "standards": [
+    "Sample spaces",
+    "Events",
+    "Conditional probability",
+    "Independence",
+    "Bayes theorem",
+    "Discrete random variables",
+    "Expected value",
+    "Variance",
+    "Linearity of expectation",
+    "Binomial and geometric distributions",
+    "Randomized algorithms",
+    "Probabilistic method"
+  ],
+  "essential_question": "How does probability quantify uncertainty in finite processes, randomized algorithms, and discrete systems?"
+}

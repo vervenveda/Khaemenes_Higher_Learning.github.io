@@ -1,0 +1,17 @@
+{
+  "unit": 8,
+  "terms": [
+    "vertex",
+    "edge",
+    "degree",
+    "walk",
+    "trail",
+    "path",
+    "cycle",
+    "connected component",
+    "Eulerian",
+    "Hamiltonian",
+    "adjacency list",
+    "traversal"
+  ]
+}

@@ -1,0 +1,242 @@
+{
+  "unit": 10,
+  "title": "Graph Algorithms, Coloring, Matching & Flow",
+  "weeks": [
+    28,
+    29
+  ],
+  "lessons": [
+    {
+      "title": "Shortest Paths and Dijkstra’s Algorithm",
+      "focus": "using relaxation to find shortest paths in nonnegative weighted graphs",
+      "formulas": [
+        "dist(v)←min(dist(v),dist(u)+w(u,v))"
+      ],
+      "id": "u10-l01",
+      "number": 1,
+      "unit": 10,
+      "unit_title": "Graph Algorithms, Coloring, Matching & Flow",
+      "week": 28,
+      "essential": "How do graph algorithms solve routing, scheduling, assignment, coloring, and capacity problems?",
+      "project": "Network Optimization & Constraint-Satisfaction Study",
+      "application": "routing, build systems, course scheduling, register allocation, job assignment, logistics, communication networks, and circuit layout",
+      "vocab": [
+        "shortest path",
+        "relaxation",
+        "DAG",
+        "topological order",
+        "chromatic number",
+        "bipartite",
+        "matching",
+        "augmenting path",
+        "flow",
+        "cut",
+        "planar"
+      ],
+      "sequence": 64,
+      "p1": "Why does standard Dijkstra require nonnegative edge weights?",
+      "s1": "Once a vertex is finalized, a later path cannot reduce its distance when all added weights are nonnegative.",
+      "p2": "Identify a common error in Shortest Paths and Dijkstra’s Algorithm.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Directed Acyclic Graphs and Topological Ordering",
+      "focus": "ordering tasks so every prerequisite appears before its dependents",
+      "formulas": [
+        "DAG⇔topological order exists"
+      ],
+      "id": "u10-l02",
+      "number": 2,
+      "unit": 10,
+      "unit_title": "Graph Algorithms, Coloring, Matching & Flow",
+      "week": 28,
+      "essential": "How do graph algorithms solve routing, scheduling, assignment, coloring, and capacity problems?",
+      "project": "Network Optimization & Constraint-Satisfaction Study",
+      "application": "routing, build systems, course scheduling, register allocation, job assignment, logistics, communication networks, and circuit layout",
+      "vocab": [
+        "shortest path",
+        "relaxation",
+        "DAG",
+        "topological order",
+        "chromatic number",
+        "bipartite",
+        "matching",
+        "augmenting path",
+        "flow",
+        "cut",
+        "planar"
+      ],
+      "sequence": 65,
+      "p1": "What graph property guarantees a topological order?",
+      "s1": "The directed graph must be acyclic.",
+      "p2": "Identify a common error in Directed Acyclic Graphs and Topological Ordering.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Graph Coloring and Scheduling Constraints",
+      "focus": "assigning colors to adjacent-conflict structures and bounding the chromatic number",
+      "formulas": [
+        "proper coloring: adjacent vertices differ"
+      ],
+      "id": "u10-l03",
+      "number": 3,
+      "unit": 10,
+      "unit_title": "Graph Algorithms, Coloring, Matching & Flow",
+      "week": 28,
+      "essential": "How do graph algorithms solve routing, scheduling, assignment, coloring, and capacity problems?",
+      "project": "Network Optimization & Constraint-Satisfaction Study",
+      "application": "routing, build systems, course scheduling, register allocation, job assignment, logistics, communication networks, and circuit layout",
+      "vocab": [
+        "shortest path",
+        "relaxation",
+        "DAG",
+        "topological order",
+        "chromatic number",
+        "bipartite",
+        "matching",
+        "augmenting path",
+        "flow",
+        "cut",
+        "planar"
+      ],
+      "sequence": 66,
+      "p1": "Give a rigorous example of assigning colors to adjacent-conflict structures and bounding the chromatic number.",
+      "s1": "Define the objects precisely, apply the governing rule for Graph Coloring and Scheduling Constraints, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Graph Coloring and Scheduling Constraints.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Bipartite Graphs and Matchings",
+      "focus": "modeling two-sided assignments and detecting odd-cycle obstructions",
+      "formulas": [
+        "bipartite⇔no odd cycle"
+      ],
+      "id": "u10-l04",
+      "number": 4,
+      "unit": 10,
+      "unit_title": "Graph Algorithms, Coloring, Matching & Flow",
+      "week": 28,
+      "essential": "How do graph algorithms solve routing, scheduling, assignment, coloring, and capacity problems?",
+      "project": "Network Optimization & Constraint-Satisfaction Study",
+      "application": "routing, build systems, course scheduling, register allocation, job assignment, logistics, communication networks, and circuit layout",
+      "vocab": [
+        "shortest path",
+        "relaxation",
+        "DAG",
+        "topological order",
+        "chromatic number",
+        "bipartite",
+        "matching",
+        "augmenting path",
+        "flow",
+        "cut",
+        "planar"
+      ],
+      "sequence": 67,
+      "p1": "How can BFS test bipartiteness?",
+      "s1": "Assign alternating colors by level; a same-color edge reveals an odd cycle.",
+      "p2": "Identify a common error in Bipartite Graphs and Matchings.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Hall’s Theorem and Augmenting Paths",
+      "focus": "characterizing complete matchability and improving partial matchings",
+      "formulas": [
+        "|N(S)|≥|S|"
+      ],
+      "id": "u10-l05",
+      "number": 5,
+      "unit": 10,
+      "unit_title": "Graph Algorithms, Coloring, Matching & Flow",
+      "week": 29,
+      "essential": "How do graph algorithms solve routing, scheduling, assignment, coloring, and capacity problems?",
+      "project": "Network Optimization & Constraint-Satisfaction Study",
+      "application": "routing, build systems, course scheduling, register allocation, job assignment, logistics, communication networks, and circuit layout",
+      "vocab": [
+        "shortest path",
+        "relaxation",
+        "DAG",
+        "topological order",
+        "chromatic number",
+        "bipartite",
+        "matching",
+        "augmenting path",
+        "flow",
+        "cut",
+        "planar"
+      ],
+      "sequence": 68,
+      "p1": "Give a rigorous example of characterizing complete matchability and improving partial matchings.",
+      "s1": "Define the objects precisely, apply the governing rule for Hall’s Theorem and Augmenting Paths, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Hall’s Theorem and Augmenting Paths.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Network Flow and Max-Flow Min-Cut",
+      "focus": "respecting capacity and conservation while connecting optimal flow to minimum cuts",
+      "formulas": [
+        "flow value=max flow=min cut capacity"
+      ],
+      "id": "u10-l06",
+      "number": 6,
+      "unit": 10,
+      "unit_title": "Graph Algorithms, Coloring, Matching & Flow",
+      "week": 29,
+      "essential": "How do graph algorithms solve routing, scheduling, assignment, coloring, and capacity problems?",
+      "project": "Network Optimization & Constraint-Satisfaction Study",
+      "application": "routing, build systems, course scheduling, register allocation, job assignment, logistics, communication networks, and circuit layout",
+      "vocab": [
+        "shortest path",
+        "relaxation",
+        "DAG",
+        "topological order",
+        "chromatic number",
+        "bipartite",
+        "matching",
+        "augmenting path",
+        "flow",
+        "cut",
+        "planar"
+      ],
+      "sequence": 69,
+      "p1": "Give a rigorous example of respecting capacity and conservation while connecting optimal flow to minimum cuts.",
+      "s1": "Define the objects precisely, apply the governing rule for Network Flow and Max-Flow Min-Cut, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Network Flow and Max-Flow Min-Cut.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Planar Graphs, Euler’s Formula and Algorithmic Verification",
+      "focus": "reasoning about drawable networks and checking algorithm invariants and complexity",
+      "formulas": [
+        "|V|−|E|+|F|=2"
+      ],
+      "id": "u10-l07",
+      "number": 7,
+      "unit": 10,
+      "unit_title": "Graph Algorithms, Coloring, Matching & Flow",
+      "week": 29,
+      "essential": "How do graph algorithms solve routing, scheduling, assignment, coloring, and capacity problems?",
+      "project": "Network Optimization & Constraint-Satisfaction Study",
+      "application": "routing, build systems, course scheduling, register allocation, job assignment, logistics, communication networks, and circuit layout",
+      "vocab": [
+        "shortest path",
+        "relaxation",
+        "DAG",
+        "topological order",
+        "chromatic number",
+        "bipartite",
+        "matching",
+        "augmenting path",
+        "flow",
+        "cut",
+        "planar"
+      ],
+      "sequence": 70,
+      "p1": "Give a rigorous example of reasoning about drawable networks and checking algorithm invariants and complexity.",
+      "s1": "Define the objects precisely, apply the governing rule for Planar Graphs, Euler’s Formula and Algorithmic Verification, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Planar Graphs, Euler’s Formula and Algorithmic Verification.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    }
+  ],
+  "investigation": "Network Optimization & Constraint-Satisfaction Study"
+}

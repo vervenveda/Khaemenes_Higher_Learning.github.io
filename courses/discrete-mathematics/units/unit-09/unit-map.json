@@ -1,0 +1,239 @@
+{
+  "unit": 9,
+  "title": "Trees, Hierarchies & Spanning Structures",
+  "weeks": [
+    25,
+    26,
+    27
+  ],
+  "lessons": [
+    {
+      "title": "Trees and Equivalent Characterizations",
+      "focus": "proving that connected acyclic graphs, unique paths, and n−1 edges describe the same finite structure",
+      "formulas": [
+        "tree⇔connected and acyclic",
+        "|E|=|V|−1"
+      ],
+      "id": "u09-l01",
+      "number": 1,
+      "unit": 9,
+      "unit_title": "Trees, Hierarchies & Spanning Structures",
+      "week": 25,
+      "essential": "How do trees represent hierarchy, support efficient search, and connect networks with minimal redundancy?",
+      "project": "Tree Representation & Minimum Spanning Network Project",
+      "application": "file systems, syntax trees, search indexes, routing, organizational hierarchies, compression, and network design",
+      "vocab": [
+        "tree",
+        "root",
+        "parent",
+        "child",
+        "leaf",
+        "depth",
+        "height",
+        "binary tree",
+        "spanning tree",
+        "minimum spanning tree"
+      ],
+      "sequence": 57,
+      "p1": "A tree has 14 vertices. How many edges?",
+      "s1": "13 edges.",
+      "p2": "Identify a common error in Trees and Equivalent Characterizations.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Rooted Trees, Levels and Traversals",
+      "focus": "using parent-child structure, depth, height, preorder, inorder, and postorder",
+      "formulas": [
+        "preorder",
+        "inorder",
+        "postorder"
+      ],
+      "id": "u09-l02",
+      "number": 2,
+      "unit": 9,
+      "unit_title": "Trees, Hierarchies & Spanning Structures",
+      "week": 25,
+      "essential": "How do trees represent hierarchy, support efficient search, and connect networks with minimal redundancy?",
+      "project": "Tree Representation & Minimum Spanning Network Project",
+      "application": "file systems, syntax trees, search indexes, routing, organizational hierarchies, compression, and network design",
+      "vocab": [
+        "tree",
+        "root",
+        "parent",
+        "child",
+        "leaf",
+        "depth",
+        "height",
+        "binary tree",
+        "spanning tree",
+        "minimum spanning tree"
+      ],
+      "sequence": 58,
+      "p1": "Give a rigorous example of using parent-child structure, depth, height, preorder, inorder, and postorder.",
+      "s1": "Define the objects precisely, apply the governing rule for Rooted Trees, Levels and Traversals, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Rooted Trees, Levels and Traversals.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Binary, Search and Expression Trees",
+      "focus": "representing ordered data and syntax while analyzing shape and traversal",
+      "formulas": [
+        "left subtree < node < right subtree"
+      ],
+      "id": "u09-l03",
+      "number": 3,
+      "unit": 9,
+      "unit_title": "Trees, Hierarchies & Spanning Structures",
+      "week": 25,
+      "essential": "How do trees represent hierarchy, support efficient search, and connect networks with minimal redundancy?",
+      "project": "Tree Representation & Minimum Spanning Network Project",
+      "application": "file systems, syntax trees, search indexes, routing, organizational hierarchies, compression, and network design",
+      "vocab": [
+        "tree",
+        "root",
+        "parent",
+        "child",
+        "leaf",
+        "depth",
+        "height",
+        "binary tree",
+        "spanning tree",
+        "minimum spanning tree"
+      ],
+      "sequence": 59,
+      "p1": "Give a rigorous example of representing ordered data and syntax while analyzing shape and traversal.",
+      "s1": "Define the objects precisely, apply the governing rule for Binary, Search and Expression Trees, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Binary, Search and Expression Trees.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Spanning Trees and Network Redundancy",
+      "focus": "extracting connected acyclic backbones and counting removed cycles",
+      "formulas": [
+        "spanning tree uses |V|−1 edges"
+      ],
+      "id": "u09-l04",
+      "number": 4,
+      "unit": 9,
+      "unit_title": "Trees, Hierarchies & Spanning Structures",
+      "week": 26,
+      "essential": "How do trees represent hierarchy, support efficient search, and connect networks with minimal redundancy?",
+      "project": "Tree Representation & Minimum Spanning Network Project",
+      "application": "file systems, syntax trees, search indexes, routing, organizational hierarchies, compression, and network design",
+      "vocab": [
+        "tree",
+        "root",
+        "parent",
+        "child",
+        "leaf",
+        "depth",
+        "height",
+        "binary tree",
+        "spanning tree",
+        "minimum spanning tree"
+      ],
+      "sequence": 60,
+      "p1": "Give a rigorous example of extracting connected acyclic backbones and counting removed cycles.",
+      "s1": "Define the objects precisely, apply the governing rule for Spanning Trees and Network Redundancy, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Spanning Trees and Network Redundancy.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Kruskal and Prim Minimum-Spanning Algorithms",
+      "focus": "constructing a minimum-cost spanning tree while preventing cycles",
+      "formulas": [
+        "greedy safe edge"
+      ],
+      "id": "u09-l05",
+      "number": 5,
+      "unit": 9,
+      "unit_title": "Trees, Hierarchies & Spanning Structures",
+      "week": 26,
+      "essential": "How do trees represent hierarchy, support efficient search, and connect networks with minimal redundancy?",
+      "project": "Tree Representation & Minimum Spanning Network Project",
+      "application": "file systems, syntax trees, search indexes, routing, organizational hierarchies, compression, and network design",
+      "vocab": [
+        "tree",
+        "root",
+        "parent",
+        "child",
+        "leaf",
+        "depth",
+        "height",
+        "binary tree",
+        "spanning tree",
+        "minimum spanning tree"
+      ],
+      "sequence": 61,
+      "p1": "What does Kruskal choose next?",
+      "s1": "The lightest available edge that does not create a cycle.",
+      "p2": "Identify a common error in Kruskal and Prim Minimum-Spanning Algorithms.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Tree Encodings, Prüfer Sequences and Counting",
+      "focus": "encoding labelled trees and connecting sequences to Cayley’s formula",
+      "formulas": [
+        "labelled trees on n vertices: n^{n−2}"
+      ],
+      "id": "u09-l06",
+      "number": 6,
+      "unit": 9,
+      "unit_title": "Trees, Hierarchies & Spanning Structures",
+      "week": 27,
+      "essential": "How do trees represent hierarchy, support efficient search, and connect networks with minimal redundancy?",
+      "project": "Tree Representation & Minimum Spanning Network Project",
+      "application": "file systems, syntax trees, search indexes, routing, organizational hierarchies, compression, and network design",
+      "vocab": [
+        "tree",
+        "root",
+        "parent",
+        "child",
+        "leaf",
+        "depth",
+        "height",
+        "binary tree",
+        "spanning tree",
+        "minimum spanning tree"
+      ],
+      "sequence": 62,
+      "p1": "Give a rigorous example of encoding labelled trees and connecting sequences to Cayley’s formula.",
+      "s1": "Define the objects precisely, apply the governing rule for Tree Encodings, Prüfer Sequences and Counting, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Tree Encodings, Prüfer Sequences and Counting.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Structural Induction and Recursive Tree Algorithms",
+      "focus": "proving properties of recursively defined trees and verifying tree-processing procedures",
+      "formulas": [
+        "base leaf; combine subtrees"
+      ],
+      "id": "u09-l07",
+      "number": 7,
+      "unit": 9,
+      "unit_title": "Trees, Hierarchies & Spanning Structures",
+      "week": 27,
+      "essential": "How do trees represent hierarchy, support efficient search, and connect networks with minimal redundancy?",
+      "project": "Tree Representation & Minimum Spanning Network Project",
+      "application": "file systems, syntax trees, search indexes, routing, organizational hierarchies, compression, and network design",
+      "vocab": [
+        "tree",
+        "root",
+        "parent",
+        "child",
+        "leaf",
+        "depth",
+        "height",
+        "binary tree",
+        "spanning tree",
+        "minimum spanning tree"
+      ],
+      "sequence": 63,
+      "p1": "Prove 1+2+…+n=n(n+1)/2.",
+      "s1": "Verify n=1; assume the formula for k; add k+1 and simplify to (k+1)(k+2)/2.",
+      "p2": "Identify a common error in Structural Induction and Recursive Tree Algorithms.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    }
+  ],
+  "investigation": "Tree Representation & Minimum Spanning Network Project"
+}

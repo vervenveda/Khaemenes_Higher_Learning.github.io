@@ -1,0 +1,234 @@
+{
+  "unit": 7,
+  "title": "Discrete Probability & Randomized Reasoning",
+  "weeks": [
+    19,
+    20,
+    21
+  ],
+  "lessons": [
+    {
+      "title": "Finite Sample Spaces and Event Algebra",
+      "focus": "constructing equally and unequally weighted sample spaces and event operations",
+      "formulas": [
+        "P(A)=Σ_{ω∈A}P(ω)"
+      ],
+      "id": "u07-l01",
+      "number": 1,
+      "unit": 7,
+      "unit_title": "Discrete Probability & Randomized Reasoning",
+      "week": 19,
+      "essential": "How does probability quantify uncertainty in finite processes, randomized algorithms, and discrete systems?",
+      "project": "Randomized Algorithm & Discrete Probability Investigation",
+      "application": "randomized algorithms, security, network reliability, hashing, load balancing, games, simulations, and risk analysis",
+      "vocab": [
+        "sample space",
+        "event",
+        "conditional probability",
+        "independence",
+        "random variable",
+        "expectation",
+        "variance",
+        "indicator variable",
+        "randomized algorithm"
+      ],
+      "sequence": 43,
+      "p1": "Give a rigorous example of constructing equally and unequally weighted sample spaces and event operations.",
+      "s1": "Define the objects precisely, apply the governing rule for Finite Sample Spaces and Event Algebra, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Finite Sample Spaces and Event Algebra.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Conditional Probability and Bayes Reasoning",
+      "focus": "updating probabilities after information and reversing conditional direction carefully",
+      "formulas": [
+        "P(A|B)=P(A∩B)/P(B)",
+        "Bayes theorem"
+      ],
+      "id": "u07-l02",
+      "number": 2,
+      "unit": 7,
+      "unit_title": "Discrete Probability & Randomized Reasoning",
+      "week": 19,
+      "essential": "How does probability quantify uncertainty in finite processes, randomized algorithms, and discrete systems?",
+      "project": "Randomized Algorithm & Discrete Probability Investigation",
+      "application": "randomized algorithms, security, network reliability, hashing, load balancing, games, simulations, and risk analysis",
+      "vocab": [
+        "sample space",
+        "event",
+        "conditional probability",
+        "independence",
+        "random variable",
+        "expectation",
+        "variance",
+        "indicator variable",
+        "randomized algorithm"
+      ],
+      "sequence": 44,
+      "p1": "If P(A∩B)=0.18 and P(B)=0.30, find P(A|B).",
+      "s1": "0.18/0.30=0.60.",
+      "p2": "Identify a common error in Conditional Probability and Bayes Reasoning.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Independence and Repeated Trials",
+      "focus": "testing whether events factor and distinguishing pairwise from mutual independence",
+      "formulas": [
+        "P(A∩B)=P(A)P(B)"
+      ],
+      "id": "u07-l03",
+      "number": 3,
+      "unit": 7,
+      "unit_title": "Discrete Probability & Randomized Reasoning",
+      "week": 19,
+      "essential": "How does probability quantify uncertainty in finite processes, randomized algorithms, and discrete systems?",
+      "project": "Randomized Algorithm & Discrete Probability Investigation",
+      "application": "randomized algorithms, security, network reliability, hashing, load balancing, games, simulations, and risk analysis",
+      "vocab": [
+        "sample space",
+        "event",
+        "conditional probability",
+        "independence",
+        "random variable",
+        "expectation",
+        "variance",
+        "indicator variable",
+        "randomized algorithm"
+      ],
+      "sequence": 45,
+      "p1": "Give a rigorous example of testing whether events factor and distinguishing pairwise from mutual independence.",
+      "s1": "Define the objects precisely, apply the governing rule for Independence and Repeated Trials, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Independence and Repeated Trials.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Discrete Random Variables and Expected Value",
+      "focus": "mapping outcomes to values and interpreting probability-weighted averages",
+      "formulas": [
+        "E(X)=Σ_x xP(X=x)"
+      ],
+      "id": "u07-l04",
+      "number": 4,
+      "unit": 7,
+      "unit_title": "Discrete Probability & Randomized Reasoning",
+      "week": 20,
+      "essential": "How does probability quantify uncertainty in finite processes, randomized algorithms, and discrete systems?",
+      "project": "Randomized Algorithm & Discrete Probability Investigation",
+      "application": "randomized algorithms, security, network reliability, hashing, load balancing, games, simulations, and risk analysis",
+      "vocab": [
+        "sample space",
+        "event",
+        "conditional probability",
+        "independence",
+        "random variable",
+        "expectation",
+        "variance",
+        "indicator variable",
+        "randomized algorithm"
+      ],
+      "sequence": 46,
+      "p1": "A fair die pays its face value. Find the expected payout.",
+      "s1": "(1+2+3+4+5+6)/6=3.5.",
+      "p2": "Identify a common error in Discrete Random Variables and Expected Value.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Variance, Indicators and Linearity of Expectation",
+      "focus": "measuring spread and simplifying expected counts without requiring independence",
+      "formulas": [
+        "Var(X)=E(X^2)−E(X)^2",
+        "E(ΣX_i)=ΣE(X_i)"
+      ],
+      "id": "u07-l05",
+      "number": 5,
+      "unit": 7,
+      "unit_title": "Discrete Probability & Randomized Reasoning",
+      "week": 20,
+      "essential": "How does probability quantify uncertainty in finite processes, randomized algorithms, and discrete systems?",
+      "project": "Randomized Algorithm & Discrete Probability Investigation",
+      "application": "randomized algorithms, security, network reliability, hashing, load balancing, games, simulations, and risk analysis",
+      "vocab": [
+        "sample space",
+        "event",
+        "conditional probability",
+        "independence",
+        "random variable",
+        "expectation",
+        "variance",
+        "indicator variable",
+        "randomized algorithm"
+      ],
+      "sequence": 47,
+      "p1": "Give a rigorous example of measuring spread and simplifying expected counts without requiring independence.",
+      "s1": "Define the objects precisely, apply the governing rule for Variance, Indicators and Linearity of Expectation, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Variance, Indicators and Linearity of Expectation.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Binomial and Geometric Distributions",
+      "focus": "modelling repeated Bernoulli trials and waiting time",
+      "formulas": [
+        "P(X=k)=C(n,k)p^k(1−p)^{n−k}",
+        "P(T=k)=(1−p)^{k−1}p"
+      ],
+      "id": "u07-l06",
+      "number": 6,
+      "unit": 7,
+      "unit_title": "Discrete Probability & Randomized Reasoning",
+      "week": 21,
+      "essential": "How does probability quantify uncertainty in finite processes, randomized algorithms, and discrete systems?",
+      "project": "Randomized Algorithm & Discrete Probability Investigation",
+      "application": "randomized algorithms, security, network reliability, hashing, load balancing, games, simulations, and risk analysis",
+      "vocab": [
+        "sample space",
+        "event",
+        "conditional probability",
+        "independence",
+        "random variable",
+        "expectation",
+        "variance",
+        "indicator variable",
+        "randomized algorithm"
+      ],
+      "sequence": 48,
+      "p1": "Give a rigorous example of modelling repeated Bernoulli trials and waiting time.",
+      "s1": "Define the objects precisely, apply the governing rule for Binomial and Geometric Distributions, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Binomial and Geometric Distributions.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    },
+    {
+      "title": "Randomized Algorithms and the Probabilistic Method",
+      "focus": "analyzing expected performance, error probability, and existence through random choice",
+      "formulas": [
+        "expected cost",
+        "failure probability",
+        "existence from positive probability"
+      ],
+      "id": "u07-l07",
+      "number": 7,
+      "unit": 7,
+      "unit_title": "Discrete Probability & Randomized Reasoning",
+      "week": 21,
+      "essential": "How does probability quantify uncertainty in finite processes, randomized algorithms, and discrete systems?",
+      "project": "Randomized Algorithm & Discrete Probability Investigation",
+      "application": "randomized algorithms, security, network reliability, hashing, load balancing, games, simulations, and risk analysis",
+      "vocab": [
+        "sample space",
+        "event",
+        "conditional probability",
+        "independence",
+        "random variable",
+        "expectation",
+        "variance",
+        "indicator variable",
+        "randomized algorithm"
+      ],
+      "sequence": 49,
+      "p1": "Give a rigorous example of analyzing expected performance, error probability, and existence through random choice.",
+      "s1": "Define the objects precisely, apply the governing rule for Randomized Algorithms and the Probabilistic Method, show each step, and verify the conclusion with a second representation, proof, or algorithmic check.",
+      "p2": "Identify a common error in Randomized Algorithms and the Probabilistic Method.",
+      "s2": "A common error is to rely on a plausible pattern, diagram, or program output without checking definitions, domain conditions, quantifiers, edge cases, proof obligations, or algorithm invariants."
+    }
+  ],
+  "investigation": "Randomized Algorithm & Discrete Probability Investigation"
+}

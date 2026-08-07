@@ -1,0 +1,17 @@
+{
+  "unit": 6,
+  "title": "Sequences, Recurrences & Generating Methods",
+  "standards": [
+    "Sequences",
+    "Recursive definitions",
+    "Recurrence relations",
+    "Initial conditions",
+    "Iteration and substitution",
+    "Linear recurrences",
+    "Characteristic equations",
+    "Divide-and-conquer recurrences",
+    "Generating functions",
+    "Recurrence verification"
+  ],
+  "essential_question": "How do recursive definitions and recurrences describe the time, space, and structure of discrete processes?"
+}

@@ -1,0 +1,19 @@
+{
+  "unit": 8,
+  "title": "Graph Theory Foundations & Traversal",
+  "standards": [
+    "Graphs and digraphs",
+    "Vertices and edges",
+    "Degree",
+    "Handshaking lemma",
+    "Walks, trails, paths and cycles",
+    "Connectivity",
+    "Components",
+    "Euler trails",
+    "Hamiltonian paths",
+    "Adjacency structures",
+    "Breadth-first search",
+    "Depth-first search"
+  ],
+  "essential_question": "How do graphs model connectivity, dependency, movement, and interaction in computational systems?"
+}
