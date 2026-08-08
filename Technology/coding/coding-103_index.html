@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coding 103 — Problem Solving & Debugging Basics</title>
+<style>
+:root{
+  --bg:#fdf5ff;
+  --bg-grad:linear-gradient(180deg,#ffeef7,#f7f4ff 40%,#f4fbff);
+  --ink:#111;
+  --accent:#3b5cff;
+  --accent2:#ff6f61;
+  --good:#31c46b;
+  --warn:#ffb13a;
+  --bad:#ff5a5a;
+  --radius:14px;
+  --card:#ffffff;
+}
+*{box-sizing:border-box;}
+
+body{
+  margin:0;
+  font-family:"Segoe UI",system-ui,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  background:var(--bg-grad);
+  color:var(--ink);
+}
+
+/* Header */
+header{
+  background:linear-gradient(90deg,#ff9a9e,#fad0c4,#a18cd1,#3b5cff);
+  color:white;
+  text-align:center;
+  padding:1rem 0 1.2rem;
+  font-size:1.7rem;
+  letter-spacing:.05em;
+  box-shadow:0 4px 12px rgba(0,0,0,.15);
+}
+header .subtitle{
+  font-size:.95rem;
+  margin-top:.3rem;
+  opacity:.92;
+}
+
+/* Layout */
+main{
+  max-width:960px;
+  margin:auto;
+  padding:1rem 1rem 2rem;
+}
+
+/* Breadcrumb */
+.breadcrumb{
+  background:#f0f0ff;
+  padding:8px 12px;
+  border-radius:var(--radius);
+  font-size:0.9rem;
+  margin-bottom:12px;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+.breadcrumb a{
+  color:var(--accent);
+  text-decoration:none;
+  font-weight:600;
+}
+.breadcrumb a:hover{text-decoration:underline;}
+.breadcrumb span{color:#555;}
+
+/* Card + Buttons */
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:0 8px 24px rgba(0,0,0,.08);
+  padding:1.2rem 1.3rem;
+  margin-bottom:1rem;
+  border-top:4px solid rgba(59,92,255,.2);
+}
+h2{color:var(--accent);margin-top:0;}
+
+button{
+  background:var(--accent);
+  color:#fff;
+  border:none;
+  border-radius:var(--radius);
+  padding:8px 16px;
+  cursor:pointer;
+  font-size:0.9rem;
+  font-weight:600;
+}
+button:hover{opacity:.9;}
+button.secondary{
+  background:#ffbe3d;
+  color:#4a2800;
+}
+button.ghost{
+  background:transparent;
+  color:var(--accent);
+  border:1px solid rgba(59,92,255,.35);
+}
+button.ghost:hover{
+  background:rgba(59,92,255,.08);
+}
+
+/* Back button inside modules */
+.back-btn{
+  background:transparent;
+  border:none;
+  color:var(--accent);
+  font-size:0.85rem;
+  cursor:pointer;
+  margin-bottom:6px;
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  padding:0;
+}
+.back-btn:hover{text-decoration:underline;}
+
+/* Hidden utility */
+.hidden{display:none !important;}
+
+/* Progress bar */
+.progress{
+  height:10px;
+  background:#e0e2f5;
+  border-radius:5px;
+  overflow:hidden;
+  margin-top:4px;
+}
+.bar{
+  height:100%;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  width:0;
+  transition:width .4s ease;
+}
+.locked{
+  opacity:.4;
+}
+
+/* Lesson cards */
+.m1card,.m2card,.m3card,.m4card,.m5card{
+  padding:8px 4px 10px;
+}
+
+/* Quiz + outputs */
+.quizQ{
+  margin:8px 0;
+  padding:6px 8px;
+  border-radius:8px;
+  background:#f9f7ff;
+}
+.output{
+  margin-top:10px;
+  min-height:32px;
+  padding:6px 0;
+}
+.success{color:var(--good);}
+.fail{color:var(--bad);}
+.warn{color:var(--warn);}
+
+/* Flashcards */
+.flash{
+  background:#fff7d6;
+  border-radius:10px;
+  padding:8px;
+  text-align:center;
+  cursor:pointer;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+  font-size:0.9rem;
+}
+.flash .def{display:block;margin-top:4px;color:#444;}
+.flash .def.hidden{display:none;}
+
+/* Simple inputs */
+select,input[type="number"],input[type="text"],input[type="range"]{
+  padding:4px 8px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  font-size:0.9rem;
+}
+
+/* Lists */
+ul{margin:0 0 6px 1.1rem;}
+li{margin:2px 0;}
+
+/* Mini grids */
+.mini-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:8px;
+}
+
+/* Simple badge */
+.info-pill{
+  border-radius:999px;
+  padding:4px 10px;
+  font-size:0.8rem;
+  background:#f0f2ff;
+}
+
+/* State counter */
+.state-display{
+  font-size:1.3rem;
+  font-weight:600;
+}
+
+/* Responsive tweaks */
+@media (max-width:600px){
+  header{font-size:1.4rem;}
+  .card{padding:1rem;}
+}
+</style>
+</head>
+<body>
+<header>
+  🧩 Coding 103 — Problem Solving & Debugging Basics
+  <div class="subtitle">Think like a programmer: decompose → spot patterns → track state → plan with pseudocode → debug calmly like a detective.</div>
+</header>
+
+<main id="app">
+
+  <!-- Breadcrumb -->
+  <nav id="breadcrumb" class="breadcrumb">
+    <a href="#" onclick="goHome();return false;">🏠 Class Hub</a>
+    <span id="breadcrumbTrail">/ Dashboard</span>
+  </nav>
+
+  <!-- DASHBOARD -->
+  <section id="dashboard" class="card">
+    <h2>Progress Dashboard</h2>
+    <p><b>Coding 103</b> is your “logic toolkit” class. You’ll practice <b>how to think</b> when building real projects:
+      <span class="info-pill">break it down</span>
+      <span class="info-pill">spot repetition</span>
+      <span class="info-pill">track state</span>
+      <span class="info-pill">plan flow</span>
+      <span class="info-pill">debug</span>
+    </p>
+    <p>Complete each module with at least <b>80%</b> to unlock the next one and the Final Exam.</p>
+    <div id="modulesList"></div>
+    <button class="ghost" onclick="resetProgress()">Reset Progress</button>
+  </section>
+
+  <!-- ===========================
+       MODULE 1 — DECOMPOSITION
+       =========================== -->
+  <section id="module1" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>Module 1 — Decomposition: Turn Big Goals into Testable Steps</h2>
+    <p>Decomposition means taking “one huge thing” and turning it into small pieces you can build and test.</p>
+
+    <div style="background:#eee;border-radius:8px;overflow:hidden;height:10px;margin:10px 0;">
+      <div id="m1bar" style="height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0%;transition:width .4s;"></div>
+    </div>
+
+    <div id="m1cards">
+      <!-- CARD 1 -->
+      <div class="m1card">
+        <h3>1 — Why Break Things Down?</h3>
+        <p>Big tasks can feel blurry or overwhelming. Decomposition helps by:</p>
+        <ul>
+          <li>Turning a huge goal into a clear checklist</li>
+          <li>Letting you build the <b>smallest working version</b> first</li>
+          <li>Making bugs easier to find because each piece is simpler</li>
+        </ul>
+        <p>Pro tip: the smaller the step, the easier it is to test.</p>
+        <button onclick="nextModule(1)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="m1card hidden">
+        <h3>2 — Example: Making a Game</h3>
+        <p>Big goal: <b>“Make a platformer game.”</b></p>
+        <ul>
+          <li><b>Medium tasks:</b> Player, levels, enemies, sound, scoring</li>
+          <li><b>Tiny steps:</b> Draw one sprite, code jump, test left/right, add one sound</li>
+        </ul>
+        <p>Coding 103 mindset: build one tiny step → test it → then add the next step.</p>
+        <button onclick="nextModule(1)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 3 — Decomposition Lab -->
+      <div class="m1card hidden">
+        <h3>3 — Decomposition Lab</h3>
+        <p>Choose whether each task is a <b>Big Task</b>, <b>Medium Task</b>, or <b>Tiny Step</b>.</p>
+        <div style="margin-bottom:6px;">
+          <b>1.</b> “Build a full website for my art.”<br>
+          <select id="dec1">
+            <option value="">-- choose --</option>
+            <option>Big Task</option>
+            <option>Medium Task</option>
+            <option>Tiny Step</option>
+          </select>
+        </div>
+        <div style="margin-bottom:6px;">
+          <b>2.</b> “Design the gallery page where people see my paintings.”<br>
+          <select id="dec2">
+            <option value="">-- choose --</option>
+            <option>Big Task</option>
+            <option>Medium Task</option>
+            <option>Tiny Step</option>
+          </select>
+        </div>
+        <div style="margin-bottom:6px;">
+          <b>3.</b> “Add a hover effect when the mouse is on a painting.”<br>
+          <select id="dec3">
+            <option value="">-- choose --</option>
+            <option>Big Task</option>
+            <option>Medium Task</option>
+            <option>Tiny Step</option>
+          </select>
+        </div>
+        <button onclick="checkDecomp()">Check Answers</button>
+        <div id="decompResult" class="output"></div>
+        <button onclick="nextModule(1)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 4 — Flashcards + Quiz -->
+      <div class="m1card hidden">
+        <h3>4 — Quick Vocabulary</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;">
+          <div class="flash" onclick="flip(this)">Decomposition<br><small class="def hidden">split a big goal into smaller, testable pieces</small></div>
+          <div class="flash" onclick="flip(this)">Big Task<br><small class="def hidden">the whole mission (e.g., “build the app”)</small></div>
+          <div class="flash" onclick="flip(this)">Medium Task<br><small class="def hidden">a chunk of the mission (e.g., “make the dashboard”)</small></div>
+          <div class="flash" onclick="flip(this)">Tiny Step<br><small class="def hidden">one action you can do and test now</small></div>
+          <div class="flash" onclick="flip(this)">Checklist<br><small class="def hidden">a decomposed plan you can follow step-by-step</small></div>
+        </div>
+        <p style="margin-top:10px;">Ready to test your decomposition skills?</p>
+        <button type="button" onclick="showModuleQuiz(1)">Start Quiz 🧠</button>
+      </div>
+    </div>
+
+    <!-- QUIZ -->
+    <div id="m1quiz" class="hidden">
+      <h3>Module 1 Quiz (10 Questions)</h3>
+      <div id="m1quizBox"></div>
+      <button onclick="submitQuiz(1)">Submit Quiz</button>
+      <button type="button" class="ghost" onclick="retestQuiz(1)">Retake Quiz</button>
+      <button type="button" class="ghost" onclick="showModuleLessons(1)">⬅ Back to Lessons</button>
+      <div id="m1result" class="output"></div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       MODULE 2 — PATTERNS & REPETITION
+       =========================== -->
+  <section id="module2" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>Module 2 — Patterns & Repetition: Spot the Loop Before You Code It</h2>
+    <p>In Coding 103 we train our eyes: if something repeats, it often becomes a loop in real code.</p>
+
+    <div style="background:#eee;border-radius:8px;overflow:hidden;height:10px;margin:10px 0;">
+      <div id="m2bar" style="height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0%;transition:width .4s;"></div>
+    </div>
+
+    <div id="m2cards">
+      <!-- CARD 1 -->
+      <div class="m2card">
+        <h3>1 — Seeing Patterns</h3>
+        <p>Patterns are “rules that repeat.” Programmers use patterns to:</p>
+        <ul>
+          <li>Avoid copy-pasting the same steps</li>
+          <li>Predict what should happen next</li>
+          <li>Catch bugs (because broken patterns look “off”)</li>
+        </ul>
+        <button onclick="nextModule(2)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 2 — Pattern Lab -->
+      <div class="m2card hidden">
+        <h3>2 — Pattern Prediction Lab</h3>
+        <p>Choose what comes next in each pattern.</p>
+        <div style="margin-bottom:6px;">
+          <b>1.</b> 🔵 🟢 🔵 🟢 🔵 🟢 <b>?</b><br>
+          <select id="pat1">
+            <option value="">-- choose --</option>
+            <option>🔵</option>
+            <option>🟢</option>
+            <option>🟡</option>
+          </select>
+        </div>
+        <div style="margin-bottom:6px;">
+          <b>2.</b> ⭐ ⭐ 🌙 ⭐ ⭐ 🌙 ⭐ ⭐ <b>?</b><br>
+          <select id="pat2">
+            <option value="">-- choose --</option>
+            <option>⭐</option>
+            <option>🌙</option>
+            <option>☀️</option>
+          </select>
+        </div>
+        <div style="margin-bottom:6px;">
+          <b>3.</b> ⬆️ ⬆️ ➡️ ⬆️ ⬆️ ➡️ ⬆️ ⬆️ <b>?</b><br>
+          <select id="pat3">
+            <option value="">-- choose --</option>
+            <option>⬆️</option>
+            <option>➡️</option>
+            <option>⬇️</option>
+          </select>
+        </div>
+        <button onclick="checkPattern()">Check Patterns</button>
+        <div id="patternResult" class="output"></div>
+        <button onclick="nextModule(2)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 3 — Repetition Visualizer -->
+      <div class="m2card hidden">
+        <h3>3 — Repetition Visualizer</h3>
+        <p>Imagine this slider as the number in a loop: “repeat this many times.”</p>
+        <label for="repeatSlider">How many stars should we draw? (1–10)</label><br>
+        <input id="repeatSlider" type="range" min="1" max="10" value="5" oninput="updateStars()">
+        <div id="repeatOutput" class="output"></div>
+        <button onclick="nextModule(2)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 4 — Flashcards + Quiz -->
+      <div class="m2card hidden">
+        <h3>4 — Pattern Vocabulary</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;">
+          <div class="flash" onclick="flip(this)">Pattern<br><small class="def hidden">a repeating rule you can describe</small></div>
+          <div class="flash" onclick="flip(this)">Repetition<br><small class="def hidden">steps that happen again and again</small></div>
+          <div class="flash" onclick="flip(this)">Loop Idea<br><small class="def hidden">“do this N times” or “until it’s done”</small></div>
+          <div class="flash" onclick="flip(this)">Step<br><small class="def hidden">one action inside the repeating rule</small></div>
+          <div class="flash" onclick="flip(this)">Prediction<br><small class="def hidden">using the rule to guess what’s next</small></div>
+        </div>
+        <p style="margin-top:10px;">Time to check your pattern powers.</p>
+        <button type="button" onclick="showModuleQuiz(2)">Start Quiz 🧠</button>
+      </div>
+    </div>
+
+    <!-- QUIZ -->
+    <div id="m2quiz" class="hidden">
+      <h3>Module 2 Quiz (10 Questions)</h3>
+      <div id="m2quizBox"></div>
+      <button onclick="submitQuiz(2)">Submit Quiz</button>
+      <button type="button" class="ghost" onclick="retestQuiz(2)">Retake Quiz</button>
+      <button type="button" class="ghost" onclick="showModuleLessons(2)">⬅ Back to Lessons</button>
+      <div id="m2result" class="output"></div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       MODULE 3 — INPUT, OUTPUT & STATE
+       =========================== -->
+  <section id="module3" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>Module 3 — Inputs, Outputs & State: What Changes, What Shows, What Stays</h2>
+    <p>Programs react to <b>inputs</b>, produce <b>outputs</b>, and remember information in <b>state</b> (usually variables).</p>
+
+    <div style="background:#eee;border-radius:8px;overflow:hidden;height:10px;margin:10px 0;">
+      <div id="m3bar" style="height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0%;transition:width .4s;"></div>
+    </div>
+
+    <div id="m3cards">
+      <!-- CARD 1 -->
+      <div class="m3card">
+        <h3>1 — What Is State?</h3>
+        <p><b>State</b> is what the program “knows” right now: score, health, level, settings, or choices.</p>
+        <p>Coding 103 debug tip: when something looks wrong, ask: <b>Which state value is wrong?</b></p>
+        <button onclick="nextModule(3)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 2 — Cookie Jar State Lab -->
+      <div class="m3card hidden">
+        <h3>2 — Cookie Jar State Lab</h3>
+        <p>Imagine a game where you collect cookies. Change the state with these buttons.</p>
+        <div class="state-display" id="stateDisplay">Cookies: 0</div>
+        <div style="margin-top:6px;">
+          <button type="button" class="secondary" onclick="addState(1)">+1 Cookie</button>
+          <button type="button" class="secondary" onclick="addState(-1)">−1 Cookie</button>
+          <button type="button" class="ghost" onclick="resetState()">Reset</button>
+        </div>
+        <div id="stateMessage" class="output"></div>
+        <button onclick="nextModule(3)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 3 — Input / Output Match -->
+      <div class="m3card hidden">
+        <h3>3 — Input / Output Match</h3>
+        <p>Match each input to its most likely output.</p>
+        <div style="margin-bottom:6px;">
+          <b>1.</b> Press the space bar in a game →<br>
+          <select id="io1">
+            <option value="">-- choose --</option>
+            <option>Character jumps</option>
+            <option>Screen turns upside down</option>
+            <option>Printer starts</option>
+          </select>
+        </div>
+        <div style="margin-bottom:6px;">
+          <b>2.</b> Click the “Play” button on a music app →<br>
+          <select id="io2">
+            <option value="">-- choose --</option>
+            <option>Music starts</option>
+            <option>Computer shuts down</option>
+            <option>Screen goes black</option>
+          </select>
+        </div>
+        <div style="margin-bottom:6px;">
+          <b>3.</b> Tap a monster in a tablet game →<br>
+          <select id="io3">
+            <option value="">-- choose --</option>
+            <option>Monster reacts or takes damage</option>
+            <option>Wi-Fi turns off</option>
+            <option>Keyboard disappears forever</option>
+          </select>
+        </div>
+        <button onclick="checkIO()">Check Answers</button>
+        <div id="ioResult" class="output"></div>
+        <button onclick="nextModule(3)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 4 — Flashcards + Quiz -->
+      <div class="m3card hidden">
+        <h3>4 — State Vocabulary</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;">
+          <div class="flash" onclick="flip(this)">Input<br><small class="def hidden">information going into the program (clicks, keys, typing)</small></div>
+          <div class="flash" onclick="flip(this)">Output<br><small class="def hidden">what the program shows (text, graphics, sound)</small></div>
+          <div class="flash" onclick="flip(this)">State<br><small class="def hidden">values the program remembers right now (variables)</small></div>
+          <div class="flash" onclick="flip(this)">Event<br><small class="def hidden">something that happens (like a click or keypress)</small></div>
+          <div class="flash" onclick="flip(this)">Reaction<br><small class="def hidden">how the program responds based on state</small></div>
+        </div>
+        <p style="margin-top:10px;">Ready to test your understanding of state?</p>
+        <button type="button" onclick="showModuleQuiz(3)">Start Quiz 🧠</button>
+      </div>
+    </div>
+
+    <!-- QUIZ -->
+    <div id="m3quiz" class="hidden">
+      <h3>Module 3 Quiz (10 Questions)</h3>
+      <div id="m3quizBox"></div>
+      <button onclick="submitQuiz(3)">Submit Quiz</button>
+      <button type="button" class="ghost" onclick="retestQuiz(3)">Retake Quiz</button>
+      <button type="button" class="ghost" onclick="showModuleLessons(3)">⬅ Back to Lessons</button>
+      <div id="m3result" class="output"></div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       MODULE 4 — PSEUDOCODE & FLOW
+       =========================== -->
+  <section id="module4" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>Module 4 — Pseudocode & Flow: Plan the Logic Before the Code</h2>
+    <p>Pseudocode lets you plan your program in plain language so your logic is clear and testable.</p>
+
+    <div style="background:#eee;border-radius:8px;overflow:hidden;height:10px;margin:10px 0;">
+      <div id="m4bar" style="height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0%;transition:width .4s;"></div>
+    </div>
+
+    <div id="m4cards">
+      <!-- CARD 1 -->
+      <div class="m4card">
+        <h3>1 — What Is Pseudocode?</h3>
+        <p>Pseudocode is a “plan in words” for your logic. Example:</p>
+        <pre style="background:#f7f7ff;border-radius:8px;padding:6px;font-size:0.9rem;">
+SET total TO 0
+REPEAT for each cookie on the table
+    ADD 1 to total
+SHOW total
+        </pre>
+        <p>Coding 103 tip: write the “happy path” first, then add edge cases later.</p>
+        <button onclick="nextModule(4)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 2 — Snack Pseudocode Lab -->
+      <div class="m4card hidden">
+        <h3>2 — Snack Choice Pseudocode</h3>
+        <p>Which pseudocode best describes “If I am very hungry, eat a sandwich, otherwise eat a small snack”?</p>
+        <div style="margin-bottom:4px;">
+          <label><input type="radio" name="pseudoChoice" value="a">
+          IF hungry = true THEN<br>
+          &nbsp;&nbsp;eat sandwich<br>
+          ELSE<br>
+          &nbsp;&nbsp;eat small snack</label>
+        </div>
+        <div style="margin-bottom:4px;">
+          <label><input type="radio" name="pseudoChoice" value="b">
+          eat sandwich<br>
+          eat small snack</label>
+        </div>
+        <div style="margin-bottom:4px;">
+          <label><input type="radio" name="pseudoChoice" value="c">
+          IF time = weekend THEN<br>
+          &nbsp;&nbsp;play games</label>
+        </div>
+        <button onclick="checkPseudo()">Check Answer</button>
+        <div id="pseudoResult" class="output"></div>
+        <button onclick="nextModule(4)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 3 — Toothbrushing Flow -->
+      <div class="m4card hidden">
+        <h3>3 — Toothbrushing Flow</h3>
+        <p>Fill in these steps to make a clear algorithm for brushing your teeth.</p>
+        <div style="margin-bottom:6px;">
+          <b>Step 1:</b>
+          <select id="brush1">
+            <option value="">-- choose --</option>
+            <option>Wet toothbrush & add toothpaste</option>
+            <option>Go to sleep</option>
+            <option>Rinse mouth & clean toothbrush</option>
+          </select>
+        </div>
+        <div style="margin-bottom:6px;">
+          <b>Step 2:</b>
+          <select id="brush2">
+            <option value="">-- choose --</option>
+            <option>Brush teeth for 2 minutes</option>
+            <option>Eat a snack</option>
+            <option>Turn off the lights</option>
+          </select>
+        </div>
+        <div style="margin-bottom:6px;">
+          <b>Step 3:</b>
+          <select id="brush3">
+            <option value="">-- choose --</option>
+            <option>Rinse mouth & clean toothbrush</option>
+            <option>Watch TV</option>
+            <option>Go for a walk</option>
+          </select>
+        </div>
+        <button onclick="checkBrush()">Check Algorithm</button>
+        <div id="brushResult" class="output"></div>
+        <button onclick="nextModule(4)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 4 — Flashcards + Quiz -->
+      <div class="m4card hidden">
+        <h3>4 — Pseudocode Vocabulary</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;">
+          <div class="flash" onclick="flip(this)">Pseudocode<br><small class="def hidden">plain-language plan for a program’s logic</small></div>
+          <div class="flash" onclick="flip(this)">Algorithm<br><small class="def hidden">step-by-step method to solve a problem</small></div>
+          <div class="flash" onclick="flip(this)">Condition<br><small class="def hidden">a true/false test like “if hungry”</small></div>
+          <div class="flash" onclick="flip(this)">Branch<br><small class="def hidden">different path depending on the condition</small></div>
+          <div class="flash" onclick="flip(this)">Sequence<br><small class="def hidden">the order of steps (order matters!)</small></div>
+        </div>
+        <p style="margin-top:10px;">Let’s test your pseudocode and flow skills.</p>
+        <button type="button" onclick="showModuleQuiz(4)">Start Quiz 🧠</button>
+      </div>
+    </div>
+
+    <!-- QUIZ -->
+    <div id="m4quiz" class="hidden">
+      <h3>Module 4 Quiz (10 Questions)</h3>
+      <div id="m4quizBox"></div>
+      <button onclick="submitQuiz(4)">Submit Quiz</button>
+      <button type="button" class="ghost" onclick="retestQuiz(4)">Retake Quiz</button>
+      <button type="button" class="ghost" onclick="showModuleLessons(4)">⬅ Back to Lessons</button>
+      <div id="m4result" class="output"></div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       MODULE 5 — DEBUGGING BASICS
+       =========================== -->
+  <section id="module5" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>Module 5 — Debugging & Test Thinking: Be a Calm Bug Detective</h2>
+    <p>Debugging is how coders find and fix mistakes by testing ideas step-by-step.</p>
+
+    <div style="background:#eee;border-radius:8px;overflow:hidden;height:10px;margin:10px 0;">
+      <div id="m5bar" style="height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0%;transition:width .4s;"></div>
+    </div>
+
+    <div id="m5cards">
+      <!-- CARD 1 -->
+      <div class="m5card">
+        <h3>1 — What Is a Bug?</h3>
+        <p>A <b>bug</b> is any mistake that makes the program behave differently than you expected.</p>
+        <p>In Coding 103, debugging usually follows this loop:</p>
+        <ul>
+          <li><b>Reproduce</b> the bug (make it happen on purpose)</li>
+          <li><b>Isolate</b> where it breaks (smallest failing step)</li>
+          <li><b>Inspect</b> state/inputs with logs or messages</li>
+          <li><b>Fix</b> one thing, then <b>verify</b> with a test</li>
+        </ul>
+        <button onclick="nextModule(5)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 2 — Bug Scenario -->
+      <div class="m5card hidden">
+        <h3>2 — Bug Scenario</h3>
+        <p>Goal: “When I press space, my score should go up by 1.”<br>
+           Pseudocode:</p>
+        <pre style="background:#f7f7ff;border-radius:8px;padding:6px;font-size:0.9rem;">
+SET score TO 0
+WHEN space key pressed
+    SET score TO score - 1
+SHOW score
+        </pre>
+        <p>What is the bug?</p>
+        <div style="margin-bottom:4px;">
+          <label><input type="radio" name="bugChoice" value="a"> The score starts at 0.</label><br>
+          <label><input type="radio" name="bugChoice" value="b"> The code uses “score - 1” instead of “score + 1”.</label><br>
+          <label><input type="radio" name="bugChoice" value="c"> It shows the score.</label>
+        </div>
+        <button onclick="checkBug()">Check Bug</button>
+        <div id="bugResult" class="output"></div>
+        <button onclick="nextModule(5)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 3 — Debug Strategy Lab -->
+      <div class="m5card hidden">
+        <h3>3 — Debug Strategy Lab</h3>
+        <p>Your game crashes when you open Level 3. What is a <b>good first debugging step</b>?</p>
+        <div style="margin-bottom:4px;">
+          <label><input type="radio" name="dbgChoice" value="a"> Delete the whole game and start over.</label><br>
+          <label><input type="radio" name="dbgChoice" value="b"> Add messages or logs around Level 3 to see where it breaks.</label><br>
+          <label><input type="radio" name="dbgChoice" value="c"> Ignore it and hope it fixes itself.</label>
+        </div>
+        <button onclick="checkDebugStrategy()">Check Strategy</button>
+        <div id="dbgStrategyResult" class="output"></div>
+        <button onclick="nextModule(5)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 4 — Flashcards + Quiz -->
+      <div class="m5card hidden">
+        <h3>4 — Debugging Vocabulary</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;">
+          <div class="flash" onclick="flip(this)">Bug<br><small class="def hidden">a mistake that causes unexpected behavior</small></div>
+          <div class="flash" onclick="flip(this)">Debugging<br><small class="def hidden">finding and fixing bugs using tests</small></div>
+          <div class="flash" onclick="flip(this)">Test Case<br><small class="def hidden">a specific example you run to check behavior</small></div>
+          <div class="flash" onclick="flip(this)">Log / Print<br><small class="def hidden">a message that reveals what state/value is</small></div>
+          <div class="flash" onclick="flip(this)">Hypothesis<br><small class="def hidden">a guess you can test about what’s wrong</small></div>
+        </div>
+        <p style="margin-top:10px;">Final module quiz before the Coding 103 Final Exam!</p>
+        <button type="button" onclick="showModuleQuiz(5)">Start Quiz 🧠</button>
+      </div>
+    </div>
+
+    <!-- QUIZ -->
+    <div id="m5quiz" class="hidden">
+      <h3>Module 5 Quiz (10 Questions)</h3>
+      <div id="m5quizBox"></div>
+      <button onclick="submitQuiz(5)">Submit Quiz</button>
+      <button type="button" class="ghost" onclick="retestQuiz(5)">Retake Quiz</button>
+      <button type="button" class="ghost" onclick="showModuleLessons(5)">⬅ Back to Lessons</button>
+      <div id="m5result" class="output"></div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       FINAL EXAM
+       =========================== -->
+  <section id="finalExam" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>🏁 Final Exam — Coding 103</h2>
+    <p>Answer 20 questions randomly selected from all modules. You need at least <b>80%</b> to earn your certificate.</p>
+    <div id="examBox"></div>
+    <button onclick="submitFinalExam()">Submit Final Exam</button>
+    <button type="button" class="ghost" onclick="retakeFinalExam()">Retake Final Exam</button>
+    <div id="examResult" class="output"></div>
+  </section>
+
+  <!-- ===========================
+       CERTIFICATE
+       =========================== -->
+  <section id="certificate" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>🎉 Certificate of Completion</h2>
+    <p>This certifies that:</p>
+    <h3 id="certName">__________________________</h3>
+    <p>has successfully completed <b>Coding 103 — Problem Solving & Debugging Basics</b> with a final score of
+       <span id="certScore">___</span> %</p>
+    <p>Date: <span id="certDate"></span></p>
+    <button onclick="window.print()">🖨️ Print Certificate</button>
+  </section>
+
+</main>
+
+<script>
+const KEY_PREFIX = 'coding103_';
+const totalModules = 5;
+
+/* ===========================================================
+   QUIZ DATA (5 MODULES × 10 QUESTIONS EACH)
+   Content redundancy pass notes:
+   - 103-only vibe: more “testable steps”, “pattern spotting”, “state”, “logs”, “calm debugging”
+   - Kept structure the same, but tuned phrasing so it doesn’t feel like 101/102 repeats.
+   =========================================================== */
+const quizzes = {
+  1: [
+    {q:"1. Decomposition means…",a:["splitting a big goal into smaller, testable parts","making problems bigger","deleting all your work"],c:0},
+    {q:"2. Which is a BIG task?",a:["Create a full math practice app","Draw one button","Change one color"],c:0},
+    {q:"3. Which is a TINY step?",a:["Add a click sound to the start button","Design all the game levels","Plan a whole series of apps"],c:0},
+    {q:"4. Why do coders break problems down?",a:["So each piece is easier to understand, build, and test","To make code harder to read","So they never finish anything"],c:0},
+    {q:"5. A medium task is…",a:["a chunk of work inside a bigger project","the same as doing nothing","always about drawing art"],c:0},
+    {q:"6. Best first step for 'make a quiz game'?",a:["Decide what questions and answers to include","Translate it into every language","Buy ten new computers"],c:0},
+    {q:"7. Good decomposition usually makes it easier to…",a:["find and fix bugs","hide mistakes forever","ignore deadlines"],c:0},
+    {q:"8. Which list shows decomposition?",a:["Plan → Design screen → Add buttons → Test one question","Quiz → Quiz → Quiz","Computer → Computer → Computer"],c:0},
+    {q:"9. When a task still feels too big, you should…",a:["break it into even smaller steps","quit coding","wait and hope it finishes itself"],c:0},
+    {q:"10. Decomposition is useful in…",a:["coding, school projects, and daily life","only in video games","only in math tests"],c:0}
+  ],
+  2: [
+    {q:"1. A pattern is…",a:["a sequence that follows a rule","a random mess","a single step"],c:0},
+    {q:"2. Which looks most like a pattern?",a:["⭐ 🌙 ⭐ 🌙 ⭐ 🌙","🎲 🎧 📚 🌈","🚗"],c:0},
+    {q:"3. Repetition in code is usually handled with…",a:["loops","batteries","stickers"],c:0},
+    {q:"4. Predicting the next item in a pattern means you’re…",a:["using the pattern’s rule","guessing randomly","breaking the computer"],c:0},
+    {q:"5. Which daily routine has repetition?",a:["brushing teeth every morning and night","changing your name every hour","never doing the same thing twice"],c:0},
+    {q:"6. Loops help programmers…",a:["avoid writing the same steps many times","delete all their work","turn off the internet"],c:0},
+    {q:"7. A pattern that repeats every 3 items is…",a:["repeating in groups of 3","having no rules","too random to use"],c:0},
+    {q:"8. Before writing a loop, it helps to…",a:["spot which actions repeat","delete the repeated actions","turn off the screen"],c:0},
+    {q:"9. Which rule fits: 🔺 🔺 ⚪ 🔺 🔺 ⚪ …",a:["two triangles, then a circle","triangle, circle, square","all circles"],c:0},
+    {q:"10. Spotting patterns is important because…",a:["it makes code shorter, clearer, and easier to debug","it always makes code longer","it is only for art class"],c:0}
+  ],
+  3: [
+    {q:"1. An input is…",a:["information going into the program","only pictures","the final score"],c:0},
+    {q:"2. An output is…",a:["what the program shows or returns","always sound","the computer’s battery"],c:0},
+    {q:"3. State describes…",a:["what the program currently remembers (variables)","how fast you type","what color your keyboard is"],c:0},
+    {q:"4. Which is an example of state in a game?",a:["current level number","the temperature outside","the console brand"],c:0},
+    {q:"5. Pressing a key is usually…",a:["an input event","an output sound","a network cable"],c:0},
+    {q:"6. Good input → output pair?",a:["Click ‘play’ → video starts","Click ‘play’ → computer explodes","Click ‘play’ → keyboard disappears"],c:0},
+    {q:"7. When state changes, programs…",a:["may behave differently","always freeze","never change anything"],c:0},
+    {q:"8. A score variable usually…",a:["goes up or down as you play","stays at 0 forever","controls your Wi-Fi"],c:0},
+    {q:"9. In a drawing app, dragging the mouse is…",a:["input","output","state"],c:0},
+    {q:"10. In a drawing app, the line that appears is…",a:["output","input","state"],c:0}
+  ],
+  4: [
+    {q:"1. Pseudocode is…",a:["plain-language steps that describe a program","secret hacker language","only for robots"],c:0},
+    {q:"2. The main goal of pseudocode is to…",a:["plan logic before writing real code","make code run faster by magic","avoid thinking about the problem"],c:0},
+    {q:"3. An algorithm is…",a:["a step-by-step method for solving a problem","a random drawing","a computer brand"],c:0},
+    {q:"4. A condition in pseudocode uses words like…",a:["IF / ELSE","BLUE / GREEN","LOUD / QUIET"],c:0},
+    {q:"5. Which looks most like pseudocode?",a:["IF score >= 10 THEN show 'You win!'","🎨 🦄 🌈","123456789"],c:0},
+    {q:"6. The order of steps is called…",a:["sequence","speed","size"],c:0},
+    {q:"7. Teams use pseudocode because…",a:["everyone can understand the plan before coding","so nobody understands it","so they never write real code"],c:0},
+    {q:"8. A branch happens when…",a:["a program takes different paths depending on a condition","the computer grows leaves","you choose a new keyboard"],c:0},
+    {q:"9. A loop in pseudocode looks like…",a:["REPEAT these steps 5 times","DO this once then stop forever","NEVER do this step"],c:0},
+    {q:"10. Writing pseudocode first usually…",a:["reduces bugs and confusion","creates more bugs","is forbidden"],c:0}
+  ],
+  5: [
+    {q:"1. A bug is…",a:["a mistake that causes unexpected behavior","any animal near your computer","a new feature"],c:0},
+    {q:"2. Debugging means…",a:["finding and fixing bugs","making the code messier","deleting every file"],c:0},
+    {q:"3. When something breaks, a good first step is to…",a:["observe carefully what actually happens","panic and quit","ignore it"],c:0},
+    {q:"4. A test case is…",a:["a specific example you try in your program","a place where tests live","a math problem"],c:0},
+    {q:"5. Good debugging usually changes…",a:["one small thing at a time","everything at once","nothing and hopes"],c:0},
+    {q:"6. A tool that helps you see a variable’s value is…",a:["logs or print statements","turning off the monitor","unplugging the keyboard"],c:0},
+    {q:"7. If your program gives the wrong answer, you should…",a:["check your logic step by step","blame the computer chip","delete every project"],c:0},
+    {q:"8. A hypothesis in debugging is…",a:["a guess you can test about what might be wrong","a security code","a new keyboard layout"],c:0},
+    {q:"9. Staying calm helps debugging because…",a:["you think clearly and run better tests","the bug gets scared","it changes the screen color"],c:0},
+    {q:"10. Good coders treat bugs as…",a:["normal chances to learn","proof they can’t code","reasons to never try again"],c:0}
+  ]
+};
+
+/* ===========================================================
+   BANK + CURRENT (fixes mutation + final exam side effects)
+   =========================================================== */
+const quizBank = JSON.parse(JSON.stringify(quizzes)); // immutable source of truth
+const currentQuizzes = {}; // shuffled versions currently rendered per module
+
+/* LocalStorage helpers */
+function scoreKey(num){
+  return KEY_PREFIX + 'module' + num + '_score';
+}
+function finalKey(){
+  return KEY_PREFIX + 'finalExam_score';
+}
+
+/* Dashboard + navigation */
+const modulesList = document.getElementById('modulesList');
+const breadcrumbTrail = document.getElementById('breadcrumbTrail');
+
+function setBreadcrumb(label){
+  if(breadcrumbTrail){
+    breadcrumbTrail.textContent = ' / ' + label;
+  }
+}
+
+function hideAllSections(){
+  document.querySelectorAll('main section').forEach(s => s.classList.add('hidden'));
+}
+
+function loadDashboard(){
+  if(!modulesList) return;
+  modulesList.innerHTML = '';
+
+  for(let i=1;i<=totalModules;i++){
+    const score = parseInt(localStorage.getItem(scoreKey(i)) || '0',10);
+    const unlocked = (i===1) ||
+      (parseInt(localStorage.getItem(scoreKey(i-1)) || '0',10) >= 80);
+
+    const div = document.createElement('div');
+    div.className = 'card';
+
+    const title = document.createElement('h3');
+    title.textContent = 'Module ' + i;
+    div.appendChild(title);
+
+    const p = document.createElement('p');
+    p.textContent = 'Score: ' + score + '%';
+    div.appendChild(p);
+
+    const prog = document.createElement('div');
+    prog.className = 'progress';
+    const bar = document.createElement('div');
+    bar.className = 'bar';
+    bar.style.width = score + '%';
+    prog.appendChild(bar);
+    div.appendChild(prog);
+
+    const btn = document.createElement('button');
+    if(!unlocked){
+      btn.className = 'locked';
+      btn.textContent = 'Locked';
+      btn.onclick = function(){
+        alert('Score 80% or higher in the previous module to unlock this one.');
+      };
+    }else{
+      btn.textContent = 'Open Module';
+      btn.onclick = function(){ openModule(i); };
+    }
+    div.appendChild(btn);
+
+    modulesList.appendChild(div);
+  }
+
+  const finalScore = parseInt(localStorage.getItem(finalKey()) || '0',10);
+  const allDone = [...Array(totalModules)].every((_,i)=>
+    parseInt(localStorage.getItem(scoreKey(i+1)) || '0',10) >= 80
+  );
+
+  const examDiv = document.createElement('div');
+  examDiv.className = 'card';
+
+  const h3 = document.createElement('h3');
+  h3.textContent = 'Final Exam';
+  examDiv.appendChild(h3);
+
+  const p2 = document.createElement('p');
+  p2.textContent = 'Score: ' + finalScore + '%';
+  examDiv.appendChild(p2);
+
+  const prog2 = document.createElement('div');
+  prog2.className = 'progress';
+  const bar2 = document.createElement('div');
+  bar2.className = 'bar';
+  bar2.style.width = finalScore + '%';
+  prog2.appendChild(bar2);
+  examDiv.appendChild(prog2);
+
+  const examBtn = document.createElement('button');
+  if(!allDone){
+    examBtn.className = 'locked';
+    examBtn.textContent = 'Locked';
+    examBtn.onclick = function(){
+      alert('Complete all modules with ≥ 80% to unlock the Final Exam.');
+    };
+  }else{
+    examBtn.textContent = 'Take Final Exam';
+    examBtn.onclick = openFinalExam;
+  }
+  examDiv.appendChild(examBtn);
+
+  if(finalScore >= 80){
+    examDiv.appendChild(document.createElement('br'));
+    const certBtn = document.createElement('button');
+    certBtn.textContent = 'View Certificate';
+    certBtn.className = 'ghost';
+    certBtn.onclick = showCertificate;
+    examDiv.appendChild(certBtn);
+  }
+
+  modulesList.appendChild(examDiv);
+}
+
+function resetProgress(){
+  if(confirm('Reset all Coding 103 progress?')){
+    for(let i=1;i<=totalModules;i++){
+      localStorage.removeItem(scoreKey(i));
+    }
+    localStorage.removeItem(finalKey());
+    loadDashboard();
+  }
+}
+
+function openModule(num){
+  hideAllSections();
+  const sec = document.getElementById('module'+num);
+  if(sec) sec.classList.remove('hidden');
+  showModuleLessons(num,true); // reset labs + scroll
+  setBreadcrumb('Module ' + num);
+}
+
+function goHome(){
+  hideAllSections();
+  document.getElementById('dashboard').classList.remove('hidden');
+  setBreadcrumb('Dashboard');
+  loadDashboard();
+}
+
+/* ===========================================================
+   UNIVERSAL QUIZ LOADER + RETEST (no bank mutation)
+   =========================================================== */
+function loadQuiz(num){
+  const box = document.getElementById('m'+num+'quizBox');
+  if(!box) return;
+
+  const original = quizBank[num];
+  if(!original) return;
+
+  // shuffle answers per question, preserve correct by matching correct text
+  const qset = original.map(q => {
+    const answers = q.a.slice();
+    for(let i=answers.length-1;i>0;i--){
+      const j = Math.floor(Math.random()*(i+1));
+      [answers[i], answers[j]] = [answers[j], answers[i]];
+    }
+    const correctText = q.a[q.c];
+    const newCorrect = answers.indexOf(correctText);
+    return { q: q.q, a: answers, c: newCorrect };
+  });
+
+  currentQuizzes[num] = qset;
+
+  box.innerHTML = '';
+  qset.forEach((q,qi)=>{
+    const div = document.createElement('div');
+    div.className = 'quizQ';
+
+    const title = document.createElement('b');
+    title.textContent = q.q;
+    div.appendChild(title);
+    div.appendChild(document.createElement('br'));
+
+    q.a.forEach((opt,ai)=>{
+      const label = document.createElement('label');
+      const radio = document.createElement('input');
+      radio.type = 'radio';
+      radio.name = 'm'+num+'q'+qi;
+      radio.value = String(ai);
+      label.appendChild(radio);
+      label.appendChild(document.createTextNode(' ' + opt));
+      div.appendChild(label);
+      div.appendChild(document.createElement('br'));
+    });
+
+    box.appendChild(div);
+  });
+}
+
+function submitQuiz(num){
+  const qset = currentQuizzes[num] || quizBank[num];
+  if(!qset) return;
+
+  let scoreCount = 0;
+  qset.forEach((q,i)=>{
+    const sel = document.querySelector('input[name=m'+num+'q'+i+']:checked');
+    if(sel && parseInt(sel.value,10) === q.c) scoreCount++;
+  });
+
+  const percent = Math.round((scoreCount/qset.length)*100);
+  localStorage.setItem(scoreKey(num),percent);
+
+  const res = document.getElementById('m'+num+'result');
+  if(!res) return;
+
+  res.textContent = 'You scored ' + percent + '%';
+  res.className = 'output ' + (percent>=80 ? 'success' : 'fail');
+
+  if(percent>=80){
+    res.textContent += ' ✅ Next module unlocked!';
+  }else{
+    res.textContent += ' ❌ Try again for 80% or higher.';
+  }
+  loadDashboard();
+}
+
+function retestQuiz(num){
+  const res = document.getElementById('m'+num+'result');
+  if(res){
+    res.textContent = '';
+    res.className = 'output';
+  }
+  loadQuiz(num);
+}
+
+/* ===========================================================
+   MODULE STATE (GENERIC HANDLERS)
+   =========================================================== */
+const moduleConfig = {
+  1:{cardsSelector:'#m1cards .m1card', barId:'m1bar', quizId:'m1quiz', cardsId:'m1cards', resultId:'m1result'},
+  2:{cardsSelector:'#m2cards .m2card', barId:'m2bar', quizId:'m2quiz', cardsId:'m2cards', resultId:'m2result'},
+  3:{cardsSelector:'#m3cards .m3card', barId:'m3bar', quizId:'m3quiz', cardsId:'m3cards', resultId:'m3result'},
+  4:{cardsSelector:'#m4cards .m4card', barId:'m4bar', quizId:'m4quiz', cardsId:'m4cards', resultId:'m4result'},
+  5:{cardsSelector:'#m5cards .m5card', barId:'m5bar', quizId:'m5quiz', cardsId:'m5cards', resultId:'m5result'}
+};
+const moduleState = {};
+
+function setupModules(){
+  for(let num=1; num<=totalModules; num++){
+    const cfg = moduleConfig[num];
+    if(!cfg) continue;
+    const cards = document.querySelectorAll(cfg.cardsSelector);
+    moduleState[num] = {
+      index:0,
+      cards:cards,
+      barId:cfg.barId,
+      quizId:cfg.quizId,
+      cardsId:cfg.cardsId,
+      resultId:cfg.resultId
+    };
+  }
+}
+
+/* Progress bar: fixed math so it reaches 100% on last card */
+function setCardProgress(num){
+  const st = moduleState[num];
+  if(!st) return;
+  const bar = document.getElementById(st.barId);
+  if(!bar) return;
+  const denom = Math.max(1, st.cards.length - 1);
+  const pct = Math.round((st.index / denom) * 100);
+  bar.style.width = pct + '%';
+}
+
+function nextModule(num){
+  const st = moduleState[num];
+  if(!st) return;
+  if(st.index < st.cards.length-1){
+    st.cards[st.index].classList.add('hidden');
+    st.index++;
+    st.cards[st.index].classList.remove('hidden');
+    setCardProgress(num);
+  }
+}
+
+function showModuleLessons(num,scrollTop){
+  if(scrollTop === undefined) scrollTop = true;
+  const st = moduleState[num];
+  if(!st) return;
+
+  const quiz = document.getElementById(st.quizId);
+  const cardsWrap = document.getElementById(st.cardsId);
+
+  if(quiz) quiz.classList.add('hidden');
+  if(cardsWrap) cardsWrap.classList.remove('hidden');
+
+  st.index = 0;
+  st.cards.forEach((c,i)=>c.classList.toggle('hidden', i!==0));
+  setCardProgress(num);
+
+  const res = document.getElementById(st.resultId);
+  if(res){
+    res.textContent = '';
+    res.className = 'output';
+  }
+
+  // Always reset module-specific lab state (fixes dashboard open not resetting)
+  if(num === 2) updateStars();
+  if(num === 3) resetState();
+
+  if(scrollTop){
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+}
+
+function showModuleQuiz(num){
+  const st = moduleState[num];
+  if(!st) return;
+  const cardsWrap = document.getElementById(st.cardsId);
+  if(cardsWrap) cardsWrap.classList.add('hidden');
+  const quiz = document.getElementById(st.quizId);
+  if(quiz) quiz.classList.remove('hidden');
+  loadQuiz(num);
+}
+
+/* ===========================================================
+   FLASHCARDS
+   =========================================================== */
+function flip(el){
+  const def = el.querySelector('.def');
+  if(def){
+    def.classList.toggle('hidden');
+  }
+}
+
+/* ===========================================================
+   MODULE LABS
+   =========================================================== */
+/* Module 1: Decomposition lab */
+function checkDecomp(){
+  const a1 = document.getElementById('dec1')?.value || '';
+  const a2 = document.getElementById('dec2')?.value || '';
+  const a3 = document.getElementById('dec3')?.value || '';
+  const out = document.getElementById('decompResult');
+  if(!out) return;
+  let correct = 0;
+  if(a1 === 'Big Task') correct++;
+  if(a2 === 'Medium Task') correct++;
+  if(a3 === 'Tiny Step') correct++;
+  if(correct === 3){
+    out.textContent = '✅ Perfect! You separated big, medium, and tiny steps exactly.';
+    out.className = 'output success';
+  }else{
+    out.textContent = '❌ Some choices are off. Hint: full website = big task, gallery page = medium, hover effect = tiny step.';
+    out.className = 'output fail';
+  }
+}
+
+/* Module 2: Pattern lab */
+function checkPattern(){
+  const p1 = document.getElementById('pat1')?.value || '';
+  const p2 = document.getElementById('pat2')?.value || '';
+  const p3 = document.getElementById('pat3')?.value || '';
+  const out = document.getElementById('patternResult');
+  if(!out) return;
+  let correct = 0;
+  if(p1 === '🔵') correct++;
+  if(p2 === '🌙') correct++;
+  if(p3 === '➡️') correct++;
+  if(correct === 3){
+    out.textContent = '✅ Nice! You spotted all the pattern rules.';
+    out.className = 'output success';
+  }else{
+    out.textContent = '❌ Not quite. Look again at how many of each symbol appear before the question mark.';
+    out.className = 'output fail';
+  }
+}
+
+/* Module 2: Repetition visualizer */
+function updateStars(){
+  const slider = document.getElementById('repeatSlider');
+  const out = document.getElementById('repeatOutput');
+  if(!slider || !out) return;
+  const n = parseInt(slider.value,10) || 1;
+  let stars = '';
+  for(let i=0;i<n;i++){
+    stars += '⭐';
+  }
+  out.textContent = 'Loop idea: repeat "draw star" ' + n + ' times → ' + stars;
+}
+
+/* Module 3: State lab */
+let stateCount = 0;
+
+function updateStateDisplay(){
+  const disp = document.getElementById('stateDisplay');
+  const msg = document.getElementById('stateMessage');
+  if(disp) disp.textContent = 'Cookies: ' + stateCount;
+  if(msg){
+    if(stateCount === 0){
+      msg.textContent = 'Jar is empty — time to collect!';
+      msg.className = 'output warn';
+    }else if(stateCount > 0 && stateCount < 5){
+      msg.textContent = 'Nice! You have a small cookie stash.';
+      msg.className = 'output success';
+    }else{
+      msg.textContent = 'Wow, cookie champion! 🍪';
+      msg.className = 'output success';
+    }
+  }
+}
+
+function addState(delta){
+  stateCount = Math.max(0, stateCount + delta);
+  updateStateDisplay();
+}
+
+function resetState(){
+  stateCount = 0;
+  updateStateDisplay();
+}
+
+/* Module 3: Input/output match */
+function checkIO(){
+  const a1 = document.getElementById('io1')?.value || '';
+  const a2 = document.getElementById('io2')?.value || '';
+  const a3 = document.getElementById('io3')?.value || '';
+  const out = document.getElementById('ioResult');
+  if(!out) return;
+  let correct = 0;
+  if(a1 === 'Character jumps') correct++;
+  if(a2 === 'Music starts') correct++;
+  if(a3 === 'Monster reacts or takes damage') correct++;
+  if(correct === 3){
+    out.textContent = '✅ Great! Your input → output matches make sense.';
+    out.className = 'output success';
+  }else{
+    out.textContent = '❌ Some outputs don’t fit. Think: what would a normal app or game do with that input?';
+    out.className = 'output fail';
+  }
+}
+
+/* Module 4: Pseudocode lab */
+function checkPseudo(){
+  const sel = document.querySelector('input[name=pseudoChoice]:checked');
+  const out = document.getElementById('pseudoResult');
+  if(!out) return;
+  if(!sel){
+    out.textContent = 'Choose an option first.';
+    out.className = 'output warn';
+    return;
+  }
+  if(sel.value === 'a'){
+    out.textContent = '✅ Correct! This uses a condition: if hungry, then sandwich, else small snack.';
+    out.className = 'output success';
+  }else{
+    out.textContent = '❌ Not quite. Look for the one that uses IF and ELSE to choose between sandwich and snack.';
+    out.className = 'output fail';
+  }
+}
+
+function checkBrush(){
+  const b1 = document.getElementById('brush1')?.value || '';
+  const b2 = document.getElementById('brush2')?.value || '';
+  const b3 = document.getElementById('brush3')?.value || '';
+  const out = document.getElementById('brushResult');
+  if(!out) return;
+  if(b1 === 'Wet toothbrush & add toothpaste' &&
+     b2 === 'Brush teeth for 2 minutes' &&
+     b3 === 'Rinse mouth & clean toothbrush'){
+    out.textContent = '✅ Perfect sequence! That’s a clear little algorithm.';
+    out.className = 'output success';
+  }else{
+    out.textContent = '❌ Something is out of order. Think: prepare → brush → rinse & clean.';
+    out.className = 'output fail';
+  }
+}
+
+/* Module 5: Debugging labs */
+function checkBug(){
+  const sel = document.querySelector('input[name=bugChoice]:checked');
+  const out = document.getElementById('bugResult');
+  if(!out) return;
+  if(!sel){
+    out.textContent = 'Pick the bug first.';
+    out.className = 'output warn';
+    return;
+  }
+  if(sel.value === 'b'){
+    out.textContent = '✅ Correct! The code subtracts 1 instead of adding 1 when space is pressed.';
+    out.className = 'output success';
+  }else{
+    out.textContent = '❌ Look again. Which line is doing the opposite of what we want?';
+    out.className = 'output fail';
+  }
+}
+
+function checkDebugStrategy(){
+  const sel = document.querySelector('input[name=dbgChoice]:checked');
+  const out = document.getElementById('dbgStrategyResult');
+  if(!out) return;
+  if(!sel){
+    out.textContent = 'Choose a strategy first.';
+    out.className = 'output warn';
+    return;
+  }
+  if(sel.value === 'b'){
+    out.textContent = '✅ Exactly. Logs help you see where things go wrong (and what state is at the moment).';
+    out.className = 'output success';
+  }else if(sel.value === 'a'){
+    out.textContent = '❌ Deleting everything loses clues. Debugging works best when you study the problem first.';
+    out.className = 'output fail';
+  }else{
+    out.textContent = '❌ Ignoring a crash won’t fix it. Try adding tests and messages instead.';
+    out.className = 'output fail';
+  }
+}
+
+/* ===========================================================
+   FINAL EXAM (20 RANDOM QUESTIONS, with answer shuffle)
+   =========================================================== */
+let finalExamSet = [];
+
+function openFinalExam(){
+  const allComplete = [...Array(totalModules)].every((_,i)=>
+    parseInt(localStorage.getItem(scoreKey(i+1)) || '0',10) >= 80
+  );
+  if(!allComplete){
+    alert('Complete all modules with ≥ 80% to unlock the Final Exam.');
+    return;
+  }
+  hideAllSections();
+  const sec = document.getElementById('finalExam');
+  if(sec) sec.classList.remove('hidden');
+  setBreadcrumb('Final Exam');
+  buildFinalExam();
+}
+
+function buildFinalExam(){
+  // build a pool of references (module + index) to avoid duplicate objects
+  const pool = [];
+  for(let m=1;m<=totalModules;m++){
+    const bank = quizBank[m] || [];
+    for(let i=0;i<bank.length;i++){
+      pool.push({m, i});
+    }
+  }
+
+  // sample 20 unique refs
+  const sampleRefs = [];
+  const desired = Math.min(20, pool.length);
+  while(sampleRefs.length < desired){
+    const pick = pool[Math.floor(Math.random()*pool.length)];
+    const key = pick.m + ':' + pick.i;
+    if(!sampleRefs.some(r => (r.m + ':' + r.i) === key)){
+      sampleRefs.push(pick);
+    }
+  }
+
+  // build finalExamSet with shuffled answers + correct mapping
+  finalExamSet = sampleRefs.map(ref=>{
+    const q = quizBank[ref.m][ref.i];
+    const answers = q.a.slice();
+    for(let i=answers.length-1;i>0;i--){
+      const j = Math.floor(Math.random()*(i+1));
+      [answers[i], answers[j]] = [answers[j], answers[i]];
+    }
+    const correctText = q.a[q.c];
+    const newCorrect = answers.indexOf(correctText);
+    return { q: q.q, a: answers, c: newCorrect };
+  });
+
+  const box = document.getElementById('examBox');
+  if(!box) return;
+  box.innerHTML = '';
+
+  finalExamSet.forEach((q,qi)=>{
+    const div = document.createElement('div');
+    div.className = 'quizQ';
+
+    const title = document.createElement('b');
+    title.textContent = q.q;
+    div.appendChild(title);
+    div.appendChild(document.createElement('br'));
+
+    q.a.forEach((opt,ai)=>{
+      const label = document.createElement('label');
+      const radio = document.createElement('input');
+      radio.type = 'radio';
+      radio.name = 'examQ' + qi;
+      radio.value = String(ai);
+      label.appendChild(radio);
+      label.appendChild(document.createTextNode(' ' + opt));
+      div.appendChild(label);
+      div.appendChild(document.createElement('br'));
+    });
+
+    box.appendChild(div);
+  });
+
+  const res = document.getElementById('examResult');
+  if(res){
+    res.textContent = '';
+    res.className = 'output';
+  }
+}
+
+function submitFinalExam(){
+  const set = finalExamSet || [];
+  if(!set.length) return;
+
+  let scoreCount = 0;
+  set.forEach((q,i)=>{
+    const sel = document.querySelector('input[name=examQ'+i+']:checked');
+    if(sel && parseInt(sel.value,10) === q.c) scoreCount++;
+  });
+
+  const percent = Math.round((scoreCount/set.length)*100);
+  localStorage.setItem(finalKey(),percent);
+
+  const res = document.getElementById('examResult');
+  if(!res) return;
+
+  res.textContent = 'You scored ' + percent + '% (' + scoreCount + '/' + set.length + ')';
+  if(percent>=80){
+    res.className = 'output success';
+    res.textContent += ' ✅ Certificate unlocked!';
+    setTimeout(showCertificate,800);
+  }else{
+    res.className = 'output fail';
+    res.textContent += ' ❌ Try again for 80% or higher.';
+  }
+  loadDashboard();
+}
+
+function retakeFinalExam(){
+  buildFinalExam();
+}
+
+/* ===========================================================
+   CERTIFICATE
+   =========================================================== */
+function showCertificate(){
+  hideAllSections();
+  setBreadcrumb('Certificate');
+  const name = prompt('Enter your name for the certificate:') || 'Student';
+  const score = localStorage.getItem(finalKey()) || '80';
+  const certName = document.getElementById('certName');
+  const certScore = document.getElementById('certScore');
+  const certDate = document.getElementById('certDate');
+  if(certName) certName.textContent = name;
+  if(certScore) certScore.textContent = score;
+  if(certDate) certDate.textContent = new Date().toLocaleDateString();
+  const sec = document.getElementById('certificate');
+  if(sec) sec.classList.remove('hidden');
+}
+
+/* ===========================================================
+   INIT
+   =========================================================== */
+function init(){
+  setupModules();
+  loadDashboard();
+  setBreadcrumb('Dashboard');
+  updateStars();
+  resetState();
+}
+init();
+</script>
+</body>
+</html>
