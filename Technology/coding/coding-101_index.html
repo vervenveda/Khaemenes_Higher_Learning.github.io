@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coding 101 Portal</title>
+<style>
+:root{
+  --bg:#fdf5ff;
+  --bg-grad:linear-gradient(180deg,#ffeef7,#f7f4ff 40%,#f4fbff);
+  --ink:#111;
+  --accent:#3b5cff;
+  --accent2:#ff6f61;
+  --good:#31c46b;
+  --warn:#ffb13a;
+  --bad:#ff5a5a;
+  --radius:14px;
+  --card:#ffffff;
+}
+*{box-sizing:border-box;}
+
+body{
+  margin:0;
+  font-family:"Segoe UI",system-ui,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  background:var(--bg-grad);
+  color:var(--ink);
+}
+
+/* Header */
+header{
+  background:linear-gradient(90deg,#ff9a9e,#fad0c4,#a18cd1,#3b5cff);
+  color:white;
+  text-align:center;
+  padding:1rem 0 1.2rem;
+  font-size:1.7rem;
+  letter-spacing:.05em;
+  box-shadow:0 4px 12px rgba(0,0,0,.15);
+}
+header .subtitle{
+  font-size:.95rem;
+  margin-top:.3rem;
+  opacity:.92;
+}
+
+/* Layout */
+main{
+  max-width:960px;
+  margin:auto;
+  padding:1rem 1rem 2rem;
+}
+
+/* Breadcrumb */
+.breadcrumb{
+  background:#f0f0ff;
+  padding:8px 12px;
+  border-radius:var(--radius);
+  font-size:1.5rem;
+  margin-bottom:12px;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+.breadcrumb a{
+  color:var(--accent);
+  text-decoration:none;
+  font-weight:666;
+}
+.breadcrumb a:hover{text-decoration:underline;}
+.breadcrumb span{color:#555;}
+
+/* Card + Buttons */
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:0 8px 24px rgba(0,0,0,.08);
+  padding:1.2rem 1.3rem;
+  margin-bottom:1rem;
+  border-top:4px solid rgba(59,92,255,.2);
+}
+h2{color:var(--accent);margin-top:0;}
+
+button{
+  background:var(--accent);
+  color:#fff;
+  border:none;
+  border-radius:var(--radius);
+  padding:8px 16px;
+  cursor:pointer;
+  font-size:0.9rem;
+  font-weight:600;
+}
+button:hover{opacity:.9;}
+button.secondary{
+  background:#ffbe3d;
+  color:#4a2800;
+}
+button.ghost{
+  background:transparent;
+  color:var(--accent);
+  border:1px solid rgba(59,92,255,.35);
+}
+button.ghost:hover{
+  background:rgba(59,92,255,.08);
+}
+
+/* Back button inside modules */
+.back-btn{
+  background:transparent;
+  border:none;
+  color:var(--accent);
+  font-size:0.85rem;
+  cursor:pointer;
+  margin-bottom:6px;
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  padding:0;
+}
+.back-btn:hover{text-decoration:underline;}
+
+/* Hidden utility */
+.hidden{display:none !important;}
+
+/* Progress bar */
+.progress{
+  height:10px;
+  background:#e0e2f5;
+  border-radius:5px;
+  overflow:hidden;
+  margin-top:4px;
+}
+.bar{
+  height:100%;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  width:0;
+  transition:width .4s ease;
+}
+.locked{
+  opacity:.4;
+  pointer-events:none;
+}
+
+/* Lesson cards */
+.m1card,.m2card,.m3card{
+  padding:8px 4px 10px;
+}
+
+/* Quiz + outputs */
+.quizQ{
+  margin:8px 0;
+  padding:6px 8px;
+  border-radius:8px;
+  background:#f9f7ff;
+}
+.output{
+  margin-top:10px;
+  min-height:40px;
+  padding:6px 0;
+}
+.success{color:var(--good);}
+.fail{color:var(--bad);}
+
+/* Flashcards */
+.flash{
+  background:#fff7d6;
+  border-radius:10px;
+  padding:8px;
+  text-align:center;
+  cursor:pointer;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+  font-size:0.9rem;
+}
+.flash .def{display:block;margin-top:4px;color:#444;}
+.flash .def.hidden{display:none;}
+
+/* Simple select style */
+select{
+  padding:4px 8px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  font-size:0.9rem;
+}
+
+/* Lists in activities */
+ul{margin:0 0 6px 0;}
+li{margin:2px 0;}
+
+/* Textarea / iframe */
+textarea{
+  width:100%;
+  border-radius:8px;
+  border:1px solid #ccc;
+  padding:6px;
+}
+iframe{
+  width:100%;
+  height:140px;
+  background:#fff;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+
+/* Responsive tweaks */
+@media (max-width:600px){
+  header{font-size:1.4rem;}
+  .card{padding:1rem;}
+}
+</style>
+</head>
+<body>
+<header>
+  🎓 Coding 101 
+  <div class="subtitle">A free beginner-friendly coding class for kids, teens, and curious adults.</div>
+</header>
+
+<main id="app">
+
+  <!-- Breadcrumb -->
+  <nav id="breadcrumb" class="breadcrumb">
+    <a href="#" onclick="goHome();return false;">🏠 Class Hub</a>
+    <span id="breadcrumbTrail">/ Dashboard</span>
+  </nav>
+
+  <!-- DASHBOARD -->
+  <section id="dashboard" class="card">
+    <h2>Progress Dashboard</h2>
+    <p>Work through the modules. Score <b>80% or higher</b> to unlock the next one and the Final Exam.</p>
+    <div id="modulesList"></div>
+    <button class="ghost" onclick="resetProgress()">Reset Progress</button>
+  </section>
+
+  <!-- ===========================
+       MODULE 1 — CODING FOUNDATIONS
+       =========================== -->
+  <section id="module1" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>Module 1 — Coding Foundations</h2>
+    <p>Welcome to your very first coding adventure! Work through each lesson below.
+       When you finish all the cards, the quiz will appear.</p>
+
+    <!-- PROGRESS INDICATOR -->
+    <div style="background:#eee;border-radius:8px;overflow:hidden;height:10px;margin:10px 0;">
+      <div id="m1bar" style="height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0%;transition:width .4s;"></div>
+    </div>
+
+    <div id="m1cards">
+
+      <!-- CARD 1 -->
+      <div class="m1card">
+        <h3>1 — What Is a Computer?</h3>
+        <p>A computer is a helper that follows <b>exact directions</b>.
+           If you say “Make a sandwich” but never explain how, it just sits there!</p>
+        <p>Computers need <b>clear step-by-step instructions</b>. Those steps are called <b>code</b>.</p>
+        <button onclick="nextM1()">Next ➡️</button>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="m1card hidden">
+        <h3>2 — What Is Code?</h3>
+        <p>Code is a special language made of words, numbers, or pictures that tell
+           the computer what to do. Binary uses 0 and 1's. You are about to become a <b>coder</b> — someone
+           who teaches computers!</p>
+        <button onclick="nextM1()">Next ➡️</button>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="m1card hidden">
+        <h3>3 — Everyday Algorithms</h3>
+        <p>An <b>algorithm</b> is a list of steps that solve a problem — like a recipe!
+           Arrange the sandwich steps in order:</p>
+        <ul id="algoList" style="list-style:none;padding:0;">
+          <li draggable="true">🥪 Eat sandwich</li>
+          <li draggable="true">🍞 Put peanut butter on bread</li>
+          <li draggable="true">🍞 Take out two slices of bread</li>
+          <li draggable="true">🥜 Open the peanut butter jar</li>
+        </ul>
+        <button onclick="checkAlgo()">Check Order</button>
+        <div id="algoResult" class="output"></div>
+        <button onclick="nextM1()">Next ➡️</button>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="m1card hidden">
+        <h3>4 — Sequencing & Debugging</h3>
+        <p>Sometimes steps are mixed up — that’s a <b>bug</b>.
+           Fixing it is called <b>debugging</b>!<br>
+           Click “Run Broken Code” to see why order matters.</p>
+        <button onclick="brokenSandwich()">Run Broken Code 🍞</button>
+        <div id="bugResult" class="output"></div>
+        <button onclick="nextM1()">Next ➡️</button>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="m1card hidden">
+        <h3>5 — Loops</h3>
+        <p>A <b>loop</b> repeats an action. Click Play to watch a loop draw colored dots!</p>
+        <canvas id="loopCanvas" width="320" height="120" style="background:#fff;border-radius:8px;"></canvas><br>
+        <button onclick="playLoop()">▶️ Play Loop</button>
+        <button onclick="nextM1()">Next ➡️</button>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="m1card hidden">
+        <h3>6 — Mini Mission: Morning Routine</h3>
+        <p>Put these morning steps in order!</p>
+        <ul id="routineList" style="list-style:none;padding:0;">
+          <li draggable="true">🚌 Go to school</li>
+          <li draggable="true">🪥 Brush teeth</li>
+          <li draggable="true">🛏️ Wake up</li>
+          <li draggable="true">🥣 Eat breakfast</li>
+        </ul>
+        <button onclick="checkRoutine()">Check Routine</button>
+        <div id="routineResult" class="output"></div>
+        <button onclick="nextM1()">Next ➡️</button>
+      </div>
+
+      <!-- CARD 7 -->
+      <div class="m1card hidden">
+        <h3>7 — Review & Vocabulary</h3>
+        <div id="flashcards" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;">
+          <div class="flash" onclick="flip(this)">Code<br><small class="def hidden">instructions for a computer</small></div>
+          <div class="flash" onclick="flip(this)">Algorithm<br><small class="def hidden">a list of steps</small></div>
+          <div class="flash" onclick="flip(this)">Bug<br><small class="def hidden">a mistake in code</small></div>
+          <div class="flash" onclick="flip(this)">Debug<br><small class="def hidden">fixing a bug</small></div>
+          <div class="flash" onclick="flip(this)">Loop<br><small class="def hidden">repeat actions</small></div>
+          <div class="flash" onclick="flip(this)">Sequence<br><small class="def hidden">the right order</small></div>
+        </div>
+        <p style="margin-top:10px;">When you’re ready, take the quiz below!</p>
+        <button onclick="showM1Quiz()">Start Quiz 🧠</button>
+      </div>
+    </div>
+
+    <!-- QUIZ -->
+    <div id="m1quiz" class="hidden">
+      <h3>Module 1 Quiz (10 Questions)</h3>
+      <div id="m1quizBox"></div>
+      <button onclick="submitQuiz(1)">Submit Quiz</button>
+      <button type="button" class="ghost" onclick="retestQuiz(1)">Retake Quiz</button>
+      <button type="button" class="ghost" onclick="showM1Lessons()">⬅ Back to Lessons</button>
+      <div id="m1result" class="output"></div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       MODULE 2 — BLOCK CODING LOGIC
+       =========================== -->
+  <section id="module2" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>Module 2 — Block Coding Logic</h2>
+    <p>Now that you know what code is, let’s learn about <b>block coding!</b><br>
+       Each colored block is an instruction the computer follows.</p>
+
+    <!-- Progress bar -->
+    <div style="background:#eee;border-radius:8px;overflow:hidden;height:10px;margin:10px 0;">
+      <div id="m2bar" style="height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0%;transition:width .4s;"></div>
+    </div>
+
+    <div id="m2cards">
+      <!-- CARD 1 -->
+      <div class="m2card">
+        <h3>1 — What Is Block Coding?</h3>
+        <p>Instead of typing code letters, we can drag colorful <b>blocks</b> that fit together
+           like puzzle pieces. Each block tells the computer to do one thing.</p>
+        <p>It’s an easy way for beginners to see how code fits together!</p>
+        <button onclick="nextM2()">Next ➡️</button>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="m2card hidden">
+        <h3>2 — Events Start Actions</h3>
+        <p>Blocks often begin with an <b>event</b> — something that <i>happens</i> like clicking a button or pressing a key.
+           Try clicking the cat!</p>
+        <div id="catEvent" style="font-size:3rem;cursor:pointer;">😺</div>
+        <div id="catOut" class="output"></div>
+        <button onclick="nextM2()">Next ➡️</button>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="m2card hidden">
+        <h3>3 — Loops Repeat Actions</h3>
+        <p>A <b>loop</b> runs the same block again and again.
+           Click Play to see our robot jump 5 times!</p>
+        <div id="loopOut" class="output"></div>
+        <button onclick="playRobotLoop()">▶️ Play Loop</button>
+        <button onclick="nextM2()">Next ➡️</button>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="m2card hidden">
+        <h3>4 — Conditions: If Something Happens…</h3>
+        <p>Sometimes we only want something to happen <b>if</b> a condition is true.<br>
+           For example: “If the balloon is clicked, <code>score = score + 1</code>.”</p>
+        <p>Try clicking the balloon 🎈 and the ghost 👻 and watch what happens to the score.</p>
+        <div style="display:flex;align-items:center;gap:16px;margin-top:6px;">
+          <div id="balloon" style="font-size:2rem;cursor:pointer;">🎈</div>
+          <div id="ghost" style="font-size:2rem;cursor:pointer;">👻</div>
+          <div id="scoreBox" class="output">Score 0</div>
+        </div>
+        <button onclick="nextM2()">Next ➡️</button>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="m2card hidden">
+        <h3>5 — Mini Puzzle: Cause and Effect</h3>
+        <p>Match each <b>event</b> with what happens in the game.
+           Choose an answer from the little box in each row.</p>
+
+        <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px;">
+          <div>
+            <b>1.</b> Click green flag →
+            <select id="pair1">
+              <option value="">-- choose --</option>
+              <option>Start game</option>
+              <option>Jump</option>
+              <option>Celebrate 🎉</option>
+            </select>
+          </div>
+          <div>
+            <b>2.</b> Press space key →
+            <select id="pair2">
+              <option value="">-- choose --</option>
+              <option>Start game</option>
+              <option>Jump</option>
+              <option>Celebrate 🎉</option>
+            </select>
+          </div>
+          <div>
+            <b>3.</b> When score = 10 →
+            <select id="pair3">
+              <option value="">-- choose --</option>
+              <option>Start game</option>
+              <option>Jump</option>
+              <option>Celebrate 🎉</option>
+            </select>
+          </div>
+        </div>
+
+        <button onclick="checkPairs()">Check Pairs</button>
+        <div id="pairResult" class="output"></div>
+        <button onclick="nextM2()">Next ➡️</button>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="m2card hidden">
+        <h3>6 — Review Flashcards</h3>
+        <div id="m2flash" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;">
+          <div class="flash" onclick="flip(this)">Block<br><small class="def hidden">a puzzle piece of code</small></div>
+          <div class="flash" onclick="flip(this)">Event<br><small class="def hidden">something that happens</small></div>
+          <div class="flash" onclick="flip(this)">Loop<br><small class="def hidden">repeats actions</small></div>
+          <div class="flash" onclick="flip(this)">Condition<br><small class="def hidden">an IF test in code</small></div>
+          <div class="flash" onclick="flip(this)">Variable<br><small class="def hidden">stores a value</small></div>
+        </div>
+        <button onclick="showM2Quiz()">Start Quiz 🧠</button>
+      </div>
+    </div>
+
+    <!-- QUIZ -->
+    <div id="m2quiz" class="hidden">
+      <h3>Module 2 Quiz (10 Questions)</h3>
+      <div id="m2quizBox"></div>
+      <button onclick="submitQuiz(2)">Submit Quiz</button>
+      <button type="button" class="ghost" onclick="retestQuiz(2)">Retake Quiz</button>
+      <button type="button" class="ghost" onclick="showM2Lessons()">⬅ Back to Lessons</button>
+      <div id="m2result" class="output"></div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       MODULE 3 — WEB BASICS
+       =========================== -->
+  <section id="module3" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>Module 3 — Web Basics (HTML + CSS)</h2>
+    <p>Discover how websites are built and styled!</p>
+
+    <!-- Progress bar -->
+    <div style="background:#eee;border-radius:8px;overflow:hidden;height:10px;margin:10px 0;">
+      <div id="m3bar" style="height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0%;transition:width .4s;"></div>
+    </div>
+
+    <div id="m3cards">
+      <!-- CARD 1 -->
+      <div class="m3card">
+        <h3>1 — What Is a Website?</h3>
+        <p>A website is a group of pages that live on the internet.
+           Each page is made from code that the browser reads and shows to us.</p>
+        <p>We use <b>HTML</b> to build the structure and <b>CSS</b> to make it colorful and stylish.</p>
+        <button onclick="nextM3()">Next ➡️</button>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="m3card hidden">
+        <h3>2 — HTML: The Structure</h3>
+        <p>HTML stands for <b>HyperText Markup Language</b>. Tags like
+           <code>&lt;h1&gt;</code> and <code>&lt;p&gt;</code> tell the browser
+           “this is a heading” or “this is a paragraph.”</p>
+        <p>Think of HTML as the <b>skeleton</b> of your page.</p>
+        <button onclick="nextM3()">Next ➡️</button>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="m3card hidden">
+        <h3>3 — CSS: The Style</h3>
+        <p>CSS stands for <b>Cascading Style Sheets</b>. It changes colors, fonts,
+           sizes, spacing, and more.</p>
+        <p>If HTML is the skeleton, CSS is the <b>clothes and decorations</b>
+           that make your page beautiful.</p>
+        <button onclick="nextM3()">Next ➡️</button>
+      </div>
+
+      <!-- CARD 4 — Try it yourself with the original embed engine -->
+      <div class="m3card hidden">
+        <h3>4 — Try It Yourself!</h3>
+        <p>Use this mini web preview to test your own HTML and CSS.</p>
+        <div id="m3Activities">
+          <p><b>Activity:</b> Type simple HTML and CSS, then preview it.</p>
+          <textarea id="m3code" rows="6">
+<h1>Hello World!</h1>
+<p style="color:blue;">This is my first web page!</p>
+          </textarea><br>
+          <button onclick="m3Preview()">Preview</button>
+          <iframe id="m3frame" style="background:#fff;border-radius:8px;"></iframe>
+        </div>
+        <button onclick="nextM3()">Next ➡️</button>
+      </div>
+
+      <!-- CARD 5 — Vocab review -->
+      <div class="m3card hidden">
+        <h3>5 — Vocabulary Review</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;">
+          <div class="flash" onclick="flip(this)">HTML<br><small class="def hidden">structure of the page</small></div>
+          <div class="flash" onclick="flip(this)">CSS<br><small class="def hidden">style and colors</small></div>
+          <div class="flash" onclick="flip(this)">&lt;h1&gt;<br><small class="def hidden">a big heading</small></div>
+          <div class="flash" onclick="flip(this)">&lt;p&gt;<br><small class="def hidden">a paragraph of text</small></div>
+          <div class="flash" onclick="flip(this)">Tag<br><small class="def hidden">a code label like &lt;title&gt;</small></div>
+          <div class="flash" onclick="flip(this)">Attribute<br><small class="def hidden">extra detail like color="red"</small></div>
+        </div>
+        <p style="margin-top:10px;">When you’re ready, take the quiz!</p>
+        <button onclick="showM3Quiz()">Start Quiz 🧠</button>
+      </div>
+    </div>
+
+    <!-- QUIZ -->
+    <div id="m3quiz" class="hidden">
+      <h3>Module 3 Quiz (10 Questions)</h3>
+      <div id="m3quizBox"></div>
+      <button onclick="submitQuiz(3)">Submit Quiz</button>
+      <button type="button" class="ghost" onclick="retestQuiz(3)">Retake Quiz</button>
+      <button type="button" class="ghost" onclick="showM3Lessons()">⬅ Back to Lessons</button>
+      <div id="m3result" class="output"></div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       FINAL EXAM
+       =========================== -->
+  <section id="finalExam" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>🏁 Final Exam — Coding 101</h2>
+    <p>Answer 25 questions randomly selected from all modules. You need at least <b>80 %</b> to earn your certificate!</p>
+    <div id="examBox"></div>
+    <button onclick="submitFinalExam()">Submit Final Exam</button>
+    <button type="button" class="ghost" onclick="retakeFinalExam()">Retake Final Exam</button>
+    <div id="examResult" class="output"></div>
+  </section>
+  <button ${!unlocked ? 'class="locked" disabled' : ''} onclick="openModule(${i})">
+
+  <!-- ===========================
+       CERTIFICATE
+       =========================== -->
+  <section id="certificate" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>🎉 Certificate of Completion</h2>
+    <p>This certifies that:</p>
+    <h3 id="certName">__________________________</h3>
+    <p>has successfully completed <b>Coding 101</b> with a final score of
+       <span id="certScore">___</span> %</p>
+    <p>Date: <span id="certDate"></span></p>
+    <button onclick="window.print()">🖨️ Print Certificate</button>
+  </section>
+
+</main>
+
+<script>
+/* ===========================================================
+   QUIZ DATA (MONTE CARLO POOL FOR FINAL EXAM)
+   =========================================================== */
+const quizzes = {
+  1: [
+    {q:"1. What is coding?",a:["Telling a computer what to do","Typing random letters","Drawing pictures"],c:0},
+    {q:"2. An algorithm is:",a:["A set of steps","A type of computer","A game"],c:0},
+    {q:"3. A bug means:",a:["An error in code","A real insect","A computer brand"],c:0},
+    {q:"4. Debugging is:",a:["Fixing mistakes","Making music","Writing stories"],c:0},
+    {q:"5. Computers follow:",a:["Exact instructions","Guesses","Dreams"],c:0},
+    {q:"6. What symbol starts HTML tags?",a:["< >", "{}", "[]"],c:0},
+    {q:"7. Loops make code:",a:["Repeat","Disappear","Run once"],c:0},
+    {q:"8. A sequence is:",a:["Order of steps","A musical note","A shape"],c:0},
+    {q:"9. Good coders always:",a:["Test their code","Ignore errors","Delete work"],c:0},
+    {q:"10. Binary uses:",a:["0 and 1","A B C","Red and Blue"],c:0}
+  ],
+  2: [
+    {q:"1. What is a block in block coding?",a:["A puzzle-piece instruction","A toy block","A file folder"],c:0},
+    {q:"2. Events tell the program to do what?",a:["Start actions","Stop everything","Sleep"],c:0},
+    {q:"3. Which event starts most Scratch programs?",a:["Click green flag","Type your name","Turn off PC"],c:0},
+    {q:"4. A loop makes code ___?",a:["Repeat","Disappear","Cry"],c:0},
+    {q:"5. A condition uses what word?",a:["If","When","Because"],c:0},
+    {q:"6. Variables store ___?",a:["Information","Pictures","Music"],c:0},
+    {q:"7. When you debug a block program, you are ___?",a:["Fixing errors","Adding bugs","Coloring"],c:0},
+    {q:"8. Which pair fits best?",a:["Press space → Jump","Press space → Eat","Press space → Sleep"],c:0},
+    {q:"9. Blocks fit together like ___?",a:["Puzzle pieces","Lego towers","Books"],c:0},
+    {q:"10. A loop that never ends is called ___?",a:["Forever loop","Tiny loop","No loop"],c:0}
+  ],
+  3: [
+    {q:"1. HTML stands for:",a:["HyperText Markup Language","HighText Machine Language","Hyperlink Transfer Mechanism"],c:0},
+    {q:"2. CSS controls:",a:["Colors and style","Logic","Images only"],c:0},
+    {q:"3. A tag is written with:",a:["Angle brackets < >","Curly braces { }","Quotes"],c:0},
+    {q:"4. The <title> tag shows:",a:["Page title","Image","Sound"],c:0},
+    {q:"5. Which CSS property changes text color?",a:["color","font","align"],c:0},
+    {q:"6. An attribute adds:",a:["Extra details","New computers","Magic"],c:0},
+    {q:"7. To make text bold use:",a:["<b>","<big>","<stronger>"],c:0},
+    {q:"8. A paragraph tag is:",a:["<p>","<para>","<pg>"],c:0},
+    {q:"9. Which CSS property adds space inside a box?",a:["padding","margin","border"],c:0},
+    {q:"10. Good web pages are:",a:["Clear and organized","Messy","Hidden"],c:0}
+  ]
+};
+
+/* ===========================================================
+   DASHBOARD + NAVIGATION
+   =========================================================== */
+const totalModules = 3;
+const modulesList = document.getElementById('modulesList');
+const breadcrumbTrail = document.getElementById('breadcrumbTrail');
+
+function setBreadcrumb(label){
+  if(breadcrumbTrail){
+    breadcrumbTrail.textContent = ' / ' + label;
+  }
+}
+
+function hideAllSections(){
+  document.querySelectorAll('main section').forEach(s=>s.classList.add('hidden'));
+}
+
+function loadDashboard(){
+  modulesList.innerHTML = "";
+  for(let i=1;i<=totalModules;i++){
+    const score = parseInt(localStorage.getItem('module'+i+'_score') || "0",10);
+    const unlocked = (i===1) ||
+      (parseInt(localStorage.getItem('module'+(i-1)+'_score') || "0",10) >= 80);
+    const div = document.createElement('div');
+    div.className = 'card';
+    div.innerHTML = `
+      <h3>Module ${i}</h3>
+      <p>Score: ${score}%</p>
+      <div class="progress"><div class="bar" style="width:${score}%"></div></div>
+      <button ${!unlocked ? 'class="locked"' : ''} onclick="openModule(${i})">
+        ${unlocked ? 'Open Module' : 'Locked'}
+      </button>
+    `;
+    modulesList.appendChild(div);
+  }
+
+  // Final exam card
+  const finalScore = parseInt(localStorage.getItem('finalExam_score') || "0",10);
+  const allDone = [...Array(totalModules)].every((_,i)=>
+    parseInt(localStorage.getItem('module'+(i+1)+'_score') || "0",10) >= 80
+  );
+  const examDiv = document.createElement('div');
+  examDiv.className = 'card';
+  examDiv.innerHTML = `
+    <h3>Final Exam</h3>
+    <p>Score: ${finalScore}%</p>
+    <div class="progress"><div class="bar" style="width:${finalScore}%"></div></div>
+    <button ${!allDone ? 'class="locked"' : ''} onclick="openFinalExam()">
+      ${!allDone ? 'Locked' : 'Take Final Exam'}
+    </button>
+  `;
+  if(finalScore >= 80){
+    const certBtn = document.createElement('button');
+    certBtn.textContent = 'View Certificate';
+    certBtn.className = 'ghost';
+    certBtn.style.marginLeft = '8px';
+    certBtn.onclick = showCertificate;
+    examDiv.appendChild(document.createElement('br'));
+    examDiv.appendChild(certBtn);
+  }
+  modulesList.appendChild(examDiv);
+}
+
+function resetProgress(){
+  if(confirm("Reset all progress for this Coding 101 class?")){
+    for(let i=1;i<=totalModules;i++){
+      localStorage.removeItem('module'+i+'_score');
+    }
+    localStorage.removeItem('finalExam_score');
+    loadDashboard();
+  }
+}
+
+function openModule(num){
+  hideAllSections();
+  if(num===1){
+    document.getElementById('module1').classList.remove('hidden');
+    showM1Lessons(false);
+  }else if(num===2){
+    document.getElementById('module2').classList.remove('hidden');
+    showM2Lessons(false);
+  }else if(num===3){
+    document.getElementById('module3').classList.remove('hidden');
+    showM3Lessons(false);
+  }
+  setBreadcrumb('Module '+num);
+}
+
+function goHome(){
+  hideAllSections();
+  document.getElementById('dashboard').classList.remove('hidden');
+  setBreadcrumb('Dashboard');
+  loadDashboard();
+}
+
+/* ===========================================================
+   UNIVERSAL QUIZ LOADER + RETEST
+   =========================================================== */
+function loadQuiz(num){
+  const box = document.getElementById('m'+num+'quizBox');
+  if(!box) return;
+  const original = quizzes[num];
+  if(!original) return;
+
+  // Deep copy and shuffle answers, keeping track of the correct index
+  const qset = original.map(q => {
+    const answers = [...q.a];
+    for(let i=answers.length-1;i>0;i--){
+      const j = Math.floor(Math.random()*(i+1));
+      [answers[i],answers[j]] = [answers[j],answers[i]];
+    }
+    const newCorrect = answers.indexOf(q.a[q.c]);
+    return {...q, a:answers, c:newCorrect};
+  });
+
+  // Store shuffled set so the submit logic uses the same order
+  quizzes[num] = qset;
+
+  // Build DOM nodes instead of using innerHTML so tags like <title> show safely
+  box.innerHTML = "";
+  qset.forEach((q,i)=>{
+    const wrap = document.createElement('div');
+    wrap.className = 'quizQ';
+
+    const title = document.createElement('b');
+    title.textContent = q.q;
+    wrap.appendChild(title);
+    wrap.appendChild(document.createElement('br'));
+
+    q.a.forEach((opt,j)=>{
+      const label = document.createElement('label');
+      const input = document.createElement('input');
+      input.type = 'radio';
+      input.name = 'm'+num+'q'+i;
+      input.value = j;
+      label.appendChild(input);
+      label.appendChild(document.createTextNode(' '+opt));
+      wrap.appendChild(label);
+      wrap.appendChild(document.createElement('br'));
+    });
+
+    box.appendChild(wrap);
+  });
+}
+
+function submitQuiz(num){
+  const qset = quizzes[num];
+  if(!qset) return;
+  let score = 0;
+  qset.forEach((q,i)=>{
+    const sel = document.querySelector(`input[name=m${num}q${i}]:checked`);
+    if(sel && parseInt(sel.value,10) === q.c) score++;
+  });
+  const percent = Math.round((score/qset.length)*100);
+  localStorage.setItem('module'+num+'_score',percent);
+  const res = document.getElementById('m'+num+'result');
+  if(!res) return;
+  res.innerHTML = `You scored ${percent}%`;
+  res.className = 'output ' + (percent>=80 ? 'success' : 'fail');
+  if(percent>=80){
+    res.innerHTML += ' ✅ Next module unlocked!';
+  }else{
+    res.innerHTML += ' ❌ Try again for 80% or higher.';
+  }
+  loadDashboard();
+}
+
+function retestQuiz(num){
+  const res = document.getElementById('m'+num+'result');
+  if(res){
+    res.textContent = '';
+    res.className = 'output';
+  }
+  loadQuiz(num);
+}
+
+/* ===========================================================
+   MODULE 1 INTERACTIVITY
+   =========================================================== */
+let m1Index = 0;
+const m1cards = document.querySelectorAll('#m1cards .m1card');
+
+function nextM1(){
+  if(m1Index < m1cards.length-1){
+    m1cards[m1Index].classList.add('hidden');
+    m1Index++;
+    m1cards[m1Index].classList.remove('hidden');
+    document.getElementById('m1bar').style.width =
+      ((m1Index/m1cards.length)*100) + '%';
+  }
+}
+
+/* drag-swap utility used by two activities */
+function enableDragList(listId){
+  const ul = document.getElementById(listId);
+  let src = null;
+  ul.addEventListener('dragstart',e=>{src=e.target;});
+  ul.addEventListener('dragover',e=>e.preventDefault());
+  ul.addEventListener('drop',e=>{
+    e.preventDefault();
+    if(src && e.target.tagName === "LI" && src !== e.target){
+      const t = src.textContent;
+      src.textContent = e.target.textContent;
+      e.target.textContent = t;
+    }
+  });
+}
+enableDragList('algoList');
+enableDragList('routineList');
+
+/* check sandwich order */
+function checkAlgo(){
+  const correct=[
+    "🍞 Take out two slices of bread",
+    "🥜 Open the peanut butter jar",
+    "🍞 Put peanut butter on bread",
+    "🥪 Eat sandwich"
+  ];
+  const now=[...document.querySelectorAll('#algoList li')]
+    .map(li=>li.textContent.trim());
+  const out=document.getElementById('algoResult');
+  out.textContent =
+    JSON.stringify(now)===JSON.stringify(correct)
+      ? "✅ Perfect algorithm!"
+      : "❌ Try again — something’s out of order.";
+}
+
+/* broken sandwich demo */
+function brokenSandwich(){
+  const out=document.getElementById('bugResult');
+  out.innerHTML =
+    "Running broken code...<br>" +
+    "1️⃣ Eat sandwich 🍞<br>" +
+    "2️⃣ Take bread 🥪<br>" +
+    "<b>Oops!</b> You can’t eat before making it!";
+}
+
+/* loop dots animation */
+function playLoop(){
+  const canvas = document.getElementById('loopCanvas');
+  const ctx = canvas.getContext('2d');
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  for(let i=0;i<8;i++){
+    ctx.fillStyle = i%2 ? "#3b5cff" : "#ff6f61";
+    ctx.beginPath();
+    ctx.arc(20+i*40,60,10,0,Math.PI*2);
+    ctx.fill();
+  }
+}
+
+/* morning routine checker */
+function checkRoutine(){
+  const correct=[
+    "🛏️ Wake up",
+    "🪥 Brush teeth",
+    "🥣 Eat breakfast",
+    "🚌 Go to school"
+  ];
+  const now=[...document.querySelectorAll('#routineList li')]
+    .map(li=>li.textContent.trim());
+  const out=document.getElementById('routineResult');
+  out.textContent =
+    JSON.stringify(now)===JSON.stringify(correct)
+      ? "✅ All ready for school!"
+      : "❌ Try again to get the right order.";
+}
+
+/* flashcards */
+function flip(el){
+  const def = el.querySelector('.def');
+  if(def){ def.classList.toggle('hidden'); }
+}
+
+/* show / reset lessons for Module 1 */
+function showM1Lessons(scrollTop=true){
+  const quiz = document.getElementById('m1quiz');
+  const cards = document.getElementById('m1cards');
+  if(quiz) quiz.classList.add('hidden');
+  if(cards) cards.classList.remove('hidden');
+  m1Index = 0;
+  m1cards.forEach((c,i)=>c.classList.toggle('hidden', i!==0));
+  const bar = document.getElementById('m1bar');
+  if(bar) bar.style.width = '0%';
+  const res = document.getElementById('m1result');
+  if(res){res.textContent='';res.className='output';}
+  if(scrollTop) window.scrollTo({top:0,behavior:'smooth'});
+}
+
+/* show quiz */
+function showM1Quiz(){
+  const cards = document.getElementById('m1cards');
+  if(cards) cards.classList.add('hidden');
+  document.getElementById('m1quiz').classList.remove('hidden');
+  loadQuiz(1);
+}
+
+/* ===========================================================
+   MODULE 2 INTERACTIVITY
+   =========================================================== */
+let m2Index = 0;
+const m2cards = document.querySelectorAll('#m2cards .m2card');
+
+function nextM2(){
+  if(m2Index < m2cards.length-1){
+    m2cards[m2Index].classList.add('hidden');
+    m2Index++;
+    m2cards[m2Index].classList.remove('hidden');
+    document.getElementById('m2bar').style.width =
+      ((m2Index/m2cards.length)*100) + '%';
+  }
+}
+
+/* CARD 2 — Cat event demo */
+document.getElementById('catEvent').onclick = function(){
+  document.getElementById('catOut').textContent =
+    "😺 Meow! The event ‘click cat’ started my dance!";
+};
+
+/* CARD 3 — Loop demo */
+function playRobotLoop(){
+  const out=document.getElementById('loopOut');
+  out.innerHTML = "";
+  for(let i=1;i<=5;i++){
+    out.innerHTML += `🤖 Jump #${i}<br>`;
+  }
+  out.innerHTML += "All done! That was a loop of 5 jumps.";
+}
+
+/* CARD 4 — Condition game (score = score + 1) */
+let score = 0;
+document.getElementById('balloon').onclick = function(){
+  score = score + 1;     // +1 exactly as written in the lesson
+  updateScore();
+};
+document.getElementById('ghost').onclick = function(){
+  score = Math.max(0, score - 1); // ghost takes away 1
+  updateScore();
+};
+function updateScore(){
+  document.getElementById('scoreBox').textContent = "Score " + score;
+}
+
+/* CARD 5 — Cause/effect matching with dropdowns */
+function checkPairs(){
+  const a1 = document.getElementById('pair1').value;
+  const a2 = document.getElementById('pair2').value;
+  const a3 = document.getElementById('pair3').value;
+
+  let correct = 0;
+  if(a1 === 'Start game')   correct++;
+  if(a2 === 'Jump')         correct++;
+  if(a3 === 'Celebrate 🎉') correct++;
+
+  const out = document.getElementById('pairResult');
+  if(correct === 3){
+    out.textContent =
+      "✅ Perfect matches! Great job seeing cause and effect.";
+  }else{
+    out.textContent =
+      "❌ Some matches are mixed up — try again.";
+  }
+}
+
+/* show / reset lessons for Module 2 */
+function showM2Lessons(scrollTop=true){
+  const quiz = document.getElementById('m2quiz');
+  const cards = document.getElementById('m2cards');
+  if(quiz) quiz.classList.add('hidden');
+  if(cards) cards.classList.remove('hidden');
+  m2Index = 0;
+  m2cards.forEach((c,i)=>c.classList.toggle('hidden', i!==0));
+  const bar = document.getElementById('m2bar');
+  if(bar) bar.style.width = '0%';
+  const res = document.getElementById('m2result');
+  if(res){res.textContent='';res.className='output';}
+
+  // 🔹 reset game score when module restarts
+  score = 0;
+  updateScore();
+
+  if(scrollTop) window.scrollTo({top:0,behavior:'smooth'});
+}
+
+/* Show Module 2 quiz */
+function showM2Quiz(){
+  const cards = document.getElementById('m2cards');
+  if(cards) cards.classList.add('hidden');
+  document.getElementById('m2quiz').classList.remove('hidden');
+  loadQuiz(2);
+}
+
+/* ===========================================================
+   MODULE 3 ACTIVITY + QUIZ
+   =========================================================== */
+let m3Index = 0;
+const m3cards = document.querySelectorAll('#m3cards .m3card');
+
+function nextM3(){
+  if(m3Index < m3cards.length-1){
+    m3cards[m3Index].classList.add('hidden');
+    m3Index++;
+    m3cards[m3Index].classList.remove('hidden');
+    document.getElementById('m3bar').style.width =
+      ((m3Index/m3cards.length)*100) + '%';
+  }
+}
+
+function m3Preview(){
+  const code = document.getElementById('m3code').value;
+  const frameDoc = document.getElementById('m3frame').contentDocument;
+  frameDoc.open();
+  frameDoc.write(code);
+  frameDoc.close();
+}
+
+/* reset view for Module 3 */
+function showM3Lessons(scrollTop=true){
+  const quiz = document.getElementById('m3quiz');
+  const cards = document.getElementById('m3cards');
+  if(quiz) quiz.classList.add('hidden');
+  if(cards) cards.classList.remove('hidden');
+  const res = document.getElementById('m3result');
+  if(res){res.textContent='';res.className='output';}
+  m3Index = 0;
+  m3cards.forEach((c,i)=>c.classList.toggle('hidden', i!==0));
+  const bar = document.getElementById('m3bar');
+  if(bar) bar.style.width = '0%';
+  if(scrollTop) window.scrollTo({top:0,behavior:'smooth'});
+}
+
+/* Show Module 3 quiz */
+function showM3Quiz(){
+  const cards = document.getElementById('m3cards');
+  if(cards) cards.classList.add('hidden');
+  document.getElementById('m3quiz').classList.remove('hidden');
+  loadQuiz(3);
+}
+
+/* ===========================================================
+   FINAL EXAM (25 RANDOM QUESTIONS)
+   =========================================================== */
+let finalExamSet = [];
+
+function openFinalExam(){
+  const allComplete = [...Array(totalModules)].every((_,i)=>
+    parseInt(localStorage.getItem('module'+(i+1)+'_score') || "0",10) >= 80
+  );
+  if(!allComplete){
+    alert("Complete all modules with ≥ 80 % to unlock the Final Exam.");
+    return;
+  }
+  hideAllSections();
+  document.getElementById('finalExam').classList.remove('hidden');
+  setBreadcrumb('Final Exam');
+  buildFinalExam();
+}
+  // Strip any leading "number." from the question text
+function stripQuestionNumber(text){
+  return String(text).replace(/^\s*\d+\.\s*/, '');
+}
+
+
+function buildFinalExam(){
+  const pool = [...quizzes[1], ...quizzes[2], ...quizzes[3]];
+  if(!pool.length) return;
+
+  const sample = [];
+  while(sample.length < 25 && sample.length < pool.length){
+    const q = pool[Math.floor(Math.random()*pool.length)];
+    if(!sample.includes(q)) sample.push(q);
+  }
+  finalExamSet = sample;
+
+  const box = document.getElementById('examBox');
+  box.innerHTML = "";
+
+  sample.forEach((q,i)=>{
+    const wrap = document.createElement('div');
+    wrap.className = 'quizQ';
+
+     const title = document.createElement('b');
+  const cleanText = stripQuestionNumber(q.q);   // remove "1. ", "7. ", etc.
+  title.textContent = (i + 1) + '. ' + cleanText; // renumber as 1–25
+  wrap.appendChild(title);
+  wrap.appendChild(document.createElement('br'));
+    wrap.appendChild(document.createElement('br'));
+
+    q.a.forEach((opt,j)=>{
+      const label = document.createElement('label');
+      const input = document.createElement('input');
+      input.type = 'radio';
+      input.name = 'examQ'+i;
+      input.value = j;
+      label.appendChild(input);
+      label.appendChild(document.createTextNode(' '+opt));
+      wrap.appendChild(label);
+      wrap.appendChild(document.createElement('br'));
+    });
+
+    box.appendChild(wrap);
+  });
+
+  const res = document.getElementById('examResult');
+  if(res){
+    res.textContent = "";
+    res.className = "output";
+  }
+}
+
+function submitFinalExam(){
+  const set = finalExamSet || [];
+  if(!set.length) return;
+  let scoreCount = 0;
+  set.forEach((q,i)=>{
+    const sel = document.querySelector(`input[name=examQ${i}]:checked`);
+    if(sel && parseInt(sel.value,10) === q.c) scoreCount++;
+  });
+  const percent = Math.round((scoreCount/set.length)*100);
+  localStorage.setItem('finalExam_score',percent);
+  const res = document.getElementById('examResult');
+  res.innerHTML = `You scored ${percent}% (${scoreCount}/${set.length})`;
+  if(percent>=80){
+    res.className = 'output success';
+    res.innerHTML += ' ✅ Congratulations! Certificate unlocked.';
+    setTimeout(showCertificate,1000);
+  }else{
+    res.className = 'output fail';
+    res.innerHTML += ' ❌ Try again for 80% or higher.';
+  }
+  loadDashboard();
+}
+
+function retakeFinalExam(){
+  buildFinalExam();
+}
+
+/* ===========================================================
+   CERTIFICATE
+   =========================================================== */
+function showCertificate(){
+  hideAllSections();
+  setBreadcrumb('Certificate');
+  const name = prompt("Enter your name for the certificate:") || "Student";
+  const score = localStorage.getItem('finalExam_score') || "80";
+  document.getElementById('certName').textContent = name;
+  document.getElementById('certScore').textContent = score;
+  document.getElementById('certDate').textContent =
+    new Date().toLocaleDateString();
+  document.getElementById('certificate').classList.remove('hidden');
+}
+
+/* ===========================================================
+   INIT
+   =========================================================== */
+function init(){
+  loadDashboard();
+  setBreadcrumb('Dashboard');
+}
+init();
+</script>
+</body>
+</html>
