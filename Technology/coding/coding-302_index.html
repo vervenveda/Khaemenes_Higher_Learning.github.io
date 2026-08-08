@@ -1,0 +1,1776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coding 302 — Real Code Lab II</title>
+<style>
+:root{
+  --bg:#fdf5ff;
+  --bg-grad:linear-gradient(180deg,#ffeef7,#f7f4ff 40%,#f4fbff);
+  --ink:#111;
+  --accent:#3b5cff;
+  --accent2:#ff6f61;
+  --good:#31c46b;
+  --warn:#ffb13a;
+  --bad:#ff5a5a;
+  --radius:14px;
+  --card:#ffffff;
+}
+*{box-sizing:border-box;}
+
+body{
+  margin:0;
+  font-family:"Segoe UI",system-ui,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  background:var(--bg-grad);
+  color:var(--ink);
+}
+
+/* Header */
+header{
+  background:linear-gradient(90deg,#ff9a9e,#fad0c4,#a18cd1,#3b5cff);
+  color:white;
+  text-align:center;
+  padding:1rem 0 1.2rem;
+  font-size:1.7rem;
+  letter-spacing:.05em;
+  box-shadow:0 4px 12px rgba(0,0,0,.15);
+}
+header .subtitle{
+  font-size:.95rem;
+  margin-top:.3rem;
+  opacity:.92;
+}
+
+/* Layout */
+main{
+  max-width:960px;
+  margin:auto;
+  padding:1rem 1rem 2rem;
+}
+
+/* Breadcrumb */
+.breadcrumb{
+  background:#f0f0ff;
+  padding:8px 12px;
+  border-radius:var(--radius);
+  font-size:0.9rem;
+  margin-bottom:12px;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+.breadcrumb a{
+  color:var(--accent);
+  text-decoration:none;
+  font-weight:600;
+}
+.breadcrumb a:hover{text-decoration:underline;}
+.breadcrumb span{color:#555;}
+
+/* Card + Buttons */
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:0 8px 24px rgba(0,0,0,.08);
+  padding:1.2rem 1.3rem;
+  margin-bottom:1rem;
+  border-top:4px solid rgba(59,92,255,.2);
+}
+h2{color:var(--accent);margin-top:0;}
+
+button{
+  background:var(--accent);
+  color:#fff;
+  border:none;
+  border-radius:var(--radius);
+  padding:8px 16px;
+  cursor:pointer;
+  font-size:0.9rem;
+  font-weight:600;
+}
+button:hover{opacity:.9;}
+button.secondary{
+  background:#ffbe3d;
+  color:#4a2800;
+}
+button.ghost{
+  background:transparent;
+  color:var(--accent);
+  border:1px solid rgba(59,92,255,.35);
+}
+button.ghost:hover{
+  background:rgba(59,92,255,.08);
+}
+
+/* Back button inside modules */
+.back-btn{
+  background:transparent;
+  border:none;
+  color:var(--accent);
+  font-size:0.85rem;
+  cursor:pointer;
+  margin-bottom:6px;
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  padding:0;
+}
+.back-btn:hover{text-decoration:underline;}
+
+/* Hidden utility */
+.hidden{display:none !important;}
+
+/* Progress bar */
+.progress{
+  height:10px;
+  background:#e0e2f5;
+  border-radius:5px;
+  overflow:hidden;
+  margin-top:4px;
+}
+.bar{
+  height:100%;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  width:0;
+  transition:width .4s ease;
+}
+.locked{
+  opacity:.4;
+}
+
+/* Lesson cards */
+.m1card,.m2card,.m3card,.m4card,.m5card{
+  padding:8px 4px 10px;
+}
+
+/* Quiz + outputs */
+.quizQ{
+  margin:8px 0;
+  padding:6px 8px;
+  border-radius:8px;
+  background:#f9f7ff;
+}
+.output{
+  margin-top:10px;
+  min-height:40px;
+  padding:6px 0;
+}
+.success{color:var(--good);}
+.fail{color:var(--bad);}
+
+/* Flashcards (optional) */
+.flash{
+  background:#fff7d6;
+  border-radius:10px;
+  padding:8px;
+  text-align:center;
+  cursor:pointer;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+  font-size:0.9rem;
+}
+.flash .def{display:block;margin-top:4px;color:#444;}
+.flash .def.hidden{display:none;}
+
+/* Simple inputs */
+select,input[type="number"],input[type="text"]{
+  padding:4px 8px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  font-size:0.9rem;
+}
+
+/* Lists in activities */
+ul{margin:0 0 6px 1.1rem;}
+li{margin:2px 0;}
+
+/* Sandbox styling */
+.sandbox{
+  margin-top:8px;
+  border-radius:10px;
+  background:#f5f6ff;
+  padding:10px;
+}
+.sandbox-toggles{
+  display:inline-flex;
+  border-radius:999px;
+  background:#e1e3ff;
+  padding:2px;
+  margin-bottom:8px;
+}
+.sandbox-toggle{
+  border:none;
+  background:transparent;
+  font-size:0.8rem;
+  padding:4px 10px;
+  border-radius:999px;
+  cursor:pointer;
+  color:#333;
+}
+.sandbox-toggle.active{
+  background:#fff;
+  color:var(--accent);
+  box-shadow:0 1px 4px rgba(0,0,0,.12);
+}
+
+.sandbox-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:8px;
+}
+@media (min-width:720px){
+  .sandbox-grid{grid-template-columns:1fr 1fr;}
+}
+
+.sandbox-lang-panel{
+  background:#ffffff;
+  border-radius:10px;
+  border:1px solid #d0d4ff;
+  padding:8px;
+  font-size:0.85rem;
+  opacity:.7;
+}
+.sandbox-lang-panel.active{
+  opacity:1;
+  border-color:var(--accent);
+  box-shadow:0 0 0 2px rgba(59,92,255,.12);
+}
+.sandbox-lang-panel h4{
+  margin:0 0 4px;
+  font-size:0.9rem;
+  color:var(--accent);
+}
+
+.sandbox textarea{
+  width:100%;
+  border-radius:8px;
+  border:1px solid #c5c7f5;
+  font-family:"JetBrains Mono","Consolas",monospace;
+  font-size:0.85rem;
+  padding:6px;
+  min-height:120px;
+}
+
+.sandbox-output{
+  background:#050608;
+  color:#f5f5f5;
+  border-radius:8px;
+  padding:6px 8px;
+  font-family:"JetBrains Mono","Consolas",monospace;
+  min-height:40px;
+  white-space:pre-wrap;
+  margin-top:6px;
+}
+
+pre.codeblock{
+  white-space:pre;
+  overflow-x:auto;
+  font-family:"JetBrains Mono","Consolas",monospace;
+  font-size:0.85rem;
+  background:#0f1020;
+  color:#f5f5f5;
+  border-radius:8px;
+  padding:6px 8px;
+}
+
+/* Responsive tweaks */
+@media (max-width:600px){
+  header{font-size:1.4rem;}
+  .card{padding:1rem;}
+}
+</style>
+</head>
+<body>
+<header>
+  🚀 Coding 302 — Real Code Lab II
+  <div class="subtitle">Level up your JavaScript and Python by reading real code, spotting patterns, and building tiny apps.</div>
+</header>
+
+<main id="app">
+
+  <!-- Breadcrumb -->
+  <nav id="breadcrumb" class="breadcrumb">
+    <a href="#" onclick="goHome();return false;">🏠 Class Hub</a>
+    <span id="breadcrumbTrail">/ Dashboard</span>
+  </nav>
+
+  <!-- DASHBOARD -->
+  <section id="dashboard" class="card">
+    <h2>Progress Dashboard</h2>
+    <p>Welcome to <b>Coding 302</b>! Complete all <b>5 modules</b> with at least <b>80%</b> to unlock the Final Exam and your certificate.</p>
+    <div id="modulesList"></div>
+    <button class="ghost" onclick="resetProgress()">Reset Progress</button>
+  </section>
+
+  <!-- ===========================
+       MODULE 1 — VARIABLES & DATA TYPES (LEVEL UP)
+       =========================== -->
+  <section id="module1" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>Module 1 — Variables & Data Types (Level Up)</h2>
+    <p>We’ll go a little deeper with variables and types, focusing on predicting what code will do before we run it.</p>
+
+    <div style="background:#eee;border-radius:8px;overflow:hidden;height:10px;margin:10px 0;">
+      <div id="m1bar" style="height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0%;transition:width .4s;"></div>
+    </div>
+
+    <div id="m1cards">
+      <!-- CARD 1 -->
+      <div class="m1card">
+        <h3>1 — Quick Review: Updating Variables</h3>
+        <p>Imagine this code:</p>
+        <pre style="background:#f5f5ff;padding:8px;border-radius:8px;">
+let score = 10;
+score += 5;
+score -= 3;</pre>
+        <p>Before you run it, try to <b>predict</b> the final value of <code>score</code>.</p>
+        <button onclick="nextModule(1)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="m1card hidden">
+        <h3>2 — Variables in JavaScript and Python</h3>
+        <p>Same idea, different syntax:</p>
+        <pre style="background:#f5f5ff;padding:8px;border-radius:8px;">
+// JavaScript
+let coins = 3;
+coins = coins * 2 + 1;</pre>
+        <pre style="background:#f5f5ff;padding:8px;border-radius:8px;margin-top:6px;">
+# Python
+coins = 3
+coins = coins * 2 + 1</pre>
+        <p>Try to work out the final value of <code>coins</code> in your head.</p>
+        <button onclick="nextModule(1)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="m1card hidden">
+        <h3>3 — Types Still Matter</h3>
+        <p>JavaScript and Python both have numbers, strings, and booleans:</p>
+        <ul>
+          <li>Number: <code>7</code>, <code>3.14</code></li>
+          <li>String: <code>'hello'</code>, <code>'42'</code></li>
+          <li>Boolean: <code>true</code> / <code>false</code> in JS, <code>True</code> / <code>False</code> in Python</li>
+        </ul>
+        <p><code>typeof</code> in JavaScript tells you the type:</p>
+        <pre style="background:#f5f5ff;padding:8px;border-radius:8px;">
+typeof 7;      // "number"
+typeof '7';    // "string"</pre>
+        <button onclick="nextModule(1)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 4 — Variable Lab -->
+      <div class="m1card hidden">
+        <h3>4 — Variable Lab</h3>
+        <p>Teach the computer a little about you. We’ll turn your answers into example variables.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:8px 0;">
+          <div>
+            <label>Your name:<br>
+              <input id="m1Name" type="text" placeholder="Alex">
+            </label>
+          </div>
+          <div>
+            <label>Favorite number:<br>
+              <input id="m1Num" type="number" placeholder="7">
+            </label>
+          </div>
+        </div>
+        <button onclick="runVarLab()">Run Variable Lab</button>
+        <div id="m1VarOut" class="output"></div>
+        <button onclick="nextModule(1)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 5 — Sandbox + Quiz -->
+      <div class="m1card hidden">
+        <h3>5 — Profile Sandbox</h3>
+        <p>This sandbox builds a tiny <b>profile</b> object in JavaScript, with a matching Python version beside it.</p>
+        <div class="sandbox">
+          <div class="sandbox-toggles">
+            <button id="m1jsBtn" class="sandbox-toggle active" type="button" onclick="setSandboxActive(1,'js')">JavaScript</button>
+            <button id="m1pyBtn" class="sandbox-toggle" type="button" onclick="setSandboxActive(1,'py')">Python</button>
+          </div>
+          <div class="sandbox-grid">
+            <div id="m1jsPanel" class="sandbox-lang-panel active">
+              <h4>JavaScript Profile</h4>
+<textarea id="m1jsCode">// Build a small profile object
+function makeProfile(name, favoriteNumber){
+  return {
+    name: name,
+    favoriteNumber: favoriteNumber,
+    luckyDouble: favoriteNumber * 2
+  };
+}
+
+const profile = makeProfile('Jenny', 7);
+console.log('Profile object:', profile);
+console.log('Lucky double:', profile.luckyDouble);</textarea>
+              <button type="button" style="margin-top:6px;" onclick="runSandbox(1)">Run ▶</button>
+              <div id="m1jsOut" class="sandbox-output">(console.log output will appear here)</div>
+            </div>
+            <div id="m1pyPanel" class="sandbox-lang-panel">
+              <h4>Python Profile (reference)</h4>
+              <pre id="m1pyCode" class="codeblock">def make_profile(name, favorite_number):
+    return {
+        "name": name,
+        "favorite_number": favorite_number,
+        "lucky_double": favorite_number * 2,
+    }
+
+profile = make_profile("Jenny", 7)
+print("Profile dict:", profile)
+print("Lucky double:", profile["lucky_double"])</pre>
+            </div>
+          </div>
+        </div>
+        <p style="margin-top:10px;">When you’re ready, take the quiz for this module.</p>
+        <button type="button" onclick="showModuleQuiz(1)">Start Quiz 🧠</button>
+      </div>
+    </div>
+
+    <!-- QUIZ -->
+    <div id="m1quiz" class="hidden">
+      <h3>Module 1 Quiz (5 Questions)</h3>
+      <div id="m1quizBox"></div>
+      <button onclick="submitQuiz(1)">Submit Quiz</button>
+      <button type="button" class="ghost" onclick="retestQuiz(1)">Retake Quiz</button>
+      <button type="button" class="ghost" onclick="showModuleLessons(1)">⬅ Back to Lessons</button>
+      <div id="m1result" class="output"></div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       MODULE 2 — LOGIC & CONDITIONS (LEVEL UP)
+       =========================== -->
+  <section id="module2" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>Module 2 — Logic & Conditions (Level Up)</h2>
+    <p>Now we’ll combine conditions into more powerful rules and tiny game-like decisions.</p>
+
+    <div style="background:#eee;border-radius:8px;overflow:hidden;height:10px;margin:10px 0;">
+      <div id="m2bar" style="height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0%;transition:width .4s;"></div>
+    </div>
+
+    <div id="m2cards">
+      <!-- CARD 1 -->
+      <div class="m2card">
+        <h3>1 — Combined Conditions</h3>
+        <p>We can combine comparisons with <code>&amp;&amp;</code> (“and”) and <code>||</code> (“or”).</p>
+        <pre style="background:#f5f5ff;padding:8px;border-radius:8px;">
+let score = 12;
+let lives = 1;
+
+if (score >= 10 && lives > 0) {
+  console.log('Level up');
+} else {
+  console.log('Game over');
+}</pre>
+        <p>Think about which branch will run before you execute it.</p>
+        <button onclick="nextModule(2)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="m2card hidden">
+        <h3>2 — Ranges and “Between” Logic</h3>
+        <p>Checking if a number is between two values comes up all the time:</p>
+        <pre style="background:#f5f5ff;padding:8px;border-radius:8px;">
+// JavaScript
+if (age >= 13 && age <= 19) {
+  console.log('Teen');
+}</pre>
+        <pre style="background:#f5f5ff;padding:8px;border-radius:8px;margin-top:6px;">
+# Python
+if age >= 13 and age <= 19:
+    print('Teen')</pre>
+        <button onclick="nextModule(2)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="m2card hidden">
+        <h3>3 — Else If Chains</h3>
+        <p>Multiple branches let us choose exactly one message:</p>
+        <pre style="background:#f5f5ff;padding:8px;border-radius:8px;">
+// JavaScript
+if (score >= 50) {
+  console.log('Legend');
+} else if (score >= 20) {
+  console.log('Powering up');
+} else {
+  console.log('Keep going');
+}</pre>
+        <pre style="background:#f5f5ff;padding:8px;border-radius:8px;margin-top:6px;">
+# Python
+if score >= 50:
+    print('Legend')
+elif score >= 20:
+    print('Powering up')
+else:
+    print('Keep going')</pre>
+        <button onclick="nextModule(2)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 4 — Decision Lab -->
+      <div class="m2card hidden">
+        <h3>4 — Decision Lab</h3>
+        <p>Choose the weather and see what our “virtual coach” suggests:</p>
+        <label>Weather:
+          <select id="m2Weather">
+            <option value="">-- choose --</option>
+            <option value="sunny">Sunny</option>
+            <option value="rain">Rainy</option>
+            <option value="snow">Snowy</option>
+          </select>
+        </label>
+        <button onclick="runDecisionLab()">Run Decision</button>
+        <div id="m2DecisionOut" class="output"></div>
+        <button onclick="nextModule(2)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 5 — Sandbox + Quiz -->
+      <div class="m2card hidden">
+        <h3>5 — Player State Sandbox</h3>
+        <p>This sandbox uses a more advanced <b>if / else if</b> chain to describe a player.</p>
+        <div class="sandbox">
+          <div class="sandbox-toggles">
+            <button id="m2jsBtn" class="sandbox-toggle active" type="button" onclick="setSandboxActive(2,'js')">JavaScript</button>
+            <button id="m2pyBtn" class="sandbox-toggle" type="button" onclick="setSandboxActive(2,'py')">Python</button>
+          </div>
+          <div class="sandbox-grid">
+            <div id="m2jsPanel" class="sandbox-lang-panel active">
+              <h4>JavaScript Player Status</h4>
+<textarea id="m2jsCode">function describePlayer(score, lives){
+  if (lives <= 0) {
+    console.log('Game over');
+  } else if (score >= 50) {
+    console.log('Legend status!');
+  } else if (score >= 20) {
+    console.log('Powering up');
+  } else {
+    console.log('Keep going!');
+  }
+}
+
+describePlayer(24, 1);
+describePlayer(55, 2);
+describePlayer(5, 0);</textarea>
+              <button type="button" style="margin-top:6px;" onclick="runSandbox(2)">Run ▶</button>
+              <div id="m2jsOut" class="sandbox-output">(console.log output will appear here)</div>
+            </div>
+            <div id="m2pyPanel" class="sandbox-lang-panel">
+              <h4>Python Player Status (reference)</h4>
+              <pre id="m2pyCode" class="codeblock">def describe_player(score, lives):
+    if lives <= 0:
+        print("Game over")
+    elif score >= 50:
+        print("Legend status!")
+    elif score >= 20:
+        print("Powering up")
+    else:
+        print("Keep going!")
+
+describe_player(24, 1)
+describe_player(55, 2)
+describe_player(5, 0)</pre>
+            </div>
+          </div>
+        </div>
+        <p style="margin-top:10px;">Ready to test your logic?</p>
+        <button type="button" onclick="showModuleQuiz(2)">Start Quiz 🧠</button>
+      </div>
+    </div>
+
+    <!-- QUIZ -->
+    <div id="m2quiz" class="hidden">
+      <h3>Module 2 Quiz (5 Questions)</h3>
+      <div id="m2quizBox"></div>
+      <button onclick="submitQuiz(2)">Submit Quiz</button>
+      <button type="button" class="ghost" onclick="retestQuiz(2)">Retake Quiz</button>
+      <button type="button" class="ghost" onclick="showModuleLessons(2)">⬅ Back to Lessons</button>
+      <div id="m2result" class="output"></div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       MODULE 3 — LOOPS & ARRAYS (LEVEL UP)
+       =========================== -->
+  <section id="module3" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>Module 3 — Loops & Arrays (Level Up)</h2>
+    <p>We’ll use loops with arrays and lists to analyze scores and patterns more deeply.</p>
+
+    <div style="background:#eee;border-radius:8px;overflow:hidden;height:10px;margin:10px 0;">
+      <div id="m3bar" style="height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0%;transition:width .4s;"></div>
+    </div>
+
+    <div id="m3cards">
+      <!-- CARD 1 -->
+      <div class="m3card">
+        <h3>1 — Arrays / Lists Recap</h3>
+        <p>An array (JS) or list (Python) holds several values:</p>
+        <pre style="background:#f5f5ff;padding:8px;border-radius:8px;">
+// JavaScript
+const scores = [8, 10, 6, 9];</pre>
+        <pre style="background:#f5f5ff;padding:8px;border-radius:8px;margin-top:6px;">
+# Python
+scores = [8, 10, 6, 9]</pre>
+        <p>We’ll lean on loops to walk this data and compute interesting facts.</p>
+        <button onclick="nextModule(3)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="m3card hidden">
+        <h3>2 — Summing with For Loops</h3>
+        <pre style="background:#f5f5ff;padding:8px;border-radius:8px;">
+// JavaScript
+let sum = 0;
+for (let i = 0; i < scores.length; i++) {
+  sum += scores[i];
+}</pre>
+        <pre style="background:#f5f5ff;padding:8px;border-radius:8px;margin-top:6px;">
+# Python
+total = 0
+for s in scores:
+    total += s</pre>
+        <p>Try to mentally follow the loop.</p>
+        <button onclick="nextModule(3)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 3 — Loop Pattern Lab -->
+      <div class="m3card hidden">
+        <h3>3 — Loop Pattern Lab</h3>
+        <p>How many stars should we draw?</p>
+        <label>Number of stars:
+          <input id="m3Count" type="number" min="1" max="30" value="5">
+        </label>
+        <button onclick="runLoopLab()">Build Pattern</button>
+        <div id="m3PatternOut" class="output"></div>
+        <button onclick="nextModule(3)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="m3card hidden">
+        <h3>4 — Averages & Best Scores</h3>
+        <p>We often want to know:</p>
+        <ul>
+          <li>the total (sum of all scores)</li>
+          <li>the average (total divided by how many)</li>
+          <li>the best score (highest value)</li>
+        </ul>
+        <p>Loops make it easy to compute all three in one pass.</p>
+        <button onclick="nextModule(3)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 5 — Sandbox + Quiz -->
+      <div class="m3card hidden">
+        <h3>5 — Advanced Scoreboard Sandbox</h3>
+        <p>Here we compute total, average, and count how many scores are passing.</p>
+        <div class="sandbox">
+          <div class="sandbox-toggles">
+            <button id="m3jsBtn" class="sandbox-toggle active" type="button" onclick="setSandboxActive(3,'js')">JavaScript</button>
+            <button id="m3pyBtn" class="sandbox-toggle" type="button" onclick="setSandboxActive(3,'py')">Python</button>
+          </div>
+          <div class="sandbox-grid">
+            <div id="m3jsPanel" class="sandbox-lang-panel active">
+              <h4>JavaScript Scoreboard</h4>
+<textarea id="m3jsCode">const scores = [8, 10, 6, 9, 7];
+
+let sum = 0;
+let passed = 0;
+for (let i = 0; i < scores.length; i++) {
+  const s = scores[i];
+  sum += s;
+  if (s >= 7) {
+    passed++;
+  }
+}
+const avg = sum / scores.length;
+
+console.log('Scores:', scores.join(', '));
+console.log('Total:', sum);
+console.log('Average:', avg.toFixed(2));
+console.log('Passing (7 or more):', passed);</textarea>
+              <button type="button" style="margin-top:6px;" onclick="runSandbox(3)">Run ▶</button>
+              <div id="m3jsOut" class="sandbox-output">(console.log output will appear here)</div>
+            </div>
+            <div id="m3pyPanel" class="sandbox-lang-panel">
+              <h4>Python Scoreboard (reference)</h4>
+              <pre id="m3pyCode" class="codeblock">scores = [8, 10, 6, 9, 7]
+
+total = 0
+passed = 0
+for s in scores:
+    total += s
+    if s >= 7:
+        passed += 1
+
+avg = total / len(scores)
+
+print("Scores:", scores)
+print("Total:", total)
+print("Average:", round(avg, 2))
+print("Passing (7 or more):", passed)</pre>
+            </div>
+          </div>
+        </div>
+        <p style="margin-top:10px;">Time to quiz your loops & arrays.</p>
+        <button type="button" onclick="showModuleQuiz(3)">Start Quiz 🧠</button>
+      </div>
+    </div>
+
+    <!-- QUIZ -->
+    <div id="m3quiz" class="hidden">
+      <h3>Module 3 Quiz (5 Questions)</h3>
+      <div id="m3quizBox"></div>
+      <button onclick="submitQuiz(3)">Submit Quiz</button>
+      <button type="button" class="ghost" onclick="retestQuiz(3)">Retake Quiz</button>
+      <button type="button" class="ghost" onclick="showModuleLessons(3)">⬅ Back to Lessons</button>
+      <div id="m3result" class="output"></div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       MODULE 4 — FUNCTIONS & REUSE (LEVEL UP)
+       =========================== -->
+  <section id="module4" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>Module 4 — Functions & Reuse (Level Up)</h2>
+    <p>Functions become even more powerful when we use them to organise repeated logic.</p>
+
+    <div style="background:#eee;border-radius:8px;overflow:hidden;height:10px;margin:10px 0;">
+      <div id="m4bar" style="height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0%;transition:width .4s;"></div>
+    </div>
+
+    <div id="m4cards">
+      <!-- CARD 1 -->
+      <div class="m4card">
+        <h3>1 — Functions as Building Blocks</h3>
+        <p>A function wraps a job into a reusable piece:</p>
+        <pre style="background:#f5f5ff;padding:8px;border-radius:8px;">
+// JavaScript
+function triple(x) {
+  return x * 3;
+}</pre>
+        <pre style="background:#f5f5ff;padding:8px;border-radius:8px;margin-top:6px;">
+# Python
+def triple(x):
+    return x * 3</pre>
+        <button onclick="nextModule(4)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="m4card hidden">
+        <h3>2 — Parameters & Return Values</h3>
+        <p>Inputs are called <b>parameters</b>, and <code>return</code> sends a value back.</p>
+        <pre style="background:#f5f5ff;padding:8px;border-radius:8px;">
+// JavaScript
+function add(a, b) {
+  return a + b;
+}</pre>
+        <pre style="background:#f5f5ff;padding:8px;border-radius:8px;margin-top:6px;">
+# Python
+def add(a, b):
+    return a + b</pre>
+        <button onclick="nextModule(4)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 3 — Function Lab -->
+      <div class="m4card hidden">
+        <h3>3 — Function Lab</h3>
+        <p>Send a number into two simple functions: <code>square</code> and <code>double</code>.</p>
+        <label>Number:
+          <input id="m4Number" type="number" value="4">
+        </label>
+        <button onclick="runFunctionLab()">Run Functions</button>
+        <div id="m4FuncOut" class="output"></div>
+        <button onclick="nextModule(4)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="m4card hidden">
+        <h3>4 — Organising Logic</h3>
+        <p>Any logic you copy-paste more than once is a great candidate for a function.</p>
+        <ul>
+          <li>One place to change it later</li>
+          <li>One place to test carefully</li>
+          <li>Shorter, clearer main programs</li>
+        </ul>
+        <button onclick="nextModule(4)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 5 — Sandbox + Quiz -->
+      <div class="m4card hidden">
+        <h3>5 — Dice Statistics Sandbox</h3>
+        <p>This sandbox rolls some dice and counts how often each face appears.</p>
+        <div class="sandbox">
+          <div class="sandbox-toggles">
+            <button id="m4jsBtn" class="sandbox-toggle active" type="button" onclick="setSandboxActive(4,'js')">JavaScript</button>
+            <button id="m4pyBtn" class="sandbox-toggle" type="button" onclick="setSandboxActive(4,'py')">Python</button>
+          </div>
+          <div class="sandbox-grid">
+            <div id="m4jsPanel" class="sandbox-lang-panel active">
+              <h4>JavaScript Dice Stats</h4>
+<textarea id="m4jsCode">function rollDie(sides) {
+  return Math.floor(Math.random() * sides) + 1;
+}
+
+function rollMany(times, sides) {
+  const results = [];
+  for (let i = 0; i < times; i++) {
+    results.push(rollDie(sides));
+  }
+  return results;
+}
+
+function countFaces(results, sides){
+  const counts = new Array(sides).fill(0);
+  for (let i = 0; i < results.length; i++) {
+    const face = results[i];
+    counts[face - 1]++;
+  }
+  return counts;
+}
+
+const timesText = prompt('How many dice?');
+const sidesText = prompt('How many sides per die?');
+const times = Number(timesText);
+const sides = Number(sidesText);
+
+if (Number.isNaN(times) || Number.isNaN(sides) || times <= 0 || sides <= 0) {
+  console.log('Please enter valid positive numbers.');
+} else {
+  const rolls = rollMany(times, sides);
+  console.log('You rolled:', rolls.join(', '));
+  const counts = countFaces(rolls, sides);
+  console.log('Counts per face:');
+  for (let i = 0; i < counts.length; i++) {
+    console.log((i + 1) + ': ' + counts[i]);
+  }
+}</textarea>
+              <button type="button" style="margin-top:6px;" onclick="runSandbox(4)">Run ▶</button>
+              <div id="m4jsOut" class="sandbox-output">(console.log output will appear here)</div>
+            </div>
+            <div id="m4pyPanel" class="sandbox-lang-panel">
+              <h4>Python Dice Stats (reference)</h4>
+              <pre id="m4pyCode" class="codeblock">import random
+
+def roll_die(sides):
+    return random.randint(1, sides)
+
+def roll_many(times, sides):
+    results = []
+    for _ in range(times):
+        results.append(roll_die(sides))
+    return results
+
+def count_faces(results, sides):
+    counts = [0] * sides
+    for face in results:
+        counts[face - 1] += 1
+    return counts
+
+times = 5
+sides = 6
+rolls = roll_many(times, sides)
+print("You rolled:", rolls)
+counts = count_faces(rolls, sides)
+print("Counts per face:", counts)</pre>
+            </div>
+          </div>
+        </div>
+        <p style="margin-top:10px;">Ready to quiz your function skills?</p>
+        <button type="button" onclick="showModuleQuiz(4)">Start Quiz 🧠</button>
+      </div>
+    </div>
+
+    <!-- QUIZ -->
+    <div id="m4quiz" class="hidden">
+      <h3>Module 4 Quiz (5 Questions)</h3>
+      <div id="m4quizBox"></div>
+      <button onclick="submitQuiz(4)">Submit Quiz</button>
+      <button type="button" class="ghost" onclick="retestQuiz(4)">Retake Quiz</button>
+      <button type="button" class="ghost" onclick="showModuleLessons(4)">⬅ Back to Lessons</button>
+      <div id="m4result" class="output"></div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       MODULE 5 — ARRAYS & DEBUGGING (LEVEL UP)
+       =========================== -->
+  <section id="module5" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>Module 5 — Arrays & Debugging (Level Up)</h2>
+    <p>Finally, we’ll lean on arrays/lists and practice spotting bugs using real error clues.</p>
+
+    <div style="background:#eee;border-radius:8px;overflow:hidden;height:10px;margin:10px 0;">
+      <div id="m5bar" style="height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0%;transition:width .4s;"></div>
+    </div>
+
+    <div id="m5cards">
+      <!-- CARD 1 -->
+      <div class="m5card">
+        <h3>1 — Lists & Arrays</h3>
+        <p>Arrays (JS) and lists (Python) hold many values in one variable:</p>
+        <pre style="background:#f5f5ff;padding:8px;border-radius:8px;">
+// JavaScript
+const tasks = ['code', 'draw', 'read'];</pre>
+        <pre style="background:#f5f5ff;padding:8px;border-radius:8px;margin-top:6px;">
+# Python
+tasks = ['code', 'draw', 'read']</pre>
+        <button onclick="nextModule(5)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="m5card hidden">
+        <h3>2 — Indexes & Access</h3>
+        <p>Most languages start indexes at 0:</p>
+        <ul>
+          <li><code>tasks[0]</code> → first item</li>
+          <li><code>tasks[1]</code> → second item</li>
+          <li><code>tasks[2]</code> → third item</li>
+        </ul>
+        <p>Off-by-one mistakes (looping too far) are a very common bug.</p>
+        <button onclick="nextModule(5)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="m5card hidden">
+        <h3>3 — Debugging Toolkit</h3>
+        <p>A <b>bug</b> is a mistake in code. <b>Debugging</b> is how we find and fix those mistakes.</p>
+        <ul>
+          <li>Read error messages carefully.</li>
+          <li>Use the console or print statements to see values.</li>
+          <li>Change one thing at a time.</li>
+          <li>Explain the code out loud (“rubber duck debugging”).</li>
+        </ul>
+        <button onclick="nextModule(5)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 4 — Bug Hunt -->
+      <div class="m5card hidden">
+        <h3>4 — Mini Bug Hunt</h3>
+        <p>Which line has the bug?</p>
+        <pre style="background:#f5f5ff;padding:8px;border-radius:8px;">
+A) let total = 0;
+B) total = total + score;
+C) console.log(totla);</pre>
+        <div>
+          <label><input type="radio" name="bughunt" value="A"> Line A</label><br>
+          <label><input type="radio" name="bughunt" value="B"> Line B</label><br>
+          <label><input type="radio" name="bughunt" value="C"> Line C</label><br>
+          <label><input type="radio" name="bughunt" value="?"> Not sure</label>
+        </div>
+        <button onclick="checkBugHunt()">Check Answer</button>
+        <div id="bugResult" class="output"></div>
+        <button onclick="nextModule(5)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 5 — Sandbox + Quiz -->
+      <div class="m5card hidden">
+        <h3>5 — Habit Tracker Sandbox</h3>
+        <p>Use an array of objects to build a tiny habit tracker in JavaScript. Python version sits beside it.</p>
+        <div class="sandbox">
+          <div class="sandbox-toggles">
+            <button id="m5jsBtn" class="sandbox-toggle active" type="button" onclick="setSandboxActive(5,'js')">JavaScript</button>
+            <button id="m5pyBtn" class="sandbox-toggle" type="button" onclick="setSandboxActive(5,'py')">Python</button>
+          </div>
+          <div class="sandbox-grid">
+            <div id="m5jsPanel" class="sandbox-lang-panel active">
+              <h4>JavaScript Habit Tracker</h4>
+<textarea id="m5jsCode">const habits = [];
+
+function addHabit(name, done) {
+  habits.push({ name, done });
+}
+
+function renderHabits() {
+  const lines = [];
+  for (let i = 0; i < habits.length; i++) {
+    const h = habits[i];
+    lines.push((h.done ? '✅ ' : '⬜ ') + h.name);
+  }
+  console.log(lines.join('\n'));
+}
+
+// Try it:
+addHabit('Drink water', true);
+addHabit('Practice coding', false);
+renderHabits();</textarea>
+              <button type="button" style="margin-top:6px;" onclick="runSandbox(5)">Run ▶</button>
+              <div id="m5jsOut" class="sandbox-output">(console.log output will appear here)</div>
+            </div>
+            <div id="m5pyPanel" class="sandbox-lang-panel">
+              <h4>Python Habit Tracker (reference)</h4>
+              <pre id="m5pyCode" class="codeblock">habits = []
+
+def add_habit(name, done):
+    habits.append({"name": name, "done": done})
+
+def render_habits():
+    for h in habits:
+        box = "✅ " if h["done"] else "⬜ "
+        print(box + h["name"])
+
+add_habit("Drink water", True)
+add_habit("Practice coding", False)
+render_habits()</pre>
+            </div>
+          </div>
+        </div>
+        <p style="margin-top:10px;">Last module! Ready for the quiz?</p>
+        <button type="button" onclick="showModuleQuiz(5)">Start Quiz 🧠</button>
+      </div>
+    </div>
+
+    <!-- QUIZ -->
+    <div id="m5quiz" class="hidden">
+      <h3>Module 5 Quiz (5 Questions)</h3>
+      <div id="m5quizBox"></div>
+      <button onclick="submitQuiz(5)">Submit Quiz</button>
+      <button type="button" class="ghost" onclick="retestQuiz(5)">Retake Quiz</button>
+      <button type="button" class="ghost" onclick="showModuleLessons(5)">⬅ Back to Lessons</button>
+      <div id="m5result" class="output"></div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       FINAL EXAM
+       =========================== -->
+  <section id="finalExam" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>🏁 Final Exam — Coding 302</h2>
+    <p>Answer 25 questions randomly selected from all modules. You need at least <b>80%</b> to earn your certificate.</p>
+    <div id="examBox"></div>
+    <button onclick="submitFinalExam()">Submit Final Exam</button>
+    <button type="button" class="ghost" onclick="retakeFinalExam()">Retake Final Exam</button>
+    <div id="examResult" class="output"></div>
+  </section>
+
+  <!-- ===========================
+       CERTIFICATE
+       =========================== -->
+  <section id="certificate" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>🎉 Certificate of Completion</h2>
+    <p>This certifies that:</p>
+    <h3 id="certName">__________________________</h3>
+    <p>has successfully completed <b>Coding 302 — Real Code Lab II</b> with a final score of
+       <span id="certScore">___</span> %</p>
+    <p>Date: <span id="certDate"></span></p>
+    <button onclick="window.print()">🖨️ Print Certificate</button>
+  </section>
+
+</main>
+
+<script>
+const KEY_PREFIX = 'coding302_';
+const totalModules = 5;
+
+/* ===========================================================
+   QUIZ DATA (5 MODULES × 5 QUESTIONS EACH)
+   =========================================================== */
+const quizzes = {
+  1: [
+    {
+      q: "1. What is the final value of score after this code: score starts at 10, then we add 5, then subtract 3?",
+      a: ["12", "15", "8"],
+      c: 0
+    },
+    {
+      q: "2. In Python, what is printed by this code: coins = 3; then coins = coins * 2 + 1; print(coins)?",
+      a: ["7", "6", "8"],
+      c: 0
+    },
+    {
+      q: "3. Which of these is a string value in JavaScript?",
+      a: ["\"42\"", "42", "true"],
+      c: 0
+    },
+    {
+      q: "4. What does typeof 7 return in JavaScript?",
+      a: ["\"number\"", "\"string\"", "\"boolean\""],
+      c: 0
+    },
+    {
+      q: "5. Which statement about variables is true?",
+      a: ["A variable can store different values at different times", "A variable can never change once set", "Variable names must be only one letter"],
+      c: 0
+    }
+  ],
+  2: [
+    {
+      q: "1. The condition age >= 13 && age <= 19 is true when:",
+      a: ["Age is between 13 and 19 including both ends", "Age is less than 13", "Age is greater than 19 only"],
+      c: 0
+    },
+    {
+      q: "2. In JavaScript, what does !isRaining mean?",
+      a: ["isRaining is false", "isRaining is true", "isRaining has no value"],
+      c: 0
+    },
+    {
+      q: "3. What does this print when score is 25?\n\nif (score >= 50) 'Legend'; else if (score >= 20) 'Powering up'; else 'Keep going';",
+      a: ["\"Powering up\"", "\"Legend\"", "\"Keep going\""],
+      c: 0
+    },
+    {
+      q: "4. In JavaScript, which comparison checks both value and type?",
+      a: ["===", "==", "="],
+      c: 0
+    },
+    {
+      q: "5. Which is true about if ... else?",
+      a: ["Exactly one branch runs", "Both branches always run", "Neither branch ever runs"],
+      c: 0
+    }
+  ],
+  3: [
+    {
+      q: "1. What does an array or list store?",
+      a: ["Many values in one variable", "Only one single number", "Only True or False"],
+      c: 0
+    },
+    {
+      q: "2. In a for loop that adds up scores from an array, why do we write i < scores.length?",
+      a: ["To stop before going past the last item", "To run exactly one time", "To skip the first item"],
+      c: 0
+    },
+    {
+      q: "3. What does scores.length give you in JavaScript?",
+      a: ["How many items are in scores", "The last score", "Always 0"],
+      c: 0
+    },
+    {
+      q: "4. Why do we use loops instead of repeating code by hand?",
+      a: ["To handle many items with one piece of code", "To make the code slower", "To make the code impossible to read"],
+      c: 0
+    },
+    {
+      q: "5. If we build a pattern of stars in a loop that runs 5 times, how many stars should we expect?",
+      a: ["5", "10", "1"],
+      c: 0
+    }
+  ],
+  4: [
+    {
+      q: "1. What does return x * 3; inside a function do?",
+      a: ["Sends back three times x", "Prints x three times", "Stops the whole program forever"],
+      c: 0
+    },
+    {
+      q: "2. In Python, def add(a, b): return a + b — what is add(2, 5)?",
+      a: ["7", "25", "\"2 + 5\""],
+      c: 0
+    },
+    {
+      q: "3. Which line actually calls a function named greet with 'Ana'?",
+      a: ["greet('Ana');", "function greet('Ana') { }", "let greet = 'Ana';"],
+      c: 0
+    },
+    {
+      q: "4. Why do we put repeated logic into a function?",
+      a: ["So we can reuse and change it in one place", "To make the program longer", "Because variables are not allowed"],
+      c: 0
+    },
+    {
+      q: "5. If a function only uses its parameters and returns a value, it is usually:",
+      a: ["Easy to test and reuse", "Impossible to test", "Only usable in one program"],
+      c: 0
+    }
+  ],
+  5: [
+    {
+      q: "1. In Python, which error usually means an index is too large?",
+      a: ["IndexError: list index out of range", "SyntaxError: invalid syntax", "NameError: name 'x' is not defined"],
+      c: 0
+    },
+    {
+      q: "2. In JavaScript, ReferenceError: score is not defined usually means:",
+      a: ["score was used before being declared", "You added two numbers wrong", "Your computer is out of memory"],
+      c: 0
+    },
+    {
+      q: "3. Which line is helpful when debugging?",
+      a: ["console.log('scores:', scores);", "Deleting all your code", "Ignoring error messages"],
+      c: 0
+    },
+    {
+      q: "4. In the bug hunt A/B/C example, why is line C wrong?",
+      a: ["The variable name is misspelled", "console.log cannot print numbers", "Semicolons are not allowed"],
+      c: 0
+    },
+    {
+      q: "5. Why should you change only one thing at a time when debugging?",
+      a: ["So you know which change helped or hurt", "So the bug can hide better", "So the program will always crash"],
+      c: 0
+    }
+  ]
+};
+
+/* LocalStorage helpers */
+function scoreKey(num){
+  return KEY_PREFIX + 'module' + num + '_score';
+}
+function finalKey(){
+  return KEY_PREFIX + 'finalExam_score';
+}
+
+/* Dashboard + navigation */
+const modulesList = document.getElementById('modulesList');
+const breadcrumbTrail = document.getElementById('breadcrumbTrail');
+
+function setBreadcrumb(label){
+  if(breadcrumbTrail){
+    breadcrumbTrail.textContent = ' / ' + label;
+  }
+}
+
+function hideAllSections(){
+  document.querySelectorAll('main section').forEach(s => s.classList.add('hidden'));
+}
+
+function loadDashboard(){
+  if(!modulesList) return;
+  modulesList.innerHTML = '';
+
+  for(let i=1;i<=totalModules;i++){
+    const score = parseInt(localStorage.getItem(scoreKey(i)) || '0',10);
+    const unlocked = (i===1) ||
+      (parseInt(localStorage.getItem(scoreKey(i-1)) || '0',10) >= 80);
+
+    const div = document.createElement('div');
+    div.className = 'card';
+
+    const title = document.createElement('h3');
+    title.textContent = 'Module ' + i;
+    div.appendChild(title);
+
+    const p = document.createElement('p');
+    p.textContent = 'Score: ' + score + '%';
+    div.appendChild(p);
+
+    const prog = document.createElement('div');
+    prog.className = 'progress';
+    const bar = document.createElement('div');
+    bar.className = 'bar';
+    bar.style.width = score + '%';
+    prog.appendChild(bar);
+    div.appendChild(prog);
+
+    const btn = document.createElement('button');
+    if(!unlocked){
+      btn.className = 'locked';
+      btn.textContent = 'Locked';
+      btn.onclick = function(){
+        alert('Score 80% or higher in the previous module to unlock this one.');
+      };
+    }else{
+      btn.textContent = 'Open Module';
+      btn.onclick = function(){ openModule(i); };
+    }
+    div.appendChild(btn);
+
+    modulesList.appendChild(div);
+  }
+
+  const finalScore = parseInt(localStorage.getItem(finalKey()) || '0',10);
+  const allDone = [...Array(totalModules)].every((_,i)=>
+    parseInt(localStorage.getItem(scoreKey(i+1)) || '0',10) >= 80
+  );
+
+  const examDiv = document.createElement('div');
+  examDiv.className = 'card';
+
+  const h3 = document.createElement('h3');
+  h3.textContent = 'Final Exam';
+  examDiv.appendChild(h3);
+
+  const p2 = document.createElement('p');
+  p2.textContent = 'Score: ' + finalScore + '%';
+  examDiv.appendChild(p2);
+
+  const prog2 = document.createElement('div');
+  prog2.className = 'progress';
+  const bar2 = document.createElement('div');
+  bar2.className = 'bar';
+  bar2.style.width = finalScore + '%';
+  prog2.appendChild(bar2);
+  examDiv.appendChild(prog2);
+
+  const examBtn = document.createElement('button');
+  if(!allDone){
+    examBtn.className = 'locked';
+    examBtn.textContent = 'Locked';
+    examBtn.onclick = function(){
+      alert('Complete all modules with ≥ 80% to unlock the Final Exam.');
+    };
+  }else{
+    examBtn.textContent = 'Take Final Exam';
+    examBtn.onclick = openFinalExam;
+  }
+  examDiv.appendChild(examBtn);
+
+  if(finalScore >= 80){
+    examDiv.appendChild(document.createElement('br'));
+    const certBtn = document.createElement('button');
+    certBtn.textContent = 'View Certificate';
+    certBtn.className = 'ghost';
+    certBtn.onclick = showCertificate;
+    examDiv.appendChild(certBtn);
+  }
+
+  modulesList.appendChild(examDiv);
+}
+
+function resetProgress(){
+  if(confirm('Reset all Coding 302 progress?')){
+    for(let i=1;i<=totalModules;i++){
+      localStorage.removeItem(scoreKey(i));
+    }
+    localStorage.removeItem(finalKey());
+    loadDashboard();
+  }
+}
+
+function openModule(num){
+  hideAllSections();
+  const sec = document.getElementById('module'+num);
+  if(sec) sec.classList.remove('hidden');
+  showModuleLessons(num,false);
+  setBreadcrumb('Module ' + num);
+}
+
+function goHome(){
+  hideAllSections();
+  document.getElementById('dashboard').classList.remove('hidden');
+  setBreadcrumb('Dashboard');
+  loadDashboard();
+}
+
+/* ===========================================================
+   UNIVERSAL QUIZ LOADER + RETEST
+   =========================================================== */
+function loadQuiz(num){
+  const box = document.getElementById('m'+num+'quizBox');
+  if(!box) return;
+  const original = quizzes[num];
+  if(!original) return;
+
+  const qset = original.map(q => {
+    const answers = q.a.slice();
+    for(let i=answers.length-1;i>0;i--){
+      const j = Math.floor(Math.random()*(i+1));
+      const tmp = answers[i];
+      answers[i] = answers[j];
+      answers[j] = tmp;
+    }
+    const newCorrect = answers.indexOf(q.a[q.c]);
+    return { q: q.q, a: answers, c: newCorrect };
+  });
+
+  quizzes[num] = qset;
+
+  box.innerHTML = '';
+  qset.forEach((q,qi)=>{
+    const div = document.createElement('div');
+    div.className = 'quizQ';
+
+    const title = document.createElement('b');
+    title.textContent = q.q;
+    div.appendChild(title);
+    div.appendChild(document.createElement('br'));
+
+    q.a.forEach((opt,ai)=>{
+      const label = document.createElement('label');
+      const radio = document.createElement('input');
+      radio.type = 'radio';
+      radio.name = 'm'+num+'q'+qi;
+      radio.value = String(ai);
+      label.appendChild(radio);
+      label.appendChild(document.createTextNode(' ' + opt));
+      div.appendChild(label);
+      div.appendChild(document.createElement('br'));
+    });
+
+    box.appendChild(div);
+  });
+}
+
+function submitQuiz(num){
+  const qset = quizzes[num];
+  if(!qset) return;
+  let scoreCount = 0;
+  qset.forEach((q,i)=>{
+    const sel = document.querySelector('input[name=m'+num+'q'+i+']:checked');
+    if(sel && parseInt(sel.value,10) === q.c) scoreCount++;
+  });
+  const percent = Math.round((scoreCount/qset.length)*100);
+  localStorage.setItem(scoreKey(num),percent);
+  const res = document.getElementById('m'+num+'result');
+  if(!res) return;
+  res.textContent = 'You scored ' + percent + '%';
+  res.className = 'output ' + (percent>=80 ? 'success' : 'fail');
+  if(percent>=80){
+    res.textContent += ' ✅ Next module unlocked!';
+  }else{
+    res.textContent += ' ❌ Try again for 80% or higher.';
+  }
+  loadDashboard();
+}
+
+function retestQuiz(num){
+  const res = document.getElementById('m'+num+'result');
+  if(res){
+    res.textContent = '';
+    res.className = 'output';
+  }
+  loadQuiz(num);
+}
+
+/* ===========================================================
+   MODULE STATE (GENERIC HANDLERS)
+   =========================================================== */
+const moduleConfig = {
+  1:{cardsSelector:'#m1cards .m1card', barId:'m1bar', quizId:'m1quiz', cardsId:'m1cards', resultId:'m1result'},
+  2:{cardsSelector:'#m2cards .m2card', barId:'m2bar', quizId:'m2quiz', cardsId:'m2cards', resultId:'m2result'},
+  3:{cardsSelector:'#m3cards .m3card', barId:'m3bar', quizId:'m3quiz', cardsId:'m3cards', resultId:'m3result'},
+  4:{cardsSelector:'#m4cards .m4card', barId:'m4bar', quizId:'m4quiz', cardsId:'m4cards', resultId:'m4result'},
+  5:{cardsSelector:'#m5cards .m5card', barId:'m5bar', quizId:'m5quiz', cardsId:'m5cards', resultId:'m5result'}
+};
+const moduleState = {};
+
+function setupModules(){
+  for(let num=1; num<=totalModules; num++){
+    const cfg = moduleConfig[num];
+    if(!cfg) continue;
+    const cards = document.querySelectorAll(cfg.cardsSelector);
+    moduleState[num] = {
+      index:0,
+      cards:cards,
+      barId:cfg.barId,
+      quizId:cfg.quizId,
+      cardsId:cfg.cardsId,
+      resultId:cfg.resultId
+    };
+  }
+}
+
+function nextModule(num){
+  const st = moduleState[num];
+  if(!st) return;
+  if(st.index < st.cards.length-1){
+    st.cards[st.index].classList.add('hidden');
+    st.index++;
+    st.cards[st.index].classList.remove('hidden');
+    const bar = document.getElementById(st.barId);
+    if(bar){
+      bar.style.width = ((st.index/st.cards.length)*100) + '%';
+    }
+  }
+}
+
+function showModuleLessons(num,scrollTop){
+  if(scrollTop === undefined) scrollTop = true;
+  const st = moduleState[num];
+  if(!st) return;
+  const quiz = document.getElementById(st.quizId);
+  const cardsWrap = document.getElementById(st.cardsId);
+  if(quiz) quiz.classList.add('hidden');
+  if(cardsWrap) cardsWrap.classList.remove('hidden');
+  st.index = 0;
+  st.cards.forEach((c,i)=>c.classList.toggle('hidden', i!==0));
+  const bar = document.getElementById(st.barId);
+  if(bar) bar.style.width = '0%';
+  const res = document.getElementById(st.resultId);
+  if(res){
+    res.textContent = '';
+    res.className = 'output';
+  }
+  if(scrollTop){
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+}
+
+/* Show quiz for module */
+function showModuleQuiz(num){
+  const st = moduleState[num];
+  if(!st) return;
+  const cardsWrap = document.getElementById(st.cardsId);
+  if(cardsWrap) cardsWrap.classList.add('hidden');
+  const quiz = document.getElementById(st.quizId);
+  if(quiz) quiz.classList.remove('hidden');
+  loadQuiz(num);
+}
+
+/* ===========================================================
+   FLASHCARDS (optional, not used yet)
+   =========================================================== */
+function flip(el){
+  const def = el.querySelector('.def');
+  if(def){
+    def.classList.toggle('hidden');
+  }
+}
+
+/* ===========================================================
+   LAB FUNCTIONS
+   =========================================================== */
+function runVarLab(){
+  const nameInput = document.getElementById('m1Name');
+  const numInput = document.getElementById('m1Num');
+  const out = document.getElementById('m1VarOut');
+  if(!out) return;
+  const name = (nameInput && nameInput.value.trim()) || 'Coder';
+  const numStr = numInput ? numInput.value.trim() : '';
+  let html = 'Example variables:<br>';
+  html += 'let name = "' + name + '";<br>';
+  if(numStr !== '' && !isNaN(Number(numStr))){
+    const n = Number(numStr);
+    html += 'let favoriteNumber = ' + n + ';<br>';
+    html += 'favoriteNumber + 1 → ' + (n+1);
+  }else{
+    html += 'let favoriteNumber = 7;';
+  }
+  out.innerHTML = html;
+}
+
+function runDecisionLab(){
+  const select = document.getElementById('m2Weather');
+  const out = document.getElementById('m2DecisionOut');
+  if(!select || !out) return;
+  const value = select.value;
+  let msg = '';
+  if(value === 'sunny'){
+    msg = '☀️ It is sunny — go outside and code on a laptop!';
+  }else if(value === 'rain'){
+    msg = '🌧️ Rainy day — perfect time to practice coding indoors.';
+  }else if(value === 'snow'){
+    msg = '❄️ Snowy weather — write a program to track snowflakes.';
+  }else{
+    msg = 'Choose a weather type to see the decision.';
+  }
+  out.textContent = msg;
+}
+
+function runLoopLab(){
+  const input = document.getElementById('m3Count');
+  const out = document.getElementById('m3PatternOut');
+  if(!input || !out) return;
+  let n = parseInt(input.value,10);
+  if(isNaN(n) || n <= 0){
+    out.textContent = 'Please enter a positive number.';
+    return;
+  }
+  if(n > 30) n = 30;
+  let pattern = '';
+  for(let i=0;i<n;i++){
+    pattern += '⭐';
+  }
+  out.textContent = pattern + '  (' + n + ' stars)';
+}
+
+function runFunctionLab(){
+  const input = document.getElementById('m4Number');
+  const out = document.getElementById('m4FuncOut');
+  if(!input || !out) return;
+  const n = Number(input.value);
+  if(isNaN(n)){
+    out.textContent = 'Type a number before running the function.';
+    return;
+  }
+  function square(x){ return x * x; }
+  function double(x){ return x * 2; }
+  out.textContent =
+    'square(' + n + ') = ' + square(n) + ',  ' +
+    'double(' + n + ') = ' + double(n);
+}
+
+function checkBugHunt(){
+  const out = document.getElementById('bugResult');
+  if(!out) return;
+  const sel = document.querySelector('input[name=bughunt]:checked');
+  if(!sel){
+    out.textContent = 'Choose a line first.';
+    out.className = 'output fail';
+    return;
+  }
+  if(sel.value === 'C'){
+    out.textContent = '✅ Correct! The bug is on line C: "totla" should be "total".';
+    out.className = 'output success';
+  }else{
+    out.textContent = '❌ Not quite. Look for the line where the variable name is spelled wrong.';
+    out.className = 'output fail';
+  }
+}
+
+/* ===========================================================
+   SANDBOX (JS RUNNER + LANGUAGE TOGGLES)
+   =========================================================== */
+function runSandbox(moduleNum){
+  const codeEl = document.getElementById('m'+moduleNum+'jsCode');
+  const outEl = document.getElementById('m'+moduleNum+'jsOut');
+  if(!codeEl || !outEl) return;
+  const code = codeEl.value;
+  outEl.textContent = '';
+  const logLines = [];
+  const sandboxConsole = {
+    log: (...args) => {
+      logLines.push(args.join(' '));
+    }
+  };
+  try{
+    const fn = new Function('console', code);
+    fn(sandboxConsole);
+    if(logLines.length === 0){
+      outEl.textContent = '(No console.log output.)';
+    }else{
+      outEl.textContent = logLines.join('\n');
+    }
+  }catch(err){
+    outEl.textContent = 'Error: ' + err.message;
+  }
+}
+
+function setSandboxActive(moduleNum, lang){
+  const jsPanel = document.getElementById('m'+moduleNum+'jsPanel');
+  const pyPanel = document.getElementById('m'+moduleNum+'pyPanel');
+  const jsBtn = document.getElementById('m'+moduleNum+'jsBtn');
+  const pyBtn = document.getElementById('m'+moduleNum+'pyBtn');
+  if(!jsPanel || !pyPanel || !jsBtn || !pyBtn) return;
+  if(lang === 'js'){
+    jsPanel.classList.add('active');
+    pyPanel.classList.remove('active');
+    jsBtn.classList.add('active');
+    pyBtn.classList.remove('active');
+  }else{
+    pyPanel.classList.add('active');
+    jsPanel.classList.remove('active');
+    pyBtn.classList.add('active');
+    jsBtn.classList.remove('active');
+  }
+}
+
+/* ===========================================================
+   FINAL EXAM (25 RANDOM QUESTIONS)
+   =========================================================== */
+let finalExamSet = [];
+
+function openFinalExam(){
+  const allComplete = [...Array(totalModules)].every((_,i)=>
+    parseInt(localStorage.getItem(scoreKey(i+1)) || '0',10) >= 80
+  );
+  if(!allComplete){
+    alert('Complete all modules with ≥ 80% to unlock the Final Exam.');
+    return;
+  }
+  hideAllSections();
+  const sec = document.getElementById('finalExam');
+  if(sec) sec.classList.remove('hidden');
+  setBreadcrumb('Final Exam');
+  buildFinalExam();
+}
+
+function buildFinalExam(){
+  const pool = [];
+  for(let m=1;m<=totalModules;m++){
+    if(Array.isArray(quizzes[m])){
+      pool.push(...quizzes[m]);
+    }
+  }
+  const sample = [];
+  while(sample.length < 25 && sample.length < pool.length){
+    const q = pool[Math.floor(Math.random()*pool.length)];
+    if(!sample.includes(q)){
+      sample.push(q);
+    }
+  }
+  finalExamSet = sample;
+  const box = document.getElementById('examBox');
+  if(!box) return;
+  box.innerHTML = '';
+  sample.forEach((q,qi)=>{
+    const div = document.createElement('div');
+    div.className = 'quizQ';
+    const title = document.createElement('b');
+    title.textContent = q.q;
+    div.appendChild(title);
+    div.appendChild(document.createElement('br'));
+    q.a.forEach((opt,ai)=>{
+      const label = document.createElement('label');
+      const radio = document.createElement('input');
+      radio.type = 'radio';
+      radio.name = 'examQ' + qi;
+      radio.value = String(ai);
+      label.appendChild(radio);
+      label.appendChild(document.createTextNode(' ' + opt));
+      div.appendChild(label);
+      div.appendChild(document.createElement('br'));
+    });
+    box.appendChild(div);
+  });
+  const res = document.getElementById('examResult');
+  if(res){
+    res.textContent = '';
+    res.className = 'output';
+  }
+}
+
+function submitFinalExam(){
+  const set = finalExamSet || [];
+  if(!set.length) return;
+  let scoreCount = 0;
+  set.forEach((q,i)=>{
+    const sel = document.querySelector('input[name=examQ'+i+']:checked');
+    if(sel && parseInt(sel.value,10) === q.c) scoreCount++;
+  });
+  const percent = Math.round((scoreCount/set.length)*100);
+  localStorage.setItem(finalKey(),percent);
+  const res = document.getElementById('examResult');
+  if(!res) return;
+  res.textContent = 'You scored ' + percent + '% (' + scoreCount + '/' + set.length + ')';
+  if(percent>=80){
+    res.className = 'output success';
+    res.textContent += ' ✅ Certificate unlocked!';
+    setTimeout(showCertificate,1000);
+  }else{
+    res.className = 'output fail';
+    res.textContent += ' ❌ Try again for 80% or higher.';
+  }
+  loadDashboard();
+}
+
+function retakeFinalExam(){
+  buildFinalExam();
+}
+
+/* ===========================================================
+   CERTIFICATE
+   =========================================================== */
+function showCertificate(){
+  hideAllSections();
+  setBreadcrumb('Certificate');
+  const name = prompt('Enter your name for the certificate:') || 'Student';
+  const score = localStorage.getItem(finalKey()) || '80';
+  const certName = document.getElementById('certName');
+  const certScore = document.getElementById('certScore');
+  const certDate = document.getElementById('certDate');
+  if(certName) certName.textContent = name;
+  if(certScore) certScore.textContent = score;
+  if(certDate) certDate.textContent = new Date().toLocaleDateString();
+  const sec = document.getElementById('certificate');
+  if(sec) sec.classList.remove('hidden');
+}
+
+/* ===========================================================
+   INIT
+   =========================================================== */
+function init(){
+  setupModules();
+  loadDashboard();
+  setBreadcrumb('Dashboard');
+  for(let i=1;i<=totalModules;i++){
+    setSandboxActive(i,'js');
+  }
+}
+init();
+</script>
+</body>
+</html>
