@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coding 203 — Problem Solving & Project Blueprints</title>
+<style>
+:root{
+  --bg:#fdf5ff;
+  --bg-grad:linear-gradient(180deg,#ffeef7,#f7f4ff 40%,#f4fbff);
+  --ink:#111;
+  --accent:#3b5cff;
+  --accent2:#ff6f61;
+  --good:#31c46b;
+  --warn:#ffb13a;
+  --bad:#ff5a5a;
+  --radius:14px;
+  --card:#ffffff;
+}
+*{box-sizing:border-box;}
+
+body{
+  margin:0;
+  font-family:"Segoe UI",system-ui,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  background:var(--bg-grad);
+  color:var(--ink);
+}
+
+/* Header */
+header{
+  background:linear-gradient(90deg,#ff9a9e,#fad0c4,#a18cd1,#3b5cff);
+  color:white;
+  text-align:center;
+  padding:1rem 0 1.2rem;
+  font-size:1.7rem;
+  letter-spacing:.05em;
+  box-shadow:0 4px 12px rgba(0,0,0,.15);
+}
+header .subtitle{
+  font-size:.95rem;
+  margin-top:.3rem;
+  opacity:.92;
+}
+
+/* Layout */
+main{
+  max-width:960px;
+  margin:auto;
+  padding:1rem 1rem 2rem;
+}
+
+/* Breadcrumb */
+.breadcrumb{
+  background:#f0f0ff;
+  padding:8px 12px;
+  border-radius:var(--radius);
+  font-size:0.9rem;
+  margin-bottom:12px;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+.breadcrumb a{
+  color:var(--accent);
+  text-decoration:none;
+  font-weight:600;
+}
+.breadcrumb a:hover{text-decoration:underline;}
+.breadcrumb span{color:#555;}
+
+/* Card + Buttons */
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:0 8px 24px rgba(0,0,0,.08);
+  padding:1.2rem 1.3rem;
+  margin-bottom:1rem;
+  border-top:4px solid rgba(59,92,255,.2);
+}
+h2{color:var(--accent);margin-top:0;}
+
+button{
+  background:var(--accent);
+  color:#fff;
+  border:none;
+  border-radius:var(--radius);
+  padding:8px 16px;
+  cursor:pointer;
+  font-size:0.9rem;
+  font-weight:600;
+}
+button:hover{opacity:.9;}
+button.secondary{
+  background:#ffbe3d;
+  color:#4a2800;
+}
+button.ghost{
+  background:transparent;
+  color:var(--accent);
+  border:1px solid rgba(59,92,255,.35);
+}
+button.ghost:hover{
+  background:rgba(59,92,255,.08);
+}
+
+/* Back button inside modules */
+.back-btn{
+  background:transparent;
+  border:none;
+  color:var(--accent);
+  font-size:0.85rem;
+  cursor:pointer;
+  margin-bottom:6px;
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  padding:0;
+}
+.back-btn:hover{text-decoration:underline;}
+
+/* Hidden utility */
+.hidden{display:none !important;}
+
+/* Progress bar */
+.progress{
+  height:10px;
+  background:#e0e2f5;
+  border-radius:5px;
+  overflow:hidden;
+  margin-top:4px;
+}
+.bar{
+  height:100%;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  width:0;
+  transition:width .4s ease;
+}
+.locked{
+  opacity:.4;
+  pointer-events:auto;
+}
+
+/* Lesson cards */
+.m1card,.m2card,.m3card,.m4card,.m5card{
+  padding:8px 4px 10px;
+}
+
+/* Quiz + outputs */
+.quizQ{
+  margin:8px 0;
+  padding:6px 8px;
+  border-radius:8px;
+  background:#f9f7ff;
+}
+.output{
+  margin-top:10px;
+  min-height:40px;
+  padding:6px 0;
+}
+.success{color:var(--good);}
+.fail{color:var(--bad);}
+
+/* Flashcards */
+.flash{
+  background:#fff7d6;
+  border-radius:10px;
+  padding:8px;
+  text-align:center;
+  cursor:pointer;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+  font-size:0.9rem;
+}
+.flash .def{display:block;margin-top:4px;color:#444;}
+.flash .def.hidden{display:none;}
+
+/* Simple inputs */
+select,input[type="number"],input[type="text"],textarea{
+  padding:4px 8px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  font-size:0.9rem;
+}
+
+/* Lists in activities */
+ul{margin:0 0 6px 1.1rem;}
+li{margin:2px 0;}
+
+/* Code blocks */
+pre{
+  background:#f5f5ff;
+  padding:8px;
+  border-radius:8px;
+  overflow-x:auto;
+  font-size:0.9rem;
+}
+
+/* Responsive tweaks */
+@media (max-width:600px){
+  header{font-size:1.4rem;}
+  .card{padding:1rem;}
+}
+</style>
+</head>
+<body>
+<header>
+  🧠 Coding 203 — Problem Solving & Project Blueprints
+  <div class="subtitle">Decomposition, patterns, state machines, debugging mindset, and project planning — your bridge into real projects.</div>
+</header>
+
+<main id="app">
+
+  <!-- Breadcrumb -->
+  <nav id="breadcrumb" class="breadcrumb">
+    <a href="#" onclick="goHome();return false;">🏠 Class Hub</a>
+    <span id="breadcrumbTrail">/ Dashboard</span>
+  </nav>
+
+  <!-- DASHBOARD -->
+  <section id="dashboard" class="card">
+    <h2>Progress Dashboard</h2>
+    <p>Welcome to <b>Coding 203</b>! Complete all <b>5 modules</b> with at least <b>80%</b> to unlock the Final Exam and your certificate.</p>
+    <div id="modulesList"></div>
+    <button class="ghost" onclick="resetProgress()">Reset Progress</button>
+  </section>
+
+  <!-- ===========================
+       MODULE 1 — DECOMPOSITION & PSEUDOCODE 2.0
+       =========================== -->
+  <section id="module1" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>Module 1 — Problem Decomposition & Pseudocode 2.0</h2>
+    <p>Here you’ll practice breaking big ideas into smaller steps and writing structured pseudocode.</p>
+
+    <!-- Progress bar -->
+    <div style="background:#eee;border-radius:8px;overflow:hidden;height:10px;margin:10px 0;">
+      <div id="m1bar" style="height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0%;transition:width .4s;"></div>
+    </div>
+
+    <div id="m1cards">
+      <!-- CARD 1 -->
+      <div class="m1card">
+        <h3>1 — From Messy Idea to Clear Plan</h3>
+        <p>Every project starts as a messy idea. Decomposition means:</p>
+        <ul>
+          <li>Taking a big problem and slicing it into smaller pieces.</li>
+          <li>Focusing on one tiny step at a time.</li>
+          <li>Writing down the journey in clear, ordered steps.</li>
+        </ul>
+        <p>You are learning to think like an architect of code.</p>
+        <button onclick="nextModule(1)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="m1card hidden">
+        <h3>2 — Inputs → Process → Outputs</h3>
+        <p>Many problems can be described as:</p>
+        <ul>
+          <li><b>Inputs</b> — What information do we start with?</li>
+          <li><b>Process</b> — What steps will we take?</li>
+          <li><b>Outputs</b> — What should the result look like?</li>
+        </ul>
+        <p>Example: “Homework tracker”</p>
+        <ul>
+          <li>Inputs: subject, due date, isDone?</li>
+          <li>Process: add tasks, mark them done, sort by due date</li>
+          <li>Outputs: list of tasks, “all done!” message</li>
+        </ul>
+        <button onclick="nextModule(1)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="m1card hidden">
+        <h3>3 — State Buckets</h3>
+        <p><b>State</b> is what your program needs to remember while it runs.</p>
+        <ul>
+          <li>Score in a game.</li>
+          <li>Which question the quiz is on.</li>
+          <li>Which screen the user is looking at.</li>
+        </ul>
+        <p>We often group state into <b>buckets</b> like:</p>
+        <ul>
+          <li>Player bucket — name, score, lives</li>
+          <li>UI bucket — current screen, selected tab</li>
+          <li>Data bucket — tasks, questions, inventory</li>
+        </ul>
+        <button onclick="nextModule(1)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 4 — Decomposition Lab -->
+      <div class="m1card hidden">
+        <h3>4 — Decomposition Lab</h3>
+        <p>Pick a scenario and see it broken into Inputs, Process, Outputs, and State.</p>
+        <label>Scenario:
+          <select id="m1Scenario">
+            <option value="">-- choose a scenario --</option>
+            <option value="after_school">After School Schedule Helper</option>
+            <option value="mini_game">Simple Mini Game Round</option>
+            <option value="habit_tracker">Daily Habit Tracker</option>
+          </select>
+        </label>
+        <button onclick="runDecompositionLab()">Run Decomposition</button>
+        <div id="m1DecompOut" class="output"></div>
+        <button onclick="nextModule(1)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 5 — Review & Flashcards -->
+      <div class="m1card hidden">
+        <h3>5 — Review & Vocabulary</h3>
+        <p>Tap the cards to reveal the definitions.</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;">
+          <div class="flash" onclick="flip(this)">Decomposition<br><small class="def hidden">breaking a big problem into smaller parts</small></div>
+          <div class="flash" onclick="flip(this)">Input<br><small class="def hidden">information the program receives</small></div>
+          <div class="flash" onclick="flip(this)">Process<br><small class="def hidden">steps the program takes</small></div>
+          <div class="flash" onclick="flip(this)">Output<br><small class="def hidden">the result or answer we show</small></div>
+          <div class="flash" onclick="flip(this)">State<br><small class="def hidden">what the program needs to remember</small></div>
+          <div class="flash" onclick="flip(this)">Pseudocode<br><small class="def hidden">code-like steps written in plain language</small></div>
+        </div>
+        <p style="margin-top:10px;">Ready to test your decomposition skills?</p>
+        <button onclick="showModuleQuiz(1)">Start Quiz 🧠</button>
+      </div>
+    </div>
+
+    <!-- QUIZ -->
+    <div id="m1quiz" class="hidden">
+      <h3>Module 1 Quiz (10 Questions)</h3>
+      <div id="m1quizBox"></div>
+      <button onclick="submitQuiz(1)">Submit Quiz</button>
+      <button type="button" class="ghost" onclick="retestQuiz(1)">Retake Quiz</button>
+      <button type="button" class="ghost" onclick="showModuleLessons(1)">⬅ Back to Lessons</button>
+      <div id="m1result" class="output"></div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       MODULE 2 — CORE ALGORITHM PATTERNS
+       =========================== -->
+  <section id="module2" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>Module 2 — Core Algorithm Patterns</h2>
+    <p>Now you’ll learn some reusable patterns that appear in almost every program.</p>
+
+    <div style="background:#eee;border-radius:8px;overflow:hidden;height:10px;margin:10px 0;">
+      <div id="m2bar" style="height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0%;transition:width .4s;"></div>
+    </div>
+
+    <div id="m2cards">
+      <!-- CARD 1 -->
+      <div class="m2card">
+        <h3>1 — What Is an Algorithm Pattern?</h3>
+        <p>An <b>algorithm</b> is a list of steps to solve a problem.</p>
+        <p>A <b>pattern</b> is a shape those steps repeat over and over in many programs.</p>
+        <ul>
+          <li>Count how many things match a rule.</li>
+          <li>Find the biggest or smallest value.</li>
+          <li>Filter a list to keep only good items.</li>
+        </ul>
+        <button onclick="nextModule(2)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="m2card hidden">
+        <h3>2 — Accumulate (Sum & Count)</h3>
+        <p>The <b>accumulate</b> pattern uses a variable to build up an answer:</p>
+        <pre>
+total = 0
+for each number in numbers:
+    total = total + number
+        </pre>
+        <p>We can also count:</p>
+        <pre>
+count = 0
+for each student in students:
+    if student.passed:
+        count = count + 1
+        </pre>
+        <button onclick="nextModule(2)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="m2card hidden">
+        <h3>3 — Search, Filter, and Map</h3>
+        <ul>
+          <li><b>Search</b> — find the first thing that matches a rule.</li>
+          <li><b>Filter</b> — keep only items that pass a test.</li>
+          <li><b>Map/Transform</b> — change each item into a new shape.</li>
+        </ul>
+        <pre>
+# Search
+for each item in items:
+    if item matches rule:
+        return item
+
+# Filter
+goodItems = []
+for each item in items:
+    if item matches rule:
+        add item to goodItems
+
+# Map
+newList = []
+for each item in items:
+    add transformed(item) to newList
+        </pre>
+        <button onclick="nextModule(2)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 4 — Pattern Lab -->
+      <div class="m2card hidden">
+        <h3>4 — Pattern Lab</h3>
+        <p>Pick a situation and a pattern. We’ll suggest an algorithm shape.</p>
+        <label>Situation:
+          <select id="m2Situation">
+            <option value="">-- choose --</option>
+            <option value="scores">Classroom test scores</option>
+            <option value="todo">To-do list app</option>
+            <option value="shop">Online shop cart</option>
+          </select>
+        </label>
+        <br><br>
+        <label>Pattern:
+          <select id="m2Pattern">
+            <option value="">-- choose --</option>
+            <option value="sum">Accumulate total</option>
+            <option value="count">Count matches</option>
+            <option value="search">Search for one</option>
+            <option value="filter">Filter a list</option>
+            <option value="map">Transform each item</option>
+          </select>
+        </label>
+        <button onclick="runPatternLab()">Generate Pattern Idea</button>
+        <div id="m2PatternOut" class="output"></div>
+        <button onclick="nextModule(2)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 5 — Review -->
+      <div class="m2card hidden">
+        <h3>5 — Review & Vocabulary</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;">
+          <div class="flash" onclick="flip(this)">Accumulate<br><small class="def hidden">build up a total or result</small></div>
+          <div class="flash" onclick="flip(this)">Search<br><small class="def hidden">find the first match</small></div>
+          <div class="flash" onclick="flip(this)">Filter<br><small class="def hidden">keep only matching items</small></div>
+          <div class="flash" onclick="flip(this)">Map<br><small class="def hidden">turn each item into something new</small></div>
+          <div class="flash" onclick="flip(this)">Pattern<br><small class="def hidden">a reusable shape of steps</small></div>
+          <div class="flash" onclick="flip(this)">Loop + State<br><small class="def hidden">how many patterns are built</small></div>
+        </div>
+        <p style="margin-top:10px;">Ready to quiz your pattern powers?</p>
+        <button onclick="showModuleQuiz(2)">Start Quiz 🧠</button>
+      </div>
+    </div>
+
+    <!-- QUIZ -->
+    <div id="m2quiz" class="hidden">
+      <h3>Module 2 Quiz (10 Questions)</h3>
+      <div id="m2quizBox"></div>
+      <button onclick="submitQuiz(2)">Submit Quiz</button>
+      <button type="button" class="ghost" onclick="retestQuiz(2)">Retake Quiz</button>
+      <button type="button" class="ghost" onclick="showModuleLessons(2)">⬅ Back to Lessons</button>
+      <div id="m2result" class="output"></div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       MODULE 3 — STATE MACHINES & FLOWS
+       =========================== -->
+  <section id="module3" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>Module 3 — State Machines & Multi-Step Flows</h2>
+    <p>Here you’ll learn to describe apps as states and transitions instead of chaos.</p>
+
+    <div style="background:#eee;border-radius:8px;overflow:hidden;height:10px;margin:10px 0;">
+      <div id="m3bar" style="height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0%;transition:width .4s;"></div>
+    </div>
+
+    <div id="m3cards">
+      <!-- CARD 1 -->
+      <div class="m3card">
+        <h3>1 — What Is a State Machine?</h3>
+        <p>A <b>state machine</b> is a way to describe:</p>
+        <ul>
+          <li>Which situation (state) the system is in now.</li>
+          <li>What events cause it to change to a new state.</li>
+        </ul>
+        <p>Example: a simple game might have states:</p>
+        <ul>
+          <li>START → PLAYING → PAUSED → GAME_OVER</li>
+        </ul>
+        <button onclick="nextModule(3)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="m3card hidden">
+        <h3>2 — States and Events</h3>
+        <p>Think in pairs:</p>
+        <ul>
+          <li><b>State</b> — “where we are now” (e.g. <code>HOME_SCREEN</code>).</li>
+          <li><b>Event</b> — “what just happened” (e.g. “user clicked Start”).</li>
+        </ul>
+        <p>Example flow:</p>
+        <pre>
+state = "HOME"
+
+if state is "HOME" and event is "click start":
+    state = "PLAYING"
+
+if state is "PLAYING" and event is "lose all lives":
+    state = "GAME_OVER"
+        </pre>
+        <button onclick="nextModule(3)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="m3card hidden">
+        <h3>3 — Multi-Screen Apps as State Machines</h3>
+        <p>Even simple apps can be drawn as state machines:</p>
+        <ul>
+          <li><code>HOME</code> — show buttons for “New”, “Open”, “Settings”</li>
+          <li><code>FORM</code> — user fills out a form</li>
+          <li><code>THANK_YOU</code> — show a success message</li>
+        </ul>
+        <pre>
+HOME --(click "New")--> FORM
+FORM --(submit form)--> THANK_YOU
+THANK_YOU --(click "Home")--> HOME
+        </pre>
+        <p>This style will help a lot when you design real apps later.</p>
+        <button onclick="nextModule(3)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 4 — State Machine Lab -->
+      <div class="m3card hidden">
+        <h3>4 — State Machine Lab</h3>
+        <p>Pick a scenario and we’ll sketch a simple state machine description.</p>
+        <label>Scenario:
+          <select id="m3Scenario">
+            <option value="">-- choose --</option>
+            <option value="morning">Morning Routine</option>
+            <option value="three_screen">Three-Screen App</option>
+            <option value="mini_game">Mini Game: One Level</option>
+          </select>
+        </label>
+        <button onclick="runStateMachineLab()">Build State Machine Sketch</button>
+        <div id="m3StateOut" class="output"></div>
+        <button onclick="nextModule(3)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 5 — Review -->
+      <div class="m3card hidden">
+        <h3>5 — Review & Vocabulary</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;">
+          <div class="flash" onclick="flip(this)">State<br><small class="def hidden">the current situation of the system</small></div>
+          <div class="flash" onclick="flip(this)">Event<br><small class="def hidden">something that happens and triggers change</small></div>
+          <div class="flash" onclick="flip(this)">Transition<br><small class="def hidden">moving from one state to another</small></div>
+          <div class="flash" onclick="flip(this)">State machine<br><small class="def hidden">a model of states + transitions</small></div>
+          <div class="flash" onclick="flip(this)">Flow<br><small class="def hidden">the path users move through</small></div>
+          <div class="flash" onclick="flip(this)">Diagram<br><small class="def hidden">a picture of states and arrows</small></div>
+        </div>
+        <p style="margin-top:10px;">Time to test your state-machine thinking!</p>
+        <button onclick="showModuleQuiz(3)">Start Quiz 🧠</button>
+      </div>
+    </div>
+
+    <!-- QUIZ -->
+    <div id="m3quiz" class="hidden">
+      <h3>Module 3 Quiz (10 Questions)</h3>
+      <div id="m3quizBox"></div>
+      <button onclick="submitQuiz(3)">Submit Quiz</button>
+      <button type="button" class="ghost" onclick="retestQuiz(3)">Retake Quiz</button>
+      <button type="button" class="ghost" onclick="showModuleLessons(3)">⬅ Back to Lessons</button>
+      <div id="m3result" class="output"></div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       MODULE 4 — DEBUGGING 2.0: STRATEGY & MINDSET
+       =========================== -->
+  <section id="module4" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>Module 4 — Debugging 2.0: Strategy & Mindset</h2>
+    <p>Debugging is not just fixing errors — it’s learning how to investigate.</p>
+
+    <div style="background:#eee;border-radius:8px;overflow:hidden;height:10px;margin:10px 0;">
+      <div id="m4bar" style="height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0%;transition:width .4s;"></div>
+    </div>
+
+    <div id="m4cards">
+      <!-- CARD 1 -->
+      <div class="m4card">
+        <h3>1 — Types of Bugs</h3>
+        <p>Common bugs include:</p>
+        <ul>
+          <li><b>Syntax bugs</b> — the code is written in a way the computer doesn’t understand.</li>
+          <li><b>Logic bugs</b> — the code runs but does the wrong thing.</li>
+          <li><b>Off-by-one bugs</b> — loops that go one step too far or not far enough.</li>
+        </ul>
+        <button onclick="nextModule(4)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="m4card hidden">
+        <h3>2 — Debugging Steps</h3>
+        <p>Good debuggers:</p>
+        <ul>
+          <li>Reproduce the bug on purpose.</li>
+          <li>Read error messages carefully.</li>
+          <li>Check one small area at a time.</li>
+          <li>Use logs or prints to see what the program is doing.</li>
+        </ul>
+        <button onclick="nextModule(4)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="m4card hidden">
+        <h3>3 — Tracing & Invariants</h3>
+        <p><b>Tracing</b> means walking through the code step by step and writing down how the state changes.</p>
+        <p>An <b>invariant</b> is something that should always be true (for example, “score is never negative”).</p>
+        <p>If an invariant breaks, you’re very close to the bug.</p>
+        <button onclick="nextModule(4)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 4 — Debug Mindset Lab -->
+      <div class="m4card hidden">
+        <h3>4 — Debug Mindset Lab</h3>
+        <p>Pick a situation and we’ll suggest a debugging strategy.</p>
+        <label>Bug Scenario:
+          <select id="m4Scenario">
+            <option value="">-- choose --</option>
+            <option value="crash">Game crashes with an error message.</option>
+            <option value="wrong_score">Score shows the wrong number.</option>
+            <option value="loop_hang">Program seems stuck in a loop.</option>
+          </select>
+        </label>
+        <button onclick="runDebugMindsetLab()">Suggest Strategy</button>
+        <div id="m4DebugOut" class="output"></div>
+        <button onclick="nextModule(4)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 5 — Review -->
+      <div class="m4card hidden">
+        <h3>5 — Review & Vocabulary</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;">
+          <div class="flash" onclick="flip(this)">Bug<br><small class="def hidden">a mistake in code</small></div>
+          <div class="flash" onclick="flip(this)">Debugging<br><small class="def hidden">finding and fixing bugs</small></div>
+          <div class="flash" onclick="flip(this)">Trace<br><small class="def hidden">follow the code step by step</small></div>
+          <div class="flash" onclick="flip(this)">Invariant<br><small class="def hidden">a rule that should always be true</small></div>
+          <div class="flash" onclick="flip(this)">Log / print<br><small class="def hidden">messages that show what the program is doing</small></div>
+          <div class="flash" onclick="flip(this)">Hypothesis<br><small class="def hidden">your guess about what’s going wrong</small></div>
+        </div>
+        <p style="margin-top:10px;">Ready to quiz your debugging mindset?</p>
+        <button onclick="showModuleQuiz(4)">Start Quiz 🧠</button>
+      </div>
+    </div>
+
+    <!-- QUIZ -->
+    <div id="m4quiz" class="hidden">
+      <h3>Module 4 Quiz (10 Questions)</h3>
+      <div id="m4quizBox"></div>
+      <button onclick="submitQuiz(4)">Submit Quiz</button>
+      <button type="button" class="ghost" onclick="retestQuiz(4)">Retake Quiz</button>
+      <button type="button" class="ghost" onclick="showModuleLessons(4)">⬅ Back to Lessons</button>
+      <div id="m4result" class="output"></div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       MODULE 5 — MINI PROJECT PLANNING
+       =========================== -->
+  <section id="module5" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>Module 5 — Mini Project Planning</h2>
+    <p>Now you’ll design tiny project blueprints that prepare you for real code in 301.</p>
+
+    <div style="background:#eee;border-radius:8px;overflow:hidden;height:10px;margin:10px 0;">
+      <div id="m5bar" style="height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0%;transition:width .4s;"></div>
+    </div>
+
+    <div id="m5cards">
+      <!-- CARD 1 -->
+      <div class="m5card">
+        <h3>1 — Why Plan Before Coding?</h3>
+        <p>Planning helps you:</p>
+        <ul>
+          <li>Catch problems early, before they’re buried in code.</li>
+          <li>Stay focused on the goal, not just random features.</li>
+          <li>Explain your idea clearly to friends, teachers, or teammates.</li>
+        </ul>
+        <button onclick="nextModule(5)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="m5card hidden">
+        <h3>2 — Project Blueprint Sections</h3>
+        <p>A tiny blueprint might include:</p>
+        <ul>
+          <li><b>Title</b> — name of the project.</li>
+          <li><b>One-sentence goal</b> — what it does for the user.</li>
+          <li><b>Inputs</b> — what data it needs.</li>
+          <li><b>State buckets</b> — what it must remember.</li>
+          <li><b>Main flows</b> — typical user journeys.</li>
+        </ul>
+        <button onclick="nextModule(5)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="m5card hidden">
+        <h3>3 — Example Blueprint: Quiz Engine</h3>
+        <pre>
+Title: Tiny Quiz Engine
+Goal: Let the user answer a short quiz and see their score.
+
+Inputs:
+  - List of questions (text + choices + correct answer)
+  - Player name (optional)
+
+State buckets:
+  - currentQuestionIndex
+  - score
+  - hasFinished
+
+Main flows:
+  - Start → show question → choose answer → next question
+  - After last question → show score → offer restart
+        </pre>
+        <button onclick="nextModule(5)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 4 — Project Planner Lab -->
+      <div class="m5card hidden">
+        <h3>4 — Project Planner Lab</h3>
+        <p>Describe your idea in one sentence and pick an audience.</p>
+        <label>Project idea (one line):<br>
+          <input id="m5Idea" type="text" placeholder="Example: A mood tracker that helps me log my feelings.">
+        </label>
+        <br><br>
+        <label>Audience:
+          <select id="m5Audience">
+            <option value="">-- choose --</option>
+            <option value="kids">Kids / Youth</option>
+            <option value="students">Students</option>
+            <option value="family">Family & Home</option>
+            <option value="community">Community / World</option>
+          </select>
+        </label>
+        <button onclick="runProjectPlannerLab()">Generate Blueprint Template</button>
+        <div id="m5ProjectOut" class="output"></div>
+        <button onclick="nextModule(5)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 5 — Review -->
+      <div class="m5card hidden">
+        <h3>5 — Review & Vocabulary</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;">
+          <div class="flash" onclick="flip(this)">Blueprint<br><small class="def hidden">a simple plan for a project</small></div>
+          <div class="flash" onclick="flip(this)">Goal<br><small class="def hidden">what the project does for users</small></div>
+          <div class="flash" onclick="flip(this)">User flow<br><small class="def hidden">the path a user typically takes</small></div>
+          <div class="flash" onclick="flip(this)">Scope<br><small class="def hidden">what is included (and not included)</small></div>
+          <div class="flash" onclick="flip(this)">Feature<br><small class="def hidden">a capability the app provides</small></div>
+          <div class="flash" onclick="flip(this)">Prototype<br><small class="def hidden">a first version built from your plan</small></div>
+        </div>
+        <p style="margin-top:10px;">Last module! Ready for the quiz?</p>
+        <button onclick="showModuleQuiz(5)">Start Quiz 🧠</button>
+      </div>
+    </div>
+
+    <!-- QUIZ -->
+    <div id="m5quiz" class="hidden">
+      <h3>Module 5 Quiz (10 Questions)</h3>
+      <div id="m5quizBox"></div>
+      <button onclick="submitQuiz(5)">Submit Quiz</button>
+      <button type="button" class="ghost" onclick="retestQuiz(5)">Retake Quiz</button>
+      <button type="button" class="ghost" onclick="showModuleLessons(5)">⬅ Back to Lessons</button>
+      <div id="m5result" class="output"></div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       FINAL EXAM
+       =========================== -->
+  <section id="finalExam" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>🏁 Final Exam — Coding 203</h2>
+    <p>Answer 25 questions randomly selected from all modules. You need at least <b>80%</b> to earn your certificate.</p>
+    <div id="examBox"></div>
+    <button onclick="submitFinalExam()">Submit Final Exam</button>
+    <button type="button" class="ghost" onclick="retakeFinalExam()">Retake Final Exam</button>
+    <div id="examResult" class="output"></div>
+  </section>
+
+  <!-- ===========================
+       CERTIFICATE
+       =========================== -->
+  <section id="certificate" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>🎉 Certificate of Completion</h2>
+    <p>This certifies that:</p>
+    <h3 id="certName">__________________________</h3>
+    <p>has successfully completed <b>Coding 203</b> with a final score of
+       <span id="certScore">___</span> %</p>
+    <p>Date: <span id="certDate"></span></p>
+    <button onclick="window.print()">🖨️ Print Certificate</button>
+  </section>
+
+</main>
+
+<script>
+const KEY_PREFIX = 'coding203_';
+const totalModules = 5;
+
+/* ===========================================================
+   QUIZ DATA (5 MODULES × 10 QUESTIONS EACH)
+   =========================================================== */
+const quizzes = {
+  1: [
+    {q:"1. Decomposition in coding means…",a:["breaking a big problem into smaller parts","running the code faster","copying someone else’s project"],c:0},
+    {q:"2. Which is an example of an input?",a:["the user types their name","the score on the screen","the color of the keyboard"],c:0},
+    {q:"3. Which is an example of an output?",a:["a message that says “Level complete!”","the code you wrote yesterday","your favorite snack"],c:0},
+    {q:"4. State in a program is…",a:["what the program needs to remember right now","how big the monitor is","how loud the speakers are"],c:0},
+    {q:"5. In an Input → Process → Output model, “Process” is…",a:["the steps that transform the inputs","the screen brightness","the user’s chair"],c:0},
+    {q:"6. Which description sounds most like pseudocode?",a:["For each task, if not done, show it on the list.","!@#$% random symbols","Buying snacks at the store"],c:0},
+    {q:"7. A good reason to decompose a problem is…",a:["it makes complex problems easier to understand","it makes code harder to read","it hides all the bugs"],c:0},
+    {q:"8. A “state bucket” is…",a:["a group of related things the program remembers","a folder on your desk","a trash can for old code"],c:0},
+    {q:"9. Which of these is most like a state bucket?",a:["playerName, score, lives","window size, screen brand","your bedroom wall color"],c:0},
+    {q:"10. Before writing real code, decomposition and pseudocode help you…",a:["plan clearly","avoid saving your work","forget the problem"],c:0}
+  ],
+  2: [
+    {q:"1. An algorithm pattern is…",a:["a common shape of steps used in many solutions","a special font for writing code","a drawing of a computer"],c:0},
+    {q:"2. The accumulate pattern is used to…",a:["build up a total or result over time","delete everything","make the screen brighter"],c:0},
+    {q:"3. Counting how many students passed a test is an example of…",a:["an accumulate pattern","a state machine","a syntax error"],c:0},
+    {q:"4. Searching an array until you find the first match is the…",a:["search pattern","filter pattern","map pattern"],c:0},
+    {q:"5. Keeping only the items that pass a rule is the…",a:["filter pattern","search pattern","accumulate pattern"],c:0},
+    {q:"6. Turning every name into UPPERCASE is an example of…",a:["a map/transform pattern","a search pattern","a bug"],c:0},
+    {q:"7. Most algorithm patterns combine…",a:["loops and state","music and dancing","colors and fonts"],c:0},
+    {q:"8. Learning patterns is helpful because…",a:["you can reuse thinking in many projects","you never need to test code","you don’t need to plan"],c:0},
+    {q:"9. Which pattern is best for “What is the highest score?”",a:["accumulate (max)","filter","map"],c:0},
+    {q:"10. Which pattern is best for “Give me all tasks that are not done”?",a:["filter","search","accumulate"],c:0}
+  ],
+  3: [
+    {q:"1. A state machine describes…",a:["states and transitions between them","how fast your Wi-Fi is","how many icons are on your desktop"],c:0},
+    {q:"2. A state is…",a:["the current situation the system is in","a random number","how loud the music is"],c:0},
+    {q:"3. An event is…",a:["something that happens and may cause a change","the name of a state","the size of the file"],c:0},
+    {q:"4. Moving from HOME → PLAYING when the user clicks Start is called…",a:["a transition","a bug","a syntax error"],c:0},
+    {q:"5. In a three-screen app (Home, Form, Thank You), these are examples of…",a:["states","loops","accumulators"],c:0},
+    {q:"6. In a game, “lose all lives” is most like…",a:["an event","a state","a loop"],c:0},
+    {q:"7. Drawing arrows from state to state helps you…",a:["visualize the flow of the app","change your keyboard","measure network speed"],c:0},
+    {q:"8. Thinking in states and events is helpful because…",a:["it keeps complex flows organized","it makes code messages unreadable","it removes the need for variables"],c:0},
+    {q:"9. If you are stuck on “what happens next?”, it can help to…",a:["draw the state machine or flow","delete your project","ignore the problem"],c:0},
+    {q:"10. A login screen, a main screen, and a settings screen are examples of…",a:["different states of the app","different computers","different bugs"],c:0}
+  ],
+  4: [
+    {q:"1. A bug in code is…",a:["a mistake that makes the program behave incorrectly","a special shortcut","a wallpaper design"],c:0},
+    {q:"2. A syntax bug happens when…",a:["the code breaks the language’s rules","you are bored","your monitor is dusty"],c:0},
+    {q:"3. A logic bug happens when…",a:["the code runs but does the wrong thing","the computer won’t power on","you lose your notes"],c:0},
+    {q:"4. Debugging means…",a:["finding and fixing bugs","writing your first program","changing your keyboard color"],c:0},
+    {q:"5. A good first step when you see an error message is to…",a:["read it carefully and look at the line it mentions","ignore it","unplug your computer"],c:0},
+    {q:"6. Tracing code means…",a:["following it step by step and tracking state","renaming all the variables randomly","printing more emojis"],c:0},
+    {q:"7. An invariant is…",a:["a rule that should always be true","a random variable","a file on your desktop"],c:0},
+    {q:"8. Logs or print statements are used to…",a:["see what the program is doing inside","change your wallpaper","make the fan louder"],c:0},
+    {q:"9. Changing one thing at a time while debugging helps you…",a:["know which change caused the result","confuse yourself","double the bugs"],c:0},
+    {q:"10. Asking “What do I expect here?” versus “What am I seeing?” is part of…",a:["a good debugging mindset","drawing icons","setting screen brightness"],c:0}
+  ],
+  5: [
+    {q:"1. A project blueprint is…",a:["a simple written plan for a project","the final code","a computer brand"],c:0},
+    {q:"2. A one-sentence goal should describe…",a:["what the project does for the user","how many files are in the folder","your favorite snack"],c:0},
+    {q:"3. Inputs in a project plan are…",a:["the information the app needs from the user or data","the color of the desk","the size of the mouse"],c:0},
+    {q:"4. State buckets in a plan describe…",a:["what needs to be remembered during the app","who built your computer","where you sit while coding"],c:0},
+    {q:"5. A user flow describes…",a:["the path a user typically takes through the app","the amount of electricity used","how loud the fan is"],c:0},
+    {q:"6. Planning before coding helps you…",a:["catch problems early and stay focused","forget what you were doing","avoid ever testing your code"],c:0},
+    {q:"7. A feature in an app is…",a:["a specific capability, like “save quiz results”","the temperature of the room","the brand of your keyboard"],c:0},
+    {q:"8. A prototype is…",a:["a first version built from your plan","a full final product with every feature","a drawing of a keyboard"],c:0},
+    {q:"9. Choosing an audience (kids, students, family, etc.) helps you…",a:["design better goals and features","slow the computer down","delete the blueprints"],c:0},
+    {q:"10. Good project plans are usually…",a:["short, clear, and adjustable","secret and never shared","only written after all code is done"],c:0}
+  ]
+};
+
+/* LocalStorage helpers */
+function scoreKey(num){
+  return KEY_PREFIX + 'module' + num + '_score';
+}
+function finalKey(){
+  return KEY_PREFIX + 'finalExam_score';
+}
+
+/* Dashboard + navigation */
+const modulesList = document.getElementById('modulesList');
+const breadcrumbTrail = document.getElementById('breadcrumbTrail');
+
+function setBreadcrumb(label){
+  if(breadcrumbTrail){
+    breadcrumbTrail.textContent = ' / ' + label;
+  }
+}
+
+function hideAllSections(){
+  document.querySelectorAll('main section').forEach(s => s.classList.add('hidden'));
+}
+
+function loadDashboard(){
+  if(!modulesList) return;
+  modulesList.innerHTML = '';
+
+  for(let i=1;i<=totalModules;i++){
+    const score = parseInt(localStorage.getItem(scoreKey(i)) || '0',10);
+    const unlocked = (i===1) ||
+      (parseInt(localStorage.getItem(scoreKey(i-1)) || '0',10) >= 80);
+
+    const div = document.createElement('div');
+    div.className = 'card';
+
+    const title = document.createElement('h3');
+    title.textContent = 'Module ' + i;
+    div.appendChild(title);
+
+    const p = document.createElement('p');
+    p.textContent = 'Score: ' + score + '%';
+    div.appendChild(p);
+
+    const prog = document.createElement('div');
+    prog.className = 'progress';
+    const bar = document.createElement('div');
+    bar.className = 'bar';
+    bar.style.width = score + '%';
+    prog.appendChild(bar);
+    div.appendChild(prog);
+
+    const btn = document.createElement('button');
+    if(!unlocked){
+      btn.className = 'locked';
+      btn.textContent = 'Locked';
+      btn.onclick = function(){
+        alert('Score 80% or higher in the previous module to unlock this one.');
+      };
+    }else{
+      btn.textContent = 'Open Module';
+      btn.onclick = function(){ openModule(i); };
+    }
+    div.appendChild(btn);
+
+    modulesList.appendChild(div);
+  }
+
+  const finalScore = parseInt(localStorage.getItem(finalKey()) || '0',10);
+  const allDone = [...Array(totalModules)].every((_,i)=>
+    parseInt(localStorage.getItem(scoreKey(i+1)) || '0',10) >= 80
+  );
+
+  const examDiv = document.createElement('div');
+  examDiv.className = 'card';
+
+  const h3 = document.createElement('h3');
+  h3.textContent = 'Final Exam';
+  examDiv.appendChild(h3);
+
+  const p2 = document.createElement('p');
+  p2.textContent = 'Score: ' + finalScore + '%';
+  examDiv.appendChild(p2);
+
+  const prog2 = document.createElement('div');
+  prog2.className = 'progress';
+  const bar2 = document.createElement('div');
+  bar2.className = 'bar';
+  bar2.style.width = finalScore + '%';
+  prog2.appendChild(bar2);
+  examDiv.appendChild(prog2);
+
+  const examBtn = document.createElement('button');
+  if(!allDone){
+    examBtn.className = 'locked';
+    examBtn.textContent = 'Locked';
+    examBtn.onclick = function(){
+      alert('Complete all modules with ≥ 80% to unlock the Final Exam.');
+    };
+  }else{
+    examBtn.textContent = 'Take Final Exam';
+    examBtn.onclick = openFinalExam;
+  }
+  examDiv.appendChild(examBtn);
+
+  if(finalScore >= 80){
+    examDiv.appendChild(document.createElement('br'));
+    const certBtn = document.createElement('button');
+    certBtn.textContent = 'View Certificate';
+    certBtn.className = 'ghost';
+    certBtn.onclick = showCertificate;
+    examDiv.appendChild(certBtn);
+  }
+
+  modulesList.appendChild(examDiv);
+}
+
+function resetProgress(){
+  if(confirm('Reset all Coding 203 progress?')){
+    for(let i=1;i<=totalModules;i++){
+      localStorage.removeItem(scoreKey(i));
+    }
+    localStorage.removeItem(finalKey());
+    loadDashboard();
+  }
+}
+
+function openModule(num){
+  hideAllSections();
+  const sec = document.getElementById('module'+num);
+  if(sec) sec.classList.remove('hidden');
+  showModuleLessons(num,false);
+  setBreadcrumb('Module ' + num);
+}
+
+function goHome(){
+  hideAllSections();
+  document.getElementById('dashboard').classList.remove('hidden');
+  setBreadcrumb('Dashboard');
+  loadDashboard();
+}
+
+/* ===========================================================
+   UNIVERSAL QUIZ LOADER + RETEST
+   =========================================================== */
+function loadQuiz(num){
+  const box = document.getElementById('m'+num+'quizBox');
+  if(!box) return;
+  const original = quizzes[num];
+  if(!original) return;
+
+  const qset = original.map(q => {
+    const answers = q.a.slice();
+    for(let i=answers.length-1;i>0;i--){
+      const j = Math.floor(Math.random()*(i+1));
+      const tmp = answers[i];
+      answers[i] = answers[j];
+      answers[j] = tmp;
+    }
+    const newCorrect = answers.indexOf(q.a[q.c]);
+    return { q: q.q, a: answers, c: newCorrect };
+  });
+
+  quizzes[num] = qset;
+
+  box.innerHTML = '';
+  qset.forEach((q,qi)=>{
+    const div = document.createElement('div');
+    div.className = 'quizQ';
+
+    const title = document.createElement('b');
+    title.textContent = q.q;
+    div.appendChild(title);
+    div.appendChild(document.createElement('br'));
+
+    q.a.forEach((opt,ai)=>{
+      const label = document.createElement('label');
+      const radio = document.createElement('input');
+      radio.type = 'radio';
+      radio.name = 'm'+num+'q'+qi;
+      radio.value = String(ai);
+      label.appendChild(radio);
+      label.appendChild(document.createTextNode(' ' + opt));
+      div.appendChild(label);
+      div.appendChild(document.createElement('br'));
+    });
+
+    box.appendChild(div);
+  });
+}
+
+function submitQuiz(num){
+  const qset = quizzes[num];
+  if(!qset) return;
+  let scoreCount = 0;
+  qset.forEach((q,i)=>{
+    const sel = document.querySelector('input[name=m'+num+'q'+i+']:checked');
+    if(sel && parseInt(sel.value,10) === q.c) scoreCount++;
+  });
+  const percent = Math.round((scoreCount/qset.length)*100);
+  localStorage.setItem(scoreKey(num),percent);
+  const res = document.getElementById('m'+num+'result');
+  if(!res) return;
+  res.textContent = 'You scored ' + percent + '%';
+  res.className = 'output ' + (percent>=80 ? 'success' : 'fail');
+  if(percent>=80){
+    res.textContent += ' ✅ Next module unlocked!';
+  }else{
+    res.textContent += ' ❌ Try again for 80% or higher.';
+  }
+  loadDashboard();
+}
+
+function retestQuiz(num){
+  const res = document.getElementById('m'+num+'result');
+  if(res){
+    res.textContent = '';
+    res.className = 'output';
+  }
+  loadQuiz(num);
+}
+
+/* ===========================================================
+   MODULE STATE (GENERIC HANDLERS)
+   =========================================================== */
+const moduleConfig = {
+  1:{cardsSelector:'#m1cards .m1card', barId:'m1bar', quizId:'m1quiz', cardsId:'m1cards', resultId:'m1result'},
+  2:{cardsSelector:'#m2cards .m2card', barId:'m2bar', quizId:'m2quiz', cardsId:'m2cards', resultId:'m2result'},
+  3:{cardsSelector:'#m3cards .m3card', barId:'m3bar', quizId:'m3quiz', cardsId:'m3cards', resultId:'m3result'},
+  4:{cardsSelector:'#m4cards .m4card', barId:'m4bar', quizId:'m4quiz', cardsId:'m4cards', resultId:'m4result'},
+  5:{cardsSelector:'#m5cards .m5card', barId:'m5bar', quizId:'m5quiz', cardsId:'m5cards', resultId:'m5result'}
+};
+const moduleState = {};
+
+function setupModules(){
+  for(let num=1; num<=totalModules; num++){
+    const cfg = moduleConfig[num];
+    if(!cfg) continue;
+    const cards = document.querySelectorAll(cfg.cardsSelector);
+    moduleState[num] = {
+      index:0,
+      cards:cards,
+      barId:cfg.barId,
+      quizId:cfg.quizId,
+      cardsId:cfg.cardsId,
+      resultId:cfg.resultId
+    };
+  }
+}
+
+function nextModule(num){
+  const st = moduleState[num];
+  if(!st) return;
+  if(st.index < st.cards.length-1){
+    st.cards[st.index].classList.add('hidden');
+    st.index++;
+    st.cards[st.index].classList.remove('hidden');
+    const bar = document.getElementById(st.barId);
+    if(bar){
+  bar.style.width = (((st.index + 1)/st.cards.length)*100) + '%';
+}
+  }
+}
+
+function showModuleLessons(num,scrollTop){
+  if(scrollTop === undefined) scrollTop = true;
+  const st = moduleState[num];
+  if(!st) return;
+  const quiz = document.getElementById(st.quizId);
+  const cardsWrap = document.getElementById(st.cardsId);
+  if(quiz) quiz.classList.add('hidden');
+  if(cardsWrap) cardsWrap.classList.remove('hidden');
+  st.index = 0;
+  st.cards.forEach((c,i)=>c.classList.toggle('hidden', i!==0));
+  const bar = document.getElementById(st.barId);
+  if(bar) bar.style.width = '0%';
+  const res = document.getElementById(st.resultId);
+  if(res){
+    res.textContent = '';
+    res.className = 'output';
+  }
+  if(scrollTop){
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+}
+
+function showModuleQuiz(num){
+  const st = moduleState[num];
+  if(!st) return;
+  const cardsWrap = document.getElementById(st.cardsId);
+  if(cardsWrap) cardsWrap.classList.add('hidden');
+  const quiz = document.getElementById(st.quizId);
+  if(quiz) quiz.classList.remove('hidden');
+  loadQuiz(num);
+}
+
+/* ===========================================================
+   FLASHCARDS
+   =========================================================== */
+function flip(el){
+  const def = el.querySelector('.def');
+  if(def){
+    def.classList.toggle('hidden');
+  }
+}
+
+/* ===========================================================
+   LAB FUNCTIONS
+   =========================================================== */
+function runDecompositionLab(){
+  const select = document.getElementById('m1Scenario');
+  const out = document.getElementById('m1DecompOut');
+  if(!select || !out) return;
+  const v = select.value;
+  let html = '';
+  if(v === ''){
+    html = 'Choose a scenario first.';
+  }else if(v === 'after_school'){
+    html = '<b>After School Schedule Helper</b><br><br>';
+    html += '<b>Inputs:</b> list of activities, times, priorities<br>';
+    html += '<b>Process:</b> sort by time, check for conflicts, suggest order<br>';
+    html += '<b>Outputs:</b> neat schedule for the afternoon<br>';
+    html += '<b>State buckets:</b> current time, next activity, completed activities';
+  }else if(v === 'mini_game'){
+    html = '<b>Simple Mini Game Round</b><br><br>';
+    html += '<b>Inputs:</b> player name, difficulty level<br>';
+    html += '<b>Process:</b> start round, handle moves, update score, check win/lose<br>';
+    html += '<b>Outputs:</b> final score, “you win/lose” message<br>';
+    html += '<b>State buckets:</b> score, remaining time, player health, current level';
+  }else if(v === 'habit_tracker'){
+    html = '<b>Daily Habit Tracker</b><br><br>';
+    html += '<b>Inputs:</b> list of habits, dates, checkmarks<br>';
+    html += '<b>Process:</b> add habits, mark done, calculate streaks<br>';
+    html += '<b>Outputs:</b> streak counts, “you kept your streak!” message<br>';
+    html += '<b>State buckets:</b> today’s habits, streak for each habit, last completed date';
+  }
+  out.innerHTML = html;
+}
+
+function runPatternLab(){
+  const sit = document.getElementById('m2Situation');
+  const pat = document.getElementById('m2Pattern');
+  const out = document.getElementById('m2PatternOut');
+  if(!sit || !pat || !out) return;
+  const s = sit.value;
+  const p = pat.value;
+  if(!s || !p){
+    out.textContent = 'Choose both a situation and a pattern.';
+    return;
+  }
+  let desc = '<b>Pattern idea:</b><br>';
+  if(s === 'scores'){
+    if(p === 'sum'){
+      desc += 'Use an <b>accumulate</b> pattern to add up all scores and compute a class total or average.';
+    }else if(p === 'count'){
+      desc += 'Use a <b>count</b> pattern to loop through scores and add 1 each time a score is high enough to pass.';
+    }else if(p === 'search'){
+      desc += 'Use a <b>search</b> pattern to find the first student with a perfect score.';
+    }else if(p === 'filter'){
+      desc += 'Use a <b>filter</b> pattern to build a new list of students who need extra help.';
+    }else if(p === 'map'){
+      desc += 'Use a <b>map</b> pattern to transform raw scores into letter grades.';
+    }
+  }else if(s === 'todo'){
+    if(p === 'sum'){
+      desc += 'Use an <b>accumulate</b> pattern to count how many minutes of tasks are planned for today.';
+    }else if(p === 'count'){
+      desc += 'Use a <b>count</b> pattern to count how many tasks are done vs not done.';
+    }else if(p === 'search'){
+      desc += 'Use a <b>search</b> pattern to find the next urgent task.';
+    }else if(p === 'filter'){
+      desc += 'Use a <b>filter</b> pattern to show only today’s tasks or only unfinished tasks.';
+    }else if(p === 'map'){
+      desc += 'Use a <b>map</b> pattern to turn each raw task into a nicer display card.';
+    }
+  }else if(s === 'shop'){
+    if(p === 'sum'){
+      desc += 'Use an <b>accumulate</b> pattern to sum all item prices and compute the cart total.';
+    }else if(p === 'count'){
+      desc += 'Use a <b>count</b> pattern to count how many items are in the cart.';
+    }else if(p === 'search'){
+      desc += 'Use a <b>search</b> pattern to find a specific item in the cart by name.';
+    }else if(p === 'filter'){
+      desc += 'Use a <b>filter</b> pattern to show only items on sale or only items in a certain category.';
+    }else if(p === 'map'){
+      desc += 'Use a <b>map</b> pattern to turn raw cart items into receipt lines with tax included.';
+    }
+  }
+  out.innerHTML = desc;
+}
+
+function runStateMachineLab(){
+  const sel = document.getElementById('m3Scenario');
+  const out = document.getElementById('m3StateOut');
+  if(!sel || !out) return;
+  const v = sel.value;
+  let html = '';
+  if(v === ''){
+    html = 'Choose a scenario first.';
+  }else if(v === 'morning'){
+    html = '<b>Morning Routine State Machine</b><br><br>';
+    html += '<b>States:</b> SLEEPING → GETTING_READY → EATING → TRAVELING → AT_SCHOOL<br>';
+    html += '<b>Events:</b> alarm rings, clothes on, breakfast finished, bus arrives<br>';
+    html += '<b>Example transitions:</b><br>';
+    html += '• SLEEPING --(alarm rings)--> GETTING_READY<br>';
+    html += '• GETTING_READY --(dressed)--> EATING<br>';
+    html += '• EATING --(finish breakfast)--> TRAVELING<br>';
+    html += '• TRAVELING --(arrive)--> AT_SCHOOL';
+  }else if(v === 'three_screen'){
+    html = '<b>Three-Screen App State Machine</b><br><br>';
+    html += '<b>States:</b> HOME, FORM, THANK_YOU<br>';
+    html += '<b>Events:</b> clickStart, submitForm, clickHome<br>';
+    html += '<b>Transitions:</b><br>';
+    html += '• HOME --(clickStart)--> FORM<br>';
+    html += '• FORM --(submitForm)--> THANK_YOU<br>';
+    html += '• THANK_YOU --(clickHome)--> HOME';
+  }else if(v === 'mini_game'){
+    html = '<b>Mini Game Round State Machine</b><br><br>';
+    html += '<b>States:</b> START_MENU, PLAYING, PAUSED, GAME_OVER<br>';
+    html += '<b>Events:</b> pressPlay, pressPause, pressResume, loseAllLives, pressRestart<br>';
+    html += '<b>Transitions:</b><br>';
+    html += '• START_MENU --(pressPlay)--> PLAYING<br>';
+    html += '• PLAYING --(pressPause)--> PAUSED<br>';
+    html += '• PAUSED --(pressResume)--> PLAYING<br>';
+    html += '• PLAYING --(loseAllLives)--> GAME_OVER<br>';
+    html += '• GAME_OVER --(pressRestart)--> START_MENU';
+  }
+  out.innerHTML = html;
+}
+
+function runDebugMindsetLab(){
+  const sel = document.getElementById('m4Scenario');
+  const out = document.getElementById('m4DebugOut');
+  if(!sel || !out) return;
+  const v = sel.value;
+  let html = '';
+  if(v === ''){
+    html = 'Choose a bug scenario first.';
+  }else if(v === 'crash'){
+    html = '<b>Game crashes with an error message</b><br><br>';
+    html += '1. Reproduce the crash on purpose.<br>';
+    html += '2. Read the error message and note the file and line number.<br>';
+    html += '3. Add logs/prints before that line to inspect variable values.<br>';
+    html += '4. Form a small hypothesis, change one thing, and test again.';
+  }else if(v === 'wrong_score'){
+    html = '<b>Score shows the wrong number</b><br><br>';
+    html += '1. Trace how the score changes: when do you add or subtract?<br>';
+    html += '2. Write down an invariant, like “score must never be negative”.<br>';
+    html += '3. Use logs to print score after each update.<br>';
+    html += '4. Check if any branch (if/else) forgets to update the score correctly.';
+  }else if(v === 'loop_hang'){
+    html = '<b>Program seems stuck in a loop</b><br><br>';
+    html += '1. Look for loops where the condition might never become false.<br>';
+    html += '2. Check that the counter or state inside the loop actually changes.<br>';
+    html += '3. Add a safety check or temporary “break” to escape the loop while testing.<br>';
+    html += '4. Use logs to see how many times the loop is running.';
+  }
+  out.innerHTML = html;
+}
+
+function runProjectPlannerLab(){
+  const ideaInput = document.getElementById('m5Idea');
+  const audienceSelect = document.getElementById('m5Audience');
+  const out = document.getElementById('m5ProjectOut');
+  if(!ideaInput || !audienceSelect || !out) return;
+  const idea = ideaInput.value.trim() || 'A small app that helps me practice good habits.';
+  const audience = audienceSelect.value || 'general';
+  let who = '';
+  if(audience === 'kids') who = 'kids and younger players';
+  else if(audience === 'students') who = 'students and lifelong learners';
+  else if(audience === 'family') who = 'families at home';
+  else if(audience === 'community') who = 'your community and the wider world';
+  else who = 'people who would enjoy this idea';
+
+  let html = '<b>Project Blueprint Template</b><br><br>';
+  html += '<b>Title:</b> (Give your project a short name)<br>';
+  html += '<b>One-sentence goal:</b> ' + idea + '<br>';
+  html += '<b>Audience:</b> ' + who + '<br><br>';
+  html += '<b>Inputs:</b><br>';
+  html += '• What does the user type, choose, or upload?<br>';
+  html += '• What data does the app start with?<br><br>';
+  html += '<b>State buckets:</b><br>';
+  html += '• What needs to be remembered while the app runs?<br>';
+  html += '• Example: current screen, list of items, score, streaks<br><br>';
+  html += '<b>Main user flows:</b><br>';
+  html += '• Flow 1: How does a first-time user move through the app?<br>';
+  html += '• Flow 2: How does a returning user use it quickly?<br><br>';
+  html += '<b>Stretch ideas (optional):</b><br>';
+  html += '• What would you add later if you had more time?';
+
+  out.innerHTML = html;
+}
+
+/* ===========================================================
+   FINAL EXAM (25 RANDOM QUESTIONS)
+   =========================================================== */
+let finalExamSet = [];
+
+function openFinalExam(){
+  const allComplete = [...Array(totalModules)].every((_,i)=>
+    parseInt(localStorage.getItem(scoreKey(i+1)) || '0',10) >= 80
+  );
+  if(!allComplete){
+    alert('Complete all modules with ≥ 80% to unlock the Final Exam.');
+    return;
+  }
+  hideAllSections();
+  const sec = document.getElementById('finalExam');
+  if(sec) sec.classList.remove('hidden');
+  setBreadcrumb('Final Exam');
+  buildFinalExam();
+}
+
+function buildFinalExam(){
+  const pool = [];
+  for(let m=1;m<=totalModules;m++){
+    if(Array.isArray(quizzes[m])){
+      pool.push(...quizzes[m]);
+    }
+  }
+  const sample = [];
+  while(sample.length < 25 && sample.length < pool.length){
+    const q = pool[Math.floor(Math.random()*pool.length)];
+    if(!sample.includes(q)){
+      sample.push(q);
+    }
+  }
+  finalExamSet = sample;
+  const box = document.getElementById('examBox');
+  if(!box) return;
+  box.innerHTML = '';
+  sample.forEach((q,qi)=>{
+    const div = document.createElement('div');
+    div.className = 'quizQ';
+    const title = document.createElement('b');
+    title.textContent = q.q;
+    div.appendChild(title);
+    div.appendChild(document.createElement('br'));
+    q.a.forEach((opt,ai)=>{
+      const label = document.createElement('label');
+      const radio = document.createElement('input');
+      radio.type = 'radio';
+      radio.name = 'examQ' + qi;
+      radio.value = String(ai);
+      label.appendChild(radio);
+      label.appendChild(document.createTextNode(' ' + opt));
+      div.appendChild(label);
+      div.appendChild(document.createElement('br'));
+    });
+    box.appendChild(div);
+  });
+  const res = document.getElementById('examResult');
+  if(res){
+    res.textContent = '';
+    res.className = 'output';
+  }
+}
+
+function submitFinalExam(){
+  const set = finalExamSet || [];
+  if(!set.length) return;
+  let scoreCount = 0;
+  set.forEach((q,i)=>{
+    const sel = document.querySelector('input[name=examQ'+i+']:checked');
+    if(sel && parseInt(sel.value,10) === q.c) scoreCount++;
+  });
+  const percent = Math.round((scoreCount/set.length)*100);
+  localStorage.setItem(finalKey(),percent);
+  const res = document.getElementById('examResult');
+  if(!res) return;
+  res.textContent = 'You scored ' + percent + '% (' + scoreCount + '/' + set.length + ')';
+  if(percent>=80){
+    res.className = 'output success';
+    res.textContent += ' ✅ Certificate unlocked!';
+    setTimeout(showCertificate,1000);
+  }else{
+    res.className = 'output fail';
+    res.textContent += ' ❌ Try again for 80% or higher.';
+  }
+  loadDashboard();
+}
+
+function retakeFinalExam(){
+  buildFinalExam();
+}
+
+/* ===========================================================
+   CERTIFICATE
+   =========================================================== */
+function showCertificate(){
+  hideAllSections();
+  setBreadcrumb('Certificate');
+  const name = prompt('Enter your name for the certificate:') || 'Student';
+  const score = localStorage.getItem(finalKey()) || '80';
+  const certName = document.getElementById('certName');
+  const certScore = document.getElementById('certScore');
+  const certDate = document.getElementById('certDate');
+  if(certName) certName.textContent = name;
+  if(certScore) certScore.textContent = score;
+  if(certDate) certDate.textContent = new Date().toLocaleDateString();
+  const sec = document.getElementById('certificate');
+  if(sec) sec.classList.remove('hidden');
+}
+
+/* ===========================================================
+   INIT
+   =========================================================== */
+function init(){
+  loadDashboard();
+  setBreadcrumb('Dashboard');
+  setupModules();
+}
+init();
+</script>
+</body>
+</html>
