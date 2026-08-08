@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coding 102 — Inside the Machine</title>
+<style>
+:root{
+  --bg:#fdf5ff;
+  --bg-grad:linear-gradient(180deg,#ffeef7,#f7f4ff 40%,#f4fbff);
+  --ink:#111;
+  --accent:#3b5cff;
+  --accent2:#ff6f61;
+  --good:#31c46b;
+  --warn:#ffb13a;
+  --bad:#ff5a5a;
+  --radius:14px;
+  --card:#ffffff;
+}
+*{box-sizing:border-box;}
+
+body{
+  margin:0;
+  font-family:"Segoe UI",system-ui,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  background:var(--bg-grad);
+  color:var(--ink);
+}
+
+/* Header */
+header{
+  background:linear-gradient(90deg,#ff9a9e,#fad0c4,#a18cd1,#3b5cff);
+  color:white;
+  text-align:center;
+  padding:1rem 0 1.2rem;
+  font-size:1.7rem;
+  letter-spacing:.05em;
+  box-shadow:0 4px 12px rgba(0,0,0,.15);
+}
+header .subtitle{
+  font-size:.95rem;
+  margin-top:.3rem;
+  opacity:.92;
+}
+
+/* Layout */
+main{
+  max-width:960px;
+  margin:auto;
+  padding:1rem 1rem 2rem;
+}
+
+/* Breadcrumb */
+.breadcrumb{
+  background:#f0f0ff;
+  padding:8px 12px;
+  border-radius:var(--radius);
+  font-size:0.9rem;
+  margin-bottom:12px;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+.breadcrumb a{
+  color:var(--accent);
+  text-decoration:none;
+  font-weight:600;
+}
+.breadcrumb a:hover{text-decoration:underline;}
+.breadcrumb span{color:#555;}
+
+/* Card + Buttons */
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:0 8px 24px rgba(0,0,0,.08);
+  padding:1.2rem 1.3rem;
+  margin-bottom:1rem;
+  border-top:4px solid rgba(59,92,255,.2);
+}
+h2{color:var(--accent);margin-top:0;}
+
+button{
+  background:var(--accent);
+  color:#fff;
+  border:none;
+  border-radius:var(--radius);
+  padding:8px 16px;
+  cursor:pointer;
+  font-size:0.9rem;
+  font-weight:600;
+}
+button:hover{opacity:.9;}
+button.secondary{
+  background:#ffbe3d;
+  color:#4a2800;
+}
+button.ghost{
+  background:transparent;
+  color:var(--accent);
+  border:1px solid rgba(59,92,255,.35);
+}
+button.ghost:hover{
+  background:rgba(59,92,255,.08);
+}
+
+/* Back button inside modules */
+.back-btn{
+  background:transparent;
+  border:none;
+  color:var(--accent);
+  font-size:0.85rem;
+  cursor:pointer;
+  margin-bottom:6px;
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  padding:0;
+}
+.back-btn:hover{text-decoration:underline;}
+
+/* Hidden utility */
+.hidden{display:none !important;}
+
+/* Progress bar */
+.progress{
+  height:10px;
+  background:#e0e2f5;
+  border-radius:5px;
+  overflow:hidden;
+  margin-top:4px;
+}
+.bar{
+  height:100%;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  width:0;
+  transition:width .4s ease;
+}
+.locked{opacity:.4;}
+
+/* Lesson cards */
+.m1card,.m2card,.m3card,.m4card{ padding:8px 4px 10px; }
+
+/* Quiz + outputs */
+.quizQ{
+  margin:8px 0;
+  padding:6px 8px;
+  border-radius:8px;
+  background:#f9f7ff;
+}
+.output{
+  margin-top:10px;
+  min-height:32px;
+  padding:6px 0;
+}
+.success{color:var(--good);}
+.fail{color:var(--bad);}
+.warn{color:var(--warn);}
+
+/* Flashcards */
+.flash{
+  background:#fff7d6;
+  border-radius:10px;
+  padding:8px;
+  text-align:center;
+  cursor:pointer;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+  font-size:0.9rem;
+}
+.flash .def{display:block;margin-top:4px;color:#444;}
+.flash .def.hidden{display:none;}
+
+/* Simple inputs */
+select,input[type="number"],input[type="text"],input[type="range"]{
+  padding:4px 8px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  font-size:0.9rem;
+}
+
+/* Lists */
+ul{margin:0 0 6px 1.1rem;}
+li{margin:2px 0;}
+
+/* Mini grids */
+.mini-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:8px;
+}
+
+.info-pill{
+  border-radius:999px;
+  padding:4px 10px;
+  font-size:0.8rem;
+  background:#f0f2ff;
+  display:inline-block;
+  margin:2px 4px 0 0;
+}
+
+/* Binary toggles */
+.binary-row{
+  display:flex;
+  gap:6px;
+  margin:6px 0;
+  flex-wrap:wrap;
+}
+.binary-bit{
+  width:42px;
+  height:36px;
+  border-radius:8px;
+  border:1px solid #c4c7ff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  cursor:pointer;
+  background:#fdfdff;
+}
+.binary-bit.on{
+  background:#3b5cff;
+  color:#fff;
+}
+
+/* Network steps */
+.network-steps{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  font-size:0.9rem;
+}
+.network-step{
+  padding:4px 6px;
+  border-radius:6px;
+  background:#f5f6ff;
+}
+
+/* Responsive tweaks */
+@media (max-width:600px){
+  header{font-size:1.4rem;}
+  .card{padding:1rem;}
+}
+</style>
+</head>
+<body>
+<header>
+  🧠 Coding 102 — Inside the Machine
+  <div class="subtitle">Deepen your understanding of computers, data, files, and the internet before you move on to heavier coding.</div>
+</header>
+
+<main id="app">
+
+  <!-- Breadcrumb -->
+  <nav id="breadcrumb" class="breadcrumb">
+    <a href="#" onclick="goHome();return false;">🏠 Class Hub</a>
+    <span id="breadcrumbTrail">/ Dashboard</span>
+  </nav>
+
+  <!-- DASHBOARD -->
+  <section id="dashboard" class="card">
+    <h2>Progress Dashboard</h2>
+    <p><b>Coding 102</b> prepares you for Coding 201 by exploring the <b>core basics of computing</b> — hardware, bits & bytes, files & operating systems, and the foundations of the internet.</p>
+    <p>Complete each module with at least <b>80%</b> to unlock the next one and the Final Exam.</p>
+    <div id="modulesList"></div>
+    <button class="ghost" onclick="resetProgress()">Reset Progress</button>
+  </section>
+
+  <!-- ===========================
+       MODULE 1 — INSIDE THE MACHINE
+       =========================== -->
+  <section id="module1" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>Module 1 — Inside the Machine (Hardware)</h2>
+    <p>Meet the main parts of a computer — and learn how data moves through them.</p>
+
+    <div style="background:#eee;border-radius:8px;overflow:hidden;height:10px;margin:10px 0;">
+      <div id="m1bar" style="height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0%;transition:width .4s;"></div>
+    </div>
+
+    <div id="m1cards">
+      <!-- CARD 1 -->
+      <div class="m1card">
+        <h3>1 — The Computer “Loop”</h3>
+        <p>A computer is a system that repeatedly does this loop:</p>
+        <div class="mini-grid">
+          <div><b>Input</b><p>Keyboard, mouse, mic, camera, touchscreen</p></div>
+          <div><b>Process</b><p>CPU + RAM work together to run instructions</p></div>
+          <div><b>Store</b><p>SSD/HDD keep files and programs long-term</p></div>
+          <div><b>Output</b><p>Screen, speakers, printer, network</p></div>
+        </div>
+        <p><span class="info-pill">Big idea:</span> Coding becomes real only when it runs on hardware.</p>
+        <button onclick="nextModule(1)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="m1card hidden">
+        <h3>2 — CPU vs RAM vs Storage (Why All Three Matter)</h3>
+        <div class="mini-grid">
+          <div><b>CPU</b><p>Executes instructions (math + logic). Often has multiple <b>cores</b>.  It is housed on the mother board which connects all major components together.</p></div>
+          <div><b>RAM</b><p>Fast “working space” for what’s running <b>right now</b>. Clears when power is off.</p></div>
+          <div><b>Storage</b><p>Holds programs + files long-term. Slower than RAM, but keeps data when off.</p></div>
+          <div><b>GPU</b><p>Specialized processor for graphics (games, video, AI workloads).</p></div>
+        </div>
+        <p><span class="info-pill">Memory vs Storage:</span> RAM is fast + temporary. Storage is slower + permanent.</p>
+        <button onclick="nextModule(1)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="m1card hidden">
+        <h3>3 — Data Journey: “Open a Game”</h3>
+        <p>When you open a game or app, data travels like this:</p>
+        <div class="network-steps" style="margin:8px 0;">
+          <div class="network-step">1. The app is stored on your <b>SSD/HDD</b>.</div>
+          <div class="network-step">2. The OS loads needed parts into <b>RAM</b>.</div>
+          <div class="network-step">3. The <b>CPU</b> reads instructions from RAM and runs them.</div>
+          <div class="network-step">4. The <b>GPU</b> helps draw frames → sent to the <b>screen</b>.</div>
+        </div>
+        <p><span class="info-pill">Why it matters:</span> A slow storage drive or low RAM can make loading feel “laggy.”</p>
+        <button onclick="nextModule(1)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="m1card hidden">
+        <h3>4 — Quick Upgrade Reasoning (Mini-Lab)</h3>
+        <p>Pick the best upgrade for each situation:</p>
+
+        <div style="margin:10px 0;">
+          <b>A)</b> Too many browser tabs makes your computer crawl.<br>
+          <select id="m1UpgradeA">
+            <option value="">-- choose --</option>
+            <option value="ram">Add more RAM</option>
+            <option value="gpu">Upgrade the GPU</option>
+            <option value="mouse">Buy a new mouse</option>
+          </select>
+        </div>
+
+        <div style="margin:10px 0;">
+          <b>B)</b> Your game runs but graphics look choppy on high settings.<br>
+          <select id="m1UpgradeB">
+            <option value="">-- choose --</option>
+            <option value="gpu">Upgrade the GPU</option>
+            <option value="ram">Add more RAM</option>
+            <option value="keyboard">Buy a new keyboard</option>
+          </select>
+        </div>
+
+        <div style="margin:10px 0;">
+          <b>C)</b> Your computer takes forever to start up and open apps.<br>
+          <select id="m1UpgradeC">
+            <option value="">-- choose --</option>
+            <option value="ssd">Use an SSD / faster storage</option>
+            <option value="speaker">New speakers</option>
+            <option value="monitor">Bigger monitor</option>
+          </select>
+        </div>
+
+        <button class="secondary" type="button" onclick="checkHardwareMiniLab()">Check Answers</button>
+        <div id="m1MiniLabOut" class="output"></div>
+
+        <button onclick="nextModule(1)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 5 — Hardware Explorer -->
+      <div class="m1card hidden">
+        <h3>5 — Hardware Explorer</h3>
+        <p>Click a part to see a friendly explanation.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin:8px 0;">
+          <button type="button" class="secondary" onclick="showPartInfo('cpu')">CPU</button>
+          <button type="button" class="secondary" onclick="showPartInfo('ram')">RAM</button>
+          <button type="button" class="secondary" onclick="showPartInfo('storage')">Storage</button>
+          <button type="button" class="secondary" onclick="showPartInfo('gpu')">GPU</button>
+          <button type="button" class="secondary" onclick="showPartInfo('motherboard')">Motherboard</button>
+          <button type="button" class="secondary" onclick="showPartInfo('psu')">Power Supply</button>
+          <button type="button" class="secondary" onclick="showPartInfo('input')">Inputs</button>
+          <button type="button" class="secondary" onclick="showPartInfo('output')">Outputs</button>
+        </div>
+        <div id="partInfo" class="output"></div>
+        <button onclick="nextModule(1)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 6 — Flashcards + Quiz button -->
+      <div class="m1card hidden">
+        <h3>6 — Quick Vocabulary</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;">
+          <div class="flash" onclick="flip(this)">CPU<br><small class="def hidden">executes instructions (math + logic)</small></div>
+          <div class="flash" onclick="flip(this)">RAM<br><small class="def hidden">fast working memory (temporary)</small></div>
+          <div class="flash" onclick="flip(this)">Storage<br><small class="def hidden">long-term memory (files + apps)</small></div>
+          <div class="flash" onclick="flip(this)">GPU<br><small class="def hidden">graphics processor for drawing frames</small></div>
+          <div class="flash" onclick="flip(this)">Motherboard<br><small class="def hidden">main board that connects parts together</small></div>
+          <div class="flash" onclick="flip(this)">PSU<br><small class="def hidden">power supply unit; provides electricity</small></div>
+          <div class="flash" onclick="flip(this)">Input<br><small class="def hidden">data going into the computer</small></div>
+          <div class="flash" onclick="flip(this)">Output<br><small class="def hidden">data coming out (screen/sound/etc.)</small></div>
+        </div>
+        <p style="margin-top:10px;">Ready to test what you know about hardware?</p>
+        <button type="button" onclick="showModuleQuiz(1)">Start Quiz 🧠</button>
+      </div>
+    </div>
+
+    <!-- QUIZ -->
+    <div id="m1quiz" class="hidden">
+      <h3>Module 1 Quiz (15 Questions)</h3>
+      <div id="m1quizBox"></div>
+      <button onclick="submitQuiz(1)">Submit Quiz</button>
+      <button type="button" class="ghost" onclick="retestQuiz(1)">Retake Quiz</button>
+      <button type="button" class="ghost" onclick="showModuleLessons(1)">⬅ Back to Lessons</button>
+      <div id="m1result" class="output"></div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       MODULE 2 — BITS, BYTES & DATA
+       =========================== -->
+  <section id="module2" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>Module 2 — Bits, Bytes & Data</h2>
+    <p>Zoom into the tiny pieces of information computers use to represent everything.</p>
+
+    <div style="background:#eee;border-radius:8px;overflow:hidden;height:10px;margin:10px 0;">
+      <div id="m2bar" style="height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0%;transition:width .4s;"></div>
+    </div>
+
+    <div id="m2cards">
+      <!-- CARD 1 -->
+      <div class="m2card">
+        <h3>1 — Bit Basics</h3>
+        <p>A <b>bit</b> is the smallest piece of information a computer uses. It can be:</p>
+        <ul>
+          <li>0 or 1</li>
+          <li>off or on</li>
+          <li>false or true</li>
+        </ul>
+        <p><span class="info-pill">Big idea:</span> Everything digital becomes patterns of 0s and 1s.</p>
+        <button onclick="nextModule(2)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="m2card hidden">
+        <h3>2 — Bytes & File Sizes (Two Ways of Counting)</h3>
+        <p>Bits are grouped into <b>bytes</b> and larger units:</p>
+        <ul>
+          <li>8 bits = 1 byte</li>
+          <li><b>Decimal:</b> 1 KB = 1,000 bytes (common in storage marketing)</li>
+          <li><b>Binary:</b> 1 KiB = 1,024 bytes (common in computing)</li>
+          <li>1 MB ≈ 1,000 KB (or 1 MiB = 1,024 KiB)</li>
+        </ul>
+        <p>Don’t stress the names — just remember: bigger unit = more bytes.</p>
+        <button onclick="nextModule(2)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 3 — 8-bit Binary Lab -->
+      <div class="m2card hidden">
+        <h3>3 — Binary Lab (8 Bits = 0 to 255)</h3>
+        <p>Click bits on (1) or off (0). We’ll show the decimal value and the binary pattern.</p>
+        <div class="binary-row" aria-label="8-bit toggles">
+          <div id="bit128" class="binary-bit" onclick="toggleBit(128)">0</div>
+          <div id="bit64" class="binary-bit" onclick="toggleBit(64)">0</div>
+          <div id="bit32" class="binary-bit" onclick="toggleBit(32)">0</div>
+          <div id="bit16" class="binary-bit" onclick="toggleBit(16)">0</div>
+          <div id="bit8" class="binary-bit" onclick="toggleBit(8)">0</div>
+          <div id="bit4" class="binary-bit" onclick="toggleBit(4)">0</div>
+          <div id="bit2" class="binary-bit" onclick="toggleBit(2)">0</div>
+          <div id="bit1" class="binary-bit" onclick="toggleBit(1)">0</div>
+        </div>
+        <div id="binaryValue" class="output">Value: 0 (bits: 00000000)</div>
+        <button type="button" class="ghost" onclick="resetBits()">Reset Bits</button>
+        <button onclick="nextModule(2)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 4 — Text Encoding Mini-Lab -->
+      <div class="m2card hidden">
+        <h3>4 — Text Is Also Data</h3>
+        <p>Letters are stored as numbers (which become bits). For example, in ASCII/Unicode:</p>
+        <ul>
+          <li><code>A</code> is often represented as the number <b>65</b></li>
+          <li><code>a</code> is often represented as <b>97</b></li>
+        </ul>
+        <p>Try it:</p>
+        <label>Type 1 character:
+          <input id="charIn" type="text" maxlength="1" placeholder="A" style="width:80px;">
+        </label>
+        <button type="button" class="secondary" onclick="runCharCodeLab()">Show Code</button>
+        <div id="charOut" class="output"></div>
+        <button onclick="nextModule(2)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 5 — Images & Pixels -->
+      <div class="m2card hidden">
+        <h3>5 — Images: Pixels + Color Depth</h3>
+        <p>Images are grids of tiny dots called <b>pixels</b>.</p>
+        <ul>
+          <li>More pixels (higher resolution) usually = bigger file.</li>
+          <li>More colors (higher color depth) usually = bigger file.</li>
+        </ul>
+        <p><span class="info-pill">Example:</span> 1920×1080 has over 2 million pixels.</p>
+        <button onclick="nextModule(2)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 6 — Compression -->
+      <div class="m2card hidden">
+        <h3>6 — Why Some Files Are Smaller (Compression)</h3>
+        <p>Compression is a way to store data using fewer bytes.</p>
+        <ul>
+          <li><b>Lossless</b> (PNG, ZIP): tries to keep everything exact.</li>
+          <li><b>Lossy</b> (JPG, MP3): throws away some detail to shrink more.</li>
+        </ul>
+        <p><span class="info-pill">Big idea:</span> File type + compression changes size a lot.</p>
+        <button onclick="nextModule(2)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 7 — Flashcards + Quiz -->
+      <div class="m2card hidden">
+        <h3>7 — Bit & Byte Vocabulary</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;">
+          <div class="flash" onclick="flip(this)">Bit<br><small class="def hidden">smallest unit, 0 or 1</small></div>
+          <div class="flash" onclick="flip(this)">Byte<br><small class="def hidden">8 bits grouped together</small></div>
+          <div class="flash" onclick="flip(this)">Binary<br><small class="def hidden">base-2 number system (0s and 1s)</small></div>
+          <div class="flash" onclick="flip(this)">KB / KiB<br><small class="def hidden">thousands vs 1024 bytes</small></div>
+          <div class="flash" onclick="flip(this)">Compression<br><small class="def hidden">store data using fewer bytes</small></div>
+          <div class="flash" onclick="flip(this)">Pixel<br><small class="def hidden">tiny dot that makes up an image</small></div>
+        </div>
+        <p style="margin-top:10px;">Ready for the quiz?</p>
+        <button type="button" onclick="showModuleQuiz(2)">Start Quiz 🧠</button>
+      </div>
+    </div>
+
+    <!-- QUIZ -->
+    <div id="m2quiz" class="hidden">
+      <h3>Module 2 Quiz (15 Questions)</h3>
+      <div id="m2quizBox"></div>
+      <button onclick="submitQuiz(2)">Submit Quiz</button>
+      <button type="button" class="ghost" onclick="retestQuiz(2)">Retake Quiz</button>
+      <button type="button" class="ghost" onclick="showModuleLessons(2)">⬅ Back to Lessons</button>
+      <div id="m2result" class="output"></div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       MODULE 3 — FILES, FOLDERS & OS
+       =========================== -->
+  <section id="module3" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>Module 3 — Files, Folders & Operating Systems</h2>
+    <p>Learn how computers organize work — and how the OS keeps everything running.</p>
+
+    <div style="background:#eee;border-radius:8px;overflow:hidden;height:10px;margin:10px 0;">
+      <div id="m3bar" style="height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0%;transition:width .4s;"></div>
+    </div>
+
+    <div id="m3cards">
+      <!-- CARD 1 -->
+      <div class="m3card">
+        <h3>1 — What Is an Operating System?</h3>
+        <p>The <b>operating system (OS)</b> is the main program that:</p>
+        <ul>
+          <li>Manages hardware (CPU, RAM, disk, devices)</li>
+          <li>Runs applications (games, browsers, editors)</li>
+          <li>Handles files and folders</li>
+          <li>Protects users with permissions and logins</li>
+        </ul>
+        <p>Examples: Windows, macOS, Linux, Android, iOS.</p>
+        <button onclick="nextModule(3)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="m3card hidden">
+        <h3>2 — OS vs Apps (Who Does What?)</h3>
+        <p><b>Apps</b> are things you use (browser, game). The <b>OS</b> is what lets apps share the computer safely.</p>
+        <ul>
+          <li>The OS decides which app gets CPU time.</li>
+          <li>The OS allocates RAM and cleans up when apps close.</li>
+          <li>The OS manages devices (keyboard, mic, camera) through drivers.</li>
+        </ul>
+        <p><span class="info-pill">Big idea:</span> Without an OS, apps don’t have a clean way to “talk” to hardware.</p>
+        <button onclick="nextModule(3)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="m3card hidden">
+        <h3>3 — Files, Folders, and Paths</h3>
+        <p>A <b>file</b> is a named package of data. A <b>folder</b> (directory) holds files and other folders.</p>
+        <p>A <b>path</b> tells you where something is:</p>
+        <ul>
+          <li><code>Documents/School/Essay.docx</code></li>
+          <li><code>Pictures/Vacation/photo.png</code></li>
+        </ul>
+        <p><span class="info-pill">Tip:</span> Clean paths make projects easier to back up.</p>
+        <button onclick="nextModule(3)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="m3card hidden">
+        <h3>4 — Extensions & File Types</h3>
+        <p>The letters after the dot are the <b>extension</b>:</p>
+        <ul>
+          <li><code>.docx</code> = document</li>
+          <li><code>.png</code> = image</li>
+          <li><code>.mp3</code> = audio</li>
+          <li><code>.html</code> = web page</li>
+        </ul>
+        <p><span class="info-pill">Big idea:</span> Extensions help the OS choose which app should open a file.</p>
+        <button onclick="nextModule(3)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="m3card hidden">
+        <h3>5 — Permissions (Safety + Organization)</h3>
+        <p>Permissions are rules about who can access what.</p>
+        <ul>
+          <li><b>Read</b>: view/open</li>
+          <li><b>Write</b>: change/save</li>
+          <li><b>Execute</b>: run a program</li>
+        </ul>
+        <p><span class="info-pill">Why it matters:</span> Permissions protect important files and user accounts.</p>
+        <button onclick="nextModule(3)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 6 — File Match Lab -->
+      <div class="m3card hidden">
+        <h3>6 — File Match Lab</h3>
+        <p>Match the file type with what it most likely is.</p>
+        <div style="margin-bottom:6px;">
+          <b>1.</b> <code>project.docx</code> →
+          <select id="file1">
+            <option value="">-- choose --</option>
+            <option>Document</option>
+            <option>Picture</option>
+            <option>Music</option>
+          </select>
+        </div>
+        <div style="margin-bottom:6px;">
+          <b>2.</b> <code>song.mp3</code> →
+          <select id="file2">
+            <option value="">-- choose --</option>
+            <option>Document</option>
+            <option>Picture</option>
+            <option>Music</option>
+          </select>
+        </div>
+        <div style="margin-bottom:6px;">
+          <b>3.</b> <code>photo.png</code> →
+          <select id="file3">
+            <option value="">-- choose --</option>
+            <option>Document</option>
+            <option>Picture</option>
+            <option>Music</option>
+          </select>
+        </div>
+        <button onclick="checkFileMatch()">Check Answers</button>
+        <div id="fileMatchResult" class="output"></div>
+        <button onclick="nextModule(3)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 7 — Save Game Lab -->
+      <div class="m3card hidden">
+        <h3>7 — Save Game Lab + Backup Thinking</h3>
+        <p>You made a game called <b>BalloonQuest</b>. Which is the best folder to save it in?</p>
+        <div>
+          <label><input type="radio" name="saveChoice" value="random"> Folder named "random stuff"</label><br>
+          <label><input type="radio" name="saveChoice" value="games"> Folder named "Games / Projects"</label><br>
+          <label><input type="radio" name="saveChoice" value="downloads"> Downloads folder</label>
+        </div>
+        <button onclick="checkSaveLab()">Check Choice</button>
+        <div id="saveLabResult" class="output"></div>
+        <p style="margin-top:8px;"><span class="info-pill">Backup tip:</span> A backup is a copy stored somewhere else (external drive or cloud).</p>
+        <button onclick="nextModule(3)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 8 — Flashcards + Quiz -->
+      <div class="m3card hidden">
+        <h3>8 — OS Vocabulary</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;">
+          <div class="flash" onclick="flip(this)">Operating System<br><small class="def hidden">manages computer + runs apps</small></div>
+          <div class="flash" onclick="flip(this)">File<br><small class="def hidden">named package of data</small></div>
+          <div class="flash" onclick="flip(this)">Folder<br><small class="def hidden">container for files + folders</small></div>
+          <div class="flash" onclick="flip(this)">Path<br><small class="def hidden">location of a file/folder</small></div>
+          <div class="flash" onclick="flip(this)">Extension<br><small class="def hidden">letters after the dot</small></div>
+          <div class="flash" onclick="flip(this)">Permissions<br><small class="def hidden">rules for access</small></div>
+        </div>
+        <p style="margin-top:10px;">Time for the quiz.</p>
+        <button type="button" onclick="showModuleQuiz(3)">Start Quiz 🧠</button>
+      </div>
+    </div>
+
+    <!-- QUIZ -->
+    <div id="m3quiz" class="hidden">
+      <h3>Module 3 Quiz (15 Questions)</h3>
+      <div id="m3quizBox"></div>
+      <button onclick="submitQuiz(3)">Submit Quiz</button>
+      <button type="button" class="ghost" onclick="retestQuiz(3)">Retake Quiz</button>
+      <button type="button" class="ghost" onclick="showModuleLessons(3)">⬅ Back to Lessons</button>
+      <div id="m3result" class="output"></div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       MODULE 4 — NETWORKS & INTERNET BASICS
+       =========================== -->
+  <section id="module4" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>Module 4 — Networks & the Internet</h2>
+    <p>Learn how computers talk to each other across networks and the internet.</p>
+
+    <div style="background:#eee;border-radius:8px;overflow:hidden;height:10px;margin:10px 0;">
+      <div id="m4bar" style="height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0%;transition:width .4s;"></div>
+    </div>
+
+    <div id="m4cards">
+      <!-- CARD 1 -->
+      <div class="m4card">
+        <h3>1 — Network vs Internet</h3>
+        <p>A <b>network</b> is a group of connected computers that can share information.</p>
+        <ul>
+          <li>Home Wi-Fi network (LAN)</li>
+          <li>School network</li>
+          <li>Internet = a <b>global</b> network of networks</li>
+        </ul>
+        <button onclick="nextModule(4)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="m4card hidden">
+        <h3>2 — Packets + Routers</h3>
+        <p>Data is usually split into small pieces called <b>packets</b>.</p>
+        <ul>
+          <li>Packets can take different routes.</li>
+          <li><b>Routers</b> help send packets to the next best step.</li>
+        </ul>
+        <p><span class="info-pill">Big idea:</span> The internet is like a huge delivery system for packets.</p>
+        <button onclick="nextModule(4)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="m4card hidden">
+        <h3>3 — IP Addresses & DNS</h3>
+        <p>Computers use <b>IP addresses</b> (like numeric street addresses).</p>
+        <p><b>DNS</b> is like the internet’s phonebook — it turns names into IP addresses.</p>
+        <ul>
+          <li><code>example.com</code> → DNS → IP address</li>
+        </ul>
+        <button onclick="nextModule(4)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="m4card hidden">
+        <h3>4 — Client & Server (Request → Response)</h3>
+        <p>Most websites use a <b>client–server</b> pattern:</p>
+        <ul>
+          <li><b>Client</b>: your device asking for a page</li>
+          <li><b>Server</b>: the computer that stores the page and sends it back</li>
+        </ul>
+        <p><span class="info-pill">HTTP/HTTPS:</span> common “rules” for web requests and responses.</p>
+        <button onclick="nextModule(4)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 5 — Message Trip Lab -->
+      <div class="m4card hidden">
+        <h3>5 — Message Trip Lab</h3>
+        <p>Type a city and imagine sending a message from your computer to a friend there.</p>
+        <label>Friend’s city: <input id="m4City" type="text" placeholder="Tokyo"></label>
+        <button onclick="runNetworkLab()">Show Trip</button>
+        <div id="networkTrip" class="output"></div>
+        <button onclick="nextModule(4)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="m4card hidden">
+        <h3>6 — Safe & Smart Internet Use</h3>
+        <p>The internet is powerful, so we use it with care:</p>
+        <ul>
+          <li>Keep personal details private unless you trust the site.</li>
+          <li>Use strong passwords and don’t share them.</li>
+          <li>Look for <b>HTTPS</b> on sites that handle logins/payments.</li>
+          <li>Ask for help if something online feels wrong or unsafe.</li>
+        </ul>
+        <button onclick="nextModule(4)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 7 — Flashcards + Quiz -->
+      <div class="m4card hidden">
+        <h3>7 — Network Vocabulary</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;">
+          <div class="flash" onclick="flip(this)">Network<br><small class="def hidden">computers linked to share data</small></div>
+          <div class="flash" onclick="flip(this)">Internet<br><small class="def hidden">global network of networks</small></div>
+          <div class="flash" onclick="flip(this)">Router<br><small class="def hidden">forwards packets between networks</small></div>
+          <div class="flash" onclick="flip(this)">Packet<br><small class="def hidden">small piece of data sent across a network</small></div>
+          <div class="flash" onclick="flip(this)">IP Address<br><small class="def hidden">numeric address for devices</small></div>
+          <div class="flash" onclick="flip(this)">DNS<br><small class="def hidden">turns names into IP addresses</small></div>
+          <div class="flash" onclick="flip(this)">HTTPS<br><small class="def hidden">encrypted web traffic</small></div>
+        </div>
+        <p style="margin-top:10px;">Last module quiz before the Final Exam!</p>
+        <button type="button" onclick="showModuleQuiz(4)">Start Quiz 🧠</button>
+      </div>
+    </div>
+
+    <!-- QUIZ -->
+    <div id="m4quiz" class="hidden">
+      <h3>Module 4 Quiz (15 Questions)</h3>
+      <div id="m4quizBox"></div>
+      <button onclick="submitQuiz(4)">Submit Quiz</button>
+      <button type="button" class="ghost" onclick="retestQuiz(4)">Retake Quiz</button>
+      <button type="button" class="ghost" onclick="showModuleLessons(4)">⬅ Back to Lessons</button>
+      <div id="m4result" class="output"></div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       FINAL EXAM
+       =========================== -->
+  <section id="finalExam" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>🏁 Final Exam — Coding 102</h2>
+    <p>Answer <b>25</b> questions randomly selected from all modules. You need at least <b>80%</b> to earn your certificate.</p>
+    <div id="examBox"></div>
+    <button onclick="submitFinalExam()">Submit Final Exam</button>
+    <button type="button" class="ghost" onclick="retakeFinalExam()">Retake Final Exam</button>
+    <div id="examResult" class="output"></div>
+  </section>
+
+  <!-- ===========================
+       CERTIFICATE
+       =========================== -->
+  <section id="certificate" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>🎉 Certificate of Completion</h2>
+    <p>This certifies that:</p>
+    <h3 id="certName">__________________________</h3>
+    <p>has successfully completed <b>Coding 102 — Inside the Machine</b> with a final score of
+       <span id="certScore">___</span> %</p>
+    <p>Date: <span id="certDate"></span></p>
+    <button onclick="window.print()">🖨️ Print Certificate</button>
+  </section>
+
+</main>
+
+<script>
+const KEY_PREFIX = 'coding102_';
+const totalModules = 4;
+const PASSING = 80;
+const FINAL_EXAM_QUESTIONS = 25;
+
+/* ===========================================================
+   QUIZ BANK (4 MODULES × 15 QUESTIONS EACH)
+   - Bank never mutates.
+   - Each quiz attempt builds a shuffled working set.
+   =========================================================== */
+const quizBank = {
+  1: [
+    {q:"The main job of the CPU is to…",a:["execute instructions and do calculations","store files when power is off","control the Wi-Fi signal"],c:0},
+    {q:"RAM is best described as…",a:["short-term working memory","a type of screen","a power cable"],c:0},
+    {q:"Which part usually stores your files even when the power is off?",a:["hard drive or SSD","RAM","CPU cache only"],c:0},
+    {q:"Which of these is an input device?",a:["keyboard","monitor","speaker"],c:0},
+    {q:"Which of these is an output device?",a:["monitor","mouse","microphone"],c:0},
+    {q:"A touchscreen is an example of…",a:["both input and output","only input","only output"],c:0},
+    {q:"Which part is most responsible for drawing graphics in games?",a:["GPU","PSU","Motherboard"],c:0},
+    {q:"The motherboard’s main job is to…",a:["connect the major parts together","store photos permanently","cool the computer by itself"],c:0},
+    {q:"The power supply (PSU) primarily…",a:["provides electricity to the computer’s parts","stores passwords","controls the keyboard layout"],c:0},
+    {q:"When you open an app, it is typically loaded from storage into…",a:["RAM","the mouse","the monitor"],c:0},
+    {q:"If your computer slows down with many tabs open, a helpful upgrade is…",a:["more RAM","a bigger desk","a new wallpaper"],c:0},
+    {q:"CPU cores are helpful because they can…",a:["handle more tasks at the same time","make the screen brighter","replace your keyboard"],c:0},
+    {q:"CPU cache is best described as…",a:["tiny very fast memory near the CPU","a folder for documents","the computer’s fan"],c:0},
+    {q:"An external USB drive is best described as…",a:["storage","RAM","a CPU"],c:0},
+    {q:"Knowing basic hardware helps coders…",a:["make smarter choices about performance and limits","avoid learning how computers work","only draw pictures"],c:0}
+  ],
+  2: [
+    {q:"A bit can be…",a:["0 or 1","0–9","any letter of the alphabet"],c:0},
+    {q:"8 bits grouped together are called…",a:["a byte","a packet","a folder"],c:0},
+    {q:"Binary is a number system that uses…",a:["0 and 1","0 through 9","only letters"],c:0},
+    {q:"In computing, 1 KiB is…",a:["1,024 bytes","1,000 bytes","100 bytes"],c:0},
+    {q:"With 8 bits, the largest value you can represent is…",a:["255","128","512"],c:0},
+    {q:"Which is usually larger?",a:["1 megabyte (MB)","1 kilobyte (KB)","1 byte"],c:0},
+    {q:"Text on a computer is stored as…",a:["patterns of bits (numbers)","tiny paper letters","only colors"],c:0},
+    {q:"What number would represent 'A' in bits?",a:["65","35", "97","45"],c:0},
+    {q:"Lossless Compression would usually...",a:["compress exact file","delete half of the file","lose some data"],c:0},
+    {q:"About 1 gigabyte (GB) is roughly…",a:["1,000 megabytes (MB)","1 megabyte (MB)","1 byte"],c:0},
+    {q:"Compression is used to…",a:["store data using fewer bytes","turn bytes into electricity","increase screen brightness"],c:0},
+    {q:"Lossy compression usually…",a:["throws away some detail to shrink more","keeps every detail perfectly","only works on text files"],c:0},
+    {q:"More pixels in an image usually means…",a:["a larger file size","a smaller file size every time","no change in file size"],c:0},
+    {q:"If one bit flips in important data, it can…",a:["change the meaning of the data","never affect anything","only change the color pink"],c:0},
+    {q:"Computers use bits because…",a:["hardware can store and flip them reliably","humans prefer counting in bits","bits are the same as photos"],c:0}
+  ],
+  3: [
+    {q:"The operating system (OS) is…",a:["the main program that manages the computer","a single game","a physical cable"],c:0},
+    {q:"Which is a good example of an OS?",a:["Windows or macOS","a Word document","a mouse pad"],c:0},
+    {q:"A folder (directory) is…",a:["a container that can hold files and other folders","a single picture","a computer virus"],c:0},
+    {q:"The letters after the dot in a filename are called…",a:["the extension","the password","the monitor name"],c:0},
+    {q:"A file path describes…",a:["where a file is located","how loud a file is","the color of a folder"],c:0},
+    {q:"Permissions in an OS help control…",a:["who can access which files","how tall the computer is","if the keyboard has lights"],c:0},
+    {q:"Which is usually best for saving a project?",a:["a clearly named project folder","a folder called 'random stuff'","anywhere in Downloads forever"],c:0},
+    {q:"The OS helps you…",a:["open, move, and delete files","paint your wall","charge your phone magically"],c:0},
+    {q:"Extensions help the OS mostly by…",a:["suggesting what app should open the file","encrypting the file automatically","making the file smaller"],c:0},
+    {q:"Drivers are useful because they help…",a:["the OS talk to hardware devices","your mouse become wireless by itself","folders turn into files"],c:0},
+    {q:"A backup is best described as…",a:["a copy stored somewhere else","a stronger password","a faster CPU"],c:0},
+    {q:"Deleting a file usually means…",a:["the OS removes it or moves it to trash/recycle","it becomes a new folder","it turns into an app"],c:0},
+    {q:"If two apps run at once, the OS must…",a:["share CPU time and memory fairly","turn off the screen","rename your folders automatically"],c:0},
+    {q:"Cloud storage is…",a:["storage on a remote server you access over the internet","a type of RAM chip","a special keyboard"],c:0},
+    {q:"OS updates often include…",a:["bug fixes and security improvements","new desk furniture","more pixels for your monitor"],c:0}
+  ],
+  4: [
+    {q:"A network is…",a:["a group of connected computers","a single app","a word processor"],c:0},
+    {q:"The internet is…",a:["a global network of networks","just one huge computer","only for games"],c:0},
+    {q:"A router’s main job is to…",a:["send packets between networks","store photos permanently","print documents"],c:0},
+    {q:"An IP address is like…",a:["a numeric street address for a device","your screen resolution","a file extension"],c:0},
+    {q:"DNS is used to…",a:["turn website names into IP addresses","compress videos","increase CPU speed"],c:0},
+    {q:"In client–server, the client is…",a:["the device asking for data","the machine that stores data","the power cable"],c:0},
+    {q:"In client–server, the server is…",a:["the machine sending data back","the keyboard","the speaker"],c:0},
+    {q:"Data on the internet usually travels as…",a:["packets","giant unbroken blocks","paper letters"],c:0},
+    {q:"HTTPS is important because it…",a:["encrypts data between you and the site","makes Wi-Fi free","stores files faster"],c:0},
+    {q:"Latency is best described as…",a:["delay in network response time","the size of a file","a type of password"],c:0},
+    {q:"Wi-Fi is most closely related to…",a:["a local network connection","file compression","CPU cache"],c:0},
+    {q:"A web browser usually…",a:["sends a request and waits for a response","turns off your router","deletes your downloads"],c:0},
+    {q:"Packets can take different routes because…",a:["the internet has many paths and routers","all packets are paper","routers only work at night"],c:0},
+    {q:"Safer online behavior includes…",a:["strong passwords and asking for help if something feels unsafe","sharing passwords with friends","clicking every random link"],c:0},
+    {q:"Understanding networks helps coders…",a:["build apps that communicate correctly","avoid the internet forever","only draw pictures"],c:0}
+  ]
+};
+
+/* LocalStorage helpers */
+function scoreKey(num){ return KEY_PREFIX + 'module' + num + '_score'; }
+function finalKey(){ return KEY_PREFIX + 'finalExam_score'; }
+
+/* Dashboard + navigation */
+const modulesList = document.getElementById('modulesList');
+const breadcrumbTrail = document.getElementById('breadcrumbTrail');
+
+function setBreadcrumb(label){
+  if(breadcrumbTrail) breadcrumbTrail.textContent = ' / ' + label;
+}
+function hideAllSections(){
+  document.querySelectorAll('main section').forEach(s => s.classList.add('hidden'));
+}
+function loadDashboard(){
+  if(!modulesList) return;
+  modulesList.innerHTML = '';
+
+  for(let i=1;i<=totalModules;i++){
+    const score = parseInt(localStorage.getItem(scoreKey(i)) || '0',10);
+    const unlocked = (i===1) ||
+      (parseInt(localStorage.getItem(scoreKey(i-1)) || '0',10) >= PASSING);
+
+    const div = document.createElement('div');
+    div.className = 'card';
+
+    const title = document.createElement('h3');
+    title.textContent = 'Module ' + i;
+    div.appendChild(title);
+
+    const p = document.createElement('p');
+    p.textContent = 'Score: ' + score + '%';
+    div.appendChild(p);
+
+    const prog = document.createElement('div');
+    prog.className = 'progress';
+    const bar = document.createElement('div');
+    bar.className = 'bar';
+    bar.style.width = score + '%';
+    prog.appendChild(bar);
+    div.appendChild(prog);
+
+    const btn = document.createElement('button');
+    if(!unlocked){
+      btn.className = 'locked';
+      btn.textContent = 'Locked';
+      btn.onclick = ()=>alert('Score 80% or higher in the previous module to unlock this one.');
+    }else{
+      btn.textContent = 'Open Module';
+      btn.onclick = ()=>openModule(i);
+    }
+    div.appendChild(btn);
+
+    modulesList.appendChild(div);
+  }
+
+  const finalScore = parseInt(localStorage.getItem(finalKey()) || '0',10);
+  const allDone = [...Array(totalModules)].every((_,i)=>
+    parseInt(localStorage.getItem(scoreKey(i+1)) || '0',10) >= PASSING
+  );
+
+  const examDiv = document.createElement('div');
+  examDiv.className = 'card';
+
+  const h3 = document.createElement('h3');
+  h3.textContent = 'Final Exam';
+  examDiv.appendChild(h3);
+
+  const p2 = document.createElement('p');
+  p2.textContent = 'Score: ' + finalScore + '%';
+  examDiv.appendChild(p2);
+
+  const prog2 = document.createElement('div');
+  prog2.className = 'progress';
+  const bar2 = document.createElement('div');
+  bar2.className = 'bar';
+  bar2.style.width = finalScore + '%';
+  prog2.appendChild(bar2);
+  examDiv.appendChild(prog2);
+
+  const examBtn = document.createElement('button');
+  if(!allDone){
+    examBtn.className = 'locked';
+    examBtn.textContent = 'Locked';
+    examBtn.onclick = ()=>alert('Complete all modules with ≥ 80% to unlock the Final Exam.');
+  }else{
+    examBtn.textContent = 'Take Final Exam';
+    examBtn.onclick = openFinalExam;
+  }
+  examDiv.appendChild(examBtn);
+
+  if(finalScore >= PASSING){
+    examDiv.appendChild(document.createElement('br'));
+    const certBtn = document.createElement('button');
+    certBtn.textContent = 'View Certificate';
+    certBtn.className = 'ghost';
+    certBtn.onclick = showCertificate;
+    examDiv.appendChild(certBtn);
+  }
+
+  modulesList.appendChild(examDiv);
+}
+
+function resetProgress(){
+  if(confirm('Reset all Coding 102 progress?')){
+    for(let i=1;i<=totalModules;i++) localStorage.removeItem(scoreKey(i));
+    localStorage.removeItem(finalKey());
+    loadDashboard();
+  }
+}
+
+function openModule(num){
+  hideAllSections();
+  const sec = document.getElementById('module'+num);
+  if(sec) sec.classList.remove('hidden');
+  showModuleLessons(num,false);
+  setBreadcrumb('Module ' + num);
+}
+function goHome(){
+  hideAllSections();
+  document.getElementById('dashboard').classList.remove('hidden');
+  setBreadcrumb('Dashboard');
+  loadDashboard();
+}
+
+/* ===========================================================
+   QUIZ ENGINE (bank → shuffled working set)
+   =========================================================== */
+const activeQuizzes = {}; // num -> working set
+
+function shuffleArray(arr){
+  for(let i=arr.length-1;i>0;i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [arr[i],arr[j]] = [arr[j],arr[i]];
+  }
+  return arr;
+}
+
+function buildWorkingSet(num){
+  const bank = quizBank[num];
+  if(!Array.isArray(bank)) return [];
+  return bank.map(q=>{
+    const answers = q.a.slice();
+    shuffleArray(answers);
+    const correctText = q.a[q.c];
+    const newCorrect = answers.indexOf(correctText);
+    return { q: q.q, a: answers, c: newCorrect };
+  });
+}
+
+function loadQuiz(num){
+  const box = document.getElementById('m'+num+'quizBox');
+  if(!box) return;
+
+  const qset = buildWorkingSet(num);
+  activeQuizzes[num] = qset;
+
+  box.innerHTML = '';
+  qset.forEach((q,qi)=>{
+    const div = document.createElement('div');
+    div.className = 'quizQ';
+
+    const title = document.createElement('b');
+    title.textContent = (qi+1) + '. ' + q.q;
+    div.appendChild(title);
+    div.appendChild(document.createElement('br'));
+
+    q.a.forEach((opt,ai)=>{
+      const label = document.createElement('label');
+      const radio = document.createElement('input');
+      radio.type = 'radio';
+      radio.name = 'm'+num+'q'+qi;
+      radio.value = String(ai);
+      label.appendChild(radio);
+      label.appendChild(document.createTextNode(' ' + opt));
+      div.appendChild(label);
+      div.appendChild(document.createElement('br'));
+    });
+
+    box.appendChild(div);
+  });
+}
+
+function submitQuiz(num){
+  if(!activeQuizzes[num] || !activeQuizzes[num].length) loadQuiz(num);
+  const qset = activeQuizzes[num];
+  if(!qset || !qset.length) return;
+
+  let scoreCount = 0;
+  qset.forEach((q,i)=>{
+    const sel = document.querySelector('input[name=m'+num+'q'+i+']:checked');
+    if(sel && parseInt(sel.value,10) === q.c) scoreCount++;
+  });
+  const percent = Math.round((scoreCount/qset.length)*100);
+  localStorage.setItem(scoreKey(num),percent);
+
+  const res = document.getElementById('m'+num+'result');
+  if(!res) return;
+  res.textContent = `You scored ${percent}% (${scoreCount}/${qset.length})`;
+  res.className = 'output ' + (percent>=PASSING ? 'success' : 'fail');
+  res.textContent += (percent>=PASSING) ? ' ✅ Next module unlocked!' : ' ❌ Try again for 80% or higher.';
+  loadDashboard();
+}
+
+function retestQuiz(num){
+  const res = document.getElementById('m'+num+'result');
+  if(res){ res.textContent=''; res.className='output'; }
+  loadQuiz(num);
+}
+
+/* ===========================================================
+   MODULE STATE (GENERIC HANDLERS)
+   =========================================================== */
+const moduleConfig = {
+  1:{cardsSelector:'#m1cards .m1card', barId:'m1bar', quizId:'m1quiz', cardsId:'m1cards', resultId:'m1result'},
+  2:{cardsSelector:'#m2cards .m2card', barId:'m2bar', quizId:'m2quiz', cardsId:'m2cards', resultId:'m2result'},
+  3:{cardsSelector:'#m3cards .m3card', barId:'m3bar', quizId:'m3quiz', cardsId:'m3cards', resultId:'m3result'},
+  4:{cardsSelector:'#m4cards .m4card', barId:'m4bar', quizId:'m4quiz', cardsId:'m4cards', resultId:'m4result'}
+};
+const moduleState = {};
+
+function setupModules(){
+  for(let num=1; num<=totalModules; num++){
+    const cfg = moduleConfig[num];
+    if(!cfg) continue;
+    const cards = document.querySelectorAll(cfg.cardsSelector);
+    moduleState[num] = {
+      index:0,
+      cards:cards,
+      barId:cfg.barId,
+      quizId:cfg.quizId,
+      cardsId:cfg.cardsId,
+      resultId:cfg.resultId
+    };
+  }
+}
+
+function nextModule(num){
+  const st = moduleState[num];
+  if(!st) return;
+  if(st.index < st.cards.length-1){
+    st.cards[st.index].classList.add('hidden');
+    st.index++;
+    st.cards[st.index].classList.remove('hidden');
+
+    const bar = document.getElementById(st.barId);
+    if(bar){
+      const pct = Math.round(((st.index+1)/st.cards.length)*100); // FIX: reaches 100%
+      bar.style.width = pct + '%';
+    }
+  }
+}
+
+function showModuleLessons(num,scrollTop){
+  if(scrollTop === undefined) scrollTop = true;
+  const st = moduleState[num];
+  if(!st) return;
+
+  const quiz = document.getElementById(st.quizId);
+  const cardsWrap = document.getElementById(st.cardsId);
+  if(quiz) quiz.classList.add('hidden');
+  if(cardsWrap) cardsWrap.classList.remove('hidden');
+
+  st.index = 0;
+  st.cards.forEach((c,i)=>c.classList.toggle('hidden', i!==0));
+
+  const bar = document.getElementById(st.barId);
+  if(bar) bar.style.width = Math.round((1/st.cards.length)*100) + '%';
+
+  const res = document.getElementById(st.resultId);
+  if(res){ res.textContent=''; res.className='output'; }
+
+  if(scrollTop) window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function showModuleQuiz(num){
+  const st = moduleState[num];
+  if(!st) return;
+  const cardsWrap = document.getElementById(st.cardsId);
+  if(cardsWrap) cardsWrap.classList.add('hidden');
+  const quiz = document.getElementById(st.quizId);
+  if(quiz) quiz.classList.remove('hidden');
+  loadQuiz(num);
+}
+
+/* ===========================================================
+   FLASHCARDS
+   =========================================================== */
+function flip(el){
+  const def = el.querySelector('.def');
+  if(def) def.classList.toggle('hidden');
+}
+
+/* ===========================================================
+   MODULE 1 MINI-LAB
+   =========================================================== */
+function checkHardwareMiniLab(){
+  const a = document.getElementById('m1UpgradeA')?.value || '';
+  const b = document.getElementById('m1UpgradeB')?.value || '';
+  const c = document.getElementById('m1UpgradeC')?.value || '';
+  const out = document.getElementById('m1MiniLabOut');
+  if(!out) return;
+
+  let correct = 0;
+  if(a==='ram') correct++;
+  if(b==='gpu') correct++;
+  if(c==='ssd') correct++;
+
+  if(correct===3){
+    out.textContent = "✅ Perfect! You matched upgrades to the right problem.";
+    out.className = "output success";
+  }else{
+    out.textContent = `❌ You got ${correct}/3. Hint: tabs → RAM, graphics → GPU, slow boot → SSD/storage.`;
+    out.className = "output fail";
+  }
+}
+
+/* ===========================================================
+   MODULE LABS
+   =========================================================== */
+/* Module 1 hardware explorer */
+function showPartInfo(kind){
+  const out = document.getElementById('partInfo');
+  if(!out) return;
+  let txt = '';
+  if(kind === 'cpu'){
+    txt = 'CPU — The brain of the computer. It follows instructions, does math, and makes decisions extremely fast.';
+  }else if(kind === 'ram'){
+    txt = 'RAM — Fast working memory. It holds the data and programs the CPU is actively using (temporary).';
+  }else if(kind === 'storage'){
+    txt = 'Storage — Long-term memory like a hard drive or SSD. It keeps your files even when the power is off.';
+  }else if(kind === 'gpu'){
+    txt = 'GPU — Graphics processor. Helps render images/video and can accelerate some compute-heavy tasks.';
+  }else if(kind === 'motherboard'){
+    txt = 'Motherboard — The main circuit board that connects CPU, RAM, storage, GPU, and other devices.';
+  }else if(kind === 'psu'){
+    txt = 'PSU — Power supply unit. Converts wall power into usable power for the computer’s parts.';
+  }else if(kind === 'input'){
+    txt = 'Inputs — Devices that send data into the computer (keyboard, mouse, touchscreen, camera, mic).';
+  }else if(kind === 'output'){
+    txt = 'Outputs — Devices that show or play data (monitor, speakers, printer, headset).';
+  }
+  out.textContent = txt;
+}
+
+/* Module 2 binary toggles (8-bit) */
+const BIT_WEIGHTS = [128,64,32,16,8,4,2,1];
+const bitState = {};
+BIT_WEIGHTS.forEach(b=>bitState[b]=0);
+
+function toggleBit(bit){
+  bitState[bit] = bitState[bit] ? 0 : 1;
+  const el = document.getElementById('bit'+bit);
+  if(el){
+    el.textContent = bitState[bit];
+    el.classList.toggle('on', bitState[bit] === 1);
+  }
+  updateBinaryValue();
+}
+
+function updateBinaryValue(){
+  let value = 0;
+  let bits = '';
+  BIT_WEIGHTS.forEach(w=>{
+    value += bitState[w]*w;
+    bits += String(bitState[w]);
+  });
+  const out = document.getElementById('binaryValue');
+  if(out){
+    out.textContent = 'Value: ' + value + ' (bits: ' + bits + ')';
+  }
+}
+
+function resetBits(){
+  BIT_WEIGHTS.forEach(b=>{
+    bitState[b] = 0;
+    const el = document.getElementById('bit'+b);
+    if(el){
+      el.textContent = '0';
+      el.classList.remove('on');
+    }
+  });
+  updateBinaryValue();
+}
+
+/* Module 2 char-code lab */
+function runCharCodeLab(){
+  const input = document.getElementById('charIn');
+  const out = document.getElementById('charOut');
+  if(!input || !out) return;
+  const ch = (input.value || '').slice(0,1);
+  if(!ch){
+    out.textContent = "Type a character first.";
+    out.className = "output fail";
+    return;
+  }
+  const code = ch.codePointAt(0);
+  out.textContent = `✅ "${ch}" → code point ${code}. (Computers store that as bits.)`;
+  out.className = "output success";
+}
+
+/* Module 3 file match */
+function checkFileMatch(){
+  const a1 = document.getElementById('file1')?.value || '';
+  const a2 = document.getElementById('file2')?.value || '';
+  const a3 = document.getElementById('file3')?.value || '';
+  const out = document.getElementById('fileMatchResult');
+  if(!out) return;
+  let correct = 0;
+  if(a1 === 'Document') correct++;
+  if(a2 === 'Music') correct++;
+  if(a3 === 'Picture') correct++;
+  if(correct === 3){
+    out.textContent = '✅ Perfect! Each file type is matched correctly.';
+    out.className = 'output success';
+  }else{
+    out.textContent = `❌ You got ${correct}/3. Hint: .docx = document, .mp3 = music, .png = picture.`;
+    out.className = 'output fail';
+  }
+}
+
+/* Module 3 save lab */
+function checkSaveLab(){
+  const out = document.getElementById('saveLabResult');
+  if(!out) return;
+  const sel = document.querySelector('input[name=saveChoice]:checked');
+  if(!sel){
+    out.textContent = 'Choose a folder first.';
+    out.className = 'output fail';
+    return;
+  }
+  if(sel.value === 'games'){
+    out.textContent = '✅ Great choice! A clear project folder makes it easy to find and back up BalloonQuest later.';
+    out.className = 'output success';
+  }else if(sel.value === 'downloads'){
+    out.textContent = '⚠️ Downloads works, but it gets messy fast. A named project folder is better.';
+    out.className = 'output warn';
+  }else{
+    out.textContent = '❌ "random stuff" is not very helpful. Future you might have trouble finding BalloonQuest.';
+    out.className = 'output fail';
+  }
+}
+
+/* Module 4 network lab */
+function runNetworkLab(){
+  const input = document.getElementById('m4City');
+  const out = document.getElementById('networkTrip');
+  if(!input || !out) return;
+  const city = (input.value || 'another city').trim();
+  const steps = [
+    'Your device packages your message into small data packets.',
+    'Packets travel to your home router (Wi-Fi box).',
+    'Router forwards packets to your internet provider.',
+    'DNS may help translate names into an IP address.',
+    'Packets hop across many routers and cables toward ' + city + '.',
+    'They reach a server or your friend’s network near ' + city + '.',
+    'Your friend’s reply follows a similar path back to you!'
+  ];
+  out.innerHTML = '';
+  const list = document.createElement('div');
+  list.className = 'network-steps';
+  steps.forEach((txt,i)=>{
+    const row = document.createElement('div');
+    row.className = 'network-step';
+    row.textContent = (i+1) + '. ' + txt;
+    list.appendChild(row);
+  });
+  out.appendChild(list);
+}
+
+/* ===========================================================
+   FINAL EXAM (25 RANDOM QUESTIONS)
+   =========================================================== */
+let finalExamSet = [];
+
+function openFinalExam(){
+  const allComplete = [...Array(totalModules)].every((_,i)=>
+    parseInt(localStorage.getItem(scoreKey(i+1)) || '0',10) >= PASSING
+  );
+  if(!allComplete){
+    alert('Complete all modules with ≥ 80% to unlock the Final Exam.');
+    return;
+  }
+  hideAllSections();
+  const sec = document.getElementById('finalExam');
+  if(sec) sec.classList.remove('hidden');
+  setBreadcrumb('Final Exam');
+  buildFinalExam();
+}
+
+function sampleWithoutReplacement(arr, n){
+  const copy = arr.slice();
+  shuffleArray(copy);
+  return copy.slice(0, Math.min(n, copy.length));
+}
+
+function buildFinalExam(){
+  // pool = normalized (shuffled) working copies from the bank
+  const pool = [];
+  for(let m=1;m<=totalModules;m++){
+    const bank = quizBank[m] || [];
+    bank.forEach(q=>{
+      const answers = q.a.slice();
+      shuffleArray(answers);
+      const correctText = q.a[q.c];
+      const newCorrect = answers.indexOf(correctText);
+      pool.push({ q: q.q, a: answers, c: newCorrect });
+    });
+  }
+
+  finalExamSet = sampleWithoutReplacement(pool, FINAL_EXAM_QUESTIONS);
+
+  const box = document.getElementById('examBox');
+  if(!box) return;
+  box.innerHTML = '';
+
+  finalExamSet.forEach((q,qi)=>{
+    const div = document.createElement('div');
+    div.className = 'quizQ';
+    const title = document.createElement('b');
+    title.textContent = (qi+1) + '. ' + q.q;
+    div.appendChild(title);
+    div.appendChild(document.createElement('br'));
+    q.a.forEach((opt,ai)=>{
+      const label = document.createElement('label');
+      const radio = document.createElement('input');
+      radio.type = 'radio';
+      radio.name = 'examQ' + qi;
+      radio.value = String(ai);
+      label.appendChild(radio);
+      label.appendChild(document.createTextNode(' ' + opt));
+      div.appendChild(label);
+      div.appendChild(document.createElement('br'));
+    });
+    box.appendChild(div);
+  });
+
+  const res = document.getElementById('examResult');
+  if(res){ res.textContent=''; res.className='output'; }
+}
+
+function submitFinalExam(){
+  const set = finalExamSet || [];
+  if(!set.length) return;
+
+  let scoreCount = 0;
+  set.forEach((q,i)=>{
+    const sel = document.querySelector('input[name=examQ'+i+']:checked');
+    if(sel && parseInt(sel.value,10) === q.c) scoreCount++;
+  });
+
+  const percent = Math.round((scoreCount/set.length)*100);
+  localStorage.setItem(finalKey(),percent);
+
+  const res = document.getElementById('examResult');
+  if(!res) return;
+
+  res.textContent = `You scored ${percent}% (${scoreCount}/${set.length})`;
+  if(percent>=PASSING){
+    res.className = 'output success';
+    res.textContent += ' ✅ Certificate unlocked!';
+    setTimeout(showCertificate, 700);
+  }else{
+    res.className = 'output fail';
+    res.textContent += ' ❌ Try again for 80% or higher.';
+  }
+  loadDashboard();
+}
+
+function retakeFinalExam(){ buildFinalExam(); }
+
+/* ===========================================================
+   CERTIFICATE
+   =========================================================== */
+function showCertificate(){
+  hideAllSections();
+  setBreadcrumb('Certificate');
+
+  const name = prompt('Enter your name for the certificate:') || 'Student';
+  const score = localStorage.getItem(finalKey()) || String(PASSING);
+
+  const certName = document.getElementById('certName');
+  const certScore = document.getElementById('certScore');
+  const certDate = document.getElementById('certDate');
+  if(certName) certName.textContent = name;
+  if(certScore) certScore.textContent = score;
+  if(certDate) certDate.textContent = new Date().toLocaleDateString();
+
+  const sec = document.getElementById('certificate');
+  if(sec) sec.classList.remove('hidden');
+}
+
+/* ===========================================================
+   INIT
+   =========================================================== */
+function init(){
+  setupModules();
+  loadDashboard();
+  setBreadcrumb('Dashboard');
+  resetBits();
+}
+init();
+</script>
+</body>
+</html>
