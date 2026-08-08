@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coding 202 — Sovereign Sandbox Portal</title>
+<style>
+:root{
+  --bg:#fdf5ff;
+  --bg-grad:linear-gradient(180deg,#ffeef7,#f4f3ff 40%,#f4fbff);
+  --ink:#111;
+  --accent:#3b5cff;
+  --accent2:#ff6f61;
+  --good:#31c46b;
+  --warn:#ffb13a;
+  --bad:#ff5a5a;
+  --radius:14px;
+  --card:#ffffff;
+}
+*{box-sizing:border-box;}
+
+body{
+  margin:0;
+  font-family:"Segoe UI",system-ui,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  background:var(--bg-grad);
+  color:var(--ink);
+}
+
+/* Header */
+header{
+  background:linear-gradient(90deg,#ff9a9e,#fad0c4,#a18cd1,#3b5cff);
+  color:white;
+  text-align:center;
+  padding:1rem 0 1.2rem;
+  font-size:1.7rem;
+  letter-spacing:.05em;
+  box-shadow:0 4px 12px rgba(0,0,0,.15);
+}
+header .subtitle{
+  font-size:.95rem;
+  margin-top:.3rem;
+  opacity:.92;
+}
+
+/* Layout */
+main{
+  max-width:960px;
+  margin:auto;
+  padding:1rem 1rem 2rem;
+}
+
+/* Breadcrumb */
+.breadcrumb{
+  background:#f0f0ff;
+  padding:8px 12px;
+  border-radius:var(--radius);
+  font-size:0.9rem;
+  margin-bottom:12px;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+.breadcrumb a{
+  color:var(--accent);
+  text-decoration:none;
+  font-weight:600;
+}
+.breadcrumb a:hover{text-decoration:underline;}
+.breadcrumb span{color:#555;}
+
+/* Card + Buttons */
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:0 8px 24px rgba(0,0,0,.08);
+  padding:1.2rem 1.3rem;
+  margin-bottom:1rem;
+  border-top:4px solid rgba(59,92,255,.2);
+}
+h2{color:var(--accent);margin-top:0;}
+
+button{
+  background:var(--accent);
+  color:#fff;
+  border:none;
+  border-radius:var(--radius);
+  padding:8px 16px;
+  cursor:pointer;
+  font-size:0.9rem;
+  font-weight:600;
+}
+button:hover{opacity:.9;}
+button.secondary{
+  background:#ffbe3d;
+  color:#4a2800;
+}
+button.ghost{
+  background:transparent;
+  color:var(--accent);
+  border:1px solid rgba(59,92,255,.35);
+}
+button.ghost:hover{
+  background:rgba(59,92,255,.08);
+}
+
+/* Back button inside modules */
+.back-btn{
+  background:transparent;
+  border:none;
+  color:var(--accent);
+  font-size:0.85rem;
+  cursor:pointer;
+  margin-bottom:6px;
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  padding:0;
+}
+.back-btn:hover{text-decoration:underline;}
+
+/* Hidden utility */
+.hidden{display:none !important;}
+
+/* Progress bar */
+.progress{
+  height:10px;
+  background:#e0e2f5;
+  border-radius:5px;
+  overflow:hidden;
+  margin-top:4px;
+}
+.bar{
+  height:100%;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  width:0;
+  transition:width .4s ease;
+}
+.locked{
+  opacity:.4;
+  pointer-events:auto;
+}
+
+/* Lesson cards */
+.m1card,.m2card,.m3card,.m4card,.m5card{
+  padding:8px 4px 10px;
+}
+
+/* Quiz + outputs */
+.quizQ{
+  margin:8px 0;
+  padding:6px 8px;
+  border-radius:8px;
+  background:#f9f7ff;
+}
+.output{
+  margin-top:10px;
+  min-height:40px;
+  padding:6px 0;
+  white-space:pre-line; /* NEW: keep \n as real line breaks */
+}
+.success{color:var(--good);}
+.fail{color:var(--bad);}
+
+/* Flashcards */
+.flash{
+  background:#fff7d6;
+  border-radius:10px;
+  padding:8px;
+  text-align:center;
+  cursor:pointer;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+  font-size:0.9rem;
+}
+.flash .def{display:block;margin-top:4px;color:#444;}
+.flash .def.hidden{display:none;}
+
+/* Simple inputs */
+select,input[type="number"],input[type="text"]{
+  padding:4px 8px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  font-size:0.9rem;
+}
+pre{
+  background:#f5f5ff;
+  padding:8px;
+  border-radius:8px;
+  overflow-x:auto;
+}
+
+/* Lists in activities */
+ul{margin:0 0 6px 1.1rem;}
+li{margin:2px 0;}
+
+/* Responsive tweaks */
+@media (max-width:600px){
+  header{font-size:1.4rem;}
+  .card{padding:1rem;}
+}
+</style>
+</head>
+<body>
+<header>
+  🌱 Coding 202 — Sovereign Sandbox
+  <div class="subtitle">Combine your Coding 201 skills into smarter, richer programs with real-world patterns.</div>
+</header>
+
+<main id="app">
+
+  <!-- Breadcrumb -->
+  <nav id="breadcrumb" class="breadcrumb">
+    <a href="#" onclick="goHome();return false;">🏠 Class Hub</a>
+    <span id="breadcrumbTrail">/ Dashboard</span>
+  </nav>
+
+  <!-- DASHBOARD -->
+  <section id="dashboard" class="card">
+    <h2>Progress Dashboard</h2>
+    <p>
+      Welcome to <b>Coding 202</b>! This course takes your variables, logic, loops, functions, and arrays to the next level.
+      Complete all <b>5 modules</b> with at least <b>80%</b> to unlock the Final Exam and your certificate.
+    </p>
+    <ul>
+      <li><b>Module 1:</b> Putting it all together — state & flow</li>
+      <li><b>Module 2:</b> Smart decisions — else-if, AND/OR, nested logic</li>
+      <li><b>Module 3:</b> Loop patterns & mini tables</li>
+      <li><b>Module 4:</b> Stronger functions — parameters, return, scope</li>
+      <li><b>Module 5:</b> Arrays of objects & tiny project blueprints</li>
+    </ul>
+    <div id="modulesList"></div>
+    <button class="ghost" onclick="resetProgress()">Reset Progress</button>
+  </section>
+
+  <!-- ===========================
+       MODULE 1 — STATE & FLOW
+       =========================== -->
+  <section id="module1" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>Module 1 — Putting It Together: State & Flow</h2>
+    <p>We’ll connect variables, logic, and loops into one idea: <b>program state</b> and <b>control flow</b>.</p>
+
+    <div style="background:#eee;border-radius:8px;overflow:hidden;height:10px;margin:10px 0;">
+      <div id="m1bar" style="height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0%;transition:width .4s;"></div>
+    </div>
+
+    <div id="m1cards">
+      <!-- CARD 1 -->
+      <div class="m1card">
+        <h3>1 — Program State</h3>
+        <p><b>State</b> is the “current situation” of your program.</p>
+        <ul>
+          <li>Variables hold the state: <code>level</code>, <code>health</code>, <code>coins</code>.</li>
+          <li>Every time something changes, the state changes.</li>
+          <li>State + logic decide what happens next.</li>
+        </ul>
+        <button onclick="nextModule(1)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="m1card hidden">
+        <h3>2 — Control Flow</h3>
+        <p><b>Control flow</b> is the path your code takes as it runs.</p>
+        <ul>
+          <li>Sequence: line 1, then 2, then 3…</li>
+          <li>Branches: <code>if / else</code> decide which block to run.</li>
+          <li>Loops: repeat a block while a condition is true.</li>
+        </ul>
+        <p>Putting these together lets you describe real stories in code.</p>
+        <button onclick="nextModule(1)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="m1card hidden">
+        <h3>3 — Flow Diagrams in Words</h3>
+        <p>We can describe flow in plain language first:</p>
+        <ul>
+          <li>Start with <code>steps = 0</code>.</li>
+          <li>Every minute, add the steps you take.</li>
+          <li>If steps ≥ 10,000 → show “Goal reached!”</li>
+        </ul>
+        <p>Later we turn this into actual code.</p>
+        <button onclick="nextModule(1)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 4 — Step Tracker Lab -->
+      <div class="m1card hidden">
+        <h3>4 — Step Tracker Lab</h3>
+        <p>Imagine a simple step tracker. Tell it how many steps you take per day and for how many days.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:8px 0;">
+          <div>
+            <label>Steps per day:<br>
+              <input id="m1StepsPerDay" type="number" min="0" value="3000">
+            </label>
+          </div>
+          <div>
+            <label>Number of days:<br>
+              <input id="m1Days" type="number" min="1" max="60" value="7">
+            </label>
+          </div>
+        </div>
+        <button onclick="runStepLab()">Simulate Tracker</button>
+        <div id="m1StepOut" class="output"></div>
+        <button onclick="nextModule(1)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 5 — Review & Vocabulary -->
+      <div class="m1card hidden">
+        <h3>5 — Review & Vocabulary</h3>
+        <p>Tap the cards to reveal the definitions.</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;">
+          <div class="flash" onclick="flip(this)">State<br><small class="def hidden">the current values your program is holding</small></div>
+          <div class="flash" onclick="flip(this)">Control flow<br><small class="def hidden">the order in which code runs</small></div>
+          <div class="flash" onclick="flip(this)">Sequence<br><small class="def hidden">running steps one after another</small></div>
+          <div class="flash" onclick="flip(this)">Branch<br><small class="def hidden">taking one path or another with if/else</small></div>
+          <div class="flash" onclick="flip(this)">Loop<br><small class="def hidden">repeating a block while a rule is true</small></div>
+          <div class="flash" onclick="flip(this)">Simulation<br><small class="def hidden">pretending to run a process in code</small></div>
+        </div>
+        <p style="margin-top:10px;">When you’re ready, take the module quiz.</p>
+        <button onclick="showModuleQuiz(1)">Start Quiz 🧠</button>
+      </div>
+    </div>
+
+    <!-- QUIZ -->
+    <div id="m1quiz" class="hidden">
+      <h3>Module 1 Quiz (10 Questions)</h3>
+      <div id="m1quizBox"></div>
+      <button onclick="submitQuiz(1)">Submit Quiz</button>
+      <button type="button" class="ghost" onclick="retestQuiz(1)">Retake Quiz</button>
+      <button type="button" class="ghost" onclick="showModuleLessons(1)">⬅ Back to Lessons</button>
+      <div id="m1result" class="output"></div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       MODULE 2 — SMART DECISIONS
+       =========================== -->
+  <section id="module2" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>Module 2 — Smart Decisions: Else-If, AND / OR, Nested Logic</h2>
+    <p>We’ll level up from simple <code>if</code> statements to more complex decision trees.</p>
+
+    <div style="background:#eee;border-radius:8px;overflow:hidden;height:10px;margin:10px 0;">
+      <div id="m2bar" style="height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0%;transition:width .4s;"></div>
+    </div>
+
+    <div id="m2cards">
+      <!-- CARD 1 -->
+      <div class="m2card">
+        <h3>1 — Else-If Chains</h3>
+        <p>Sometimes we need more than two choices.</p>
+        <pre>
+if (temp &gt; 30) {
+  show("Very hot");
+} else if (temp &gt; 20) {
+  show("Warm");
+} else if (temp &gt; 10) {
+  show("Cool");
+} else {
+  show("Cold");
+}
+        </pre>
+        <p>This is called an <b>else-if chain</b>.</p>
+        <button onclick="nextModule(2)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="m2card hidden">
+        <h3>2 — AND (&&) and OR (||)</h3>
+        <ul>
+          <li><b>AND</b> (<code>&amp;&amp;</code>): both sides must be true.</li>
+          <li><b>OR</b> (<code>||</code>): at least one side is true.</li>
+        </ul>
+        <pre>
+if (age &gt;= 13 &amp;&amp; age &lt; 18) { ... }
+if (weather === "rain" || weather === "snow") { ... }
+        </pre>
+        <button onclick="nextModule(2)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="m2card hidden">
+        <h3>3 — Nested Conditions</h3>
+        <p>One <code>if</code> can live inside another. That’s called <b>nesting</b>.</p>
+        <pre>
+if (loggedIn) {
+  if (isAdmin) {
+    showAdminPanel();
+  } else {
+    showUserHome();
+  }
+}
+        </pre>
+        <p>Nesting is powerful, but too much can make code hard to read.</p>
+        <button onclick="nextModule(2)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 4 — Grade Lab -->
+      <div class="m2card hidden">
+        <h3>4 — Grade Lab</h3>
+        <p>Type a score from 0–100 and we’ll classify it using an else-if chain.</p>
+        <label>Score (0–100):
+          <input id="m2Score" type="number" min="0" max="100" value="87">
+        </label>
+        <button onclick="runGradeLab()">Classify Score</button>
+        <div id="m2GradeOut" class="output"></div>
+        <button onclick="nextModule(2)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 5 — Review -->
+      <div class="m2card hidden">
+        <h3>5 — Review Flashcards</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;">
+          <div class="flash" onclick="flip(this)">Else-if chain<br><small class="def hidden">many conditions checked in order</small></div>
+          <div class="flash" onclick="flip(this)">AND (&&)<br><small class="def hidden">true only when both parts are true</small></div>
+          <div class="flash" onclick="flip(this)">OR (||)<br><small class="def hidden">true when at least one part is true</small></div>
+          <div class="flash" onclick="flip(this)">Nested if<br><small class="def hidden">an if statement inside another</small></div>
+          <div class="flash" onclick="flip(this)">Decision tree<br><small class="def hidden">a map of possible choices in code</small></div>
+          <div class="flash" onclick="flip(this)">Guard clause<br><small class="def hidden">early check that returns quickly</small></div>
+        </div>
+        <p style="margin-top:10px;">Ready to test your smart-decision skills?</p>
+        <button onclick="showModuleQuiz(2)">Start Quiz 🧠</button>
+      </div>
+    </div>
+
+    <!-- QUIZ -->
+    <div id="m2quiz" class="hidden">
+      <h3>Module 2 Quiz (10 Questions)</h3>
+      <div id="m2quizBox"></div>
+      <button onclick="submitQuiz(2)">Submit Quiz</button>
+      <button type="button" class="ghost" onclick="retestQuiz(2)">Retake Quiz</button>
+      <button type="button" class="ghost" onclick="showModuleLessons(2)">⬅ Back to Lessons</button>
+      <div id="m2result" class="output"></div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       MODULE 3 — LOOP PATTERNS
+       =========================== -->
+  <section id="module3" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>Module 3 — Loop Patterns & Mini Tables</h2>
+    <p>Here we use loops to build patterns, lists, and tiny data tables.</p>
+
+    <div style="background:#eee;border-radius:8px;overflow:hidden;height:10px;margin:10px 0;">
+      <div id="m3bar" style="height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0%;transition:width .4s;"></div>
+    </div>
+
+    <div id="m3cards">
+      <!-- CARD 1 -->
+      <div class="m3card">
+        <h3>1 — Counting in Different Steps</h3>
+        <p>Loops don’t have to count by 1.</p>
+        <pre>
+for (let i = 0; i &lt;= 20; i += 5) {
+  // 0, 5, 10, 15, 20
+}
+        </pre>
+        <p>This is useful for scores, levels, and time jumps.</p>
+        <button onclick="nextModule(3)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="m3card hidden">
+        <h3>2 — Looping Over Arrays</h3>
+        <pre>
+const colors = ["red", "green", "blue"];
+for (let i = 0; i &lt; colors.length; i++) {
+  console.log(colors[i]);
+}
+        </pre>
+        <p>We use <code>array.length</code> so the loop adapts to any size.</p>
+        <button onclick="nextModule(3)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="m3card hidden">
+        <h3>3 — Mini Tables</h3>
+        <p>Loops are great for building <b>tables</b> of information like multiplication or schedules.</p>
+        <pre>
+for (let i = 1; i &lt;= 10; i++) {
+  console.log("3 x " + i + " = " + (3*i));
+}
+        </pre>
+        <button onclick="nextModule(3)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 4 — Table Lab -->
+      <div class="m3card hidden">
+        <h3>4 — Mini Table Lab</h3>
+        <p>Create a tiny multiplication table for the number you choose.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:8px 0;">
+          <div>
+            <label>Base number:<br>
+              <input id="m3Base" type="number" value="3">
+            </label>
+          </div>
+          <div>
+            <label>Up to:<br>
+              <input id="m3Max" type="number" value="10">
+            </label>
+          </div>
+        </div>
+        <button onclick="runTableLab()">Build Table</button>
+        <div id="m3TableOut" class="output" ></div>
+        <button onclick="nextModule(3)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 5 — Review -->
+      <div class="m3card hidden">
+        <h3>5 — Review Flashcards</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;">
+          <div class="flash" onclick="flip(this)">Increment<br><small class="def hidden">how much the counter changes each loop</small></div>
+          <div class="flash" onclick="flip(this)">Array length<br><small class="def hidden">how many items are in the list</small></div>
+          <div class="flash" onclick="flip(this)">Index<br><small class="def hidden">position of an item in an array</small></div>
+          <div class="flash" onclick="flip(this)">Pattern<br><small class="def hidden">a repeated shape in data or output</small></div>
+          <div class="flash" onclick="flip(this)">Table<br><small class="def hidden">rows of related values</small></div>
+          <div class="flash" onclick="flip(this)">Iteration<br><small class="def hidden">one full run through a loop</small></div>
+        </div>
+        <p style="margin-top:10px;">Time to test your loop pattern skills!</p>
+        <button onclick="showModuleQuiz(3)">Start Quiz 🧠</button>
+      </div>
+    </div>
+
+    <!-- QUIZ -->
+    <div id="m3quiz" class="hidden">
+      <h3>Module 3 Quiz (10 Questions)</h3>
+      <div id="m3quizBox"></div>
+      <button onclick="submitQuiz(3)">Submit Quiz</button>
+      <button type="button" class="ghost" onclick="retestQuiz(3)">Retake Quiz</button>
+      <button type="button" class="ghost" onclick="showModuleLessons(3)">⬅ Back to Lessons</button>
+      <div id="m3result" class="output"></div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       MODULE 4 — STRONGER FUNCTIONS
+       =========================== -->
+  <section id="module4" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>Module 4 — Stronger Functions: Parameters, Return & Scope</h2>
+    <p>We’ll use functions as tiny machines that take inputs and give back answers.</p>
+
+    <div style="background:#eee;border-radius:8px;overflow:hidden;height:10px;margin:10px 0;">
+      <div id="m4bar" style="height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0%;transition:width .4s;"></div>
+    </div>
+
+    <div id="m4cards">
+      <!-- CARD 1 -->
+      <div class="m4card">
+        <h3>1 — Multiple Parameters</h3>
+        <pre>
+function mix(name, flavor) {
+  return name + " chose " + flavor;
+}
+const msg = mix("Alex", "vanilla");
+        </pre>
+        <p>Functions can take more than one input value.</p>
+        <button onclick="nextModule(4)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="m4card hidden">
+        <h3>2 — Return vs. Console Output</h3>
+        <ul>
+          <li><b>return</b> sends a value back to whoever called the function.</li>
+          <li><b>console.log</b> just prints a message for humans to read.</li>
+        </ul>
+        <p>Good functions usually <b>return</b> values so other code can use them.</p>
+        <button onclick="nextModule(4)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="m4card hidden">
+        <h3>3 — Scope (Where Variables Live)</h3>
+        <p><b>Scope</b> is the region of code where a variable can be seen.</p>
+        <ul>
+          <li>Inside a function → local to that function.</li>
+          <li>Outside functions → often global to the file.</li>
+        </ul>
+        <button onclick="nextModule(4)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 4 — Calculator Lab -->
+      <div class="m4card hidden">
+        <h3>4 — Tiny Calculator Lab</h3>
+        <p>Choose two numbers and an operation. Behind the scenes, functions do the math.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:8px 0;">
+          <div>
+            <label>First number:<br>
+              <input id="m4A" type="number" value="10">
+            </label>
+          </div>
+          <div>
+            <label>Second number:<br>
+              <input id="m4B" type="number" value="4">
+            </label>
+          </div>
+          <div>
+            <label>Operation:<br>
+              <select id="m4Op">
+                <option value="add">Add (+)</option>
+                <option value="sub">Subtract (-)</option>
+                <option value="mul">Multiply (×)</option>
+                <option value="div">Divide (÷)</option>
+              </select>
+            </label>
+          </div>
+        </div>
+        <button onclick="runCalcLab()">Run Calculation</button>
+        <div id="m4CalcOut" class="output"></div>
+        <button onclick="nextModule(4)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 5 — Review -->
+      <div class="m4card hidden">
+        <h3>5 — Review Flashcards</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;">
+          <div class="flash" onclick="flip(this)">Parameter<br><small class="def hidden">a named input to a function</small></div>
+          <div class="flash" onclick="flip(this)">Argument<br><small class="def hidden">the actual value you pass in</small></div>
+          <div class="flash" onclick="flip(this)">Return value<br><small class="def hidden">the answer a function gives back</small></div>
+          <div class="flash" onclick="flip(this)">Scope<br><small class="def hidden">where a variable can be seen</small></div>
+          <div class="flash" onclick="flip(this)">Pure function<br><small class="def hidden">always same output for same inputs</small></div>
+          <div class="flash" onclick="flip(this)">Helper function<br><small class="def hidden">small function that helps a bigger one</small></div>
+        </div>
+        <p style="margin-top:10px;">Ready to quiz your function power?</p>
+        <button onclick="showModuleQuiz(4)">Start Quiz 🧠</button>
+      </div>
+    </div>
+
+    <!-- QUIZ -->
+    <div id="m4quiz" class="hidden">
+      <h3>Module 4 Quiz (10 Questions)</h3>
+      <div id="m4quizBox"></div>
+      <button onclick="submitQuiz(4)">Submit Quiz</button>
+      <button type="button" class="ghost" onclick="retestQuiz(4)">Retake Quiz</button>
+      <button type="button" class="ghost" onclick="showModuleLessons(4)">⬅ Back to Lessons</button>
+      <div id="m4result" class="output"></div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       MODULE 5 — ARRAYS OF OBJECTS
+       =========================== -->
+  <section id="module5" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>Module 5 — Arrays of Objects & Mini Project Planning</h2>
+    <p>We’ll treat each thing (player, task, item) as an <b>object</b> and store many of them in an array.</p>
+
+    <div style="background:#eee;border-radius:8px;overflow:hidden;height:10px;margin:10px 0;">
+      <div id="m5bar" style="height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0%;transition:width .4s;"></div>
+    </div>
+
+    <div id="m5cards">
+      <!-- CARD 1 -->
+      <div class="m5card">
+        <h3>1 — Objects as Bundles</h3>
+        <pre>
+const player = {
+  name: "Sky",
+  score: 120,
+  lives: 3
+};
+        </pre>
+        <p>An <b>object</b> groups related values under one name.</p>
+        <button onclick="nextModule(5)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="m5card hidden">
+        <h3>2 — Arrays of Objects</h3>
+        <pre>
+const players = [
+  { name: "Sky", score: 120 },
+  { name: "River", score: 95 },
+  { name: "Nova", score: 140 }
+];
+        </pre>
+        <p>We can loop over <code>players</code> just like any other array.</p>
+        <button onclick="nextModule(5)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="m5card hidden">
+        <h3>3 — Summaries & Leaderboards</h3>
+        <p>Loops + arrays of objects = powerful summaries.</p>
+        <ul>
+          <li>Total score</li>
+          <li>Highest scorer</li>
+          <li>Average score</li>
+        </ul>
+        <button onclick="nextModule(5)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 4 — Leaderboard Lab -->
+      <div class="m5card hidden">
+        <h3>4 — Leaderboard Lab</h3>
+        <p>Press the button to build a simple leaderboard from an array of players.</p>
+        <button onclick="runLeaderboardLab()">Show Leaderboard</button>
+        <div id="m5BoardOut" class="output" ></div>
+        <button onclick="nextModule(5)">Next ➡️</button>
+      </div>
+
+      <!-- CARD 5 — Review -->
+      <div class="m5card hidden">
+        <h3>5 — Review Flashcards</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;">
+          <div class="flash" onclick="flip(this)">Object<br><small class="def hidden">a bundle of related properties</small></div>
+          <div class="flash" onclick="flip(this)">Property<br><small class="def hidden">a named value inside an object</small></div>
+          <div class="flash" onclick="flip(this)">Array of objects<br><small class="def hidden">a list where each item is an object</small></div>
+          <div class="flash" onclick="flip(this)">Summary<br><small class="def hidden">a combined view of many values</small></div>
+          <div class="flash" onclick="flip(this)">Leaderboard<br><small class="def hidden">ranked list by some score</small></div>
+          <div class="flash" onclick="flip(this)">Mini project<br><small class="def hidden">a small app that solves one clear problem</small></div>
+        </div>
+        <p style="margin-top:10px;">Last module! Ready for the quiz?</p>
+        <button onclick="showModuleQuiz(5)">Start Quiz 🧠</button>
+      </div>
+    </div>
+
+    <!-- QUIZ -->
+    <div id="m5quiz" class="hidden">
+      <h3>Module 5 Quiz (10 Questions)</h3>
+      <div id="m5quizBox"></div>
+      <button onclick="submitQuiz(5)">Submit Quiz</button>
+      <button type="button" class="ghost" onclick="retestQuiz(5)">Retake Quiz</button>
+      <button type="button" class="ghost" onclick="showModuleLessons(5)">⬅ Back to Lessons</button>
+      <div id="m5result" class="output"></div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       FINAL EXAM
+       =========================== -->
+  <section id="finalExam" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>🏁 Final Exam — Coding 202</h2>
+    <p>Answer 25 questions randomly selected from all modules. You need at least <b>80%</b> to earn your certificate.</p>
+    <div id="examBox"></div>
+    <button onclick="submitFinalExam()">Submit Final Exam</button>
+    <button type="button" class="ghost" onclick="retakeFinalExam()">Retake Final Exam</button>
+    <div id="examResult" class="output"></div>
+  </section>
+
+  <!-- ===========================
+       CERTIFICATE
+       =========================== -->
+  <section id="certificate" class="card hidden">
+    <button class="back-btn" onclick="goHome()">← Back to Class Hub</button>
+    <h2>🎉 Certificate of Completion</h2>
+    <p>This certifies that:</p>
+    <h3 id="certName">__________________________</h3>
+    <p>has successfully completed <b>Coding 202</b> with a final score of
+       <span id="certScore">___</span> %</p>
+    <p>Date: <span id="certDate"></span></p>
+    <button onclick="window.print()">🖨️ Print Certificate</button>
+  </section>
+
+</main>
+
+<script>
+const KEY_PREFIX = 'coding202_';
+const totalModules = 5;
+
+/* ===========================================================
+   QUIZ DATA (5 MODULES × 10 QUESTIONS EACH)
+   =========================================================== */
+const quizzes = {
+  1: [
+    {q:"1. In programming, the 'state' of a game usually means…",
+     a:["the current values of important variables","how fast the computer is","what color your keyboard is"], c:0},
+    {q:"2. Which of these is part of control flow?",
+     a:["if/else statements","monitor brightness","mouse color"], c:0},
+    {q:"3. Changing a variable from 5 to 10 is an example of…",
+     a:["updating program state","restarting the computer","creating a new file"], c:0},
+    {q:"4. A loop mainly changes control flow by…",
+     a:["repeating a block of code","turning off the program","making variables read-only"], c:0},
+    {q:"5. A program that simulates steps over many days is mostly about…",
+     a:["tracking state over time","drawing 3D graphics","sending emails"], c:0},
+    {q:"6. In most languages, code runs from top to bottom unless…",
+     a:["a branch or loop changes the flow","you press a special keyboard key","you change your desktop wallpaper"], c:0},
+    {q:"7. Which phrase best describes 'control flow'?",
+     a:["the path the program takes as it executes","how much electricity the computer uses","how fast you type"], c:0},
+    {q:"8. When a user clicks a button, the program's state…",
+     a:["often changes as variables update","never changes","is erased completely"], c:0},
+    {q:"9. Using clear state (like 'coins', 'lives', 'level') makes code…",
+     a:["easier to understand and debug","harder to read","unable to run"], c:0},
+    {q:"10. If a program skips some code based on a condition, that is…",
+     a:["a branch in the control flow","a hardware failure","an internet error"], c:0}
+  ],
+  2: [
+    {q:"1. An else-if chain is used when…",
+     a:["you have several different conditions to test in order","you never want to run any code","you don't care about conditions"], c:0},
+    {q:"2. In `if (age >= 13 && age < 18)`, the condition is true when…",
+     a:["age is between 13 and 17","age is under 13","age is 18 or more"], c:0},
+    {q:"3. The operator `||` means…",
+     a:["OR","AND","NOT"], c:0},
+    {q:"4. In a nested if, one if statement is…",
+     a:["inside another if or else block","in a different file","only used for graphics"], c:0},
+    {q:"5. Which is a good use of AND (&&)?",
+     a:["require both 'hasKey' and 'doorLocked' to be true before opening","choose one random color","ignore all conditions"], c:0},
+    {q:"6. Which is a good use of OR (||)?",
+     a:["trigger an umbrella warning for rain OR snow","only run code when both conditions are false","turn off the computer"], c:0},
+    {q:"7. If none of the if or else-if conditions are true, which block runs?",
+     a:["the final else block","the first if block anyway","none of the code runs"], c:0},
+    {q:"8. A decision tree in code describes…",
+     a:["how choices branch to different actions","where the computer is physically located","how big your screen is"], c:0},
+    {q:"9. When writing complex conditions, a good habit is to…",
+     a:["use parentheses and clear variable names","always remove spaces","avoid comments"], c:0},
+    {q:"10. An else-if chain checks conditions…",
+     a:["from top to bottom until one is true","in a random order","all at the same exact time"], c:0}
+  ],
+  3: [
+    {q:"1. In a loop like `for (let i = 0; i <= 20; i += 5)`, what does `i += 5` mean?",
+     a:["increase i by 5 each time","set i to 5 once","decrease i by 5"], c:0},
+    {q:"2. When looping through an array, we often use…",
+     a:["i < array.length","i < 10 no matter what","i = 100 always"], c:0},
+    {q:"3. A multiplication table is a good example of output generated by…",
+     a:["a loop","a single if statement","no code at all"], c:0},
+    {q:"4. Each run of a loop body is called…",
+     a:["an iteration","a division","a glitch"], c:0},
+    {q:"5. To avoid going past the end of an array, we…",
+     a:["stop when i reaches array.length","always use index 999","never use arrays"], c:0},
+    {q:"6. Building a list of lines like '3 x 1 = 3' up to '3 x 10 = 30' is best done with…",
+     a:["one loop that counts from 1 to 10","ten separate functions","typing them all by hand"], c:0},
+    {q:"7. Which property gives the number of items in an array named scores?",
+     a:["scores.length","scores.size","scores.count()"], c:0},
+    {q:"8. Using loops to build tables makes your code…",
+     a:["easier to change and reuse","harder to understand","impossible to test"], c:0},
+    {q:"9. If your loop never updates the counter, you might create…",
+     a:["an infinite loop","a perfect loop","a broken screen"], c:0},
+    {q:"10. A pattern like ⭐⭐⭐⭐ that grows or shrinks with input is often created with…",
+     a:["a loop based on the input","completely random numbers","a single fixed print statement"], c:0}
+  ],
+  4: [
+    {q:"1. The values you pass into a function call are called…",
+     a:["arguments","loops","branches"], c:0},
+    {q:"2. In `function total(a, b) { return a + b; }`, what is returned when `total(3, 4)` runs?",
+     a:["7","34","undefined"], c:0},
+    {q:"3. A function’s parameters are…",
+     a:["the named inputs in its definition","always global variables","secret passwords"], c:0},
+    {q:"4. A function that always gives the same output for the same inputs is often called…",
+     a:["pure","random","broken"], c:0},
+    {q:"5. Which is usually better for reusable functions?",
+     a:["returning a value","only printing to the console","changing random global variables"], c:0},
+    {q:"6. A variable created inside a function…",
+     a:["is local to that function","can be used anywhere with no limits","instantly becomes global"], c:0},
+    {q:"7. The 'scope' of a variable describes…",
+     a:["where it can be accessed in the code","how big it is in memory","its favorite color"], c:0},
+    {q:"8. Helper functions are…",
+     a:["small functions that support bigger tasks","the main entry point of a program","always unused"], c:0},
+    {q:"9. When a function has more than one parameter, a good practice is…",
+     a:["to name them clearly based on their purpose","to name them all 'x'","to never use parameters"], c:0},
+    {q:"10. In a calculator app, functions are useful because…",
+     a:["they keep each operation in one place","they make code longer on purpose","they prevent any input"], c:0}
+  ],
+  5: [
+    {q:"1. An object in code is best described as…",
+     a:["a bundle of related properties","a random number","a color on the screen"], c:0},
+    {q:"2. In `{ name: 'Sky', score: 120 }`, `score` is…",
+     a:["a property name","a loop counter","a file path"], c:0},
+    {q:"3. An array of objects is…",
+     a:["a list where each item is an object","a single giant object only","a list of only numbers"], c:0},
+    {q:"4. To loop through an array called players, we might write…",
+     a:["for (let i = 0; i < players.length; i++) { ... }","if (players) { ... } only once","players = 0;"], c:0},
+    {q:"5. A leaderboard usually shows players…",
+     a:["ranked by score or another value","in random order only","in alphabetical order by variable name"], c:0},
+    {q:"6. Summarizing data from an array (like total or average) usually involves…",
+     a:["looping and adding up values","guessing the total","clicking a button without code"], c:0},
+    {q:"7. A mini project should…",
+     a:["solve one small, clear problem","try to solve every problem in the world","have no clear goal"], c:0},
+    {q:"8. When planning a mini app, a good first step is…",
+     a:["writing down the inputs and outputs","coding without thinking","ignoring the user"], c:0},
+    {q:"9. Using arrays of objects for players, tasks, or items makes it easier to…",
+     a:["sort, filter, and summarize them","lose track of data","avoid using loops"], c:0},
+    {q:"10. In a scoreboard app, each object in the array might represent…",
+     a:["one player and their stats","the entire internet","only one number with no meaning"], c:0}
+  ]
+};
+
+/* LocalStorage helpers */
+function scoreKey(num){
+  return KEY_PREFIX + 'module' + num + '_score';
+}
+function finalKey(){
+  return KEY_PREFIX + 'finalExam_score';
+}
+
+/* Dashboard + navigation */
+const modulesList = document.getElementById('modulesList');
+const breadcrumbTrail = document.getElementById('breadcrumbTrail');
+
+function setBreadcrumb(label){
+  if(breadcrumbTrail){
+    breadcrumbTrail.textContent = ' / ' + label;
+  }
+}
+
+function hideAllSections(){
+  document.querySelectorAll('main section').forEach(s => s.classList.add('hidden'));
+}
+
+function loadDashboard(){
+  if(!modulesList) return;
+  modulesList.innerHTML = '';
+
+  for(let i=1;i<=totalModules;i++){
+    const score = parseInt(localStorage.getItem(scoreKey(i)) || '0',10);
+    const unlocked = (i===1) ||
+      (parseInt(localStorage.getItem(scoreKey(i-1)) || '0',10) >= 80);
+
+    const div = document.createElement('div');
+    div.className = 'card';
+
+    const title = document.createElement('h3');
+    title.textContent = 'Module ' + i;
+    div.appendChild(title);
+
+    const p = document.createElement('p');
+    p.textContent = 'Score: ' + score + '%';
+    div.appendChild(p);
+
+    const prog = document.createElement('div');
+    prog.className = 'progress';
+    const bar = document.createElement('div');
+    bar.className = 'bar';
+    bar.style.width = score + '%';
+    prog.appendChild(bar);
+    div.appendChild(prog);
+
+    const btn = document.createElement('button');
+    if(!unlocked){
+      btn.className = 'locked';
+      btn.textContent = 'Locked';
+      btn.onclick = function(){
+        alert('Score 80% or higher in the previous module to unlock this one.');
+      };
+    }else{
+      btn.textContent = 'Open Module';
+      btn.onclick = function(){ openModule(i); };
+    }
+    div.appendChild(btn);
+
+    modulesList.appendChild(div);
+  }
+
+  const finalScore = parseInt(localStorage.getItem(finalKey()) || '0',10);
+  const allDone = [...Array(totalModules)].every((_,i)=>
+    parseInt(localStorage.getItem(scoreKey(i+1)) || '0',10) >= 80
+  );
+
+  const examDiv = document.createElement('div');
+  examDiv.className = 'card';
+
+  const h3 = document.createElement('h3');
+  h3.textContent = 'Final Exam';
+  examDiv.appendChild(h3);
+
+  const p2 = document.createElement('p');
+  p2.textContent = 'Score: ' + finalScore + '%';
+  examDiv.appendChild(p2);
+
+  const prog2 = document.createElement('div');
+  prog2.className = 'progress';
+  const bar2 = document.createElement('div');
+  bar2.className = 'bar';
+  bar2.style.width = finalScore + '%';
+  prog2.appendChild(bar2);
+  examDiv.appendChild(prog2);
+
+  const examBtn = document.createElement('button');
+  if(!allDone){
+    examBtn.className = 'locked';
+    examBtn.textContent = 'Locked';
+    examBtn.onclick = function(){
+      alert('Complete all modules with ≥ 80% to unlock the Final Exam.');
+    };
+  }else{
+    examBtn.textContent = 'Take Final Exam';
+    examBtn.onclick = openFinalExam;
+  }
+  examDiv.appendChild(examBtn);
+
+  if(finalScore >= 80){
+    examDiv.appendChild(document.createElement('br'));
+    const certBtn = document.createElement('button');
+    certBtn.textContent = 'View Certificate';
+    certBtn.className = 'ghost';
+    certBtn.onclick = showCertificate;
+    examDiv.appendChild(certBtn);
+  }
+
+  modulesList.appendChild(examDiv);
+}
+
+function resetProgress(){
+  if(confirm('Reset all Coding 202 progress?')){
+    for(let i=1;i<=totalModules;i++){
+      localStorage.removeItem(scoreKey(i));
+    }
+    localStorage.removeItem(finalKey());
+    loadDashboard();
+  }
+}
+
+function openModule(num){
+  hideAllSections();
+  const sec = document.getElementById('module'+num);
+  if(sec) sec.classList.remove('hidden');
+  showModuleLessons(num,false);
+  setBreadcrumb('Module ' + num);
+}
+
+function goHome(){
+  hideAllSections();
+  document.getElementById('dashboard').classList.remove('hidden');
+  setBreadcrumb('Dashboard');
+  loadDashboard();
+}
+
+/* ===========================================================
+   UNIVERSAL QUIZ LOADER + RETEST
+   =========================================================== */
+function loadQuiz(num){
+  const box = document.getElementById('m'+num+'quizBox');
+  if(!box) return;
+  const original = quizzes[num];
+  if(!original) return;
+
+  const qset = original.map(q => {
+    const answers = q.a.slice();
+    for(let i=answers.length-1;i>0;i--){
+      const j = Math.floor(Math.random()*(i+1));
+      const tmp = answers[i];
+      answers[i] = answers[j];
+      answers[j] = tmp;
+    }
+    const newCorrect = answers.indexOf(q.a[q.c]);
+    return { q: q.q, a: answers, c: newCorrect };
+  });
+
+  quizzes[num] = qset;
+
+  box.innerHTML = '';
+  qset.forEach((q,qi)=>{
+    const div = document.createElement('div');
+    div.className = 'quizQ';
+
+    const title = document.createElement('b');
+    title.textContent = q.q;
+    div.appendChild(title);
+    div.appendChild(document.createElement('br'));
+
+    q.a.forEach((opt,ai)=>{
+      const label = document.createElement('label');
+      const radio = document.createElement('input');
+      radio.type = 'radio';
+      radio.name = 'm'+num+'q'+qi;
+      radio.value = String(ai);
+      label.appendChild(radio);
+      label.appendChild(document.createTextNode(' ' + opt));
+      div.appendChild(label);
+      div.appendChild(document.createElement('br'));
+    });
+
+    box.appendChild(div);
+  });
+}
+
+function submitQuiz(num){
+  const qset = quizzes[num];
+  if(!qset) return;
+  let scoreCount = 0;
+  qset.forEach((q,i)=>{
+    const sel = document.querySelector('input[name=m'+num+'q'+i+']:checked');
+    if(sel && parseInt(sel.value,10) === q.c) scoreCount++;
+  });
+  const percent = Math.round((scoreCount/qset.length)*100);
+  localStorage.setItem(scoreKey(num),percent);
+  const res = document.getElementById('m'+num+'result');
+  if(!res) return;
+  res.textContent = 'You scored ' + percent + '%';
+  res.className = 'output ' + (percent>=80 ? 'success' : 'fail');
+  if(percent>=80){
+    res.textContent += ' ✅ Next module unlocked!';
+  }else{
+    res.textContent += ' ❌ Try again for 80% or higher.';
+  }
+  loadDashboard();
+}
+
+function retestQuiz(num){
+  const res = document.getElementById('m'+num+'result');
+  if(res){
+    res.textContent = '';
+    res.className = 'output';
+  }
+  loadQuiz(num);
+}
+
+/* ===========================================================
+   MODULE STATE (GENERIC HANDLERS)
+   =========================================================== */
+const moduleConfig = {
+  1:{cardsSelector:'#m1cards .m1card', barId:'m1bar', quizId:'m1quiz', cardsId:'m1cards', resultId:'m1result'},
+  2:{cardsSelector:'#m2cards .m2card', barId:'m2bar', quizId:'m2quiz', cardsId:'m2cards', resultId:'m2result'},
+  3:{cardsSelector:'#m3cards .m3card', barId:'m3bar', quizId:'m3quiz', cardsId:'m3cards', resultId:'m3result'},
+  4:{cardsSelector:'#m4cards .m4card', barId:'m4bar', quizId:'m4quiz', cardsId:'m4cards', resultId:'m4result'},
+  5:{cardsSelector:'#m5cards .m5card', barId:'m5bar', quizId:'m5quiz', cardsId:'m5cards', resultId:'m5result'}
+};
+const moduleState = {};
+
+function setupModules(){
+  for(let num=1; num<=totalModules; num++){
+    const cfg = moduleConfig[num];
+    if(!cfg) continue;
+    const cards = document.querySelectorAll(cfg.cardsSelector);
+    moduleState[num] = {
+      index:0,
+      cards:cards,
+      barId:cfg.barId,
+      quizId:cfg.quizId,
+      cardsId:cfg.cardsId,
+      resultId:cfg.resultId
+    };
+  }
+}
+
+function nextModule(num){
+  const st = moduleState[num];
+  if(!st) return;
+  if(st.index < st.cards.length-1){
+    st.cards[st.index].classList.add('hidden');
+    st.index++;
+    st.cards[st.index].classList.remove('hidden');
+    const bar = document.getElementById(st.barId);
+    if(bar){
+      bar.style.width = ((st.index/st.cards.length)*100) + '%';
+    }
+  }
+}
+
+function showModuleLessons(num,scrollTop){
+  if(scrollTop === undefined) scrollTop = true;
+  const st = moduleState[num];
+  if(!st) return;
+  const quiz = document.getElementById(st.quizId);
+  const cardsWrap = document.getElementById(st.cardsId);
+  if(quiz) quiz.classList.add('hidden');
+  if(cardsWrap) cardsWrap.classList.remove('hidden');
+  st.index = 0;
+  st.cards.forEach((c,i)=>c.classList.toggle('hidden', i!==0));
+  const bar = document.getElementById(st.barId);
+  if(bar) bar.style.width = (((st.index + 1)/st.cards.length)*100) + '%';
+  const res = document.getElementById(st.resultId);
+  if(res){
+    res.textContent = '';
+    res.className = 'output';
+  }
+  if(scrollTop){
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+}
+
+function showModuleQuiz(num){
+  const st = moduleState[num];
+  if(!st) return;
+  const cardsWrap = document.getElementById(st.cardsId);
+  if(cardsWrap) cardsWrap.classList.add('hidden');
+  const quiz = document.getElementById(st.quizId);
+  if(quiz) quiz.classList.remove('hidden');
+  loadQuiz(num);
+}
+
+/* ===========================================================
+   FLASHCARDS
+   =========================================================== */
+function flip(el){
+  const def = el.querySelector('.def');
+  if(def){
+    def.classList.toggle('hidden');
+  }
+}
+
+/* ===========================================================
+   LAB FUNCTIONS
+   =========================================================== */
+function runStepLab(){
+  const perDayInput = document.getElementById('m1StepsPerDay');
+  const daysInput = document.getElementById('m1Days');
+  const out = document.getElementById('m1StepOut');
+  if(!perDayInput || !daysInput || !out) return;
+  let perDay = parseInt(perDayInput.value,10);
+  let days = parseInt(daysInput.value,10);
+  if(isNaN(perDay) || perDay < 0) perDay = 0;
+  if(isNaN(days) || days <= 0) days = 1;
+  if(days > 60) days = 60;
+  let total = 0;
+  for(let i=0;i<days;i++){
+    total += perDay;
+  }
+  let msg = "Simulating " + days + " day(s) at " + perDay + " steps per day.\n";
+  msg += "Total steps: " + total + ".\n";
+  if(total >= 10000 * days){
+    msg += "🏅 You hit 10,000 steps per day on average. Amazing!";
+  }else if(total >= 5000 * days){
+    msg += "✨ Nice work! You're over 5,000 steps per day on average.";
+  }else{
+    msg += "🌱 Every step counts. You can raise your daily target over time.";
+  }
+  out.textContent = msg;
+}
+
+function runGradeLab(){
+  const input = document.getElementById('m2Score');
+  const out = document.getElementById('m2GradeOut');
+  if(!input || !out) return;
+  let score = parseInt(input.value,10);
+  if(isNaN(score)) score = 0;
+  if(score < 0) score = 0;
+  if(score > 100) score = 100;
+  let grade, note;
+  if(score >= 90){
+    grade = "A";
+    note = "Outstanding!";
+  }else if(score >= 80){
+    grade = "B";
+    note = "Strong work!";
+  }else if(score >= 70){
+    grade = "C";
+    note = "Solid, keep practicing.";
+  }else if(score >= 60){
+    grade = "D";
+    note = "You're close. Review the lessons again.";
+  }else{
+    grade = "F";
+    note = "Don't give up—coding gets easier with practice.";
+  }
+  out.textContent = "Score: " + score + " → Grade: " + grade + ". " + note;
+}
+
+function runTableLab(){
+  const baseInput = document.getElementById('m3Base');
+  const maxInput = document.getElementById('m3Max');
+  const out = document.getElementById('m3TableOut');
+  if(!baseInput || !maxInput || !out) return;
+  let base = parseInt(baseInput.value,10);
+  let max = parseInt(maxInput.value,10);
+  if(isNaN(base)) base = 1;
+  if(isNaN(max) || max <= 0) max = 10;
+  if(max > 20) max = 20;
+  let lines = [];
+  for(let i=1;i<=max;i++){
+    lines.push(base + " x " + i + " = " + (base*i));
+  }
+  out.textContent = lines.join("\n");
+}
+
+function runCalcLab(){
+  const aInput = document.getElementById('m4A');
+  const bInput = document.getElementById('m4B');
+  const opSelect = document.getElementById('m4Op');
+  const out = document.getElementById('m4CalcOut');
+  if(!aInput || !bInput || !opSelect || !out) return;
+  const a = Number(aInput.value);
+  const b = Number(bInput.value);
+  if(isNaN(a) || isNaN(b)){
+    out.textContent = "Please enter two numbers.";
+    out.className = "output fail";
+    return;
+  }
+  function add(x,y){ return x + y; }
+  function sub(x,y){ return x - y; }
+  function mul(x,y){ return x * y; }
+  function div(x,y){
+    if(y === 0) return NaN;
+    return x / y;
+  }
+  let result;
+  let symbol;
+  if(opSelect.value === "add"){
+    result = add(a,b); symbol = "+";
+  }else if(opSelect.value === "sub"){
+    result = sub(a,b); symbol = "-";
+  }else if(opSelect.value === "mul"){
+    result = mul(a,b); symbol = "×";
+  }else{
+    result = div(a,b); symbol = "÷";
+  }
+  if(isNaN(result)){
+    out.textContent = "Division by zero is not allowed. Try a different second number.";
+    out.className = "output fail";
+  }else{
+    out.textContent = a + " " + symbol + " " + b + " = " + result;
+    out.className = "output success";
+  }
+}
+
+function runLeaderboardLab(){
+  const out = document.getElementById('m5BoardOut');
+  if(!out) return;
+  const players = [
+    { name:"Sky",   score:120 },
+    { name:"River", score:95  },
+    { name:"Nova",  score:140 },
+    { name:"Lux",   score:110 }
+  ];
+  // compute total, average, and sort
+  let total = 0;
+  for(let i=0;i<players.length;i++){
+    total += players[i].score;
+  }
+  const avg = total / players.length;
+  players.sort((a,b)=> b.score - a.score);
+  let lines = [];
+  lines.push("Leaderboard:");
+  for(let i=0;i<players.length;i++){
+    lines.push((i+1) + ". " + players[i].name + " — " + players[i].score + " pts");
+  }
+  lines.push("");
+  lines.push("Total score: " + total);
+  lines.push("Average score: " + avg.toFixed(1));
+  out.textContent = lines.join("\n");
+}
+
+/* ===========================================================
+   FINAL EXAM (25 RANDOM QUESTIONS)
+   =========================================================== */
+let finalExamSet = [];
+
+function openFinalExam(){
+  const allComplete = [...Array(totalModules)].every((_,i)=>
+    parseInt(localStorage.getItem(scoreKey(i+1)) || '0',10) >= 80
+  );
+  if(!allComplete){
+    alert('Complete all modules with ≥ 80% to unlock the Final Exam.');
+    return;
+  }
+  hideAllSections();
+  const sec = document.getElementById('finalExam');
+  if(sec) sec.classList.remove('hidden');
+  setBreadcrumb('Final Exam');
+  buildFinalExam();
+}
+
+function buildFinalExam(){
+  const pool = [];
+  for(let m=1;m<=totalModules;m++){
+    if(Array.isArray(quizzes[m])){
+      pool.push(...quizzes[m]);
+    }
+  }
+  const sample = [];
+  while(sample.length < 25 && sample.length < pool.length){
+    const q = pool[Math.floor(Math.random()*pool.length)];
+    if(!sample.includes(q)){
+      sample.push(q);
+    }
+  }
+  finalExamSet = sample;
+  const box = document.getElementById('examBox');
+  if(!box) return;
+  box.innerHTML = '';
+  sample.forEach((q,qi)=>{
+    const div = document.createElement('div');
+    div.className = 'quizQ';
+    const title = document.createElement('b');
+    title.textContent = q.q;
+    div.appendChild(title);
+    div.appendChild(document.createElement('br'));
+    q.a.forEach((opt,ai)=>{
+      const label = document.createElement('label');
+      const radio = document.createElement('input');
+      radio.type = 'radio';
+      radio.name = 'examQ' + qi;
+      radio.value = String(ai);
+      label.appendChild(radio);
+      label.appendChild(document.createTextNode(' ' + opt));
+      div.appendChild(label);
+      div.appendChild(document.createElement('br'));
+    });
+    box.appendChild(div);
+  });
+  const res = document.getElementById('examResult');
+  if(res){
+    res.textContent = '';
+    res.className = 'output';
+  }
+}
+
+function submitFinalExam(){
+  const set = finalExamSet || [];
+  if(!set.length) return;
+  let scoreCount = 0;
+  set.forEach((q,i)=>{
+    const sel = document.querySelector('input[name=examQ'+i+']:checked');
+    if(sel && parseInt(sel.value,10) === q.c) scoreCount++;
+  });
+  const percent = Math.round((scoreCount/set.length)*100);
+  localStorage.setItem(finalKey(),percent);
+  const res = document.getElementById('examResult');
+  if(!res) return;
+  res.textContent = 'You scored ' + percent + '% (' + scoreCount + '/' + set.length + ')';
+  if(percent>=80){
+    res.className = 'output success';
+    res.textContent += ' ✅ Certificate unlocked!';
+    setTimeout(showCertificate,1000);
+  }else{
+    res.className = 'output fail';
+    res.textContent += ' ❌ Try again for 80% or higher.';
+  }
+  loadDashboard();
+}
+
+function retakeFinalExam(){
+  buildFinalExam();
+}
+
+/* ===========================================================
+   CERTIFICATE
+   =========================================================== */
+function showCertificate(){
+  hideAllSections();
+  setBreadcrumb('Certificate');
+  const name = prompt('Enter your name for the certificate:') || 'Student';
+  const score = localStorage.getItem(finalKey()) || '80';
+  const certName = document.getElementById('certName');
+  const certScore = document.getElementById('certScore');
+  const certDate = document.getElementById('certDate');
+  if(certName) certName.textContent = name;
+  if(certScore) certScore.textContent = score;
+  if(certDate) certDate.textContent = new Date().toLocaleDateString();
+  const sec = document.getElementById('certificate');
+  if(sec) sec.classList.remove('hidden');
+}
+
+/* ===========================================================
+   INIT
+   =========================================================== */
+function init(){
+  setupModules();
+  loadDashboard();
+  setBreadcrumb('Dashboard');
+}
+init();
+</script>
+</body>
+</html>
