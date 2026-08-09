@@ -1,0 +1,230 @@
+{
+  "version": 1,
+  "name": "Khaemenes Higher Learning University Federation",
+  "everExpanding": true,
+  "centralCampus": "vervenveda/Khaemenes_Higher_Learning.github.io",
+  "registrySources": [
+    "https://vervenveda.com/assessment-engine/mentor/registry/ecosystem-repositories.json",
+    "https://vervenveda.github.io/assessment-engine/mentor/registry/ecosystem-repositories.json"
+  ],
+  "principles": {
+    "academicRelationshipSeparateFromSourceOwnership": true,
+    "listEveryPublicRepository": true,
+    "duplicateFederatedCourseFiles": false,
+    "privateRepositoriesPubliclyListed": false
+  },
+  "academicUnits": [
+    {
+      "id": "mathematical-sciences",
+      "name": "School of Mathematical Sciences",
+      "kind": "school",
+      "status": "active-local",
+      "repository": "vervenveda/Khaemenes_Higher_Learning.github.io",
+      "url": "./courses/",
+      "domains": [
+        "mathematics"
+      ],
+      "description": "Local university mathematics department with nine advanced courses."
+    },
+    {
+      "id": "atmospheric-earth-sciences",
+      "name": "School of Atmospheric & Earth Sciences",
+      "kind": "school",
+      "status": "active-federated",
+      "repository": "vervenveda/solanar.github.io",
+      "url": "https://vervenveda.com/solanar.github.io/",
+      "domains": [
+        "meteorology",
+        "atmospheric-science",
+        "earth-science",
+        "climate"
+      ],
+      "description": "Federated science campus at Solanar Observatory."
+    },
+    {
+      "id": "law-legal-studies",
+      "name": "School of Law & Legal Studies",
+      "kind": "school",
+      "status": "active-federated",
+      "repository": "vervenveda/firmament.github.io",
+      "url": "https://vervenveda.com/firmament.github.io/",
+      "domains": [
+        "law",
+        "legal-studies",
+        "evidence",
+        "public-policy"
+      ],
+      "description": "Federated law and legal-studies campus at Firmament."
+    },
+    {
+      "id": "visual-arts-design",
+      "name": "School of Visual Arts & Design",
+      "kind": "school",
+      "status": "active-federated",
+      "repository": "vervenveda/bazaarart.github.io",
+      "url": "https://vervenveda.com/bazaarart.github.io/",
+      "domains": [
+        "visual-art",
+        "design",
+        "studio-art",
+        "culture"
+      ],
+      "description": "Federated visual-arts and design campus at Bazaar Art."
+    },
+    {
+      "id": "music-recording",
+      "name": "Conservatory of Music & Recording Arts",
+      "kind": "conservatory",
+      "status": "active-federated",
+      "repository": "vervenveda/the_refrain.github.io",
+      "url": "https://vervenveda.com/the_refrain.github.io/",
+      "domains": [
+        "music",
+        "composition",
+        "recording",
+        "performance"
+      ],
+      "description": "Federated music conservatory at The Refrain."
+    },
+    {
+      "id": "languages-linguistics",
+      "name": "School of Languages & Linguistics",
+      "kind": "school",
+      "status": "active-federated",
+      "repository": "vervenveda/Khaemenes_Linguistics.github.io",
+      "url": "https://vervenveda.com/Khaemenes_Linguistics.github.io/",
+      "domains": [
+        "languages",
+        "linguistics",
+        "literature",
+        "culture"
+      ],
+      "description": "Federated language and linguistics campus at Polyglot."
+    },
+    {
+      "id": "health-medical",
+      "name": "School of Health & Medical Studies",
+      "kind": "school",
+      "status": "active-federated-developing",
+      "repository": "vervenveda/medicament-hub.github.io",
+      "url": "https://vervenveda.com/medicament-hub.github.io/",
+      "domains": [
+        "health",
+        "medical-literacy",
+        "psychology",
+        "traditional-medicine"
+      ],
+      "description": "Safety-first federated health and medical-learning campus at Medicament."
+    },
+    {
+      "id": "business-finance",
+      "name": "School of Business & Financial Studies",
+      "kind": "school",
+      "status": "developing-federated",
+      "repository": "vervenveda/finance.github.io",
+      "url": "https://vervenveda.com/finance.github.io/",
+      "domains": [
+        "finance",
+        "business",
+        "accounting",
+        "entrepreneurship"
+      ],
+      "description": "Developing federated business and finance school."
+    }
+  ],
+  "courseHalls": [
+    {
+      "name": "Higher Mathematics Department",
+      "repository": "vervenveda/Khaemenes_Higher_Learning.github.io",
+      "url": "./courses/",
+      "school": "School of Mathematical Sciences",
+      "status": "active"
+    },
+    {
+      "name": "Solanar Weather Academy",
+      "repository": "vervenveda/solanar.github.io",
+      "url": "https://vervenveda.com/solanar.github.io/weather-academy/",
+      "school": "School of Atmospheric & Earth Sciences",
+      "status": "active"
+    },
+    {
+      "name": "Traditional Medicine Hall",
+      "repository": "vervenveda/medicament-hub.github.io",
+      "url": "https://vervenveda.com/medicament-hub.github.io/halls/Traditional_Medicine_Hall/",
+      "school": "School of Health & Medical Studies",
+      "status": "active"
+    },
+    {
+      "name": "Holistic Medicine Hall",
+      "repository": "vervenveda/medicament-hub.github.io",
+      "url": "https://vervenveda.com/medicament-hub.github.io/halls/%20Holistic_Medicine_Hall/",
+      "school": "School of Health & Medical Studies",
+      "status": "active",
+      "note": "Repository directory currently contains a leading space; preserve the encoded path until a deliberate path migration is performed."
+    },
+    {
+      "name": "Psychology / Mind Hall",
+      "repository": "vervenveda/medicament-hub.github.io",
+      "url": "https://vervenveda.com/medicament-hub.github.io/halls/Psychology_Mind_Hall/",
+      "school": "School of Health & Medical Studies",
+      "status": "active"
+    },
+    {
+      "name": "Children's Medicine Hall",
+      "repository": "vervenveda/medicament-hub.github.io",
+      "url": "https://vervenveda.com/medicament-hub.github.io/halls/Childrens_Medicine_Hall/",
+      "school": "School of Health & Medical Studies",
+      "status": "active"
+    }
+  ],
+  "affiliates": [
+    {
+      "name": "ARSHIF Archive & Research Library",
+      "repository": "vervenveda/Arshif.github.io",
+      "role": "library",
+      "url": "https://vervenveda.com/Arshif.github.io/"
+    },
+    {
+      "name": "PLERA Search",
+      "repository": "vervenveda/PLERASearch.github.io",
+      "role": "research-discovery",
+      "url": "https://vervenveda.com/PLERASearch.github.io/"
+    },
+    {
+      "name": "ProResource Hub",
+      "repository": "vervenveda/proresource_hub.github.io",
+      "role": "technical-laboratory",
+      "url": "https://vervenveda.com/proresource_hub.github.io/"
+    },
+    {
+      "name": "River-to-Road",
+      "repository": "vervenveda/river_to_road.github.io",
+      "role": "environmental-service-learning",
+      "url": "https://vervenveda.com/river_to_road.github.io/"
+    },
+    {
+      "name": "One Nation For All",
+      "repository": "vervenveda/onenationforall.github.io",
+      "role": "civic-learning",
+      "url": "https://vervenveda.com/onenationforall.github.io/"
+    },
+    {
+      "name": "The Verifier",
+      "repository": "vervenveda/theverifier.github.io",
+      "role": "information-media-research",
+      "url": "https://vervenveda.com/theverifier.github.io/"
+    },
+    {
+      "name": "Verve N Veda Arcade",
+      "repository": "vervenveda/arcade.github.io",
+      "role": "games-logic-laboratory",
+      "url": "https://vervenveda.com/arcade.github.io/"
+    },
+    {
+      "name": "Aurora",
+      "repository": "vervenveda/aurora.github.io",
+      "role": "wellness-reflection-center",
+      "url": "https://vervenveda.com/aurora.github.io/"
+    }
+  ]
+}

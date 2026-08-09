@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceId": "khaemenes.higher-learning",
   "name": "Khaemenes Higher Learning",
   "classification": "educational",
@@ -15,11 +15,12 @@
   ],
   "homepage": "https://vervenveda.com/Khaemenes_Higher_Learning.github.io/",
   "repository": "vervenveda/Khaemenes_Higher_Learning.github.io",
+  "inventoryAuthority": "source-owned-local-only",
   "resources": [
     {
       "id": "higher-home",
       "title": "Khaemenes Higher Learning",
-      "description": "",
+      "description": "Central university campus, student entry point, academic pathways, university catalog, and federated campus navigation.",
       "url": "https://vervenveda.com/Khaemenes_Higher_Learning.github.io/",
       "audiences": [
         "higher-learning",
@@ -32,20 +33,28 @@
       ],
       "domains": [
         "education",
+        "university",
         "navigation"
       ],
-      "skills": [],
+      "skills": [
+        "university-navigation"
+      ],
       "tags": [
         "higher-learning",
-        "advanced-study"
+        "university",
+        "federated-campus"
       ],
       "mentorEligible": true,
-      "featured": true
+      "featured": true,
+      "resourceType": "hub",
+      "learningValue": "navigation",
+      "curricularWeight": "supplemental",
+      "subjects": []
     },
     {
       "id": "higher-math-catalog",
-      "title": "Higher Mathematics Course Catalog",
-      "description": "",
+      "title": "School of Mathematical Sciences",
+      "description": "Higher Learning's locally owned mathematics department and course catalog.",
       "url": "https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/",
       "audiences": [
         "higher-learning",
@@ -57,22 +66,30 @@
         "educator"
       ],
       "domains": [
-        "mathematics"
+        "mathematics",
+        "university"
       ],
       "skills": [
         "advanced-mathematics"
       ],
       "tags": [
-        "course-catalog",
-        "mathematics"
+        "mathematics",
+        "department",
+        "course-catalog"
       ],
       "mentorEligible": true,
-      "featured": true
+      "featured": true,
+      "resourceType": "department",
+      "learningValue": "core",
+      "curricularWeight": "supplemental",
+      "subjects": [
+        "mathematics"
+      ]
     },
     {
       "id": "intro-proofs",
       "title": "Introduction to Proofs",
-      "description": "",
+      "description": "University mathematics course in logic, proof structure, and mathematical reasoning.",
       "url": "https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/introduction-to-proofs/",
       "audiences": [
         "higher-learning",
@@ -94,12 +111,19 @@
         "advanced-math",
         "course"
       ],
-      "mentorEligible": true
+      "mentorEligible": true,
+      "featured": false,
+      "resourceType": "course",
+      "learningValue": "core",
+      "curricularWeight": "core",
+      "subjects": [
+        "mathematics"
+      ]
     },
     {
       "id": "linear-algebra",
       "title": "Linear Algebra",
-      "description": "",
+      "description": "University mathematics course in vectors, matrices, transformations, and linear systems.",
       "url": "https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/linear-algebra/",
       "audiences": [
         "higher-learning",
@@ -121,12 +145,19 @@
         "advanced-math",
         "course"
       ],
-      "mentorEligible": true
+      "mentorEligible": true,
+      "featured": false,
+      "resourceType": "course",
+      "learningValue": "core",
+      "curricularWeight": "core",
+      "subjects": [
+        "mathematics"
+      ]
     },
     {
       "id": "calculus-ii",
       "title": "Calculus II",
-      "description": "",
+      "description": "University mathematics course extending integral calculus and related advanced topics.",
       "url": "https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/calculus-ii/",
       "audiences": [
         "higher-learning",
@@ -148,12 +179,19 @@
         "advanced-math",
         "course"
       ],
-      "mentorEligible": true
+      "mentorEligible": true,
+      "featured": false,
+      "resourceType": "course",
+      "learningValue": "core",
+      "curricularWeight": "core",
+      "subjects": [
+        "mathematics"
+      ]
     },
     {
       "id": "differential-equations",
       "title": "Differential Equations",
-      "description": "",
+      "description": "University mathematics course in differential equations and mathematical modeling.",
       "url": "https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/differential-equations/",
       "audiences": [
         "higher-learning",
@@ -168,18 +206,26 @@
         "mathematics"
       ],
       "skills": [
-        "differential-equations"
+        "differential-equations",
+        "modeling"
       ],
       "tags": [
         "advanced-math",
         "course"
       ],
-      "mentorEligible": true
+      "mentorEligible": true,
+      "featured": false,
+      "resourceType": "course",
+      "learningValue": "core",
+      "curricularWeight": "core",
+      "subjects": [
+        "mathematics"
+      ]
     },
     {
       "id": "discrete-math",
       "title": "Discrete Mathematics",
-      "description": "",
+      "description": "University mathematics course in logic, combinatorics, discrete structures, and reasoning.",
       "url": "https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/discrete-mathematics/",
       "audiences": [
         "higher-learning",
@@ -201,12 +247,19 @@
         "advanced-math",
         "course"
       ],
-      "mentorEligible": true
+      "mentorEligible": true,
+      "featured": false,
+      "resourceType": "course",
+      "learningValue": "core",
+      "curricularWeight": "core",
+      "subjects": [
+        "mathematics"
+      ]
     },
     {
       "id": "abstract-algebra",
       "title": "Abstract Algebra",
-      "description": "",
+      "description": "Advanced university mathematics course in algebraic structures including groups and rings.",
       "url": "https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/abstract-algebra/",
       "audiences": [
         "higher-learning",
@@ -229,12 +282,19 @@
         "advanced-math",
         "course"
       ],
-      "mentorEligible": true
+      "mentorEligible": true,
+      "featured": false,
+      "resourceType": "course",
+      "learningValue": "core",
+      "curricularWeight": "core",
+      "subjects": [
+        "mathematics"
+      ]
     },
     {
       "id": "statistics",
       "title": "Statistics",
-      "description": "",
+      "description": "University mathematics course in statistics, probability, inference, and quantitative reasoning.",
       "url": "https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/statistics/",
       "audiences": [
         "higher-learning",
@@ -246,7 +306,8 @@
         "educator"
       ],
       "domains": [
-        "mathematics"
+        "mathematics",
+        "statistics"
       ],
       "skills": [
         "statistics",
@@ -256,12 +317,19 @@
         "advanced-math",
         "course"
       ],
-      "mentorEligible": true
+      "mentorEligible": true,
+      "featured": false,
+      "resourceType": "course",
+      "learningValue": "core",
+      "curricularWeight": "core",
+      "subjects": [
+        "mathematics"
+      ]
     },
     {
       "id": "real-complex-analysis",
       "title": "Real & Complex Analysis",
-      "description": "",
+      "description": "Advanced university mathematics course in real and complex analysis.",
       "url": "https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/real-complex-analysis/",
       "audiences": [
         "higher-learning",
@@ -283,12 +351,19 @@
         "advanced-math",
         "course"
       ],
-      "mentorEligible": true
+      "mentorEligible": true,
+      "featured": false,
+      "resourceType": "course",
+      "learningValue": "core",
+      "curricularWeight": "core",
+      "subjects": [
+        "mathematics"
+      ]
     },
     {
       "id": "topology-geometry",
       "title": "Topology & Differential Geometry",
-      "description": "",
+      "description": "Advanced university mathematics course in topology and differential geometry.",
       "url": "https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/topology-differential-geometry/",
       "audiences": [
         "higher-learning",
@@ -310,7 +385,15 @@
         "advanced-math",
         "course"
       ],
-      "mentorEligible": true
+      "mentorEligible": true,
+      "featured": false,
+      "resourceType": "course",
+      "learningValue": "core",
+      "curricularWeight": "core",
+      "subjects": [
+        "mathematics"
+      ]
     }
-  ]
+  ],
+  "mentorNotes": "Higher Learning is an ever-expanding federated university. This manifest intentionally lists only resources physically/source-owned by the Higher Learning repository. Federated schools, conservatories, halls, libraries, institutes, laboratories, and services remain authoritative in their own repositories and manifests. The public Higher Learning catalog may list and link those external campuses without duplicating their Mentor resource authority."
 }

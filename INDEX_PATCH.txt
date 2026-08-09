@@ -1,0 +1,35 @@
+REPAIR 06 — INDEX.HTML PATCH
+
+Repository:
+vervenveda/Khaemenes_Higher_Learning.github.io
+
+Upload first:
+- README.md
+- mentor-manifest.json
+- data/university-federation.json
+- data/university-network.js
+
+Then make ONE addition to the existing index.html.
+
+Immediately before the existing closing </body> tag, add:
+
+<script src="./data/university-network.js"></script>
+
+Do not remove the existing inline Higher Learning script.
+
+What the added script does:
+1. updates the hero description to the federated-university model;
+2. clarifies that Mathematics is locally owned while other schools may be distributed;
+3. inserts a Federated Schools & Course-Bearing Halls section;
+4. adds a University Network button to the hero;
+5. inserts a searchable Complete University Network Registry;
+6. attempts to load the central three-account ecosystem registry so every PUBLIC repository is listed;
+7. adds footer links to Federated Schools and the Network Registry.
+
+The script does not move or duplicate any course files.
+
+Important:
+The Holistic Medicine Hall currently has a leading space in its repository directory name:
+halls/ Holistic_Medicine_Hall
+
+Repair 06 preserves the encoded live path rather than renaming it. Renaming can be handled deliberately during the Medicament upgrade pass so existing links are not broken.
