@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<title>Career Directory AGI</title>
+<style>
+:root{
+  --ink:#101713;--muted:#64706a;--paper:#f4f1e9;--panel:#fffdf8;
+  --forest:#203d31;--gold:#b28a48;--line:rgba(16,23,19,.16);
+  --shadow:0 18px 50px rgba(16,23,19,.08);--radius:11px;
+  --display:Georgia,"Times New Roman",serif;--sans:Arial,Helvetica,sans-serif
+}
+*{box-sizing:border-box}
+body{margin:0;padding:24px;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.5}
+h1,h2,h3{font-family:var(--display);font-weight:400}
+h1{margin:0;text-align:center;font-size:clamp(2rem,5vw,4rem)}
+.sub{max-width:900px;margin:10px auto 20px;text-align:center;color:var(--muted)}
+.status{width:max-content;max-width:100%;margin:0 auto 22px;padding:7px 11px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+#container{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1fr 1.3fr 1fr;gap:18px;align-items:start}
+.module{min-width:0;padding:18px;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel);box-shadow:var(--shadow);text-align:left}
+#notes{border-top:4px solid #7aa0a8}#directory{border-top:4px solid var(--gold)}#interface{border-top:4px solid var(--forest)}
+textarea,input,button{width:100%;font:inherit}
+textarea,input{margin:5px 0 9px;padding:10px 11px;border:1px solid var(--line);border-radius:7px;background:#fff}
+textarea{min-height:90px;resize:vertical}
+button{margin:5px 0;padding:10px 12px;border:1px solid var(--ink);border-radius:7px;background:var(--ink);color:#fff;cursor:pointer}
+button.secondary{background:#fff;color:var(--ink);border-color:var(--line)}
+.small{font-size:12px;color:var(--muted)}.scroll{max-height:470px;overflow:auto;padding-right:4px}
+details{margin:8px 0;border:1px solid var(--line);border-radius:7px;background:#fff}
+summary{padding:9px 11px;cursor:pointer;font-weight:700}
+.group-body{padding:0 11px 10px}.item{padding:9px 0;border-top:1px solid rgba(16,23,19,.09)}
+.item:first-child{border-top:0}.item strong{display:block}.item button{margin-top:7px;width:auto;padding:6px 9px;font-size:11px}
+.output{min-height:150px;padding:12px;border:1px solid var(--line);border-radius:7px;background:#0f1713;color:#e9efe9;white-space:pre-wrap;overflow-wrap:anywhere;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px}
+.toolbar{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:10px 0}.stat{padding:9px;border:1px solid var(--line);border-radius:7px;background:#fff;text-align:center}.stat b{display:block;font-size:20px;font-family:var(--display)}.stat span{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+@media(max-width:1050px){#container{grid-template-columns:1fr}.scroll{max-height:360px}}
+</style>
+</head>
+<body>
+<h1>Career Directory AGI</h1>
+<p class="sub">Khaemenes Career instance of the reusable VNV Directory AGI family. Federation-backed, local-first notes, canonical resource resolution.</p>
+<div class="status" id="status">Loading federation…</div>
+
+<div id="container">
+  <section id="notes" class="module">
+    <h2>Career Notes</h2>
+    <p class="small">Local notes stay in this browser and contain no credentials.</p>
+    <textarea id="noteInput" placeholder="Store a career routing note or resource reminder…"></textarea>
+    <button id="noteStore">Store Note</button>
+    <button class="secondary" id="noteClear">Clear Notes</button>
+    <h3>Saved Notes</h3>
+    <div class="scroll"><ul id="noteList"></ul></div>
+  </section>
+
+  <section id="directory" class="module">
+    <h2>Directory</h2>
+    <p class="small">Search titles, aliases, descriptions, skills, domains, repositories, and categories.</p>
+    <input id="search" type="search" placeholder="Search Career Directory…">
+    <div class="stats" id="stats"></div>
+    <div class="scroll" id="list"></div>
+  </section>
+
+  <section id="interface" class="module">
+    <h2>User Interface</h2>
+    <p class="small">Commands operate on the Career Directory AGI instance.</p>
+    <input id="command" placeholder="Try: resolve PROSE">
+    <button id="run">Run</button>
+    <h3>Output</h3>
+    <div id="output" class="output">Career Directory AGI loading…</div>
+    <p class="small"><strong>Commands:</strong><br>find term<br>resolve name<br>show category name<br>stats<br>validate<br>help</p>
+  </section>
+</div>
+
+<script src="../assets/career-directory-agi.js"></script>
+<script>
+(() => {
+  const $=id=>document.getElementById(id);
+  const esc=v=>String(v??"").replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
+
+  function renderNotes(){
+    const rows=CareerDirectoryAGI.notes();
+    $("noteList").innerHTML=rows.length?rows.slice().reverse().map(n=>`<li><small>${esc(n.createdAt)}</small><br>${esc(n.text)}</li>`).join(""):"<li>No notes.</li>";
+  }
+  function render(term=""){
+    const rows=term?CareerDirectoryAGI.find(term):CareerDirectoryAGI.all();
+    const byCat=new Map();
+    rows.forEach(r=>{if(!byCat.has(r.category))byCat.set(r.category,[]);byCat.get(r.category).push(r)});
+    $("list").innerHTML=[...byCat.entries()].map(([cat,items])=>`
+      <details>
+        <summary>${esc(cat)} · ${items.length}</summary>
+        <div class="group-body">
+          ${items.map(r=>`
+            <div class="item">
+              <strong>${esc(r.title)}</strong>
+              <span class="small">${esc(r.description||r.repository||"")}</span><br>
+              <button data-id="${esc(r.id)}">Open in Career Portal</button>
+            </div>`).join("")}
+        </div>
+      </details>`).join("")||"<p>No matches.</p>";
+    $("list").querySelectorAll("[data-id]").forEach(btn=>btn.addEventListener("click",()=>{
+      const r=CareerDirectoryAGI.all().find(x=>x.id===btn.dataset.id);
+      if(!r)return;
+      if(window.parent && window.parent!==window){
+        window.parent.dispatchEvent(new CustomEvent("career-directory-launch",{detail:{resource:r}}));
+      }else{
+        location.href=r.url;
+      }
+    }));
+    const s=CareerDirectoryAGI.summary();
+    $("stats").innerHTML=`<div class="stat"><b>${s.records}</b><span>Records</span></div><div class="stat"><b>${s.categories}</b><span>Categories</span></div><div class="stat"><b>${s.validationIssues}</b><span>Issues</span></div>`;
+    $("status").textContent=s.error?`Fallback · ${s.error}`:`Federation ready · Directory AGI v${s.version}`;
+  }
+  function command(){
+    const raw=$("command").value.trim(),lower=raw.toLowerCase();let out="";
+    if(!raw)return;
+    if(lower==="help")out="find <term>\\nresolve <name>\\nshow category <name>\\nstats\\nvalidate\\nhelp";
+    else if(lower==="stats")out=JSON.stringify(CareerDirectoryAGI.summary(),null,2);
+    else if(lower==="validate"){const p=CareerDirectoryAGI.validate();out=p.length?p.join("\\n"):"Validation passed."}
+    else if(lower.startsWith("find ")){const r=CareerDirectoryAGI.find(raw.slice(5)).slice(0,25);out=r.length?r.map(x=>`${x.category} · ${x.title}\\n${x.url}`).join("\\n\\n"):"No matches."}
+    else if(lower.startsWith("resolve ")){const r=CareerDirectoryAGI.resolve(raw.slice(8));out=r?`${r.title}\\n${r.category}\\n${r.url}`:"No match."}
+    else if(lower.startsWith("show category ")){const q=raw.slice(14).toLowerCase(),r=CareerDirectoryAGI.all().filter(x=>x.category.toLowerCase().includes(q));out=r.length?r.map(x=>`${x.title} · ${x.url}`).join("\\n"):"Category not found."}
+    else{const r=CareerDirectoryAGI.resolve(raw);out=r?`${r.title}\\n${r.url}`:"Command not recognized. Type help."}
+    $("output").textContent=out;$("command").value="";
+  }
+
+  $("noteStore").addEventListener("click",()=>{if(CareerDirectoryAGI.note($("noteInput").value)){$("noteInput").value="";renderNotes()}});
+  $("noteClear").addEventListener("click",()=>{CareerDirectoryAGI.clearNotes();renderNotes()});
+  $("search").addEventListener("input",e=>render(e.target.value));
+  $("run").addEventListener("click",command);
+  $("command").addEventListener("keydown",e=>{if(e.key==="Enter")command()});
+  window.addEventListener("career-directory-ready",()=>{render($("search").value);renderNotes();$("output").textContent="Career Directory AGI ready. Type help."});
+  if(window.CareerDirectoryAGI){render();renderNotes()}
+})();
+</script>
+</body>
+</html>
