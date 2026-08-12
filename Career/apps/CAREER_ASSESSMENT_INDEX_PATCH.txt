@@ -1,0 +1,11 @@
+CAREER ASSESSMENT V2 — ONE-LINE PATCH
+
+File:
+Career/apps/career-assessment_index.html
+
+Add this line immediately BEFORE </body>:
+
+<script src="./career-assessment-optimizer.js"></script>
+
+Also upload:
+Career/apps/career-assessment-optimizer.js

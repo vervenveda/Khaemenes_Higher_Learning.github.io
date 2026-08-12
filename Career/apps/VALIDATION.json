@@ -1,0 +1,14 @@
+{
+  "optimizer_bytes": 29822,
+  "javascript_syntax_checked": true,
+  "dynamic_eval_used": false,
+  "engine_version": "2.0.0",
+  "expected_question_count_runtime": 300,
+  "declared_pathway_count": 13,
+  "required_storage_keys": [
+    "khaeCareerAssessmentBundle_v1",
+    "khaeCareerProgress_v1",
+    "khaeCareerQuantumLog_v1"
+  ],
+  "install_line": "<script src=\"./career-assessment-optimizer.js\"></script>"
+}
