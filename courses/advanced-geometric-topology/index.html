@@ -1,0 +1,12 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Advanced Geometric Topology · Khaemenes Higher Learning</title><link rel="stylesheet" href="assets/course.css"></head>
+<body><header class="top"><div class="wrap nav"><div class="brand">Khaemenes Higher Learning · Archaemenes Scholar</div><nav><a href="labs/">Labs</a> · <a href="assessments/">Assessments</a></nav></div></header>
+<section class="hero"><div class="wrap"><p class="eyebrow">36 Weeks · 180 Sessions · Advanced Sequel</p><h1>Advanced Geometric Topology, Global Geometry & Mathematical Physics</h1>
+<p>Interactive proof-centered study guided by the Scholar expression of Archaemenes.</p></div></section>
+<main class="wrap"><section class="section"><div class="grid"><article class="card span8"><h2>Learning Architecture</h2>
+<p><strong>Concept → Proof → Lab → Research → Mastery.</strong> The Pre-Algebra learning rhythm is preserved, but the evidence matures: complete proofs, explicit computations, reproducible labs, source-aware research, and oral defense.</p>
+</article><aside class="card span4 mentor"><h3>Archaemenes · Scholar</h3><p>One continuous mentor identity. Clue-first, question-centered, precise, research-aware, and respectful of the learner's mathematical voice.</p></aside></div></section>
+<section class="section"><h2>36-Week Map</h2><div class="weekgrid" id="weeks"></div></section></main>
+<script src="assets/course-data.js"></script><script>
+const grid=document.getElementById('weeks');grid.innerHTML=window.KHAE_ADVANCED_COURSE_DATA.weeks.map(w=>`<article class="card week"><span class="pill">Week ${w.week}</span><span class="pill">Unit ${w.unit}</span><h3>${w.topic}</h3><p class="meta">${w.unit_title}</p><p class="meta">Lab: ${w.lab}</p><a class="btn" href="lesson.html?week=${w.week}&day=1">Open Week</a></article>`).join('');
+</script></body></html>

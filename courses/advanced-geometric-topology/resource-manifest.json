@@ -1,0 +1,202 @@
+{
+  "schema_version": "1.0",
+  "engine": "lesson-aware resource matching",
+  "note": "Inspired by Kinder Garden's metadata-driven companion matching. Higher Learning resources are matched by unit, topic, skill, evidence mode, and learner state.",
+  "resources": [
+    {
+      "id": "lab-01",
+      "title": "Polygon Gluing & Surface Classification Studio",
+      "type": "lab",
+      "units": [
+        1
+      ],
+      "modes": [
+        "explore",
+        "compute",
+        "verify",
+        "research"
+      ],
+      "mentorEligible": true
+    },
+    {
+      "id": "lab-02",
+      "title": "Knot Diagram & Reidemeister Studio",
+      "type": "lab",
+      "units": [
+        2
+      ],
+      "modes": [
+        "explore",
+        "compute",
+        "verify",
+        "research"
+      ],
+      "mentorEligible": true
+    },
+    {
+      "id": "lab-03",
+      "title": "Hyperbolic / 3-Manifold Visualization Studio",
+      "type": "lab",
+      "units": [
+        3
+      ],
+      "modes": [
+        "explore",
+        "compute",
+        "verify",
+        "research"
+      ],
+      "mentorEligible": true
+    },
+    {
+      "id": "lab-04",
+      "title": "Persistent Homology Laboratory",
+      "type": "lab",
+      "units": [
+        4
+      ],
+      "modes": [
+        "explore",
+        "compute",
+        "verify",
+        "research"
+      ],
+      "mentorEligible": true
+    },
+    {
+      "id": "lab-05",
+      "title": "Morse Landscape & Handle Attachment Studio",
+      "type": "lab",
+      "units": [
+        5
+      ],
+      "modes": [
+        "explore",
+        "compute",
+        "verify",
+        "research"
+      ],
+      "mentorEligible": true
+    },
+    {
+      "id": "lab-06",
+      "title": "Geometric Flow Simulation Studio",
+      "type": "lab",
+      "units": [
+        6
+      ],
+      "modes": [
+        "explore",
+        "compute",
+        "verify",
+        "research"
+      ],
+      "mentorEligible": true
+    },
+    {
+      "id": "lab-07",
+      "title": "Jacobi Field & Comparison Geometry Solver",
+      "type": "lab",
+      "units": [
+        7
+      ],
+      "modes": [
+        "explore",
+        "compute",
+        "verify",
+        "research"
+      ],
+      "mentorEligible": true
+    },
+    {
+      "id": "lab-08",
+      "title": "Spacetime Geodesic & Light-Cone Studio",
+      "type": "lab",
+      "units": [
+        8
+      ],
+      "modes": [
+        "explore",
+        "compute",
+        "verify",
+        "research"
+      ],
+      "mentorEligible": true
+    },
+    {
+      "id": "lab-09",
+      "title": "Connection, Curvature & Holonomy Studio",
+      "type": "lab",
+      "units": [
+        9
+      ],
+      "modes": [
+        "explore",
+        "compute",
+        "verify",
+        "research"
+      ],
+      "mentorEligible": true
+    },
+    {
+      "id": "lab-10",
+      "title": "Characteristic-Class Explorer",
+      "type": "lab",
+      "units": [
+        10
+      ],
+      "modes": [
+        "explore",
+        "compute",
+        "verify",
+        "research"
+      ],
+      "mentorEligible": true
+    },
+    {
+      "id": "lab-11",
+      "title": "Application Modeling Studio",
+      "type": "lab",
+      "units": [
+        11
+      ],
+      "modes": [
+        "explore",
+        "compute",
+        "verify",
+        "research"
+      ],
+      "mentorEligible": true
+    },
+    {
+      "id": "lab-12",
+      "title": "Reproducibility & Mathematical Research Notebook",
+      "type": "lab",
+      "units": [
+        12
+      ],
+      "modes": [
+        "explore",
+        "compute",
+        "verify",
+        "research"
+      ],
+      "mentorEligible": true
+    },
+    {
+      "id": "lab-13",
+      "title": "Capstone Reproduction & Defense Studio",
+      "type": "lab",
+      "units": [
+        13
+      ],
+      "modes": [
+        "explore",
+        "compute",
+        "verify",
+        "research"
+      ],
+      "mentorEligible": true
+    }
+  ]
+}
