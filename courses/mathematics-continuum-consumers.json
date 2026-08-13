@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1.1.0",
+  "registryId": "khaemenes.higher-learning.math-consumers",
+  "subjectId": "mathematics",
+  "academicContinuumId": "khaemenes.academic.continuum",
+  "academicContinuumPath": "/Khaemenes_Academy.github.io/shared-integration/academics/khaemenes-academic-continuum.json",
+  "continuumId": "khaemenes.mathematics.continuum",
+  "continuumPath": "/Khaemenes_Academy.github.io/shared-integration/mathematics/khaemenes-mathematics-continuum.json",
+  "consumers": [
+    {
+      "consumerId": "khaemenes.math.consumer.001",
+      "courseId": "KH-HL-AGTGMP",
+      "title": "Advanced Geometric Topology, Global Geometry & Mathematical Physics",
+      "stage": "higher",
+      "route": "advanced-geometric-topology/",
+      "profile": "advanced-geometric-topology/math-course-profile.json",
+      "mentorManifest": "advanced-geometric-topology/mentor-manifest.json",
+      "resourceManifest": "advanced-geometric-topology/resource-manifest.json",
+      "status": "candidate",
+      "referenceImplementation": true
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "1.0.1",
+  "consumerId": "khaemenes.math.consumer.001",
+  "courseId": "KH-HL-AGTGMP",
+  "title": "Advanced Geometric Topology, Global Geometry & Mathematical Physics",
+  "stage": "higher",
+  "researchModeEligible": true,
+  "continuum": {
+    "canonicalId": "khaemenes.mathematics.continuum",
+    "path": "/Khaemenes_Academy.github.io/shared-integration/mathematics/khaemenes-mathematics-continuum.json",
+    "requiredForCourseOperation": false,
+    "fallback": "course-local"
+  },
+  "strands": [
+    "geometry-spatial",
+    "logic-proof",
+    "topology-global-geometry",
+    "calculus-analysis",
+    "linear-algebra",
+    "differential-equations",
+    "numerical-computational",
+    "mathematical-physics",
+    "research-practice"
+  ],
+  "miniClouds": [
+    "math-context-cloud",
+    "math-tool-cloud",
+    "math-evidence-cloud",
+    "math-lab-cloud",
+    "math-research-cloud",
+    "math-continuity-cloud"
+  ],
+  "toolPreferences": [
+    "khaemenes-scientific-calculator",
+    "ohmic-cad-studio",
+    "evidence-citation-studio",
+    "lab-resource-cloud",
+    "geometry-sanctuary-v2"
+  ],
+  "toolRules": [
+    {
+      "toolId": "ohmic-cad-studio",
+      "whenAny": ["polygon gluing", "edge identification", "surface classification studio", "manifold diagram", "geodesic construction", "curvature diagram", "connection diagram", "holonomy", "spacetime diagram", "light-cone", "measured construction"]
+    },
+    {
+      "toolId": "khaemenes-scientific-calculator",
+      "whenAny": ["numerical calculation", "numerical approximation", "trigonometric calculation", "solve numerically", "flow simulation", "differential equation computation"]
+    },
+    {
+      "toolId": "evidence-citation-studio",
+      "whenAny": ["research source", "citation", "literature comparison", "provenance", "bibliography", "reference record", "capstone research"]
+    },
+    {
+      "toolId": "lab-resource-cloud",
+      "whenAny": ["assigned laboratory", "laboratory", "lab record", "studio record", "reproducibility", "student investigation", "capstone reproduction"]
+    },
+    {
+      "toolId": "geometry-sanctuary-v2",
+      "pathways": ["Foundation"],
+      "whenAny": ["symmetry exploration", "polygon pattern", "spatial pattern", "transformation exploration"]
+    }
+  ],
+  "evidenceContract": {
+    "objectiveThreshold": 80,
+    "objectiveThresholdAloneIsMastery": false,
+    "requiresWrittenMathematics": true,
+    "requiresLabEvidenceWhenAssigned": true,
+    "proofMayBeAutoCertified": false,
+    "visualizationAloneIsProof": false,
+    "computationAloneIsProof": false,
+    "preserveLearnerVoice": true
+  },
+  "publicSafety": {
+    "containsPrivateRuntimeRoutes": false,
+    "containsPrivateRepositoryPaths": false,
+    "containsCredentials": false,
+    "containsInternalGovernanceTopology": false
+  }
+}
