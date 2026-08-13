@@ -9,7 +9,7 @@ const q=new URLSearchParams(location.search),week=Math.max(1,Math.min(36,Number(
 const session=DATA.sessions.find(s=>s.week===week&&s.day===day);
 const state=(()=>{try{return JSON.parse(localStorage.getItem(KEY))||{pathway:"Core",scores:{},reflections:{},evidence:{},completed:[]}}catch{return{pathway:"Core",scores:{},reflections:{},evidence:{},completed:[]}}})();
 const save=()=>localStorage.setItem(KEY,JSON.stringify(state));
-const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;","&gt;":"&gt;",'"':"&quot;","'":"&#39;"}[c])||c);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])||c);
 const safeUrl=value=>{try{const u=new URL(value,location.href);return /^https?:$/.test(u.protocol)?u.href:""}catch{return""}};
 
 function matchedTools(){
@@ -111,12 +111,16 @@ function render(){
 async function loadMathContinuum(){
  if(!MATH_CONFIG){renderMathCloud();return}
  try{
-  const [profileRes,continuumRes]=await Promise.all([fetch(MATH_CONFIG.profileUrl,{cache:"no-cache"}),fetch(MATH_CONFIG.continuumUrl,{cache:"no-cache"})]);
-  if(!profileRes.ok||!continuumRes.ok)throw new Error("Shared mathematics information is not yet available.");
-  const [profile,continuum]=await Promise.all([profileRes.json(),continuumRes.json()]);
+  const profileRes=await fetch(MATH_CONFIG.profileUrl,{cache:"no-cache"});
+  if(!profileRes.ok)throw new Error("Course mathematics profile is unavailable.");
+  const profile=await profileRes.json();
+  mathState.profile=profile;
   if(profile.courseId!==COURSE_ID)throw new Error("Course ID mismatch.");
+  const continuumRes=await fetch(MATH_CONFIG.continuumUrl,{cache:"no-cache"});
+  if(!continuumRes.ok)throw new Error("Shared mathematics information is not yet available.");
+  const continuum=await continuumRes.json();
   if(continuum.canonicalId!==profile.continuum.canonicalId)throw new Error("Continuum ID mismatch.");
-  mathState.profile=profile;mathState.continuum=continuum;mathState.status="connected";
+  mathState.continuum=continuum;mathState.status="connected";
  }catch(error){mathState.status="local-fallback";mathState.error=String(error?.message||error);console.warn("Shared mathematics information unavailable; using local course mode.",error)}
  renderMathCloud();
 }
