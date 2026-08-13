@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="description" content="Khaemenes Higher Learning — a collegiate campus for undergraduate study, advanced mathematics, research preparation, professional tools, student records, and lifelong scholarship.">
+  <meta name="description" content="Khaemenes Higher Learning — a collegiate campus for undergraduate study, advanced mathematics, career development, research preparation, professional tools, student records, and lifelong scholarship.">
   <meta name="theme-color" content="#08131f">
   <meta name="color-scheme" content="dark light">
-  <meta name="application-version" content="2026.08.07-higher-learning-campus-v2.2">
+  <meta name="application-version" content="2026.08.12-higher-learning-campus-v3.0">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Khaemenes Higher Learning | Collegiate Campus</title>
   <link rel="canonical" href="https://vervenveda.com/Khaemenes_Higher_Learning.github.io/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Khaemenes Higher Learning | Collegiate Campus">
-  <meta property="og:description" content="Collegiate courses, advanced study, student tools, research resources, and connected academic departments.">
+  <meta property="og:description" content="Collegiate courses, career development, advanced study, student tools, research resources, and connected academic departments.">
   <meta property="og:url" content="https://vervenveda.com/Khaemenes_Higher_Learning.github.io/">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -214,21 +214,119 @@
     @media(max-width:820px){.header-link{display:none}.brand-copy small{display:none}h1{white-space:normal}.hero-inner{min-height:610px}.tool-grid{grid-template-columns:1fr}.network-strip{grid-template-columns:1fr 1fr}}
     @media(max-width:650px){.utility-inner{flex-direction:column;justify-content:center;padding:8px 0}.shell,.section-inner{width:min(calc(100% - 22px),var(--max))}.nav{grid-template-columns:minmax(0,1fr) auto}.brand-copy strong{font-size:.8rem;white-space:normal}.theme-button{display:none}.hero-inner{min-height:560px;padding:62px 0 70px}.campus-mark{width:64px;height:64px}h1{font-size:clamp(2.65rem,12vw,3.65rem)}.actions{display:grid}.btn{width:100%}.hero-stat-grid{grid-template-columns:1fr}.hero-stat{border-left:0!important;border-top:1px solid rgba(255,255,255,.12)}.hero-stat:first-child{border-top:0}.portal-form,.portal-links,.campus-service-grid,.department-grid,.pathway-grid,.network-strip{grid-template-columns:1fr}.toolbar{grid-template-columns:1fr}.toolbar .field:first-child{grid-column:auto}.footer-inner{justify-content:center;text-align:center;flex-direction:column}.footer-links{justify-content:center}.portal-card{padding:28px 18px}.section{padding:68px 0}.heading{margin-bottom:34px}}
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+
+    /* v3.0 — Verve N Veda gateway rhythm + Higher Learning modernization */
+    :root{
+      --paper-bright:#fbf9f4;
+      --vnv-ink:#080b0f;
+      --vnv-ink-soft:#30413d;
+      --vnv-forest:#243d33;
+      --vnv-gold:#b48b45;
+      --vnv-gold-pale:#e7d7b6;
+      --vnv-line:rgba(18,23,19,.14);
+      --vnv-line-strong:rgba(18,23,19,.25);
+      --ticker-height:36px;
+      --header-height:72px;
+      --sticky-stack:calc(var(--ticker-height) + var(--header-height));
+    }
+    html{scroll-padding-top:calc(var(--sticky-stack) + 54px)}
+
+    .network-ticker{
+      position:sticky;top:0;z-index:1500;height:var(--ticker-height);display:grid;
+      grid-template-columns:minmax(0,1fr) 40px;overflow:hidden;color:#f4ead1;
+      background:linear-gradient(90deg,#07101d,#10243b 48%,#07101d);
+      border-bottom:1px solid rgba(255,255,255,.13);box-shadow:0 4px 14px rgba(6,15,27,.15)
+    }
+    .network-ticker-viewport{min-width:0;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 27px,#000 calc(100% - 27px),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 27px,#000 calc(100% - 27px),transparent 100%)}
+    .network-ticker-track{width:max-content;height:100%;display:flex;align-items:center;white-space:nowrap;animation:hlTicker 27s linear infinite;will-change:transform}
+    .network-ticker:hover .network-ticker-track,.network-ticker:focus-within .network-ticker-track,.network-ticker[data-paused="true"] .network-ticker-track{animation-play-state:paused}
+    .network-ticker-set{height:100%;display:flex;align-items:center;gap:22px;padding-inline:11px}
+    .network-ticker-label{color:var(--vnv-gold-pale);font-family:var(--serif);font-size:10px;font-weight:500;letter-spacing:.25em;text-transform:uppercase}
+    .network-ticker-app{min-height:28px;display:inline-flex;align-items:center;gap:7px;color:#eef3f7;font-size:11px;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
+    .network-ticker-app::before{content:"";width:3px;height:3px;border-radius:50%;background:var(--vnv-gold);box-shadow:0 0 0 2px rgba(180,139,69,.13)}
+    .network-ticker-app:hover{color:#fff;text-decoration:underline;text-underline-offset:3px}
+    .ticker-control{width:40px;height:var(--ticker-height);display:grid;place-items:center;border:0;border-left:1px solid rgba(255,255,255,.13);color:#f4ead1;background:rgba(0,0,0,.14);font-size:15px}
+    @keyframes hlTicker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+    /* exact VNV 72px light header treatment */
+    .header{position:sticky;top:var(--ticker-height);z-index:1400;height:var(--header-height);color:var(--vnv-ink);background:rgba(244,240,231,.96);border-bottom:1px solid var(--vnv-line);backdrop-filter:blur(18px);box-shadow:none}
+    .nav{height:100%;min-height:var(--header-height);grid-template-columns:minmax(230px,1fr) auto minmax(86px,1fr);gap:24px}
+    .brand{max-width:380px;color:var(--vnv-ink)}
+    .seal{width:44px;height:36px;flex:0 0 44px;border:1px solid var(--vnv-ink);border-radius:7px;color:#fff;background:var(--vnv-ink);box-shadow:none;font-size:17px}
+    .brand-copy strong{color:var(--vnv-ink);font-size:17px;font-weight:400;letter-spacing:.09em;white-space:nowrap}
+    .brand-copy small{margin-top:3px;color:var(--vnv-ink-soft);font-size:9px;font-weight:400;letter-spacing:.12em}
+    .site-id{display:none}
+    .header-links{min-width:0;display:flex;align-items:center;justify-content:center;gap:5px;white-space:nowrap}
+    .header-links a{min-height:40px;display:inline-flex;align-items:center;padding:7px 10px;border-radius:7px;color:var(--vnv-ink-soft);font-size:11px;font-weight:500;letter-spacing:.075em;text-transform:uppercase;white-space:nowrap}
+    .header-links a:hover,.header-links a.career-link{color:var(--vnv-ink);background:#fff}
+    .header-links a.career-link{box-shadow:inset 0 0 0 1px rgba(180,139,69,.34)}
+    .header-actions{gap:7px}
+    .theme-button,.menu-button{min-height:40px;border:1px solid var(--vnv-line-strong);border-radius:7px;color:var(--vnv-ink);background:transparent;font-size:10px}
+    .theme-button:hover,.menu-button:hover{background:#fff}
+    .menu-button{width:40px;padding:0}
+    .menu-lines,.menu-lines::before,.menu-lines::after{background:var(--vnv-ink);width:14px;height:1.5px;border-radius:7px}
+    .menu-lines::before{top:-6px}.menu-lines::after{top:6px}
+
+    .breadcrumbs{position:relative;z-index:1}
+    .hero-inner{min-height:calc(100svh - var(--sticky-stack) - 42px);padding:clamp(64px,8vh,92px) 0}
+    .hero .actions .career-cta{color:#10243a;background:linear-gradient(145deg,#ead9b8,#caa96d);border-color:#d8bf91}
+
+    /* prominent Career gateway */
+    .career-gateway-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:18px;align-items:stretch}
+    .career-gateway-card{min-height:330px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:34px;border:1px solid var(--line-light);border-radius:var(--radius);background:#fff;box-shadow:var(--shadow-small)}
+    .career-gateway-card.primary{border-top:4px solid var(--bronze);background:linear-gradient(180deg,#fff,#fbf6ec)}
+    .career-gateway-mark{width:62px;height:62px;display:grid;place-items:center;border-radius:var(--control);color:#10243a;background:linear-gradient(145deg,#ead9b8,#caa96d);font:500 .88rem var(--serif);letter-spacing:.08em}
+    .career-gateway-card h3{margin:18px 0 0;color:var(--midnight-3);font-size:clamp(1.7rem,3vw,2.35rem);line-height:1.07}
+    .career-gateway-card p{max-width:590px;margin:13px auto;color:var(--muted);font-size:.95rem}
+    .career-gateway-card .btn{margin-top:13px}
+    .career-feature-list{width:100%;max-width:560px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:12px}
+    .career-feature{padding:11px;border:1px solid var(--line-light);border-radius:var(--control);color:var(--ink);background:#faf8f2;font-size:.82rem}
+    .pathway-card .pathway-action{min-height:42px;display:inline-flex;align-items:center;justify-content:center;margin-top:18px;padding:8px 12px;border:1px solid rgba(125,96,57,.24);border-radius:var(--control);color:#6d5331;background:#fbf5e9;font-size:.75rem;font-weight:500;text-transform:uppercase;letter-spacing:.04em}
+
+    .network-strip{grid-template-columns:repeat(5,minmax(0,1fr))}
+
+    @media(max-width:1100px){
+      .header-links{display:none}
+      .nav{grid-template-columns:minmax(0,1fr) auto}
+      .career-gateway-grid{grid-template-columns:1fr}
+      .network-strip{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+    @media(max-width:650px){
+      .brand-copy strong{font-size:14px;white-space:normal}
+      .career-feature-list{grid-template-columns:1fr}
+      .network-strip{grid-template-columns:1fr}
+    }
+
   </style>
 </head>
 <body id="top">
   <a class="skip" href="#main">Skip to main content</a>
 
-  <div class="utility">
-    <div class="shell utility-inner">
-      <span>Collegiate study · Advanced learning · Research preparation · Independent scholarship</span>
-      <nav class="utility-links" aria-label="Connected educational network">
-        <a href="https://vervenveda.com/">Verve N Veda</a>
-        <a href="https://vervenveda.github.io/Khaemenes_Academy.github.io/">Khaemenes Academy</a>
-        <a href="https://vervenveda.com/Khaemenes_High.github.io/">High School</a>
-        <a href="https://vervenveda.com/proresource_hub.github.io/">ProResources</a>
-      </nav>
+  <div class="network-ticker" id="networkTicker">
+    <div class="network-ticker-viewport">
+      <div class="network-ticker-track">
+        <div class="network-ticker-set">
+          <span class="network-ticker-label">Higher Learning Network</span>
+          <a class="network-ticker-app" href="./Career/index.html">Career Portal</a>
+          <a class="network-ticker-app" href="./courses/index.html">Mathematics</a>
+          <a class="network-ticker-app" href="https://vervenveda.com/proresource_hub.github.io/">ProResources</a>
+          <a class="network-ticker-app" href="https://vervenveda.github.io/Arshif.github.io/">ARSHIF</a>
+          <a class="network-ticker-app" href="https://vervenveda.github.io/PLERASearch.github.io/">PLERA Search</a>
+          <a class="network-ticker-app" href="https://vervenveda.com/arcade.github.io/">Games & Logic</a>
+        </div>
+        <div class="network-ticker-set" aria-hidden="true">
+          <span class="network-ticker-label">Higher Learning Network</span>
+          <a tabindex="-1" class="network-ticker-app" href="./Career/index.html">Career Portal</a>
+          <a tabindex="-1" class="network-ticker-app" href="./courses/index.html">Mathematics</a>
+          <a tabindex="-1" class="network-ticker-app" href="https://vervenveda.com/proresource_hub.github.io/">ProResources</a>
+          <a tabindex="-1" class="network-ticker-app" href="https://vervenveda.github.io/Arshif.github.io/">ARSHIF</a>
+          <a tabindex="-1" class="network-ticker-app" href="https://vervenveda.github.io/PLERASearch.github.io/">PLERA Search</a>
+          <a tabindex="-1" class="network-ticker-app" href="https://vervenveda.com/arcade.github.io/">Games & Logic</a>
+        </div>
+      </div>
     </div>
+    <button class="ticker-control" id="tickerControl" type="button" aria-label="Pause Higher Learning ticker">Ⅱ</button>
   </div>
 
   <header class="header">
@@ -241,16 +339,15 @@
         </span>
       </a>
 
-      <a class="site-id" href="#departments">
-        <strong>Higher Learning Campus</strong>
-        <small>Undergraduate · Advanced · Research</small>
-      </a>
+      <nav class="header-links" aria-label="Higher Learning primary navigation">
+        <a href="#student-portal">Student</a>
+        <a href="#departments">Departments</a>
+        <a href="./courses/index.html">Mathematics</a>
+        <a class="career-link" href="./Career/index.html">Career</a>
+        <a href="#resources">Resources</a>
+      </nav>
 
-      <nav class="header-actions" aria-label="Primary navigation">
-        <a class="header-link portal" href="#student-portal">Student Profile</a>
-        <a class="header-link" href="./courses/index.html">Mathematics</a>
-        <a class="header-link" href="https://vervenveda.com/arcade.github.io/">Games</a>
-        <a class="header-link" href="https://vervenveda.com/proresource_hub.github.io/">ProResources</a>
+      <nav class="header-actions" aria-label="Display and campus directory">
         <button class="theme-button" id="themeButton" type="button" aria-pressed="false">Light</button>
         <button class="menu-button" id="menuButton" type="button" aria-label="Open campus directory" aria-expanded="false" aria-controls="drawerBg"><span class="menu-lines" aria-hidden="true"></span></button>
       </nav>
@@ -268,9 +365,9 @@
   <div class="drawer-bg" id="drawerBg" aria-hidden="true">
     <aside class="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
       <div class="drawer-head"><h2 id="drawerTitle">Campus Directory</h2><button class="close" id="closeButton" type="button" aria-label="Close campus directory">×</button></div>
-      <p>Search academic departments, the student portal, current mathematics, research tools, games, and connected study halls.</p>
+      <p>Search academic departments, the Career Portal, student profile, mathematics, research tools, professional resources, games, and connected study halls.</p>
       <label class="sr-only" for="drawerSearch">Search campus directory</label>
-      <input class="drawer-search" id="drawerSearch" type="search" placeholder="Search mathematics, profile, research, calculator…">
+      <input class="drawer-search" id="drawerSearch" type="search" placeholder="Search career, mathematics, profile, research, calculator…">
       <div id="drawerContent"></div>
     </aside>
   </div>
@@ -283,19 +380,55 @@
           <p class="eyebrow">Verve N Veda Educational Network</p>
           <h1>Khaemenes Higher Learning</h1>
           <p class="tag">Collegiate Campus · Undergraduate · Advanced · Research</p>
-          <p class="lead">A scholarly, independent higher-learning campus designed to grow into a complete collegiate curriculum—connecting rigorous courses, research, professional tools, student records, creative study, and advanced pathways in one organized academic environment.</p>
+          <p class="lead">A scholarly, independent higher-learning campus designed to grow into a complete collegiate curriculum—connecting rigorous courses, career development, research, professional tools, student records, creative study, and advanced pathways in one organized academic environment.</p>
           <div class="actions">
-            <a class="btn btn-primary" href="#departments">Enter Academic Departments</a>
-            <a class="btn btn-bronze" href="./courses/index.html">Open Mathematics</a>
+            <a class="btn btn-primary" href="#departments">Academic Departments</a>
+            <a class="btn career-cta" href="./Career/index.html">Career Portal</a>
+            <a class="btn" href="./courses/index.html">Mathematics</a>
             <a class="btn" href="#student-portal">Student Profile</a>
-            <a class="btn" href="#resources">Campus Resources</a>
           </div>
           <div class="hero-stat-grid" aria-label="Higher Learning overview">
-            <div class="hero-stat"><strong>Collegiate Curriculum</strong><span>Department architecture ready for undergraduate, advanced, and interdisciplinary study.</span></div>
+            <div class="hero-stat"><strong>Collegiate Curriculum</strong><span>Undergraduate, advanced, interdisciplinary, and lifelong-learning pathways.</span></div>
             <div class="hero-stat"><strong>Mathematics Open</strong><span>Nine complete Higher Learning mathematics courses are already present in the repository.</span></div>
-            <div class="hero-stat"><strong>Student Profile</strong><span>Local learner identity, study level, focus, pinned courses, and export remain under student control.</span></div>
-            <div class="hero-stat"><strong>Research & Tools</strong><span>ProResources, calculator, CAD, ARSHIF, PLERA Search, games, and connected study halls.</span></div>
+            <div class="hero-stat"><strong>Career Portal Open</strong><span>Assessment, mentor guidance, Career Star, professional tools, and dynamic skills discovery.</span></div>
+            <div class="hero-stat"><strong>Student Profile</strong><span>Local identity, study level, focus, pinned courses, and export remain under learner control.</span></div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="career">
+      <div class="section-inner">
+        <div class="heading">
+          <p class="kicker">Career & Professional Development</p>
+          <h2>Connect advanced study to meaningful work.</h2>
+          <p>The Career Portal brings assessment, mentor interpretation, reflective exploration, professional preparation, and dynamically discovered skills resources into one contained Higher Learning workspace.</p>
+        </div>
+        <div class="career-gateway-grid">
+          <article class="career-gateway-card primary">
+            <span class="career-gateway-mark">CP</span>
+            <h3>Khaemenes Career Portal</h3>
+            <p>Assess direction, understand pathway evidence, explore career possibilities, complete mentor review, and discover relevant tools and skill-building resources without leaving the Career environment.</p>
+            <div class="career-feature-list" aria-label="Career Portal features">
+              <span class="career-feature">300-question optimized assessment</span>
+              <span class="career-feature">Career Mentor Hub</span>
+              <span class="career-feature">Career Star reflection</span>
+              <span class="career-feature">Dynamic Career Directory AGI</span>
+            </div>
+            <a class="btn btn-bronze" href="./Career/index.html">Enter Career Portal</a>
+          </article>
+          <article class="career-gateway-card">
+            <span class="career-gateway-mark">PR</span>
+            <h3>Professional Skills Network</h3>
+            <p>Build practical evidence through writing, research, business, finance, coding, design, logic, strategy, and portfolio-ready work. ProResources and the Career Directory surface eligible ecosystem tools as the network grows.</p>
+            <div class="career-feature-list" aria-label="Professional skills examples">
+              <span class="career-feature">PROSE professional templates</span>
+              <span class="career-feature">OHMIC CAD & design</span>
+              <span class="career-feature">Research & evidence tools</span>
+              <span class="career-feature">Workplace & business skills</span>
+            </div>
+            <a class="btn btn-primary" href="https://vervenveda.com/proresource_hub.github.io/">Open ProResources</a>
+          </article>
         </div>
       </div>
     </section>
@@ -349,6 +482,7 @@
             <h3>Campus Access</h3>
             <p>Move directly into the academic, research, professional, and creative resources that support collegiate study.</p>
             <div class="campus-service-grid">
+              <a class="service-link" href="./Career/index.html"><strong>Career Portal</strong><span>Assessment, mentoring & professional pathways</span></a>
               <a class="service-link" href="./courses/index.html"><strong>Mathematics</strong><span>Current complete course family</span></a>
               <a class="service-link" href="https://vervenveda.com/proresource_hub.github.io/"><strong>ProResources</strong><span>Professional and technical tools</span></a>
               <a class="service-link" href="https://vervenveda.com/arcade.github.io/"><strong>Games & Logic</strong><span>Cognitive and creative practice</span></a>
@@ -384,7 +518,7 @@
           <article class="pathway-card"><span class="department-number">01</span><h3>Undergraduate Foundations</h3><p>Build the conceptual and technical groundwork required for sustained college-level study.</p><ul><li>Prerequisite diagnostics</li><li>Complete core sequences</li><li>Projects and examinations</li></ul></article>
           <article class="pathway-card"><span class="department-number">02</span><h3>Major & Concentration</h3><p>Develop depth inside a field through connected intermediate and advanced courses.</p><ul><li>Department sequences</li><li>Portfolio evidence</li><li>Applied investigations</li></ul></article>
           <article class="pathway-card"><span class="department-number">03</span><h3>Advanced & Research</h3><p>Move from computation and survey work toward proof, research, synthesis, and independent inquiry.</p><ul><li>Research / Graduate pathways</li><li>Capstone work</li><li>Oral defense and scholarly writing</li></ul></article>
-          <article class="pathway-card"><span class="department-number">04</span><h3>Professional & Lifelong Study</h3><p>Use collegiate learning for professional growth, technical fluency, creative practice, or independent scholarship.</p><ul><li>Flexible pacing</li><li>Professional tools</li><li>Self-directed study plans</li></ul></article>
+          <article class="pathway-card"><span class="department-number">04</span><h3>Professional & Lifelong Study</h3><p>Use collegiate learning for professional growth, technical fluency, creative practice, or independent scholarship.</p><ul><li>Career assessment & mentor guidance</li><li>Professional tools & portfolio evidence</li><li>Self-directed study plans</li></ul><a class="pathway-action" href="./Career/index.html">Open Career Portal</a></article>
         </div>
       </div>
     </section>
@@ -422,6 +556,7 @@
         <div class="network-strip">
           <a class="network-card" href="https://vervenveda.com/"><strong>Verve N Veda</strong><span>Main network home</span></a>
           <a class="network-card" href="https://vervenveda.github.io/Khaemenes_Academy.github.io/"><strong>Khaemenes Academy</strong><span>Educational network</span></a>
+          <a class="network-card" href="./Career/index.html"><strong>Career Portal</strong><span>Career assessment, mentoring, and skills</span></a>
           <a class="network-card" href="https://vervenveda.com/proresource_hub.github.io/"><strong>ProResource Hub</strong><span>Technical and professional tools</span></a>
           <a class="network-card" href="https://vervenveda.com/arcade.github.io/"><strong>Arcade</strong><span>Games, logic, and creative practice</span></a>
         </div>
@@ -433,7 +568,7 @@
         <p class="kicker">Welcome to the Collegiate Campus</p>
         <h2>Study beyond the requirement. Build toward mastery.</h2>
         <p>Khaemenes Higher Learning is organized to grow course by course into a broad collegiate environment where rigorous academics, research, practical tools, creativity, and independent scholarship remain connected.</p>
-        <div class="actions"><a class="btn btn-primary" href="#departments">Enter the Campus</a><a class="btn" href="./courses/index.html">Mathematics Department</a></div>
+        <div class="actions"><a class="btn btn-primary" href="#departments">Enter the Campus</a><a class="btn btn-bronze" href="./Career/index.html">Career Portal</a><a class="btn" href="./courses/index.html">Mathematics Department</a></div>
       </div>
     </section>
   </main>
@@ -442,7 +577,7 @@
     <div class="shell footer-inner">
       <span><strong>Khaemenes Higher Learning</strong><br><small>© <span id="year"></span> Jennifer Pearl · Verve N Veda</small></span>
       <nav class="footer-links" aria-label="Footer navigation">
-        <a href="#student-portal">Student Profile</a><a href="#departments">Departments</a><a href="#pathways">Pathways</a><a href="#resources">Resources</a><a href="./courses/index.html">Mathematics</a><a href="https://vervenveda.com/">Verve N Veda</a>
+        <a href="#student-portal">Student Profile</a><a href="./Career/index.html">Career</a><a href="#departments">Departments</a><a href="#pathways">Pathways</a><a href="#resources">Resources</a><a href="./courses/index.html">Mathematics</a><a href="https://vervenveda.com/">Verve N Veda</a>
       </nav>
     </div>
   </footer>
@@ -490,7 +625,7 @@
         {number:"04",title:"Computer Science & Data",description:"Programming, algorithms, data structures, computing systems, artificial intelligence, cybersecurity, and data science.",status:"Campus Roadmap",key:"Computer Science & Data"},
         {number:"05",title:"Humanities & Languages",description:"Literature, philosophy, writing, history of ideas, linguistics, languages, research, and humanistic interpretation.",status:"Campus Roadmap",key:"Humanities & Languages"},
         {number:"06",title:"Social Sciences, Law & Policy",description:"Psychology, sociology, economics, political science, public policy, law, civics, and evidence-based social inquiry.",status:"Campus Roadmap",key:"Social Sciences, Law & Policy"},
-        {number:"07",title:"Business & Professional Studies",description:"Accounting, finance, entrepreneurship, management, communication, career development, and practical professional education.",status:"Campus Roadmap",key:"Business & Professional Studies"},
+        {number:"07",title:"Career & Professional Studies",description:"Career assessment, mentoring, professional writing, business, finance, entrepreneurship, communication, portfolio development, and practical professional education.",status:"Career Portal Open",url:"./Career/index.html",active:true,action:"Open Career Portal"},
         {number:"08",title:"Arts, Design & Interdisciplinary",description:"Studio arts, design, music, communication, architecture, creative technology, and cross-disciplinary capstone work.",status:"Campus Roadmap",key:"Arts, Design & Interdisciplinary"}
       ];
 
@@ -500,12 +635,13 @@
         "Computer Science & Data": ["Programming Foundations","Algorithms & Data Structures","Computer Systems","Artificial Intelligence","Cybersecurity & Data Science"],
         "Humanities & Languages": ["College Writing","Literature","Philosophy","History","Languages & Linguistics"],
         "Social Sciences, Law & Policy": ["Psychology","Sociology","Economics","Political Science","Law & Public Policy"],
-        "Business & Professional Studies": ["Accounting","Finance","Management","Entrepreneurship","Professional Communication"],
+        "Career & Professional Studies": ["Accounting","Finance","Management","Entrepreneurship","Professional Communication","Career Development"],
         "Arts, Design & Interdisciplinary": ["Studio Art","Design","Music","Architecture & Space","Interdisciplinary Capstones"]
       };
 
-      const CATEGORIES = {all:"All Resources",academic:"Academic & Research",professional:"Professional Tools",games:"Games & Logic",network:"Campus Network"};
+      const CATEGORIES = {all:"All Resources",career:"Career & Professional Development",academic:"Academic & Research",professional:"Professional Tools",games:"Games & Logic",network:"Campus Network"};
       const RESOURCES = [
+        {id:"career-portal",icon:"CP",title:"Khaemenes Career Portal",kind:"Career & Professional Development",category:"career",description:"Career assessment, mentor interpretation, Career Star reflection, professional preparation, and dynamic skills-resource discovery in one contained portal.",url:"./Career/index.html"},
         {id:"proresource",icon:"PR",title:"ProResource Hub",kind:"Professional Tools",category:"professional",description:"Technical, professional, design, and productivity tools connected to the wider Verve N Veda ecosystem.",url:"https://vervenveda.com/proresource_hub.github.io/"},
         {id:"calculator",icon:"∑",title:"Scientific Calculator v4.1",kind:"Mathematics Tool",category:"academic",description:"Safe scientific computation with correct precedence, DEG/RAD modes, history, memory, local backup, and keyboard support.",url:"https://vervenveda.com/proresource_hub.github.io/Protools/Khaemenes_Scientific_Calculator_index.html"},
         {id:"ohmic-cad",icon:"CAD",title:"OHMIC CAD Studio",kind:"Design Tool",category:"professional",description:"Connected technical design and CAD workspace for engineering, geometry, planning, and project development.",url:"https://vervenveda.com/proresource_hub.github.io/Protools/Ohmic_CAD_Studio.html"},
@@ -568,7 +704,7 @@
       });
 
       function renderDepartments(){
-        $("departmentGrid").innerHTML=DEPARTMENTS.map(item=>`<article class="department-card${item.active?' active':''}"><span class="department-number">${item.number}</span><h3>${escapeHTML(item.title)}</h3><span class="department-status">${escapeHTML(item.status)}</span><p>${escapeHTML(item.description)}</p>${item.active?`<a class="department-link" href="${item.url}">Open Mathematics</a>`:`<button class="department-link planned" type="button" data-planned="${escapeHTML(item.key)}">View Department Plan</button>`}</article>`).join("");
+        $("departmentGrid").innerHTML=DEPARTMENTS.map(item=>`<article class="department-card${item.active?' active':''}"><span class="department-number">${item.number}</span><h3>${escapeHTML(item.title)}</h3><span class="department-status">${escapeHTML(item.status)}</span><p>${escapeHTML(item.description)}</p>${item.active?`<a class="department-link" href="${item.url}">${escapeHTML(item.action||'Open Mathematics')}</a>`:`<button class="department-link planned" type="button" data-planned="${escapeHTML(item.key)}">View Department Plan</button>`}</article>`).join("");
         $$('[data-planned]').forEach(button=>button.addEventListener('click',()=>openPlanned(button.dataset.planned)));
       }
 
@@ -596,10 +732,12 @@
 
       const directory=[
         {group:"Campus",icon:"S",title:"Student Profile",description:"Local profile and pinned-course shelf",url:"#student-portal"},
+        {group:"Campus",icon:"CP",title:"Career Portal",description:"Career assessment, mentoring, professional tools, and skills discovery",url:"./Career/index.html"},
         {group:"Campus",icon:"D",title:"Academic Departments",description:"Current and planned collegiate departments",url:"#departments"},
         {group:"Campus",icon:"P",title:"Academic Pathways",description:"Undergraduate through advanced research",url:"#pathways"},
         {group:"Campus",icon:"R",title:"Campus Resources",description:"Research, professional tools, and games",url:"#resources"},
         {group:"Active Department",icon:"M",title:"Mathematics",description:"Nine complete Higher Learning mathematics courses",url:"./courses/index.html"},
+        {group:"Active Department",icon:"CP",title:"Career & Professional Studies",description:"Career Portal and professional-development pathway",url:"./Career/index.html"},
         ...Object.entries(COURSES).map(([id,item])=>({group:"Current Mathematics",icon:"M",title:item.title,description:"Current Higher Learning mathematics course",url:item.url})),
         {group:"Connected Halls",icon:"PR",title:"ProResource Hub",description:"Professional and technical tools",url:"https://vervenveda.com/proresource_hub.github.io/"},
         {group:"Connected Halls",icon:"G",title:"Games & Logic",description:"Verve N Veda Arcade",url:"https://vervenveda.com/arcade.github.io/"},
@@ -615,6 +753,14 @@
       function closeDrawer(){const bg=$("drawerBg");bg.classList.remove("open");bg.setAttribute("aria-hidden","true");$("menuButton").setAttribute("aria-expanded","false");document.body.classList.remove("menu-open");$("menuButton").focus()}
       $("menuButton").addEventListener("click",openDrawer);$("closeButton").addEventListener("click",closeDrawer);$("drawerBg").addEventListener("click",event=>{if(event.target===$("drawerBg"))closeDrawer()});$("drawerSearch").addEventListener("input",event=>renderDirectory(event.target.value.trim()));
 
+      $("tickerControl").addEventListener("click",()=>{
+        const ticker=$("networkTicker");
+        const paused=ticker.dataset.paused==="true";
+        ticker.dataset.paused=paused?"false":"true";
+        $("tickerControl").textContent=paused?"Ⅱ":"▶";
+        $("tickerControl").setAttribute("aria-label",paused?"Pause Higher Learning ticker":"Resume Higher Learning ticker");
+      });
+
       function setTheme(theme){const safe=theme==="light"?"light":"dark";document.documentElement.dataset.theme=safe;try{localStorage.setItem(THEME_KEY,safe)}catch{};$("themeButton").textContent=safe==="dark"?"Light":"Dark";$("themeButton").setAttribute("aria-pressed",String(safe==="light"));document.querySelector('meta[name="theme-color"]').setAttribute("content",safe==="dark"?"#08131f":"#f4f0e8")}
       $("themeButton").addEventListener("click",()=>setTheme(document.documentElement.dataset.theme==="dark"?"light":"dark"));
       try{setTheme(localStorage.getItem(THEME_KEY)||"dark")}catch{setTheme("dark")}
@@ -625,6 +771,5 @@
     })();
   </script>
   <script src="./data/university-network.js"></script>
-  <script src="./career-assessment-optimizer.js"></script>
 </body>
 </html>
