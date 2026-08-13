@@ -16,7 +16,7 @@
       "profile": "advanced-geometric-topology/math-course-profile.json",
       "mentorManifest": "advanced-geometric-topology/mentor-manifest.json",
       "resourceManifest": "advanced-geometric-topology/resource-manifest.json",
-      "status": "candidate",
+      "status": "active",
       "referenceImplementation": true
     }
   ]
