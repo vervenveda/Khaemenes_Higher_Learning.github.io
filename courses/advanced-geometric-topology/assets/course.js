@@ -8,6 +8,11 @@ const mathState={status:"local-fallback",profile:null,continuum:null,error:null}
 const q=new URLSearchParams(location.search),week=Math.max(1,Math.min(36,Number(q.get("week")||1))),day=Math.max(1,Math.min(5,Number(q.get("day")||1)));
 const session=DATA.sessions.find(s=>s.week===week&&s.day===day);
 const state=(()=>{try{return JSON.parse(localStorage.getItem(KEY))||{pathway:"Core",scores:{},reflections:{},evidence:{},completed:[]}}catch{return{pathway:"Core",scores:{},reflections:{},evidence:{},completed:[]}}})();
+state.pathway=state.pathway||"Core";
+state.scores=state.scores||{};
+state.reflections=state.reflections||{};
+state.evidence=state.evidence||{};
+state.completed=Array.isArray(state.completed)?state.completed:[];
 const save=()=>localStorage.setItem(KEY,JSON.stringify(state));
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])||c);
 const safeUrl=value=>{try{const u=new URL(value,location.href);return /^https?:$/.test(u.protocol)?u.href:""}catch{return""}};
@@ -18,13 +23,13 @@ function matchedTools(){
  const tools=(mathState.continuum.publicTools||[]).filter(t=>allowed.has(t.id));
  const haystack=[session.id,session.title,session.topic,session.purpose,...(session.objectives||[]),...(session.evidence||[]),session.lab].filter(Boolean).join(" ").toLowerCase();
  const out=[];
+ const addTool=id=>{const tool=tools.find(t=>t.id===id);if(tool&&!out.some(x=>x.id===tool.id))out.push(tool)};
  for(const rule of mathState.profile.toolRules||[]){
   if(rule.pathways&&!rule.pathways.includes(state.pathway))continue;
   if(!(rule.whenAny||[]).some(word=>haystack.includes(String(word).toLowerCase())))continue;
-  const tool=tools.find(t=>t.id===rule.toolId);
-  if(tool&&!out.some(x=>x.id===tool.id))out.push(tool);
+  addTool(rule.toolId);
  }
- if(!out.length){const evidenceTool=tools.find(t=>t.id==="evidence-citation-studio");if(evidenceTool)out.push(evidenceTool)}
+ if(session.lab)addTool("lab-resource-cloud");
  return out;
 }
 
@@ -100,6 +105,8 @@ function render(){
  document.getElementById("mentorText").textContent=mentorMessage();
  document.getElementById("evidence").innerHTML=session.evidence.map(x=>`<li>${esc(x)}</li>`).join("");
  document.getElementById("reflection").value=state.reflections[session.id]||"";
+ const scoreInput=document.getElementById("conceptScore");
+ if(scoreInput)scoreInput.value=state.scores[session.id]??"";
  document.getElementById("lab").innerHTML=session.lab?`<div class="notice"><strong>Assigned laboratory:</strong> ${esc(session.lab)}. <a href="labs/">Open lab registry</a>.</div>`:"";
  const prevDay=day>1?`lesson.html?week=${week}&day=${day-1}`:(week>1?`lesson.html?week=${week-1}&day=5`:"index.html");
  const nextDay=day<5?`lesson.html?week=${week}&day=${day+1}`:(week<36?`lesson.html?week=${week+1}&day=1`:"assessments/");
@@ -127,6 +134,16 @@ async function loadMathContinuum(){
 
 document.getElementById("pathway").addEventListener("change",e=>{state.pathway=e.target.value;save();render()});
 document.getElementById("askMentor").addEventListener("click",()=>{document.getElementById("mentorText").textContent=mentorMessage();context()});
+document.getElementById("saveConceptScore").addEventListener("click",()=>{
+ const input=document.getElementById("conceptScore");
+ const raw=input.value.trim();
+ if(raw===""){
+  delete state.scores[session.id];save();context();document.getElementById("status").textContent="Objective score cleared. Proof and lab evidence are unchanged.";return;
+ }
+ const score=Number(raw);
+ if(!Number.isFinite(score)||score<0||score>100){document.getElementById("status").textContent="Enter an objective score from 0 to 100.";input.focus();return}
+ state.scores[session.id]=Math.round(score*10)/10;save();context();document.getElementById("status").textContent="Objective score saved as one evidence stream. It does not certify proof or lab mastery.";
+});
 document.getElementById("saveReflection").addEventListener("click",()=>{state.reflections[session.id]=document.getElementById("reflection").value.trim();save();context();document.getElementById("status").textContent="Reflection saved locally."});
 document.getElementById("saveEvidence").addEventListener("click",()=>{state.evidence[session.id]=document.getElementById("evidenceNote").value.trim();save();context();document.getElementById("status").textContent="Evidence note saved. Proof/lab mastery still requires review."});
 document.getElementById("exportRecord").addEventListener("click",()=>{context();const blob=new Blob([JSON.stringify({exportedAt:new Date().toISOString(),context:window.ARCHAEMENES_LEARNING_CONTEXT,state},null,2)],{type:"application/json"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=`${session.id}-scholar-record.json`;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),500)});
