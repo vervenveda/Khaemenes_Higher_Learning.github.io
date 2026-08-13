@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0.0",
+  "schemaVersion": "1.0.1",
   "consumerId": "khaemenes.math.consumer.001",
   "courseId": "KH-HL-AGTGMP",
   "title": "Advanced Geometric Topology, Global Geometry & Mathematical Physics",
@@ -40,24 +40,24 @@
   "toolRules": [
     {
       "toolId": "ohmic-cad-studio",
-      "whenAny": ["geometry", "surface", "polygon", "manifold", "curvature", "geodesic", "connection", "holonomy", "spacetime", "visual", "construction", "measurement"]
+      "whenAny": ["polygon gluing", "edge identification", "surface classification studio", "manifold diagram", "geodesic construction", "curvature diagram", "connection diagram", "holonomy", "spacetime diagram", "light-cone", "measured construction"]
     },
     {
       "toolId": "khaemenes-scientific-calculator",
-      "whenAny": ["compute", "calculation", "numerical", "trigonometric", "geodesic", "curvature", "flow", "equation", "model"]
+      "whenAny": ["numerical calculation", "numerical approximation", "trigonometric calculation", "solve numerically", "flow simulation", "differential equation computation"]
     },
     {
       "toolId": "evidence-citation-studio",
-      "whenAny": ["research", "source", "citation", "literature", "theorem", "provenance", "reference", "capstone"]
+      "whenAny": ["research source", "citation", "literature comparison", "provenance", "bibliography", "reference record", "capstone research"]
     },
     {
       "toolId": "lab-resource-cloud",
-      "whenAny": ["lab", "studio", "reproducibility", "experiment", "investigation", "capstone"]
+      "whenAny": ["assigned laboratory", "laboratory", "lab record", "studio record", "reproducibility", "student investigation", "capstone reproduction"]
     },
     {
       "toolId": "geometry-sanctuary-v2",
       "pathways": ["Foundation"],
-      "whenAny": ["geometry", "symmetry", "polygon", "spatial", "pattern"]
+      "whenAny": ["symmetry exploration", "polygon pattern", "spatial pattern", "transformation exploration"]
     }
   ],
   "evidenceContract": {
