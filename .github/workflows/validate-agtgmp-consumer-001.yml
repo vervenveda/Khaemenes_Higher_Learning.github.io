@@ -1,0 +1,92 @@
+name: Validate AGTGMP Consumer 001
+
+on:
+  push:
+    branches:
+      - agent/agtgmp-mini-cloud-architecture
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: JavaScript syntax
+        run: |
+          node --check courses/advanced-geometric-topology/assets/course.js
+          node --check courses/advanced-geometric-topology/assets/math-continuum-config.js
+
+      - name: JSON syntax
+        run: |
+          python -m json.tool courses/advanced-geometric-topology/math-course-profile.json >/dev/null
+          python -m json.tool courses/advanced-geometric-topology/mentor-manifest.json >/dev/null
+          python -m json.tool courses/mathematics-continuum-consumers.json >/dev/null
+
+      - name: Consumer contract and Week 1 behavior
+        run: |
+          python - <<'PY'
+          import json
+          import urllib.request
+          from pathlib import Path
+
+          root = Path('courses/advanced-geometric-topology')
+          raw = (root / 'assets/course-data.js').read_text(encoding='utf-8').strip()
+          prefix = 'window.KHAE_ADVANCED_COURSE_DATA='
+          assert raw.startswith(prefix), 'course-data prefix changed'
+          payload = raw[len(prefix):]
+          if payload.endswith(';'):
+              payload = payload[:-1]
+          data = json.loads(payload)
+          sessions = data['sessions']
+          assert len(sessions) == 180, f'expected 180 sessions, got {len(sessions)}'
+
+          week1 = [s for s in sessions if s['week'] == 1]
+          assert [s['id'] for s in week1] == ['W01D1','W01D2','W01D3','W01D4','W01D5']
+          d3 = next(s for s in week1 if s['id'] == 'W01D3')
+          assert d3.get('lab') == 'Polygon Gluing & Surface Classification Studio'
+
+          profile = json.loads((root / 'math-course-profile.json').read_text(encoding='utf-8'))
+          assert profile['courseId'] == 'KH-HL-AGTGMP'
+          assert profile['consumerId'] == 'khaemenes.math.consumer.001'
+
+          url = 'https://raw.githubusercontent.com/vervenveda/Khaemenes_Academy.github.io/main/shared-integration/mathematics/khaemenes-mathematics-continuum.json'
+          with urllib.request.urlopen(url, timeout=20) as r:
+              continuum = json.load(r)
+          assert continuum['canonicalId'] == 'khaemenes.mathematics.continuum'
+
+          tools = {t['id']: t for t in continuum.get('publicTools', [])}
+          allowed = set(profile.get('toolPreferences', []))
+
+          def matches(session, pathway='Core'):
+              hay = ' '.join(str(x) for x in [
+                  session.get('id'), session.get('title'), session.get('topic'), session.get('purpose'),
+                  *(session.get('objectives') or []), *(session.get('evidence') or []), session.get('lab')
+              ] if x).lower()
+              out = []
+              def add(tool_id):
+                  if tool_id in allowed and tool_id in tools and tool_id not in out:
+                      out.append(tool_id)
+              for rule in profile.get('toolRules', []):
+                  if rule.get('pathways') and pathway not in rule['pathways']:
+                      continue
+                  if any(str(word).lower() in hay for word in rule.get('whenAny', [])):
+                      add(rule['toolId'])
+              if session.get('lab'):
+                  add('lab-resource-cloud')
+              return out
+
+          routes = {s['id']: matches(s) for s in week1}
+          print('Week 1 tool routes:', routes)
+          assert 'ohmic-cad-studio' in routes['W01D3'], routes['W01D3']
+          assert 'lab-resource-cloud' in routes['W01D3'], routes['W01D3']
+
+          js = (root / 'assets/course.js').read_text(encoding='utf-8')
+          assert 'if(!out.length)' not in js, 'forced tool fallback still present'
+          assert 'saveConceptScore' in js, 'score save handler missing'
+          assert 'score<0||score>100' in js, 'score bounds missing'
+          assert 'It does not certify proof or lab mastery.' in js
+          print('Consumer 001 validation passed.')
+          PY
