@@ -1,0 +1,13 @@
+{
+  "algorithm": "SHA-256",
+  "resource_id": "KH-MATH-AGT-L12-R04",
+  "release": "0.9.1-hardened",
+  "files": {
+    "KH-MATH-AGT-L12-R04_verification-notes.md": "10d79e0dd6933a70f1a0e3bd4a3193cb19b81283ef933a10fda278ba4294c951",
+    "lesson.css": "2de6d3d0fcac17687095cc407a4953423d55c09339bf4e5e3704e39b390c7ce9",
+    "README.md": "dfe333aa296172a0c6dd4d2f7097a47c6677f6a4124e3bccdd1ef8c0e992f8e9",
+    "KH-MATH-AGT-L12-R04_metadata.json": "52cf56d136dad08449d8ff9eadaa8ed1cc0f55e21bc6dd07bc4d3c0d05dd8685",
+    "lesson.js": "3e408f41a93d89c0a57acfca9da38ea0aac256224773b12031c66bc15f63cc9d",
+    "KH-MATH-AGT-L12-R04_simplicial-maps-combinatorial-topology.html": "eb2e9e218d0beda69395863d6d484b1abe01bd024e83285cd91deb47466f0dbb"
+  }
+}

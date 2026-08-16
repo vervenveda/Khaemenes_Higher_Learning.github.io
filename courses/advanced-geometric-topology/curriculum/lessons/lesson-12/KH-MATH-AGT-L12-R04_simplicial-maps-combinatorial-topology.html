@@ -1,0 +1,235 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Khaemenes Academy Advanced Geometric Topology Lesson 12: Simplicial Maps and Combinatorial Topology.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Lesson 12 · Simplicial Maps &amp; Combinatorial Topology</title><link rel="stylesheet" href="lesson.css"></head><body>
+<a class="skip-link" href="#lesson-content">Skip to lesson content</a>
+<header class="academy-header"><div><span class="eyebrow">Khaemenes Academy · Higher Learning</span><strong>Advanced Geometric Topology</strong></div><div class="lesson-meta"><span>Lesson 12</span><span>Arc 02</span><span>Instructional Reading</span></div></header>
+<nav class="lesson-actions screen-only"><button id="printLesson" type="button">Print Lesson</button><a href="../">Lesson Directory</a></nav>
+<main id="lesson-content" class="lesson-page" tabindex="-1"><article data-resource-id="KH-MATH-AGT-L12-R04">
+<header>
+<h1>Simplicial Maps &amp; Combinatorial Topology</h1>
+<p><strong>Advanced Geometric Topology · Self-Paced Lesson 12</strong></p>
+<p><strong>Resource ID:</strong> KH-MATH-AGT-L12-R04</p>
+<p><strong>Arc 02:</strong> Triangulations &amp; Combinatorial Surfaces</p>
+</header>
+
+<section class="purpose">
+<h2>Why Study Maps Combinatorially?</h2>
+<p>Lessons 09–11 converted spaces into simplicial data and showed that a triangulation may be refined without changing the underlying topology. We now turn from <em>objects</em> to <em>maps</em>.</p>
+<p>A simplicial map is specified at the vertices, but the vertex assignment must respect simplices. When it does, the combinatorial rule extends naturally to a continuous map between geometric realizations.</p>
+<p class="math-result"><strong>vertex rule → simplex compatibility → linear realization → continuous map</strong></p>
+</section>
+
+<section>
+<h2>1. Definition of a Simplicial Map</h2>
+<p>Let K and L be abstract simplicial complexes with vertex sets V(K) and V(L). A map</p>
+<p class="math-result"><strong>f:V(K)→V(L)</strong></p>
+<p>is <strong>simplicial</strong> if, for every simplex σ={v0,…,vk} of K, the image vertex set</p>
+<p class="math-result"><strong>f(σ)={f(v0),…,f(vk)}</strong></p>
+<p>is a simplex of L.</p>
+<p>Repeated image vertices are allowed. Therefore a simplex may collapse to a lower-dimensional simplex.</p>
+</section>
+
+<section>
+<h2>2. Checking Only Facets in a Finite Complex</h2>
+<p>Because a simplicial complex is closed under taking nonempty faces, a vertex map on a finite complex is simplicial if it sends every facet of K to a simplex of L.</p>
+<p>Every smaller simplex lies in a facet, and its image is then a face of the image of that facet.</p>
+<aside class="callout"><strong>Audit shortcut:</strong> for the finite complexes in this course, test the maximal simplices first.</aside>
+</section>
+
+<section>
+<h2>3. A Valid Example</h2>
+<p>Let K have facets abc and acd. Let L contain the triangle xyz and all its faces. Define</p>
+<p class="math-result"><strong>f(a)=x, f(b)=y, f(c)=z, f(d)=y.</strong></p>
+<p>Then abc maps to xyz and acd maps to xzy, the same target triangle as a vertex set. Hence f is simplicial.</p>
+<p>The fact that b and d have the same image does not violate the definition.</p>
+</section>
+
+<section>
+<h2>4. A Degenerate Image</h2>
+<p>Let abc be a triangle in K and suppose</p>
+<p class="math-result"><strong>f(a)=x, f(b)=y, f(c)=y.</strong></p>
+<p>Then the image of abc is the edge {x,y}. The 2-simplex has collapsed to a 1-simplex.</p>
+<p>Simplicial maps are therefore not required to preserve dimension, injectivity, or distinct vertices.</p>
+</section>
+
+<section>
+<h2>5. An Invalid Vertex Rule</h2>
+<p>Suppose abc is a simplex of K and f(a)=x, f(b)=y, f(c)=z, but {x,y,z} is not a simplex of L.</p>
+<p>Then f is not simplicial, even if each individual vertex and each pair happens to make sense elsewhere in L. The complete image of every source simplex must be a target simplex.</p>
+</section>
+
+<section>
+<h2>6. Geometric Realization of a Simplicial Map</h2>
+<p>A simplicial map f:K→L induces a continuous map</p>
+<p class="math-result"><strong>|f|:|K|→|L|.</strong></p>
+<p>On a point of a source simplex written in barycentric coordinates as</p>
+<p><strong>p=t0v0+⋯+tkvk</strong>, where ti≥0 and Σti=1, define</p>
+<p class="math-result"><strong>|f|(p)=t0f(v0)+⋯+tkf(vk).</strong></p>
+<p>This is affine-linear on each simplex. Because the formulas agree on shared faces, the simplexwise definitions fit together into a global continuous map.</p>
+</section>
+
+<section>
+<h2>7. Composition</h2>
+<p>If f:K→L and g:L→M are simplicial maps, then g∘f:K→M is simplicial.</p>
+<p>Moreover, geometric realization respects composition:</p>
+<p class="math-result"><strong>|g∘f|=|g|∘|f|.</strong></p>
+<p>The identity vertex map is also simplicial. Thus simplicial complexes and simplicial maps form a category, and geometric realization converts these combinatorial maps into continuous maps.</p>
+</section>
+
+<section>
+<h2>8. Simplicial Isomorphism</h2>
+<p>A simplicial map f:K→L is a <strong>simplicial isomorphism</strong> if it has a simplicial inverse.</p>
+<p>Equivalently for finite abstract complexes, it gives a bijection on vertices that preserves simplices in both directions.</p>
+<p>A simplicial isomorphism induces a homeomorphism |K|→|L|. The converse is much stronger and is generally false for the original triangulations: homeomorphic realizations need not have identical combinatorial structures.</p>
+</section>
+
+<section>
+<h2>9. Worked Isomorphism Audit</h2>
+<p>Let K have facets abc and acd, and let L have facets pqr and prs. Define</p>
+<p class="math-result"><strong>a↦p, b↦q, c↦r, d↦s.</strong></p>
+<p>The facets map as abc↦pqr and acd↦prs. The vertex rule is bijective, and the inverse also preserves the two facets. Hence K and L are simplicially isomorphic.</p>
+</section>
+
+<section>
+<h2>10. A Simplicial Map Need Not Be a Homeomorphism</h2>
+<p>Take a triangle abc and send all three vertices to one vertex x. This is simplicial whenever {x} is a simplex of the target.</p>
+<p>The realization collapses the entire triangle to a point. It is continuous, but it is not a homeomorphism.</p>
+<p><strong>Lesson:</strong> “simplicial” describes compatibility with the combinatorics; it does not imply invertibility.</p>
+</section>
+
+<section>
+<h2>11. Why Lesson 11 Matters</h2>
+<p>A continuous map between realizations need not be simplicial for the triangulations initially chosen. Subdivision gives us finer source triangulations and more vertices with which to encode the behavior of a continuous map.</p>
+<p>This is the conceptual bridge to the simplicial approximation theorem.</p>
+</section>
+
+<section>
+<h2>12. Simplicial Approximation — Preview</h2>
+<p>For finite K, a standard form of the simplicial approximation theorem says that a continuous map</p>
+<p class="math-result"><strong>F:|K|→|L|</strong></p>
+<p>can, after sufficiently many barycentric subdivisions of K, be represented up to homotopy by the realization of a simplicial map.</p>
+<p>Symbolically, for some n there is a simplicial map</p>
+<p class="math-result"><strong>g:sd<sup>n</sup>K→L &nbsp; with &nbsp; |g|≃F.</strong></p>
+<p>We are stating this as a preview, not yet proving it. The theorem explains why simplicial maps are powerful enough to study broad classes of continuous maps in algebraic topology.</p>
+</section>
+
+<section>
+<h2>13. Exact Approximation vs. Homotopy</h2>
+<p>The theorem does <strong>not</strong> generally say that the original continuous map F becomes literally equal to |g|. The conclusion is typically homotopic approximation.</p>
+<p>That distinction matters. Algebraic topology often studies properties invariant under homotopy, so replacing F by a homotopic simplicial map can preserve the information of interest while making the map combinatorially computable.</p>
+</section>
+
+<section>
+<h2>14. A First Map of a Circle</h2>
+<p>Let K be the boundary of a triangle with vertices a,b,c and edges ab,bc,ca. Let L be another triangular circle with vertices x,y,z.</p>
+<p>The assignment a↦x, b↦y, c↦z defines a simplicial isomorphism.</p>
+<p>By contrast, a↦x, b↦x, c↦y defines a simplicial map only if each source edge maps to a vertex or to an edge present in L. This map collapses one edge and is not an isomorphism.</p>
+</section>
+
+<section>
+<h2>15. Image and Preimage Discipline</h2>
+<p>For a simplicial map, the image of a simplex is always a simplex, possibly of smaller dimension. However, the inverse image of a simplex need not itself be one simplex; it may be a union of simplices or a more complicated subcomplex-like collection.</p>
+<p>Do not transfer ordinary set-map intuition into an unsupported combinatorial conclusion. Audit the simplices explicitly.</p>
+</section>
+
+<section>
+<h2>16. Local Behavior</h2>
+<p>A simplicial map can fold, collapse, or identify portions of a complex. Consequently, good manifold links in the source and target do not imply that the map is locally a homeomorphism.</p>
+<p>To prove stronger map properties—such as injectivity, embedding behavior, or local homeomorphism—additional hypotheses are required.</p>
+</section>
+
+<section class="audit">
+<h2>17. Simplicial Map Audit</h2>
+<p>Given a proposed vertex map f:V(K)→V(L):</p>
+<ol>
+<li>List the facets of K.</li>
+<li>Apply f to the vertices of each facet.</li>
+<li>Remove repeated image vertices when interpreting the image as a set.</li>
+<li>Check that every resulting image set is a simplex of L.</li>
+<li>Record any dimension collapses.</li>
+<li>If an isomorphism is claimed, check vertex bijectivity and verify the inverse is simplicial.</li>
+<li>If a homeomorphism or embedding is claimed, do not infer it merely from simpliciality.</li>
+</ol>
+</section>
+
+<section>
+<h2>18. Worked Audit</h2>
+<p>Let K have facets abc, acd, and ade. Let L have facets pqr and prs. Define</p>
+<p class="math-result"><strong>a↦p, b↦q, c↦r, d↦s, e↦r.</strong></p>
+<ul>
+<li>abc maps to pqr — valid.</li>
+<li>acd maps to prs — valid.</li>
+<li>ade maps to psr — the same vertex set {p,r,s}, valid.</li>
+</ul>
+<p>Thus the map is simplicial. It is not injective on vertices because c and e both map to r, so it cannot be a simplicial isomorphism.</p>
+</section>
+
+<section>
+<h2>19. Common Errors</h2>
+<ol>
+<li><strong>Checking vertices only.</strong> A vertex assignment must preserve whole simplices.</li>
+<li><strong>Demanding dimension preservation.</strong> Simplicial maps may collapse simplices.</li>
+<li><strong>Assuming simplicial means injective.</strong> It does not.</li>
+<li><strong>Assuming a homeomorphism is simplicial for the chosen triangulations.</strong> It may not be.</li>
+<li><strong>Replacing “homotopic to” with “equal to” in simplicial approximation.</strong> These are different conclusions.</li>
+<li><strong>Ignoring the target complex.</strong> Whether a vertex rule is simplicial depends on which target simplices actually exist.</li>
+</ol>
+</section>
+
+<section class="knowledge-check">
+<h2>20. Knowledge Check</h2>
+<ol>
+<li>Define a simplicial map between abstract simplicial complexes.</li>
+<li>Why may repeated image vertices occur?</li>
+<li>What must be checked to determine whether a vertex rule is simplicial?</li>
+<li>How is |f| defined using barycentric coordinates?</li>
+<li>Why is |f| continuous across shared faces?</li>
+<li>What is a simplicial isomorphism?</li>
+<li>Give an example of a simplicial map that is not a homeomorphism.</li>
+<li>Why can subdivision help turn continuous-map questions into combinatorial ones?</li>
+<li>State the finite-complex simplicial approximation theorem in the form used in this lesson.</li>
+<li>Distinguish “F=|g|” from “F≃|g|.”</li>
+</ol>
+</section>
+
+<section class="investigation">
+<h2>21. Independent Investigation — Map Laboratory</h2>
+<p>Create two finite simplicial complexes K and L, each with at least three facets, and design three different vertex maps K→L.</p>
+<ol>
+<li>Make Map A simplicial and injective on vertices.</li>
+<li>Make Map B simplicial but force at least one simplex to collapse in dimension.</li>
+<li>Make Map C fail to be simplicial.</li>
+<li>For each map, audit every source facet.</li>
+<li>For A and B, describe the induced realization map qualitatively.</li>
+<li>Explain exactly why C fails.</li>
+<li>Determine whether either valid map is a simplicial isomorphism and justify the conclusion.</li>
+</ol>
+<div class="record">
+<strong>Complexes K and L</strong><div></div>
+<strong>Map A audit</strong><div class="large"></div>
+<strong>Map B audit</strong><div class="large"></div>
+<strong>Map C failure analysis</strong><div class="large"></div>
+<strong>Final comparison</strong><div class="large"></div>
+</div>
+</section>
+
+<section>
+<h2>Accessibility</h2>
+<p>Every map in this lesson can be represented by vertex tables and facet lists. Diagrams are optional. No color distinction, physical model, paid software, or external learner website is required.</p>
+</section>
+
+<footer>
+<h2>Resource Record</h2>
+<ul>
+<li><strong>Creator:</strong> Khaemenes Academy</li>
+<li><strong>Arc:</strong> 02 — Triangulations &amp; Combinatorial Surfaces</li>
+<li><strong>Position:</strong> Self-Paced Lesson 12</li>
+<li><strong>Version:</strong> 0.9.1 hardened research draft</li>
+<li><strong>Required external learner dependency:</strong> None</li>
+<li><strong>Next:</strong> Lesson 13 — Simplicial Approximation Laboratory</li>
+</ul>
+</footer>
+</article></main>
+<footer class="site-footer">Khaemenes Academy · Free, self-paced higher learning.</footer><script src="lesson.js" defer></script></body></html>

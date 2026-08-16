@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "resource_id": "KH-MATH-AGT-L12-R04",
+  "title": "Simplicial Maps & Combinatorial Topology",
+  "resource_type": "instructional-reading",
+  "course": {
+    "course_id": "advanced-geometric-topology",
+    "arc": 2,
+    "lesson": 12,
+    "delivery": "self-paced"
+  },
+  "academic": {
+    "level": "advanced-undergraduate-graduate-preparatory",
+    "topics": [
+      "simplicial maps",
+      "geometric realization of maps",
+      "barycentric coordinates",
+      "composition",
+      "simplicial isomorphism",
+      "dimension collapse",
+      "simplicial approximation"
+    ],
+    "skills": [
+      "audit vertex maps",
+      "verify simplex compatibility",
+      "construct realization maps",
+      "detect degeneracy",
+      "distinguish simplicial maps from isomorphisms",
+      "state simplicial approximation precisely"
+    ]
+  },
+  "relationships": {
+    "requires": [
+      "KH-MATH-AGT-L10-CR02",
+      "KH-MATH-AGT-L11-R03"
+    ],
+    "next": [
+      "KH-MATH-AGT-L13-LAB02"
+    ]
+  },
+  "provenance": {
+    "creator": "Khaemenes Academy",
+    "originality": "original",
+    "license": "TO_BE_DEFINED",
+    "editorial_verification": [
+      "University of Chicago Algebraic Topology notes, simplicial approximation",
+      "University of Chicago finite spaces and simplicial complexes notes"
+    ]
+  },
+  "editorial": {
+    "status": "hardened-research-draft",
+    "version": "0.9.1",
+    "reviewed": false,
+    "last_revision": "2026-08-16"
+  },
+  "accessibility": {
+    "diagram_required": false,
+    "color_required": false,
+    "physical_model_required": false,
+    "printable": true,
+    "keyboard_accessible": true
+  },
+  "security": {
+    "network_connections": false,
+    "external_runtime_dependencies": [],
+    "content_security_policy": true
+  },
+  "dependencies": {
+    "student_external_dependencies": []
+  }
+}
