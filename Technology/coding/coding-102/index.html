@@ -220,5 +220,6 @@ $("homeBtn").onclick=renderDashboard;$("crumbHome").onclick=e=>{e.preventDefault
 document.addEventListener("keydown",e=>{if($("moduleView").classList.contains("hidden")||!$("quizHost").classList.contains("hidden")||!currentModule)return;const i=li();if(e.key==="ArrowRight"&&i<currentModule.lessons.length-1){state.lesson[currentModule.id]=i+1;renderLesson()}else if(e.key==="ArrowLeft"&&i>0){state.lesson[currentModule.id]=i-1;renderLesson()}});
 renderDashboard();
 </script>
+<script src="/assets/vnv-beta-link.js" defer></script>
 </body>
 </html>

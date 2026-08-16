@@ -151,4 +151,5 @@ const dialog=$("activityDialog"),frame=$("activityFrame"),title=$("activityTitle
 function applyTheme(theme){document.documentElement.dataset.theme=theme;const light=theme==='light';$("themeButton").textContent=light?'Dark':'Light';$("themeButton").setAttribute('aria-pressed',String(light));document.querySelector('meta[name="theme-color"]').content=light?'#eef1f3':'#081421';localStorage.setItem(THEME_KEY,theme)}$("themeButton").addEventListener('click',()=>applyTheme(document.documentElement.dataset.theme==='light'?'dark':'light'));applyTheme(localStorage.getItem(THEME_KEY)==='light'?'light':'dark');renderProfile();renderPins();renderCourses();
 })();
 </script>
+<script src="/assets/vnv-beta-link.js" defer></script>
 </body></html>

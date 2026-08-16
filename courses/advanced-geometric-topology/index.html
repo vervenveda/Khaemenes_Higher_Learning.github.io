@@ -9,4 +9,6 @@
 <section class="section"><h2>36-Week Map</h2><div class="weekgrid" id="weeks"></div></section></main>
 <script src="assets/course-data.js"></script><script>
 const grid=document.getElementById('weeks');grid.innerHTML=window.KHAE_ADVANCED_COURSE_DATA.weeks.map(w=>`<article class="card week"><span class="pill">Week ${w.week}</span><span class="pill">Unit ${w.unit}</span><h3>${w.topic}</h3><p class="meta">${w.unit_title}</p><p class="meta">Lab: ${w.lab}</p><a class="btn" href="lesson.html?week=${w.week}&day=1">Open Week</a></article>`).join('');
-</script></body></html>
+</script>
+<script src="/assets/vnv-beta-link.js" defer></script>
+</body></html>
