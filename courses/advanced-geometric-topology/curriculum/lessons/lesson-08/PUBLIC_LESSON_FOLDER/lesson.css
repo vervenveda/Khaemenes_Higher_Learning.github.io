@@ -1,0 +1,45 @@
+*{box-sizing:border-box}
+body{margin:0;background:#f2efe7;color:#181818;font:17px/1.58 Georgia,serif}
+.skip-link{position:absolute;left:-9999px}.skip-link:focus{left:1rem;top:1rem;background:#fff;padding:.5rem;z-index:10}
+.academy-header,.lesson-actions,.site-footer{max-width:960px;margin:auto;padding:1rem 1.4rem}
+.academy-header{display:flex;justify-content:space-between;gap:1rem;font-family:system-ui,sans-serif}
+.eyebrow{display:block;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:#666}
+.lesson-meta,.student-fields{display:flex;gap:.7rem;flex-wrap:wrap}
+.lesson-meta span{border:1px solid #d9d4c8;border-radius:999px;padding:.25rem .5rem;background:#fff}
+.lesson-actions{display:flex;justify-content:flex-end;gap:.5rem}
+.lesson-actions button,.lesson-actions a{border:1px solid #253b52;border-radius:7px;padding:.5rem .75rem;background:#fff;color:#253b52;text-decoration:none}
+.lesson-page{max-width:960px;margin:0 auto 2rem;padding:2.3rem;background:#fffefa;border:1px solid #d9d4c8;box-shadow:0 8px 30px #0000000f}
+.student-fields{font-family:system-ui,sans-serif;border:1px solid #d9d4c8;background:#f8fafb;padding:.8rem 1rem;margin-bottom:1.2rem}
+article>header{border-bottom:2px solid #253b52;padding-bottom:.8rem}
+h1,h2,h3{color:#142536;line-height:1.25}h2{margin-top:2rem}
+.assessment-intro,.critical{border:1px solid #d9d4c8;border-radius:10px;padding:1rem 1.2rem;background:#f8fafb}
+.assessment-section{border-top:1px solid #e6e1d6;margin-top:1.5rem}
+.question{border-left:3px solid #d6dde4;padding:.25rem 0 .5rem 1rem;margin:1rem 0}
+.response-space{margin:.55rem 0;border:1px solid #ddd7ca;background:repeating-linear-gradient(to bottom,#fffefa 0,#fffefa 1.65rem,#e9e5dc 1.69rem)}
+.question.medium .response-space{min-height:7rem}
+.question.large .response-space{min-height:12rem}
+.question.essay .response-space{min-height:24rem}
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:560px}
+th,td{border:1px solid #d9d4c8;padding:.55rem;text-align:left;vertical-align:top}th{background:#f6f4ee}.score-section td:last-child{min-width:6rem}
+.site-footer{color:#666;font:.85rem/1.5 system-ui,sans-serif}
+@media(max-width:700px){.academy-header{flex-direction:column}.lesson-page{padding:1.2rem}.response-space{min-height:5rem!important}}
+@media print{
+ @page{size:Letter;margin:.55in}
+ body{background:#fff;font-size:10pt;line-height:1.35}
+ .screen-only,.skip-link{display:none!important}
+ .academy-header{max-width:none;padding:0 0 .1in;border-bottom:1pt solid #000}
+ .lesson-page{max-width:none;margin:0;padding:0;border:0;box-shadow:none}
+ .student-fields{background:#fff;margin-bottom:.12in}
+ article>header{break-after:avoid}
+ .assessment-section{break-before:page}
+ .question{break-inside:avoid;margin:.08in 0 .12in;border-left:0;padding-left:0}
+ .response-space{border:0;background:repeating-linear-gradient(to bottom,#fff 0,#fff .23in,#aaa .235in)}
+ .question.medium .response-space{min-height:1.35in}
+ .question.large .response-space{min-height:2.35in}
+ .question.essay{break-before:page}
+ .question.essay .response-space{min-height:7in}
+ .table-wrap{overflow:visible}table{min-width:0;font-size:9pt}th{background:#fff}
+ .score-section,.critical{break-before:page}.critical,.assessment-intro{background:#fff}
+ .site-footer{display:none}
+}

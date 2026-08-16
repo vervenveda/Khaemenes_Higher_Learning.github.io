@@ -1,0 +1,13 @@
+{
+  "algorithm": "SHA-256",
+  "resource_id": "KH-MATH-AGT-L08-MA01",
+  "release": "0.9.1-hardened-public",
+  "files": {
+    "KH-MATH-AGT-L08-MA01_foundational-surface-quotients-mastery-assessment.html": "452851694b5febfe8ce2f69143e869c6fe8d2f24f60fe2c532ddff6fcf45d5b0",
+    "lesson.css": "8aa55421ca7a0b4634554f877e40e807308e06f7d11f49704ef6618882a79df1",
+    "README.md": "d6474a523d022da2813d8acde5ea34d66e22c5ba71a6d3e208040ac7412e9c17",
+    "KH-MATH-AGT-L08-MA01_metadata.json": "87e2d89692f05feb087967a7b9c737b21de320fd68976190a52f2e3886f4674b",
+    "lesson.js": "3e408f41a93d89c0a57acfca9da38ea0aac256224773b12031c66bc15f63cc9d",
+    "KH-MATH-AGT-L08-MA01_verification-notes.md": "d89902d65a91df911bc36a23b68e470478b8796c7912fd498d57f3cbde57be41"
+  }
+}

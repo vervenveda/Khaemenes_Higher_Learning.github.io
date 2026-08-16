@@ -1,0 +1,9 @@
+{
+  "algorithm": "SHA-256",
+  "resource_id": "KH-MATH-AGT-L08-MA01",
+  "classification": "instructor-private",
+  "files": {
+    "KH-MATH-AGT-L08-MA01_instructor-scoring-key.md": "21a5fbb82a9e8d2f496eb5e0990818560cc6bb33e330048bb211a6326b066f91",
+    "README_PRIVATE.md": "dab3ced0f064159170924fb8c1c268139c0627dd584d80cd3011275e25fc64b4"
+  }
+}
