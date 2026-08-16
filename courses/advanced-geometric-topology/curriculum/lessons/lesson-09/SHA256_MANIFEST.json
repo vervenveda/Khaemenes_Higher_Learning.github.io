@@ -1,0 +1,13 @@
+{
+  "algorithm": "SHA-256",
+  "resource_id": "KH-MATH-AGT-L09-R02",
+  "release": "0.9.1-hardened",
+  "files": {
+    "KH-MATH-AGT-L09-R02_verification-notes.md": "edd13414e062fecf11c248864ce7b56848c68c817d080c51d28b25dcc4642e60",
+    "lesson.css": "88d1b8649b031e28df0a127b25f64055b72b0ba711b7dfe650f6542b7631d1f7",
+    "README.md": "d0ffa3c496346f21db42fa2bd1b8b13195635ed0e659689b79b8505ac36364e6",
+    "KH-MATH-AGT-L09-R02_from-polygons-to-simplicial-complexes.html": "4379b010b283c9e11eb775a267df3d5a7a96b674960db88405abbeb633fcc67b",
+    "KH-MATH-AGT-L09-R02_metadata.json": "b12c34d4b1249a2f163d28c4467aaeffaf5a969c4303ef7c8afa2a40e9e0ac35",
+    "lesson.js": "3e408f41a93d89c0a57acfca9da38ea0aac256224773b12031c66bc15f63cc9d"
+  }
+}
