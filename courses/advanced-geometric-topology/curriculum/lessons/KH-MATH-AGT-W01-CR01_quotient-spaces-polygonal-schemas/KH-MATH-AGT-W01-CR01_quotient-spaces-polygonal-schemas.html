@@ -1,0 +1,198 @@
+<article data-resource-id="KH-MATH-AGT-W01-CR01">
+<header>
+<h1>Quotient Spaces &amp; Polygonal Schemas</h1>
+<p><strong>Concept Reference · Advanced Geometric Topology · Unit 1 · Week 1</strong></p>
+<p><strong>Resource ID:</strong> KH-MATH-AGT-W01-CR01</p>
+<p>This is a reusable reference. Use R01 for the full instructional reading.</p>
+</header>
+
+<section>
+<h2>1. Core Definitions</h2>
+<dl>
+<dt><strong>Equivalence relation</strong></dt>
+<dd>A relation ~ on X that is reflexive, symmetric, and transitive.</dd>
+<dt><strong>Equivalence class [x]</strong></dt>
+<dd>The set {y in X : y ~ x}.</dd>
+<dt><strong>Quotient set X/~</strong></dt>
+<dd>The set whose elements are the equivalence classes of ~.</dd>
+<dt><strong>Quotient map q</strong></dt>
+<dd>The natural surjection q:X→X/~ defined by q(x)=[x].</dd>
+<dt><strong>Quotient topology</strong></dt>
+<dd>U⊆X/~ is open exactly when q⁻¹(U) is open in X.</dd>
+<dt><strong>Surface / 2-manifold</strong></dt>
+<dd>For this course, a Hausdorff, second-countable space locally homeomorphic to R².</dd>
+<dt><strong>Polygonal presentation</strong></dt>
+<dd>A polygonal region together with boundary-edge pairing and orientation data used to specify a quotient.</dd>
+<dt><strong>Homeomorphism</strong></dt>
+<dd>A continuous bijection with continuous inverse.</dd>
+</dl>
+</section>
+
+<section>
+<h2>2. The Quotient Construction at a Glance</h2>
+<ol>
+<li>Begin with a topological space X.</li>
+<li>Specify an equivalence relation ~.</li>
+<li>Replace each point x by its class [x].</li>
+<li>Form X/~, the set of equivalence classes.</li>
+<li>Use q:X→X/~ to define the quotient topology.</li>
+</ol>
+<p><strong>Diagnostic question:</strong> When someone says “glue these points,” ask: <em>what equivalence relation is being generated?</em></p>
+</section>
+
+<section>
+<h2>3. Polygonal Schema Data</h2>
+<table>
+<thead><tr><th>Data</th><th>What it tells you</th><th>Do not confuse it with</th></tr></thead>
+<tbody>
+<tr><td>Polygon</td><td>A convenient domain/presentation</td><td>The quotient surface itself</td></tr>
+<tr><td>Repeated edge label</td><td>Which boundary edges are paired</td><td>The direction of the pairing</td></tr>
+<tr><td>Arrow / exponent</td><td>Orientation convention for correspondence</td><td>Orientability of the final surface</td></tr>
+<tr><td>Corner labels</td><td>Starting points for endpoint tracking</td><td>Distinct quotient vertices</td></tr>
+<tr><td>Boundary word</td><td>Compact encoding of the oriented edge data</td><td>A unique name for the surface</td></tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>4. Boundary-Word Convention</h2>
+<p>Choose a direction for traversing the polygon boundary and a direction for each labeled edge. Record a label with exponent +1 when its chosen edge direction agrees with the boundary traversal and exponent −1 when it opposes the traversal.</p>
+<p>A standard torus presentation can be written:</p>
+<p><strong>a b a<sup>−1</sup> b<sup>−1</sup></strong></p>
+<p><strong>Convention warning:</strong> Authors may draw arrows or encode words differently. Interpret the stated identification rule before comparing formulas.</p>
+</section>
+
+<section>
+<h2>5. Vertex-Equivalence Algorithm</h2>
+<ol>
+<li>Name every corner of the polygon.</li>
+<li>Take one paired edge at a time.</li>
+<li>Use the edge directions to determine which endpoints correspond.</li>
+<li>Write those endpoint relations explicitly.</li>
+<li>Combine all relations using transitivity.</li>
+<li>The resulting equivalence classes are the quotient vertices of this cell structure.</li>
+</ol>
+<p><strong>Rule:</strong> Never use the raw number of polygon corners as V unless you have proved that they remain distinct after identification.</p>
+</section>
+
+<section>
+<h2>6. Cell Counts and Euler Characteristic</h2>
+<p>For the finite cell structures used in this unit:</p>
+<p><strong>χ = V − E + F</strong></p>
+<ul>
+<li><strong>V:</strong> number of vertex equivalence classes;</li>
+<li><strong>E:</strong> number of edge equivalence classes;</li>
+<li><strong>F:</strong> number of 2-cells.</li>
+</ul>
+<p>For the standard one-square torus presentation: V=1, E=2, F=1, hence χ=0.</p>
+</section>
+
+<section>
+<h2>7. Benchmark Models</h2>
+<table>
+<thead><tr><th>Surface</th><th>Useful polygonal-model idea</th><th>Orientability preview</th></tr></thead>
+<tbody>
+<tr><td>Sphere S²</td><td>Boundary arcs can be paired to give a spherical quotient</td><td>Orientable</td></tr>
+<tr><td>Torus T²</td><td>Opposite sides of a square paired in the standard torus pattern</td><td>Orientable</td></tr>
+<tr><td>Real projective plane RP²</td><td>Boundary data includes an orientation-reversing identification pattern</td><td>Nonorientable</td></tr>
+<tr><td>Klein bottle</td><td>One direction is paired with a twist relative to the other</td><td>Nonorientable</td></tr>
+</tbody>
+</table>
+<p>These are benchmark presentations, not uniqueness claims.</p>
+</section>
+
+<section>
+<h2>8. Surface Check</h2>
+<p>An arbitrary quotient of a polygon is not automatically a surface. For a quotient to be a 2-manifold, every quotient point must have the required local Euclidean neighborhood. Suspicious points usually occur at identified boundary vertices or unusual collapsed boundary sets.</p>
+<p><strong>Diagnostic:</strong> Inspect the equivalence classes first; then inspect neighborhoods of the quotient points created from them.</p>
+</section>
+
+<section>
+<h2>9. Critical Distinctions</h2>
+<table>
+<thead><tr><th>Distinguish</th><th>From</th><th>Reason</th></tr></thead>
+<tbody>
+<tr><td>Polygonal presentation</td><td>Quotient surface</td><td>One is a model with instructions; the other is the resulting topological space.</td></tr>
+<tr><td>Edge direction</td><td>Surface orientability</td><td>The former is local combinatorial data; the latter is a global property.</td></tr>
+<tr><td>Visualization</td><td>Proof</td><td>A picture can suggest a result without establishing it.</td></tr>
+<tr><td>Raw corners</td><td>Quotient vertices</td><td>Identifications can merge corners.</td></tr>
+<tr><td>One presentation</td><td>One homeomorphism type</td><td>Different presentations can describe homeomorphic surfaces.</td></tr>
+<tr><td>χ computation</td><td>Classification proof</td><td>An invariant can supply evidence without by itself proving every classification claim.</td></tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>10. Diagnostic Examples</h2>
+<h3>A. Equivalence relation</h3>
+<p>On R, x~y when x−y∈Z. This is reflexive, symmetric, and transitive, so the quotient R/~ is defined.</p>
+<h3>B. Torus cell count</h3>
+<p>In the standard square presentation, all four corners are identified, the four sides form two edge classes, and the interior is one face. Thus (V,E,F)=(1,2,1).</p>
+<h3>C. Nonexample warning</h3>
+<p>If an identification creates a quotient point whose neighborhood branches or otherwise fails to look locally like an open disk, the quotient is not a surface at that point.</p>
+</section>
+
+<section>
+<h2>11. Fast Audit Before Naming a Quotient</h2>
+<ol>
+<li>What is the underlying polygonal region?</li>
+<li>Which edges are paired?</li>
+<li>What are the pairing directions?</li>
+<li>Which endpoints become equivalent?</li>
+<li>What are the final vertex classes?</li>
+<li>How many edge classes and faces remain?</li>
+<li>What is χ?</li>
+<li>Is there evidence of orientation reversal?</li>
+<li>Does every quotient point satisfy the local surface condition?</li>
+<li>Which conclusion is proved, and which is only suggested by the diagram?</li>
+</ol>
+</section>
+
+<section>
+<h2>12. Notation Quick Reference</h2>
+<table>
+<tbody>
+<tr><th>~</th><td>equivalence relation</td></tr>
+<tr><th>[x]</th><td>equivalence class of x</td></tr>
+<tr><th>X/~</th><td>quotient set / quotient space</td></tr>
+<tr><th>q</th><td>quotient map x↦[x]</td></tr>
+<tr><th>a⁻¹</th><td>edge a traversed opposite its chosen direction, under the convention used here</td></tr>
+<tr><th>χ</th><td>Euler characteristic</td></tr>
+<tr><th>S²</th><td>2-sphere</td></tr>
+<tr><th>T²</th><td>2-torus</td></tr>
+<tr><th>RP²</th><td>real projective plane</td></tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>13. Self-Test</h2>
+<ol>
+<li>Define quotient topology without using the word “glue.”</li>
+<li>Why is the quotient map naturally surjective?</li>
+<li>What two pieces of information must an edge-identification diagram communicate?</li>
+<li>Describe the algorithm for finding quotient vertices.</li>
+<li>Why is χ=V−E+F not computed from the unprocessed polygon counts?</li>
+<li>State the difference between edge orientation and orientability.</li>
+<li>What local condition must be checked before calling an arbitrary quotient a surface?</li>
+<li>Why can a surface have more than one polygonal presentation?</li>
+</ol>
+</section>
+
+<section>
+<h2>14. Accessibility &amp; Reading Conventions</h2>
+<p>Edge pairings must be communicated by text labels in addition to arrows or color. A diagram description should state the boundary order, edge labels, directions, and endpoint correspondences. Read “X/~” as “X modulo the equivalence relation” and “χ=V−E+F” as “Euler characteristic equals vertices minus edges plus faces.”</p>
+</section>
+
+<footer>
+<h2>15. Resource Record</h2>
+<ul>
+<li><strong>Creator:</strong> Khaemenes Academy</li>
+<li><strong>Originality:</strong> Original reference exposition</li>
+<li><strong>Version:</strong> 0.9 research draft</li>
+<li><strong>License:</strong> To be defined by Khaemenes Academy</li>
+<li><strong>Required external learner dependency:</strong> None</li>
+<li><strong>Primary companion:</strong> KH-MATH-AGT-W01-R01 — Building Surfaces from Polygons</li>
+</ul>
+</footer>
+</article>
