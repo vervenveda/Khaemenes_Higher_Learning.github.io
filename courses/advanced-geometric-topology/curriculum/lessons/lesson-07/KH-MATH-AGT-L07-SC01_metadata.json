@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "resource_id": "KH-MATH-AGT-L07-SC01",
+  "title": "Solutions & Mathematical Commentary",
+  "resource_type": "solution-commentary",
+  "course": {
+    "course_id": "advanced-geometric-topology",
+    "arc": 1,
+    "lesson": 7,
+    "delivery": "self-paced"
+  },
+  "academic": {
+    "level": "advanced-undergraduate-graduate-preparatory",
+    "companion_problem_set": "KH-MATH-AGT-L06-PS01",
+    "solutions": 30,
+    "features": [
+      "full reasoning",
+      "common-error diagnosis",
+      "proof guidance",
+      "remediation map",
+      "correction protocol"
+    ]
+  },
+  "relationships": {
+    "requires": [
+      "KH-MATH-AGT-L06-PS01"
+    ],
+    "remediates": [
+      "KH-MATH-AGT-W01-R01",
+      "KH-MATH-AGT-W01-CR01",
+      "KH-MATH-AGT-W01-WE01",
+      "KH-MATH-AGT-W01-PW01",
+      "KH-MATH-AGT-W01-LAB01"
+    ],
+    "next": [
+      "KH-MATH-AGT-L08-MA01"
+    ]
+  },
+  "provenance": {
+    "creator": "Khaemenes Academy",
+    "originality": "original",
+    "license": "TO_BE_DEFINED"
+  },
+  "editorial": {
+    "status": "hardened-research-draft",
+    "version": "0.9.1",
+    "reviewed": false,
+    "last_revision": "2026-08-16"
+  },
+  "accessibility": {
+    "external_site_required": false,
+    "color_required": false,
+    "physical_model_required": false,
+    "printable": true,
+    "keyboard_accessible": true
+  },
+  "security": {
+    "network_connections": false,
+    "external_runtime_dependencies": [],
+    "content_security_policy": true
+  }
+}

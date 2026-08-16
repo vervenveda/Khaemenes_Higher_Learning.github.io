@@ -1,0 +1,13 @@
+{
+  "algorithm": "SHA-256",
+  "resource_id": "KH-MATH-AGT-L07-SC01",
+  "release": "0.9.1-hardened",
+  "files": {
+    "lesson.css": "1f4be7b13b71685ca5cfabc97eaaa87948bce0e7cb40e253e18111631ab63e48",
+    "README.md": "07abc914b496f5059693194ace43f88afd92fde8a90b4f79c3701264d442646d",
+    "KH-MATH-AGT-L07-SC01_solutions-mathematical-commentary.html": "28450310b33e3dbe45c7903eff2d214123e97af80ea762ddab016cae6bfd1033",
+    "KH-MATH-AGT-L07-SC01_metadata.json": "26dfe0d0b4dfe4382d23a80a2fafe367dd9d662b5c673c9e45d5bd653f151d4e",
+    "KH-MATH-AGT-L07-SC01_verification-notes.md": "f790f33414725e652570ad1dbc23528076ceb6f240c908df829881849daac6ee",
+    "lesson.js": "3e408f41a93d89c0a57acfca9da38ea0aac256224773b12031c66bc15f63cc9d"
+  }
+}
