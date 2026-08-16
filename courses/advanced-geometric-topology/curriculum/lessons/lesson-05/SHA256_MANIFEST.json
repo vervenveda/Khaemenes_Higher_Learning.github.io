@@ -1,0 +1,13 @@
+{
+  "algorithm": "SHA-256",
+  "resource_id": "KH-MATH-AGT-W01-LAB01",
+  "release": "0.9.1-hardened",
+  "files": {
+    "lesson.css": "b411afcb622eb83c3b4081c4667848f1f8ac4dc5e225012b19ca3109946568ad",
+    "README.md": "b513e417d1333deac599eb885287ebbe416e4717f067490b9014bd73abc3c68d",
+    "KH-MATH-AGT-W01-LAB01_verification-notes.md": "97e13c2d18cedd205dfdf8f376cf881011d831894b2950cf5595a4699b8c313e",
+    "KH-MATH-AGT-W01-LAB01_metadata.json": "475540ed66877a4ee2f99546da5fdeb4d89cca87ab4bdac5866607fa1938fd76",
+    "KH-MATH-AGT-W01-LAB01_polygon-gluing-surface-classification-laboratory.html": "f1e53a8486fef816780618ed130d02fb5b725404b0086dbe44e2841d1d3ea6a8",
+    "lesson.js": "3e408f41a93d89c0a57acfca9da38ea0aac256224773b12031c66bc15f63cc9d"
+  }
+}
