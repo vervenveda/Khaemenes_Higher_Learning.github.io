@@ -1,0 +1,13 @@
+{
+  "algorithm": "SHA-256",
+  "resource_id": "KH-MATH-AGT-W01-CR01",
+  "release": "0.9.1-hardened",
+  "files": {
+    "KH-MATH-AGT-W01-CR01_metadata.json": "56020267dc832091443099712174f7d8b27f2536a84b1d48c2b1fb8a4980471e",
+    "KH-MATH-AGT-W01-CR01_quotient-spaces-polygonal-schemas.html": "22f8318347c4b9a7d0cde45c199768ccd55f1a343a9057eb202a300f9db9e7f4",
+    "KH-MATH-AGT-W01-CR01_verification-notes.md": "2168228dde3de8261a70c2ec76135c720c0dc637a1ea4157975d25f82ffd94c1",
+    "README.md": "e830c037fc52e5c2b96f30f86b1d4cc36d49b650589ff98cc41038edf3ae56e3",
+    "lesson.css": "6b1ca178e1d3b7ef28b9f0aa2f0e6ebcd75be49680d7aa224174c51852909322",
+    "lesson.js": "50f293e1cf35c1f5fef9a96fc7ca9c12fb2bb490f5ac3704dfb0449617ea0347"
+  }
+}
