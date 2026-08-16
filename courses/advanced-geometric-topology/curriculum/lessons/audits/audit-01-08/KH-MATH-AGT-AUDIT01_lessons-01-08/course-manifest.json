@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "advanced-geometric-topology",
+  "course_code": "KH-MATH-AGT",
+  "delivery": "self-paced",
+  "canonical_lesson_root": "courses/advanced-geometric-topology/curriculum/lessons",
+  "architecture": {
+    "calendar_weeks": false,
+    "lesson_folder_pattern": "lesson-XX",
+    "new_id_pattern": "KH-MATH-AGT-L##-TYPE##"
+  },
+  "arcs": [
+    {
+      "arc_id": "AGT-ARC-01",
+      "title": "Foundational Surface Quotients",
+      "status": "complete-pending-documentation-cleanup",
+      "mastery_lesson": 8,
+      "lessons": [
+        {
+          "lesson": 1,
+          "resource_id": "KH-MATH-AGT-W01-R01",
+          "role": "instructional-reading",
+          "folder": "lesson-01/KH-MATH-AGT-W01-R01_building-surfaces-from-polygons",
+          "legacy_id": true
+        },
+        {
+          "lesson": 2,
+          "resource_id": "KH-MATH-AGT-W01-CR01",
+          "role": "concept-reference",
+          "folder": "lesson-02/KH-MATH-AGT-W01-CR01_quotient-spaces-polygonal-schemas",
+          "legacy_id": true
+        },
+        {
+          "lesson": 3,
+          "resource_id": "KH-MATH-AGT-W01-WE01",
+          "role": "worked-examples",
+          "folder": "lesson-03/KH-MATH-AGT-W01-WE01_worked-surface-identification-examples",
+          "legacy_id": true
+        },
+        {
+          "lesson": 4,
+          "resource_id": "KH-MATH-AGT-W01-PW01",
+          "role": "proof-workshop",
+          "folder": "lesson-04/KH-MATH-AGT-W01-PW01_edge-identification-proof-workshop",
+          "legacy_id": true
+        },
+        {
+          "lesson": 5,
+          "resource_id": "KH-MATH-AGT-W01-LAB01",
+          "role": "laboratory",
+          "folder": "lesson-05/KH-MATH-AGT-W01-LAB01_polygon-gluing-surface-classification-laboratory",
+          "legacy_id": true
+        },
+        {
+          "lesson": 6,
+          "resource_id": "KH-MATH-AGT-L06-PS01",
+          "role": "problem-set",
+          "folder": "lesson-06/KH-MATH-AGT-L06-PS01_surface-identification-problem-set"
+        },
+        {
+          "lesson": 7,
+          "resource_id": "KH-MATH-AGT-L07-SC01",
+          "role": "solutions-remediation",
+          "folder": "lesson-07/KH-MATH-AGT-L07-SC01_solutions-mathematical-commentary"
+        },
+        {
+          "lesson": 8,
+          "resource_id": "KH-MATH-AGT-L08-MA01",
+          "role": "mastery-assessment",
+          "folder": "lesson-08/KH-MATH-AGT-L08-MA01_foundational-surface-quotients-mastery-assessment"
+        }
+      ],
+      "mastery": {
+        "threshold_percent": 80,
+        "critical_concept_override": true,
+        "reassessment": true
+      }
+    }
+  ],
+  "next_arc": {
+    "arc_id": "AGT-ARC-02",
+    "title": "Triangulations & Combinatorial Surfaces",
+    "starts_at_lesson": 9,
+    "planned_lessons": [
+      {
+        "lesson": 9,
+        "title": "From Polygons to Simplicial Complexes"
+      },
+      {
+        "lesson": 10,
+        "title": "Stars, Links & Local Manifold Tests"
+      },
+      {
+        "lesson": 11,
+        "title": "Subdivision and Triangulation Invariance"
+      },
+      {
+        "lesson": 12,
+        "title": "Combinatorial Surface Proof Workshop"
+      },
+      {
+        "lesson": 13,
+        "title": "Triangulation Laboratory"
+      },
+      {
+        "lesson": 14,
+        "title": "Problem Set"
+      },
+      {
+        "lesson": 15,
+        "title": "Solutions & Mathematical Commentary"
+      },
+      {
+        "lesson": 16,
+        "title": "Mastery Assessment"
+      }
+    ]
+  },
+  "audit": {
+    "date": "2026-08-16",
+    "status": "pass-with-architectural-cleanup"
+  }
+}
