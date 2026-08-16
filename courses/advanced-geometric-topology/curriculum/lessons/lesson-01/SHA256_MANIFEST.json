@@ -1,13 +1,14 @@
 {
   "algorithm": "SHA-256",
   "resource_id": "KH-MATH-AGT-W01-R01",
-  "release": "0.9.1-hardened",
+  "release": "0.9.1-corrected-hardened",
   "files": {
-    "KH-MATH-AGT-W01-R01_building-surfaces-from-polygons.html": "5cc5c72093b18ec0c1e8096646479c589b3426499bb4be7e99574204f1d4e302",
-    "KH-MATH-AGT-W01-R01_metadata.json": "7a19f70d2c82282c6eaa2b78ee77d2606513c0c89ba1f97f8e652b5d3bd4d8a9",
-    "KH-MATH-AGT-W01-R01_research-evidence-brief.md": "37cacc4bee130f3ae8d4a91dd537ca1b5c6d292251f8ed42b05efc3b60e38687",
-    "README.md": "4443a033ec689ace9ce5c74a3a5ee853aee30c1887edcc1274b8ce7a9c8991e3",
-    "lesson.css": "fac08f37b57d0726593291a9edfa0435fb1b856ae2a06612dc72ec7dc2464c83",
-    "lesson.js": "f07425d4ecc3c1c6ae598e702fab920d6d2c19704977bb3692202f323054b805"
+    "KH-MATH-AGT-W01-R01_metadata.json": "21c541c42a7df88344dd64a760a90fc958e377efac1e0c2b68ac6ba68ce266d1",
+    "lesson.css": "59263435ec5140a2262e232bf3b6d1fa0d0f41850bc2703939797e1876575969",
+    "README.md": "ef69d5820241c0398c5bdf561fe6a08be4ed7cdbb48e9794b0293b5fb01dc2e6",
+    "KH-MATH-AGT-W01-R01_research-evidence-brief.md": "4cb431ce453cd9d957b0dc096f76a8a3d7da8f86a8a40844943055b13bacb7b7",
+    "KH-MATH-AGT-W01-R01_verification-notes.md": "af5683538a9f565a1bf0142758127c6d9c7ca61e14a569bfff2a9ef1bc353ec7",
+    "KH-MATH-AGT-W01-R01_building-surfaces-from-polygons.html": "35a079e976455b11127c46ac07b453c81cbaa8c4645f41433564fbd334451ff3",
+    "lesson.js": "d25e9df5e4af6dee4be258e3b20372caa2821f560f6688fd2caff8957bb77b37"
   }
 }

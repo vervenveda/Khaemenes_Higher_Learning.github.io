@@ -3,9 +3,7 @@
   "resource_id": "KH-MATH-AGT-W01-R01",
   "legacy_id": true,
   "title": "Building Surfaces from Polygons",
-  "collection": "Khaemenes Mathematics",
-  "subject": "Advanced Geometric Topology",
-  "resource_type": "course-reading",
+  "resource_type": "instructional-reading",
   "course": {
     "course_id": "advanced-geometric-topology",
     "arc": 1,
@@ -14,32 +12,39 @@
   },
   "academic": {
     "level": "advanced-undergraduate-graduate-preparatory",
-    "prerequisites": [
-      "proof literacy",
-      "basic set theory",
-      "functions and inverse images",
-      "introductory point-set topology"
-    ],
-    "learning_objectives": [
-      "Define equivalence relations, quotient sets, quotient maps, and quotient topology.",
-      "Interpret paired and oriented polygon edges as quotient-identification data.",
-      "Track induced vertex equivalence classes.",
-      "Distinguish a polygonal presentation from the resulting quotient surface.",
-      "Explain the standard torus quotient construction.",
-      "Compute V, E, F and Euler characteristic for a basic polygonal cell structure.",
-      "Distinguish visualization or computation from proof."
-    ],
-    "keywords": [
-      "quotient space",
-      "equivalence relation",
-      "polygonal presentation",
-      "edge identification",
-      "surface",
-      "torus",
-      "projective plane",
-      "Klein bottle",
+    "topics": [
+      "equivalence relations",
+      "quotient sets",
+      "quotient topology",
+      "polygonal presentations",
+      "edge identifications",
+      "vertex equivalence classes",
       "Euler characteristic",
-      "orientability"
+      "orientability preview",
+      "local surface condition"
+    ],
+    "benchmark_presentations": {
+      "sphere": "a a^-1",
+      "real_projective_plane": "a a",
+      "torus": "a b a^-1 b^-1",
+      "klein_bottle": "a b a b^-1"
+    },
+    "skills": [
+      "define quotient constructions",
+      "interpret boundary words",
+      "derive endpoint equivalences",
+      "count quotient cells",
+      "distinguish evidence from proof"
+    ]
+  },
+  "relationships": {
+    "next": [
+      "KH-MATH-AGT-W01-CR01"
+    ],
+    "prepares_for": [
+      "KH-MATH-AGT-W01-WE01",
+      "KH-MATH-AGT-W01-PW01",
+      "KH-MATH-AGT-W01-LAB01"
     ]
   },
   "provenance": {
@@ -57,24 +62,18 @@
   "accessibility": {
     "semantic_html": true,
     "keyboard_accessible": true,
-    "math_text_alternatives": true,
-    "diagram_descriptions_required": true,
+    "color_required": false,
+    "diagram_required": false,
     "printable": true,
-    "print_stylesheet": true,
-    "color_required": false
+    "print_stylesheet": true
   },
   "security": {
-    "external_runtime_dependencies": [],
     "network_connections": false,
+    "external_runtime_dependencies": [],
     "content_security_policy": true,
     "forms": false
   },
   "dependencies": {
-    "student_external_dependencies": [],
-    "internal_next": [
-      "KH-MATH-AGT-W01-CR01",
-      "KH-MATH-AGT-W01-WE01",
-      "KH-MATH-AGT-W01-PW01"
-    ]
+    "student_external_dependencies": []
   }
 }
