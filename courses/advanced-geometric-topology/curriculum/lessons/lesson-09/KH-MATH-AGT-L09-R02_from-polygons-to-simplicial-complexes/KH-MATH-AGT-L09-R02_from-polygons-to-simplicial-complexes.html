@@ -1,0 +1,193 @@
+<article data-resource-id="KH-MATH-AGT-L09-R02">
+<header>
+<h1>From Polygons to Simplicial Complexes</h1>
+<p><strong>Advanced Geometric Topology · Self-Paced Lesson 09</strong></p>
+<p><strong>Resource ID:</strong> KH-MATH-AGT-L09-R02</p>
+<p><strong>Arc 02:</strong> Triangulations &amp; Combinatorial Surfaces</p>
+</header>
+
+<section>
+<h2>Why We Are Changing Languages</h2>
+<p>Lessons 01–08 described surfaces using polygons and quotient identifications. That language is powerful, but topology also needs a systematic way to break spaces into elementary pieces that meet along well-controlled faces. Simplicial complexes provide that language.</p>
+<p>The central transition is:</p>
+<p><strong>polygon + gluing instructions → triangles and faces → combinatorial complex → topological realization.</strong></p>
+</section>
+
+<section>
+<h2>1. Simplices</h2>
+<p>A 0-simplex is a vertex, a 1-simplex is an edge, a 2-simplex is a triangle, and a 3-simplex is a tetrahedron. More generally, a k-simplex has k+1 vertices.</p>
+<p>For an abstract simplex with vertices v0,…,vk, every nonempty subset of those vertices determines a face. Thus a triangle [a,b,c] carries the edges [a,b], [b,c], [a,c] and the vertices [a], [b], [c].</p>
+</section>
+
+<section>
+<h2>2. Abstract Simplicial Complexes</h2>
+<p>An abstract simplicial complex K is a collection of finite nonempty vertex sets such that whenever σ belongs to K, every nonempty subset of σ also belongs to K.</p>
+<p>This <strong>face-closure condition</strong> is essential.</p>
+<h3>Example</h3>
+<p>If {a,b,c}∈K, then K must also contain {a,b}, {a,c}, {b,c}, {a}, {b}, and {c}.</p>
+<h3>Nonexample</h3>
+<p>The collection {{a,b,c},{a},{b},{c}} is not a simplicial complex because the edges of the triangle are missing.</p>
+</section>
+
+<section>
+<h2>3. Dimension</h2>
+<p>A simplex containing k+1 vertices has dimension k. The dimension of a finite simplicial complex is the maximum dimension of one of its simplices.</p>
+<table>
+<thead><tr><th>Simplex</th><th>Vertices</th><th>Dimension</th></tr></thead>
+<tbody>
+<tr><td>{a}</td><td>1</td><td>0</td></tr>
+<tr><td>{a,b}</td><td>2</td><td>1</td></tr>
+<tr><td>{a,b,c}</td><td>3</td><td>2</td></tr>
+<tr><td>{a,b,c,d}</td><td>4</td><td>3</td></tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>4. Geometric Realization</h2>
+<p>An abstract simplicial complex records incidence combinatorially. A geometric realization |K| turns this data into a topological space by realizing the abstract simplices geometrically and joining them according to their common faces.</p>
+<p>The important idea is that the combinatorial object K and its realized topological space |K| are related but conceptually distinct—much as a polygonal presentation and its quotient surface were distinct in Arc 01.</p>
+</section>
+
+<section>
+<h2>5. How Simplices Are Allowed to Meet</h2>
+<p>In a geometric simplicial complex, simplices meet along common faces. Two filled triangles may share an entire edge, share a vertex, or be disjoint. They may not cross through one another in an uncontrolled way and still count as a geometric simplicial complex in that realization.</p>
+<p>This controlled-intersection rule is what makes combinatorial incidence faithfully describe the topology.</p>
+</section>
+
+<section>
+<h2>6. A First 2-Dimensional Complex</h2>
+<p>Let K contain the two maximal simplices {a,b,c} and {a,c,d}, together with all of their faces.</p>
+<p>The triangles share the edge {a,c}. The complex has:</p>
+<ul>
+<li>V=4 vertices;</li>
+<li>E=5 edges: ab,bc,ac,cd,ad;</li>
+<li>F=2 triangles.</li>
+</ul>
+<p>Therefore χ=V−E+F=4−5+2=1.</p>
+<p>Do not classify the realization merely from this number. First ask what kind of space has actually been constructed and whether boundary is present.</p>
+</section>
+
+<section>
+<h2>7. Triangulations</h2>
+<p>A triangulation of a topological space X is, in the language used here, a simplicial complex K together with a homeomorphism |K|→X.</p>
+<p>The triangles are not merely drawn on X for decoration. Their realization must reproduce X topologically.</p>
+<p>A single space can admit many different triangulations. The triangulation is structure placed on the space; it is not the space's unique identity.</p>
+</section>
+
+<section>
+<h2>8. From Our Square Torus to Triangles</h2>
+<p>In Arc 01, the torus was represented by a square with opposite edges identified. Drawing a diagonal divides that square into two triangles and gives an efficient <em>Δ-complex</em> description after the quotient.</p>
+<p>Here an important distinction appears: this two-triangle torus model is not an ordinary simplicial complex, because the quotient identifications allow features that violate the stricter requirement that simplices be determined by distinct vertex sets and meet as ordinary simplicial-complex faces.</p>
+<p><strong>Lesson:</strong> “built from triangles” does not automatically mean “simplicial complex.” We must know the precise combinatorial category being used.</p>
+</section>
+
+<section>
+<h2>9. Simplicial Complex vs. Δ-Complex</h2>
+<table>
+<thead><tr><th>Simplicial complex</th><th>Δ-complex</th></tr></thead>
+<tbody>
+<tr><td>Stricter incidence conditions</td><td>Allows certain face identifications</td></tr>
+<tr><td>A simplex is determined by its vertex set</td><td>Different simplices may have the same vertex data after gluing</td></tr>
+<tr><td>Excellent combinatorial model</td><td>Often gives smaller models of quotient spaces</td></tr>
+<tr><td>Our main language for Arc 02</td><td>Useful bridge from Arc 01 polygon quotients</td></tr>
+</tbody>
+</table>
+<p>We will keep these notions distinct rather than using “triangulation” carelessly.</p>
+</section>
+
+<section>
+<h2>10. Faces, Facets, and the f-Vector</h2>
+<p>A face is any simplex contained in the complex. A facet is a simplex maximal under inclusion. For a finite 2-dimensional complex, the <strong>f-vector</strong> is commonly written (f0,f1,f2), where f0 counts vertices, f1 edges, and f2 triangles.</p>
+<p>For the two-triangle example above, the f-vector is (4,5,2), and χ=f0−f1+f2=1.</p>
+<p>This notation prepares us to generalize Euler characteristic beyond one polygonal presentation.</p>
+</section>
+
+<section>
+<h2>11. Boundary Begins to Appear Combinatorially</h2>
+<p>For a triangulated 2-manifold, an edge in the interior is incident to two triangles, while an edge on the boundary is incident to one triangle. This provides a first combinatorial signal of boundary.</p>
+<p>But incidence counts alone are not the whole local-manifold test. At vertices we must inspect how neighboring simplices fit together. Lesson 10 will formalize this using <strong>stars</strong> and <strong>links</strong>.</p>
+</section>
+
+<section>
+<h2>12. A Combinatorial Audit</h2>
+<p>Given a finite 2-dimensional simplicial complex:</p>
+<ol>
+<li>List the maximal simplices.</li>
+<li>Verify face closure.</li>
+<li>List all vertices, edges, and triangles without duplication.</li>
+<li>Compute the f-vector.</li>
+<li>Compute χ=f0−f1+f2.</li>
+<li>Count how many triangles meet each edge.</li>
+<li>Flag boundary-like and nonmanifold-like behavior.</li>
+<li>Inspect vertex neighborhoods before claiming the realization is a surface.</li>
+</ol>
+</section>
+
+<section>
+<h2>13. Worked Audit</h2>
+<p>Let the facets be abc, acd, ade, and aeb.</p>
+<p>The vertex set is {a,b,c,d,e}. The distinct edges are ab,bc,ac,cd,ad,de,ae,eb. Thus</p>
+<p><strong>f=(5,8,4), χ=5−8+4=1.</strong></p>
+<p>Now inspect edge incidences. Edges ac, ad, and ae each occur in two triangles, while bc, cd, de, and eb occur once. The complex therefore exhibits boundary edges. This already tells us that it is not a closed triangulated surface.</p>
+<p>Whether it is a surface <em>with boundary</em> requires the corresponding local checks.</p>
+</section>
+
+<section>
+<h2>14. A Nonmanifold Warning</h2>
+<p>Suppose three distinct triangles all share the same edge ab. A point in the interior of ab then has three triangular sheets meeting there. Its neighborhood is not locally a disk or half-disk. Thus the realization fails to be a 2-manifold at such points.</p>
+<p>This is the simplicial analogue of the local-forensics discipline developed in Arc 01.</p>
+</section>
+
+<section>
+<h2>15. Why This Language Matters</h2>
+<p>Simplicial complexes let topology become partly combinatorial. Questions about spaces can be translated into questions about vertices, edges, faces, incidence, chains, and maps. This language will later support simplicial homology and other algebraic invariants.</p>
+<p>The goal is not to replace geometry. It is to encode enough geometry combinatorially that rigorous calculations become possible.</p>
+</section>
+
+<section>
+<h2>Knowledge Check</h2>
+<ol>
+<li>What closure property defines an abstract simplicial complex?</li>
+<li>Why must a triangle bring all of its edges and vertices with it?</li>
+<li>What is the dimension of a simplex with six vertices?</li>
+<li>Distinguish K from |K|.</li>
+<li>What does it mean for K to triangulate X?</li>
+<li>Why is the two-triangle square model of the torus naturally a Δ-complex rather than an ordinary simplicial complex?</li>
+<li>Define the f-vector of a finite 2-dimensional complex.</li>
+<li>What edge-incidence pattern suggests boundary?</li>
+<li>Why do three triangles sharing one edge create a local manifold problem?</li>
+<li>Why is Euler characteristic still evidence rather than a complete classification argument?</li>
+</ol>
+</section>
+
+<section>
+<h2>Independent Mini-Investigation</h2>
+<p>Create a finite 2-dimensional abstract simplicial complex with at least three triangles.</p>
+<ol>
+<li>List its facets.</li>
+<li>Generate all required faces.</li>
+<li>Compute its f-vector and Euler characteristic.</li>
+<li>Record the number of incident triangles for every edge.</li>
+<li>Identify any apparent boundary edges.</li>
+<li>State what additional local information you would need before calling |K| a surface.</li>
+</ol>
+</section>
+
+<section>
+<h2>Accessibility</h2>
+<p>All essential complexes can be represented by vertex-set lists and incidence tables. Diagrams are optional. No learner must distinguish simplices by color or manipulate a physical model.</p>
+</section>
+
+<footer>
+<h2>Resource Record</h2>
+<ul>
+<li><strong>Creator:</strong> Khaemenes Academy</li>
+<li><strong>Arc:</strong> 02 — Triangulations &amp; Combinatorial Surfaces</li>
+<li><strong>Position:</strong> Self-paced Lesson 09</li>
+<li><strong>Version:</strong> 0.9 research draft</li>
+<li><strong>Required external learner dependency:</strong> None</li>
+<li><strong>Next:</strong> Lesson 10 — Stars, Links &amp; Local Manifold Tests</li>
+</ul>
+</footer>
+</article>
