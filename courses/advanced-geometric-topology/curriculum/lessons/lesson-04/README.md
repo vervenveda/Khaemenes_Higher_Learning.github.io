@@ -4,9 +4,19 @@
 **Arc:** 01 — Foundational Surface Quotients  
 **Delivery:** Self-Paced
 
-Builds proof-writing discipline for quotient surfaces: endpoint relations, cell-count arguments, counterexamples, local-surface proof strategy, proof-gap detection, and overclaim repair.
+A graduated proof workshop that moves from guided endpoint-identification arguments to independent proof construction and formal proof audit.
 
-The hardened lesson is standalone, dependency-free, responsive, keyboard accessible, and print-ready.
+## Major competencies
+1. endpoint-identification proofs;
+2. quotient cell-count justification;
+3. counterexample reasoning;
+4. local-Euclidean proof architecture;
+5. proof-gap detection;
+6. overclaim repair;
+7. independent projective-plane reasoning;
+8. proof revision.
 
-**Status:** Hardened research draft `0.9.1`  
+This corrected release removes obsolete Week 1 path/scheduling language while preserving the stable resource ID and the original pedagogical progression.
+
+**Status:** Corrected hardened research draft `0.9.1`  
 **Next:** Lesson 05 — Polygon Gluing & Surface Classification Laboratory

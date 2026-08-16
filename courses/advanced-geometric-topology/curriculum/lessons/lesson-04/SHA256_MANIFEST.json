@@ -1,13 +1,13 @@
 {
   "algorithm": "SHA-256",
   "resource_id": "KH-MATH-AGT-W01-PW01",
-  "release": "0.9.1-hardened",
+  "release": "0.9.1-corrected-hardened",
   "files": {
-    "lesson.css": "fadc9ac17333408b33c00f6c9b91235e50e5ba8c94c3045bdc5c6157a9b20fc3",
-    "README.md": "3f81bcd11e33776a54de4aeb8378236114f27ec3de87d72182e2620333cb30cd",
-    "KH-MATH-AGT-W01-PW01_verification-notes.md": "1530d132c3b94fcc10ba26c0c3972026f9356ef485c39ad966297bbd25932a7a",
-    "KH-MATH-AGT-W01-PW01_edge-identification-proof-workshop.html": "7d715b272c773ffaccc48d1e2b08ef8bc6391c1a7f75d4f1be00bd1916cfe8cb",
-    "lesson.js": "3e408f41a93d89c0a57acfca9da38ea0aac256224773b12031c66bc15f63cc9d",
-    "KH-MATH-AGT-W01-PW01_metadata.json": "9308c2ef77eb8323c743c0513ae24de4713ba66ee4f5af4f58077379e2367b65"
+    "lesson.css": "579e7203f69e0fb22a6d40bfa60003d7d1fba90fe2f5a479499b975162bf8c20",
+    "README.md": "7ddfa1d88611bf00da43145da9a1c057db3dc4ab22701bc5da79fd2445016812",
+    "KH-MATH-AGT-W01-PW01_verification-notes.md": "2d3819e17ee920c34d9780415a5d51b36050558f71361cdec1a879d87f01abe1",
+    "KH-MATH-AGT-W01-PW01_edge-identification-proof-workshop.html": "1d4f3d4fc1ea88b508007da2b7d0abd402b63a618922ca69edd2d1ace2d3952c",
+    "lesson.js": "d25e9df5e4af6dee4be258e3b20372caa2821f560f6688fd2caff8957bb77b37",
+    "KH-MATH-AGT-W01-PW01_metadata.json": "11b760908e2be8cfe346cbacd888a67c1e3b7e4132999fb73be6c1b13d17a9a8"
   }
 }
