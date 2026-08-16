@@ -1,13 +1,13 @@
 {
   "algorithm": "SHA-256",
   "resource_id": "KH-MATH-AGT-W01-LAB01",
-  "release": "0.9.1-hardened",
+  "release": "0.9.1-corrected-hardened",
   "files": {
-    "lesson.css": "b411afcb622eb83c3b4081c4667848f1f8ac4dc5e225012b19ca3109946568ad",
-    "README.md": "b513e417d1333deac599eb885287ebbe416e4717f067490b9014bd73abc3c68d",
-    "KH-MATH-AGT-W01-LAB01_verification-notes.md": "97e13c2d18cedd205dfdf8f376cf881011d831894b2950cf5595a4699b8c313e",
-    "KH-MATH-AGT-W01-LAB01_metadata.json": "475540ed66877a4ee2f99546da5fdeb4d89cca87ab4bdac5866607fa1938fd76",
-    "KH-MATH-AGT-W01-LAB01_polygon-gluing-surface-classification-laboratory.html": "f1e53a8486fef816780618ed130d02fb5b725404b0086dbe44e2841d1d3ea6a8",
-    "lesson.js": "3e408f41a93d89c0a57acfca9da38ea0aac256224773b12031c66bc15f63cc9d"
+    "lesson.css": "25b08704a889c0f810c86da5a04fe3772d665d5e436dcd935aea39315e0360a9",
+    "README.md": "a88584a865fff1c11273cce1a2188671ce448de5c1763ad9e6169a146bbb1551",
+    "KH-MATH-AGT-W01-LAB01_verification-notes.md": "1b07ea8c2aa6d37593e5963a3cdcce2423746859240b21fb134e973c45def673",
+    "KH-MATH-AGT-W01-LAB01_metadata.json": "11d218c9a36e32df3e695994d1f06c9b8c81d2f760d7093afd5a06cfedc9b7c1",
+    "KH-MATH-AGT-W01-LAB01_polygon-gluing-surface-classification-laboratory.html": "2c5b4207bd69d0de521ab964b119eee6fc0fdb86bf44bf09efc2b29a7bd2de99",
+    "lesson.js": "3c0809a18b2ea496b23fb1fa8ab75998de1a6bf5a12e2e2e88b7a82f1a77d309"
   }
 }

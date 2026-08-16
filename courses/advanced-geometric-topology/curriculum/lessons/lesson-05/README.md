@@ -2,11 +2,10 @@
 
 **Resource:** `KH-MATH-AGT-W01-LAB01` *(legacy stable ID)*  
 **Arc:** 01 — Foundational Surface Quotients  
-**Delivery:** Self-Paced Laboratory
+**Delivery:** Self-Paced
 
-A reproducible mathematical laboratory covering quotient audits, invariant comparisons, presentation complexity, local-neighborhood forensics, original specimen design, counterexamples, and evidence-status discipline.
+A seven-investigation laboratory in which learners perform reproducible quotient audits, compare benchmark surfaces, test the limits of Euler characteristic, inspect orientation data, and conduct local-manifold stress tests.
 
-The hardened version is a genuine printable lab: it includes student fields, a lab-record template, writable investigation pages, an invariant table, and final-report structure.
+The laboratory is sovereign and offline-capable: no external website, remote API, paid program, or physical model is required.
 
-**Status:** Hardened research draft `0.9.1`  
-**Next:** Lesson 06 — Surface Identification Problem Set
+**Status:** Corrected hardened research draft `0.9.1`

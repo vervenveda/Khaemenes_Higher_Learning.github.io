@@ -1,112 +1,48 @@
-<!DOCTYPE html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Khaemenes Academy Advanced Geometric Topology Lesson 05 polygon gluing laboratory.">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'">
-<title>Lesson 05 · Polygon Gluing &amp; Surface Classification Laboratory</title><link rel="stylesheet" href="lesson.css"></head><body>
-<a class="skip-link" href="#lesson-content">Skip to lesson content</a>
-<header class="academy-header"><div><span class="eyebrow">Khaemenes Academy · Higher Learning</span><strong>Advanced Geometric Topology</strong></div><div class="lesson-meta"><span>Lesson 05</span><span>Laboratory</span><span>Self-Paced</span></div></header>
-<nav class="lesson-actions screen-only"><button id="printLesson" type="button">Print Laboratory</button><a href="../">Lesson Directory</a></nav>
-<main id="lesson-content" class="lesson-page" tabindex="-1"><article data-resource-id="KH-MATH-AGT-W01-LAB01">
-<header>
-<h1>Polygon Gluing &amp; Surface Classification Laboratory</h1>
-<p><strong>Advanced Geometric Topology · Self-Paced Lesson 05</strong></p>
-<p><strong>Resource ID:</strong> KH-MATH-AGT-W01-LAB01</p>
-<p><strong>Mode:</strong> construct → record → compare → conjecture → audit → justify</p>
-</header>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Advanced Geometric Topology Lesson 05 laboratory.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Lesson 05 · Polygon Gluing & Surface Classification Laboratory</title><link rel="stylesheet" href="lesson.css"></head><body>
+<a class="skip" href="#main">Skip to laboratory</a><header><small>KHAEMENES ACADEMY · HIGHER LEARNING</small><h1>Polygon Gluing &amp; Surface Classification Laboratory</h1>
+<p>Advanced Geometric Topology · Self-Paced Lesson 05 · Arc 01</p><p><code>KH-MATH-AGT-W01-LAB01</code> · legacy stable ID</p></header>
+<nav class="screen"><button id="print">Print Laboratory</button></nav><main id="main">
+<section class="intro"><h2>Laboratory Purpose</h2><p>This laboratory turns the quotient-space methods of Lessons 01–04 into reproducible investigations. You will make predictions, compute identifications, test invariants, audit local topology, and distinguish experimental evidence from proof.</p>
+<p><strong>Laboratory rule:</strong> a drawing, folded model, or numerical pattern may suggest a conclusion. Your submitted conclusion must be supported by symbolic quotient data and an appropriate argument.</p></section>
 
-<section><h2>Laboratory Question</h2>
-<p>How much information about a quotient surface can be recovered systematically from a polygonal presentation, and where does experimental or combinatorial evidence stop short of proof?</p></section>
+<section><h2>Lab Record Protocol</h2><p>For every investigation record: boundary word; polygon vertices in boundary order; paired edges and direction; endpoint relations; transitive vertex classes; quotient V,E,F; χ; orientability evidence; local-surface audit when needed; conjecture; final justified conclusion; and whether each conclusion is direct, benchmark-based, or theorem-dependent.</p></section>
 
-<section><h2>Learning Targets</h2><ul>
-<li>Translate polygonal edge data into endpoint equivalence relations.</li><li>Construct vertex equivalence classes using transitive closure.</li><li>Determine quotient cell counts V, E, and F.</li><li>Compute Euler characteristic from the quotient cell structure.</li><li>Record orientation evidence without confusing it with a complete classification proof.</li><li>Compare different polygonal presentations.</li><li>Identify when a local manifold check is required.</li><li>Separate observation, computation, conjecture, and proof.</li><li>Create a reproducible mathematical lab record.</li>
-</ul></section>
+<section class="lab"><h2>Investigation 1 — Torus Control</h2><p><strong>Input:</strong> <code>a b a^-1 b^-1</code>.</p>
+<ol><li>Predict the quotient before calculating.</li><li>Derive every endpoint relation.</li><li>Compute vertex classes and (V,E,F).</li><li>Compute χ.</li><li>Explain why this reproduces the Arc 01 torus benchmark.</li></ol>
+<div class="record"></div></section>
 
-<section><h2>Materials</h2>
-<p>No paid software or external website is required. You may use paper, pencil, index cards, string/tape, or internal Khaemenes tools when useful. A calculator is optional; the arithmetic is intentionally simple.</p>
-<p><strong>Model note:</strong> Physical folding is only a model of the identification instructions. Do not force a paper construction to behave like an embedding in three-dimensional space.</p></section>
+<section class="lab"><h2>Investigation 2 — Direction Changes the Quotient</h2><p>Compare the 2-gon presentations <code>a a</code> and <code>a a^-1</code>.</p>
+<ol><li>Compute endpoint relations separately.</li><li>Compare quotient vertex counts.</li><li>Compute χ for both.</li><li>Identify the established benchmark surface for each.</li><li>State exactly what changed in the gluing data.</li></ol><div class="record"></div></section>
 
-<section><h2>Evidence Vocabulary</h2><div class="table-wrap"><table>
-<thead><tr><th>Status</th><th>Meaning in this lab</th></tr></thead><tbody>
-<tr><td>Observation</td><td>Something noticed in a diagram, model, or computation.</td></tr>
-<tr><td>Computation</td><td>A derived numerical result such as V, E, F, or χ.</td></tr>
-<tr><td>Conjecture</td><td>A proposed general statement suggested by evidence.</td></tr>
-<tr><td>Proof</td><td>A justified mathematical argument from definitions and established results.</td></tr>
-<tr><td>Counterexample</td><td>An example satisfying a claim's hypotheses but violating its conclusion.</td></tr>
-</tbody></table></div></section>
+<section class="lab"><h2>Investigation 3 — Torus vs Klein Bottle</h2><p>Compare <code>a b a^-1 b^-1</code> with <code>a b a b^-1</code>.</p>
+<ol><li>Compute quotient cells for both.</li><li>Verify that both have χ=0.</li><li>Compare orientation behavior.</li><li>Explain why equal Euler characteristic does not establish homeomorphism.</li></ol><div class="record"></div></section>
 
-<section class="record"><h2>Lab Record Template</h2>
-<div class="student-fields"><span>Name: __________________________</span><span>Date: ______________</span><span>Attempt: ______</span></div>
-<p>For every specimen, record:</p><ol>
-<li>boundary word;</li><li>edge pairs and directions;</li><li>endpoint relations;</li><li>vertex equivalence classes;</li><li>V, E, F;</li><li>χ=V−E+F;</li><li>orientation evidence;</li><li>local-surface check, if needed;</li><li>classification claim, if justified;</li><li>evidence status: observation / computation / established theorem / proof.</li>
-</ol>
-<div class="record-grid">
-<div><strong>Boundary word</strong><span></span></div><div><strong>Edge pairs/directions</strong><span></span></div>
-<div><strong>Endpoint relations</strong><span></span></div><div><strong>Vertex classes</strong><span></span></div>
-<div><strong>V / E / F / χ</strong><span></span></div><div><strong>Orientation evidence</strong><span></span></div>
-<div class="wide"><strong>Local check / classification / evidence status</strong><span></span></div>
-</div></section>
+<section class="lab"><h2>Investigation 4 — Presentation Simplification</h2><p><strong>Input:</strong> <code>a b b^-1 a^-1</code>.</p>
+<ol><li>Mark the adjacent inverse pair.</li><li>Explain the cancellation in the standard polygonal-presentation calculus.</li><li>Determine the remaining benchmark word.</li><li>Compute the expected χ and compare it with the sphere benchmark.</li><li>Explain why word length is not a topological invariant.</li></ol><div class="record"></div></section>
 
-<section class="investigation"><h2>Investigation A — Reproduce the Torus Audit</h2>
-<p><strong>Specimen:</strong> a b a<sup>−1</sup> b<sup>−1</sup></p>
-<p>Perform the complete lab record without copying Lesson 03. Your endpoint relations must be explicit.</p>
-<h3>Required result</h3><p>Verify from the quotient data that the standard cell structure has V=1, E=2, F=1 and χ=0.</p>
-<h3>Reproducibility check</h3><p>Could another learner reconstruct your vertex classes using only your written record? If not, add the missing correspondence data.</p></section>
+<section class="lab"><h2>Investigation 5 — Genus-Two Control</h2><p><strong>Input:</strong> <code>a b a^-1 b^-1 c d c^-1 d^-1</code>.</p>
+<ol><li>Determine the number of quotient edge classes.</li><li>Audit the endpoint relations and vertex classes.</li><li>Compute (V,E,F) and χ.</li><li>Identify the commutator-block pattern.</li><li>Separate what you directly computed from what relies on the established genus-two benchmark.</li></ol><div class="record"></div></section>
 
-<section class="investigation"><h2>Investigation B — Change One Orientation</h2>
-<ul><li><strong>B1:</strong> a b a<sup>−1</sup> b<sup>−1</sup></li><li><strong>B2:</strong> a b a b<sup>−1</sup></li></ul>
-<p>Keep a side-by-side record of endpoint relations, quotient cell counts, χ, and orientation evidence.</p>
-<ol><li>Which recorded quantities remain the same?</li><li>Which structural feature changes?</li><li>Why does equal χ fail to prove the quotients are homeomorphic?</li></ol></section>
+<section class="lab"><h2>Investigation 6 — Local-Manifold Stress Test</h2><p>Construct or describe a boundary identification that you suspect creates a singular quotient point rather than a surface point.</p>
+<ol><li>Name the suspicious quotient point p.</li><li>Describe <code>q^-1(p)</code>.</li><li>Analyze a small neighborhood after identification.</li><li>Decide whether it is locally Euclidean.</li><li>Record the evidence that confirms or rejects the surface claim.</li></ol>
+<p><strong>Constraint:</strong> do not use Euler characteristic as a substitute for the local-neighborhood audit.</p><div class="record"></div></section>
 
-<section class="investigation"><h2>Investigation C — Same Edge Count, Different Quotient</h2>
-<p>Compare <strong>a a<sup>−1</sup></strong> and <strong>a a</strong>. Track endpoints carefully. Determine V, E, F, and χ for each.</p>
-<p><strong>Reflection:</strong> Explain why “both diagrams have two polygon edges” contains too little information to determine the quotient surface.</p></section>
+<section class="lab"><h2>Investigation 7 — Blind Classification Audit</h2><p>Choose an unfamiliar paired-edge word supplied by the instructor/course bank. Do not begin by naming a surface.</p>
+<ol><li>Run the full identification audit.</li><li>Compute χ.</li><li>Investigate orientability.</li><li>Verify the surface hypotheses.</li><li>List all conclusions justified without a classification theorem.</li><li>If a classification theorem is later invoked, state its hypotheses explicitly.</li></ol><div class="record"></div></section>
 
-<section class="investigation"><h2>Investigation D — Presentation Complexity</h2>
-<p>Compare the standard sphere presentation a a<sup>−1</sup> with a b b<sup>−1</sup> a<sup>−1</sup>. Document the elementary polygonal-scheme simplification of the adjacent inverse pair.</p>
-<p><strong>Question:</strong> What does this tell you about using boundary-word length as a topological invariant?</p></section>
+<section><h2>Data Table</h2><table><thead><tr><th>Case</th><th>Vertex classes</th><th>V</th><th>E</th><th>F</th><th>χ</th><th>Orientation evidence</th><th>Surface audit</th></tr></thead><tbody>
+<tr><td>Torus</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>aa</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>aa⁻¹</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Klein bottle</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>Genus 2</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></section>
 
-<section class="investigation"><h2>Investigation E — Genus-Two Cell Audit</h2>
-<p><strong>Specimen:</strong> a b a<sup>−1</sup> b<sup>−1</sup> c d c<sup>−1</sup> d<sup>−1</sup></p>
-<ol><li>Label all eight polygon vertices.</li><li>Record every endpoint relation induced by a,b,c,d.</li><li>Take transitive closure.</li><li>Determine V,E,F.</li><li>Compute χ.</li></ol>
-<p><strong>Restriction:</strong> Do not use χ=2−2g to obtain the answer. The cell structure must generate the computation.</p></section>
+<section><h2>Laboratory Reflection</h2><ol>
+<li>Which quotient conclusion was least obvious from the original polygon?</li><li>Where did transitive closure matter most?</li><li>Give one example in which χ was useful but insufficient.</li><li>How did orientation data add information?</li><li>Why must local topology be checked independently of global cell counts?</li><li>What is the difference between experimental confirmation and proof in this laboratory?</li></ol></section>
 
-<section class="investigation"><h2>Investigation F — Build an Invariant Table</h2>
-<div class="table-wrap"><table class="worksheet-table"><thead><tr><th>Surface</th><th>Word</th><th>V</th><th>E</th><th>F</th><th>χ</th><th>Orientation evidence</th></tr></thead><tbody>
-<tr><td>Sphere</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Projective plane</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Torus</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Klein bottle</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Orientable genus two</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-</tbody></table></div>
-<p><strong>Pattern search:</strong> Write two observations and one conjecture. Label the conjecture unproved unless it follows from an established theorem.</p></section>
+<section class="mastery"><h2>Mastery Gate</h2><ul>
+<li>Complete at least Investigations 1–6.</li><li>Produce reproducible endpoint-equivalence work.</li><li>Correctly distinguish polygon cells from quotient cells.</li><li>Use χ with correct logical direction.</li><li>Distinguish edge-direction data from global orientability.</li><li>Perform a local-surface audit where required.</li><li>Label direct verification versus benchmark/theorem use.</li></ul></section>
 
-<section class="investigation"><h2>Investigation G — Local Neighborhood Forensics</h2>
-<p>Consider an unfamiliar quotient construction outside the proper paired-edge patterns studied above. Choose a suspicious quotient point p and:</p>
-<ol><li>describe q<sup>−1</sup>(p);</li><li>describe a small neighborhood of that preimage;</li><li>determine how neighborhood pieces are identified;</li><li>ask whether the resulting neighborhood is homeomorphic to an open disk;</li><li>if not, describe the obstruction.</li></ol>
-<p>“Insufficient evidence” is an acceptable scholarly conclusion when justified.</p></section>
-
-<section class="investigation"><h2>Investigation H — Design Your Own Specimen</h2>
-<p>Create a 4-, 6-, or 8-edge polygonal word in which every edge label appears exactly twice.</p>
-<ol><li>State your convention.</li><li>Predict V,E,F and χ.</li><li>Perform the endpoint-equivalence audit.</li><li>Revise your prediction if necessary.</li><li>Record orientation evidence.</li><li>State what you can and cannot classify using results established so far.</li></ol>
-<p><strong>Do not engineer the answer backward from a named surface.</strong></p></section>
-
-<section class="investigation"><h2>Investigation I — Counterexample Laboratory</h2>
-<ol><li>“Polygonal presentations with the same number of sides represent the same surface.”</li><li>“If two surfaces have the same Euler characteristic, they are homeomorphic.”</li><li>“Every quotient obtained by identifying polygon boundary points is a surface.”</li><li>“A more complicated boundary word must represent a more complicated surface.”</li></ol>
-<p>For each, justify it from established results or give a counterexample/reason it fails. Record which hypothesis or inference breaks.</p></section>
-
-<section class="investigation"><h2>Investigation J — Reproducibility Exchange</h2>
-<p>Give your Investigation H record to another learner, or set it aside and reconstruct it later without looking at your diagram. Record any ambiguity and revise the record until the quotient-cell audit is reproducible.</p></section>
-
-<section class="report"><h2>Final Laboratory Report</h2><ul>
-<li>completed records for Investigations A–F;</li><li>a local-neighborhood forensic plan for G;</li><li>your original specimen and audit from H;</li><li>counterexample analysis from I;</li><li>reproducibility revision from J;</li><li>a one-paragraph conclusion answering the laboratory question;</li><li>a section titled <strong>What I observed, what I computed, and what I proved</strong>.</li>
-</ul></section>
-
-<section><h2>Mastery Rubric</h2><div class="table-wrap"><table>
-<thead><tr><th>Dimension</th><th>Mastery evidence</th></tr></thead><tbody>
-<tr><td>Identification accuracy</td><td>Edge and endpoint correspondences are correctly recorded.</td></tr><tr><td>Equivalence reasoning</td><td>Vertex classes follow from explicit relations and transitivity.</td></tr><tr><td>Cell accounting</td><td>V,E,F count quotient cells rather than raw polygon pieces.</td></tr><tr><td>Invariant reasoning</td><td>χ is correctly computed and not treated as a complete invariant.</td></tr><tr><td>Orientation reasoning</td><td>Orientation evidence is distinguished from edge-arrow notation alone.</td></tr><tr><td>Proof boundary</td><td>Observation, computation, conjecture, and proof are labeled correctly.</td></tr><tr><td>Reproducibility</td><td>Another learner can reconstruct the audit from the written record.</td></tr><tr><td>Correction</td><td>Substantive errors are revised with an explanation.</td></tr>
-</tbody></table></div></section>
-
-<section><h2>Optional Internal Tools</h2><p>The Khaemenes Scientific Calculator may check arithmetic, although it is not needed for core calculations. Evidence &amp; Citation Studio can support an extended sourced investigation. Neither replaces the mathematical record.</p></section>
-
-<section><h2>Accessibility</h2><p>No task requires color, three-dimensional vision, or a physical model. Every specimen is represented by a textual boundary word. The entire laboratory can be completed using endpoint relations and written quotient data.</p></section>
-
-<footer><h2>Resource Record</h2><ul><li><strong>Creator:</strong> Khaemenes Academy</li><li><strong>Originality:</strong> Original mathematical laboratory</li><li><strong>Version:</strong> 0.9.1 hardened research draft</li><li><strong>Required external learner dependency:</strong> None</li><li><strong>Position:</strong> Self-Paced Lesson 05</li></ul></footer>
-</article></main>
-<footer class="site-footer">Khaemenes Academy · Free, self-paced higher learning.</footer>
-<script src="lesson.js" defer></script></body></html>
+<section><h2>Accessibility &amp; Sovereignty</h2><p>Every investigation is fully expressible with text and symbols. Physical folding is optional. Color is never required. No external website, paid software, remote API, or network connection is required. The laboratory can be printed and completed entirely offline.</p></section>
+</main><footer>Original Khaemenes Academy laboratory · Version 0.9.1 corrected hardened research draft.</footer><script src="lesson.js" defer></script></body></html>
