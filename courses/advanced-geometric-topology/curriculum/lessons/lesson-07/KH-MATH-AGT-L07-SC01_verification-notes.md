@@ -1,27 +1,40 @@
-# Lesson 07 — Forensic Verification Notes
+# Lesson 07 — Answer-by-Answer Forensic Verification
 
-## Source
-Audited against the live Lesson 07 source and metadata in the Khaemenes Higher Learning repository.
+## Live source
+The live repository resource is `KH-MATH-AGT-L07-SC01 — Solutions & Mathematical Commentary`, companion to `KH-MATH-AGT-L06-PS01`.
 
-## Alignment
-PASS — the commentary remains keyed to the 30 Lesson 06 problems and preserves the intended remediation loop.
+The live source was read directly and compared against the frozen 30-problem Lesson 06 sequence.
 
-## Mathematical logic
+## Mapping result
+PASS — all 30 numbered solution entries correspond to the same-numbered Lesson 06 prompts.
+
+## Corrections / precision improvements
+1. Problem 1 partition proof was rewritten more explicitly so both class inclusions are justified.
+2. Problem 18 now uses the course-standard phrase `elementary adjacent inverse-pair simplification` rather than the looser `cancellable inverse pair`.
+3. Problem 20 explicitly requires theorem hypotheses or a direct sufficient homeomorphism argument.
+4. Problem 25 explicitly says classification-theorem hypotheses must be verified before use.
+5. Problem 30 commentary now explicitly distinguishes direct quotient computation from benchmark/theorem-dependent conclusions.
+6. Remediation tasks were made action-oriented rather than merely pointing backward to a lesson.
+
+## Independent mathematical checks
 PASS:
-- equivalence classes are correctly shown to partition X;
-- quotient-map surjectivity is justified directly from the definition of X/~;
-- quotient topology uses the inverse-image criterion;
-- torus/projective-plane/sphere/Klein-bottle cell counts are consistent with the course convention;
-- equal Euler characteristic is not treated as sufficient for homeomorphism;
-- the contrapositive is distinguished from the converse;
-- genus-two χ is derived from quotient-cell counts;
-- local manifold forensics correctly inspect q^-1(p) and disk-like neighborhoods;
-- the classification theorem is not silently imported.
+- P6 torus endpoint relations → one vertex class.
+- P7 `aa` → `(1,1,1)`, χ=1, RP² benchmark.
+- P8 `aa^-1` → `(2,1,1)`, χ=2, S² benchmark.
+- P9 `abab^-1` → `(1,2,1)`, χ=0, Klein-bottle benchmark.
+- P11 torus χ=0.
+- P12/P15 torus and Klein bottle demonstrate that equal χ does not imply homeomorphism.
+- P13 is the correct contrapositive.
+- P16 genus-two benchmark → `(1,4,1)`, χ=-2.
+- P21 torus equivalence proof is valid.
+- P22 corrects pre-quotient cell counting.
+- P24 uses `q^-1(p)` and local Euclidean analysis.
+- P25 does not overclassify χ=-1 plus nonorientability.
+- P26 comparison table is internally consistent.
+- P29 audit algorithm matches Lessons 01–05.
 
-## Precision improvement
-Problem 18 commentary now calls the `bb^-1` step an elementary adjacent inverse-pair simplification rather than merely “cancellable,” matching the language hardened in Lesson 03.
+## Release decision
+All 30 solution mappings survived the repeat audit. This resource is promoted to hardened `1.0.0`.
 
-## Delivery hardening
-The solution manual is now a complete standalone page with local CSS/JS, restrictive CSP, responsive/printable tables, page breaks by major solution part, a visible remediation map, and a correction protocol.
-
-No external learner dependency was introduced.
+## Integrity note
+Lesson 07 is learner-facing post-attempt commentary. It should remain separate from Lesson 06 so the problem set does not expose answers before an independent attempt.

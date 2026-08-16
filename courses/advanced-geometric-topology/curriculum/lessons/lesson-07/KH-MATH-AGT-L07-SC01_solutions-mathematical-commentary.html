@@ -1,49 +1,172 @@
-<!DOCTYPE html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="Khaemenes Academy Advanced Geometric Topology Lesson 07 solutions and mathematical commentary.">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'">
 <title>Lesson 07 · Solutions &amp; Mathematical Commentary</title><link rel="stylesheet" href="lesson.css"></head><body>
-<a class="skip-link" href="#lesson-content">Skip to solutions</a>
-<header class="academy-header"><div><span class="eyebrow">Khaemenes Academy · Higher Learning</span><strong>Advanced Geometric Topology</strong></div><div class="lesson-meta"><span>Lesson 07</span><span>Solutions</span><span>Self-Paced</span></div></header>
-<nav class="lesson-actions screen-only"><button id="printLesson" type="button">Print Commentary</button><a href="../">Lesson Directory</a></nav>
-<main id="lesson-content" class="lesson-page" tabindex="-1"><article data-resource-id="KH-MATH-AGT-L07-SC01">
-<header><h1>Solutions &amp; Mathematical Commentary</h1>
-<p><strong>Advanced Geometric Topology · Self-Paced Lesson 07</strong></p>
+<a class="skip" href="#main">Skip to solutions</a>
+<header><small>KHAEMENES ACADEMY · HIGHER LEARNING</small><h1>Solutions &amp; Mathematical Commentary</h1><p>Advanced Geometric Topology · Self-Paced Lesson 07 · Arc 01</p><p><code>KH-MATH-AGT-L07-SC01</code></p></header>
+<nav class="screen"><button id="print">Print Commentary</button></nav><main id="main"><article data-resource-id="KH-MATH-AGT-L07-SC01">
+<header>
+<h1>Solutions &amp; Mathematical Commentary</h1>
+<p><strong>Advanced Geometric Topology · Self-Paced Lesson 07 · Arc 01</strong></p>
 <p><strong>Resource ID:</strong> KH-MATH-AGT-L07-SC01</p>
-<p><strong>Companion:</strong> Lesson 06 — Surface Identification Problem Set</p></header>
+<p><strong>Companion:</strong> KH-MATH-AGT-L06-PS01 — Surface Identification Problem Set</p>
+<p><strong>Coverage:</strong> all 30 frozen Lesson 06 problems</p>
+</header>
 
-<section class="use-note"><h2>How to Use This Lesson</h2>
-<p>This is not a substitute for attempting Lesson 06. Compare your reasoning, not merely your final answer. When your solution differs, locate the first step at which the mathematical logic diverges.</p>
-<p>For proof questions, a correct final statement does not repair a missing argument. For computational questions, correct arithmetic does not repair incorrect quotient-cell counts.</p></section>
+<section class="use-note">
+<h2>How to Use This Lesson</h2>
+<p>Attempt Lesson 06 before consulting this commentary. Compare your reasoning, not merely your final answer. When your solution differs, locate the first step at which the mathematical logic diverges.</p>
+<p>For proof questions, a correct final statement does not repair a missing argument. For computational questions, correct arithmetic does not repair incorrect quotient-cell counts.</p>
+</section>
 
-<section class="solution-part"><h2>Part A — Foundations</h2><div class="solution"><h3>1. Equivalence relations and partitions</h3><p>An equivalence relation ~ on X is reflexive, symmetric, and transitive. For x∈X, [x]={y∈X:y~x}. The equivalence classes cover X because x∈[x] by reflexivity. If [x] and [y] intersect, choose z in both. Then x~z and z~y (using symmetry as needed), so x~y; transitivity then shows every member of either class belongs to the other. Thus intersecting classes are equal. Hence the classes partition X.</p><p class="note"><strong>Common error:</strong> listing the three axioms without proving the partition claim.</p><p class="remediation"><strong>Remediation:</strong> revisit Lesson 01's equivalence-relation section and Lesson 02's core definitions.</p></div><div class="solution"><h3>2. Quotient map</h3><p>Let C∈X/~. By definition C=[x] for some x∈X. Since q(x)=[x]=C, every element of X/~ has a preimage. Therefore q is surjective.</p><p class="note"><strong>Proof habit:</strong> for surjectivity, begin with an arbitrary element of the codomain.</p></div><div class="solution"><h3>3. Quotient topology</h3><p>The quotient topology on X/~ is defined by declaring U⊆X/~ open exactly when q<sup>−1</sup>(U) is open in X, where q:X→X/~ is the quotient map.</p><p class="note"><strong>Common error:</strong> saying only that “open sets come from X.” The inverse-image criterion is the precise statement.</p></div><div class="solution"><h3>4. Presentation versus object</h3><p>The polygonal region is the domain on which identification instructions are recorded. The quotient surface consists of equivalence classes of polygon points. Several polygon points may therefore become one quotient point, and different polygonal presentations may describe homeomorphic quotient spaces.</p></div><div class="solution"><h3>5. Local condition</h3><p>Under the convention used in these lessons, a surface without boundary must be locally Euclidean of dimension two: each point has a neighborhood homeomorphic to an open subset of R² (equivalently, after suitable shrinking, an open disk).</p></div></section><section class="solution-part"><h2>Part B — Edge and Vertex Audits</h2><div class="solution"><h3>6. Standard torus</h3><p>For a b a<sup>−1</sup> b<sup>−1</sup>, label the square vertices v0,v1,v2,v3 in boundary order. Under the convention used in Lessons 02–06, the a-pair gives v0~v3 and v1~v2; the b-pair gives v1~v0 and v2~v3. Transitivity yields v0~v1~v2~v3. Thus there is one quotient vertex class.</p></div><div class="solution"><h3>7. The word a a</h3><p>The same-direction pair identifies the two polygon vertices, so V=1. There is one edge class and one face, hence E=1 and F=1. Therefore χ=1−1+1=1. This is the benchmark presentation of RP² used in the course.</p></div><div class="solution"><h3>8. The word a a<sup>−1</sup></h3><p>Here the endpoint correspondence leaves two vertex classes. Thus V=2, E=1, F=1 and χ=2. This is the benchmark 2-gon presentation of S². The comparison with Problem 7 demonstrates that pairing labels alone are insufficient; orientation/correspondence data changes the quotient.</p></div><div class="solution"><h3>9. Klein-bottle word</h3><p>For a b a b<sup>−1</sup>, the a-pair and b-pair together identify all four square vertices. Hence V=1, E=2, F=1 and χ=0. This is the benchmark Klein-bottle presentation used in the course.</p></div><div class="solution"><h3>10. Same number of sides</h3><p>Problems 7 and 8 both begin with a 2-gon, yet they produce different endpoint equivalence structures, different Euler characteristics, and different benchmark surfaces. The number of sides of the presentation is therefore not sufficient to determine the quotient's homeomorphism type.</p></div></section><section class="solution-part"><h2>Part C — Invariants and Logic</h2><div class="solution"><h3>11. Torus Euler characteristic</h3><p>After quotienting, the standard square torus cell structure has V=1, E=2, F=1. Therefore χ=1−2+1=0.</p></div><div class="solution"><h3>12. Equal χ is insufficient</h3><p>The implication “homeomorphic ⇒ same Euler characteristic” does not imply its converse. The torus and Klein bottle both have χ=0, while the former is orientable and the latter is nonorientable. Thus χ alone does not distinguish them.</p></div><div class="solution"><h3>13. Contrapositive</h3><p>If two such surfaces have different Euler characteristics, then they are not homeomorphic.</p><p class="note"><strong>Logic note:</strong> this is the contrapositive of the invariant statement, not its converse.</p></div><div class="solution"><h3>14. Invariant versus complete invariant</h3><p>An invariant takes the same value on homeomorphic objects. A complete invariant, for the class under study, also distinguishes homeomorphism types: equality of the complete invariant is sufficient for equivalence. Euler characteristic is an invariant but is not by itself a complete invariant for the closed surfaces encountered here.</p></div><div class="solution"><h3>15. Counterexample</h3><p>T² and the Klein bottle provide the required counterexample: both have χ=0, but orientability distinguishes them. Therefore equal Euler characteristic does not imply homeomorphism.</p></div></section><section class="solution-part"><h2>Part D — Higher-Complexity Presentations</h2><div class="solution"><h3>16. Orientable genus-two presentation</h3><p>For a b a<sup>−1</sup> b<sup>−1</sup> c d c<sup>−1</sup> d<sup>−1</sup>, the standard endpoint identifications place all eight polygon vertices into one equivalence class. The four labels give four edge classes and the polygon interior gives one face. Thus V=1, E=4, F=1 and χ=1−4+1=−2.</p><p class="note"><strong>Required method:</strong> the answer must arise from quotient-cell analysis, not from substituting genus into a formula that was excluded by the problem.</p></div><div class="solution"><h3>17. Why “eight sides” is not classification</h3><p>Side count belongs to the chosen presentation, and presentation complexity is not a homeomorphism invariant. Identifications determine the quotient structure.</p></div><div class="solution"><h3>18. Expanded sphere presentation</h3><p>The words a a<sup>−1</sup> and a b b<sup>−1</sup> a<sup>−1</sup> illustrate that an elementary adjacent inverse-pair simplification can enlarge a presentation without changing the represented surface. Therefore boundary-word length is not a topological invariant.</p></div><div class="solution"><h3>19. Student-created word</h3><p>Answers vary. A complete response must state a convention, use each label exactly twice, derive endpoint relations, form vertex classes, count quotient edges/faces, and compute χ. A surface name is optional unless justified by established results.</p></div><div class="solution"><h3>20. Limits of inference</h3><p>A valid answer reports the verified quotient data and any established properties. It must not silently use the full surface-classification theorem before that theorem enters the curriculum. Stronger classification requires an already proved theorem or a direct homeomorphism argument.</p></div></section><section class="solution-part"><h2>Part E — Proof and Forensics</h2><div class="solution"><h3>21. One torus vertex class</h3><p>From the a-identification obtain v0~v3 and v1~v2. From the b-identification obtain v1~v0 and v2~v3. Since v1~v0 and v0~v3, transitivity gives v1~v3; together with the remaining relations all four vertices lie in one class. Therefore the quotient cell structure has V=1.</p></div><div class="solution"><h3>22. Faulty raw-polygon count</h3><p>The error is counting the square's cells before identification. In the torus quotient, four corners become one vertex class and four sides become two edge classes; the interior remains one face. Therefore χ=1−2+1=0.</p></div><div class="solution"><h3>23. Missing orientation data</h3><p>The label a identifies the pair, but it does not by itself specify which endpoint corresponds to which. The words a a and a a<sup>−1</sup> encode different directional relationships under the course convention. Their induced endpoint equivalence classes differ, so the quotient spaces differ.</p></div><div class="solution"><h3>24. Local forensics</h3><p>Let p be the suspicious quotient point. Determine q<sup>−1</sup>(p), choose sufficiently small neighborhoods of those preimage points, and analyze how the quotient identification joins those neighborhood pieces. To be a surface point under the current convention, p must have a neighborhood homeomorphic to an open subset of R². Branching, pinching, or other non-disk-like local structure demonstrates failure of the surface condition.</p></div><div class="solution"><h3>25. Evidence boundary</h3><p><strong>Established:</strong> assuming the cell audit is correct, χ=−1. The identification data also supplies stated evidence of nonorientability if that property has been justified by methods already established.<br><br><strong>Not yet automatically established:</strong> a unique homeomorphism classification derived from the pair (χ, orientability). Making that step generally invokes the classification of compact connected surfaces or another sufficient result. Until such a theorem is available, report the invariants without pretending they constitute a complete proof of the name.</p></div></section>
+<section>
+<h2>Part A — Foundations</h2>
+<div class="solution"><h3>1. Equivalence relations and partitions</h3>
+<p>An equivalence relation ~ on X is reflexive, symmetric, and transitive. For x∈X, define [x]={y∈X:y~x}. Reflexivity gives x∈[x], so the classes cover X. If [x]∩[y]≠∅, choose z in the intersection. Then x~z and y~z; symmetry gives z~y, so transitivity gives x~y. If u∈[x], then u~x~y, hence u∈[y]. Thus [x]⊆[y], and the reverse inclusion is symmetric. Therefore intersecting classes are equal, so the equivalence classes partition X.</p>
+<p class="note"><strong>Common error:</strong> listing the three axioms without proving the partition claim.</p></div>
 
-<section class="synthesis"><h2>Part F — Synthesis</h2>
-<h3>26. Benchmark comparison</h3>
+<div class="solution"><h3>2. Quotient map</h3>
+<p>Let C∈X/~. By definition C=[x] for some x∈X. Since q(x)=[x]=C, every element of X/~ has a preimage. Therefore q is surjective.</p>
+<p class="note"><strong>Proof habit:</strong> for surjectivity, begin with an arbitrary element of the codomain.</p></div>
+
+<div class="solution"><h3>3. Quotient topology</h3>
+<p>The quotient topology on X/~ is defined by declaring U⊆X/~ open exactly when q<sup>−1</sup>(U) is open in X, where q:X→X/~ is the quotient map.</p></div>
+
+<div class="solution"><h3>4. Presentation versus object</h3>
+<p>The polygonal region records identification instructions. The quotient consists of equivalence classes of polygon points. Several polygon points may become one quotient point, and different polygonal presentations may describe homeomorphic quotient spaces. Therefore the presentation and the resulting surface must not be identified literally.</p></div>
+
+<div class="solution"><h3>5. Local condition</h3>
+<p>Under the convention used in Arc 01, a surface without boundary is locally Euclidean of dimension two: each point has a neighborhood homeomorphic to an open subset of R²; after suitable shrinking, one may use an open disk as the local model.</p></div>
+</section>
+
+<section>
+<h2>Part B — Edge and Vertex Audits</h2>
+<div class="solution"><h3>6. Standard torus</h3>
+<p>For a b a<sup>−1</sup> b<sup>−1</sup>, label the square vertices v0,v1,v2,v3 in boundary order. Under the course convention, the a-pair gives v0~v3 and v1~v2; the b-pair gives v1~v0 and v2~v3. Transitivity gives one class [v0]=[v1]=[v2]=[v3].</p></div>
+
+<div class="solution"><h3>7. The word a a</h3>
+<p>The same-sign pairing identifies the two polygon vertices, so V=1. There is one quotient edge and one face: E=1,F=1. Thus</p>
+<p class="math-result"><strong>χ=1−1+1=1.</strong></p>
+<p>This is the Arc 01 benchmark presentation of RP².</p></div>
+
+<div class="solution"><h3>8. The word a a<sup>−1</sup></h3>
+<p>The opposite-sign endpoint correspondence leaves two quotient vertex classes. Hence V=2,E=1,F=1 and</p>
+<p class="math-result"><strong>χ=2−1+1=2.</strong></p>
+<p>This is the Arc 01 benchmark 2-gon presentation of S². Problems 7 and 8 show that repeated labels alone do not determine endpoint correspondence.</p></div>
+
+<div class="solution"><h3>9. Klein-bottle word</h3>
+<p>For a b a b<sup>−1</sup>, the a-pair gives v0~v2 and v1~v3, while the b-pair gives v1~v0 and v2~v3. All four vertices lie in one equivalence class. Therefore V=1,E=2,F=1 and χ=0.</p></div>
+
+<div class="solution"><h3>10. Same number of sides</h3>
+<p>The words a a and a a<sup>−1</sup> both use a 2-gon but produce different endpoint-equivalence structures, different vertex counts, different Euler characteristics, and different benchmark surfaces. Polygon side count is therefore not enough to determine homeomorphism type.</p></div>
+</section>
+
+<section>
+<h2>Part C — Invariants and Logic</h2>
+<div class="solution"><h3>11. Torus Euler characteristic</h3>
+<p>After quotienting, the standard torus cell structure has V=1,E=2,F=1. Therefore χ=1−2+1=0.</p></div>
+
+<div class="solution"><h3>12. Equal χ is insufficient</h3>
+<p>Homeomorphic finite-CW surfaces have the same Euler characteristic, but the converse need not hold. The torus and Klein bottle both have χ=0, while the torus is orientable and the Klein bottle is nonorientable. Thus χ alone does not distinguish them.</p></div>
+
+<div class="solution"><h3>13. Contrapositive</h3>
+<p>If two such surfaces have different Euler characteristics, then they are not homeomorphic.</p>
+<p class="note"><strong>Logic note:</strong> this is the contrapositive of the invariant statement, not its converse.</p></div>
+
+<div class="solution"><h3>14. Invariant versus complete invariant</h3>
+<p>An invariant takes the same value on homeomorphic objects. A complete invariant for a specified class also distinguishes equivalence classes: equality of the invariant is sufficient for equivalence within that class. Euler characteristic is an invariant but is not by itself a complete invariant for the closed surfaces encountered here.</p></div>
+
+<div class="solution"><h3>15. Counterexample</h3>
+<p>T² and the Klein bottle provide the counterexample: both have χ=0, but orientability distinguishes them. Therefore equal Euler characteristic does not imply homeomorphism.</p></div>
+</section>
+
+<section>
+<h2>Part D — Higher-Complexity Presentations</h2>
+<div class="solution"><h3>16. Orientable genus-two presentation</h3>
+<p>For a b a<sup>−1</sup> b<sup>−1</sup> c d c<sup>−1</sup> d<sup>−1</sup>, the standard endpoint relations place all eight polygon vertices into one equivalence class. The labels a,b,c,d give four quotient edges, and the polygon interior gives one face. Thus</p>
+<p class="math-result"><strong>(V,E,F)=(1,4,1), χ=1−4+1=−2.</strong></p>
+<p><strong>Method requirement:</strong> this result comes from quotient-cell analysis, not from substituting genus into a formula excluded by the prompt.</p></div>
+
+<div class="solution"><h3>17. Why “eight sides” is not classification</h3>
+<p>Side count belongs to the chosen presentation and is not a homeomorphism invariant. The identifications determine the quotient structure.</p></div>
+
+<div class="solution"><h3>18. Expanded sphere presentation</h3>
+<p>The words a a<sup>−1</sup> and a b b<sup>−1</sup> a<sup>−1</sup> illustrate the standard elementary adjacent inverse-pair simplification: the neighboring b b<sup>−1</sup> pair can be removed in the polygonal-presentation calculus, leaving a a<sup>−1</sup>. Thus presentation length is not a topological invariant.</p></div>
+
+<div class="solution"><h3>19. Student-created word</h3>
+<p>Answers vary. A complete answer states the convention, uses each edge label exactly twice, derives endpoint relations, forms vertex equivalence classes, determines quotient edge classes and the face count, and computes χ. A surface name is optional unless justified by an established benchmark, direct homeomorphism argument, or authorized theorem.</p></div>
+
+<div class="solution"><h3>20. Limits of inference</h3>
+<p>A valid answer reports the verified quotient data and any properties established from Arc 01 methods. It must not silently import the full surface-classification theorem. A stronger name/classification requires a theorem whose hypotheses have been checked or a direct argument sufficient to establish the claimed homeomorphism type.</p></div>
+</section>
+
+<section>
+<h2>Part E — Proof and Forensics</h2>
+<div class="solution"><h3>21. One torus vertex class</h3>
+<p>The a-identification gives v0~v3 and v1~v2. The b-identification gives v1~v0 and v2~v3. Since v1~v0 and v0~v3, transitivity gives v1~v3; together with v1~v2, all four vertices lie in one class. Hence the quotient has V=1.</p></div>
+
+<div class="solution"><h3>22. Faulty raw-polygon count</h3>
+<p>The error is counting cells before identification. In the torus quotient, four corners form one quotient vertex class and four boundary sides form two quotient edge classes; the interior remains one face. Therefore χ=1−2+1=0.</p></div>
+
+<div class="solution"><h3>23. Missing orientation data</h3>
+<p>The label a tells us which edges are paired, but not by itself which endpoints correspond. The words a a and a a<sup>−1</sup> encode different directional relations under the course convention; their endpoint equivalence classes differ, so the quotients differ.</p></div>
+
+<div class="solution"><h3>24. Local forensics</h3>
+<p>Let p be the suspicious quotient point. Determine q<sup>−1</sup>(p), choose sufficiently small neighborhoods of those preimage points, and analyze how the quotient identification joins those neighborhood pieces. For p to be a surface point without boundary in this course's convention, it must have a neighborhood homeomorphic to an open subset of R². Branching, pinching, or another non-disk-like local structure demonstrates failure of the condition.</p></div>
+
+<div class="solution"><h3>25. Evidence boundary</h3>
+<p><strong>Established:</strong> if the quotient-cell audit is correct, χ=−1. If the orientation analysis is also valid, nonorientability has been established by the methods available in the course.</p>
+<p><strong>Not yet automatic:</strong> a unique homeomorphism classification from those invariants. That step generally uses a classification theorem for compact connected surfaces (with its hypotheses verified) or another sufficient result. Until such a theorem is authorized, report the invariants without pretending they constitute a complete classification proof.</p></div>
+</section>
+
+<section>
+<h2>Part F — Synthesis</h2>
+<div class="solution"><h3>26. Benchmark comparison</h3>
 <div class="table-wrap"><table><thead><tr><th>Surface</th><th>Benchmark word</th><th>V</th><th>E</th><th>F</th><th>χ</th><th>Orientability</th></tr></thead><tbody>
 <tr><td>S²</td><td>a a⁻¹</td><td>2</td><td>1</td><td>1</td><td>2</td><td>Orientable</td></tr>
 <tr><td>RP²</td><td>a a</td><td>1</td><td>1</td><td>1</td><td>1</td><td>Nonorientable</td></tr>
 <tr><td>T²</td><td>a b a⁻¹ b⁻¹</td><td>1</td><td>2</td><td>1</td><td>0</td><td>Orientable</td></tr>
 <tr><td>Klein bottle</td><td>a b a b⁻¹</td><td>1</td><td>2</td><td>1</td><td>0</td><td>Nonorientable</td></tr>
 <tr><td>Orientable genus two</td><td>a b a⁻¹ b⁻¹ c d c⁻¹ d⁻¹</td><td>1</td><td>4</td><td>1</td><td>−2</td><td>Orientable</td></tr>
-</tbody></table></div>
-<h3>27. Separated / not separated</h3><p>S² and T² are separated by Euler characteristic because 2≠0. T² and the Klein bottle are not separated by Euler characteristic because both have χ=0.</p>
-<h3>28. Orientability adds information</h3><p>Euler characteristic records one numerical topological invariant. Orientability records whether a consistent local orientation can be chosen globally. Since T² and the Klein bottle share χ but differ in orientability, orientability contains information not captured by χ alone.</p>
-<h3>29. Audit algorithm</h3><p>State the convention; identify edge pairs and directions; derive endpoint relations; take transitive closure; count quotient vertices, edges, and faces; compute χ; inspect orientation behavior; check local Euclidean neighborhoods when necessary; then state only the classification conclusion supported by established results.</p>
-<h3>30. Capstone commentary</h3><p>Answers vary. A strong response explains that raw polygon geometry is presentation-dependent, while the quotient construction produces topological data through equivalence classes. Strong responses use concrete examples, explain the limits of Euler characteristic, and explicitly separate what was observed in a representation from what was proved about the quotient.</p></section>
+</tbody></table></div></div>
 
-<section class="remediation-map"><h2>Diagnostic Remediation Map</h2>
-<div class="table-wrap"><table><thead><tr><th>If you struggled with…</th><th>Return to…</th></tr></thead><tbody>
-<tr><td>Equivalence relations / quotient topology</td><td>Lessons 01–02</td></tr><tr><td>Reading boundary words</td><td>Lesson 02</td></tr><tr><td>Endpoint and vertex classes</td><td>Lessons 02–03</td></tr><tr><td>Worked quotient audits</td><td>Lesson 03</td></tr><tr><td>Proof structure / logical converses</td><td>Lesson 04</td></tr><tr><td>Local manifold checks</td><td>Lessons 04–05</td></tr><tr><td>Experiment versus proof</td><td>Lesson 05</td></tr><tr><td>Independent synthesis</td><td>Repeat selected Lesson 06 problems after remediation</td></tr>
+<div class="solution"><h3>27. Separated / not separated</h3>
+<p>S² and T² are separated by Euler characteristic because 2≠0. T² and the Klein bottle are not separated by Euler characteristic because both have χ=0.</p></div>
+
+<div class="solution"><h3>28. Orientability adds information</h3>
+<p>Euler characteristic is numerical. Orientability records whether local orientations can be chosen consistently across the entire surface. Since T² and the Klein bottle share χ but differ in orientability, orientability carries information not contained in χ alone.</p></div>
+
+<div class="solution"><h3>29. Audit algorithm</h3>
+<p>State the convention; identify edge pairs and directions; derive endpoint relations; take transitive closure; count quotient vertices, edges, and faces; compute χ; inspect orientation behavior; check local Euclidean neighborhoods when necessary; then state only the classification conclusion supported by established results.</p></div>
+
+<div class="solution"><h3>30. Capstone commentary</h3>
+<p>Answers vary. A strong response explains that the raw polygon is presentation-dependent, while the quotient construction organizes points into equivalence classes and produces the topological object under study. It should use at least two concrete examples. The torus and Klein bottle are especially useful because both have χ=0 but differ in orientability, showing that Euler characteristic can carry genuine information without being a complete classifier.</p>
+<p>The response should also distinguish endpoint correspondence, quotient-cell counts, local manifold structure, orientability, and theorem use. The strongest answers explicitly identify which conclusions were calculated directly from the presentation and which depend on established benchmark identifications or later classification results.</p></div>
+</section>
+
+<section class="remediation"><h2>Diagnostic Remediation Map</h2>
+<div class="table-wrap"><table><thead><tr><th>If you struggled with…</th><th>Return to…</th><th>Required correction task</th></tr></thead><tbody>
+<tr><td>Equivalence relations / quotient topology</td><td>Lessons 01–02</td><td>Rewrite definitions and prove one partition/surjectivity result.</td></tr>
+<tr><td>Boundary words / endpoint direction</td><td>Lesson 02</td><td>Re-audit a a versus a a⁻¹.</td></tr>
+<tr><td>Vertex classes / quotient counts</td><td>Lessons 02–03</td><td>Repeat the torus and Klein-bottle audits.</td></tr>
+<tr><td>Proof structure / logical converses</td><td>Lesson 04</td><td>Repair one invalid invariant argument.</td></tr>
+<tr><td>Local manifold checks</td><td>Lessons 04–05</td><td>Write a q⁻¹(p) neighborhood forensic plan.</td></tr>
+<tr><td>Experiment versus proof</td><td>Lesson 05</td><td>Label laboratory conclusions as observation, computation, benchmark, or theorem use.</td></tr>
+<tr><td>Independent synthesis</td><td>Lesson 06</td><td>Redo selected problems without consulting this commentary.</td></tr>
 </tbody></table></div></section>
 
 <section class="correction"><h2>Correction Protocol</h2>
 <p>For every substantive error, preserve the original attempt and append:</p>
 <ol><li><strong>Error:</strong> identify the first incorrect inference.</li><li><strong>Correction:</strong> replace it with valid reasoning.</li><li><strong>Cause:</strong> name the concept or proof habit that failed.</li><li><strong>Transfer:</strong> state how you will detect the same error in a new problem.</li></ol>
-<p>Revision is part of mathematical mastery, not a penalty.</p></section>
+<p>Revision is part of mathematical mastery.</p></section>
 
-<section><h2>Accessibility</h2><p>All required polygonal data is encoded in text. The commentary does not require color, physical manipulation, or an external resource. Mathematical quality is judged from reasoning rather than diagram artistry.</p></section>
+<section><h2>Accessibility &amp; Sovereignty</h2>
+<p>All required polygonal data is encoded in text. The commentary requires no color, physical model, paid software, external website, remote API, or network access. Mathematical quality is judged from reasoning rather than diagram artistry.</p></section>
 
-<footer><h2>Resource Record</h2><ul><li><strong>Creator:</strong> Khaemenes Academy</li><li><strong>Originality:</strong> Original solution commentary</li><li><strong>Version:</strong> 0.9.1 hardened research draft</li><li><strong>Position:</strong> Self-Paced Lesson 07</li><li><strong>Next:</strong> Lesson 08 — Foundational Surface Quotients Mastery Assessment</li></ul></footer>
+<footer><h2>Resource Record</h2><ul>
+<li><strong>Creator:</strong> Khaemenes Academy</li><li><strong>Originality:</strong> Original solution commentary</li>
+<li><strong>Version:</strong> 1.0.0 hardened</li><li><strong>Position:</strong> Self-Paced Lesson 07 · Arc 01</li>
+<li><strong>Companion:</strong> KH-MATH-AGT-L06-PS01</li><li><strong>Next:</strong> KH-MATH-AGT-L08-MA01 — Foundational Surface Quotients Mastery Assessment</li>
+</ul></footer>
 </article></main>
 <footer class="site-footer">Khaemenes Academy · Free, self-paced higher learning.</footer><script src="lesson.js" defer></script></body></html>

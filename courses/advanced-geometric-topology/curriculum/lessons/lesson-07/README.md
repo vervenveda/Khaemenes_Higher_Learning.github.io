@@ -1,12 +1,13 @@
 # Lesson 07 — Solutions & Mathematical Commentary
 
 **Resource:** `KH-MATH-AGT-L07-SC01`  
-**Arc:** 01 — Foundational Surface Quotients  
-**Delivery:** Self-Paced Feedback & Remediation
+**Companion:** `KH-MATH-AGT-L06-PS01`  
+**Solutions:** 30  
+**Delivery:** Self-Paced, post-attempt
 
-Provides full reasoning for all 30 Lesson 06 problems, with common-error diagnosis, proof-quality expectations, targeted remediation, and a correction protocol.
+Every solution has been checked against the frozen Lesson 06 prompt with the same number. The repeat audit verified all quotient computations, invariant arguments, proof logic, local-topology reasoning, and synthesis commentary.
 
-The hardened version is a clean online solution manual and a professional printable reference. It is intentionally learner-facing in the self-paced model, but should be consulted only after an independent Lesson 06 attempt.
+Precision improvements were made to the equivalence-class proof, polygonal simplification language, classification-theorem hypothesis discipline, and remediation tasks.
 
-**Status:** Hardened research draft `0.9.1`  
+**Status:** Hardened `1.0.0`  
 **Next:** Lesson 08 — Foundational Surface Quotients Mastery Assessment
