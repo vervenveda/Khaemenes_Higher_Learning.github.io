@@ -1,0 +1,13 @@
+{
+  "algorithm": "SHA-256",
+  "resource_id": "KH-MATH-AGT-L14-PS02",
+  "release": "0.9.1-hardened",
+  "files": {
+    "KH-MATH-AGT-L14-PS02_arc-02-problem-set.html": "4707f9f239da734a136c9ef575687339437efaf0197b088bb11dcc3180a943d6",
+    "KH-MATH-AGT-L14-PS02_metadata.json": "3507c38c130bfe8485d48b8cf7a813bc7b8be84c163f1b959b655ad419efeacc",
+    "lesson.css": "07944a415a8fbb6a360ab446e54aeb63a861a400de0dff6fded5609c6def0c37",
+    "README.md": "818a4151423c5f46eb39ebbc5e32bc955318e8b0fb9a3b363cade276f2d89783",
+    "KH-MATH-AGT-L14-PS02_verification-notes.md": "50ca8c3c7dae14e916d5976bb5d84994bb9af7963af056b8202fa018e5bcedc4",
+    "lesson.js": "3e408f41a93d89c0a57acfca9da38ea0aac256224773b12031c66bc15f63cc9d"
+  }
+}
