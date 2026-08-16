@@ -1,0 +1,213 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Khaemenes Academy Advanced Geometric Topology Lesson 11: Subdivision and Triangulation Invariance.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Lesson 11 · Subdivision &amp; Triangulation Invariance</title><link rel="stylesheet" href="lesson.css"></head><body>
+<a class="skip-link" href="#lesson-content">Skip to lesson content</a>
+<header class="academy-header"><div><span class="eyebrow">Khaemenes Academy · Higher Learning</span><strong>Advanced Geometric Topology</strong></div><div class="lesson-meta"><span>Lesson 11</span><span>Arc 02</span><span>Instructional Reading</span></div></header>
+<nav class="lesson-actions screen-only"><button id="printLesson" type="button">Print Lesson</button><a href="../">Lesson Directory</a></nav>
+<main id="lesson-content" class="lesson-page" tabindex="-1"><article data-resource-id="KH-MATH-AGT-L11-R03">
+<header>
+<h1>Subdivision &amp; Triangulation Invariance</h1>
+<p><strong>Advanced Geometric Topology · Self-Paced Lesson 11</strong></p>
+<p><strong>Resource ID:</strong> KH-MATH-AGT-L11-R03</p>
+<p><strong>Arc 02:</strong> Triangulations &amp; Combinatorial Surfaces</p>
+</header>
+
+<section class="purpose">
+<h2>Why Subdivide?</h2>
+<p>A triangulation is not unique. We may refine a simplicial complex into smaller simplices without intending to change the underlying topological space. Subdivision lets us improve combinatorial resolution while preserving the realization.</p>
+<p class="math-result"><strong>Refinement changes the triangulation; it need not change the topology.</strong></p>
+</section>
+
+<section>
+<h2>1. Subdivision</h2>
+<p>Let K be a geometric simplicial complex. A subdivision K′ of K is a simplicial complex with the same underlying polyhedron such that every simplex of K′ lies in a simplex of K, and each simplex of K is assembled from simplices of K′.</p>
+<p>Thus |K′| and |K| represent the same polyhedral space, while K′ contains finer combinatorial data.</p>
+</section>
+
+<section>
+<h2>2. The Simplest Example: Subdivide an Edge</h2>
+<p>Start with one edge ab. Insert a new vertex m in its interior and replace ab by am and mb.</p>
+<div class="table-wrap"><table><thead><tr><th></th><th>V</th><th>E</th><th>χ</th></tr></thead><tbody>
+<tr><td>Before</td><td>2</td><td>1</td><td>1</td></tr>
+<tr><td>After</td><td>3</td><td>2</td><td>1</td></tr>
+</tbody></table></div>
+<p>The combinatorial counts change, but V−E remains unchanged.</p>
+</section>
+
+<section>
+<h2>3. Subdivide a Triangle by an Interior Vertex</h2>
+<p>Let abc be a single 2-simplex. Add an interior vertex x and replace abc by abx, bcx, and cax.</p>
+<div class="table-wrap"><table><thead><tr><th></th><th>V</th><th>E</th><th>F</th><th>χ</th></tr></thead><tbody>
+<tr><td>Before</td><td>3</td><td>3</td><td>1</td><td>1</td></tr>
+<tr><td>After</td><td>4</td><td>6</td><td>3</td><td>1</td></tr>
+</tbody></table></div>
+<p>Here ΔV=1, ΔE=3, and ΔF=2, so Δχ=1−3+2=0.</p>
+</section>
+
+<section>
+<h2>4. Why Euler Characteristic Survives These Refinements</h2>
+<p>The preceding examples illustrate a cancellation principle: new simplices are introduced in dimensions whose alternating contributions balance.</p>
+<p>For a finite 2-dimensional complex, χ=f0−f1+f2. A valid subdivision changes the individual f-numbers but preserves the Euler characteristic of the realization.</p>
+<p><strong>Important:</strong> a few examples are evidence, not a general proof. The general invariance statement is justified by the fact that subdivision preserves the underlying polyhedron/homeomorphism type, together with topological invariance of Euler characteristic in this finite setting.</p>
+</section>
+
+<section>
+<h2>5. Barycenters</h2>
+<p>For a geometric simplex σ with vertices v0,…,vk, its barycenter is</p>
+<p class="math-result"><strong>b(σ)=(v0+⋯+vk)/(k+1).</strong></p>
+<p>Barycentric subdivision introduces a new vertex corresponding to each nonempty simplex of K. Geometrically, that vertex is placed at the barycenter of the original simplex.</p>
+</section>
+
+<section>
+<h2>6. Barycentric Subdivision as a Face-Chain Complex</h2>
+<p>The barycentric subdivision sd K has:</p>
+<ul>
+<li>one vertex for every nonempty simplex of K;</li>
+<li>one edge for every strict chain σ0⊂σ1;</li>
+<li>more generally, one r-simplex for every strict chain σ0⊂σ1⊂⋯⊂σr of nonempty simplices of K.</li>
+</ul>
+<p>This definition turns the face-poset structure of K into a new simplicial complex.</p>
+</section>
+
+<section>
+<h2>7. Barycentric Subdivision of One Triangle</h2>
+<p>For a single triangle abc, the nonempty faces are 3 vertices, 3 edges, and 1 triangle. Therefore sd K has 7 vertices.</p>
+<p>The barycentric subdivision divides the triangle into 6 smaller triangles, corresponding to chains</p>
+<p class="math-result"><strong>vertex ⊂ edge ⊂ triangle.</strong></p>
+<p>The resulting counts are V=7, E=12, F=6, hence χ=7−12+6=1, exactly as before.</p>
+</section>
+
+<section>
+<h2>8. The Fundamental Topological Fact</h2>
+<p>Barycentric subdivision does not create a new topological space. There is a natural homeomorphism between |sd K| and |K| obtained geometrically by placing subdivision vertices at barycenters and extending linearly over the smaller simplices.</p>
+<p>This is stronger than observing equal Euler characteristic: it says the realizations themselves are homeomorphic.</p>
+</section>
+
+<section>
+<h2>9. Iterated Subdivision</h2>
+<p>We may subdivide repeatedly:</p>
+<p class="math-result"><strong>K, sd K, sd²K, sd³K, …</strong></p>
+<p>Each stage gives a finer triangulation of the same underlying polyhedron. Iterated barycentric subdivision is useful when later arguments require simplices to become sufficiently small.</p>
+</section>
+
+<section>
+<h2>10. What Subdivision Does to Local Manifold Tests</h2>
+<p>If K triangulates a surface, a genuine subdivision still triangulates the same surface. The local combinatorics become finer, but the local topological type does not change.</p>
+<p>New interior vertices have circle links; new boundary vertices have interval links. Existing neighborhoods are subdivided rather than replaced by a different topology.</p>
+</section>
+
+<section>
+<h2>11. Worked Local Example</h2>
+<p>Subdivide an interior edge ab shared by triangles abc and abd by inserting m on ab. The two old triangles become amc, mbc, amd, and mbd.</p>
+<p>The new vertex m has link with vertices a,c,b,d and edges ac, cb, bd, da, forming a cycle. Thus m is an interior surface vertex.</p>
+<p>This is a direct Lesson 10 check that the refinement has not introduced a local singularity.</p>
+</section>
+
+<section>
+<h2>12. Subdivision Is Not Arbitrary Modification</h2>
+<p>Adding vertices and triangles is not automatically a subdivision. A valid subdivision must refine the existing simplices compatibly and preserve the same underlying polyhedron.</p>
+<p>Attaching a new triangle along only one vertex, for example, changes the space. It is an attachment, not a subdivision of the original complex.</p>
+</section>
+
+<section>
+<h2>13. Different Triangulations of the Same Space</h2>
+<p>A disk can be triangulated by one triangle, by three triangles meeting at a new interior vertex, or by many smaller triangles. These complexes are not combinatorially identical, yet their realizations are homeomorphic.</p>
+<p>Therefore the raw numbers of vertices, edges, and faces are properties of a triangulation, while Euler characteristic survives the change.</p>
+</section>
+
+<section>
+<h2>14. Triangulation Invariance: Say Exactly What You Mean</h2>
+<p>When we say a quantity is independent of triangulation, we mean that computing it from different valid finite triangulations of the same topological space gives the same result.</p>
+<p>For Euler characteristic, this means that although the f-vector may change, the alternating sum does not.</p>
+<aside class="callout"><strong>Precision:</strong> “The triangulations are different” and “the spaces are different” are not equivalent statements.</aside>
+</section>
+
+<section>
+<h2>15. A Warning About Common Refinements</h2>
+<p>Subdivision is useful for comparing triangulations, but do not jump from “two spaces are homeomorphic” to “their original complexes are simplicially isomorphic.” A homeomorphism need not respect the original simplices.</p>
+<p>Piecewise-linear topology studies when subdivisions make such comparisons simplicial. We will use only the amount of this theory needed by later lessons and will not assume a general common-subdivision theorem without stating its hypotheses.</p>
+</section>
+
+<section class="audit">
+<h2>16. Subdivision Audit</h2>
+<p>When someone claims K′ is a subdivision of K, check:</p>
+<ol>
+<li>Does every simplex of K′ lie inside a simplex of K?</li>
+<li>Is every original simplex covered by the new simplices assigned to it?</li>
+<li>Do the new simplices meet face-to-face?</li>
+<li>Is the underlying polyhedron unchanged?</li>
+<li>Do the local links remain compatible with the intended manifold structure?</li>
+<li>Does the Euler-characteristic calculation agree before and after?</li>
+</ol>
+<p>The final Euler check is useful evidence, but it cannot by itself certify that a modification is a subdivision.</p>
+</section>
+
+<section>
+<h2>17. Worked Audit: A False Subdivision</h2>
+<p>Start with a triangle abc. Add a new triangle cde attached only at c.</p>
+<p>The result has not merely refined abc: it contains new points outside the original triangle and changes the local link at c. The underlying polyhedron is different.</p>
+<p>Even if some numerical invariant happened to agree, that would not make the operation a subdivision.</p>
+</section>
+
+<section>
+<h2>18. Why Finer Triangulations Matter</h2>
+<p>Finer triangulations support later constructions in algebraic topology. They can make maps more compatible with simplicial structure, localize chains, and prepare the ground for simplicial approximation.</p>
+<p>The central lesson is methodological: we may change the combinatorial resolution without changing the topological object.</p>
+</section>
+
+<section class="knowledge-check">
+<h2>19. Knowledge Check</h2>
+<ol>
+<li>Define a subdivision of a geometric simplicial complex.</li>
+<li>What changes and what stays fixed when an edge is subdivided?</li>
+<li>Why does starring a triangle at an interior vertex preserve χ?</li>
+<li>Define the barycenter of a k-simplex.</li>
+<li>Describe the vertices and simplices of sd K abstractly.</li>
+<li>How many small triangles occur in the barycentric subdivision of one 2-simplex?</li>
+<li>Why is |sd K| homeomorphic to |K|?</li>
+<li>Why does equal Euler characteristic fail to prove that an arbitrary modification is a subdivision?</li>
+<li>What happens to vertex links under a valid surface subdivision?</li>
+<li>Why need a homeomorphism between realizations not be simplicial for the original triangulations?</li>
+</ol>
+</section>
+
+<section class="investigation">
+<h2>20. Independent Investigation — Refinement Ledger</h2>
+<p>Choose a finite triangulated disk with at least two triangles. Perform two different valid refinements on paper or by simplex lists.</p>
+<ol>
+<li>Record the original facets and f-vector.</li>
+<li>Describe Refinement A and justify why it is a subdivision.</li>
+<li>Compute the new f-vector and χ.</li>
+<li>Describe Refinement B and justify why it is a subdivision.</li>
+<li>Compute its f-vector and χ.</li>
+<li>Choose one new vertex and construct its link.</li>
+<li>Explain what changed combinatorially and what remained topologically invariant.</li>
+</ol>
+<div class="record">
+<strong>Original complex</strong><div></div>
+<strong>Refinement A</strong><div class="large"></div>
+<strong>Refinement B</strong><div class="large"></div>
+<strong>Link audit and conclusion</strong><div class="large"></div>
+</div>
+</section>
+
+<section>
+<h2>Accessibility</h2>
+<p>Every refinement can be described by facet lists and incidence data. Diagrams are optional. No task requires color, physical construction, paid software, or an external website.</p>
+</section>
+
+<footer>
+<h2>Resource Record</h2>
+<ul>
+<li><strong>Creator:</strong> Khaemenes Academy</li>
+<li><strong>Arc:</strong> 02 — Triangulations &amp; Combinatorial Surfaces</li>
+<li><strong>Position:</strong> Self-Paced Lesson 11</li>
+<li><strong>Version:</strong> 0.9.1 hardened research draft</li>
+<li><strong>Required external learner dependency:</strong> None</li>
+<li><strong>Next:</strong> Lesson 12 — Simplicial Maps &amp; Combinatorial Topology</li>
+</ul>
+</footer>
+</article></main>
+<footer class="site-footer">Khaemenes Academy · Free, self-paced higher learning.</footer><script src="lesson.js" defer></script></body></html>

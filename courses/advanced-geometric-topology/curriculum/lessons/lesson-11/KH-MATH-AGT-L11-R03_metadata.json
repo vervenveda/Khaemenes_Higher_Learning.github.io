@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "resource_id": "KH-MATH-AGT-L11-R03",
+  "title": "Subdivision & Triangulation Invariance",
+  "resource_type": "instructional-reading",
+  "course": {
+    "course_id": "advanced-geometric-topology",
+    "arc": 2,
+    "lesson": 11,
+    "delivery": "self-paced"
+  },
+  "academic": {
+    "level": "advanced-undergraduate-graduate-preparatory",
+    "topics": [
+      "subdivision",
+      "barycentric subdivision",
+      "face posets",
+      "Euler characteristic",
+      "triangulation invariance",
+      "iterated subdivision",
+      "local links",
+      "PL caution"
+    ],
+    "skills": [
+      "audit a claimed subdivision",
+      "compute subdivision f-vectors",
+      "construct barycentric subdivisions",
+      "verify Euler characteristic under refinement",
+      "distinguish combinatorial change from topological change"
+    ]
+  },
+  "relationships": {
+    "requires": [
+      "KH-MATH-AGT-L09-R02",
+      "KH-MATH-AGT-L10-CR02"
+    ],
+    "next": [
+      "KH-MATH-AGT-L12-R04"
+    ]
+  },
+  "provenance": {
+    "creator": "Khaemenes Academy",
+    "originality": "original",
+    "license": "TO_BE_DEFINED",
+    "editorial_verification": [
+      "Oxford Computational Algebraic Topology notes, Proposition 1.13",
+      "UCSD barycentric subdivision notes"
+    ]
+  },
+  "editorial": {
+    "status": "hardened-research-draft",
+    "version": "0.9.1",
+    "reviewed": false,
+    "last_revision": "2026-08-16"
+  },
+  "accessibility": {
+    "diagram_required": false,
+    "color_required": false,
+    "physical_model_required": false,
+    "printable": true,
+    "keyboard_accessible": true
+  },
+  "security": {
+    "network_connections": false,
+    "external_runtime_dependencies": [],
+    "content_security_policy": true
+  },
+  "dependencies": {
+    "student_external_dependencies": []
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "algorithm": "SHA-256",
+  "resource_id": "KH-MATH-AGT-L11-R03",
+  "release": "0.9.1-hardened",
+  "files": {
+    "lesson.css": "58fd0a5b9e1526384f7609d032dcb2ab2753359d253b2efa898629806d6262cd",
+    "README.md": "e15e47961f60f2f5dbf705647ba41255c72617ec42acc07728d8d12ad0b4423e",
+    "KH-MATH-AGT-L11-R03_subdivision-triangulation-invariance.html": "b0dcdaa33d832fe9904f96babc0742e407b995b647bb4f1a7d93db8eddccb2ed",
+    "KH-MATH-AGT-L11-R03_metadata.json": "78f326295dffa6558a3fb3638ba9697f60fccb9fe90ac76c729da96e0c52497d",
+    "KH-MATH-AGT-L11-R03_verification-notes.md": "cc174a9c9b04cd9f7d993e10ba828d86521e52318a0c8e50ece0c9bcf57e64ae",
+    "lesson.js": "3e408f41a93d89c0a57acfca9da38ea0aac256224773b12031c66bc15f63cc9d"
+  }
+}
