@@ -1,0 +1,13 @@
+{
+  "algorithm": "SHA-256",
+  "resource_id": "KH-MATH-AGT-L10-CR02",
+  "release": "0.9.1-hardened",
+  "files": {
+    "KH-MATH-AGT-L10-CR02_stars-links-local-manifold-tests.html": "fc37d46b2c941cfec61873385751ddb324405edba08f87d507e94d248f9915f2",
+    "lesson.css": "5e89f79c52c8e6bc83993ba5bf00687ff03b63f1dc3f48eb846221157712fa1c",
+    "README.md": "0dfaf143c37292a780e54e33daffc5b4afcfd17ad3aedfdd8ebd40265f4b0046",
+    "KH-MATH-AGT-L10-CR02_verification-notes.md": "91b8d7b0d3e117db97e4667164b27a2c17308414112e6093b910f8359433b926",
+    "KH-MATH-AGT-L10-CR02_metadata.json": "47c7b3f57952b891d46fdfc8e814c703b780c27551dc4edf8b6276407440b44a",
+    "lesson.js": "3e408f41a93d89c0a57acfca9da38ea0aac256224773b12031c66bc15f63cc9d"
+  }
+}

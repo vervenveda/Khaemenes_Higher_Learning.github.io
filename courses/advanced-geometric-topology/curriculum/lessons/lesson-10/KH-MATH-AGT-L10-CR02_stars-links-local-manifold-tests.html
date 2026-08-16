@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Khaemenes Academy Advanced Geometric Topology Lesson 10: Stars, Links and Local Manifold Tests.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Lesson 10 · Stars, Links &amp; Local Manifold Tests</title>
+<link rel="stylesheet" href="lesson.css">
+</head>
+<body>
+<a class="skip-link" href="#lesson-content">Skip to lesson content</a>
+<header class="academy-header">
+<div><span class="eyebrow">Khaemenes Academy · Higher Learning</span><strong>Advanced Geometric Topology</strong></div>
+<div class="lesson-meta"><span>Lesson 10</span><span>Arc 02</span><span>Concept Reference</span></div>
+</header>
+<nav class="lesson-actions screen-only"><button id="printLesson" type="button">Print Lesson</button><a href="../">Lesson Directory</a></nav>
+<main id="lesson-content" class="lesson-page" tabindex="-1"><article data-resource-id="KH-MATH-AGT-L10-CR02">
+<header>
+<h1>Stars, Links &amp; Local Manifold Tests</h1>
+<p><strong>Advanced Geometric Topology · Self-Paced Lesson 10</strong></p>
+<p><strong>Resource ID:</strong> KH-MATH-AGT-L10-CR02</p>
+<p><strong>Arc 02:</strong> Triangulations &amp; Combinatorial Surfaces</p>
+</header>
+
+<section class="purpose">
+<h2>Purpose</h2>
+<p>Lesson 09 introduced simplicial complexes and preliminary edge-incidence tests. Lesson 10 develops the local combinatorial tools that let us inspect neighborhoods around simplices: <strong>stars</strong> and <strong>links</strong>.</p>
+<p class="math-result"><strong>Local topology near a simplex is encoded by the simplices that surround it.</strong></p>
+</section>
+
+<section>
+<h2>1. Open Star and Closed Star</h2>
+<p>Let K be a simplicial complex and let σ be a simplex of K.</p>
+<p>The <strong>open star</strong> of σ consists of the relative interiors of all simplices having σ as a face.</p>
+<p>The <strong>closed star</strong> St(σ) is the subcomplex formed by all simplices that contain σ, together with all of their faces.</p>
+<p>For a vertex v in a triangulated surface, the closed star collects the triangles touching v together with their edges and vertices.</p>
+</section>
+
+<section>
+<h2>2. The Link</h2>
+<p>The <strong>link</strong> Lk(σ) records the part of the closed star that lies opposite σ. In abstract-complex language,</p>
+<p class="math-result"><strong>Lk<sub>K</sub>(σ) = {τ∈K : τ∩σ=∅ and τ∪σ∈K}.</strong></p>
+<p>For a vertex v in a 2-dimensional complex, the link is typically a graph. Its vertices correspond to vertices adjacent to v, and its edges record triangles containing v.</p>
+</section>
+
+<section>
+<h2>3. Worked Vertex Link</h2>
+<p>Suppose the triangles around v are <strong>vab, vbc, vcd, vda</strong>.</p>
+<p>The link of v has vertices a,b,c,d and edges ab,bc,cd,da. Therefore Lk(v) is a 4-cycle.</p>
+<p>Geometrically, the closed star is a cone from v over that cycle. Its realization is disk-like near v.</p>
+</section>
+
+<section>
+<h2>4. Interior Vertices of a Triangulated Surface</h2>
+<p>For a triangulated 2-manifold without boundary, the link of each vertex is a simplicial circle: a cycle graph whose realization is homeomorphic to S¹.</p>
+<p>This is the combinatorial signature of an interior disk neighborhood. Coning a circle to the central vertex produces a disk.</p>
+<aside class="callout"><strong>Local test:</strong> if the link branches, disconnects, or has the wrong topology, the vertex is not an ordinary interior 2-manifold point.</aside>
+</section>
+
+<section>
+<h2>5. Boundary Vertices</h2>
+<p>For a triangulated 2-manifold with boundary, the link of a boundary vertex is an interval rather than a circle. Coning that interval to the vertex gives a half-disk neighborhood.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Vertex link local models">
+<table><thead><tr><th>Vertex type</th><th>Expected link</th><th>Local model</th></tr></thead><tbody>
+<tr><td>Interior</td><td>Circle</td><td>Open disk</td></tr>
+<tr><td>Boundary</td><td>Interval</td><td>Half-disk</td></tr>
+</tbody></table>
+</div>
+</section>
+
+<section>
+<h2>6. Edge Links in Dimension Two</h2>
+<p>In a 2-dimensional triangulated manifold, the link of an edge is 0-dimensional.</p>
+<ul>
+<li>An interior edge is incident to exactly two triangles, and its link consists of two vertices.</li>
+<li>A boundary edge is incident to exactly one triangle, and its link consists of one vertex.</li>
+<li>If three or more triangles meet along one edge, the local model is not a 2-manifold.</li>
+</ul>
+<p>This recovers the preliminary edge-incidence test from Lesson 09 as a special case of link analysis.</p>
+</section>
+
+<section>
+<h2>7. A Nonmanifold Vertex</h2>
+<p>Suppose triangles vab, vbc, and vde meet only through the central vertex v. Then the link of v consists of one path a-b-c and a separate edge d-e.</p>
+<p>The link is disconnected. Therefore a sufficiently small neighborhood of v has incompatible sectors and is not homeomorphic to a disk or half-disk. The realization is not a 2-manifold at v.</p>
+</section>
+
+<section>
+<h2>8. A Branching Link</h2>
+<p>Suppose the link of v is a graph in which one vertex has degree three. Such a link is neither a circle nor an interval. The closed star therefore has a branched local structure.</p>
+<p><strong>Conclusion:</strong> v fails the local 2-manifold test.</p>
+</section>
+
+<section>
+<h2>9. Pure Complexes</h2>
+<p>A simplicial complex is <strong>pure of dimension 2</strong> if every maximal simplex has dimension two. A triangle with an isolated edge attached as an additional maximal simplex is not pure.</p>
+<p>Purity is a useful preliminary condition for a triangulated surface, but purity alone does not guarantee the manifold condition. Links still have to be checked.</p>
+</section>
+
+<section class="audit-section">
+<h2>10. Local Criterion for a Finite Triangulated Surface</h2>
+<p>For the finite 2-dimensional complexes considered in this course, use this practical audit:</p>
+<ol>
+<li>Verify the complex is pure 2-dimensional.</li>
+<li>Check that each edge has one or two incident triangles.</li>
+<li>Construct every vertex link.</li>
+<li>Verify that each vertex link is a circle (interior vertex) or interval (boundary vertex).</li>
+<li>Require the boundary behavior to be consistent with the intended surface category.</li>
+</ol>
+<p>For a <strong>closed</strong> triangulated 2-manifold, every vertex link is a circle; correspondingly, every edge is incident to exactly two triangles.</p>
+<p><strong>Global note:</strong> these tests establish the local manifold condition. Connectedness, when required by the target definition or theorem, must be checked separately.</p>
+</section>
+
+<section>
+<h2>11. Closed Surface Audit</h2>
+<p>Suppose K is finite, pure, and 2-dimensional, every edge lies in exactly two triangles, and every vertex link is a cycle.</p>
+<p>Then the realization |K| has the local structure of a 2-manifold without boundary. Because K is finite, |K| is a finite polyhedron; properties such as connectedness are separate global questions.</p>
+<p><strong>Reasoning discipline:</strong> local manifold tests establish local structure. They do not, by themselves, establish connectedness.</p>
+</section>
+
+<section>
+<h2>12. Connectedness Is Separate</h2>
+<p>A disjoint union of two triangulated tori has the correct local manifold link at every vertex, but it is not connected.</p>
+<p>Therefore “every vertex link is a circle” does not prove that the space is a connected surface. Local and global hypotheses must not be conflated.</p>
+</section>
+
+<section>
+<h2>13. Link of a Higher-Dimensional Simplex</h2>
+<p>The same idea generalizes. In an n-dimensional triangulated manifold, the link of an interior k-simplex has the local dimension expected of an (n−k−1)-sphere. Boundary cases have corresponding ball/sphere variants.</p>
+<p>We will not use the full higher-dimensional theory yet. The 2-dimensional vertex and edge cases are enough for our current surface work.</p>
+</section>
+
+<section>
+<h2>14. The Join Picture</h2>
+<p>Locally, the star of σ is modeled by σ joined with its link. This is why the topology of the link captures the directions available around σ.</p>
+<p>For a vertex v, the closed star is a cone on Lk(v): circle link → disk-like cone; interval link → half-disk-like cone.</p>
+</section>
+
+<section>
+<h2>15. Worked Audit A — Disk</h2>
+<p>Let K have facets abc and acd.</p>
+<ul>
+<li>The interior diagonal ac lies in two triangles.</li>
+<li>The edges ab,bc,cd,da lie in one triangle each.</li>
+<li>The link of each boundary vertex is an interval.</li>
+</ul>
+<p>The realization is a triangulated disk, hence a surface with boundary rather than a closed surface.</p>
+</section>
+
+<section>
+<h2>16. Worked Audit B — Three Sheets on One Edge</h2>
+<p>Let K contain triangles abc, abd, and abe.</p>
+<p>The edge ab lies in three triangles. Its link consists of three vertices c,d,e rather than the one- or two-point pattern required for an edge of a triangulated 2-manifold with or without boundary.</p>
+<p>Therefore points in the interior of ab are nonmanifold points.</p>
+</section>
+
+<section>
+<h2>17. Worked Audit C — Pinched Vertex</h2>
+<p>Take two triangulated disks and identify one vertex of the first with one vertex of the second, leaving all other simplices separate.</p>
+<p>The link of the identified vertex is the disjoint union of two intervals. Since that link is neither a single interval nor a circle, the identified point is not a 2-manifold point.</p>
+</section>
+
+<section class="forensics">
+<h2>18. Algorithm: Local Manifold Forensics</h2>
+<ol>
+<li>Confirm the complex and its maximal simplices.</li>
+<li>Verify face closure and purity.</li>
+<li>Count triangle incidences for every edge.</li>
+<li>For each vertex, construct its link as a graph.</li>
+<li>Compute link degrees and connected components.</li>
+<li>Determine whether each link is a cycle, interval, or neither.</li>
+<li>Classify each vertex as interior, boundary, or nonmanifold.</li>
+<li>Check connectedness separately if the target definition or theorem requires it.</li>
+<li>Only then describe the realization as a surface, surface with boundary, or nonmanifold complex.</li>
+</ol>
+</section>
+
+<section class="errors">
+<h2>19. Common Errors</h2>
+<ol>
+<li><strong>Checking edges but not vertices.</strong> Edge incidence alone can miss pinched vertices.</li>
+<li><strong>Assuming purity is enough.</strong> A pure complex can still have branching links.</li>
+<li><strong>Confusing local and global properties.</strong> Good links do not prove connectedness.</li>
+<li><strong>Calling every path-like graph a circle.</strong> Check degrees, endpoints, and connectedness.</li>
+<li><strong>Using a picture without constructing the link.</strong> The combinatorial record should support the conclusion.</li>
+</ol>
+</section>
+
+<section class="knowledge-check">
+<h2>20. Knowledge Check</h2>
+<ol>
+<li>Define Lk<sub>K</sub>(σ) in abstract simplicial-complex language.</li>
+<li>What is the closed star of a vertex?</li>
+<li>Why does a cycle link correspond to an interior surface vertex?</li>
+<li>What is the expected link of a boundary vertex?</li>
+<li>What is the link of an interior edge in a triangulated 2-manifold?</li>
+<li>Why do three triangles around one edge fail the manifold test?</li>
+<li>Give an example where all local manifold tests pass but connectedness fails.</li>
+<li>Why is purity necessary but insufficient?</li>
+<li>What does a disconnected vertex link indicate?</li>
+<li>State a complete local audit procedure for a finite 2-dimensional complex.</li>
+</ol>
+</section>
+
+<section class="investigation">
+<h2>21. Independent Investigation</h2>
+<p>Create a pure finite 2-dimensional simplicial complex with 4–8 triangular facets.</p>
+<ol>
+<li>List all facets.</li>
+<li>Build an edge-incidence table.</li>
+<li>For every vertex, construct its link.</li>
+<li>Classify each link as circle, interval, or neither.</li>
+<li>Decide whether the realization is locally a surface, a surface with boundary, or nonmanifold.</li>
+<li>Check connectedness separately.</li>
+<li>Write a short conclusion distinguishing local evidence from global conclusions.</li>
+</ol>
+<div class="record">
+<strong>Facets</strong><div></div>
+<strong>Edge-incidence table / notes</strong><div></div>
+<strong>Vertex links</strong><div class="large"></div>
+<strong>Conclusion</strong><div class="large"></div>
+</div>
+</section>
+
+<section>
+<h2>Accessibility</h2>
+<p>Stars and links can be computed entirely from lists of simplices. No diagram, color distinction, or physical model is required. If diagrams are added later, every link graph must also be supplied as a textual vertex-and-edge list.</p>
+</section>
+
+<footer>
+<h2>Resource Record</h2>
+<ul>
+<li><strong>Creator:</strong> Khaemenes Academy</li>
+<li><strong>Arc:</strong> 02 — Triangulations &amp; Combinatorial Surfaces</li>
+<li><strong>Position:</strong> Self-Paced Lesson 10</li>
+<li><strong>Version:</strong> 0.9.1 hardened research draft</li>
+<li><strong>Required external learner dependency:</strong> None</li>
+<li><strong>Next:</strong> Lesson 11 — Subdivision and Triangulation Invariance</li>
+</ul>
+</footer>
+</article></main>
+<footer class="site-footer">Khaemenes Academy · Free, self-paced higher learning.</footer>
+<script src="lesson.js" defer></script>
+</body>
+</html>
