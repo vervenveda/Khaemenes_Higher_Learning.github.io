@@ -1,0 +1,13 @@
+{
+  "algorithm": "SHA-256",
+  "resource_id": "KH-MATH-AGT-L16-IK02",
+  "release": "0.9.1-hardened",
+  "files": {
+    "KH-MATH-AGT-L16-IK02_verification-notes.md": "e2067cf5d82063d1ef1abaa517cff0a58bb17b759ce5042452d566c175c187d0",
+    "README.md": "9048720d835194124a305129c6c310dc56c98441af2f3c7b9463e583690eb502",
+    "KH-MATH-AGT-L16-IK02_instructor-key.html": "8ec0797e38343b95d7cf006788ec0e2412fe37ec39536ec74a3e1581b09fd83c",
+    "KH-MATH-AGT-L16-IK02_metadata.json": "b7fa44c8458cf856884c63c17d6a62e48aebbe2fb4afd12f9cbd9aa88652a655",
+    "instructor.css": "4c612c801bcb088e125c96164b23d8a45a8954dd8d11c21a4202258acb5cb73f",
+    "instructor.js": "3c0809a18b2ea496b23fb1fa8ab75998de1a6bf5a12e2e2e88b7a82f1a77d309"
+  }
+}

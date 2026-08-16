@@ -1,0 +1,45 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self'; connect-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Arc 02 Mastery Assessment · Instructor Key</title><link rel="stylesheet" href="instructor.css"></head><body>
+<header><small>KHAEMENES ACADEMY · INSTRUCTOR RESOURCE</small><h1>Arc 02 Mastery Assessment</h1><p>Scoring Key &amp; Remediation Matrix · <code>KH-MATH-AGT-L16-IK02</code></p></header>
+<nav class="screen"><button id="print">Print Instructor Key</button></nav><main>
+<section class="warning"><h2>Instructor-Only Resource</h2><p>This file contains solutions and scoring guidance for <code>KH-MATH-AGT-L16-MA02</code>. Keep it outside the publicly exposed student assessment folder.</p></section>
+
+<section><h2>Scoring Framework</h2><p>Total: <strong>100 points</strong>. Suggested mastery: <strong>80%</strong>.</p>
+<table><tr><th>Domain</th><th>Items</th><th>Points</th></tr><tr><td>Complexes &amp; local structure</td><td>1–4</td><td>24</td></tr><tr><td>Subdivision &amp; invariance</td><td>5–8</td><td>20</td></tr><tr><td>Simplicial maps</td><td>9–12</td><td>24</td></tr><tr><td>Simplicial approximation</td><td>13–16</td><td>20</td></tr><tr><td>Integrated reasoning</td><td>17–18</td><td>12</td></tr></table></section>
+
+<section><h2>Answer &amp; Scoring Key</h2>
+<div class="answer"><h3>1 · 6 points</h3><p>Facets abc, acd, cde give vertices a,b,c,d,e and edges ab,bc,ac,ad,cd,ce,de. Thus (V,E,F)=(5,7,3) and χ=5−7+3=1. Edges ac and cd each occur in two triangles.</p><p><b>Rubric:</b> faces/counts 3; χ 1; two-triangle edges 2.</p></div>
+<div class="answer"><h3>2 · 6 points</h3><p>Lk(v) has edges ab,bc,cd,de: the path a-b-c-d-e. Its realization is an interval, so the pattern is compatible with a boundary vertex.</p><p><b>Rubric:</b> correct link 4; classification/reason 2.</p></div>
+<div class="answer"><h3>3 · 6 points</h3><p>Lk(pq) consists of four isolated vertices r,s,t,u. A surface edge has a one-point boundary link or two-point interior link. Four points diagnose a nonmanifold edge.</p><p><b>Rubric:</b> link 3; expected manifold links 2; diagnosis 1.</p></div>
+<div class="answer"><h3>4 · 6 points</h3><p>Edge incidence alone can miss singular vertex neighborhoods. One must also audit vertex links: for a triangulated surface they should be circles at interior vertices or intervals at boundary vertices (with the course's finite pure 2-complex hypotheses).</p><p><b>Rubric:</b> limitation 3; vertex-link audit 3.</p></div>
+
+<div class="answer"><h3>5 · 5 points</h3><p>Replace abc and acd by abm,bcm,amd,cmd. Vertices a,b,c,d,m: V=5. Edges ab,bc,cm,ma,md,dc,ad,bm: E=8. F=4. Hence χ=5−8+4=1.</p><p><b>Rubric:</b> facets 2; f-vector 2; χ 1.</p></div>
+<div class="answer"><h3>6 · 5 points</h3><p>Vertices of sd K correspond to nonempty simplices of K. An r-simplex of sd K corresponds to a strict chain σ0⊂σ1⊂⋯⊂σr of nonempty simplices of K.</p></div>
+<div class="answer"><h3>7 · 5 points</h3><p>The attached triangle introduces points not contained in the original disk and changes the underlying polyhedron/local neighborhood. It is an attachment, not merely a refinement of existing simplices.</p></div>
+<div class="answer"><h3>8 · 5 points</h3><p>Euler characteristic is too coarse to certify subdivision: distinct, even nonhomeomorphic spaces can share χ. A subdivision must satisfy geometric/refinement conditions and preserve the underlying polyhedron; equality of one invariant cannot establish those conditions.</p></div>
+
+<div class="answer"><h3>9 · 6 points</h3><p>abc maps to {z,x,y}=xyz; bcd maps to {x,y,w}=xyw. Both are target facets, so the map is simplicial.</p><p><b>Rubric:</b> first facet 2; second 2; conclusion 2.</p></div>
+<div class="answer"><h3>10 · 6 points</h3><p>The triangle maps to the single vertex {x}; its realization is the constant map to x. It is not a homeomorphism for a nontrivial triangular realization.</p></div>
+<div class="answer"><h3>11 · 6 points</h3><p>|f|(p)=(1/2)x+(1/3)y+(1/6)z.</p></div>
+<div class="answer"><h3>12 · 6 points</h3><p>A simplicial map sends source simplices to target simplices. A simplicial isomorphism must possess a simplicial inverse; equivalently here it is a vertex bijection preserving simplices in both directions.</p></div>
+
+<div class="answer"><h3>13 · 5 points</h3><p>For every source vertex v, require F(st(v)) ⊆ st(g(v)), using open stars in the relevant source and target triangulations.</p></div>
+<div class="answer"><h3>14 · 5 points</h3><p>One source edge can map simplicially only to one target simplex. To encode traversal of three consecutive target edges, subdivide the source edge into at least three consecutive source edges and map their successive vertices to the four successive target vertices.</p></div>
+<div class="answer"><h3>15 · 5 points</h3><p>In the finite-complex form used in Arc 02: after sufficiently many barycentric subdivisions of K, there exists a simplicial map g:sdⁿK→L whose realization is homotopic to F, written |g|≃F (after the standard identification of |sdⁿK| with |K|).</p></div>
+<div class="answer"><h3>16 · 5 points</h3><p>Simpliciality only says g respects source and target simplices. Being a simplicial approximation to a particular F additionally requires compatibility with F, such as the open-star containment criterion. The same simplicial g is not automatically an approximation to an arbitrary F.</p></div>
+
+<div class="answer"><h3>17 · 6 points</h3><p>Canonical example: facets abc,abd,abe. The complex is pure because every facet is 2-dimensional. Edge ab has link {c,d,e}, three isolated points, rather than one or two points; hence it is not a 2-manifold with boundary.</p><p>Equivalent valid counterexamples earn full credit when the link proof is correct.</p></div>
+<div class="answer"><h3>18 · 6 points</h3><p><b>Full-credit elements:</b> subdivision refines the combinatorial presentation while preserving the realized topology; finer stars/simplices give greater resolution; simplicial approximation replaces suitable continuous-map behavior, after enough subdivision, by a simplicial map up to homotopy; triangulations are not unique; the combinatorial model must not be confused with the underlying space; direct checks must be distinguished from theorem-based conclusions.</p></div>
+</section>
+
+<section class="remediation"><h2>Remediation Matrix</h2><table><tr><th>Evidence</th><th>Likely gap</th><th>Return to</th><th>Required correction</th></tr>
+<tr><td>Items 1 or 4 weak</td><td>Face closure / local audit</td><td>Lessons 09–10</td><td>Rebuild face list and one vertex link.</td></tr>
+<tr><td>Items 2–3 weak</td><td>Link classification</td><td>Lesson 10</td><td>Construct circle, interval, and nonmanifold links.</td></tr>
+<tr><td>Items 5–8 weak</td><td>Subdivision/invariance</td><td>Lesson 11</td><td>Repeat refinement ledger and distinguish attachment from subdivision.</td></tr>
+<tr><td>Items 9–12 weak</td><td>Simplicial maps</td><td>Lesson 12</td><td>Audit three vertex maps facet by facet.</td></tr>
+<tr><td>Items 13–16 weak</td><td>Simplicial approximation</td><td>Lesson 13</td><td>Repeat star-criterion and coarse-interval investigations.</td></tr>
+<tr><td>Items 17–18 weak</td><td>Synthesis/proof boundary</td><td>Lessons 10–15</td><td>Complete one new forensic construction and label direct vs theorem-based steps.</td></tr></table></section>
+
+<section><h2>Reassessment Guidance</h2><p>For a learner below the academy's chosen mastery threshold, assign remediation by domain rather than repeating the identical assessment immediately. A reassessment should use structurally equivalent but new complexes and maps so that improvement measures transfer rather than memorization.</p></section>
+</main><footer>Instructor resource · Keep separate from student-facing assessment files.</footer><script src="instructor.js" defer></script></body></html>

@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "resource_id": "KH-MATH-AGT-L16-IK02",
+  "title": "Arc 02 Mastery Assessment Instructor Scoring Key & Remediation Matrix",
+  "resource_type": "instructor-key",
+  "companion": "KH-MATH-AGT-L16-MA02",
+  "access": "instructor",
+  "total_points": 100,
+  "item_count": 18,
+  "relationships": {
+    "answers": "KH-MATH-AGT-L16-MA02",
+    "remediates": [
+      "KH-MATH-AGT-L09-R02",
+      "KH-MATH-AGT-L10-CR02",
+      "KH-MATH-AGT-L11-R03",
+      "KH-MATH-AGT-L12-R04",
+      "KH-MATH-AGT-L13-LAB02"
+    ]
+  },
+  "editorial": {
+    "status": "hardened-research-draft",
+    "version": "0.9.1",
+    "last_revision": "2026-08-16"
+  },
+  "security": {
+    "network_connections": false,
+    "external_runtime_dependencies": []
+  },
+  "publication": {
+    "student_facing": false,
+    "recommended_location": "private/instructor/"
+  }
+}
