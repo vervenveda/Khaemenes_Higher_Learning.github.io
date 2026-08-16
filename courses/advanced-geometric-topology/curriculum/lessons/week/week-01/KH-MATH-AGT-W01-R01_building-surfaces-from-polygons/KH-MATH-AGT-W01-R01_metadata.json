@@ -1,0 +1,68 @@
+{
+  "resource_id": "KH-MATH-AGT-W01-R01",
+  "title": "Building Surfaces from Polygons",
+  "collection": "Khaemenes Mathematics",
+  "subject": "Advanced Geometric Topology",
+  "resource_type": "course-reading",
+  "course": {
+    "course_id": "advanced-geometric-topology",
+    "unit": 1,
+    "week": 1,
+    "session": 1
+  },
+  "academic": {
+    "level": "advanced-undergraduate-graduate-preparatory",
+    "prerequisites": [
+      "proof literacy",
+      "basic set theory",
+      "functions and inverse images",
+      "introductory point-set topology"
+    ],
+    "learning_objectives": [
+      "Define equivalence relations, quotient sets, quotient maps, and quotient topology.",
+      "Interpret paired and oriented polygon edges as quotient-identification data.",
+      "Track induced vertex equivalence classes.",
+      "Distinguish a polygonal presentation from the resulting quotient surface.",
+      "Explain the standard torus quotient construction.",
+      "Compute V, E, F and Euler characteristic for a basic polygonal cell structure.",
+      "Distinguish visualization or computation from proof."
+    ],
+    "keywords": [
+      "quotient space",
+      "equivalence relation",
+      "polygonal presentation",
+      "edge identification",
+      "surface",
+      "torus",
+      "projective plane",
+      "Klein bottle",
+      "Euler characteristic",
+      "orientability"
+    ]
+  },
+  "provenance": {
+    "creator": "Khaemenes Academy",
+    "originality": "original",
+    "license": "TO_BE_DEFINED",
+    "evidence_record": "KH-MATH-AGT-W01-R01_research-evidence-brief.md"
+  },
+  "editorial": {
+    "status": "research-draft",
+    "version": "0.9.0",
+    "reviewed": false,
+    "last_revision": "2026-08-16"
+  },
+  "accessibility": {
+    "math_text_alternatives": true,
+    "diagram_descriptions_required": true,
+    "printable": true
+  },
+  "dependencies": {
+    "student_external_dependencies": [],
+    "internal_next": [
+      "KH-MATH-AGT-W01-CR01",
+      "KH-MATH-AGT-W01-WE01",
+      "KH-MATH-AGT-W01-PW01"
+    ]
+  }
+}
