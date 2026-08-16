@@ -1,0 +1,48 @@
+{
+  "resource_id": "KH-MATH-AGT-W01-WE01",
+  "title": "Worked Surface Identification Examples",
+  "resource_type": "worked-examples",
+  "course": {
+    "course_id": "advanced-geometric-topology",
+    "unit": 1,
+    "week": 1
+  },
+  "academic": {
+    "level": "advanced-undergraduate-graduate-preparatory",
+    "skills": [
+      "edge-word interpretation",
+      "endpoint relations",
+      "vertex equivalence classes",
+      "cell counts",
+      "Euler characteristic",
+      "orientability evidence",
+      "local surface checks",
+      "limits of inference"
+    ]
+  },
+  "relationships": {
+    "requires": [
+      "KH-MATH-AGT-W01-R01",
+      "KH-MATH-AGT-W01-CR01"
+    ],
+    "prepares_for": [
+      "KH-MATH-AGT-W01-PW01",
+      "KH-MATH-AGT-W01-LAB01",
+      "KH-MATH-AGT-W01-PS01"
+    ]
+  },
+  "provenance": {
+    "creator": "Khaemenes Academy",
+    "originality": "original",
+    "license": "TO_BE_DEFINED"
+  },
+  "editorial": {
+    "status": "research-draft",
+    "version": "0.9.0",
+    "reviewed": false,
+    "last_revision": "2026-08-16"
+  },
+  "dependencies": {
+    "student_external_dependencies": []
+  }
+}
