@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "resource_id": "KH-MATH-AGT-W01-R01",
+  "legacy_id": true,
+  "title": "Building Surfaces from Polygons",
+  "collection": "Khaemenes Mathematics",
+  "subject": "Advanced Geometric Topology",
+  "resource_type": "course-reading",
+  "course": {
+    "course_id": "advanced-geometric-topology",
+    "arc": 1,
+    "lesson": 1,
+    "delivery": "self-paced"
+  },
+  "academic": {
+    "level": "advanced-undergraduate-graduate-preparatory",
+    "prerequisites": [
+      "proof literacy",
+      "basic set theory",
+      "functions and inverse images",
+      "introductory point-set topology"
+    ],
+    "learning_objectives": [
+      "Define equivalence relations, quotient sets, quotient maps, and quotient topology.",
+      "Interpret paired and oriented polygon edges as quotient-identification data.",
+      "Track induced vertex equivalence classes.",
+      "Distinguish a polygonal presentation from the resulting quotient surface.",
+      "Explain the standard torus quotient construction.",
+      "Compute V, E, F and Euler characteristic for a basic polygonal cell structure.",
+      "Distinguish visualization or computation from proof."
+    ],
+    "keywords": [
+      "quotient space",
+      "equivalence relation",
+      "polygonal presentation",
+      "edge identification",
+      "surface",
+      "torus",
+      "projective plane",
+      "Klein bottle",
+      "Euler characteristic",
+      "orientability"
+    ]
+  },
+  "provenance": {
+    "creator": "Khaemenes Academy",
+    "originality": "original",
+    "license": "TO_BE_DEFINED",
+    "evidence_record": "KH-MATH-AGT-W01-R01_research-evidence-brief.md"
+  },
+  "editorial": {
+    "status": "hardened-research-draft",
+    "version": "0.9.1",
+    "reviewed": false,
+    "last_revision": "2026-08-16"
+  },
+  "accessibility": {
+    "semantic_html": true,
+    "keyboard_accessible": true,
+    "math_text_alternatives": true,
+    "diagram_descriptions_required": true,
+    "printable": true,
+    "print_stylesheet": true,
+    "color_required": false
+  },
+  "security": {
+    "external_runtime_dependencies": [],
+    "network_connections": false,
+    "content_security_policy": true,
+    "forms": false
+  },
+  "dependencies": {
+    "student_external_dependencies": [],
+    "internal_next": [
+      "KH-MATH-AGT-W01-CR01",
+      "KH-MATH-AGT-W01-WE01",
+      "KH-MATH-AGT-W01-PW01"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "algorithm": "SHA-256",
+  "resource_id": "KH-MATH-AGT-W01-R01",
+  "release": "0.9.1-hardened",
+  "files": {
+    "KH-MATH-AGT-W01-R01_building-surfaces-from-polygons.html": "5cc5c72093b18ec0c1e8096646479c589b3426499bb4be7e99574204f1d4e302",
+    "KH-MATH-AGT-W01-R01_metadata.json": "7a19f70d2c82282c6eaa2b78ee77d2606513c0c89ba1f97f8e652b5d3bd4d8a9",
+    "KH-MATH-AGT-W01-R01_research-evidence-brief.md": "37cacc4bee130f3ae8d4a91dd537ca1b5c6d292251f8ed42b05efc3b60e38687",
+    "README.md": "4443a033ec689ace9ce5c74a3a5ee853aee30c1887edcc1274b8ce7a9c8991e3",
+    "lesson.css": "fac08f37b57d0726593291a9edfa0435fb1b856ae2a06612dc72ec7dc2464c83",
+    "lesson.js": "f07425d4ecc3c1c6ae598e702fab920d6d2c19704977bb3692202f323054b805"
+  }
+}

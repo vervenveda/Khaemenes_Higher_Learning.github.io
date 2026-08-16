@@ -1,0 +1,138 @@
+/* Khaemenes Academy — Hardened Lesson Shell v1.0 */
+:root{
+  color-scheme: light;
+  --bg:#f2efe7;
+  --paper:#fffefa;
+  --ink:#181818;
+  --muted:#5b5a55;
+  --line:#d9d4c8;
+  --accent:#253b52;
+  --accent-soft:#edf1f4;
+  --warning:#6b3518;
+  --warning-bg:#fff5ec;
+  --max:900px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:Georgia,"Times New Roman",serif;
+  line-height:1.65;
+  text-rendering:optimizeLegibility;
+}
+.skip-link{
+  position:absolute;left:-9999px;top:0;
+  background:#fff;color:#000;padding:.65rem 1rem;z-index:999;
+}
+.skip-link:focus{left:.75rem;top:.75rem}
+.academy-header{
+  max-width:var(--max);
+  margin:1.5rem auto 0;
+  padding:1rem 1.4rem;
+  display:flex;gap:1rem;justify-content:space-between;align-items:end;
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+.brand{display:grid;gap:.2rem}
+.eyebrow{font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.brand strong{font-size:1.05rem}
+.lesson-meta{display:flex;gap:.45rem;flex-wrap:wrap;justify-content:flex-end}
+.lesson-meta span{
+  border:1px solid var(--line);background:var(--paper);
+  padding:.28rem .55rem;border-radius:999px;font-size:.76rem;
+}
+.lesson-actions{
+  max-width:var(--max);margin:.25rem auto .75rem;
+  padding:0 1.4rem;display:flex;gap:.6rem;justify-content:flex-end;
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+.lesson-actions button,.lesson-actions a{
+  border:1px solid var(--accent);border-radius:7px;
+  padding:.55rem .8rem;background:var(--paper);color:var(--accent);
+  font:inherit;text-decoration:none;cursor:pointer;
+}
+.lesson-actions button:hover,.lesson-actions a:hover{background:var(--accent-soft)}
+.lesson-page{
+  max-width:var(--max);
+  margin:0 auto 2rem;
+  padding:clamp(1.5rem,4vw,3.2rem);
+  background:var(--paper);
+  border:1px solid var(--line);
+  box-shadow:0 8px 30px rgba(0,0,0,.06);
+}
+article>header{
+  border-bottom:2px solid var(--accent);
+  margin-bottom:2rem;padding-bottom:1.2rem;
+}
+h1,h2,h3{line-height:1.25;color:#142536}
+h1{font-size:clamp(2rem,5vw,3.1rem);margin:.2rem 0 .6rem}
+h2{font-size:1.45rem;margin:2.2rem 0 .75rem;padding-top:.2rem}
+h3{font-size:1.08rem;margin:1.4rem 0 .45rem}
+p,li,dd{max-width:75ch}
+section{border-top:1px solid #eee9df;padding-top:.25rem;margin-top:1.4rem}
+ul,ol{padding-left:1.45rem}
+li{margin:.35rem 0}
+dl{display:grid;grid-template-columns:minmax(7rem,10rem) 1fr;gap:.5rem 1rem}
+dt{font-weight:700} dd{margin:0}
+aside.callout{
+  margin:1.2rem 0;padding:1rem 1.1rem;border-left:4px solid var(--accent);
+  background:var(--accent-soft);
+}
+aside.critical{border-left-color:var(--warning);background:var(--warning-bg)}
+.practice-section,.mastery-section{
+  border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem;margin-top:2rem;
+}
+.mastery-section{background:#f7f9fb}
+table{width:100%;border-collapse:collapse;margin:1rem 0}
+th,td{border:1px solid var(--line);padding:.55rem;text-align:left;vertical-align:top}
+code{overflow-wrap:anywhere}
+.site-footer{
+  max-width:var(--max);margin:0 auto 2rem;padding:0 1.4rem;
+  color:var(--muted);font: .85rem/1.5 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+:focus-visible{outline:3px solid #0b67c2;outline-offset:3px}
+
+@media(max-width:700px){
+  .academy-header{align-items:start;flex-direction:column}
+  .lesson-meta{justify-content:flex-start}
+  .lesson-page{border-left:0;border-right:0;padding:1.25rem}
+  dl{grid-template-columns:1fr}
+}
+
+@media print{
+  @page{size:Letter;margin:.65in}
+  :root{--paper:#fff;--ink:#000;--line:#aaa}
+  body{background:#fff;color:#000;font-size:10.75pt;line-height:1.45}
+  .screen-only,.skip-link{display:none!important}
+  .academy-header{
+    margin:0 0 .25in;padding:0 0 .12in;
+    border-bottom:1pt solid #000;max-width:none;
+  }
+  .lesson-meta span{border-color:#777;background:#fff}
+  .lesson-page{
+    max-width:none;margin:0;padding:0;border:0;box-shadow:none;background:#fff;
+  }
+  article>header{border-bottom:1.5pt solid #000;margin-bottom:.18in}
+  h1{font-size:21pt} h2{font-size:14pt;margin-top:.18in} h3{font-size:11.5pt}
+  h1,h2,h3{color:#000;break-after:avoid;page-break-after:avoid}
+  p,li,dd{max-width:none}
+  section,aside,table,.practice-section,.mastery-section{
+    break-inside:avoid-page;page-break-inside:avoid;
+  }
+  section{border-top:.5pt solid #bbb}
+  aside.callout,.practice-section,.mastery-section{background:#fff;border-color:#777}
+  a{color:#000;text-decoration:none}
+  a[href]::after{content:""}
+  .practice-section li{
+    margin-bottom:.15in;
+  }
+  .practice-section li::after{
+    content:"";
+    display:block;
+    min-height:.22in;
+    border-bottom:.5pt solid #aaa;
+    margin-top:.08in;
+  }
+  .site-footer{max-width:none;margin:.2in 0 0;padding:.1in 0 0;border-top:.5pt solid #aaa;color:#333}
+}
