@@ -1,11 +1,20 @@
 (function attachKhaemenesHigherLearningBridge(global){
   "use strict";
 
-  const VERSION="1.0.0";
+  const VERSION="1.1.0";
   const EXPECTED_STAGE="higher";
   const COURSE_PREFIX="higher";
 
   function registry(){return global.KhaemenesFamilyRegistry||null}
+  function ensureBetaProgramLink(){
+    if(!global.document)return;
+    if(global.document.querySelector('script[data-vnv-beta-link],script[src="https://vervenveda.com/assets/vnv-beta-link.js"]'))return;
+    const script=global.document.createElement("script");
+    script.src="https://vervenveda.com/assets/vnv-beta-link.js";
+    script.defer=true;
+    script.dataset.vnvBetaLink="higher-learning";
+    global.document.head.appendChild(script);
+  }
   function status(){
     const R=registry();
     if(!R)return Object.freeze({version:VERSION,status:"registry-unavailable",stage:EXPECTED_STAGE,scholar:null,adult:null,recommendedSharedOrigin:false});
@@ -22,6 +31,7 @@
   }
 
   function activate(){
+    ensureBetaProgramLink();
     const R=registry(),s=status();
     if(R&&s.scholar?.learnerId)R.setActive?.({familyId:s.scholar.familyId,adultId:s.adult?.adultId||undefined,learnerId:s.scholar.learnerId});
     global.dispatchEvent(new CustomEvent("khaemenes-higher-learning-ready",{detail:s}));
@@ -49,5 +59,6 @@
     });
   }
 
-  global.KhaemenesHigherLearningBridge=Object.freeze({version:VERSION,expectedStage:EXPECTED_STAGE,status,activate,scopedCourseKey,makeCourseContext});
+  global.KhaemenesHigherLearningBridge=Object.freeze({version:VERSION,expectedStage:EXPECTED_STAGE,status,activate,scopedCourseKey,makeCourseContext,ensureBetaProgramLink});
+  if(global.document?.readyState==="loading")global.document.addEventListener("DOMContentLoaded",ensureBetaProgramLink,{once:true});else ensureBetaProgramLink();
 })(window);
