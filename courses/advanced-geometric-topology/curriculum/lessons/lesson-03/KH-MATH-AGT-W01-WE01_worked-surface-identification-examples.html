@@ -1,202 +1,113 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Khaemenes Academy Advanced Geometric Topology Lesson 03: worked surface identification examples.">
-<meta name="color-scheme" content="light dark">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Khaemenes Academy Advanced Geometric Topology Lesson 03: Worked Surface Identification Examples.">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'">
-<title>Lesson 03 · Worked Surface Identification Examples · Khaemenes Academy</title>
-<link rel="stylesheet" href="lesson.css">
-</head>
-<body>
+<title>Lesson 03 · Worked Surface Identification Examples</title><link rel="stylesheet" href="lesson.css"></head><body>
 <a class="skip-link" href="#lesson-content">Skip to lesson content</a>
-<header class="academy-header">
-  <div class="brand"><span class="eyebrow">Khaemenes Academy · Higher Learning</span><strong>Advanced Geometric Topology</strong></div>
-  <div class="lesson-meta" aria-label="Lesson information"><span>Lesson 03</span><span>Self-Paced</span><span>KH-MATH-AGT-W01-WE01</span></div>
-</header>
-<nav class="lesson-actions screen-only" aria-label="Lesson actions">
-  <button id="printLesson" type="button">Print Examples</button>
-  <a href="../" aria-label="Return to lesson directory">Lesson Directory</a>
-</nav>
+<header class="academy-header"><div><span class="eyebrow">Khaemenes Academy · Higher Learning</span><strong>Advanced Geometric Topology</strong></div><div class="lesson-meta"><span>Lesson 03</span><span>Arc 01</span><span>Worked Examples</span></div></header>
+<nav class="lesson-actions screen-only"><button id="printLesson" type="button">Print Lesson</button><a href="../">Lesson Directory</a></nav>
 <main id="lesson-content" class="lesson-page" tabindex="-1"><article data-resource-id="KH-MATH-AGT-W01-WE01">
 <header>
 <h1>Worked Surface Identification Examples</h1>
 <p><strong>Advanced Geometric Topology · Self-Paced Lesson 03</strong></p>
-<p><strong>Resource ID:</strong> KH-MATH-AGT-W01-WE01</p>
+<p><strong>Resource ID:</strong> KH-MATH-AGT-W01-WE01 <em>(legacy stable ID)</em></p>
 <p><strong>Companions:</strong> Lesson 01 — Building Surfaces from Polygons · Lesson 02 — Quotient Spaces &amp; Polygonal Schemas</p>
 </header>
 
-<section>
-<h2>Purpose</h2>
+<section class="purpose"><h2>Purpose</h2>
 <p>This resource teaches a repeatable method for analyzing polygonal presentations. The goal is not to recognize a familiar drawing by sight. The goal is to extract and justify the quotient data.</p>
+<p class="math-result"><strong>word → edge pairings → endpoint relations → vertex classes → quotient cells → invariants → justified conclusion</strong></p>
 </section>
 
-<section class="audit-section">
-<h2>The Identification Audit</h2>
-<ol>
-<li>Fix the boundary word and orientation convention.</li>
-<li>List paired edges.</li>
-<li>Translate each edge pairing into endpoint relations.</li>
-<li>Take the transitive closure to obtain vertex equivalence classes.</li>
-<li>Count quotient cells V, E, and F.</li>
-<li>Compute χ = V − E + F.</li>
-<li>Inspect the edge pattern for orientation-reversing behavior.</li>
-<li>Check that the quotient is a surface when that has not already been established.</li>
+<section><h2>The Identification Audit</h2><ol>
+<li>Fix the boundary word and orientation convention.</li><li>List paired edges.</li>
+<li>Translate each edge pairing into endpoint relations.</li><li>Take the transitive closure to obtain vertex equivalence classes.</li>
+<li>Count quotient cells V, E, and F.</li><li>Compute χ=V−E+F.</li>
+<li>Inspect the edge pattern for orientation-reversing behavior.</li><li>Check that the quotient is a surface when that has not already been established.</li>
 <li>State only the conclusion justified by the evidence available at this point in the course.</li>
-</ol>
-</section>
+</ol></section>
 
-<section>
-<h2>Example 1 — The Standard Torus Word</h2>
+<section><h2>Example 1 — The Standard Torus Word</h2>
 <p><strong>Boundary word:</strong> a b a<sup>−1</sup> b<sup>−1</sup>.</p>
-<p>Label the square vertices v0,v1,v2,v3 in boundary order. Under our convention, the a-pair matches the endpoints so that v0~v3 and v1~v2. The b-pair gives v1~v0 and v2~v3. Taking transitive closure yields one vertex class:</p>
-<p class="math-result"><strong>[v0]=[v1]=[v2]=[v3].</strong></p>
-<p>The paired sides give E=2 edge classes, and the polygon interior gives F=1. Therefore</p>
-<p class="math-result"><strong>χ = 1 − 2 + 1 = 0.</strong></p>
-<p>The standard edge pattern is the familiar orientable torus pattern. We may identify the quotient with the torus because this is one of the benchmark presentations established earlier.</p>
-<p><strong>Reasoning lesson:</strong> “It looks like a doughnut” was not used to count the quotient cells.</p>
-</section>
+<p>Label square vertices v0,v1,v2,v3 in boundary order. Under the course convention, the a-pair gives v0~v3 and v1~v2. The b-pair gives v1~v0 and v2~v3. Transitive closure yields one vertex class.</p>
+<p class="math-result"><strong>(V,E,F)=(1,2,1), χ=0.</strong></p>
+<p>This is the established benchmark torus presentation and is orientable.</p>
+<p><strong>Reasoning lesson:</strong> quotient cells were derived from the identifications, not from the visual appearance of the square.</p></section>
 
-<section>
-<h2>Example 2 — The Real Projective Plane</h2>
+<section><h2>Example 2 — The Real Projective Plane</h2>
 <p><strong>Boundary word:</strong> a a.</p>
-<p>Use a 2-gon model with vertices v0 and v1. Both occurrences of a have the same orientation in the boundary word. The edge identification identifies the two boundary edges and sends endpoints so that v0~v1. Hence V=1.</p>
-<p>There is one edge class and one face:</p>
-<p class="math-result"><strong>(V,E,F)=(1,1,1), so χ=1.</strong></p>
-<p>The same-direction repeated symbol is the standard projective-plane presentation. The resulting surface is nonorientable.</p>
-<p><strong>Reasoning lesson:</strong> the words a a and a a<sup>−1</sup> are not interchangeable. Orientation data changes the quotient.</p>
-</section>
+<p>Use a 2-gon with vertices v0,v1. The same-sign occurrences induce endpoint relations that merge v0 and v1. Hence V=1, E=1, F=1.</p>
+<p class="math-result"><strong>χ=1.</strong></p>
+<p>This is the established benchmark presentation of RP² and is nonorientable.</p></section>
 
-<section>
-<h2>Example 3 — A Sphere from a 2-gon</h2>
+<section><h2>Example 3 — A Sphere from a 2-gon</h2>
 <p><strong>Boundary word:</strong> a a<sup>−1</sup>.</p>
-<p>Again begin with vertices v0 and v1. This time the paired edge orientations oppose one another in the boundary word. The endpoint correspondence leaves two quotient vertex classes rather than merging them into one.</p>
-<p>Thus V=2, E=1, F=1, and</p>
-<p class="math-result"><strong>χ = 2 − 1 + 1 = 2.</strong></p>
-<p>This is a standard polygonal presentation of S².</p>
-<p><strong>Comparison with Example 2:</strong> the two examples use the same number of polygon edges. The orientation pattern changes the endpoint equivalence relation and therefore changes the quotient topology.</p>
-</section>
+<p>The opposite-sign pairing leaves two quotient vertex classes. Thus V=2, E=1, F=1.</p>
+<p class="math-result"><strong>χ=2.</strong></p>
+<p>This is the established benchmark presentation of S².</p>
+<p><strong>Comparison:</strong> Examples 2 and 3 use the same label and the same number of polygon edges, but different directional correspondence produces different endpoint equivalence relations.</p></section>
 
-<section>
-<h2>Example 4 — The Klein Bottle</h2>
+<section><h2>Example 4 — The Klein Bottle</h2>
 <p><strong>Boundary word:</strong> a b a b<sup>−1</sup>.</p>
-<p>Label the square vertices v0,v1,v2,v3 in boundary order. For the a-pair, the same exponent sign gives endpoint relations v0~v2 and v1~v3. For the b-pair, the opposite signs give v1~v0 and v2~v3. Together these relations put all four vertices into one class.</p>
-<p>Hence V=1, E=2, F=1 and</p>
-<p class="math-result"><strong>χ = 0.</strong></p>
-<p>Notice that this is the same Euler characteristic as the torus. Yet the Klein bottle is nonorientable while the torus is orientable.</p>
-<p><strong>Reasoning lesson:</strong> Euler characteristic alone does not distinguish these two surfaces. An invariant is useful only to the extent that it separates the objects under consideration.</p>
-</section>
+<p>For the a-pair, the same signs give v0~v2 and v1~v3. For the b-pair, the opposite signs give v1~v0 and v2~v3. All four vertices therefore lie in one equivalence class.</p>
+<p class="math-result"><strong>(V,E,F)=(1,2,1), χ=0.</strong></p>
+<p>The Klein bottle and torus share χ=0, but the benchmark Klein-bottle presentation is nonorientable whereas the torus is orientable.</p>
+<p><strong>Reasoning lesson:</strong> equality of one invariant does not imply homeomorphism.</p></section>
 
-<section>
-<h2>Example 5 — Same Surface, Different Presentation</h2>
-<p>Consider the sphere presentation</p>
-<p class="math-result"><strong>a b b<sup>−1</sup> a<sup>−1</sup>.</strong></p>
-<p>This four-edge word looks more complicated than a a<sup>−1</sup>, but complexity of the word does not imply a different homeomorphism type. Using the elementary polygonal-scheme simplification already established for an adjacent inverse pair, b b<sup>−1</sup> can be removed, leaving the standard a a<sup>−1</sup> sphere presentation.</p>
-<p>Therefore the quotient is again S².</p>
-<p><strong>Reasoning lesson:</strong> polygonal presentations are not canonical names. Different words can represent homeomorphic surfaces.</p>
-</section>
+<section><h2>Example 5 — Same Surface, Different Presentation</h2>
+<p>Consider <strong>a b b<sup>−1</sup> a<sup>−1</sup></strong>. The adjacent inverse pair b b<sup>−1</sup> is a cancellable feature in the standard polygonal-presentation calculus, leaving the benchmark sphere pattern a a<sup>−1</sup>.</p>
+<p>Thus the presentation again yields S².</p>
+<p><strong>Reasoning lesson:</strong> polygonal words are presentations, not canonical names.</p></section>
 
-<section>
-<h2>Example 6 — Genus Two: Do Not Guess from the Octagon</h2>
+<section><h2>Example 6 — Genus Two: Do Not Guess from the Octagon</h2>
 <p>Consider the standard orientable genus-two word</p>
 <p class="math-result"><strong>a b a<sup>−1</sup> b<sup>−1</sup> c d c<sup>−1</sup> d<sup>−1</sup>.</strong></p>
-<p>There are four edge classes: a,b,c,d. The standard endpoint identifications place all eight polygon vertices into one quotient vertex class. The polygon interior contributes one face.</p>
-<p>Thus</p>
-<p class="math-result"><strong>(V,E,F)=(1,4,1), χ=1−4+1=−2.</strong></p>
-<p>The word consists of two orientable commutator blocks, the standard pattern for a closed orientable surface of genus two.</p>
-<p><strong>Reasoning lesson:</strong> “octagon” is not the topological answer. The edge word is the relevant quotient data.</p>
-</section>
+<p>There are four quotient edge classes. The standard endpoint identifications place all eight polygon vertices into one quotient vertex class, and the polygon interior gives one face.</p>
+<p class="math-result"><strong>(V,E,F)=(1,4,1), χ=−2.</strong></p>
+<p>The word consists of two orientable commutator blocks, the standard genus-two pattern.</p></section>
 
-<section>
-<h2>Example 7 — Same χ Does Not Mean Same Surface</h2>
-<p>Return to the torus and Klein bottle:</p>
-<div class="table-wrap" tabindex="0" role="region" aria-label="Torus and Klein bottle invariant comparison">
-<table>
+<section><h2>Example 7 — Same χ Does Not Mean Same Surface</h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Torus and Klein bottle comparison"><table>
 <thead><tr><th>Presentation</th><th>V</th><th>E</th><th>F</th><th>χ</th><th>Orientability</th></tr></thead>
-<tbody>
-<tr><td>a b a⁻¹ b⁻¹</td><td>1</td><td>2</td><td>1</td><td>0</td><td>Orientable</td></tr>
-<tr><td>a b a b⁻¹</td><td>1</td><td>2</td><td>1</td><td>0</td><td>Nonorientable</td></tr>
-</tbody>
-</table>
-</div>
-<p>They share χ=0 but are not homeomorphic.</p>
-<p><strong>Reasoning lesson:</strong> a numerical invariant can fail to distinguish two spaces. Never reverse the logic “different invariant implies different” into “same invariant implies same.”</p>
-</section>
+<tbody><tr><td>a b a⁻¹ b⁻¹</td><td>1</td><td>2</td><td>1</td><td>0</td><td>Orientable</td></tr>
+<tr><td>a b a b⁻¹</td><td>1</td><td>2</td><td>1</td><td>0</td><td>Nonorientable</td></tr></tbody></table></div>
+<p>They share χ=0 but are not homeomorphic. Never reverse “different invariant implies different” into “same invariant implies same.”</p></section>
 
-<section>
-<h2>Example 8 — A Quotient That Requires a Local Check</h2>
-<p>Suppose a polygonal construction is altered so that more boundary material is collapsed or identified in a way not covered by our paired-edge surface theorem. A drawing may still appear surface-like away from the special quotient point.</p>
-<p>Do not name the result immediately. Let p be the suspicious quotient point and inspect q<sup>−1</sup>(p). Ask whether a sufficiently small neighborhood of p is homeomorphic to an open disk. If it branches, pinches, or otherwise fails the local Euclidean condition, the quotient is not a surface at p.</p>
-<p><strong>Reasoning lesson:</strong> the surface condition is local. Familiar global appearance cannot repair a singular neighborhood.</p>
-</section>
+<section><h2>Example 8 — A Quotient That Requires a Local Check</h2>
+<p>Suppose boundary material is collapsed or identified in a way not covered by an established paired-edge surface construction. Let p be a suspicious quotient point. Inspect q<sup>−1</sup>(p) and determine whether a sufficiently small neighborhood of p is locally Euclidean.</p>
+<p>If the neighborhood branches, pinches, or otherwise fails the required local model, the quotient is not a surface at p.</p>
+<aside class="callout"><strong>Later connection:</strong> Arc 02 will turn this local-neighborhood question into a combinatorial audit using stars and links.</aside></section>
 
-<section class="error-section">
-<h2>Example 9 — Debugging a False Solution</h2>
-<p><strong>Student claim:</strong> “The square has four vertices, four edges, and one face, so every square gluing has χ=4−4+1=1.”</p>
-<p><strong>Diagnosis:</strong> the student counted cells in the polygon before taking the quotient.</p>
-<p><strong>Correction:</strong> V and E in the quotient cell decomposition are equivalence-class counts. For the standard torus, four corners become one vertex class and four sides become two edge classes, giving χ=1−2+1=0.</p>
-<p><strong>Transfer rule:</strong> perform identifications first; count quotient cells second.</p>
-</section>
+<section><h2>Example 9 — Debugging a False Solution</h2>
+<p><strong>Claim:</strong> “The square has four vertices, four edges, and one face, so every square gluing has χ=1.”</p>
+<p><strong>Diagnosis:</strong> cells were counted before quotient identifications.</p>
+<p><strong>Correction:</strong> for the torus, four corners become one quotient vertex and four sides become two quotient edges, so χ=1−2+1=0.</p>
+<p><strong>Transfer rule:</strong> perform identifications first; count quotient cells second.</p></section>
 
-<section>
-<h2>Example 10 — Evidence Ladder</h2>
-<p>Suppose you encounter an unfamiliar edge word and obtain V=1, E=3, F=1, hence χ=−1.</p>
-<p>What may you conclude immediately?</p>
-<ul>
-<li>You may report χ=−1 for the verified cell structure.</li>
-<li>You may compare this value with benchmark surfaces whose invariants are already known.</li>
-<li>You may investigate orientability.</li>
-<li>You may <strong>not</strong> invoke a classification theorem that the course has not yet established merely to name the surface.</li>
-</ul>
-<p><strong>Reasoning lesson:</strong> mathematical maturity includes knowing the boundary of the argument you currently possess.</p>
-</section>
+<section><h2>Example 10 — Evidence Ladder</h2>
+<p>Suppose an unfamiliar edge word gives a verified cell structure V=1,E=3,F=1, hence χ=−1. At this stage you may report χ, compare with established benchmark invariants, and investigate orientability. You may not invoke a classification theorem that the course has not yet established merely to name the surface.</p>
+<p><strong>Reasoning lesson:</strong> mathematical maturity includes knowing the boundary of the argument currently available.</p></section>
 
-<section class="practice-section">
-<h2>Independent Try — Before Looking at Later Solutions</h2>
-<ol>
+<section class="practice"><h2>Independent Try</h2><ol>
 <li>For a b a⁻¹ b⁻¹, reconstruct the endpoint relations without copying Example 1.</li>
 <li>Explain exactly why a a and a a⁻¹ produce different vertex counts.</li>
 <li>For a b a b⁻¹, show that all four square corners lie in one equivalence class.</li>
 <li>Compute χ for the genus-two word in Example 6.</li>
-<li>Write one sentence explaining why χ(T²)=χ(Klein bottle) does not imply the spaces are homeomorphic.</li>
-<li>Describe a local-neighborhood test you would apply to a suspicious quotient vertex.</li>
-</ol>
-</section>
+<li>Explain why χ(T²)=χ(Klein bottle) does not imply homeomorphism.</li>
+<li>Describe a local-neighborhood test for a suspicious quotient vertex.</li>
+<li>For each answer, label which steps are direct quotient computations and which use an established benchmark result.</li>
+</ol></section>
 
-<section class="checklist-section">
-<h2>Worked-Example Checklist</h2>
-<p>When you write your own solution, include:</p>
-<ul class="checklist">
-<li>boundary word and convention;</li>
-<li>paired-edge list;</li>
-<li>endpoint relations;</li>
-<li>vertex equivalence classes;</li>
-<li>V,E,F;</li>
-<li>χ calculation;</li>
-<li>orientation evidence when relevant;</li>
-<li>local surface check when relevant;</li>
-<li>conclusion stated no more strongly than the evidence permits.</li>
-</ul>
-</section>
+<section><h2>Worked-Example Checklist</h2><ul class="checks">
+<li>boundary word and convention;</li><li>paired-edge list;</li><li>endpoint relations;</li><li>vertex equivalence classes;</li>
+<li>V,E,F;</li><li>χ calculation;</li><li>orientation evidence when relevant;</li><li>local surface check when relevant;</li>
+<li>conclusion stated no more strongly than the evidence permits.</li></ul></section>
 
-<section>
-<h2>Accessibility</h2>
-<p>No example depends on color. Every presentation is encoded as text. When diagrams are later added, each must include a textual boundary word, traversal direction, edge-pair list, and endpoint correspondence.</p>
-</section>
+<section><h2>Accessibility</h2><p>No example depends on color. Every presentation is encoded as text. Any future diagram must also provide boundary order, traversal direction, edge-pair data, and endpoint correspondence in text. No paid software, physical model, or external learner website is required.</p></section>
 
-<footer>
-<h2>Resource Record</h2>
-<ul>
-<li><strong>Creator:</strong> Khaemenes Academy</li>
-<li><strong>Originality:</strong> Original worked-example exposition</li>
-<li><strong>Version:</strong> 0.9.1 hardened research draft</li>
-<li><strong>Required external learner dependency:</strong> None</li>
-<li><strong>Next:</strong> Lesson 04 — Edge Identification Proof Workshop</li>
-</ul>
-</footer>
+<footer><h2>Resource Record</h2><ul>
+<li><strong>Creator:</strong> Khaemenes Academy</li><li><strong>Arc:</strong> 01 — Foundational Surface Quotients</li>
+<li><strong>Position:</strong> Self-Paced Lesson 03</li><li><strong>Originality:</strong> Original worked-example exposition</li>
+<li><strong>Version:</strong> 0.9.1 corrected hardened research draft</li><li><strong>Required external learner dependency:</strong> None</li>
+<li><strong>Next:</strong> Lesson 04 — Edge Identification Proof Workshop</li></ul></footer>
 </article></main>
-<footer class="site-footer"><p>Khaemenes Academy · Free, self-paced higher learning.</p><p class="screen-only">No external learner dependency is required.</p></footer>
-<script src="lesson.js" defer></script>
-</body>
-</html>
+<footer class="site-footer">Khaemenes Academy · Free, self-paced higher learning.</footer><script src="lesson.js" defer></script></body></html>

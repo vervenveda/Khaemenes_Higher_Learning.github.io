@@ -4,17 +4,9 @@
 **Arc:** 01 — Foundational Surface Quotients  
 **Delivery:** Self-Paced
 
-Models the complete quotient-identification process through benchmark and progressively more challenging examples, including error analysis, invariant limitations, local surface checks, and limits of inference.
+Ten worked examples demonstrate the complete polygonal-surface identification audit: edge words, endpoint relations, vertex equivalence classes, quotient-cell counts, Euler characteristic, orientability evidence, local surface checks, error diagnosis, and limits of inference.
 
-## Hardened folder
-- standalone student-facing HTML
-- local `lesson.css`
-- local `lesson.js`
-- metadata
-- verification notes
-- SHA-256 manifest
+This corrected hardening pass aligns all benchmark schemas with Lessons 01–02 and removes obsolete Week/Unit scheduling language while preserving the stable legacy ID.
 
-The Independent Try section prints as a clean worksheet with response space, while the online lesson remains compact and readable.
-
-**Status:** Hardened research draft `0.9.1`  
+**Status:** Corrected hardened research draft `0.9.1`  
 **Next:** Lesson 04 — Edge Identification Proof Workshop
