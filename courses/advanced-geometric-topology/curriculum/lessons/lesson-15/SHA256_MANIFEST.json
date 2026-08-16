@@ -1,0 +1,13 @@
+{
+  "algorithm": "SHA-256",
+  "resource_id": "KH-MATH-AGT-L15-SR02",
+  "release": "0.9.1-hardened",
+  "files": {
+    "lesson.css": "567f598e232138c89a46eede1a729fe9651271002db1ce84b8efc3c532f87100",
+    "README.md": "440e55cbfdfda1d9ed48c198645c112537dd4dce00ca62271cf12361b7787f01",
+    "KH-MATH-AGT-L15-SR02_verification-notes.md": "f99c2fa3589a270b067d286de14728c8eb2865bdafbb126798d49a13aa8e9b8b",
+    "KH-MATH-AGT-L15-SR02_metadata.json": "a1c3edf11901bdd618650f73beeea468fa30b04f6c4f931f5cb9602a90f005c0",
+    "KH-MATH-AGT-L15-SR02_arc-02-solutions-remediation.html": "5484dd56c962cdeb311850873ffe98056784d1ef726d8a221034a5ac46a4e2c3",
+    "lesson.js": "3e408f41a93d89c0a57acfca9da38ea0aac256224773b12031c66bc15f63cc9d"
+  }
+}

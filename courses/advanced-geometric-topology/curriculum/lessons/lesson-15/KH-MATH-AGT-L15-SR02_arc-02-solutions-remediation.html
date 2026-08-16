@@ -1,0 +1,249 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Khaemenes Academy Advanced Geometric Topology Lesson 15: Arc 02 Solutions and Remediation.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Lesson 15 · Arc 02 Solutions &amp; Remediation</title><link rel="stylesheet" href="lesson.css"></head><body>
+<a class="skip-link" href="#lesson-content">Skip to solutions</a>
+<header class="academy-header"><div><span class="eyebrow">Khaemenes Academy · Higher Learning</span><strong>Advanced Geometric Topology</strong></div><div class="lesson-meta"><span>Lesson 15</span><span>Arc 02</span><span>Solutions &amp; Remediation</span></div></header>
+<nav class="lesson-actions screen-only"><button id="printLesson" type="button">Print Commentary</button><a href="../">Lesson Directory</a></nav>
+<main id="lesson-content" class="lesson-page" tabindex="-1"><article data-resource-id="KH-MATH-AGT-L15-SR02">
+<header>
+<h1>Arc 02 Solutions &amp; Remediation</h1>
+<p><strong>Advanced Geometric Topology · Self-Paced Lesson 15</strong></p>
+<p><strong>Resource ID:</strong> KH-MATH-AGT-L15-SR02</p>
+<p><strong>Companion:</strong> Lesson 14 — Arc 02 Problem Set</p>
+<p><strong>Coverage:</strong> Lessons 09–13</p>
+</header>
+
+<section class="use-note">
+<h2>How to Use This Lesson</h2>
+<p>Attempt Lesson 14 before consulting this commentary. Compare your reasoning, not just your final answer. When your work differs, locate the first mathematical step where the logic diverges.</p>
+<p>For combinatorial topology, a correct final number is not enough if the facet list, incidence count, link computation, or simplicial-map audit is incorrect.</p>
+</section>
+
+<section>
+<h2>Part I — Simplices, Complexes &amp; Realization</h2>
+
+<div class="solution"><h3>1. Face closure</h3>
+<p>The collection is not a simplicial complex. Since {a,b,c} is present, all nonempty faces must also be present. The missing face is {b,c}. Adding {b,c} repairs the face-closure defect.</p>
+<p class="note"><strong>Diagnostic:</strong> when a 2-simplex is listed, immediately audit all three edges and all three vertices.</p></div>
+
+<div class="solution"><h3>2. Generated complex</h3>
+<p>Facets: abc, acd, ade.</p>
+<p>Vertices: a,b,c,d,e.</p>
+<p>Edges: ab, ac, bc, ad, cd, ae, de.</p>
+<p>Triangles: abc, acd, ade.</p>
+<p>Thus the complex has f-vector (5,7,3).</p></div>
+
+<div class="solution"><h3>3. Dimension</h3>
+<p>A simplex with nine vertices has dimension 8. In general, a simplex with k+1 vertices has dimension k.</p></div>
+
+<div class="solution"><h3>4. f-vector</h3>
+<p>For facets abc and acd, the vertices are a,b,c,d; the distinct edges are ab,bc,ac,cd,ad; and there are two triangles. Thus</p>
+<p class="math-result"><strong>f=(4,5,2), χ=4−5+2=1.</strong></p></div>
+
+<div class="solution"><h3>5. K versus |K|</h3>
+<p>K is the abstract combinatorial object: a face-closed collection of finite vertex sets. |K| is a topological space obtained by geometrically realizing those simplices and their incidences. One is combinatorial data; the other is the realized space.</p></div>
+
+<div class="solution"><h3>6. Triangulation</h3>
+<p>To say that K triangulates X, we require a homeomorphism |K|→X. A drawing that resembles X is not sufficient.</p></div>
+</section>
+
+<section>
+<h2>Part II — Stars, Links &amp; Local Manifold Tests</h2>
+
+<div class="solution"><h3>7. Cycle link</h3>
+<p>The triangles vab, vbc, vcd, vda give link vertices a,b,c,d and link edges ab,bc,cd,da. This is a cycle, hence its realization is homeomorphic to S¹. Therefore v has the local combinatorial type of an interior 2-manifold vertex.</p></div>
+
+<div class="solution"><h3>8. Boundary link</h3>
+<p>The triangles vab, vbc, vcd produce link edges ab,bc,cd, so Lk(v) is the path a-b-c-d. Its realization is an interval. This is compatible with a boundary vertex of a triangulated 2-manifold with boundary.</p></div>
+
+<div class="solution"><h3>9. Three sheets</h3>
+<p>The edge ab lies in triangles abc, abd, abe. The link of ab consists of the three vertices c,d,e. An interior edge of a triangulated 2-manifold should have a two-point link, and a boundary edge a one-point link. Three points therefore signal a nonmanifold edge.</p></div>
+
+<div class="solution"><h3>10. Pinched vertex</h3>
+<p>Each disk contributes an interval link at the chosen boundary vertex. Identifying the two vertices without identifying the surrounding sectors makes the new link a disjoint union of two intervals. Since that link is neither a single interval nor a circle, the identified point is nonmanifold.</p></div>
+
+<div class="solution"><h3>11. Purity</h3>
+<p>Example: take three triangles abc, abd, abe. Every facet is 2-dimensional, so the complex is pure. But edge ab belongs to three triangles, so its link has three vertices and the complex fails the 2-manifold condition.</p>
+<p class="note"><strong>Lesson:</strong> purity is necessary in our audit, but it is not sufficient.</p></div>
+
+<div class="solution"><h3>12. Local versus global</h3>
+<p>A disjoint union of two triangulated tori works. Every vertex link is a circle, so all local manifold tests pass. The realization is nevertheless disconnected.</p></div>
+</section>
+
+<section>
+<h2>Part III — Subdivision &amp; Invariance</h2>
+
+<div class="solution"><h3>13. Edge subdivision</h3>
+<p>Subdivide edge ab of triangle abc by adding m. Replace abc by amc and mbc.</p>
+<p>Vertices: a,b,c,m → V=4.</p>
+<p>Edges: am,mb,ac,bc,mc → E=5.</p>
+<p>Faces: amc,mbc → F=2.</p>
+<p class="math-result"><strong>χ=4−5+2=1.</strong></p></div>
+
+<div class="solution"><h3>14. Starring a triangle</h3>
+<p>Add an interior vertex x and replace abc by abx,bcx,cax. Then ΔV=+1, ΔE=+3, ΔF=+2, so</p>
+<p class="math-result"><strong>Δχ=1−3+2=0.</strong></p></div>
+
+<div class="solution"><h3>15. Barycentric subdivision</h3>
+<p>A triangle has 7 nonempty faces: 3 vertices, 3 edges, 1 triangle, so sd K has 7 vertices.</p>
+<p>There are 6 maximal face chains vertex⊂edge⊂triangle, hence 6 small triangles.</p>
+<p>The subdivision has 12 edges. Therefore</p>
+<p class="math-result"><strong>χ=7−12+6=1.</strong></p></div>
+
+<div class="solution"><h3>16. Face chains</h3>
+<p>Examples include:</p>
+<ul>
+<li>{a}⊂{a,b}⊂{a,b,c}</li>
+<li>{b}⊂{a,b}⊂{a,b,c}</li>
+<li>{c}⊂{b,c}⊂{a,b,c}</li>
+</ul>
+<p>Each strict chain determines one triangular simplex in sd K.</p></div>
+
+<div class="solution"><h3>17. False subdivision</h3>
+<p>Attaching cde only at c is not a subdivision because the new triangle is not contained in the original triangle abc, and the underlying polyhedron has changed. It also changes the local structure at c rather than merely refining the existing simplices.</p></div>
+
+<div class="solution"><h3>18. Local preservation</h3>
+<p>Subdivide the interior edge ab shared by abc and abd using midpoint m. The four new triangles are amc,mbc,amd,mbd.</p>
+<p>Lk(m) has vertices a,c,b,d with edges ac,cb,bd,da. This is a cycle, so m is an interior manifold vertex.</p></div>
+</section>
+
+<section>
+<h2>Part IV — Simplicial Maps</h2>
+
+<div class="solution"><h3>19. Map audit</h3>
+<p>Source facets are abc and acd. Under a↦x, b↦y, c↦z, d↦y:</p>
+<ul><li>abc↦{x,y,z}, a simplex of L;</li><li>acd↦{x,z,y}={x,y,z}, also a simplex of L.</li></ul>
+<p>Hence the vertex rule is simplicial.</p></div>
+
+<div class="solution"><h3>20. Collapse</h3>
+<p>abc maps to the vertex set {x,y}. Thus the source 2-simplex collapses to a 1-simplex. One dimension is lost.</p></div>
+
+<div class="solution"><h3>21. Failure</h3>
+<p>Example: let L contain the three vertices x,y,z and the edges xy and yz, but not the triangle xyz. The assignment a↦x, b↦y, c↦z fails to be simplicial because the source triangle abc maps to {x,y,z}, which is not a simplex of L.</p></div>
+
+<div class="solution"><h3>22. Realization</h3>
+<p>By the affine realization rule,</p>
+<p class="math-result"><strong>|f|(p)=(1/4)x+(1/4)y+(1/2)z.</strong></p></div>
+
+<div class="solution"><h3>23. Composition</h3>
+<p>If σ is a simplex of K, f(σ) is a simplex of L because f is simplicial. Then g(f(σ)) is a simplex of M because g is simplicial. Hence g∘f is simplicial.</p></div>
+
+<div class="solution"><h3>24. Isomorphism test</h3>
+<p>We need a simplicial map with a simplicial inverse. For finite abstract complexes, this means a bijection on vertices that preserves simplices in both directions.</p></div>
+</section>
+
+<section>
+<h2>Part V — Simplicial Approximation</h2>
+
+<div class="solution"><h3>25. Coarse interval</h3>
+<p>If the target is the path x-y-z and xz is not an edge, then the source edge ab would map to the vertex set {x,z}, which is not a simplex of the target. Therefore the vertex rule a↦x, b↦z is not simplicial.</p></div>
+
+<div class="solution"><h3>26. Repair by subdivision</h3>
+<p>After inserting m, define a↦x, m↦y, b↦z. The source edge am maps to xy, and mb maps to yz. Both are target edges, so the subdivided vertex rule is simplicial.</p></div>
+
+<div class="solution"><h3>27. Star criterion</h3>
+<p>The operational criterion used in Lesson 13 is</p>
+<p class="math-result"><strong>F(st(v))⊆st(g(v))</strong></p>
+<p>for each source vertex v, using open stars.</p></div>
+
+<div class="solution"><h3>28. Homotopy discipline</h3>
+<p>F=|g| means the two maps agree at every point. F≃|g| means there exists a homotopy continuously deforming one map into the other. Homotopy is a weaker relation than equality.</p></div>
+
+<div class="solution"><h3>29. Bad reasoning</h3>
+<p>Choosing the visually nearest target vertex does not guarantee that source simplices map to target simplices, does not verify the open-star criterion, and may depend on a triangulation that is too coarse. Visual closeness is not a theorem hypothesis.</p></div>
+
+<div class="solution"><h3>30. Why subdivision helps</h3>
+<p>Barycentric subdivision makes source simplices and open stars progressively smaller. This provides finer combinatorial resolution, making it possible to choose target vertices whose stars contain the images of source stars under the continuous map.</p></div>
+</section>
+
+<section>
+<h2>Part VI — Integrated Forensics</h2>
+
+<div class="solution"><h3>31. Full complex audit</h3>
+<p>Facets: abc, acd, ade, aeb.</p>
+<p>Vertices: a,b,c,d,e, so V=5.</p>
+<p>Distinct edges: ab,bc,ac,cd,ad,de,ae,eb, so E=8.</p>
+<p>Faces: 4, hence</p>
+<p class="math-result"><strong>χ=5−8+4=1.</strong></p>
+<p>Edge incidences:</p>
+<ul>
+<li>ab, ac, ad, ae each lie in two triangles;</li>
+<li>bc, cd, de, eb each lie in one triangle.</li>
+</ul>
+<p>Vertex links:</p>
+<ul>
+<li>Lk(a) has edges bc,cd,de,eb, giving the path c-b-e-d-c? Careful: with vertices b,c,d,e and edges bc,cd,de,eb, this is the 4-cycle b-c-d-e-b. Thus a is interior.</li>
+<li>Lk(b) has edges ac and ae, giving path c-a-e, so b is boundary.</li>
+<li>Lk(c) has edges ab and ad, giving path b-a-d, so c is boundary.</li>
+<li>Lk(d) has edges ac and ae, giving path c-a-e, so d is boundary.</li>
+<li>Lk(e) has edges ad and ab, giving path d-a-b, so e is boundary.</li>
+</ul>
+<p>Thus |K| is locally a 2-manifold with boundary. In fact, the boundary cycle is b-c-d-e-b.</p>
+<p class="note"><strong>Critical audit point:</strong> edge ab must be counted twice. This is the exact Lesson 09 correction.</p></div>
+
+<div class="solution"><h3>32. Map after refinement</h3>
+<p>Answers vary. A correct example must include a source whose current simplices are too coarse to map into the chosen target simplices, followed by a valid subdivision and a complete facet audit. The subdivided interval x-y-z example from Lessons 12–13 is the minimal model; stronger answers construct a genuinely 2-dimensional example.</p></div>
+
+<div class="solution"><h3>33. Invariant versus presentation</h3>
+<p>Different triangulations can have different f-vectors because the number of simplices depends on the chosen combinatorial decomposition. Euler characteristic uses the alternating sum f0−f1+f2, which is preserved under valid subdivision and depends on the underlying topological space rather than the particular finite triangulation.</p></div>
+
+<div class="solution"><h3>34. Homeomorphism warning</h3>
+<p>A homeomorphism |K|→|L| is a continuous bijection with continuous inverse; it need not carry vertices to vertices or simplices linearly onto simplices. Therefore homeomorphic realizations need not be simplicially isomorphic in their original triangulations.</p></div>
+
+<div class="solution"><h3>35. Proof boundary</h3>
+<ul>
+<li><strong>Direct combinatorial check:</strong> (a) every facet maps to a target simplex.</li>
+<li><strong>Theorem/standard construction:</strong> (b) the realization of a simplicial map is continuous.</li>
+<li><strong>Theorem-based conclusion:</strong> (c) sufficiently subdivided continuous maps admit simplicial approximation up to homotopy.</li>
+<li><strong>Direct combinatorial check:</strong> (d) a listed link is a 5-cycle.</li>
+</ul></div>
+
+<div class="solution"><h3>36. Synthesis</h3>
+<p>Strong responses explain that Arc 02 replaces informal pictures with controlled combinatorial structures: simplices encode incidence, links encode local manifold behavior, subdivisions refine without changing topology, and simplicial maps encode continuous behavior combinatorially. The key discipline is to keep the model distinct from the space it represents. f-vectors, facet lists, and vertex maps may change, while topological properties such as local manifold type, Euler characteristic, and homotopy information can persist. The strongest responses also separate direct combinatorial verification from theorem-based conclusions.</p></div>
+</section>
+
+<section class="remediation">
+<h2>Diagnostic Remediation Map</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>If you struggled with…</th><th>Return to…</th></tr></thead>
+<tbody>
+<tr><td>Face closure, facets, f-vectors, realization</td><td>Lesson 09</td></tr>
+<tr><td>Stars, links, boundary/nonmanifold tests</td><td>Lesson 10</td></tr>
+<tr><td>Subdivision, barycentric subdivision, Euler invariance</td><td>Lesson 11</td></tr>
+<tr><td>Simplicial maps and realization</td><td>Lesson 12</td></tr>
+<tr><td>Simplicial approximation and star criterion</td><td>Lesson 13</td></tr>
+<tr><td>Integrated forensic reasoning</td><td>Repeat selected Lesson 14 problems after targeted review</td></tr>
+</tbody>
+</table></div>
+</section>
+
+<section class="correction">
+<h2>Correction Protocol</h2>
+<ol>
+<li><strong>Error:</strong> identify the first incorrect combinatorial or logical step.</li>
+<li><strong>Correction:</strong> replace it with a verified step.</li>
+<li><strong>Cause:</strong> name the concept that failed—face closure, incidence count, link, subdivision, simplex compatibility, or homotopy logic.</li>
+<li><strong>Transfer:</strong> write a rule for detecting the same error in a new problem.</li>
+</ol>
+</section>
+
+<section>
+<h2>Accessibility</h2>
+<p>All solutions are expressible through simplex lists, incidence counts, link graphs, and written reasoning. No color, physical model, paid software, or external learner website is required.</p>
+</section>
+
+<footer>
+<h2>Resource Record</h2>
+<ul>
+<li><strong>Creator:</strong> Khaemenes Academy</li>
+<li><strong>Arc:</strong> 02 — Triangulations &amp; Combinatorial Surfaces</li>
+<li><strong>Position:</strong> Self-Paced Lesson 15</li>
+<li><strong>Version:</strong> 0.9.1 hardened research draft</li>
+<li><strong>Required external learner dependency:</strong> None</li>
+<li><strong>Next:</strong> Lesson 16 — Arc 02 Mastery Assessment</li>
+</ul>
+</footer>
+</article></main>
+<footer class="site-footer">Khaemenes Academy · Free, self-paced higher learning.</footer><script src="lesson.js" defer></script></body></html>
