@@ -1,0 +1,13 @@
+{
+  "algorithm": "SHA-256",
+  "resource_id": "KH-MATH-AGT-W01-WE01",
+  "release": "0.9.1-hardened",
+  "files": {
+    "KH-MATH-AGT-W01-WE01_metadata.json": "57ad897e27496e46ddec6d0b648724c085fb46d70214582b3977274da4b12a0b",
+    "KH-MATH-AGT-W01-WE01_verification-notes.md": "e64bae0db982f71f3c2a38b435d453b53fa3aceb95fb96e31c82d3f9363aad95",
+    "KH-MATH-AGT-W01-WE01_worked-surface-identification-examples.html": "7d80c2e6b0e47c2c69f5913fe078c6dd9d6dfe48ae29cc1bd6d7015dbfbe1ecb",
+    "README.md": "835fda8e15c90580f0c2b9083222963ba856e1063b3a759650b9f00943463ec9",
+    "lesson.css": "70e19e9ceab23248c8754d986558bdecd1fb6b7c450e09f7f1ea60d0b1fe160b",
+    "lesson.js": "50f293e1cf35c1f5fef9a96fc7ca9c12fb2bb490f5ac3704dfb0449617ea0347"
+  }
+}
