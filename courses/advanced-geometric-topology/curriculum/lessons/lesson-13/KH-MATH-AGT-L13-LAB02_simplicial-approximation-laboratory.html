@@ -1,0 +1,258 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Khaemenes Academy Advanced Geometric Topology Lesson 13: Simplicial Approximation Laboratory.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Lesson 13 · Simplicial Approximation Laboratory</title><link rel="stylesheet" href="lesson.css"></head><body>
+<a class="skip-link" href="#lesson-content">Skip to laboratory</a>
+<header class="academy-header"><div><span class="eyebrow">Khaemenes Academy · Higher Learning</span><strong>Advanced Geometric Topology</strong></div><div class="lesson-meta"><span>Lesson 13</span><span>Arc 02</span><span>Laboratory</span></div></header>
+<nav class="lesson-actions screen-only"><button id="printLesson" type="button">Print Laboratory</button><a href="../">Lesson Directory</a></nav>
+<main id="lesson-content" class="lesson-page" tabindex="-1"><article data-resource-id="KH-MATH-AGT-L13-LAB02">
+<header>
+<h1>Simplicial Approximation Laboratory</h1>
+<p><strong>Advanced Geometric Topology · Self-Paced Lesson 13</strong></p>
+<p><strong>Resource ID:</strong> KH-MATH-AGT-L13-LAB02</p>
+<p><strong>Arc 02:</strong> Triangulations &amp; Combinatorial Surfaces</p>
+<p><strong>Mode:</strong> inspect → subdivide → choose vertices → verify → compare → justify</p>
+</header>
+
+<section class="purpose">
+<h2>Laboratory Question</h2>
+<p>How can a continuous map between triangulated spaces be replaced, after suitable subdivision, by a simplicial map that preserves the homotopy information we care about?</p>
+<p class="math-result"><strong>continuous map → finer triangulation → simplicial approximation → homotopy comparison</strong></p>
+</section>
+
+<section>
+<h2>Learning Targets</h2>
+<ul>
+<li>Recognize when a given continuous map is not simplicial for the current triangulation.</li>
+<li>Use barycentric subdivision to create a finer source complex.</li>
+<li>Apply a practical star-based simplicial-approximation criterion.</li>
+<li>Construct a simplicial map from a vertex assignment.</li>
+<li>Verify that every source simplex maps to a target simplex.</li>
+<li>Distinguish exact equality of maps from homotopy.</li>
+<li>Record experimental/combinatorial evidence separately from theorem-based conclusions.</li>
+<li>Produce a reproducible map-audit record.</li>
+</ul>
+</section>
+
+<section>
+<h2>1. Laboratory Setup</h2>
+<p>Let K and L be finite simplicial complexes and let F:|K|→|L| be continuous. A simplicial approximation g:K→L is not chosen arbitrarily. Its vertex images must reflect where F sends sufficiently small neighborhoods around the source vertices.</p>
+<p>One standard criterion is:</p>
+<p class="math-result"><strong>F(st<sub>K</sub>(v)) ⊆ st<sub>L</sub>(g(v))</strong></p>
+<p>for every vertex v of K, where st denotes the open star. When the current triangulation is too coarse to satisfy such choices, subdividing K can make the stars smaller.</p>
+<aside class="callout"><strong>Scope:</strong> this laboratory uses the star criterion as an operational tool. A full proof of the simplicial approximation theorem is deferred.</aside>
+</section>
+
+<section>
+<h2>2. Evidence Vocabulary</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Status</th><th>Meaning in this laboratory</th></tr></thead>
+<tbody>
+<tr><td>Observation</td><td>A pattern seen in a map sketch, vertex table, or star image.</td></tr>
+<tr><td>Verification</td><td>A direct check that a vertex map sends every source simplex to a target simplex.</td></tr>
+<tr><td>Theorem use</td><td>An inference justified by the simplicial approximation theorem or another established result.</td></tr>
+<tr><td>Homotopy claim</td><td>A statement that two maps are continuously deformable into one another, not necessarily equal.</td></tr>
+<tr><td>Counterexample</td><td>An example showing why a proposed rule is too strong.</td></tr>
+</tbody>
+</table></div>
+</section>
+
+<section class="record">
+<h2>3. Map Audit Record</h2>
+<div class="student-fields"><span>Name: ________________________</span><span>Date: ______________</span><span>Attempt: ______</span></div>
+<p>For each investigation, record:</p>
+<ol>
+<li>source complex and facets;</li>
+<li>target complex and facets;</li>
+<li>continuous-map description;</li>
+<li>current source stars;</li>
+<li>whether subdivision is needed;</li>
+<li>chosen vertex images;</li>
+<li>source-facet image audit;</li>
+<li>dimension collapses, if any;</li>
+<li>relationship between F and |g|;</li>
+<li>status of each conclusion: observation / verification / theorem use.</li>
+</ol>
+<div class="record-grid">
+<div><strong>Source / target complexes</strong><span></span></div>
+<div><strong>Continuous map</strong><span></span></div>
+<div><strong>Subdivision decision</strong><span></span></div>
+<div><strong>Vertex assignment</strong><span></span></div>
+<div class="wide"><strong>Facet image audit</strong><span></span></div>
+<div class="wide"><strong>Homotopy / conclusion record</strong><span></span></div>
+</div>
+</section>
+
+<section class="investigation">
+<h2>Investigation A — A Map Already Simplicial</h2>
+<p>Let K be the triangular circle with vertices a,b,c and edges ab,bc,ca. Let L be the triangular circle with vertices x,y,z and edges xy,yz,zx.</p>
+<p>Define F on vertices by a↦x, b↦y, c↦z and extend linearly on each edge.</p>
+<ol>
+<li>Verify directly that the vertex rule is simplicial.</li>
+<li>Describe |F| on each source edge.</li>
+<li>Explain why no subdivision is needed.</li>
+<li>Determine whether this map is a simplicial isomorphism.</li>
+</ol>
+</section>
+
+<section class="investigation">
+<h2>Investigation B — A Valid Collapse</h2>
+<p>Use the same source and target circles, but define a↦x, b↦x, c↦y.</p>
+<ol>
+<li>Audit the images of ab,bc,ca.</li>
+<li>Determine whether the vertex rule is simplicial.</li>
+<li>Identify which simplex collapses in dimension.</li>
+<li>Explain why simpliciality does not imply homeomorphism.</li>
+<li>Describe the induced map qualitatively.</li>
+</ol>
+</section>
+
+<section class="investigation">
+<h2>Investigation C — A Coarse Triangulation That Fails</h2>
+<p>Let K be a single edge ab and let L be a path with vertices x-y-z. Consider a continuous map F:[a,b]→|L| whose image runs from x through y to z.</p>
+<p>A vertex rule using only a and b cannot map the source edge to the two-edge path x-y-z because the image of one source simplex must be a single simplex of L.</p>
+<ol>
+<li>Explain why the coarse source triangulation cannot encode this map simplicially.</li>
+<li>Subdivide ab by inserting m.</li>
+<li>Define a↦x, m↦y, b↦z.</li>
+<li>Verify that am maps to xy and mb maps to yz.</li>
+<li>Explain how subdivision made the simplicial description possible.</li>
+</ol>
+<p><strong>Reasoning lesson:</strong> subdivision creates combinatorial resolution.</p>
+</section>
+
+<section class="investigation">
+<h2>Investigation D — Star Criterion on a Subdivided Interval</h2>
+<p>Continue with the subdivided interval a-m-b and the target path x-y-z.</p>
+<ol>
+<li>List the open star of each source vertex.</li>
+<li>Describe where F sends those stars.</li>
+<li>For each source vertex v, check whether F(st(v)) lies in the open star of the proposed image vertex g(v).</li>
+<li>Record whether the star criterion is satisfied.</li>
+</ol>
+<p>This investigation separates two tasks: verifying that g is simplicial and verifying that g is compatible with the continuous map F in the sense required for simplicial approximation.</p>
+</section>
+
+<section class="investigation">
+<h2>Investigation E — One Barycentric Subdivision</h2>
+<p>Take a single triangle abc. Form its barycentric subdivision sd K.</p>
+<ol>
+<li>List the seven subdivision vertices by the faces of K they represent.</li>
+<li>List the six small triangular facets as chains vertex⊂edge⊂triangle.</li>
+<li>Choose a target triangle xyz.</li>
+<li>Design a vertex assignment from sd K to xyz that is simplicial.</li>
+<li>Audit all six small triangles.</li>
+<li>Record any collapsed triangles or edges.</li>
+</ol>
+</section>
+
+<section class="investigation">
+<h2>Investigation F — Equality vs. Homotopy</h2>
+<p>Suppose g:sd<sup>n</sup>K→L is obtained from the simplicial approximation theorem for a continuous map F:|K|→|L|.</p>
+<ol>
+<li>Write the correct conclusion using the homotopy symbol ≃.</li>
+<li>Explain why F and |g| need not agree point-by-point.</li>
+<li>Give one reason algebraic topology may still permit replacing F by |g|.</li>
+<li>State one type of claim that would require more than homotopy equivalence of maps.</li>
+</ol>
+</section>
+
+<section class="investigation">
+<h2>Investigation G — Diagnose a Bad Approximation Claim</h2>
+<blockquote>“I chose the nearest target vertex for every source vertex. Therefore my vertex map is automatically a simplicial approximation.”</blockquote>
+<p>Identify at least three possible failures in this argument. Your analysis should address:</p>
+<ul>
+<li>simplex compatibility;</li>
+<li>the star criterion;</li>
+<li>dependence on the triangulation;</li>
+<li>the difference between visual closeness and a theorem hypothesis.</li>
+</ul>
+</section>
+
+<section class="investigation">
+<h2>Investigation H — Build a Map That Needs Refinement</h2>
+<p>Create your own finite source complex K, target complex L, and continuous-map description F such that the current triangulation is too coarse for your intended simplicial encoding.</p>
+<ol>
+<li>Explain precisely why the original triangulation fails.</li>
+<li>Perform one valid subdivision.</li>
+<li>Give a new vertex assignment.</li>
+<li>Audit all source facets.</li>
+<li>State whether the new map is merely simplicial or is also supported as a simplicial approximation to F.</li>
+</ol>
+</section>
+
+<section class="investigation">
+<h2>Investigation I — Counterexample Laboratory</h2>
+<p>Test each proposed rule:</p>
+<ol>
+<li>“Every continuous map between realizations is simplicial for the original triangulations.”</li>
+<li>“If a vertex map is simplicial, then it is a homeomorphism.”</li>
+<li>“If two maps are homotopic, then they are equal.”</li>
+<li>“Subdivision changes the homotopy type of the source.”</li>
+<li>“A visually close vertex assignment is automatically a simplicial approximation.”</li>
+</ol>
+<p>For each statement, prove it from established results or supply a counterexample/reason it fails.</p>
+</section>
+
+<section class="investigation">
+<h2>Investigation J — Reproducibility Exchange</h2>
+<p>Give your Investigation H record to another learner, or set it aside and return later. Using only the written record, reconstruct:</p>
+<ul>
+<li>the source and target complexes;</li>
+<li>the subdivision;</li>
+<li>the proposed vertex map;</li>
+<li>the facet audit;</li>
+<li>the approximation conclusion.</li>
+</ul>
+<p>Revise any ambiguous notation until the construction is reproducible.</p>
+</section>
+
+<section class="report">
+<h2>Final Laboratory Report</h2>
+<p>Your final submission should contain:</p>
+<ul>
+<li>completed audits for Investigations A–E;</li>
+<li>a precise equality-vs.-homotopy analysis for F;</li>
+<li>the repaired argument from G;</li>
+<li>your original refinement problem from H;</li>
+<li>counterexamples or proofs for I;</li>
+<li>the reproducibility revision from J;</li>
+<li>a conclusion answering the laboratory question;</li>
+<li>a separate section titled <strong>What I verified directly and what I concluded by theorem</strong>.</li>
+</ul>
+</section>
+
+<section>
+<h2>Mastery Rubric</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Dimension</th><th>Mastery evidence</th></tr></thead>
+<tbody>
+<tr><td>Simplicial-map accuracy</td><td>Every source simplex is correctly checked against the target complex.</td></tr>
+<tr><td>Subdivision logic</td><td>Refinement is used only when valid and necessary.</td></tr>
+<tr><td>Star criterion</td><td>Neighborhood compatibility is checked rather than assumed visually.</td></tr>
+<tr><td>Homotopy discipline</td><td>“Equal” and “homotopic” are never conflated.</td></tr>
+<tr><td>Proof boundary</td><td>Theorem-based conclusions are separated from direct combinatorial verification.</td></tr>
+<tr><td>Reproducibility</td><td>Another learner can reconstruct the map from the written record.</td></tr>
+</tbody>
+</table></div>
+</section>
+
+<section>
+<h2>Accessibility</h2>
+<p>All maps may be represented by facet lists, vertex tables, and star data. Diagrams are optional. No color distinction, physical model, paid software, or external learner website is required.</p>
+</section>
+
+<footer>
+<h2>Resource Record</h2>
+<ul>
+<li><strong>Creator:</strong> Khaemenes Academy</li>
+<li><strong>Arc:</strong> 02 — Triangulations &amp; Combinatorial Surfaces</li>
+<li><strong>Position:</strong> Self-Paced Lesson 13</li>
+<li><strong>Version:</strong> 0.9.1 hardened research draft</li>
+<li><strong>Required external learner dependency:</strong> None</li>
+<li><strong>Next:</strong> Lesson 14 — Arc 02 Problem Set</li>
+</ul>
+</footer>
+</article></main>
+<footer class="site-footer">Khaemenes Academy · Free, self-paced higher learning.</footer><script src="lesson.js" defer></script></body></html>

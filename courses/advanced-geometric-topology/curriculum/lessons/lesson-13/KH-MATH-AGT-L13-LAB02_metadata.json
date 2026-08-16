@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0.0",
+  "resource_id": "KH-MATH-AGT-L13-LAB02",
+  "title": "Simplicial Approximation Laboratory",
+  "resource_type": "mathematical-laboratory",
+  "course": {
+    "course_id": "advanced-geometric-topology",
+    "arc": 2,
+    "lesson": 13,
+    "delivery": "self-paced"
+  },
+  "academic": {
+    "level": "advanced-undergraduate-graduate-preparatory",
+    "topics": [
+      "simplicial approximation",
+      "open-star criterion",
+      "barycentric subdivision",
+      "homotopy",
+      "simplicial-map verification",
+      "map refinement"
+    ],
+    "skills": [
+      "apply a star criterion",
+      "decide when subdivision is needed",
+      "construct simplicial approximations",
+      "audit facet images",
+      "distinguish equality from homotopy",
+      "build counterexamples",
+      "produce reproducible map records"
+    ]
+  },
+  "relationships": {
+    "requires": [
+      "KH-MATH-AGT-L11-R03",
+      "KH-MATH-AGT-L12-R04"
+    ],
+    "next": [
+      "KH-MATH-AGT-L14-PS02"
+    ]
+  },
+  "provenance": {
+    "creator": "Khaemenes Academy",
+    "originality": "original",
+    "license": "TO_BE_DEFINED"
+  },
+  "editorial": {
+    "status": "hardened-research-draft",
+    "version": "0.9.1",
+    "reviewed": false,
+    "last_revision": "2026-08-16"
+  },
+  "accessibility": {
+    "diagram_required": false,
+    "color_required": false,
+    "physical_model_required": false,
+    "printable": true,
+    "keyboard_accessible": true
+  },
+  "security": {
+    "network_connections": false,
+    "external_runtime_dependencies": [],
+    "content_security_policy": true
+  },
+  "dependencies": {
+    "student_external_dependencies": []
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "algorithm": "SHA-256",
+  "resource_id": "KH-MATH-AGT-L13-LAB02",
+  "release": "0.9.1-hardened",
+  "files": {
+    "lesson.css": "6489d471777241a6232723f704fc46fb421969a472a8932b4b0d9fad48d0535e",
+    "README.md": "cf95adc203a295c24dbe7298404835f085eac63ee3f09d439dfe57bd414e777d",
+    "KH-MATH-AGT-L13-LAB02_verification-notes.md": "08f842b13838c391f94226c175869a5d3fa5e1b7486edd7f96647725bdec887b",
+    "KH-MATH-AGT-L13-LAB02_metadata.json": "094248d46e251f3c0b07ecf062fdffd86b4cb0554566258cfacc064b4b2da00b",
+    "KH-MATH-AGT-L13-LAB02_simplicial-approximation-laboratory.html": "002eb88880ddf09bf001a30f622dacf6038b833009e3b7bbe6fd0b64983be061",
+    "lesson.js": "3e408f41a93d89c0a57acfca9da38ea0aac256224773b12031c66bc15f63cc9d"
+  }
+}
