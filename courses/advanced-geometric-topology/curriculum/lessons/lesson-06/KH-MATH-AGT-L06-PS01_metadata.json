@@ -2,18 +2,30 @@
   "schema_version": "1.0.0",
   "resource_id": "KH-MATH-AGT-L06-PS01",
   "title": "Surface Identification Problem Set",
-  "resource_type": "problem-set",
+  "resource_type": "mastery-oriented-problem-set",
   "course": {
     "course_id": "advanced-geometric-topology",
     "arc": 1,
     "lesson": 6,
-    "delivery": "self-paced"
+    "delivery": "self-paced-assessment"
   },
   "assessment": {
     "problem_count": 30,
     "mastery_threshold_percent": 80,
-    "solution_embedded": false,
-    "independent_attempt_required": true
+    "student_solutions_embedded": false,
+    "major_error_gate": [
+      "quotient-identification",
+      "proof-logic"
+    ],
+    "sections": 6,
+    "capstone_words": "300\u2013500",
+    "weights": {
+      "foundations": 15,
+      "identification": 25,
+      "invariants": 20,
+      "proof_logic": 25,
+      "synthesis": 15
+    }
   },
   "relationships": {
     "requires": [
@@ -27,26 +39,28 @@
       "KH-MATH-AGT-L07-SC01"
     ]
   },
+  "editorial": {
+    "status": "hardened",
+    "version": "1.0.0",
+    "reviewed": true,
+    "last_revision": "2026-08-16"
+  },
   "provenance": {
     "creator": "Khaemenes Academy",
     "originality": "original",
     "license": "TO_BE_DEFINED"
   },
-  "editorial": {
-    "status": "hardened-research-draft",
-    "version": "0.9.1",
-    "reviewed": false,
-    "last_revision": "2026-08-16"
-  },
-  "accessibility": {
-    "keyboard_accessible": true,
-    "printable": true,
-    "color_required": false,
-    "external_site_required": false
+  "dependencies": {
+    "student_external_dependencies": []
   },
   "security": {
     "network_connections": false,
     "external_runtime_dependencies": [],
     "content_security_policy": true
+  },
+  "accessibility": {
+    "printable": true,
+    "color_required": false,
+    "diagram_required": false
   }
 }

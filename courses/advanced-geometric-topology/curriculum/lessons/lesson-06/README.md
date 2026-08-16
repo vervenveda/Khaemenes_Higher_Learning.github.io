@@ -6,7 +6,16 @@
 
 Thirty independent problems covering foundations, quotient audits, invariant logic, higher-complexity presentations, proof/forensics, and synthesis.
 
-The hardened version preserves the live problem sequence while turning it into a professional printable assessment with response space, student/scoring fields, section page breaks, and a dedicated capstone writing page. No solutions are embedded.
+## Repeat-audit result
+The live problem sequence passed the second mathematical audit and has been preserved. This corrected package hardens presentation and assessment delivery rather than replacing sound problems.
 
-**Mastery threshold:** 80%, with no unresolved major quotient-identification or proof-logic error.  
+- 30 problems
+- six sections
+- printable response space
+- dedicated capstone page
+- no embedded solutions
+- 80% recommended mastery threshold
+- major quotient-identification/proof-logic errors must be resolved
+
+**Status:** Hardened `1.0.0`  
 **Next:** Lesson 07 — Solutions & Mathematical Commentary

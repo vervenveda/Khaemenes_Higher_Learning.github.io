@@ -1,13 +1,13 @@
 {
   "algorithm": "SHA-256",
   "resource_id": "KH-MATH-AGT-L06-PS01",
-  "release": "0.9.1-hardened",
+  "release": "1.0.0-hardened",
   "files": {
-    "lesson.css": "99742d0b3c9a7719daefd2137c297faf0fc7f02eba539d8b2c3a4102bb7e697a",
-    "README.md": "c9b68ae8ee34c107494ee9621922e2d2cddda6eaaa1ad775923a30a8935fa463",
-    "KH-MATH-AGT-L06-PS01_surface-identification-problem-set.html": "c60777667d1251840151bf19a275761d6eff6f453fbc842a1d41007a06e8f3fa",
-    "KH-MATH-AGT-L06-PS01_metadata.json": "cc66e9ddc9763bd406be48cc82e4ec4f622213fdab141a2014119796f4d1ff9d",
-    "KH-MATH-AGT-L06-PS01_verification-notes.md": "964eed410910336088673d9a67f324edbb92b1ae61b2e031e23351b0cb9b5817",
-    "lesson.js": "3e408f41a93d89c0a57acfca9da38ea0aac256224773b12031c66bc15f63cc9d"
+    "lesson.css": "9b6248f5596b7ca48438f1a0076e5c8fccdca36023ca360e5cc693b818601349",
+    "README.md": "06e84a6307cb385a442894bdbf9cc98e615118ead2b303577c1afcd60b9e895e",
+    "KH-MATH-AGT-L06-PS01_surface-identification-problem-set.html": "eddb93ab65cf3ecd6d8bb8ef4c397bc403e167b567917a7cda92ec17a12a21b6",
+    "KH-MATH-AGT-L06-PS01_metadata.json": "095fef764c1d911a85f4ce770b18c72c8ee19c2e4de80206708ccfbdbceb6954",
+    "KH-MATH-AGT-L06-PS01_verification-notes.md": "6d92a0f5946ab922c3152b1bc6b5978d185bb8ad3eaf6644b3db65c4a5b998bc",
+    "lesson.js": "3c0809a18b2ea496b23fb1fa8ab75998de1a6bf5a12e2e2e88b7a82f1a77d309"
   }
 }
