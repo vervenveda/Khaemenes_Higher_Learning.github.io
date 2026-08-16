@@ -1,0 +1,13 @@
+{
+  "algorithm": "SHA-256",
+  "resource_id": "KH-MATH-AGT-W01-PW01",
+  "release": "0.9.1-hardened",
+  "files": {
+    "lesson.css": "fadc9ac17333408b33c00f6c9b91235e50e5ba8c94c3045bdc5c6157a9b20fc3",
+    "README.md": "3f81bcd11e33776a54de4aeb8378236114f27ec3de87d72182e2620333cb30cd",
+    "KH-MATH-AGT-W01-PW01_verification-notes.md": "1530d132c3b94fcc10ba26c0c3972026f9356ef485c39ad966297bbd25932a7a",
+    "KH-MATH-AGT-W01-PW01_edge-identification-proof-workshop.html": "7d715b272c773ffaccc48d1e2b08ef8bc6391c1a7f75d4f1be00bd1916cfe8cb",
+    "lesson.js": "3e408f41a93d89c0a57acfca9da38ea0aac256224773b12031c66bc15f63cc9d",
+    "KH-MATH-AGT-W01-PW01_metadata.json": "9308c2ef77eb8323c743c0513ae24de4713ba66ee4f5af4f58077379e2367b65"
+  }
+}

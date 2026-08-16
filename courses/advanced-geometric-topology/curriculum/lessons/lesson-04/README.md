@@ -1,9 +1,12 @@
 # Lesson 04 — Edge Identification Proof Workshop
 
-**Resource:** `KH-MATH-AGT-W01-PW01`
+**Resource:** `KH-MATH-AGT-W01-PW01` *(legacy stable ID)*  
+**Arc:** 01 — Foundational Surface Quotients  
+**Delivery:** Self-Paced
 
-Transfers responsibility from worked examples to the learner through proof construction, proof debugging, equivalence-class reasoning, invariant logic, and local manifold arguments.
+Builds proof-writing discipline for quotient surfaces: endpoint relations, cell-count arguments, counterexamples, local-surface proof strategy, proof-gap detection, and overclaim repair.
 
-**Role:** Proof workshop  
-**Course:** Advanced Geometric Topology · Self-Paced  
+The hardened lesson is standalone, dependency-free, responsive, keyboard accessible, and print-ready.
+
+**Status:** Hardened research draft `0.9.1`  
 **Next:** Lesson 05 — Polygon Gluing & Surface Classification Laboratory
