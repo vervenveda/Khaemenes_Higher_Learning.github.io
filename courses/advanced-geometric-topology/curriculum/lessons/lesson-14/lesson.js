@@ -1,0 +1,1 @@
+'use strict';(()=>{const b=document.getElementById('printLesson');if(b)b.addEventListener('click',()=>window.print());})();

@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "resource_id": "KH-MATH-AGT-L14-PS02",
+  "title": "Arc 02 Problem Set",
+  "resource_type": "problem-set",
+  "course": {
+    "course_id": "advanced-geometric-topology",
+    "arc": 2,
+    "lesson": 14,
+    "delivery": "self-paced"
+  },
+  "academic": {
+    "level": "advanced-undergraduate-graduate-preparatory",
+    "coverage": [
+      "KH-MATH-AGT-L09-R02",
+      "KH-MATH-AGT-L10-CR02",
+      "KH-MATH-AGT-L11-R03",
+      "KH-MATH-AGT-L12-R04",
+      "KH-MATH-AGT-L13-LAB02"
+    ],
+    "problem_count": 36,
+    "skills": [
+      "face enumeration",
+      "f-vector and Euler characteristic",
+      "link analysis",
+      "manifold diagnostics",
+      "subdivision",
+      "barycentric subdivision",
+      "simplicial-map audits",
+      "simplicial approximation",
+      "homotopy discipline",
+      "integrated proof reasoning"
+    ]
+  },
+  "relationships": {
+    "requires": [
+      "KH-MATH-AGT-L09-R02",
+      "KH-MATH-AGT-L10-CR02",
+      "KH-MATH-AGT-L11-R03",
+      "KH-MATH-AGT-L12-R04",
+      "KH-MATH-AGT-L13-LAB02"
+    ],
+    "next": [
+      "KH-MATH-AGT-L15-SR02"
+    ]
+  },
+  "provenance": {
+    "creator": "Khaemenes Academy",
+    "originality": "original",
+    "license": "TO_BE_DEFINED"
+  },
+  "editorial": {
+    "status": "hardened-research-draft",
+    "version": "0.9.1",
+    "reviewed": false,
+    "last_revision": "2026-08-16"
+  },
+  "accessibility": {
+    "diagram_required": false,
+    "color_required": false,
+    "physical_model_required": false,
+    "printable": true,
+    "keyboard_accessible": true
+  },
+  "security": {
+    "network_connections": false,
+    "external_runtime_dependencies": [],
+    "content_security_policy": true
+  },
+  "dependencies": {
+    "student_external_dependencies": []
+  }
+}
