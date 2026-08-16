@@ -24,7 +24,13 @@
       "vertex equivalence",
       "Euler characteristic",
       "orientability"
-    ]
+    ],
+    "benchmark_presentations": {
+      "sphere": "a a^-1",
+      "real_projective_plane": "a a",
+      "torus": "a b a^-1 b^-1",
+      "klein_bottle": "a b a b^-1"
+    }
   },
   "relationships": {
     "companion_to": [
@@ -34,6 +40,12 @@
       "KH-MATH-AGT-W01-WE01",
       "KH-MATH-AGT-W01-PW01",
       "KH-MATH-AGT-W01-LAB01"
+    ],
+    "requires": [
+      "KH-MATH-AGT-W01-R01"
+    ],
+    "next": [
+      "KH-MATH-AGT-W01-WE01"
     ]
   },
   "provenance": {
@@ -57,8 +69,8 @@
     "print_stylesheet": true
   },
   "security": {
-    "external_runtime_dependencies": [],
     "network_connections": false,
+    "external_runtime_dependencies": [],
     "content_security_policy": true,
     "forms": false
   },

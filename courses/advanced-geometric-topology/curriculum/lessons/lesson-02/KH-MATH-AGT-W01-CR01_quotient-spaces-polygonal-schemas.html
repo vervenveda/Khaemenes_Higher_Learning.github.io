@@ -99,16 +99,16 @@
 <h2>7. Benchmark Models</h2>
 <div class="table-wrap" tabindex="0" role="region" aria-label="Benchmark surface models">
 <table>
-<thead><tr><th>Surface</th><th>Useful polygonal-model idea</th><th>Orientability preview</th></tr></thead>
+<thead><tr><th>Surface</th><th>Benchmark boundary word</th><th>Quotient data</th></tr></thead>
 <tbody>
-<tr><td>Sphere S²</td><td>Boundary arcs can be paired to give a spherical quotient</td><td>Orientable</td></tr>
-<tr><td>Torus T²</td><td>Opposite sides of a square paired in the standard torus pattern</td><td>Orientable</td></tr>
-<tr><td>Real projective plane RP²</td><td>Boundary data includes an orientation-reversing identification pattern</td><td>Nonorientable</td></tr>
-<tr><td>Klein bottle</td><td>One direction is paired with a twist relative to the other</td><td>Nonorientable</td></tr>
+<tr><td>Sphere S²</td><td><strong>a a<sup>−1</sup></strong></td><td>V=2, E=1, F=1; χ=2; orientable</td></tr>
+<tr><td>Real projective plane RP²</td><td><strong>a a</strong></td><td>V=1, E=1, F=1; χ=1; nonorientable</td></tr>
+<tr><td>Torus T²</td><td><strong>a b a<sup>−1</sup> b<sup>−1</sup></strong></td><td>V=1, E=2, F=1; χ=0; orientable</td></tr>
+<tr><td>Klein bottle</td><td><strong>a b a b<sup>−1</sup></strong></td><td>V=1, E=2, F=1; χ=0; nonorientable</td></tr>
 </tbody>
 </table>
 </div>
-<p>These are benchmark presentations, not uniqueness claims.</p>
+<p>These are benchmark presentations under the course convention, not uniqueness claims. Different polygonal presentations may describe homeomorphic surfaces.</p>
 </section>
 
 <section>
@@ -142,6 +142,8 @@
 <p>In the standard square presentation, all four corners are identified, the four sides form two edge classes, and the interior is one face. Thus (V,E,F)=(1,2,1).</p>
 <h3>C. Nonexample warning</h3>
 <p>If an identification creates a quotient point whose neighborhood branches or otherwise fails to look locally like an open disk, the quotient is not a surface at that point.</p>
+<h3>D. Same labels, different directions</h3>
+<p>The 2-gon words <strong>a a</strong> and <strong>a a<sup>−1</sup></strong> use the same repeated label but induce different endpoint correspondences. Under the course convention, they give the benchmark projective-plane and sphere presentations respectively. This is why pairing direction is part of the data.</p>
 </section>
 
 <section class="audit-section">
@@ -203,7 +205,7 @@
 <ul>
 <li><strong>Creator:</strong> Khaemenes Academy</li>
 <li><strong>Originality:</strong> Original reference exposition</li>
-<li><strong>Version:</strong> 0.9.1 hardened research draft</li>
+<li><strong>Version:</strong> 0.9.1 corrected hardened research draft</li>
 <li><strong>License:</strong> To be defined by Khaemenes Academy</li>
 <li><strong>Required external learner dependency:</strong> None</li>
 <li><strong>Primary companion:</strong> Lesson 01 — Building Surfaces from Polygons</li>

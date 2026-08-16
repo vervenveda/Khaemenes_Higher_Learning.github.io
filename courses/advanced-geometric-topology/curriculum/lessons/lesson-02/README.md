@@ -4,17 +4,19 @@
 **Arc:** 01 — Foundational Surface Quotients  
 **Delivery:** Self-Paced
 
-A reusable concept reference for equivalence relations, quotient topology, boundary words, vertex equivalence, Euler characteristic, benchmark polygonal presentations, and critical distinctions used throughout the course.
+A reusable concept reference for equivalence relations, quotient topology, boundary words, endpoint equivalence, quotient-cell counts, Euler characteristic, orientability, and local-surface diagnostics.
 
-## Hardened folder
-- standalone student-facing HTML
-- local `lesson.css`
-- local `lesson.js`
-- metadata
-- verification notes
-- SHA-256 manifest
+## Corrected hardening pass
+This release aligns Lesson 02 with the corrected Lesson 01 benchmark convention and explicitly records:
 
-The page is responsive, keyboard accessible, dependency-free, and print-ready. Tables remain scrollable on small screens and convert to clean printable tables on paper.
+- `a a^-1` — sphere
+- `a a` — real projective plane
+- `a b a^-1 b^-1` — torus
+- `a b a b^-1` — Klein bottle
 
-**Status:** Hardened research draft `0.9.1`  
+It preserves the legacy resource ID while using the self-paced Arc/Lesson architecture.
+
+The page remains standalone, responsive, keyboard accessible, dependency-free, and print-ready.
+
+**Status:** Corrected hardened research draft `0.9.1`  
 **Next:** Lesson 03 — Worked Surface Identification Examples
