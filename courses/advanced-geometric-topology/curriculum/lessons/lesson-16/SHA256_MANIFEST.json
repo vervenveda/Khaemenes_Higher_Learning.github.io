@@ -1,0 +1,13 @@
+{
+  "algorithm": "SHA-256",
+  "resource_id": "KH-MATH-AGT-L16-MA02",
+  "release": "0.9.1-hardened",
+  "files": {
+    "KH-MATH-AGT-L16-MA02_arc-02-mastery-assessment.html": "46956385b5f6aeb1cd628c9da320f544ea192e0ed732c52c891b571368f1473f",
+    "lesson.css": "a991d60f6298e6c8c66ebce228b58a534da53ca813277df0500f0649a10a30ab",
+    "README.md": "60614ffa4994ce69233090993fe4201271c8378cc5b0400782636b0bf6ca5d57",
+    "KH-MATH-AGT-L16-MA02_metadata.json": "73aa35f4d5a658be214da43da47e7565845974a7611f5a56b6d31842ae92ba21",
+    "KH-MATH-AGT-L16-MA02_verification-notes.md": "2c126491d22bd4393b788b03e5af68cccfbf445697392304685c87b8cc7e22b9",
+    "lesson.js": "3c0809a18b2ea496b23fb1fa8ab75998de1a6bf5a12e2e2e88b7a82f1a77d309"
+  }
+}

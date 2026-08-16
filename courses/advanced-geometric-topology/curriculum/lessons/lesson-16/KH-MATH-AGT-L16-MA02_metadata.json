@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "resource_id": "KH-MATH-AGT-L16-MA02",
+  "title": "Arc 02 Mastery Assessment",
+  "resource_type": "mastery-assessment",
+  "course": {
+    "course_id": "advanced-geometric-topology",
+    "arc": 2,
+    "lesson": 16,
+    "delivery": "self-paced"
+  },
+  "academic": {
+    "coverage_lessons": [
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "item_count": 18,
+    "total_points": 100,
+    "suggested_mastery_percent": 80,
+    "domains": {
+      "complexes_local_structure": 24,
+      "subdivision_invariance": 20,
+      "simplicial_maps": 24,
+      "simplicial_approximation": 20,
+      "integrated_reasoning": 12
+    }
+  },
+  "assessment_integrity": {
+    "student_package_contains_answers": false,
+    "recycled_lesson14_questions": false
+  },
+  "relationships": {
+    "requires": [
+      "KH-MATH-AGT-L09-R02",
+      "KH-MATH-AGT-L10-CR02",
+      "KH-MATH-AGT-L11-R03",
+      "KH-MATH-AGT-L12-R04",
+      "KH-MATH-AGT-L13-LAB02",
+      "KH-MATH-AGT-L14-PS02",
+      "KH-MATH-AGT-L15-SR02"
+    ]
+  },
+  "editorial": {
+    "status": "hardened-research-draft",
+    "version": "0.9.1",
+    "last_revision": "2026-08-16"
+  },
+  "security": {
+    "network_connections": false,
+    "external_runtime_dependencies": []
+  },
+  "accessibility": {
+    "printable": true,
+    "diagram_required": false,
+    "external_site_required": false
+  }
+}
