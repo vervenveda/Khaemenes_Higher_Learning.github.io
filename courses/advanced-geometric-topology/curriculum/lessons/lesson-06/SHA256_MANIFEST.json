@@ -1,0 +1,13 @@
+{
+  "algorithm": "SHA-256",
+  "resource_id": "KH-MATH-AGT-L06-PS01",
+  "release": "0.9.1-hardened",
+  "files": {
+    "lesson.css": "99742d0b3c9a7719daefd2137c297faf0fc7f02eba539d8b2c3a4102bb7e697a",
+    "README.md": "c9b68ae8ee34c107494ee9621922e2d2cddda6eaaa1ad775923a30a8935fa463",
+    "KH-MATH-AGT-L06-PS01_surface-identification-problem-set.html": "c60777667d1251840151bf19a275761d6eff6f453fbc842a1d41007a06e8f3fa",
+    "KH-MATH-AGT-L06-PS01_metadata.json": "cc66e9ddc9763bd406be48cc82e4ec4f622213fdab141a2014119796f4d1ff9d",
+    "KH-MATH-AGT-L06-PS01_verification-notes.md": "964eed410910336088673d9a67f324edbb92b1ae61b2e031e23351b0cb9b5817",
+    "lesson.js": "3e408f41a93d89c0a57acfca9da38ea0aac256224773b12031c66bc15f63cc9d"
+  }
+}
