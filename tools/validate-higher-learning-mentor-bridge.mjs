@@ -20,6 +20,8 @@ assert.ok(start.includes("khaemenes-naib-mentor-router.js"),"Higher Learning ent
 assert.ok(mentor.includes("Khaemenes Higher Learning · Scholar Mentor"),"mentor surface must exist");
 assert.ok(mentor.includes("allowLockedAssessmentDisclosure:false"),"mentor transport must forbid locked assessment disclosure");
 assert.ok(mentor.includes("allowProgressionBypass:false"),"mentor transport must forbid progression bypass");
-assert.ok(mentor.includes("https://vervenveda.com/assets/vnv-beta-link.js"),"mentor surface must preserve canonical Beta doorway");
+const canonicalBetaWidget=mentor.includes("https://vervenveda.com/assets/vnv-beta-link.js");
+const canonicalBetaFallback=mentor.includes('href="https://vervenveda.com/beta/"');
+assert.ok(canonicalBetaWidget||canonicalBetaFallback,"mentor surface must preserve a canonical Beta doorway (widget or CSP-safe fallback)");
 
 console.log("Khaemenes Higher Learning mentor bridge: PASS");
