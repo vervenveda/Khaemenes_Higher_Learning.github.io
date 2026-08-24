@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "school": "Khaemenes Higher Learning",
+  "stage": "higher",
+  "audience": ["higher-learning", "adult", "educator"],
+  "mentorAuthority": "academy-archaemenes",
+  "mentorId": "archaemenes",
+  "mentorName": "Archaemenes",
+  "mentorExpression": "Scholar",
+  "mentorUrl": "https://vervenveda.com/Khaemenes_Academy.github.io/mentor/",
+  "mentorIdentityAuthority": "academy-family-registry",
+  "routingAuthority": "NAIB",
+  "progressionAuthority": "course-engine-or-faculty",
+  "masteryThresholdMinimum": 80,
+  "masterDirectoryPolicy": {
+    "canonicalNamesImmutable": true,
+    "renameEstablishedPrograms": false,
+    "renameRepositories": false,
+    "renameRoutes": false,
+    "renameStorageKeys": false,
+    "clarifyFunctionThroughMetadata": true
+  },
+  "establishedPrograms": [
+    {
+      "name": "Career Assessment",
+      "canonicalNameUnchanged": true,
+      "programType": "career-assessment"
+    },
+    {
+      "name": "Assessment Mentor",
+      "canonicalNameUnchanged": true,
+      "programType": "career-assessment-support-tool",
+      "competingAcademyMentorIdentity": false
+    },
+    {
+      "name": "Career Mentor Hub",
+      "canonicalNameUnchanged": true,
+      "programType": "career-guidance-workspace",
+      "competingAcademyMentorIdentity": false
+    },
+    {
+      "name": "Career Star",
+      "canonicalNameUnchanged": true,
+      "programType": "career-reflection-tool"
+    },
+    {
+      "name": "directory-agi",
+      "canonicalNameUnchanged": true,
+      "programType": "career-resource-directory"
+    }
+  ],
+  "principles": [
+    "Archaemenes is the one continuous educational Mentor of Khaemenes Academy.",
+    "Higher Learning uses the Scholar expression of Archaemenes.",
+    "The Academy Family Registry supplies canonical learner identity for enrolled or self-directed adult scholars.",
+    "NAIB routes and delegates without becoming a second educational Mentor.",
+    "Career Mentor Hub, Assessment Mentor, and every other established Master Directory name remain unchanged.",
+    "Program names do not confer Academy-wide mentor identity or protected academic authority.",
+    "Course engines and responsible faculty remain authoritative for mastery, grades, progression, certificates, and protected assessment state."
+  ],
+  "authority": {
+    "awardsMastery": false,
+    "changesGrades": false,
+    "changesPlacement": false,
+    "changesLearnerIdentity": false,
+    "bypassesPrerequisites": false,
+    "revealsLockedAssessments": false,
+    "manufacturesUnlocks": false
+  },
+  "primary": [
+    {
+      "id": "archaemenes",
+      "name": "Archaemenes",
+      "role": "Educational Mentor",
+      "expression": "Scholar",
+      "scope": ["advanced study", "proof and reasoning", "research guidance", "synthesis", "independent scholarship", "academic planning", "support handoff"]
+    }
+  ]
+}
