@@ -1,11 +1,11 @@
 (function attachKhaemenesHigherLearningBridge(global){
   "use strict";
 
-  const VERSION="1.2.0";
+  const VERSION="1.3.0";
   const EXPECTED_STAGE="higher";
   const COURSE_PREFIX="higher";
   const ACADEMY_BASE="https://vervenveda.com/Khaemenes_Academy.github.io";
-  const MENTOR_URL="https://vervenveda.com/Khaemenes_Higher_Learning.github.io/mentor/";
+  const MENTOR_URL=`${ACADEMY_BASE}/mentor/`;
 
   function registry(){return global.KhaemenesFamilyRegistry||null}
   function clean(value,max=160){return String(value??"").replace(/[\u0000-\u001f\u007f]/g,"").trim().slice(0,max)}
@@ -112,6 +112,9 @@
       learnerId:s.scholar?.learnerId||null,
       learnerType:s.scholar?.selfDirectedAdult?"adult-self-directed":"higher-learning-scholar",
       displayName:s.scholar?.nickname||null,
+      mentorId:"archaemenes",
+      mentorExpression:"scholar",
+      mentorAuthority:"academy-archaemenes",
       masteryThresholdMinimum:80,
       authority:Object.freeze({
         changesPlacement:false,
@@ -127,6 +130,9 @@
   global.KhaemenesHigherLearningBridge=Object.freeze({
     version:VERSION,
     expectedStage:EXPECTED_STAGE,
+    mentorId:"archaemenes",
+    mentorAuthority:"academy-archaemenes",
+    mentorUrl:MENTOR_URL,
     status,
     activate,
     scopedCourseKey,
