@@ -2,7 +2,7 @@
 
 **Repository:** Khaemenes Higher Learning  
 **Validation date:** 2026-08-25  
-**Status:** Source-level identity consolidation complete; interactive multi-learner browser acceptance remains the final runtime test boundary.
+**Status:** Source-level identity consolidation complete and CI-enforced; interactive multi-learner browser acceptance remains the final runtime test boundary.
 
 ## Purpose
 
@@ -41,6 +41,14 @@ Certificate and completion-name fields use the active Academy scholar rather tha
 
 Scholar Entry is a bridge, not an account creator. It recognizes an Academy Higher Learning learner when one exists and routes new enrollment through the Academy enrollment/family pathway. It does not create an independent Higher Learning learner identity.
 
+## Automated identity-boundary guard
+
+Source-level identity authority is now checked automatically by `tools/validate-higher-learning-identity-boundary.mjs` and `.github/workflows/identity-boundary-validation.yml` on pushes to `main` and on pull requests.
+
+The guard verifies the shared Academy Registry authority contract, fail-closed learner persistence, learner-scoped Higher Learning storage, protected wrapper coverage, certificate identity boundaries, the complete Coding 101–303 family, the nine shared mathematics engines, Advanced Geometric Topology storage ordering, Scholar Entry's non-account-creator role, mentor non-persistence, inert core snapshots, and the absence of Registry identifiers in public wrapper URL construction.
+
+The first CI execution correctly failed because three validator assertions tested implementation labels rather than the implementation behavior. The validator was corrected without weakening or rewriting working application code. The corrected Higher Learning Identity Boundary workflow then completed successfully. This history is retained as evidence that the guard fails closed rather than silently blessing an incorrect assumption.
+
 ## Source audit result
 
 No remaining reviewed Higher Learning surface was found that should independently create, rename, switch, or delete a learner account.
@@ -49,9 +57,9 @@ Static federation/catalog data is not learner identity. Curriculum-only pages an
 
 ## Deployment status
 
-The repaired source is on the repository's canonical `main` branch. GitHub Pages deployment has completed successfully for the repaired branch during this validation sequence.
+The repaired source is on the repository's canonical `main` branch. The corrected identity-boundary workflow, Beta index coverage workflow, and GitHub Pages deployment all completed successfully against the same repaired source state during this validation sequence.
 
-A successful deployment proves that the repository builds and publishes. It does **not** by itself prove multi-learner browser behavior, local-storage isolation, migration semantics, prompt interception, or import/export behavior.
+A successful source validator and deployment prove the checked repository boundary and publication path. They do **not** by themselves prove multi-learner browser behavior, local-storage isolation under real learner switching, migration semantics on an existing device, prompt interception, or import/export behavior under every runtime state.
 
 ## Final browser acceptance matrix
 
@@ -74,4 +82,4 @@ The following runtime tests remain the final acceptance boundary:
 
 ## Acceptance rule
 
-The Higher Learning identity consolidation is **source-complete** when the Academy Registry is the only learner identity authority in the repository. It becomes **runtime-complete** after the browser acceptance matrix above passes under clean, one-scholar, and multi-scholar device states.
+The Higher Learning identity consolidation is **source-complete** when the Academy Registry is the only learner identity authority in the repository and the automated identity-boundary guard remains green. It becomes **runtime-complete** after the browser acceptance matrix above passes under clean, one-scholar, and multi-scholar device states.
