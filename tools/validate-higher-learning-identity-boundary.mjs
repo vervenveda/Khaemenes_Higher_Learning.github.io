@@ -56,12 +56,14 @@ expect(courseAdapter.includes('studentSelect'), "mathematics adapter locks legac
 expect(courseAdapter.includes('addLearner'), "mathematics adapter locks legacy learner creation controls");
 
 const profileAdapter = includes("assets/khaemenes-higher-learning-profile-adapter.js", [
-  'identityAuthority:"academy-family-registry"',
-  'noScholarPersistence:"fail-closed"'
+  'identityAuthority:"academy-family-registry"'
 ]);
+expect(profileAdapter.includes('if(key===LEGACY_PROFILE_KEY){if(scholar)savePreferencesObject'), "profile adapter fails closed for profile writes without an Academy scholar");
+expect(profileAdapter.includes('if(key===PINNED_KEY){if(scholar?.learnerId)rawSet'), "profile adapter fails closed for pinned-course writes without an Academy scholar");
+expect(profileAdapter.includes('if(key===FAVORITES_KEY){if(scholar?.learnerId)rawSet'), "profile adapter fails closed for resource-favorite writes without an Academy scholar");
 expect(!/legacy[^\n]{0,120}name[^\n]{0,120}(import|promot)/i.test(profileAdapter), "profile adapter does not advertise legacy display-name promotion");
 
-includes("assets/khaemenes-core-page-loader.js", ["data-core", "data-scope"]);
+includes("assets/khaemenes-core-page-loader.js", ["dataset?.core", "dataset?.scope"]);
 
 // Campus and department identity wrappers.
 includes("index.html", ["index-core.txt", "assets/khaemenes-higher-learning-profile-adapter.js"]);
