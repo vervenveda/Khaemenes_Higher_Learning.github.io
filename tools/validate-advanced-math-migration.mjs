@@ -42,8 +42,8 @@ function resolve(source,raw){
 }
 function targetExists(target){return exists(target)||exists(path.posix.join(target,"index.html"))||(!path.posix.extname(target)&&exists(target+".html"))}
 for(const root of COURSES){
-  if(!exists(root)){failures.push(root+": directory missing");continue}
   const members=[...files].filter(p=>p.startsWith(root+"/"));
+  if(!members.length){failures.push(root+": directory missing");continue}
   if(members.length!==384)failures.push(root+": expected 384 files, found "+members.length);
   for(const required of REQUIRED)if(!exists(root+"/"+required))failures.push(root+"/"+required+": required file missing");
   const entry=root+"/index.html";
