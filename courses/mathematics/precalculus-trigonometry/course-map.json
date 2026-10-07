@@ -18,7 +18,7 @@
     "storage_key": "khaemenes-precalculus-trigonometry-course-v1",
     "audience": "Open-age, placement-based learners ready to extend Algebra II and Geometry into advanced functions, trigonometry, vectors, polar and parametric models, sequences, conics, and calculus readiness",
     "prerequisite": "Algebra II and Geometry readiness or equivalent mastery",
-    "calculator": "../tools/calculator",
+    "calculator": "https://vervenveda.com/Khaemenes_High.github.io/courses/mathematics/tools/calculator/",
     "cad": "https://vervenveda.com/proresource_hub.github.io/Protools/Ohmic_CAD_Studio.html",
     "arcade": "https://vervenveda.com/arcade.github.io/",
     "version": "1.0.0"

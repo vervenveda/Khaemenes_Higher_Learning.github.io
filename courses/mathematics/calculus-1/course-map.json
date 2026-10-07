@@ -18,7 +18,7 @@
     "storage_key": "khaemenes-calculus1-course-v1",
     "audience": "Open-age, placement-based learners ready to study differential and integral calculus through multiple representations, proof-informed reasoning, modelling, and applications",
     "prerequisite": "Precalculus and Trigonometry readiness or equivalent demonstrated mastery",
-    "calculator": "../tools/calculator",
+    "calculator": "https://vervenveda.com/Khaemenes_High.github.io/courses/mathematics/tools/calculator/",
     "cad": "https://vervenveda.com/proresource_hub.github.io/Protools/Ohmic_CAD_Studio.html",
     "version": "1.0.0"
   },
