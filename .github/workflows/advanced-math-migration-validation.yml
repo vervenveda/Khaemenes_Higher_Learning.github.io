@@ -1,0 +1,32 @@
+name: Higher Learning Advanced Mathematics Migration
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'courses/mathematics/**'
+      - 'courses/shared/**'
+      - 'tools/validate-advanced-math-migration.mjs'
+      - '.github/workflows/advanced-math-migration-validation.yml'
+      - 'index-core.txt'
+  pull_request:
+    paths:
+      - 'courses/mathematics/**'
+      - 'courses/shared/**'
+      - 'tools/validate-advanced-math-migration.mjs'
+      - '.github/workflows/advanced-math-migration-validation.yml'
+      - 'index-core.txt'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Validate advanced mathematics migration
+        run: node tools/validate-advanced-math-migration.mjs
