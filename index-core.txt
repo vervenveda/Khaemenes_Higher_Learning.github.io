@@ -607,6 +607,8 @@
       const $$ = (selector,root=document) => [...root.querySelectorAll(selector)];
 
       const COURSES = {
+        "precalculus-trigonometry": {title:"Precalculus & Trigonometry",url:"./courses/mathematics/precalculus-trigonometry/index.html"},
+        "calculus-i": {title:"Calculus I",url:"./courses/mathematics/calculus-1/index.html"},
         "calculus-ii": {title:"Calculus II",url:"./courses/calculus-ii/index.html"},
         "linear-algebra": {title:"Linear Algebra",url:"./courses/linear-algebra/index.html"},
         "differential-equations": {title:"Differential Equations",url:"./courses/differential-equations/index.html"},
