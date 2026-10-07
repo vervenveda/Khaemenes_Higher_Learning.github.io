@@ -1,0 +1,10 @@
+{
+  "diagnostic": 40,
+  "unit_mastery": {
+    "units": 13,
+    "questions_per_attempt": 10
+  },
+  "midterm": 60,
+  "final": 100,
+  "course_bank": 156
+}
