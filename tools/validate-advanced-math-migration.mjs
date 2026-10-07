@@ -46,6 +46,11 @@ for(const root of COURSES){
   if(!members.length){failures.push(root+": directory missing");continue}
   if(members.length!==384)failures.push(root+": expected 384 files, found "+members.length);
   for(const required of REQUIRED)if(!exists(root+"/"+required))failures.push(root+"/"+required+": required file missing");
+  for(const member of members){
+    const text=fs.readFileSync(path.join(ROOT,member),"utf8");
+    if(text.includes("../tools/calculator"))failures.push(member+": stale relative calculator link remains");
+    if(text.includes("https://vervenveda.com/Khaemenes_High.github.io/courses/mathematics/calculus-1/"))failures.push(member+": stale High Calculus I URL remains");
+  }
   const entry=root+"/index.html";
   const html=fs.readFileSync(path.join(ROOT,entry),"utf8");
   if(!html.includes("https://vervenveda.com/Khaemenes_Higher_Learning.github.io/"))failures.push(entry+": Higher Learning canonical host missing");
