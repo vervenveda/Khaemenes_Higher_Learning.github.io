@@ -137,6 +137,7 @@ expect(agtScope.includes("learnerId"), "Advanced Geometric Topology scope is lea
 // Canonical shared-origin scholar path.
 const rootWrapper = file("index.html");
 const campusCore = file("index-core.txt");
+const start = file("start/index.html");
 expect(rootWrapper.includes('location.hostname==="vervenveda.github.io"') && rootWrapper.includes('https://vervenveda.com'), "campus wrapper redirects the alternate github.io origin to canonical Verve N Veda");
 expect(start.includes('location.hostname==="vervenveda.github.io"') && start.includes('https://vervenveda.com'), "Scholar Entry redirects the alternate github.io origin before learner storage is read");
 expect(campusCore.includes('href="https://vervenveda.com/Khaemenes_Academy.github.io/"'), "campus breadcrumb returns to Academy on the shared canonical origin");
@@ -144,7 +145,6 @@ expect(!campusCore.includes('https://vervenveda.github.io/Khaemenes_Academy.gith
 expect(campusCore.includes('href="./start/"') && campusCore.includes("Scholar Entry"), "campus exposes a visible Scholar Entry doorway");
 expect(campusCore.includes("Academy learner identity stays canonical"), "campus explains the canonical learner identity boundary");
 // Scholar Entry is a bridge, never a local account factory.
-const start = file("start/index.html");
 expect(start.includes("khaemenes-family-registry.js"), "Scholar Entry reads the Academy Family Registry");
 expect(!/(?:registerLearner|createLearner|addLearner)\s*\(/.test(start), "Scholar Entry does not create a separate learner");
 expect(!/localStorage\.setItem\([^\n]*(?:student|learner|profile|account)/i.test(start), "Scholar Entry does not persist a second learner profile");
