@@ -340,6 +340,7 @@
       </a>
 
       <nav class="header-links" aria-label="Higher Learning primary navigation">
+        <a href="./start/">Scholar Entry</a>
         <a href="#student-portal">Student</a>
         <a href="#departments">Departments</a>
         <a href="./courses/index.html">Mathematics</a>
@@ -357,7 +358,7 @@
   <nav class="breadcrumbs" aria-label="Breadcrumb">
     <div class="shell">
       <a href="https://vervenveda.com/">Verve N Veda</a><span aria-hidden="true">›</span>
-      <a href="https://vervenveda.github.io/Khaemenes_Academy.github.io/">Khaemenes Academy</a><span aria-hidden="true">›</span>
+      <a href="https://vervenveda.com/Khaemenes_Academy.github.io/">Khaemenes Academy</a><span aria-hidden="true">›</span>
       <span aria-current="page">Higher Learning</span>
     </div>
   </nav>
@@ -385,13 +386,14 @@
             <a class="btn btn-primary" href="#departments">Academic Departments</a>
             <a class="btn career-cta" href="./Career/index.html">Career Portal</a>
             <a class="btn" href="./courses/index.html">Mathematics</a>
+            <a class="btn btn-bronze" href="./start/">Scholar Entry</a>
             <a class="btn" href="#student-portal">Student Profile</a>
           </div>
           <div class="hero-stat-grid" aria-label="Higher Learning overview">
             <div class="hero-stat"><strong>Collegiate Curriculum</strong><span>Undergraduate, advanced, interdisciplinary, and lifelong-learning pathways.</span></div>
             <div class="hero-stat"><strong>Mathematics Open</strong><span>Nine complete Higher Learning mathematics courses are already present in the repository.</span></div>
             <div class="hero-stat"><strong>Career Portal Open</strong><span>Assessment, mentor guidance, Career Star, professional tools, and dynamic skills discovery.</span></div>
-            <div class="hero-stat"><strong>Student Profile</strong><span>Local identity, study level, focus, pinned courses, and export remain under learner control.</span></div>
+            <div class="hero-stat"><strong>Scholar Continuity</strong><span>Academy learner identity stays canonical while Higher Learning keeps learner-scoped study preferences, pins, and evidence.</span></div>
           </div>
         </div>
       </div>
@@ -438,14 +440,14 @@
         <div class="heading">
           <p class="kicker">Student Portal</p>
           <h2>Your academic starting point.</h2>
-          <p>Create a small local profile, preserve your intended study direction, and see courses pinned from across the Higher Learning mathematics sequence. Nothing in this profile is transmitted by this page.</p>
+          <p>Continue with the Academy learner identity selected at Scholar Entry, then keep study level, field, term, pinned courses, and learner-owned evidence scoped to that same scholar on this device.</p>
         </div>
 
         <div class="portal-grid">
           <article class="portal-card" style="--portal-accent:#486f8f">
             <span class="portal-emblem">S</span>
             <h3>Student Profile</h3>
-            <p>Save a display name, study level, primary field, and term on this device. Existing Higher Learning course pins appear automatically below.</p>
+            <p>Your Academy learner name remains the identity authority. Higher Learning stores only learner-scoped study preferences such as level, primary field, term, pinned courses, and resource favorites.</p>
             <form class="portal-form" id="profileForm">
               <label class="sr-only" for="studentName">Student display name</label>
               <input class="field" id="studentName" maxlength="60" placeholder="Student display name" autocomplete="name">
@@ -471,10 +473,11 @@
             </form>
             <div class="profile-summary" id="profileSummary" aria-live="polite">No local Higher Learning profile has been saved on this device.</div>
             <div class="portal-links">
+              <a href="./start/">Scholar Entry / Identity</a>
               <button id="exportProfileButton" type="button">Export Profile</button>
               <button id="clearProfileButton" type="button">Clear Local Profile</button>
             </div>
-            <p class="portal-note">The profile and pinned-course shelf are stored in this browser. Exported records remain under the learner's control.</p>
+            <p class="portal-note">The Academy Family Registry remains the learner identity authority. Higher Learning preferences and pins are stored for that learner in this browser; exported records remain under the learner's control.</p>
           </article>
 
           <article class="portal-card" style="--portal-accent:#9a7650">
@@ -555,7 +558,7 @@
         </div>
         <div class="network-strip">
           <a class="network-card" href="https://vervenveda.com/"><strong>Verve N Veda</strong><span>Main network home</span></a>
-          <a class="network-card" href="https://vervenveda.github.io/Khaemenes_Academy.github.io/"><strong>Khaemenes Academy</strong><span>Educational network</span></a>
+          <a class="network-card" href="https://vervenveda.com/Khaemenes_Academy.github.io/"><strong>Khaemenes Academy</strong><span>Educational network</span></a>
           <a class="network-card" href="./Career/index.html"><strong>Career Portal</strong><span>Career assessment, mentoring, and skills</span></a>
           <a class="network-card" href="https://vervenveda.com/proresource_hub.github.io/"><strong>ProResource Hub</strong><span>Technical and professional tools</span></a>
           <a class="network-card" href="https://vervenveda.com/arcade.github.io/"><strong>Arcade</strong><span>Games, logic, and creative practice</span></a>
@@ -652,7 +655,7 @@
         {id:"arcade",icon:"G",title:"Verve N Veda Arcade",kind:"Games & Logic",category:"games",description:"Interactive games and cognitive practice for logic, focus, pattern recognition, creativity, and recreation.",url:"https://vervenveda.com/arcade.github.io/"},
         {id:"sacred-geometry",icon:"SG",title:"Sacred Geometry",kind:"Geometry Game",category:"games",description:"Visual geometric exploration connecting pattern, spatial reasoning, symmetry, and mathematical play.",url:"https://vervenveda.com/arcade.github.io/a_sacred_geometry_game_index.html"},
         {id:"high-school",icon:"HS",title:"Khaemenes High School",kind:"Prerequisite Campus",category:"network",description:"Grades 9–12 course pathways and prerequisite review for learners transitioning into Higher Learning.",url:"https://vervenveda.com/Khaemenes_High.github.io/"},
-        {id:"academy",icon:"KA",title:"Khaemenes Academy",kind:"Education Network",category:"network",description:"Return to the broader Khaemenes Academy educational network.",url:"https://vervenveda.github.io/Khaemenes_Academy.github.io/"}
+        {id:"academy",icon:"KA",title:"Khaemenes Academy",kind:"Education Network",category:"network",description:"Return to the broader Khaemenes Academy educational network.",url:"https://vervenveda.com/Khaemenes_Academy.github.io/"}
       ];
 
       function readJSON(key,fallback){try{const raw=localStorage.getItem(key);return raw?JSON.parse(raw):fallback}catch{return fallback}}
