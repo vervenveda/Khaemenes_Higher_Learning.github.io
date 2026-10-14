@@ -1,32 +1,70 @@
 import fs from "node:fs";
 import path from "node:path";
+import vm from "node:vm";
+import crypto from "node:crypto";
 import {fileURLToPath} from "node:url";
+
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),"..");
 const read=p=>fs.readFileSync(path.join(ROOT,p),"utf8");
-let failed=false;const ok=(v,m)=>{if(v)console.log("OK "+m);else{failed=true;console.error("FAIL "+m)}};
+let failed=false;
+const ok=(v,m)=>{if(v)console.log("OK "+m);else{failed=true;console.error("FAIL "+m)}};
+
 const shared=read("assets/applied-mission-studio-v1.js");
-for(const t of ["khaemenes-math-applied-mission-studio-v1","precalculus-trigonometry","calculus-1","course_progression_authority:false","Applied Mission Studio"])ok(shared.includes(t),"shared studio contains "+t);
+const manifest=JSON.parse(read("APPLIED_MISSION_STUDIO_RELEASE.json"));
+const blobSha=crypto.createHash("sha1").update("blob "+Buffer.byteLength(shared)+"\0").update(shared).digest("hex");
+ok(manifest.version==="1.3.0","release manifest pins Applied Mission Studio v1.3.0");
+ok(blobSha===manifest.git_blob_sha,"shared Applied Mission Studio matches pinned Git blob");
+ok(shared.includes('const V="1.3.0"'),"runtime reports v1.3.0");
+ok(shared.includes("pageOwnerId")&&shared.includes("ownerOk"),"Mission Studio binds writes to the active Academy learner");
+ok(shared.includes("Review & Replace Newer Version")&&shared.includes("competing-tab"),"Mission Studio protects competing tabs");
+ok(shared.includes("importBytes:524288")&&shared.includes("verifiedWrite"),"Mission Studio bounds imports and verifies writes");
+ok(shared.includes("course_progression_authority:false"),"mission evidence remains outside mastery authority");
+
+const coreMatch=shared.match(/\/\*__AMS_CORE_BEGIN__\*\/([\s\S]*?)\/\*__AMS_CORE_END__\*\//);
+ok(!!coreMatch,"testable persistence core is embedded in the runtime");
+let core=null;
+if(coreMatch){
+ const box={};vm.createContext(box);vm.runInContext(coreMatch[1]+";globalThis.__AMSCore=AMSCore;",box);core=box.__AMSCore;
+}
+if(core){
+ ok(core.scopeKey("mission","learner-a")!==core.scopeKey("mission","learner-b"),"learner storage keys are isolated");
+ const dirty={mission_id:"m1",custom:"x".repeat(500),fields:{question:"q".repeat(core.limits.text+50),extra:"drop"},checks:{0:true,8:true},review:{scores:["4","8"],feedback:"f".repeat(core.limits.feedback+50),attempts:Array.from({length:40},(_,i)=>({score:i,target:80,evaluator:"Teacher"}))}};
+ const clean=core.sanitizeRecord(dirty,{course:"calculus-1",unit:1,project:"Test",fieldKeys:["question"],legacyKeys:[],checkCount:1,rubricCount:2,recordId:"r1"});
+ ok(clean.fields.question.length===core.limits.text&&!Object.hasOwn(clean.fields,"extra"),"sanitizer caps evidence and drops unknown fields");
+ ok(clean.custom.length===core.limits.custom&&clean.review.feedback.length===core.limits.feedback,"sanitizer enforces text bounds");
+ ok(clean.review.attempts.length===core.limits.attempts,"review history is bounded");
+ class MemoryStorage{constructor(){this.m=new Map()}getItem(k){return this.m.has(k)?this.m.get(k):null}setItem(k,v){this.m.set(k,String(v))}removeItem(k){this.m.delete(k)}}
+ const st=new MemoryStorage(),key="store:learner:a",unit="unit-01",base=core.sanitizeRecord({mission_id:"m1"},{course:"calculus-1",unit:1,project:"Test",fieldKeys:[],legacyKeys:[],checkCount:0,rubricCount:0,recordId:"r1"});
+ const first=core.commitUnit(st,key,unit,base,0,"tab-a");
+ const stale=core.commitUnit(st,key,unit,{...base,mission_id:"m2"},0,"tab-b");
+ const forced=core.commitUnit(st,key,unit,{...base,mission_id:"m2"},first.revision,"tab-b",{force:true});
+ ok(first.ok&&first.revision===1,"first verified mission commit creates revision 1");
+ ok(stale.conflict===true,"stale competing-tab commit is refused");
+ ok(forced.ok&&forced.revision===2,"explicit replacement advances revision after preserving recovery evidence");
+}
+
 for(const course of ["precalculus-trigonometry","calculus-1"]){
+ const sw=read(course+"/service-worker.js"),lessonTools=read(course+"/assets/lesson-tools.js"),app=read(course+"/assets/app.js");
+ ok(sw.includes("../assets/applied-mission-studio-v1.js"),course+" caches shared Mission Studio");
+ ok(lessonTools.includes(":learner:")&&lessonTools.includes("ownerOk()")&&lessonTools.includes("verification-failed"),course+" lesson records are learner-scoped and verified");
+ ok(lessonTools.includes("active Academy learner changed")||lessonTools.includes("active Academy learner changed".replace("active","The active")),course+" lesson saving pauses when learner ownership changes");
+ ok(app.includes("applied-mission-portfolio-v1"),course+" portfolio surfaces Applied Mission evidence");
  for(let u=1;u<=13;u++){
-  const n=String(u).padStart(2,"0"),p=`${course}/units/unit-${n}/projects/${n}-project.html`;
-  ok(read(p).includes("../../../../assets/applied-mission-studio-v1.js"),p+" loads shared studio");
+  const n=String(u).padStart(2,"0"),route=`./units/unit-${n}/projects/${n}-project.html`,project=`${course}/units/unit-${n}/projects/${n}-project.html`;
+  ok(sw.includes(route),course+" first-use offline cache includes "+route);
+  ok(fs.existsSync(path.join(ROOT,project)),course+" canonical project exists: "+project);
+  ok(read(project).includes("../../../../assets/applied-mission-studio-v1.js"),project+" loads the shared Mission Studio");
  }
- let lessonCount=0;
+ let lessons=0;
  for(let u=1;u<=13;u++){
   const n=String(u).padStart(2,"0"),dir=path.join(ROOT,course,"units","unit-"+n,"lessons");
   if(!fs.existsSync(dir))continue;
   for(const name of fs.readdirSync(dir).filter(x=>x.endsWith(".html"))){
-   const html=fs.readFileSync(path.join(dir,name),"utf8");lessonCount++;
-   ok(html.includes("assets/lesson-tools.js"),course+" "+n+"/"+name+" loads the lesson tool bridge");
+   const html=fs.readFileSync(path.join(dir,name),"utf8");lessons++;
+   ok(html.includes("assets/lesson-tools.js"),course+" "+n+"/"+name+" loads learner-safe lesson tools");
   }
  }
- ok(lessonCount>0,course+" has lesson pages under the Applied Connection contract");
- const lesson=read(course+"/assets/lesson-tools.js");
- ok(lesson.includes("data-khae-applied-mission-studio"),course+" lesson tools load Applied Connection");
- const sw=read(course+"/service-worker.js");
- ok(sw.includes("../assets/applied-mission-studio-v1.js"),course+" offline release caches shared studio");
- const app=read(course+"/assets/app.js");
- ok(app.includes("applied-mission-portfolio-v1"),course+" portfolio surfaces mission evidence");
+ ok(lessons>0,course+" lesson inventory is present");
 }
 if(failed)process.exit(1);
-console.log("\nPASS Higher Learning mathematics Applied Mission Studio contract across Precalculus & Trigonometry and Calculus I.");
+console.log("\nPASS Higher Learning mathematics Applied Mission Studio hardened contract.");
