@@ -12,19 +12,20 @@ const ok=(v,m)=>{if(v)console.log("OK "+m);else{failed=true;console.error("FAIL 
 const shared=read("assets/applied-mission-studio-v1.js");
 const manifest=JSON.parse(read("APPLIED_MISSION_STUDIO_RELEASE.json"));
 const blobSha=crypto.createHash("sha1").update("blob "+Buffer.byteLength(shared)+"\0").update(shared).digest("hex");
-ok(manifest.version==="1.3.0","release manifest pins Applied Mission Studio v1.3.0");
+ok(manifest.version==="1.4.0","release manifest pins Applied Mission Studio v1.4.0");
 ok(blobSha===manifest.git_blob_sha,"shared Applied Mission Studio matches pinned Git blob");
-ok(shared.includes('const V="1.3.0"'),"runtime reports v1.3.0");
+ok(shared.includes('const V="1.4.0"'),"runtime reports v1.4.0");
 ok(shared.includes("pageOwnerId")&&shared.includes("ownerOk"),"Mission Studio binds writes to the active Academy learner");
 ok(shared.includes("Review & Replace Newer Version")&&shared.includes("competing-tab"),"Mission Studio protects competing tabs");
 ok(shared.includes("importBytes:524288")&&shared.includes("verifiedWrite"),"Mission Studio bounds imports and verifies writes");
+ok(shared.includes("khaemenes-evidence-integrity-v1")&&shared.includes("sealEnvelope")&&shared.includes("verifyEnvelope"),"runtime seals and verifies portable evidence with SHA-256");
 ok(shared.includes("course_progression_authority:false"),"mission evidence remains outside mastery authority");
 
 const coreMatch=shared.match(/\/\*__AMS_CORE_BEGIN__\*\/([\s\S]*?)\/\*__AMS_CORE_END__\*\//);
 ok(!!coreMatch,"testable persistence core is embedded in the runtime");
 let core=null;
 if(coreMatch){
- const box={};vm.createContext(box);vm.runInContext(coreMatch[1]+";globalThis.__AMSCore=AMSCore;",box);core=box.__AMSCore;
+ const box={TextEncoder,Uint8Array,crypto:crypto.webcrypto};vm.createContext(box);vm.runInContext(coreMatch[1]+";globalThis.__AMSCore=AMSCore;",box);core=box.__AMSCore;
 }
 if(core){
  ok(core.scopeKey("mission","learner-a")!==core.scopeKey("mission","learner-b"),"learner storage keys are isolated");
@@ -41,6 +42,12 @@ if(core){
  ok(first.ok&&first.revision===1,"first verified mission commit creates revision 1");
  ok(stale.conflict===true,"stale competing-tab commit is refused");
  ok(forced.ok&&forced.revision===2,"explicit replacement advances revision after preserving recovery evidence");
+ const deterministicA=core.canonicalize({b:2,a:{z:1,y:[3,2]}});
+ const deterministicB=core.canonicalize({a:{y:[3,2],z:1},b:2});
+ ok(deterministicA===deterministicB,"integrity canonicalization is deterministic across object key order");
+ const sealedEvidence=await core.sealEnvelope({schema:"mission-test",course:"geometry",unit:1,record:{mission_id:"m1",fields:{question:"test"}}});
+ ok(await core.verifyEnvelope(sealedEvidence),"SHA-256 evidence seal verifies unchanged payload");
+ ok(!(await core.verifyEnvelope({...sealedEvidence,unit:2})),"SHA-256 evidence seal rejects changed payload");
 }
 
 for(const course of ["precalculus-trigonometry","calculus-1"]){
