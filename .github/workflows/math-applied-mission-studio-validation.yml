@@ -1,0 +1,28 @@
+name: Higher Learning Applied Mission Studio Validation
+on:
+  pull_request:
+    paths:
+      - 'courses/mathematics/**'
+      - '.github/workflows/math-applied-mission-studio-validation.yml'
+  push:
+    branches: [ main ]
+    paths:
+      - 'courses/mathematics/**'
+      - '.github/workflows/math-applied-mission-studio-validation.yml'
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+      - name: Syntax
+        run: |
+          node --check courses/mathematics/assets/applied-mission-studio-v1.js
+          node --check courses/mathematics/precalculus-trigonometry/assets/lesson-tools.js
+          node --check courses/mathematics/calculus-1/assets/lesson-tools.js
+      - name: Validate Applied Mission Studio
+        run: node courses/mathematics/tools/validate-applied-mission-studio.mjs

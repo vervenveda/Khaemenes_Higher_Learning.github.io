@@ -17,3 +17,13 @@ document.getElementById("saveLessonNote")?.addEventListener("click",()=>{rec.not
 document.getElementById("printLesson")?.addEventListener("click",()=>print());
 updateStatus();
 })();
+/* Shared Applied Mission Studio lesson connection. */
+(()=>{
+  const current=document.currentScript;
+  if(!current||document.querySelector('script[data-khae-applied-mission-studio="shared-v1"]'))return;
+  const s=document.createElement("script");
+  s.async=false;
+  s.dataset.khaeAppliedMissionStudio="shared-v1";
+  s.src=new URL("../../assets/applied-mission-studio-v1.js",current.src).href;
+  document.head.appendChild(s);
+})();
