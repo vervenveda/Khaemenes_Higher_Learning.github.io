@@ -1,8 +1,9 @@
 (function attachKhaemenesCourseIdentityAdapter(global){
   "use strict";
 
-  const VERSION="1.0.0";
+  const VERSION="1.1.0";
   const REGISTRY_URL="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-family-registry.js";
+  const CONTINUATION_URL="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-learning-continuation.js";
   const DATA_GLOBALS=Object.freeze({
     "calculus-ii":"CALCULUS2_DATA",
     "linear-algebra":"LINEAR_ALGEBRA_DATA",
@@ -74,15 +75,86 @@
     Storage.prototype.setItem=function(key,value){
       if(this===global.localStorage&&key===legacyKey){
         if(!s||!scopedKey)return;
-        const normalized=canonicalize(parse(value),s);if(normalized)rawSet(scopedKey,JSON.stringify(normalized));return
+        const normalized=canonicalize(parse(value),s);if(normalized){rawSet(scopedKey,JSON.stringify(normalized));global.dispatchEvent(new CustomEvent("khaemenes-higher-course-state-changed",{detail:{courseId,learnerId:s.learnerId,scopedKey}}))}return
       }
       return original.setItem.call(this,key,value)
     };
     Storage.prototype.removeItem=function(key){
-      if(this===global.localStorage&&key===legacyKey){if(s&&scopedKey)original.removeItem.call(this,scopedKey);return}
+      if(this===global.localStorage&&key===legacyKey){if(s&&scopedKey){original.removeItem.call(this,scopedKey);global.dispatchEvent(new CustomEvent("khaemenes-higher-course-state-changed",{detail:{courseId,learnerId:s.learnerId,scopedKey,cleared:true}}))}return}
       return original.removeItem.call(this,key)
     };
     return scopedKey;
+  }
+
+  function publishContinuation(courseId,data,s,scopedKey){
+    const C=global.KhaemenesLearningContinuation;
+    if(!C?.publish||!s?.learnerId||!scopedKey||!data?.course)return false;
+    const state=canonicalize(parse(rawGet(scopedKey)),s)||freshState(s);
+    const student=state.students?.[0]||freshState(s).students[0];
+    const weeks=Array.isArray(data.weeks)?data.weeks:[];
+    const total=Number(data.course.duration_weeks)||weeks.length||36;
+    const target=Number(data.course.mastery_target)||80;
+    const weekRecord=n=>student.weeks?.[n]||student.weeks?.[String(n)]||{};
+    const dayCount=r=>Object.values(r?.days||{}).filter(Boolean).length;
+    const completed=weeks.filter(w=>dayCount(weekRecord(w.week))>=5).length;
+    const next=weeks.find(w=>dayCount(weekRecord(w.week))<5)||null;
+    const formal=student.formal||{};
+    let status="continue",nextLabel="Continue Study",nextTitle="",nextHref="",summary="",best=null;
+
+    if(completed===0&&(formal.diagnostic===null||formal.diagnostic===undefined)){
+      status="assessment";nextLabel="Begin Diagnostic";nextTitle="Readiness Diagnostic";nextHref="diagnostic/";
+      summary="Begin with the course readiness diagnostic, then continue into the 36-week scholar pathway.";
+    }else if(next&&Number(next.week)>18&&completed>=18&&(formal.midterm===null||Number(formal.midterm)<target)){
+      best=formal.midterm===null||formal.midterm===undefined?null:Number(formal.midterm);
+      status=best!==null&&best>0?"corrections":"assessment";nextLabel=status==="corrections"?"Review Midterm":"Open Midterm";
+      nextTitle="Midterm Examination";nextHref="assessments/midterm.html";
+      summary=best!==null&&best>0?`Midterm recorded at ${Math.round(best)}%. Review before the next formal attempt.`:"The first half of the course is complete. The Midterm is the next formal evidence.";
+    }else if(next){
+      const rec=weekRecord(next.week),mastery=Number(rec.masteryBest);
+      best=Number.isFinite(mastery)?mastery:null;
+      status="continue";nextLabel="Continue Study";nextTitle=`Week ${String(next.week).padStart(2,"0")} · ${next.title||"Course Study"}`;
+      nextHref=next.unit_path||"./";
+      summary=`${dayCount(rec)}/5 weekly sessions recorded${best!==null?` · best practice mastery ${Math.round(best)}%`:""}.`;
+    }else if(formal.final===null||formal.final===undefined||Number(formal.final)<target){
+      best=formal.final===null||formal.final===undefined?null:Number(formal.final);
+      status=best!==null&&best>0?"corrections":"assessment";nextLabel=status==="corrections"?"Review Final":"Open Final";
+      nextTitle="Comprehensive Final";nextHref="assessments/final.html";
+      summary=best!==null&&best>0?`Final recorded at ${Math.round(best)}%. Review and prepare for the next attempt.`:"The 36-week study sequence is complete. The comprehensive final is the next formal evidence.";
+    }else if(formal.capstone===null||formal.capstone===undefined||Number(formal.capstone)<target){
+      best=formal.capstone===null||formal.capstone===undefined?null:Number(formal.capstone);
+      status=best!==null&&best>0?"corrections":"assessment";nextLabel=status==="corrections"?"Revise Capstone":"Complete Capstone";
+      nextTitle="Capstone / Oral Defense";nextHref="#portfolio";
+      summary="Complete or revise the capstone and defense evidence at the course mastery target.";
+    }else{
+      status="complete";nextLabel="Review Course Record";nextTitle=`${data.course.short_title||data.course.title||courseId} Complete`;nextHref="#gradebook";
+      summary="All locally recorded course study and formal evidence categories are complete.";best=100;
+    }
+
+    try{
+      C.publish({
+        learnerId:s.learnerId,courseId:`higher:${courseId}`,school:"Khaemenes Higher Learning",stage:"higher",grade:"Adult / Higher Learning",
+        subject:data.course.department||"Higher Learning",courseTitle:data.course.short_title||data.course.title||courseId,
+        status,nextLabel,nextTitle,nextHref,summary,
+        progress:{completed,total,percent:Math.round(completed/Math.max(1,total)*100)},
+        mastery:{best:Number.isFinite(best)?best:null,threshold:target,mastered:status==="complete"},
+        family:{needsAction:false,label:"",summary:"",href:""},
+        source:`higher-course:${courseId}`
+      });
+      return true;
+    }catch{return false}
+  }
+
+  function installContinuationPublisher(courseId,data,s,scopedKey){
+    let timer=0;
+    const publish=()=>publishContinuation(courseId,data,s,scopedKey);
+    const schedule=()=>{clearTimeout(timer);timer=setTimeout(publish,80)};
+    global.addEventListener("khaemenes-higher-course-state-changed",event=>{if(event.detail?.courseId===courseId)schedule()});
+    global.addEventListener("khaemenes-learning-continuation-ready",schedule);
+    global.addEventListener("pageshow",schedule);
+    document.addEventListener("change",schedule,true);
+    document.addEventListener("click",event=>{if(event.target?.closest?.("#saveWeek,#saveFormal,#generate,[data-day]"))schedule()},true);
+    publish();
+    return Object.freeze({publish});
   }
 
   function lockIdentityControls(s){
@@ -103,7 +175,9 @@
     if(!legacyKey){console.error("Khaemenes course identity boundary: course storage key unavailable; formal course engine not started.");return Object.freeze({status:"failed-closed",courseId})}
     try{if(!global.KhaemenesFamilyRegistry)await loadScript(REGISTRY_URL)}catch(error){console.error("Khaemenes Family Registry unavailable; course records will remain transient.",error)}
     const s=scholar();const scopedKey=installStorageBoundary(courseId,legacyKey,s);lockIdentityControls(s);
+    try{if(!global.KhaemenesLearningContinuation)await loadScript(CONTINUATION_URL)}catch(error){console.warn("Khaemenes continuation contract unavailable; course study remains functional.",error)}
     if(coreSrc)await loadScript(coreSrc);
+    if(s&&scopedKey)installContinuationPublisher(courseId,data,s,scopedKey);
     global.addEventListener("khaemenes-family-changed",()=>global.location.reload());
     const detail={version:VERSION,status:s?"canonical-scholar":"transient-no-scholar",courseId,learnerId:s?.learnerId||null,scopedKey,legacyKeyPreserved:true,duplicateLearnerCreation:false};
     global.dispatchEvent(new CustomEvent("khaemenes-course-identity-ready",{detail}));return Object.freeze(detail)
