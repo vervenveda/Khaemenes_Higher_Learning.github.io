@@ -3,7 +3,24 @@
 const body=document.body;
 const id=body.dataset.lessonId;
 if(!id)return;
-const KEY="khaemenes-discrete-mathematics-lesson-progress-v1";
+const LEGACY_KEY="khaemenes-discrete-mathematics-lesson-progress-v1";
+const UTILITY_WIDGET="https://vervenveda.com/assets/vnv-beta-link.js";
+function ensureLearnerToolbar(){
+  if(document.getElementById("vnvBetaProgramLink")||document.querySelector('script[src*="vnv-beta-link.js"]'))return;
+  const script=document.createElement("script");script.src=UTILITY_WIDGET;script.async=false;script.dataset.khaemenesHigherLessonUtility="1";(document.head||document.documentElement).append(script);
+}
+function higherScholarLessonKey(legacyKey){
+  try{
+    const registry=JSON.parse(localStorage.getItem("khaemenes_family_registry_v1")||"null");
+    const learnerId=JSON.parse(localStorage.getItem("khaemenes_active_learner_v1")||"null");
+    const learner=learnerId&&registry?.learners?.[learnerId]?registry.learners[learnerId]:null;
+    if(!learner||String(learner.stage||"").toLowerCase()!=="higher")return legacyKey;
+    const course=(location.pathname.match(/\/courses\/([^/]+)\//i)||[])[1]||"higher-course";
+    return `khaemenes.course:${learner.learnerId}:higher:${decodeURIComponent(course)}:lesson-progress-v1`;
+  }catch{return legacyKey}
+}
+ensureLearnerToolbar();
+const KEY=higherScholarLessonKey(LEGACY_KEY);
 const THEME_KEY="khaemenes-higher-learning-theme";
 const STEPS=["concept","examples","worksheet","check","reflection"];
 const $=(selector,root=document)=>root.querySelector(selector);
