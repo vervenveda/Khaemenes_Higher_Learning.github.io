@@ -48,6 +48,7 @@
     let student=list.find(x=>x?.id===s.learnerId)||list[0]||freshState(s).students[0];
     student={...student,id:s.learnerId,name:s.nickname||student.name||"Scholar"};
     state.version=Number(state.version)||1;
+    state.updatedAt=new Date().toISOString();
     state.selectedWeek=Math.min(36,Math.max(1,Number(state.selectedWeek)||1));
     state.students=[student];
     state.activeId=s.learnerId;
