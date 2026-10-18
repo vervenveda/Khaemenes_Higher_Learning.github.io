@@ -69,7 +69,7 @@ function item(id){const t=TOOLS[id];return t?{id:id,name:t.name,kind:t.kind,why:
 function idsForLesson(id){
  const n=Number(id?.match(/^u(\d{2})-l\d{2}$/)?.[1]);
  const primary=LESSONS[id]||[],fallback=UNITS[n]||[];
- return [...new Set(["calculator",...primary,...fallback])].slice(0,4);
+ return [...new Set(["calculator",...(primary.length?primary:fallback.slice(0,3))])].slice(0,4);
 }
 function idsForUnit(n){return ["calculator",...(UNITS[n]||[])];}
 function node(tag,cls,value){const x=document.createElement(tag);if(cls)x.className=cls;if(value!==undefined)x.textContent=value;return x}
@@ -133,7 +133,7 @@ function campusUI(){
    card.appendChild(button);card.appendChild(openLink(t));grid.appendChild(card);
   });
  }
- select.addEventListener("change",paint);paint();
+ select.value="1";select.addEventListener("change",paint);paint();
 }
 const id=document.body?.dataset?.lessonId;
 if(/^u\d{2}-l\d{2}$/.test(id||""))lessonUI(id);
