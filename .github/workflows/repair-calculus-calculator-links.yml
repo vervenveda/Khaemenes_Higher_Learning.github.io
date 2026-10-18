@@ -1,0 +1,74 @@
+name: Repair Calculus Calculator Links
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/repair-calculus-calculator-links.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repair-calculus-calculator-links
+  cancel-in-progress: true
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Repair malformed calculator URLs
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          root=Path("courses/mathematics/calculus-1")
+          bad="../../../https://vervenveda.com/Khaemenes_High.github.io/courses/mathematics/tools/calculator/"
+          good="https://vervenveda.com/Khaemenes_High.github.io/courses/mathematics/tools/calculator/"
+
+          files=0
+          replacements=0
+          for path in root.rglob("*.html"):
+              text=path.read_text(encoding="utf-8")
+              count=text.count(bad)
+              if not count:
+                  continue
+              path.write_text(text.replace(bad,good),encoding="utf-8")
+              files += 1
+              replacements += count
+
+          print(f"Repaired {replacements} malformed calculator link(s) across {files} HTML file(s).")
+          PY
+
+      - name: Verify malformed calculator URLs are gone
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          bad="../../../https://vervenveda.com/Khaemenes_High.github.io/courses/mathematics/tools/calculator/"
+          remaining=[]
+          for path in Path("courses/mathematics/calculus-1").rglob("*.html"):
+              if bad in path.read_text(encoding="utf-8"):
+                  remaining.append(str(path))
+          assert not remaining, "Malformed calculator URLs remain: " + ", ".join(remaining[:20])
+          print("Calculator-link regression check PASS.")
+          PY
+
+      - name: Commit repairs
+        shell: bash
+        run: |
+          if [ -z "$(git status --porcelain -- courses/mathematics/calculus-1)" ]; then
+            echo "No calculator-link repairs needed."
+            exit 0
+          fi
+          git config user.name "Khaemenes Higher Learning Repair"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add courses/mathematics/calculus-1
+          git commit -m "Repair malformed calculus calculator links"
+          git pull --rebase origin main
+          git push
