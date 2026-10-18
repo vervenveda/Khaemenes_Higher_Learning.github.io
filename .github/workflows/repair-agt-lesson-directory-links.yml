@@ -1,0 +1,70 @@
+name: Repair AGT Lesson Directory Links
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/repair-agt-lesson-directory-links.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repair-agt-lesson-directory-links
+  cancel-in-progress: true
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Repair lesson-directory return links
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          root=Path("courses/advanced-geometric-topology/curriculum/lessons")
+          files=replacements=0
+          for p in root.rglob("*.html"):
+              s=p.read_text(encoding="utf-8")
+              if '<a href="../">Lesson Directory</a>' not in s:
+                  continue
+              if p.parent.name=="PUBLIC_LESSON_FOLDER":
+                  href="../../../../"
+              else:
+                  href="../../../"
+              n=s.replace('<a href="../">Lesson Directory</a>',f'<a href="{href}">Course Home</a>')
+              p.write_text(n,encoding="utf-8")
+              files+=1
+              replacements+=1
+          print(f"Repaired {replacements} AGT return link(s) across {files} file(s).")
+          PY
+
+      - name: Verify
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          remain=[]
+          for p in Path("courses/advanced-geometric-topology/curriculum/lessons").rglob("*.html"):
+              if '<a href="../">Lesson Directory</a>' in p.read_text(encoding="utf-8"):
+                  remain.append(str(p))
+          assert not remain,remain[:20]
+          print("AGT return-link regression PASS.")
+          PY
+
+      - name: Commit repairs
+        shell: bash
+        run: |
+          if [ -z "$(git status --porcelain -- courses/advanced-geometric-topology/curriculum/lessons)" ]; then exit 0; fi
+          git config user.name "Khaemenes Higher Learning Repair"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add courses/advanced-geometric-topology/curriculum/lessons
+          git commit -m "Repair AGT lesson return links"
+          for attempt in 1 2 3; do
+            git pull --rebase origin main
+            if git push; then exit 0; fi
+          done
+          exit 1
