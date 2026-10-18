@@ -1,0 +1,687 @@
+{
+  "version": "1.0.0",
+  "date": "2026-10-18",
+  "title": "Collegiate Course Development Roadmap",
+  "method": "Only verified inventory gaps and expansion work. Never count existing outlines as entirely missing courses.",
+  "freeToAll": true,
+  "releasePolicy": "80% separately at each required gate plus academic review; not yet implemented or verified in every source",
+  "summary": {
+    "workItems": 54,
+    "newStandalone": 29,
+    "reuseOrUpgrade": 25,
+    "proposedPathways": 6
+  },
+  "workItems": [
+    {
+      "code": "ENG101",
+      "title": "College Composition I",
+      "school": "Collegiate Foundations",
+      "priority": "P1",
+      "action": "new",
+      "mastery": 80,
+      "sourceFirst": false,
+      "note": "No standalone complete course verified in prior 131-entry inventory; audit wider ecosystem before first authoring.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "ENG102",
+      "title": "College Research Writing II",
+      "school": "Collegiate Foundations",
+      "priority": "P1",
+      "action": "new",
+      "mastery": 80,
+      "sourceFirst": false,
+      "note": "No standalone complete course verified in prior 131-entry inventory; audit wider ecosystem before first authoring.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "COM101",
+      "title": "Oral Communication and Public Speaking",
+      "school": "Collegiate Foundations",
+      "priority": "P1",
+      "action": "new",
+      "mastery": 80,
+      "sourceFirst": false,
+      "note": "No standalone complete course verified in prior 131-entry inventory; audit wider ecosystem before first authoring.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "INF101",
+      "title": "Information Literacy and Scholarly Research",
+      "school": "Collegiate Foundations",
+      "priority": "P1",
+      "action": "new",
+      "mastery": 80,
+      "sourceFirst": false,
+      "note": "No standalone complete course verified in prior 131-entry inventory; audit wider ecosystem before first authoring.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "HUM101",
+      "title": "Critical Thinking Logic and Evidence",
+      "school": "Collegiate Foundations",
+      "priority": "P1",
+      "action": "expand",
+      "mastery": 80,
+      "sourceFirst": true,
+      "note": "Prior source materials, workshops, or related Hall units exist; independently audit and reuse before building any standalone course.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "SOC101",
+      "title": "Introduction to Sociology",
+      "school": "Collegiate Foundations",
+      "priority": "P1",
+      "action": "new",
+      "mastery": 80,
+      "sourceFirst": false,
+      "note": "No standalone complete course verified in prior 131-entry inventory; audit wider ecosystem before first authoring.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "ECON101",
+      "title": "Microeconomics",
+      "school": "Collegiate Foundations",
+      "priority": "P1",
+      "action": "new",
+      "mastery": 80,
+      "sourceFirst": false,
+      "note": "No standalone complete course verified in prior 131-entry inventory; audit wider ecosystem before first authoring.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "ECON102",
+      "title": "Macroeconomics",
+      "school": "Collegiate Foundations",
+      "priority": "P1",
+      "action": "new",
+      "mastery": 80,
+      "sourceFirst": false,
+      "note": "No standalone complete course verified in prior 131-entry inventory; audit wider ecosystem before first authoring.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "HIS101",
+      "title": "Evidence-Based World History",
+      "school": "Collegiate Foundations",
+      "priority": "P1",
+      "action": "expand",
+      "mastery": 80,
+      "sourceFirst": true,
+      "note": "Prior source materials, workshops, or related Hall units exist; independently audit and reuse before building any standalone course.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "BIO101",
+      "title": "General Biology I with Laboratory",
+      "school": "Natural and Physical Sciences",
+      "priority": "P2",
+      "action": "new",
+      "mastery": 80,
+      "sourceFirst": false,
+      "note": "No standalone complete course verified in prior 131-entry inventory; audit wider ecosystem before first authoring.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "BIO102",
+      "title": "General Biology II with Laboratory",
+      "school": "Natural and Physical Sciences",
+      "priority": "P2",
+      "action": "new",
+      "mastery": 80,
+      "sourceFirst": false,
+      "note": "No standalone complete course verified in prior 131-entry inventory; audit wider ecosystem before first authoring.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "CHEM101",
+      "title": "General Chemistry I with Laboratory",
+      "school": "Natural and Physical Sciences",
+      "priority": "P2",
+      "action": "new",
+      "mastery": 80,
+      "sourceFirst": false,
+      "note": "No standalone complete course verified in prior 131-entry inventory; audit wider ecosystem before first authoring.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "CHEM102",
+      "title": "General Chemistry II with Laboratory",
+      "school": "Natural and Physical Sciences",
+      "priority": "P2",
+      "action": "new",
+      "mastery": 80,
+      "sourceFirst": false,
+      "note": "No standalone complete course verified in prior 131-entry inventory; audit wider ecosystem before first authoring.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "PHY101",
+      "title": "College Physics I with Laboratory",
+      "school": "Natural and Physical Sciences",
+      "priority": "P2",
+      "action": "new",
+      "mastery": 80,
+      "sourceFirst": false,
+      "note": "No standalone complete course verified in prior 131-entry inventory; audit wider ecosystem before first authoring.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "PHY102",
+      "title": "College Physics II with Laboratory",
+      "school": "Natural and Physical Sciences",
+      "priority": "P2",
+      "action": "new",
+      "mastery": 80,
+      "sourceFirst": false,
+      "note": "No standalone complete course verified in prior 131-entry inventory; audit wider ecosystem before first authoring.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "SCI210",
+      "title": "Scientific Research Design and Data Ethics",
+      "school": "Natural and Physical Sciences",
+      "priority": "P2",
+      "action": "expand",
+      "mastery": 80,
+      "sourceFirst": true,
+      "note": "Prior source materials, workshops, or related Hall units exist; independently audit and reuse before building any standalone course.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "CSC101",
+      "title": "Programming I",
+      "school": "Computer Science and Software",
+      "priority": "P1",
+      "action": "expand",
+      "mastery": 80,
+      "sourceFirst": true,
+      "note": "Prior source materials, workshops, or related Hall units exist; independently audit and reuse before building any standalone course.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "CSC102",
+      "title": "Programming II",
+      "school": "Computer Science and Software",
+      "priority": "P1",
+      "action": "expand",
+      "mastery": 80,
+      "sourceFirst": true,
+      "note": "Prior source materials, workshops, or related Hall units exist; independently audit and reuse before building any standalone course.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "CSC201",
+      "title": "Data Structures and Algorithms",
+      "school": "Computer Science and Software",
+      "priority": "P1",
+      "action": "new",
+      "mastery": 80,
+      "sourceFirst": false,
+      "note": "No standalone complete course verified in prior 131-entry inventory; audit wider ecosystem before first authoring.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "CSC220",
+      "title": "Database Systems and SQL",
+      "school": "Computer Science and Software",
+      "priority": "P1",
+      "action": "new",
+      "mastery": 80,
+      "sourceFirst": false,
+      "note": "No standalone complete course verified in prior 131-entry inventory; audit wider ecosystem before first authoring.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "CSC230",
+      "title": "Web Applications and Accessible Interfaces",
+      "school": "Computer Science and Software",
+      "priority": "P1",
+      "action": "new",
+      "mastery": 80,
+      "sourceFirst": false,
+      "note": "No standalone complete course verified in prior 131-entry inventory; audit wider ecosystem before first authoring.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "CSC310",
+      "title": "Software Engineering Testing and Git",
+      "school": "Computer Science and Software",
+      "priority": "P1",
+      "action": "new",
+      "mastery": 80,
+      "sourceFirst": false,
+      "note": "No standalone complete course verified in prior 131-entry inventory; audit wider ecosystem before first authoring.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "CSC320",
+      "title": "Cybersecurity and Secure Design Foundations",
+      "school": "Computer Science and Software",
+      "priority": "P1",
+      "action": "new",
+      "mastery": 80,
+      "sourceFirst": false,
+      "note": "No standalone complete course verified in prior 131-entry inventory; audit wider ecosystem before first authoring.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "CSC398",
+      "title": "Software Development Capstone",
+      "school": "Computer Science and Software",
+      "priority": "P1",
+      "action": "new",
+      "mastery": 80,
+      "sourceFirst": false,
+      "note": "No standalone complete course verified in prior 131-entry inventory; audit wider ecosystem before first authoring.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "ACC101",
+      "title": "Financial Accounting I",
+      "school": "Business and Social Enterprise",
+      "priority": "P1",
+      "action": "new",
+      "mastery": 80,
+      "sourceFirst": false,
+      "note": "No standalone complete course verified in prior 131-entry inventory; audit wider ecosystem before first authoring.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "ACC102",
+      "title": "Managerial Accounting and Cost Decisions",
+      "school": "Business and Social Enterprise",
+      "priority": "P1",
+      "action": "new",
+      "mastery": 80,
+      "sourceFirst": false,
+      "note": "No standalone complete course verified in prior 131-entry inventory; audit wider ecosystem before first authoring.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "BUS210",
+      "title": "Marketing and Consumer Communication",
+      "school": "Business and Social Enterprise",
+      "priority": "P1",
+      "action": "expand",
+      "mastery": 80,
+      "sourceFirst": true,
+      "note": "Prior source materials, workshops, or related Hall units exist; independently audit and reuse before building any standalone course.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "BUS220",
+      "title": "Business Analytics and Data Decisions",
+      "school": "Business and Social Enterprise",
+      "priority": "P1",
+      "action": "expand",
+      "mastery": 80,
+      "sourceFirst": true,
+      "note": "Prior source materials, workshops, or related Hall units exist; independently audit and reuse before building any standalone course.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "BUS230",
+      "title": "Operations and Project Management",
+      "school": "Business and Social Enterprise",
+      "priority": "P1",
+      "action": "expand",
+      "mastery": 80,
+      "sourceFirst": true,
+      "note": "Prior source materials, workshops, or related Hall units exist; independently audit and reuse before building any standalone course.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "BUS240",
+      "title": "Business Ethics and Regulatory Literacy",
+      "school": "Business and Social Enterprise",
+      "priority": "P1",
+      "action": "expand",
+      "mastery": 80,
+      "sourceFirst": true,
+      "note": "Prior source materials, workshops, or related Hall units exist; independently audit and reuse before building any standalone course.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "BUS398",
+      "title": "Business and Social Enterprise Capstone",
+      "school": "Business and Social Enterprise",
+      "priority": "P1",
+      "action": "new",
+      "mastery": 80,
+      "sourceFirst": false,
+      "note": "No standalone complete course verified in prior 131-entry inventory; audit wider ecosystem before first authoring.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "ART110",
+      "title": "Drawing and Observation Studio",
+      "school": "Creative Arts and Music",
+      "priority": "P2",
+      "action": "upgrade_workshop",
+      "mastery": 80,
+      "sourceFirst": true,
+      "note": "Prior source materials, workshops, or related Hall units exist; independently audit and reuse before building any standalone course.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "ART210",
+      "title": "Composition and Design Studio",
+      "school": "Creative Arts and Music",
+      "priority": "P2",
+      "action": "upgrade_workshop",
+      "mastery": 80,
+      "sourceFirst": true,
+      "note": "Prior source materials, workshops, or related Hall units exist; independently audit and reuse before building any standalone course.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "ART310",
+      "title": "Visual Storytelling and Portfolio",
+      "school": "Creative Arts and Music",
+      "priority": "P2",
+      "action": "upgrade_workshop",
+      "mastery": 80,
+      "sourceFirst": true,
+      "note": "Prior source materials, workshops, or related Hall units exist; independently audit and reuse before building any standalone course.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "ART320",
+      "title": "Global Art History and Visual Culture",
+      "school": "Creative Arts and Music",
+      "priority": "P2",
+      "action": "new",
+      "mastery": 80,
+      "sourceFirst": false,
+      "note": "No standalone complete course verified in prior 131-entry inventory; audit wider ecosystem before first authoring.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "MUS110",
+      "title": "Music Theory and Literacy I",
+      "school": "Creative Arts and Music",
+      "priority": "P2",
+      "action": "upgrade_workshop",
+      "mastery": 80,
+      "sourceFirst": true,
+      "note": "Prior source materials, workshops, or related Hall units exist; independently audit and reuse before building any standalone course.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "MUS210",
+      "title": "Harmony and Theory II",
+      "school": "Creative Arts and Music",
+      "priority": "P2",
+      "action": "upgrade_workshop",
+      "mastery": 80,
+      "sourceFirst": true,
+      "note": "Prior source materials, workshops, or related Hall units exist; independently audit and reuse before building any standalone course.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "MUS220",
+      "title": "Aural Skills and Performance",
+      "school": "Creative Arts and Music",
+      "priority": "P2",
+      "action": "new",
+      "mastery": 80,
+      "sourceFirst": false,
+      "note": "No standalone complete course verified in prior 131-entry inventory; audit wider ecosystem before first authoring.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "MUS310",
+      "title": "Digital Audio Production",
+      "school": "Creative Arts and Music",
+      "priority": "P2",
+      "action": "new",
+      "mastery": 80,
+      "sourceFirst": false,
+      "note": "No standalone complete course verified in prior 131-entry inventory; audit wider ecosystem before first authoring.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "ARTS398",
+      "title": "Exhibition and Performance Capstone",
+      "school": "Creative Arts and Music",
+      "priority": "P2",
+      "action": "new",
+      "mastery": 80,
+      "sourceFirst": false,
+      "note": "No standalone complete course verified in prior 131-entry inventory; audit wider ecosystem before first authoring.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "HUM210",
+      "title": "Comparative World Literature",
+      "school": "Humanities and Archives",
+      "priority": "P2",
+      "action": "expand",
+      "mastery": 80,
+      "sourceFirst": true,
+      "note": "Prior source materials, workshops, or related Hall units exist; independently audit and reuse before building any standalone course.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "ARC201",
+      "title": "Archives and Manuscript Studies",
+      "school": "Humanities and Archives",
+      "priority": "P2",
+      "action": "expand",
+      "mastery": 80,
+      "sourceFirst": true,
+      "note": "Prior source materials, workshops, or related Hall units exist; independently audit and reuse before building any standalone course.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "ARC220",
+      "title": "Digital Humanities and Preservation",
+      "school": "Humanities and Archives",
+      "priority": "P2",
+      "action": "expand",
+      "mastery": 80,
+      "sourceFirst": true,
+      "note": "Prior source materials, workshops, or related Hall units exist; independently audit and reuse before building any standalone course.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "HUM310",
+      "title": "Indigenous Data Sovereignty and Field Ethics",
+      "school": "Humanities and Archives",
+      "priority": "P2",
+      "action": "expand",
+      "mastery": 80,
+      "sourceFirst": true,
+      "note": "Prior source materials, workshops, or related Hall units exist; independently audit and reuse before building any standalone course.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "HUM320",
+      "title": "Comparative Philosophy and Seminar Methods",
+      "school": "Humanities and Archives",
+      "priority": "P2",
+      "action": "expand",
+      "mastery": 80,
+      "sourceFirst": true,
+      "note": "Prior source materials, workshops, or related Hall units exist; independently audit and reuse before building any standalone course.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "HUM398",
+      "title": "Humanities Research Capstone",
+      "school": "Humanities and Archives",
+      "priority": "P2",
+      "action": "new",
+      "mastery": 80,
+      "sourceFirst": false,
+      "note": "No standalone complete course verified in prior 131-entry inventory; audit wider ecosystem before first authoring.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "LING101",
+      "title": "Introduction to Linguistics",
+      "school": "Linguistics and World Languages",
+      "priority": "P1",
+      "action": "new",
+      "mastery": 80,
+      "sourceFirst": false,
+      "note": "No standalone complete course verified in prior 131-entry inventory; audit wider ecosystem before first authoring.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "LING201",
+      "title": "Phonetics and Ethical Language Analysis",
+      "school": "Linguistics and World Languages",
+      "priority": "P1",
+      "action": "new",
+      "mastery": 80,
+      "sourceFirst": false,
+      "note": "No standalone complete course verified in prior 131-entry inventory; audit wider ecosystem before first authoring.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "LANG101-202",
+      "title": "Complete 20 Existing College-Level Language Outlines",
+      "school": "Linguistics and World Languages",
+      "priority": "P1",
+      "action": "complete_outlines",
+      "mastery": 80,
+      "sourceFirst": true,
+      "note": "Twenty 16-week catalog outlines already exist (Spanish, French, German, Mandarin, Japanese); deliver and independently verify the teaching, audio, oral exams, and assessments.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "LANG-AR-RU",
+      "title": "Review Arabic and Russian School-Year Course Bridges",
+      "school": "Linguistics and World Languages",
+      "priority": "P1",
+      "action": "upgrade_workshop",
+      "mastery": 80,
+      "sourceFirst": true,
+      "note": "Prior source materials, workshops, or related Hall units exist; independently audit and reuse before building any standalone course.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "ATM220",
+      "title": "Environmental Data Visualization and GIS",
+      "school": "Atmospheric and Earth Science",
+      "priority": "P2",
+      "action": "expand",
+      "mastery": 80,
+      "sourceFirst": true,
+      "note": "Prior source materials, workshops, or related Hall units exist; independently audit and reuse before building any standalone course.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "ATM230",
+      "title": "Scientific Programming for Meteorology",
+      "school": "Atmospheric and Earth Science",
+      "priority": "P2",
+      "action": "expand",
+      "mastery": 80,
+      "sourceFirst": true,
+      "note": "Prior source materials, workshops, or related Hall units exist; independently audit and reuse before building any standalone course.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "ATM240",
+      "title": "Remote Sensing and Observational Methods",
+      "school": "Atmospheric and Earth Science",
+      "priority": "P2",
+      "action": "expand",
+      "mastery": 80,
+      "sourceFirst": true,
+      "note": "Prior source materials, workshops, or related Hall units exist; independently audit and reuse before building any standalone course.",
+      "credentialStatus": "planning_only"
+    },
+    {
+      "code": "ATM398",
+      "title": "Research and Forecast Verification Capstone",
+      "school": "Atmospheric and Earth Science",
+      "priority": "P2",
+      "action": "expand",
+      "mastery": 80,
+      "sourceFirst": true,
+      "note": "Prior source materials, workshops, or related Hall units exist; independently audit and reuse before building any standalone course.",
+      "credentialStatus": "planning_only"
+    }
+  ],
+  "programs": [
+    {
+      "name": "Software Development",
+      "courseWorkItems": [
+        "CSC101",
+        "CSC102",
+        "CSC201",
+        "CSC220",
+        "CSC230",
+        "CSC310",
+        "CSC398"
+      ],
+      "preexistingSource": "Coding workshops and Discrete Mathematics",
+      "status": "proposed_nonaccredited_certificate_pathway"
+    },
+    {
+      "name": "Professional Meteorology",
+      "courseWorkItems": [
+        "SCI210",
+        "ATM220",
+        "ATM230",
+        "ATM398"
+      ],
+      "preexistingSource": "Solanar Year I and Year II",
+      "status": "proposed_nonaccredited_certificate_pathway"
+    },
+    {
+      "name": "Business and Social Enterprise",
+      "courseWorkItems": [
+        "ACC101",
+        "ACC102",
+        "BUS210",
+        "BUS220",
+        "BUS230",
+        "BUS240",
+        "BUS398"
+      ],
+      "preexistingSource": "Business Management Hall",
+      "status": "proposed_nonaccredited_certificate_pathway"
+    },
+    {
+      "name": "Archives and Digital Humanities",
+      "courseWorkItems": [
+        "ENG101",
+        "ENG102",
+        "ARC201",
+        "ARC220",
+        "HUM310",
+        "HUM398"
+      ],
+      "preexistingSource": "ARSHIF Vault and World Classics",
+      "status": "proposed_nonaccredited_certificate_pathway"
+    },
+    {
+      "name": "Creative Practice",
+      "courseWorkItems": [
+        "ART110",
+        "ART210",
+        "ART310",
+        "MUS110",
+        "MUS210",
+        "ARTS398"
+      ],
+      "preexistingSource": "Bazaar Art and The Refrain workshops",
+      "status": "proposed_nonaccredited_certificate_pathway"
+    },
+    {
+      "name": "World Languages and Linguistics",
+      "courseWorkItems": [
+        "LING101",
+        "LING201",
+        "LANG101-202"
+      ],
+      "preexistingSource": "Twenty existing college language outlines",
+      "status": "proposed_nonaccredited_certificate_pathway"
+    }
+  ]
+}
