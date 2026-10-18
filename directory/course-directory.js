@@ -92,7 +92,6 @@
         d.textContent="Shortlist saved for the active scholar in this browser. Learning records remain in the owning source hub.";
       }
     }
-    $("shortlistCount").textContent=shortlist.length;
     $("savedBtn").textContent="My shortlist ("+shortlist.length+")";
   }
   function selectedCareers(){
