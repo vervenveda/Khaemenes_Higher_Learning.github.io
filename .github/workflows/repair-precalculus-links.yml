@@ -1,0 +1,72 @@
+name: Repair Precalculus Navigation
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/repair-precalculus-links.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repair-precalculus-links
+  cancel-in-progress: true
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Repair malformed calculator and shared bridge paths
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          root=Path("courses/mathematics/precalculus-trigonometry")
+          bad='../../../https://vervenveda.com/Khaemenes_High.github.io/courses/mathematics/tools/calculator/'
+          good='https://vervenveda.com/Khaemenes_High.github.io/courses/mathematics/tools/calculator/'
+          files=replacements=0
+          for p in root.rglob("*.html"):
+              s=p.read_text(encoding="utf-8")
+              n=s.replace(bad,good)
+              if p.as_posix().endswith("/diagnostic/index.html"):
+                  n=n.replace('<script src="../../shared/course-entry-contract.js"></script>','')
+                  n=n.replace('<script src="../../shared/math-entry-gate.js"></script>','')
+              if n!=s:
+                  p.write_text(n,encoding="utf-8")
+                  files+=1
+                  replacements+=s.count(bad)
+          print(f"Repaired {replacements} malformed calculator URL(s) across {files} file(s).")
+          PY
+
+      - name: Verify
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          root=Path("courses/mathematics/precalculus-trigonometry")
+          bad='../../../https://vervenveda.com/Khaemenes_High.github.io/courses/mathematics/tools/calculator/'
+          remain=[str(p) for p in root.rglob("*.html") if bad in p.read_text(encoding="utf-8")]
+          assert not remain, remain[:20]
+          d=(root/"diagnostic/index.html").read_text(encoding="utf-8")
+          assert 'src="../../shared/course-entry-contract.js"' not in d
+          assert 'src="../../shared/math-entry-gate.js"' not in d
+          print("Precalculus navigation regression PASS.")
+          PY
+
+      - name: Commit repairs
+        shell: bash
+        run: |
+          if [ -z "$(git status --porcelain -- courses/mathematics/precalculus-trigonometry)" ]; then
+            echo "No Precalculus repairs needed."
+            exit 0
+          fi
+          git config user.name "Khaemenes Higher Learning Repair"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add courses/mathematics/precalculus-trigonometry
+          git commit -m "Repair Precalculus navigation links"
+          git pull --rebase origin main
+          git push
