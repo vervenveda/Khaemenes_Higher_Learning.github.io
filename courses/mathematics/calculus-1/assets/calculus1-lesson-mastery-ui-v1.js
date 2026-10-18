@@ -13,7 +13,7 @@ const legacyCompletion=document.getElementById("completeLesson");
 if(legacyCompletion){legacyCompletion.disabled=true;legacyCompletion.setAttribute("aria-disabled","true");legacyCompletion.textContent="Completion requires the 80% mastery check below";}
 const status=gates.canOpenLesson(id);
 function lock(reason){
- const main=document.getElementById("lessonMain");if(main){main.hidden=true;main.setAttribute("aria-hidden","true");main.inert=true}
+ const main=document.getElementById("lessonMain");if(main){main.hidden=true;main.style.display="none";main.setAttribute("aria-hidden","true");main.inert=true}
  const panel=document.createElement("main");panel.className="section";panel.id="calc1LockedStep";panel.setAttribute("role","main");
  const wrap=document.createElement("div");wrap.className="wrap";
  const card=document.createElement("article");card.className="card";card.style.cssText="max-width:680px;margin:34px auto;padding:24px;background:#fdfaf3;color:#233b32;border-radius:7px";
