@@ -8,7 +8,9 @@ if(window.__calc1HighMathToolsRendered)return;
 window.__calc1HighMathToolsRendered=true;
 const BASE="https://vervenveda.com/Khaemenes_High.github.io/courses/mathematics/";
 const ROOT="assets/learning-games/";
+const LOCAL_COURSE_URL=new URL("../",document.currentScript?.src||location.href).href;
 const TOOLS=Object.freeze({
+ limits:{name:"Limits Laboratory · Calculus I",kind:"Interactive calculus lab",url:LOCAL_COURSE_URL+"tools/limits-laboratory/",why:"Compare left/right numerical approaches, graph holes and jumps, and justify limits."},
  calculator:{name:"Scientific Calculator v4",kind:"Investigation tool",path:"tools/calculator/",why:"Verify tables, graphs, numerical results and units after written setup."},
  slope:{name:"Slope & Rate Studio",kind:"Bridge practice",path:ROOT+"slope-and-rate-studio/",why:"Practice slope and average rate before derivatives and secant limits."},
  functions:{name:"Function Transformation Studio",kind:"Bridge practice",path:ROOT+"function-transformation-studio/",why:"Explore function families, composition, inverses and graph shifts."},
@@ -26,8 +28,8 @@ const TOOLS=Object.freeze({
 });
 const UNITS=Object.freeze({
  1:["functions","slope","circle","exp"],
- 2:["functions","polynomial","intervals"],
- 3:["functions","polynomial","intervals"],
+ 2:["limits","functions","polynomial","intervals"],
+ 3:["limits","functions","polynomial","intervals"],
  4:["slope","functions","quadratic"],
  5:["polynomial","wave","exp","trig"],
  6:["functions","exp","trig","wave"],
@@ -43,9 +45,9 @@ const LESSONS=Object.freeze({
  "u01-l01":["functions","slope"],"u01-l02":["polynomial","functions"],
  "u01-l03":["functions","systems"],"u01-l04":["slope","functions"],
  "u01-l05":["polynomial","systems"],"u01-l06":["circle","exp","trig"],"u01-l07":["stats","functions"],
- "u02-l01":["functions","slope"],"u02-l03":["functions","polynomial"],
+ "u02-l01":["limits","functions"],"u02-l03":["limits","polynomial"],
  "u02-l05":["polynomial","systems"],"u02-l06":["polynomial","functions"],"u02-l07":["polynomial","intervals"],
- "u03-l03":["functions","intervals"],"u03-l04":["functions","polynomial"],
+ "u03-l03":["limits","intervals"],"u03-l04":["functions","polynomial"],
  "u04-l01":["slope","functions"],"u04-l02":["slope","quadratic"],
  "u04-l04":["slope","quadratic"],"u04-l07":["slope","functions"],
  "u05-l04":["circle","wave"],"u05-l05":["circle","trig"],
@@ -65,7 +67,7 @@ const LESSONS=Object.freeze({
  "u12-l05":["stats","sequence"],"u13-l03":["quadratic","triangle"],
  "u13-l05":["stats","quadratic"],"u13-l06":["stats","systems"]
 });
-function item(id){const t=TOOLS[id];return t?{id:id,name:t.name,kind:t.kind,why:t.why,url:BASE+t.path}:null}
+function item(id){const t=TOOLS[id];return t?{id:id,name:t.name,kind:t.kind,why:t.why,url:t.url||BASE+t.path}:null}
 function idsForLesson(id){
  const n=Number(id?.match(/^u(\d{2})-l\d{2}$/)?.[1]);
  const primary=LESSONS[id]||[],fallback=UNITS[n]||[];
