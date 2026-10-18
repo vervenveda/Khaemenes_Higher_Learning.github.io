@@ -1,0 +1,153 @@
+{
+  "version": "1.0.0",
+  "date": "2026-10-18",
+  "description": "Curated non-exclusive exploration crosswalk: career-interest pathway codes -> existing academic schools. This is not algorithmically validated matching or eligibility.",
+  "scoring": "Top three assessment interests are used only to order relevant schools; no numeric career-to-course affinity or admission readiness is calculated.",
+  "pathways": [
+    {
+      "code": "arts_entertainment",
+      "name": "Arts & Entertainment",
+      "schools": [
+        "Visual Arts & Design",
+        "Music & Recording Arts",
+        "Theatre & Performance",
+        "Literature & Creative Writing",
+        "Literature & Humanities"
+      ],
+      "description": "Explore creative techniques, storytelling, performance and portfolios."
+    },
+    {
+      "code": "architecture_engineering",
+      "name": "Architecture & Engineering",
+      "schools": [
+        "Mathematical Sciences",
+        "Computer Science & Software Development",
+        "Visual Arts & Design",
+        "Atmospheric & Earth Sciences"
+      ],
+      "description": "Use mathematical, digital and design foundations; the directory does not currently verify a professional architecture program."
+    },
+    {
+      "code": "business_admin",
+      "name": "Business Management & Administration",
+      "schools": [
+        "Business & Financial Studies",
+        "Culinary Arts & Hospitality"
+      ],
+      "description": "Explore enterprise, management, finance and service operations."
+    },
+    {
+      "code": "communications",
+      "name": "Communications",
+      "schools": [
+        "Literature & Creative Writing",
+        "World Languages & Linguistics",
+        "Theatre & Performance",
+        "Literature & Humanities",
+        "Visual Arts & Design"
+      ],
+      "description": "Practice writing, languages, media, presentation and storytelling."
+    },
+    {
+      "code": "community_social",
+      "name": "Community & Social Services",
+      "schools": [
+        "Health, Psychology & Wellbeing",
+        "Indigenous Studies & Oral History",
+        "Law, Governance & Civic Studies",
+        "Philosophy & Humanities"
+      ],
+      "description": "Explore ethics, social contexts, psychology and civic service; no clinical or social-work license is conferred."
+    },
+    {
+      "code": "education",
+      "name": "Education",
+      "schools": [
+        "World Languages & Linguistics",
+        "Philosophy & Humanities",
+        "Literature & Humanities",
+        "Health, Psychology & Wellbeing",
+        "Literature & Creative Writing"
+      ],
+      "description": "Build foundations in language, learning, inquiry and interpretation; teacher licensure is separate."
+    },
+    {
+      "code": "science_tech",
+      "name": "Science & Technology",
+      "schools": [
+        "Mathematical Sciences",
+        "Computer Science & Software Development",
+        "Atmospheric & Earth Sciences",
+        "Health, Psychology & Wellbeing"
+      ],
+      "description": "Explore mathematics, programming, weather science and research methods."
+    },
+    {
+      "code": "maintenance_repair",
+      "name": "Installation, Repair & Maintenance",
+      "schools": [
+        "Computer Science & Software Development",
+        "Mathematical Sciences",
+        "Atmospheric & Earth Sciences"
+      ],
+      "description": "Start with supporting technical and numerical study. A complete trade-apprenticeship course is not yet verified."
+    },
+    {
+      "code": "farming_forestry",
+      "name": "Farming, Fishing & Forestry",
+      "schools": [
+        "Atmospheric & Earth Sciences",
+        "Culinary Arts & Hospitality",
+        "Indigenous Studies & Oral History",
+        "History, Geography & Spatial Humanities"
+      ],
+      "description": "Explore climate, environmental observations, food systems and land knowledge. Not a professional farming or forestry qualification."
+    },
+    {
+      "code": "government",
+      "name": "Government",
+      "schools": [
+        "Law, Governance & Civic Studies",
+        "History, Geography & Spatial Humanities",
+        "History, Religion & Textual Studies",
+        "Philosophy & Humanities",
+        "Indigenous Studies & Oral History"
+      ],
+      "description": "Explore governance, historical evidence, public institutions and ethics."
+    },
+    {
+      "code": "health_medicine",
+      "name": "Health & Medicine",
+      "schools": [
+        "Health, Psychology & Wellbeing",
+        "Culinary Arts & Hospitality",
+        "Atmospheric & Earth Sciences"
+      ],
+      "description": "Explore health literacy, psychology, nutrition and environment. Nothing here replaces accredited medical or clinical training."
+    },
+    {
+      "code": "law_policy",
+      "name": "Law & Public Policy",
+      "schools": [
+        "Law, Governance & Civic Studies",
+        "Indigenous Studies & Oral History",
+        "Philosophy & Humanities",
+        "History, Religion & Textual Studies",
+        "History, Geography & Spatial Humanities"
+      ],
+      "description": "Explore evidence, law, ethics, public policy and historical contexts; not law-school qualification."
+    },
+    {
+      "code": "sales_customer",
+      "name": "Sales & Customer Service",
+      "schools": [
+        "Business & Financial Studies",
+        "World Languages & Linguistics",
+        "Theatre & Performance",
+        "Visual Arts & Design",
+        "Culinary Arts & Hospitality"
+      ],
+      "description": "Explore business, communication, customer experience and creative presentation."
+    }
+  ]
+}
