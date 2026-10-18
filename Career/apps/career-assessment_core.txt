@@ -306,6 +306,12 @@
     <!-- Summary after completion -->
     <div id="khaeAssessmentSummary" class="khae-summary" style="display:none;"></div>
 
+    <p style="margin:14px 0 10px;font-size:13px;color:#d0c8bc;">
+      <a href="../../directory/" style="color:#f0d99a;text-decoration:underline;">Explore the Higher Learning Course Directory</a>
+      · After you complete this assessment, your selected Higher Learning scholar can view interest-connected learning paths.
+      This link does not enroll you or change your answers.
+    </p>
+
     <!-- Quantum Career Lens panel -->
     <div id="khaeQuantumPanel" class="khae-summary" style="display:none;"></div>
   </div>
