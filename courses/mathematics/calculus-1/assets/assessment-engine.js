@@ -41,9 +41,10 @@ function pool(){
 }
 function sample(items,n){
  n=Math.max(0,Math.min(items.length,Number(n)||10));
- var choices=shuffle(items),wanted=Array.isArray(cfg.units)&&cfg.units.length?cfg.units:[];
+ var choices=shuffle(items),byLesson=Array.isArray(cfg.lessons)&&cfg.lessons.length>0,
+  wanted=byLesson?cfg.lessons:(Array.isArray(cfg.units)&&cfg.units.length?cfg.units:[]);
  if(!wanted.length||n<wanted.length)return choices.slice(0,n);
- var bins=wanted.map(function(u){return shuffle(choices.filter(function(q){return q.unit===u}))});
+ var bins=wanted.map(function(u){return shuffle(choices.filter(function(q){return byLesson?q.lesson===u:q.unit===u}))});
  var picked=[],seen=new Set();
  // Every specified unit must contribute to midterm/final.
  while(picked.length<n){
@@ -72,6 +73,13 @@ function textInfo(){
  "These public questions and answer keys are unsuitable for a secure midterm/final or accredited credential decision.";
 }
 function start(){
+ if(cfg.requireUnitOneLessons){
+  var gate=window.CALC1_PROGRESS_GATES;
+  if(!gate||!gate.unitOne.every(function(id){return gate.lessonMastered(id)})){
+   host.innerHTML='<article class="card"><h2>Unit 01 assessment locked</h2><p class="notice">Complete all seven Unit 01 lessons at 80% or higher first. Each lesson has a free mastery check and new practice attempts.</p><a class="btn primary" href="../">Return to Unit 01 lessons</a></article>';
+   return;
+  }
+ }
  var available=pool(),count=Math.min(available.length,Math.max(1,Number(cfg.count)||10));
  if(!available.length){host.textContent="No valid assessment questions found. Please report this course error.";return}
  selected=sample(available,count).map(function(q){
