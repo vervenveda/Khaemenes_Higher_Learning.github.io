@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "date": "2026-10-18",
   "scope": "Forensic first-pass classification: evidence based on source files and prior inventory; no live browser/academic external review",
   "policy": {
@@ -1218,12 +1218,24 @@
       "lane": "college_fine_tune",
       "priority": "P1",
       "evidence": "Preparatory course exists",
-      "reviewNote": "Substantial 36-week university-oriented mathematics/course structures exist; mathematical peer review, exam security, and proof/portfolio mastery QA remain.",
+      "reviewNote": "Existing 36-week, 92-lesson Calculus I course. Unit 01 pilot now enforces sequential 80% per-lesson practice, a separate 21-item cumulative 80% unit gate, profile-bound local snapshots, and direct lesson route locks. Units 02–13 are read-only study-preview/academic development pending reviewed lesson question banks and secure summative evaluation. No verified college certificate or credit has been approved.",
       "masteryStandard": "80% at each required gate; verified evidence and approved rubrics; no compensating failed essential domain with other scores",
-      "masteryVerification": "pending_independent_qa",
+      "masteryVerification": "unit01_formative_pilot_passed_source_simulation_units02_13_pending",
       "accreditationStatus": "not_accredited_or_credit_verified",
       "freeAccessRequired": true,
-      "releaseStatus": "under_review"
+      "releaseStatus": "under_review",
+      "gateImplementation": {
+        "policyPercent": 80,
+        "pattern": "Pre-Algebra sequential mastery",
+        "unit01LessonsWithScoredGates": 7,
+        "unit01CumulativeQuestions": 21,
+        "totalLessons": 92,
+        "unitRouteGuards": 13,
+        "laterLessonsProtectedAsReadOnlyPreview": 85,
+        "formalCredentialApproval": false,
+        "sourcePath": "courses/mathematics/calculus-1/docs/ASSESSMENT_MODEL.md",
+        "status": "in_progress"
+      }
     },
     {
       "id": "khaemenes-higher-learning-github-io-coding-101",
