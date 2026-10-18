@@ -9,6 +9,8 @@ const idx=gates.unitOne.indexOf(id),prev=gates.unitOne[idx-1],next=gates.unitOne
 const learner=gates.learner();
 const target=document.querySelector(".lesson-main")||document.querySelector("main");
 if(!target)return;
+const legacyCompletion=document.getElementById("completeLesson");
+if(legacyCompletion){legacyCompletion.disabled=true;legacyCompletion.setAttribute("aria-disabled","true");legacyCompletion.textContent="Completion requires the 80% mastery check below";}
 const status=gates.canOpenLesson(id);
 function lock(reason){
  const main=document.getElementById("lessonMain");if(main){main.hidden=true;main.setAttribute("aria-hidden","true");main.inert=true}
