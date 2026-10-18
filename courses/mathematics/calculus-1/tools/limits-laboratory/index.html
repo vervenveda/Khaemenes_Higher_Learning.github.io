@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Limits Laboratory · Calculus I</title><meta name="description" content="Explore one-sided and two-sided limits with numerical tables, interactive graphs and model explanations.">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f7f3eb;color:#293c32;font:400 16px/1.55 Arial,sans-serif}
+header{background:#26483e;color:#fff;text-align:center;padding:30px 14px}header a{color:#fff}h1,h2{font-family:Georgia,serif;font-weight:400}h1{font-size:32px;margin:12px}h2{font-size:22px}
+main{max-width:1080px;margin:24px auto;padding:0 18px}.card{background:#fffefb;border:1px solid #d6dcd4;border-radius:7px;margin:17px 0;padding:20px}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:end}.field{display:flex;flex:1;flex-direction:column;gap:6px;min-width:210px}label{font-size:13px;color:#465f50}select,button{font:inherit;padding:9px 12px;border:1px solid #99aa9f;border-radius:7px;background:#fff;color:#293c32}
+button{cursor:pointer}button.primary{background:#2b5949;color:#fff}button:focus-visible,select:focus-visible{outline:3px solid #b28a43;outline-offset:2px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}.note{background:#fff4df;padding:12px;border-left:3px solid #b88d4b}
+.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums}th,td{padding:7px;border-bottom:1px solid #dbe2d9;text-align:right}th:first-child,td:first-child{text-align:left}thead{background:#f0f4ef}
+svg{display:block;width:100%;max-height:350px;background:white;border:1px solid #dce4dd}.caption{font-size:13px;color:#55695c}.explanation{background:#eff6ed;border-left:3px solid #52856d;padding:13px}
+.workline{border-bottom:1px solid #c3cfc4;min-height:30px}footer{text-align:center;font-size:12px;padding:24px;color:#536a5a}
+@media(max-width:700px){.cols{grid-template-columns:1fr}.card{padding:14px}}
+@media print{@page{size:Letter;margin:.5in}header{color:#111;background:#fff;padding:6px;border-bottom:2px solid #333}header a,button,.note,.row{display:none!important}body{background:#fff}.card{border:0;border-bottom:1px solid #aaa;break-inside:avoid;padding:7px}h1{font-size:21pt}h2{font-size:15pt}main{margin:0;max-width:none}svg{max-height:210px}}
+</style></head><body>
+<header><a href="../../index.html">← Return to Calculus I</a><h1>Limits Laboratory</h1><p>Explore approach behavior with numerical tables, a function graph, and mathematical explanations.</p></header>
+<main><p class="note"><strong>Free mathematical exploration.</strong> This laboratory is optional practice; it never changes scores or unlocks the Academy’s required 80% mastery gates.</p>
+<section class="card"><h2>Choose a limit model</h2><div class="row"><div class="field"><label for="model">Mathematical case</label><select id="model">
+<option value="hole">Removable hole · a limit exists</option><option value="assigned">Limit and assigned value disagree</option>
+<option value="continuous">Continuous polynomial</option><option value="jump">Jump discontinuity</option>
+<option value="vertical">Vertical asymptote</option><option value="oscillate">Infinite oscillation</option></select></div>
+<div class="field"><label for="distance">Starting approach distance</label><select id="distance"><option value="1">1</option><option value=".5">0.5</option><option value=".25">0.25</option></select></div>
+<button id="reset" class="primary" type="button">Refresh investigation</button><button id="print" type="button">Print worksheet</button></div>
+<p id="formula"></p><p>Question: What are the left-hand and right-hand limits? Do they agree? Does the function’s assigned value at the target change the limit?</p></section>
+<div class="cols">
+<section class="card"><h2>Numerical approach from both sides</h2><div class="tablewrap"><table><thead><tr><th>Distance</th><th>x from left</th><th>f(left)</th><th>x from right</th><th>f(right)</th></tr></thead><tbody id="rows"></tbody></table></div>
+<p class="caption">The table supplies numerical evidence. It is not, by itself, a proof of the limit.</p></section>
+<section class="card"><h2>Graphical approach</h2><svg id="graph" viewBox="0 0 620 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Graph of the selected model. Refer to the numerical table and accompanying description for equivalent information."></svg><p class="caption" id="graphText"></p></section>
+</div>
+<section class="card"><h2>Explain and verify</h2><p>Give a reason for your prediction. Use a factorization, theorem, one-sided comparison, or counterexample as appropriate.</p><div class="workline"></div><div class="workline"></div><div class="workline"></div>
+<button class="primary" id="reveal" type="button" aria-expanded="false" aria-controls="answer">Show model reasoning</button><div id="answer" class="explanation" hidden role="status" aria-live="polite"></div>
+</section></main><footer>Khaemenes Higher Learning · Jennifer Kay Pearl · Sovereign vanilla JavaScript · No scores collected</footer>
+<script>
+(function(){
+"use strict";
+var ns="http://www.w3.org/2000/svg",get=function(id){return document.getElementById(id)};
+var models={
+hole:{a:2,formula:"f(x)=(x²−4)/(x−2), x≠2; f(2) is undefined.",value:null,limit:4,fn:function(x){return Math.abs(x-2)<1e-10?null:x+2},explain:"Factor (x²−4)=(x−2)(x+2). At every nearby input other than 2 the function is x+2. Thus both one-sided limits are 4 even though f(2) is undefined.",graph:"The graph follows y=x+2 except for an open circle at (2,4)."},
+assigned:{a:2,formula:"f(x)=x+2 for x≠2, but f(2)=7.",value:7,limit:4,fn:function(x){return Math.abs(x-2)<1e-10?7:x+2},explain:"Both one-sided limits equal 4, but the function’s assigned value is 7. The limit depends on approach values, not the value at the point.",graph:"The straight-line approach has a hole at (2,4) and a filled point at (2,7)."},
+continuous:{a:2,formula:"f(x)=x² for every real x.",value:4,limit:4,fn:function(x){return x*x},explain:"A polynomial is continuous. Both one-sided limits and f(2) equal 4.",graph:"The graph follows y=x² and includes the point (2,4)."},
+jump:{a:1,formula:"f(x)=x+2 when x<1, and f(x)=2x when x≥1.",value:2,limit:null,fn:function(x){return x<1?x+2:2*x},explain:"As x approaches 1 from the left, f(x) approaches 3. From the right, it approaches 2. The one-sided limits disagree, so the two-sided limit does not exist.",graph:"The left branch approaches (1,3) and the right branch begins at (1,2)."},
+vertical:{a:1,formula:"f(x)=1/(x−1), x≠1.",value:null,limit:null,fn:function(x){return Math.abs(x-1)<1e-10?null:1/(x-1)},explain:"Approach from the left produces arbitrarily large negative values (−∞), and approach from the right produces arbitrarily large positive values (+∞). There is no finite two-sided limit.",graph:"The graph has a vertical asymptote x=1, with divergent one-sided behavior."},
+oscillate:{a:0,formula:"f(x)=sin(1/x), x≠0.",value:null,limit:null,fn:function(x){return Math.abs(x)<1e-10?null:Math.sin(1/x)},explain:"The function continues oscillating between −1 and 1 infinitely often near zero. No unique limit exists. A finite table may misleadingly appear stable, so a proof requires more than sampling.",graph:"Oscillation continues arbitrarily close to zero; the plotted samples are only an approximation."}
+};
+function show(x){if(x===null||!Number.isFinite(x))return "undefined";if(Math.abs(x)<1e-10)return "0";return Math.abs(x)>10000?x.toExponential(2):String(Number(x.toFixed(6)))}
+function svgElement(tag,attrs){var o=document.createElementNS(ns,tag);Object.keys(attrs||{}).forEach(function(k){o.setAttribute(k,String(attrs[k]))});return o}
+function line(svg,x1,y1,x2,y2,color,thickness,dash){var p=svgElement("line",{x1:x1,y1:y1,x2:x2,y2:y2,stroke:color,"stroke-width":thickness||1});if(dash)p.setAttribute("stroke-dasharray",dash);svg.appendChild(p)}
+function renderGraph(m,key){
+ var svg=get("graph");svg.replaceChildren();
+ var xl=m.a-2.5,xh=m.a+2.5,yl=-8,yh=8;
+ var X=function(x){return 43+(x-xl)/(xh-xl)*530},Y=function(y){return 293-(y-yl)/(yh-yl)*260};
+ for(var n=-8;n<=8;n+=2)line(svg,43,Y(n),573,Y(n),"#e4ede6",1);
+ for(var v=Math.ceil(xl);v<=xh;v++)line(svg,X(v),33,X(v),293,"#edf1e8",1);
+ line(svg,43,Y(0),573,Y(0),"#607469",1.5);
+ if(xl<=0&&xh>=0)line(svg,X(0),33,X(0),293,"#607469",1.5);
+ line(svg,X(m.a),33,X(m.a),293,"#b28445",2,"5 5");
+ [[xl,m.a-.001],[m.a+.001,xh]].forEach(function(bounds){
+  var pts=[],last=null;
+  function flush(){if(pts.length>1)svg.appendChild(svgElement("polyline",{points:pts.join(" "),stroke:"#30745c","stroke-width":2.5,fill:"none"}));pts=[]}
+  for(var i=0;i<=250;i++){
+   var x=bounds[0]+(bounds[1]-bounds[0])*i/250,y=m.fn(x);
+   if(y===null||!Number.isFinite(y)||y<yl||y>yh){flush();last=null;continue}
+   if(last!==null&&Math.abs(y-last)>4)flush();
+   pts.push(X(x).toFixed(1)+","+Y(y).toFixed(1));last=y;
+  }
+  flush();
+ });
+ if(m.limit!==null)svg.appendChild(svgElement("circle",{cx:X(m.a),cy:Y(m.limit),r:6,stroke:"#b4773a","stroke-width":2.5,fill:"#fff"}));
+ if(key==="jump")svg.appendChild(svgElement("circle",{cx:X(1),cy:Y(3),r:6,stroke:"#b4773a","stroke-width":2.5,fill:"#fff"}));
+ if(m.value!==null)svg.appendChild(svgElement("circle",{cx:X(m.a),cy:Y(m.value),r:5.5,fill:"#30745c",stroke:"#184a3a"}));
+ var label=svgElement("text",{x:X(m.a)+6,y:23,fill:"#37473a","font-size":13});label.textContent="target x="+m.a;svg.appendChild(label);
+ get("graphText").textContent=m.graph+" Dashed vertical line marks the target input; open circles mark missing approach points.";
+}
+function refresh(){
+ var key=get("model").value,m=models[key],d0=Number(get("distance").value);
+ get("formula").textContent="Investigate the limit as x→"+m.a+". "+m.formula;
+ var body=get("rows");body.replaceChildren();
+ for(var i=0;i<5;i++){
+  var d=d0*Math.pow(.1,i),left=m.a-d,right=m.a+d,values=[show(d),show(left),show(m.fn(left)),show(right),show(m.fn(right))];
+  var tr=document.createElement("tr");values.forEach(function(v){var td=document.createElement("td");td.textContent=v;tr.appendChild(td)});body.appendChild(tr);
+ }
+ get("answer").hidden=true;get("answer").textContent="";
+ get("reveal").textContent="Show model reasoning";get("reveal").setAttribute("aria-expanded","false");
+ renderGraph(m,key);
+}
+get("model").addEventListener("change",refresh);get("distance").addEventListener("change",refresh);get("reset").addEventListener("click",refresh);
+get("print").addEventListener("click",function(){window.print()});
+get("reveal").addEventListener("click",function(){var box=get("answer");box.hidden=!box.hidden;box.textContent=box.hidden?"":models[get("model").value].explain;get("reveal").textContent=box.hidden?"Show model reasoning":"Hide model reasoning";get("reveal").setAttribute("aria-expanded",String(!box.hidden))});
+window.CALC1_LIMIT_LAB_MODELS=models;refresh();
+})();
+</script></body></html>
