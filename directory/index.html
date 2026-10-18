@@ -107,7 +107,7 @@ function draw(){
  const filtered=records.filter(r=>(!school||r.school===school)&&(!status||r.status===status)&&(!level||levelMatch(r.level,level))&&(!needle||[r.title,r.school,r.subject,r.sourceRepo,r.notes].join(" ").toLocaleLowerCase().includes(needle)));
  const box=byId("results");box.replaceChildren();
  for(const record of filtered.slice(0,limit))box.appendChild(card(record));
- if(!filtered.length){const msg=el("p","empty","No matching entries. Try removing a filter.");box.parentNode.insertBefore(msg,box);setTimeout(()=>{if(msg.parentNode)msg.remove()},0);box.appendChild(el("p","empty","No matching entries. Try removing a filter."))}
+ if(!filtered.length)box.appendChild(el("p","empty","No matching entries. Try removing a filter."));
  byId("filteredCount").textContent=filtered.length+" of "+records.length+" entries shown in search results";
  byId("more").hidden=limit>=filtered.length;
  byId("more").textContent="Show more results ("+Math.max(0,filtered.length-limit)+" remaining)";
