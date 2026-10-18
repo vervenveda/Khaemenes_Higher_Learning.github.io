@@ -5,7 +5,7 @@ if(!gate)return;
 const unitMatch=location.pathname.match(/\/unit-(\d{2})\/(?:index\.html)?$/);
 const unit=Number(unitMatch?.[1]||0),main=document.querySelector("main");
 function notice(reason,back){
- if(main){main.hidden=true;main.inert=true;main.setAttribute("aria-hidden","true");}
+ if(main){main.hidden=true;main.style.display="none";main.inert=true;main.setAttribute("aria-hidden","true");}
  const panel=document.createElement("main");panel.className="section";panel.id="calc1UnitLocked";
  const w=document.createElement("div");w.className="wrap";
  const c=document.createElement("article");c.className="card";c.style.cssText="max-width:680px;margin:35px auto;padding:22px;background:#fdfaf4;color:#203e31";
