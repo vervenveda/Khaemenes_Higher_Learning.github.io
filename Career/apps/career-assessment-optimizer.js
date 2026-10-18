@@ -652,6 +652,14 @@
           Explore One Path 🔮
         </button>
       </div>
+      <p style="margin:10px 0 7px;">
+        <a href="../../directory/?view=career" style="color:#f0d99a;text-decoration:underline;font-size:14px;">
+          Browse courses connected to my Career Assessment →
+        </a>
+      </p>
+      <p style="font-size:11px;color:#d0c8bc;">
+        These are subjects to explore, not predicted careers or readiness scores.
+      </p>
       <p class="khae-quantum-log-title">
         Exploration log: <strong>${log.length}</strong> event(s) stored on this device.
       </p>
