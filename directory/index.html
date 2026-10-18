@@ -32,17 +32,37 @@ main{padding:30px 0 64px}.notice{border-left:3px solid var(--gold);padding:13px 
 .links{display:flex;gap:9px;flex-wrap:wrap;margin-top:auto;padding-top:13px}.links a{display:inline-block;padding:8px 11px;text-decoration:none;border:1px solid var(--forest);border-radius:var(--radius);font-size:12px}.links a.primary{background:var(--forest);color:#fff}.links a:hover{text-decoration:underline}
 .loadrow{text-align:center;margin-top:23px}.loadrow button{padding:10px 17px;border:1px solid var(--forest);border-radius:var(--radius);background:var(--forest);color:#fff}
 .empty{padding:28px;border:1px dashed #b8c5ba;border-radius:var(--radius);background:#fff;text-align:center}.foot{padding:25px 0;border-top:1px solid var(--line);text-align:center;font-size:12px;color:var(--muted)}
+.career-panel{padding:20px;background:linear-gradient(160deg,#fffdf8,#f1f4ef);border:1px solid var(--line);border-radius:var(--radius);margin:22px 0 18px}
+.career-panel h2{font:400 23px var(--serif);color:var(--forest);margin:0 0 8px}
+.career-panel p{font-size:14px;margin:8px 0;color:#43534b}
+.career-actions{display:flex;gap:8px;flex-wrap:wrap;margin:13px 0}
+.career-actions a{padding:9px 13px;border:1px solid var(--forest);text-decoration:none;font-size:13px;border-radius:var(--radius)}
+.career-actions .mainlink{background:var(--forest);color:#fff}
+.career-path{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:13px}
+.career-path label{font-size:13px;min-width:170px}
+.career-path select{flex:1;min-width:200px;max-width:490px;height:42px;border:1px solid #a9b4ad;border-radius:var(--radius);background:#fff;color:var(--ink);padding:8px}
+.modes{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.modes button{border:1px solid #7a9688;background:#fff;color:var(--forest);border-radius:var(--radius);padding:9px 14px}
+.modes button[aria-pressed="true"]{background:var(--forest);color:#fff}
+.matchline{font-size:12px;background:#ecf3ec;color:#385848;padding:7px 9px;margin-top:8px;border-radius:var(--radius)}
+.savebar{padding-top:11px;margin-top:5px}
+.savebtn{border:1px solid #8ba697;border-radius:var(--radius);background:transparent;color:var(--forest);padding:7px 10px;font-size:12px}
+.savebtn[aria-pressed="true"]{background:#eff4ee}
+.savebtn:disabled{opacity:.5;cursor:not-allowed}
 @media(max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.filter-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:590px){.grid,.filter-grid{grid-template-columns:1fr}.hero{padding:30px 0}.brand{font-size:13px}.course h3{font-size:18px}}
 @media print{.navlinks,.filters,.loadrow{display:none!important}.grid{display:block}.course{break-inside:avoid;margin-bottom:12px}.top{background:#fff;color:#111}.hero p,.brand{color:#111}}
 </style>
+<link rel="canonical" href="https://vervenveda.com/Khaemenes_Higher_Learning.github.io/directory/">
+<script>if(location.hostname==="vervenveda.github.io"&&location.pathname.startsWith("/Khaemenes_Higher_Learning.github.io/directory/"))location.replace("https://vervenveda.com"+location.pathname+location.search+location.hash);</script>
+<script defer src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-family-registry.js"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to directory</a>
 <header class="top">
   <div class="shell nav"><a class="brand" href="../">KHAEMENES HIGHER LEARNING</a>
     <nav class="navlinks" aria-label="Directory navigation">
-      <a href="../">University Campus</a><a href="../start/">Scholar Entry</a><a href="../courses/">Mathematics</a>
+      <a href="../">University Campus</a><a href="../start/">Scholar Entry</a><a href="../courses/">Mathematics</a><a href="../Career/">Career Portal</a>
     </nav>
   </div>
   <div class="shell hero"><p class="eyebrow">University Federation · Existing Academic Assets</p><h1>Unified Course Directory</h1>
@@ -56,6 +76,27 @@ main{padding:30px 0 64px}.notice{border-left:3px solid var(--gold);padding:13px 
     <div class="stat"><strong id="pathwayCount">—</strong><span>Structured Hall pathways</span></div>
     <div class="stat"><strong id="outlineCount">—</strong><span>Catalog outlines awaiting full delivery</span></div>
   </div>
+  <section class="career-panel" aria-label="Career assessment learning connections">
+    <h2>Find courses connected to your interests</h2>
+    <p id="profileStatus" aria-live="polite">Checking your active scholar profile…</p>
+    <p id="careerStatus" aria-live="polite">Loading the Career Assessment connection…</p>
+    <div class="career-actions">
+      <a class="mainlink" href="../Career/apps/career-assessment_index.html">Take or Resume Career Assessment</a>
+      <a href="../Career/">Career Portal &amp; Mentor Hub</a>
+      <a href="../start/">Select Scholar Profile</a>
+    </div>
+    <div class="career-path">
+      <label for="careerPath">Career field to explore</label>
+      <select id="careerPath"><option value="">Choose an interest area</option></select>
+    </div>
+    <p class="small">A career-interest connection is an invitation to explore, not proof of course readiness, future employment, professional licensure or college credit. You can follow any course regardless of assessment results.</p>
+  </section>
+  <nav class="modes" aria-label="Choose directory view">
+    <button id="allBtn" type="button" aria-pressed="true">All Courses</button>
+    <button id="careerBtn" type="button" aria-pressed="false">Connected to My Interests</button>
+    <button id="savedBtn" type="button" aria-pressed="false">My Shortlist (0)</button>
+  </nav>
+  <p class="small" id="directoryMessage" role="status" aria-live="polite">No enrollment or academic records are changed.</p>
   <section class="filters" aria-label="Find a course">
     <div class="filter-grid">
       <div class="field"><label for="search">Search courses, subjects and hubs</label><input id="search" type="search" placeholder="e.g., meteorology, poetry, French, coding" autocomplete="off"></div>
@@ -68,72 +109,13 @@ main{padding:30px 0 64px}.notice{border-left:3px solid var(--gold);padding:13px 
     <div class="filter-actions"><span class="small" id="filteredCount" role="status" aria-live="polite">Loading inventory…</span><div><button type="button" class="text-btn" id="clear">Clear filters</button> <a class="small" href="./catalog.json" download>Download source inventory (JSON)</a></div></div>
   </section>
   <div class="legend" aria-label="Status definitions"><span>Teaching portal = built interface, not necessarily QA-complete</span><span>Hall pathway = grouped course sequence</span><span>Outline = planned collegiate course</span><span>Bridge = preparatory study</span><span>Resource = learning hall, not assessed course</span></div>
-  <div class="results-head"><h2>Discovered programs and pathways</h2><span class="small" id="dateLine"></span></div>
+  <div class="results-head"><h2 id="viewHeading">Discovered programs and pathways</h2><span class="small" id="dateLine"></span></div>
   <div id="results" class="grid" aria-live="off"></div>
   <div class="loadrow"><button id="more" type="button" hidden>Show more results</button></div>
   <p class="small" style="margin-top:24px">Source ownership remains with each specialist school. The directory does not duplicate lessons, overwrite progress, enroll learners, or issue academic credits. A future academic QA pass will distinguish teaching completeness, working assessment, accessible delivery, and verified mastery.</p>
 </main>
 <footer class="foot"><div class="shell">Khaemenes Higher Learning · Verve N Veda · Jennifer Kay Pearl · <a href="../">Campus Home</a></div></footer>
-<script>
-(function(){
-"use strict";
-const byId=id=>document.getElementById(id);
-const names={instructional:"Dedicated instructional portal",pathway:"Structured Hall pathway",outline:"Catalog outline",bridge:"Foundation bridge",resource:"Learning / research hall"};
-let records=[],limit=24;
-function el(tag,cls,value){const n=document.createElement(tag);if(cls)n.className=cls;if(value!==undefined)n.textContent=value;return n}
-function addLink(host,href,label,primary){if(!href)return;const a=el("a",primary?"primary":"",""+label);a.href=href;a.target="_blank";a.rel="noopener noreferrer";host.appendChild(a)}
-function levelMatch(level,filter){
- const s=String(level).toLowerCase();
- if(filter==="foundation")return /foundation|introductory|bridge/.test(s);
- if(filter==="undergraduate")return /undergraduate/.test(s);
- if(filter==="advanced")return /advanced|graduate|research/.test(s);
- if(filter==="professional")return /professional|applied/.test(s);
- return true;
-}
-function card(item){
- const box=el("article","course");
- const state=el("span","flag "+item.status,names[item.status]||item.status);box.appendChild(state);
- box.appendChild(el("h3","",item.title));
- box.appendChild(el("p","",item.school));
- box.appendChild(el("div","meta",item.level+" · "+item.kind+(item.duration?" · "+item.duration:"")));
- const why=el("p","",item.notes||"Source inspected; further QA pending.");why.style.marginTop="11px";box.appendChild(why);
- box.appendChild(el("div","meta","Original source: "+item.sourceRepo));
- const links=el("div","links");addLink(links,item.sourceUrl,item.status==="outline"?"View owning Hall":"Open original source",true);
- addLink(links,item.catalogUrl,"View academic outline",false);box.appendChild(links);
- return box;
-}
-function draw(){
- const needle=byId("search").value.trim().toLocaleLowerCase(),school=byId("school").value,status=byId("status").value,level=byId("level").value;
- const filtered=records.filter(r=>(!school||r.school===school)&&(!status||r.status===status)&&(!level||levelMatch(r.level,level))&&(!needle||[r.title,r.school,r.subject,r.sourceRepo,r.notes].join(" ").toLocaleLowerCase().includes(needle)));
- const box=byId("results");box.replaceChildren();
- for(const record of filtered.slice(0,limit))box.appendChild(card(record));
- if(!filtered.length)box.appendChild(el("p","empty","No matching entries. Try removing a filter."));
- byId("filteredCount").textContent=filtered.length+" of "+records.length+" entries shown in search results";
- byId("more").hidden=limit>=filtered.length;
- byId("more").textContent="Show more results ("+Math.max(0,filtered.length-limit)+" remaining)";
-}
-function init(catalog){
- if(!catalog||!Array.isArray(catalog.entries))throw new Error("Catalog entries unavailable");
- records=catalog.entries.slice().sort((a,b)=>a.school.localeCompare(b.school)||a.title.localeCompare(b.title));
- byId("totalCount").textContent=records.length;
- byId("instructionalCount").textContent=records.filter(x=>x.status==="instructional").length;
- byId("pathwayCount").textContent=records.filter(x=>x.status==="pathway").length;
- byId("outlineCount").textContent=records.filter(x=>x.status==="outline").length;
- byId("dateLine").textContent="Source inventory · "+catalog.inventoryDate;
- const schools=[...new Set(records.map(x=>x.school))].sort();
- for(const name of schools){const o=document.createElement("option");o.value=name;o.textContent=name;byId("school").appendChild(o)}
- for(const id of ["search","school","status","level"])byId(id).addEventListener(id==="search"?"input":"change",()=>{limit=24;draw()});
- byId("clear").addEventListener("click",()=>{for(const id of ["search","school","status","level"])byId(id).value="";limit=24;draw()});
- byId("more").addEventListener("click",()=>{limit+=24;draw()});
- draw();
-}
-fetch("./catalog.json",{cache:"no-store"}).then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.json()}).then(init).catch(error=>{
- console.error("Higher Learning catalog load failed",error);
- byId("filteredCount").textContent="Directory data could not be loaded.";
- byId("results").appendChild(el("p","empty","The federated inventory is temporarily unavailable. You can still open the source JSON above or return to the University Campus."));
-});
-})();
-</script>
+<script defer src="./course-directory.js"></script>
 <script src="/assets/vnv-beta-link.js" defer></script>
 </body>
 </html>
