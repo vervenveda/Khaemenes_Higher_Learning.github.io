@@ -21,6 +21,14 @@ document.getElementById("printLesson")?.addEventListener("click",()=>print());
 updateStatus();if(!ownerId&&status)status.textContent="No Academy learner is selected. Reading and printing remain available; lesson progress will not be saved.";
 window.addEventListener("storage",event=>{if(event.key===ACTIVE_KEY||event.key===REGISTRY_KEY){if(!ownerOk()){if(box)box.disabled=true;if(note)note.disabled=true;const b=document.getElementById("saveLessonNote");if(b)b.disabled=true;if(status)status.textContent="The active Academy learner changed. Saving is paused to protect both learners’ records; reopen this lesson under the intended learner."}}});
 })();
+/* Curated High School mathematics studios; independent practice only. */
+(()=>{
+  const own=document.currentScript;if(!own||document.querySelector('script[data-calc1-shared-highschool-math-tools="v1"]'))return;
+  const s=document.createElement("script");s.async=false;s.dataset.calc1SharedHighschoolMathTools="v1";
+  s.src=new URL("calculus1-shared-math-tools-v1.js",own.src).href;
+  document.body.appendChild(s);
+})();
+
 /* Shared Applied Mission Studio lesson connection. */
 (()=>{
   const current=document.currentScript;
