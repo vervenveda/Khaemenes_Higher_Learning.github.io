@@ -1,18 +1,18 @@
 # Khaemenes Higher Learning — 80% Mastery & Collegiate Quality Standard
-**Draft institutional academic policy for planning and technical QA · 2026-10-18**
+**Established Khaemenes Academy academic mastery policy; implementation and accreditation-readiness audit · 2026-10-18**
 
 ## Mission and truthful public status
 High-quality education is free to every learner. A public lesson, practice tool, reference Hall or workshop may be open even when it has not been approved as an assessed collegiate certificate course. No document, grade threshold, internal course number, virtual certificate, or portfolio auto-confers accreditation, institutional authority, state authorization, transfer credit, occupational licensure, or a government-recognized degree.
 
 **Institutional certificate awarding and public advertising must be reviewed for applicable state laws before launch.** The goal is to seek appropriate state authorization and accreditation; neither is represented here as obtained.
 
-## Non-negotiable minimum: 80% noncompensatory mastery
+## Established Academy policy: 80% noncompensatory mastery
 
-The rule for *each approved assessed collegiate course*, not just the gradebook mean, is:
+The mandatory progression rule for **every Khaemenes Academy lesson, activity, and required assessment** is that the next step stays locked until at least **80% mastery** is recorded. Higher Learning inherits this established policy. Formal collegiate credential eligibility additionally requires independently verified evidence; the rule is not merely an overall grade target. Implementation criteria are:
 
 1. **Entry/readiness:** Offer a placement diagnostic. A low entry score supplies recommended free bridging and tutoring, not permanent exclusion from learning.
 2. **Instruction access:** Give all students free visibility into lessons, resources, laboratories and demonstrations. Gating may regulate progression and issuance of an academic completion record, not hide basic educational opportunity behind payment.
-3. **Weekly/unit mastery gates:** At least **80%** on every required assessed checkpoint, plus all essential competencies demonstrated. An 84% average cannot offset a 65% essential lab or unit.
+3. **Sequential lesson, activity, weekly and unit mastery gates:** Lock each successive required learning step until its immediately preceding required competency assessment meets **80%**. All essential competencies must be demonstrated, and missing/unreviewed evidence must fail closed. At least **80%** on every required assessed checkpoint, plus all essential competencies demonstrated. An 84% average cannot offset a 65% essential lab or unit.
 4. **Question-bank quality:** Reviewed banks larger than any one delivered quiz form; random sampling and randomized answer order where applicable, deterministic saved attempt snapshots, distinct retake forms, answer explanations, difficulty calibration and content-domain coverage. Multiple-choice alone is not appropriate for every field.
 5. **Written/practical evidence:** Labs, papers, coding projects, oral language work, studio performance and other required artifacts must each reach **80% on an explicit rubric** and meet all safety/ethics critical criteria. A rubric may require minimum subdomain scores.
 6. **Midterm and final:** Separate, individual **80%** pass thresholds on both wherever the course plan requires them; final cumulative assessment cannot be waived by a high formative average. Closed-book or proctored constraints must not be called secure if all prompts/keys exist in public JavaScript.
