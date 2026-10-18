@@ -571,7 +571,7 @@
         <p class="kicker">Welcome to the Collegiate Campus</p>
         <h2>Study beyond the requirement. Build toward mastery.</h2>
         <p>Khaemenes Higher Learning is organized to grow course by course into a broad collegiate environment where rigorous academics, research, practical tools, creativity, and independent scholarship remain connected.</p>
-        <div class="actions"><a class="btn btn-primary" href="#departments">Enter the Campus</a><a class="btn btn-bronze" href="./Career/index.html">Career Portal</a><a class="btn" href="./courses/index.html">Mathematics Department</a></div>
+        <div class="actions"><a class="btn btn-primary" href="./directory/">Browse Course Directory</a><a class="btn" href="#departments">Enter the Campus</a><a class="btn btn-bronze" href="./Career/index.html">Career Portal</a><a class="btn" href="./courses/index.html">Mathematics Department</a></div>
       </div>
     </section>
   </main>
@@ -580,7 +580,7 @@
     <div class="shell footer-inner">
       <span><strong>Khaemenes Higher Learning</strong><br><small>© <span id="year"></span> Jennifer Pearl · Verve N Veda</small></span>
       <nav class="footer-links" aria-label="Footer navigation">
-        <a href="#student-portal">Student Profile</a><a href="./Career/index.html">Career</a><a href="#departments">Departments</a><a href="#pathways">Pathways</a><a href="#resources">Resources</a><a href="./courses/index.html">Mathematics</a><a href="https://vervenveda.com/">Verve N Veda</a>
+        <a href="#student-portal">Student Profile</a><a href="./Career/index.html">Career</a><a href="#departments">Departments</a><a href="./directory/">Course Directory</a><a href="#pathways">Pathways</a><a href="#resources">Resources</a><a href="./courses/index.html">Mathematics</a><a href="https://vervenveda.com/">Verve N Veda</a>
       </nav>
     </div>
   </footer>
