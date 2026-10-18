@@ -47,3 +47,10 @@ document.addEventListener("click",e=>{
 },true);
 window.addEventListener("storage",showState);
 })();
+/* External-source High School math game links are supplemental and never confer mastery. */
+(()=>{
+ const own=document.currentScript;if(!own||document.querySelector('script[data-calc1-shared-highschool-math-tools="v1"]'))return;
+ const s=document.createElement("script");s.async=false;s.dataset.calc1SharedHighschoolMathTools="v1";
+ s.src=new URL("calculus1-shared-math-tools-v1.js",own.src).href;
+ document.body.appendChild(s);
+})();
