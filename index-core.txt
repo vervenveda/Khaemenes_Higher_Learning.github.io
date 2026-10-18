@@ -571,7 +571,7 @@
         <p class="kicker">Welcome to the Collegiate Campus</p>
         <h2>Study beyond the requirement. Build toward mastery.</h2>
         <p>Khaemenes Higher Learning is organized to grow course by course into a broad collegiate environment where rigorous academics, research, practical tools, creativity, and independent scholarship remain connected.</p>
-        <div class="actions"><a class="btn btn-primary" href="./directory/">Browse Course Directory</a><a class="btn" href="#departments">Enter the Campus</a><a class="btn btn-bronze" href="./Career/index.html">Career Portal</a><a class="btn" href="./courses/index.html">Mathematics Department</a></div>
+        <div class="actions"><a class="btn btn-primary" href="./directory/">Browse Course Directory</a><a class="btn" href="./directory/collegiate/">Collegiate Academic Review</a><a class="btn" href="#departments">Enter the Campus</a><a class="btn btn-bronze" href="./Career/index.html">Career Portal</a><a class="btn" href="./courses/index.html">Mathematics Department</a></div>
       </div>
     </section>
   </main>
