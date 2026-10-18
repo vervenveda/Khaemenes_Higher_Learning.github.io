@@ -9,7 +9,7 @@
     "workItems": 54,
     "newStandalone": 29,
     "reuseOrUpgrade": 25,
-    "proposedPathways": 6
+    "proposedPathways": 7
   },
   "workItems": [
     {
@@ -608,6 +608,22 @@
     }
   ],
   "programs": [
+    {
+      "name": "Mathematical & Quantitative Studies",
+      "courseWorkItems": [],
+      "preexistingSource": "Higher Learning Calculus I and II, Linear Algebra, Statistics, Discrete Mathematics, Introduction to Proofs, and Differential Equations",
+      "existingCourseIds": [
+        "khaemenes-higher-learning-github-io-calculus-i",
+        "khaemenes-higher-learning-github-io-calculus-ii",
+        "khaemenes-higher-learning-github-io-linear-algebra",
+        "khaemenes-higher-learning-github-io-statistics",
+        "khaemenes-higher-learning-github-io-discrete-mathematics",
+        "khaemenes-higher-learning-github-io-introduction-to-proofs",
+        "khaemenes-higher-learning-github-io-differential-equations"
+      ],
+      "status": "flagship_candidate_existing_courses_fine_tune_before_credential_review",
+      "note": "Strongest existing first certificate-study candidate; separately confirm academic workload, prerequisites, math correctness and noncompensatory 80% gates. No external credit claim."
+    },
     {
       "name": "Software Development",
       "courseWorkItems": [
