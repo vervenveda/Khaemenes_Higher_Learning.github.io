@@ -39,14 +39,18 @@ function unitBest(n){
  return ok.length?Math.max(...ok.map(x=>Number(x.score))):0;
 }
 function unitMastered(n){
- return (n!==1||unitOne.every(lessonMastered))&&unitBest(n)>=THRESHOLD;
+ // No later unit may be promoted from its cumulative *practice* score alone.
+ // Units 02–13 require authored and reviewed per-lesson 80% gates, not yet released.
+ if(!Number.isInteger(n)||n<1||n>13)return false;
+ if(n!==1)return false;
+ return unitOne.every(lessonMastered)&&unitBest(1)>=THRESHOLD;
 }
 function canOpenLesson(id){
  const unit=Number(id.match(/^u(\d{2})-l\d{2}$/)?.[1]);
  if(!unit)return {ok:false,reason:"Unknown lesson identifier",required:null};
  const local=unitOne.indexOf(id);
  if(unit===1&&local<0)return {ok:false,reason:"Unknown Unit 01 lesson",required:null};
- if(unit>1&&!unitMastered(unit-1))return {ok:false,reason:"Unit "+(unit-1)+" requires 80% mastery before Unit "+unit+".",required:"unit-"+(unit-1)};
+ if(unit>1&&!unitMastered(unit-1))return {ok:false,reason:unit>2?"This lesson remains a free preview. The previous unit's individual 80% lesson mastery assessments are still being developed; an overall practice score cannot unlock progression.":"Unit 01's seven lessons and cumulative assessment require 80% before Unit 02 progression.",required:"unit-"+(unit-1)};
  if(unit>1){
   const nth=Number(id.match(/-l(\d{2})$/)?.[1]);
   const previous="u"+String(unit).padStart(2,"0")+"-l"+String(nth-1).padStart(2,"0");
@@ -60,7 +64,8 @@ function canOpenLesson(id){
 function canOpenUnit(n){
  if(!Number.isInteger(n)||n<1||n>13)return {ok:false,reason:"Invalid unit"};
  if(n===1)return {ok:true};
- return unitMastered(n-1)?{ok:true}:{ok:false,reason:"Unit "+(n-1)+" requires 80% mastery on every required lesson and its unit assessment before Unit "+n+" opens.",required:"unit-"+(n-1)};
+ if(n>2)return {ok:false,reason:"Unit "+(n-1)+" lesson-specific 80% mastery assessments are awaiting academic review. A cumulative practice quiz alone cannot unlock Unit "+n+".",required:"unit-"+(n-1),underReview:true};
+ return unitMastered(1)?{ok:true}:{ok:false,reason:"Unit 01 requires 80% mastery in all seven lessons and its cumulative assessment before Unit 02 opens.",required:"unit-1"};
 }
 function saveLessonAttempt(id,record){
  const active=learner();
