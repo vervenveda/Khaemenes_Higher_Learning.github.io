@@ -12,6 +12,9 @@ if(!target)return;
 const legacyCompletion=document.getElementById("completeLesson");
 if(legacyCompletion){legacyCompletion.disabled=true;legacyCompletion.setAttribute("aria-disabled","true");legacyCompletion.textContent="Completion requires the 80% mastery check below";}
 const status=gates.canOpenLesson(id);
+const progressLabel=document.getElementById("lessonStatus");
+function showMasteryStatus(){if(progressLabel)progressLabel.textContent=gates.lessonMastered(id)?"Lesson mastery: "+gates.lessonBest(id)+"%. The next step is unlocked.":"The next step requires an 80% score on the mastery check below. A completion checkbox is not enough."}
+showMasteryStatus();
 function lock(reason){
  const main=document.getElementById("lessonMain");if(main){main.hidden=true;main.style.display="none";main.setAttribute("aria-hidden","true");main.inert=true}
  const panel=document.createElement("main");panel.className="section";panel.id="calc1LockedStep";panel.setAttribute("role","main");
@@ -74,6 +77,7 @@ function submit(){
  const msg=score+"% · "+right+"/10 · "+(passed?"80% mastery reached":"Below 80% · correct and retry")+" · "+(saved?"Saved to your local learner record.":"No progress saved; verify learner profile/storage.");
  section.querySelector("#calc1LessonResult").textContent=msg;
  if(passed&&saved)nextLink(section.querySelector("#calc1NextStep"),"Mastery confirmed for local progression. You may advance.");
+   showMasteryStatus();
 }
 start();
 window.addEventListener("storage",e=>{if(e.key==="khaemenes-calculus1-course-v1"){if(gates.learner()?.id!==learner?.id){section.replaceChildren();section.textContent="Learner profile changed. Reopen this lesson to protect your records.";}}});
