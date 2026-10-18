@@ -1,0 +1,213 @@
+{
+  "title": "Unit 02 differentiated printable — faculty worked answer key",
+  "date": "2026-10-18",
+  "note": "Formative exercises only; all collegiate mastery gates independently require >=80%. Exact solutions and equivalent correct methods should be accepted.",
+  "tiers": {
+    "foundation": [
+      {
+        "number": 1,
+        "prompt": "Evaluate lim x→2 (x²−4)/(x−2), showing the factorization.",
+        "workedAnswer": "For x≠2, cancel (x−2) from (x−2)(x+2)/(x−2). The limit is 4."
+      },
+      {
+        "number": 2,
+        "prompt": "Evaluate lim x→3 (x+1). Explain why direct substitution works.",
+        "workedAnswer": "Polynomials are continuous; substitute 3, giving 4."
+      },
+      {
+        "number": 3,
+        "prompt": "For f(x)=2x+1, calculate f(1.9), f(1.99), f(2.01), f(2.1). Predict lim x→2 f(x).",
+        "workedAnswer": "The values are 4.8, 4.98, 5.02, and 5.2. Both sides approach 5."
+      },
+      {
+        "number": 4,
+        "prompt": "Evaluate lim x→0 sin(x)/x. State the unit requirement.",
+        "workedAnswer": "The standard trigonometric limit is 1 when x is measured in radians."
+      },
+      {
+        "number": 5,
+        "prompt": "If lim x→1⁻ f(x)=2 and lim x→1⁺ f(x)=7, determine whether lim x→1 f(x) exists.",
+        "workedAnswer": "It does not exist: the one-sided limits disagree."
+      },
+      {
+        "number": 6,
+        "prompt": "Evaluate lim x→4 (x²−16)/(x−4), for x≠4.",
+        "workedAnswer": "Factor the numerator to (x−4)(x+4); the limit is 8."
+      },
+      {
+        "number": 7,
+        "prompt": "Evaluate lim x→∞ 5/x. Describe the horizontal behavior.",
+        "workedAnswer": "The ratio tends to 0 as x increases without bound; horizontal asymptote y=0."
+      },
+      {
+        "number": 8,
+        "prompt": "For f(x)=(3x²+1)/(x²−4), find lim x→∞ f(x).",
+        "workedAnswer": "Divide numerator and denominator by x²; the limit is 3."
+      },
+      {
+        "number": 9,
+        "prompt": "For f(x)=(x²−9)/(x−3), x≠3, identify the missing graph point.",
+        "workedAnswer": "For x≠3, f(x)=x+3. The graph has a removable hole at (3,6)."
+      },
+      {
+        "number": 10,
+        "prompt": "Let f(x)=x+2 when x<1 and f(x)=2x when x≥1. Does lim x→1 f(x) exist?",
+        "workedAnswer": "The left limit is 3 and the right limit is 2; the two-sided limit does not exist."
+      },
+      {
+        "number": 11,
+        "prompt": "Explain whether f(a) must equal L whenever lim x→a f(x)=L. Give a counterexample.",
+        "workedAnswer": "No. Define f(x)=x+1 for x≠2, but f(2)=9. The limit is 3 while f(2)=9."
+      },
+      {
+        "number": 12,
+        "prompt": "Evaluate lim x→0 |x| using left and right approach values.",
+        "workedAnswer": "From either side |x| approaches 0, so the limit is 0."
+      }
+    ],
+    "core": [
+      {
+        "number": 1,
+        "prompt": "Calculate lim x→3 (x²−9)/(x−3) and identify the excluded input.",
+        "workedAnswer": "Factor to x+3 for x≠3; the limit is 6. The original function excludes x=3."
+      },
+      {
+        "number": 2,
+        "prompt": "Rationalize and evaluate lim x→4 [√(x+5)−3]/(x−4).",
+        "workedAnswer": "Multiply by the conjugate; obtain 1/[√(x+5)+3], giving 1/6."
+      },
+      {
+        "number": 3,
+        "prompt": "Evaluate lim x→0 (x²−4x)/x, with x≠0.",
+        "workedAnswer": "Cancel x: x−4. The limit is −4."
+      },
+      {
+        "number": 4,
+        "prompt": "Evaluate lim x→0 sin(5x)/x with x measured in radians.",
+        "workedAnswer": "Write 5[sin(5x)/(5x)]; the limit is 5."
+      },
+      {
+        "number": 5,
+        "prompt": "Evaluate lim x→0 [1−cos(x)]/x using a trigonometric identity.",
+        "workedAnswer": "Rationalize: sin²(x)/[x(1+cos x)]. It tends to 0."
+      },
+      {
+        "number": 6,
+        "prompt": "For f(x)=(x²−1)/(x−1) if x≠1 and f(1)=9, classify continuity at x=1.",
+        "workedAnswer": "The limit is 2 but f(1)=9, so the discontinuity is removable."
+      },
+      {
+        "number": 7,
+        "prompt": "Compute lim x→−2 (x²+3x+2)/(x+2).",
+        "workedAnswer": "Factor (x+1)(x+2), cancel for x≠−2, then evaluate x+1=−1."
+      },
+      {
+        "number": 8,
+        "prompt": "Find the horizontal asymptote of f(x)=(2x²+3)/(x²−1).",
+        "workedAnswer": "The same-degree leading coefficient ratio is 2/1; y=2."
+      },
+      {
+        "number": 9,
+        "prompt": "Calculate lim x→∞ (3x²−x+1)/(2x²+5).",
+        "workedAnswer": "Divide by x²; the limit is 3/2."
+      },
+      {
+        "number": 10,
+        "prompt": "Evaluate lim x→∞ x/(x²+1), explaining the dominant terms.",
+        "workedAnswer": "The denominator grows quadratically while the numerator grows linearly; limit 0."
+      },
+      {
+        "number": 11,
+        "prompt": "Create a left/right table for f(x)=x² near x=2 and state its limit.",
+        "workedAnswer": "Example: f(1.9)=3.61, f(1.99)=3.9601, f(2.01)=4.0401, f(2.1)=4.41. Limit 4."
+      },
+      {
+        "number": 12,
+        "prompt": "Evaluate lim x→0 tan(x)/x in radians.",
+        "workedAnswer": "tan(x)/x=[sin(x)/x]/cos(x); limit 1/1=1."
+      },
+      {
+        "number": 13,
+        "prompt": "For f(x)=x² when x<0 and f(x)=x+1 when x≥0, evaluate lim x→0 f(x).",
+        "workedAnswer": "Left limit 0, right limit 1: the two-sided limit does not exist."
+      },
+      {
+        "number": 14,
+        "prompt": "Evaluate lim x→∞ [7−3/x].",
+        "workedAnswer": "The term 3/x tends to 0, leaving 7."
+      },
+      {
+        "number": 15,
+        "prompt": "Evaluate lim x→1 (x³−1)/(x−1) for x≠1.",
+        "workedAnswer": "Factor x³−1=(x−1)(x²+x+1); the limit is 3."
+      },
+      {
+        "number": 16,
+        "prompt": "For f(x)=(x²−4)/(x−2) when x≠2 and f(2)=7, compare the limit and f(2).",
+        "workedAnswer": "The limit is 4, while the assigned function value is 7; discontinuous at x=2."
+      }
+    ],
+    "extended": [
+      {
+        "number": 1,
+        "prompt": "Evaluate lim x→0 [√(4+x)−2]/x and justify rationalization.",
+        "workedAnswer": "The conjugate gives 1/[√(4+x)+2], so the limit is 1/4."
+      },
+      {
+        "number": 2,
+        "prompt": "Evaluate lim x→0 sin(3x)/sin(5x), in radians.",
+        "workedAnswer": "Write [sin(3x)/(3x)]/[sin(5x)/(5x)]×3/5, yielding 3/5."
+      },
+      {
+        "number": 3,
+        "prompt": "Evaluate lim x→∞ (4x³−2x)/(2x³+7) with leading-term reasoning.",
+        "workedAnswer": "Divide by x³; all lower-order terms vanish. The limit is 2."
+      },
+      {
+        "number": 4,
+        "prompt": "Determine lim x→∞ (x²+1)/(x+2), including its sign.",
+        "workedAnswer": "The ratio grows like x, so it tends to +∞. No finite horizontal asymptote as x→∞."
+      },
+      {
+        "number": 5,
+        "prompt": "Test the existence of lim x→0 |x|/x using two one-sided calculations.",
+        "workedAnswer": "For x<0 the ratio is −1; for x>0 it is +1. The two-sided limit does not exist."
+      },
+      {
+        "number": 6,
+        "prompt": "Calculate lim x→2 (x³−8)/(x−2) using a difference of cubes.",
+        "workedAnswer": "Cancel (x−2) in (x−2)(x²+2x+4); evaluate to 12."
+      },
+      {
+        "number": 7,
+        "prompt": "Choose k so that f(x)=x²+k for x<1 and f(x)=3x for x≥1 is continuous at 1.",
+        "workedAnswer": "Match one-sided values: 1+k=3, so k=2."
+      },
+      {
+        "number": 8,
+        "prompt": "Evaluate lim x→0 [e^(2x)−1]/x. Identify the underlying standard limit.",
+        "workedAnswer": "Substitute u=2x: 2(e^u−1)/u tends to 2."
+      },
+      {
+        "number": 9,
+        "prompt": "Compute lim x→∞ √(x²+4)/x, carefully handling absolute value.",
+        "workedAnswer": "For positive x, √(x²+4)/x=√(1+4/x²), tending to +1."
+      },
+      {
+        "number": 10,
+        "prompt": "Compute lim x→−∞ √(x²+4)/x. Explain the different sign.",
+        "workedAnswer": "Here x<0, so |x|/x=−1. The expression tends to −1."
+      },
+      {
+        "number": 11,
+        "prompt": "Give a function continuous at zero but not differentiable there, and justify.",
+        "workedAnswer": "f(x)=|x| is continuous at 0. Left derivative −1 and right derivative +1 differ."
+      },
+      {
+        "number": 12,
+        "prompt": "Give a function that crosses its own horizontal asymptote, and prove both claims.",
+        "workedAnswer": "f(x)=x/(x²+1) crosses y=0 at x=0, while lim x→±∞ f(x)=0."
+      }
+    ]
+  }
+}
