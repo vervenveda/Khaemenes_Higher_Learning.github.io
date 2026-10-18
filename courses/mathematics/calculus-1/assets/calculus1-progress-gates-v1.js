@@ -47,6 +47,11 @@ function canOpenLesson(id){
  const local=unitOne.indexOf(id);
  if(unit===1&&local<0)return {ok:false,reason:"Unknown Unit 01 lesson",required:null};
  if(unit>1&&!unitMastered(unit-1))return {ok:false,reason:"Unit "+(unit-1)+" requires 80% mastery before Unit "+unit+".",required:"unit-"+(unit-1)};
+ if(unit>1){
+  const nth=Number(id.match(/-l(\d{2})$/)?.[1]);
+  const previous="u"+String(unit).padStart(2,"0")+"-l"+String(nth-1).padStart(2,"0");
+  if(nth>1&&!lessonMastered(previous))return {ok:false,reason:"The preceding lesson needs an 80% mastery score. This later unit's lesson assessments remain in the academic development queue.",required:previous};
+ }
  if(unit===1&&local>0&&!lessonMastered(unitOne[local-1]))return {ok:false,reason:"The previous lesson requires 80% mastery first.",required:unitOne[local-1]};
  // Only Unit 01 has finished lesson-level mastery banks in this pass.
  if(unit>1&&local===-1)return {ok:true,underReview:true};
