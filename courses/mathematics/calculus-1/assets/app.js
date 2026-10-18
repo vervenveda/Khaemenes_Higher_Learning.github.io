@@ -62,6 +62,33 @@ function courseGrade(){
  if([cw,ms,mid,fin,cap].some(v=>v==null))return null;
  return cw*.35+ms*.20+mid*.15+fin*.20+cap*.10;
 }
+function localPracticeStatus(){
+ const s=activeStudent();
+ const key="khaemenes-calculus1-assessment-records-v2:"+encodeURIComponent(s.id);
+ let records={};
+ try{records=JSON.parse(localStorage.getItem(key)||"{}")||{}}catch{}
+ function passed(k){
+  const attempts=records[k]?.attempts;
+  return Array.isArray(attempts)&&attempts.some(a=>a?.source==="public-formative-practice"&&
+   a?.learnerId===s.id&&a?.practicePassed===true&&Number(a?.score)>=80);
+ }
+ let unitsPassed=0;
+ for(let unit=1;unit<=13;unit++){
+  if(passed("unit-"+String(unit).padStart(2,"0")+"-mastery"))unitsPassed++;
+ }
+ return {unitsPassed,unitsTotal:13,midtermPractice:passed("midterm"),finalPractice:passed("final")};
+}
+function courseGateNotice(){
+ const r=localPracticeStatus(),s=activeStudent(),formal=s.formal||{};
+ const scores=[formal.midterm,formal.final,formal.capstone];
+ const possible=scores.every(v=>scoreValue(v)!==null&&scoreValue(v)>=80);
+ return "<p class='notice'><strong>Collegiate 80% gates (practice evidence only):</strong> "+
+ r.unitsPassed+"/"+r.unitsTotal+" unit practice checks at or above 80%; midterm practice "+
+ (r.midtermPractice?"80%+":"pending")+"; final practice "+(r.finalPractice?"80%+":"pending")+
+ ". Manual scores: "+(possible?"all selected final categories 80%+, but unverified":"one or more formal categories pending or below 80%")+
+ ". No self-entered or browser-saved score is a verified collegiate credit or certificate award. "+
+ "Subject-reviewed assessment, written/lab evidence and registrar approval are still required.</p>";
+}
 function completeWeeks(){
  return D.weeks.filter(w=>Object.values(weekRecord(w.week).days).filter(Boolean).length===5).length;
 }
@@ -158,7 +185,7 @@ function renderDashboard(){
  const s=activeStudent(),done=completeWeeks(),next=nextWeek(),grade=courseGrade();
  $("#view-dashboard").innerHTML=`<div class="wrap">
  <div class="section-head"><p class="eyebrow">Local learner dashboard</p><h2>${esc(s.name)} · Calculus I</h2>
- <p>Progress, mastery, assessment evidence, portfolio notes, and exports remain on this device unless deliberately downloaded or printed.</p></div>
+ <p>Progress, mastery, assessment evidence, portfolio notes, and exports remain on this device unless deliberately downloaded or printed.</p>${courseGateNotice()}</div>
  <div class="grid">
   <article class="card col4"><h3>Learner Record</h3>${studentControls()}<p class="notice">Prerequisite: Precalculus and Trigonometry readiness or equivalent demonstrated mastery. Placement is based on mastery, not age or grade.</p></article>
   <article class="card col8"><span class="pill good">Next recommended week</span><h3>Week ${next.week} · ${esc(next.title)}</h3><p>${esc(next.essential)}</p>
@@ -283,22 +310,22 @@ function runAudit(){
 }
 function renderAssessments(){
  const s=activeStudent();
- $("#view-assessments").innerHTML=`<div class="wrap"><div class="section-head"><p class="eyebrow">Formal evidence</p><h2>Assessment Center</h2><p>Assessments support mastery decisions and records; they do not replace jurisdiction-specific transcript, graduation, accreditation, or external testing requirements.</p></div>
+ $("#view-assessments").innerHTML=`<div class="wrap"><div class="section-head"><p class="eyebrow">Formal evidence</p><h2>Assessment Center</h2><p>Assessments support mastery decisions and records; they do not replace jurisdiction-specific transcript, graduation, accreditation, or external testing requirements. Public-source tests here are practice evidence, not secure formal credential examinations.</p>${courseGateNotice()}</div>
  <div class="resource-grid">
   <a class="card" href="diagnostic/"><h3>Readiness Diagnostic</h3><p>40 Precalculus and Trigonometry prerequisite questions with targeted feedback.</p></a>
-  <a class="card" href="assessments/midterm.html"><h3>Midterm Examination</h3><p>60 questions covering Units 01–06: functions, polynomial and rational models, exponentials, logarithms, the unit circle, graphs, identities, and equations.</p></a>
+  <a class="card" href="assessments/midterm.html"><h3>Midterm Examination</h3><p>60 practice questions covering Units 01–07: readiness, limits, continuity, derivatives and applications.</p></a>
   <a class="card" href="assessments/final.html"><h3>Comprehensive Final</h3><p>100 questions across the complete Calculus I course.</p></a>
   <a class="card" href="records/course-completion-certificate.html"><h3>Completion Record</h3><p>Printable evaluator or family-issued completion and verification record.</p></a>
  </div>
- <article class="card" style="margin-top:17px"><h3>Record formal scores</h3><div class="form-grid"><label>Diagnostic<input id="diagScore" type="number" min="0" max="100" value="${s.formal.diagnostic??""}"></label><label>Midterm<input id="midScore" type="number" min="0" max="100" value="${s.formal.midterm??""}"></label><label>Final<input id="finalScore" type="number" min="0" max="100" value="${s.formal.final??""}"></label><label>Capstone / Defense<input id="capScore" type="number" min="0" max="100" value="${s.formal.capstone??""}"></label></div><div class="actions"><button class="btn primary" id="saveFormal" type="button">Save Scores</button><a class="btn" href="assessments/administration-guide.html">Administration Guide</a></div></article></div>`;
+ <article class="card" style="margin-top:17px"><h3>Record instructor-reported scores (unverified)</h3><p class="notice">Manual scores here are notes only. They do not satisfy institutional mastery gates until subject-reviewed and verified.</p><div class="form-grid"><label>Diagnostic<input id="diagScore" type="number" min="0" max="100" value="${s.formal.diagnostic??""}"></label><label>Midterm<input id="midScore" type="number" min="0" max="100" value="${s.formal.midterm??""}"></label><label>Final<input id="finalScore" type="number" min="0" max="100" value="${s.formal.final??""}"></label><label>Capstone / Defense<input id="capScore" type="number" min="0" max="100" value="${s.formal.capstone??""}"></label></div><div class="actions"><button class="btn primary" id="saveFormal" type="button">Save Scores</button><a class="btn" href="assessments/administration-guide.html">Administration Guide</a></div></article></div>`;
  $("#saveFormal")?.addEventListener("click",()=>{
    s.formal={diagnostic:scoreValue($("#diagScore").value),midterm:scoreValue($("#midScore").value),final:scoreValue($("#finalScore").value),capstone:scoreValue($("#capScore").value)};save();renderAssessments();
  });
 }
 function renderGradebook(){
  const grade=courseGrade();
- $("#view-gradebook").innerHTML=`<div class="wrap"><div class="section-head"><p class="eyebrow">Transparent local records</p><h2>Gradebook</h2><p>Coursework 35% · generated or imported mastery 20% · midterm 15% · final 20% · capstone defense 10%.</p></div>
- <article class="card"><div class="table-wrap"><table><thead><tr><th>Week</th><th>Classwork</th><th>Mastery Best</th><th>Portfolio</th><th>Sessions</th></tr></thead><tbody>${D.weeks.map(w=>{const r=weekRecord(w.week);return `<tr><td>${w.week} · ${esc(w.title)}</td><td>${pct(r.classwork)}</td><td>${pct(r.masteryBest)}</td><td>${pct(r.portfolio)}</td><td>${Object.values(r.days).filter(Boolean).length}/5</td></tr>`}).join("")}</tbody></table></div><h3>Calculated course grade: ${pct(grade)}</h3><div class="actions"><button class="btn" id="gradeCsv" type="button">Download Gradebook CSV</button><button class="btn" id="printGrade" type="button">Print</button></div></article></div>`;
+ $("#view-gradebook").innerHTML=`<div class="wrap"><div class="section-head"><p class="eyebrow">Transparent local records</p><h2>Gradebook</h2><p>Informational weighted average only: coursework 35% · local mastery 20% · midterm 15% · final 20% · capstone defense 10%. An average never overrides an unmet 80% essential gate.</p>${courseGateNotice()}</div>
+ <article class="card"><div class="table-wrap"><table><thead><tr><th>Week</th><th>Classwork</th><th>Mastery Best</th><th>Portfolio</th><th>Sessions</th></tr></thead><tbody>${D.weeks.map(w=>{const r=weekRecord(w.week);return `<tr><td>${w.week} · ${esc(w.title)}</td><td>${pct(r.classwork)}</td><td>${pct(r.masteryBest)}</td><td>${pct(r.portfolio)}</td><td>${Object.values(r.days).filter(Boolean).length}/5</td></tr>`}).join("")}</tbody></table></div><h3>Informational weighted average: ${pct(grade)}</h3><p class="notice">Not a verified transcript grade or certificate decision. See separate noncompensatory 80% gates above.</p><div class="actions"><button class="btn" id="gradeCsv" type="button">Download Gradebook CSV</button><button class="btn" id="printGrade" type="button">Print</button></div></article></div>`;
  $("#gradeCsv")?.addEventListener("click",downloadGradebook);$("#printGrade")?.addEventListener("click",()=>print());
 }
 function renderPortfolio(){
