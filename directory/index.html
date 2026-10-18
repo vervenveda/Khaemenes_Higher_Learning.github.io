@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Khaemenes Higher Learning federated directory of courses, structured academic pathways, workshops and study resources across the Verve N Veda educational network.">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Higher Learning Course Directory — Khaemenes Academy</title>
+<style>
+:root{--paper:#f5f1e8;--panel:#fffdf9;--ink:#24332d;--muted:#64736c;--forest:#29473d;--navy:#16324a;--gold:#a88750;--line:#d9ded7;--soft:#eee9df;--serif:Cinzel,"Palatino Linotype",Georgia,serif;--sans:"Brandon Grotesque","Avenir Next",Avenir,"Segoe UI",Arial,sans-serif;--radius:7px}
+*{box-sizing:border-box}html{background:var(--paper);scroll-behavior:smooth}body{margin:0;background:linear-gradient(180deg,#fcfaf5,var(--paper));color:var(--ink);font:400 16px/1.62 var(--sans)}
+a{color:var(--navy)}button,select,input{font:inherit}button{cursor:pointer}
+:focus-visible{outline:3px solid #8e6a30;outline-offset:3px}.shell{width:min(calc(100% - 32px),1180px);margin:auto}
+.skip{position:absolute;top:-100px;left:14px;padding:9px;background:#fff;color:#111}.skip:focus{top:8px;z-index:100}
+.top{background:linear-gradient(135deg,#0d2530,#183e44);color:#fff}.nav{min-height:66px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.brand{font:400 15px var(--serif);letter-spacing:.05em;color:#fff;text-decoration:none}.navlinks{display:flex;gap:7px;flex-wrap:wrap}.navlinks a{font-size:13px;color:#f5f3ec;text-decoration:none;border:1px solid #788e92;border-radius:var(--radius);padding:6px 11px}
+.hero{padding:46px 0 42px;text-align:center}.eyebrow{margin:0;color:#d7bf8e;letter-spacing:.15em;text-transform:uppercase;font-size:11px}.hero h1{font:400 clamp(28px,5vw,46px)/1.16 var(--serif);margin:10px auto}.hero p{max-width:760px;margin:10px auto;color:#dbe6e5}
+main{padding:30px 0 64px}.notice{border-left:3px solid var(--gold);padding:13px 17px;background:#fff8e9;border-radius:var(--radius);font-size:14px;color:#57462f}
+.summary{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}.stat{flex:1;min-width:160px;padding:15px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius)}.stat strong{font:400 27px var(--serif);color:var(--forest);display:block}.stat span{font-size:12px;color:var(--muted)}
+.filters{background:var(--panel);border:1px solid var(--line);padding:19px;border-radius:var(--radius);margin-bottom:20px}
+.filter-grid{display:grid;grid-template-columns:minmax(180px,2fr) repeat(3,minmax(145px,1fr));gap:12px}.field{min-width:0;display:flex;flex-direction:column;gap:5px}
+.field label{font-size:12px;color:var(--forest)}.field input,.field select{min-width:0;width:100%;height:42px;padding:8px 10px;border:1px solid #a9b4ad;background:#fff;border-radius:var(--radius);color:var(--ink);font-size:14px}
+.filter-actions{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:12px}.text-btn{background:#fff;border:1px solid var(--line);color:var(--forest);border-radius:var(--radius);padding:8px 13px}.small{font-size:13px;color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin:17px 0 20px}.legend span{background:#f0efe9;border:1px solid var(--line);border-radius:var(--radius);padding:5px 8px;font-size:12px}
+.results-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px}.results-head h2{margin:5px 0 15px;color:var(--forest);font:400 22px var(--serif)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.course{display:flex;flex-direction:column;min-width:0;background:var(--panel);padding:19px;border:1px solid var(--line);border-radius:var(--radius)}
+.course h3{margin:9px 0 8px;font:400 19px/1.35 var(--serif);color:var(--forest);overflow-wrap:anywhere}
+.course p{margin:0 0 9px;font-size:14px;color:#4f5f58}.course .meta{font-size:12px;color:var(--muted);overflow-wrap:anywhere}
+.flag{align-self:flex-start;border:1px solid #b8c7bf;background:#eef4ee;color:#2c5949;padding:3px 8px;font-size:11px;border-radius:var(--radius)}
+.flag.pathway{background:#f5f1e7;color:#775d33;border-color:#dccaa3}.flag.outline{background:#f0edf6;color:#59486d;border-color:#c8bed7}.flag.bridge{background:#edf2f9;color:#39516d;border-color:#bfd0e2}.flag.resource{background:#f1f1f1;color:#555;border-color:#ccc}
+.links{display:flex;gap:9px;flex-wrap:wrap;margin-top:auto;padding-top:13px}.links a{display:inline-block;padding:8px 11px;text-decoration:none;border:1px solid var(--forest);border-radius:var(--radius);font-size:12px}.links a.primary{background:var(--forest);color:#fff}.links a:hover{text-decoration:underline}
+.loadrow{text-align:center;margin-top:23px}.loadrow button{padding:10px 17px;border:1px solid var(--forest);border-radius:var(--radius);background:var(--forest);color:#fff}
+.empty{padding:28px;border:1px dashed #b8c5ba;border-radius:var(--radius);background:#fff;text-align:center}.foot{padding:25px 0;border-top:1px solid var(--line);text-align:center;font-size:12px;color:var(--muted)}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.filter-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:590px){.grid,.filter-grid{grid-template-columns:1fr}.hero{padding:30px 0}.brand{font-size:13px}.course h3{font-size:18px}}
+@media print{.navlinks,.filters,.loadrow{display:none!important}.grid{display:block}.course{break-inside:avoid;margin-bottom:12px}.top{background:#fff;color:#111}.hero p,.brand{color:#111}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to directory</a>
+<header class="top">
+  <div class="shell nav"><a class="brand" href="../">KHAEMENES HIGHER LEARNING</a>
+    <nav class="navlinks" aria-label="Directory navigation">
+      <a href="../">University Campus</a><a href="../start/">Scholar Entry</a><a href="../courses/">Mathematics</a>
+    </nav>
+  </div>
+  <div class="shell hero"><p class="eyebrow">University Federation · Existing Academic Assets</p><h1>Unified Course Directory</h1>
+  <p>Explore existing instruction, academic pathways, workshops, and resource halls across Khaemenes Higher Learning and its federated schools. Every listing routes to the source that owns it.</p></div>
+</header>
+<main class="shell" id="main">
+  <div class="notice"><strong>Inventory first, courses later.</strong> These are source-inspected listings, not promises of complete academic delivery. A teaching portal, a Hall pathway, a course outline, and a research resource are different things. Internal course numbers and completion certificates do not establish accredited credit or licensure.</div>
+  <div class="summary" aria-label="Catalog statistics">
+    <div class="stat"><strong id="totalCount">—</strong><span>All discovered entries</span></div>
+    <div class="stat"><strong id="instructionalCount">—</strong><span>Dedicated instructional portals</span></div>
+    <div class="stat"><strong id="pathwayCount">—</strong><span>Structured Hall pathways</span></div>
+    <div class="stat"><strong id="outlineCount">—</strong><span>Catalog outlines awaiting full delivery</span></div>
+  </div>
+  <section class="filters" aria-label="Find a course">
+    <div class="filter-grid">
+      <div class="field"><label for="search">Search courses, subjects and hubs</label><input id="search" type="search" placeholder="e.g., meteorology, poetry, French, coding" autocomplete="off"></div>
+      <div class="field"><label for="school">Academic school</label><select id="school"><option value="">All schools</option></select></div>
+      <div class="field"><label for="status">What has been built?</label><select id="status">
+        <option value="">All inventory types</option><option value="instructional">Dedicated instructional portal</option><option value="pathway">Structured Hall pathway</option><option value="outline">Catalog outline only</option><option value="bridge">Foundation / entry bridge</option><option value="resource">Learning / research hall</option>
+      </select></div>
+      <div class="field"><label for="level">Study level</label><select id="level"><option value="">All levels</option><option value="foundation">Foundation / introductory</option><option value="undergraduate">Undergraduate</option><option value="advanced">Advanced / graduate-style</option><option value="professional">Professional / applied</option></select></div>
+    </div>
+    <div class="filter-actions"><span class="small" id="filteredCount" role="status" aria-live="polite">Loading inventory…</span><div><button type="button" class="text-btn" id="clear">Clear filters</button> <a class="small" href="./catalog.json" download>Download source inventory (JSON)</a></div></div>
+  </section>
+  <div class="legend" aria-label="Status definitions"><span>Teaching portal = built interface, not necessarily QA-complete</span><span>Hall pathway = grouped course sequence</span><span>Outline = planned collegiate course</span><span>Bridge = preparatory study</span><span>Resource = learning hall, not assessed course</span></div>
+  <div class="results-head"><h2>Discovered programs and pathways</h2><span class="small" id="dateLine"></span></div>
+  <div id="results" class="grid" aria-live="off"></div>
+  <div class="loadrow"><button id="more" type="button" hidden>Show more results</button></div>
+  <p class="small" style="margin-top:24px">Source ownership remains with each specialist school. The directory does not duplicate lessons, overwrite progress, enroll learners, or issue academic credits. A future academic QA pass will distinguish teaching completeness, working assessment, accessible delivery, and verified mastery.</p>
+</main>
+<footer class="foot"><div class="shell">Khaemenes Higher Learning · Verve N Veda · Jennifer Kay Pearl · <a href="../">Campus Home</a></div></footer>
+<script>
+(function(){
+"use strict";
+const byId=id=>document.getElementById(id);
+const names={instructional:"Dedicated instructional portal",pathway:"Structured Hall pathway",outline:"Catalog outline",bridge:"Foundation bridge",resource:"Learning / research hall"};
+let records=[],limit=24;
+function el(tag,cls,value){const n=document.createElement(tag);if(cls)n.className=cls;if(value!==undefined)n.textContent=value;return n}
+function addLink(host,href,label,primary){if(!href)return;const a=el("a",primary?"primary":"",""+label);a.href=href;a.target="_blank";a.rel="noopener noreferrer";host.appendChild(a)}
+function levelMatch(level,filter){
+ const s=String(level).toLowerCase();
+ if(filter==="foundation")return /foundation|introductory|bridge/.test(s);
+ if(filter==="undergraduate")return /undergraduate/.test(s);
+ if(filter==="advanced")return /advanced|graduate|research/.test(s);
+ if(filter==="professional")return /professional|applied/.test(s);
+ return true;
+}
+function card(item){
+ const box=el("article","course");
+ const state=el("span","flag "+item.status,names[item.status]||item.status);box.appendChild(state);
+ box.appendChild(el("h3","",item.title));
+ box.appendChild(el("p","",item.school));
+ box.appendChild(el("div","meta",item.level+" · "+item.kind+(item.duration?" · "+item.duration:"")));
+ const why=el("p","",item.notes||"Source inspected; further QA pending.");why.style.marginTop="11px";box.appendChild(why);
+ box.appendChild(el("div","meta","Original source: "+item.sourceRepo));
+ const links=el("div","links");addLink(links,item.sourceUrl,item.status==="outline"?"View owning Hall":"Open original source",true);
+ addLink(links,item.catalogUrl,"View academic outline",false);box.appendChild(links);
+ return box;
+}
+function draw(){
+ const needle=byId("search").value.trim().toLocaleLowerCase(),school=byId("school").value,status=byId("status").value,level=byId("level").value;
+ const filtered=records.filter(r=>(!school||r.school===school)&&(!status||r.status===status)&&(!level||levelMatch(r.level,level))&&(!needle||[r.title,r.school,r.subject,r.sourceRepo,r.notes].join(" ").toLocaleLowerCase().includes(needle)));
+ const box=byId("results");box.replaceChildren();
+ for(const record of filtered.slice(0,limit))box.appendChild(card(record));
+ if(!filtered.length){const msg=el("p","empty","No matching entries. Try removing a filter.");box.parentNode.insertBefore(msg,box);setTimeout(()=>{if(msg.parentNode)msg.remove()},0);box.appendChild(el("p","empty","No matching entries. Try removing a filter."))}
+ byId("filteredCount").textContent=filtered.length+" of "+records.length+" entries shown in search results";
+ byId("more").hidden=limit>=filtered.length;
+ byId("more").textContent="Show more results ("+Math.max(0,filtered.length-limit)+" remaining)";
+}
+function init(catalog){
+ if(!catalog||!Array.isArray(catalog.entries))throw new Error("Catalog entries unavailable");
+ records=catalog.entries.slice().sort((a,b)=>a.school.localeCompare(b.school)||a.title.localeCompare(b.title));
+ byId("totalCount").textContent=records.length;
+ byId("instructionalCount").textContent=records.filter(x=>x.status==="instructional").length;
+ byId("pathwayCount").textContent=records.filter(x=>x.status==="pathway").length;
+ byId("outlineCount").textContent=records.filter(x=>x.status==="outline").length;
+ byId("dateLine").textContent="Source inventory · "+catalog.inventoryDate;
+ const schools=[...new Set(records.map(x=>x.school))].sort();
+ for(const name of schools){const o=document.createElement("option");o.value=name;o.textContent=name;byId("school").appendChild(o)}
+ for(const id of ["search","school","status","level"])byId(id).addEventListener(id==="search"?"input":"change",()=>{limit=24;draw()});
+ byId("clear").addEventListener("click",()=>{for(const id of ["search","school","status","level"])byId(id).value="";limit=24;draw()});
+ byId("more").addEventListener("click",()=>{limit+=24;draw()});
+ draw();
+}
+fetch("./catalog.json",{cache:"no-store"}).then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.json()}).then(init).catch(error=>{
+ console.error("Higher Learning catalog load failed",error);
+ byId("filteredCount").textContent="Directory data could not be loaded.";
+ byId("results").appendChild(el("p","empty","The federated inventory is temporarily unavailable. You can still open the source JSON above or return to the University Campus."));
+});
+})();
+</script>
+</body>
+</html>
