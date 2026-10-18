@@ -46,7 +46,7 @@ function weekRecord(n){
    days:old.days&&typeof old.days==="object"?old.days:{},
    classwork:scoreValue(old.classwork),masteryBest:scoreValue(old.masteryBest),
    portfolio:scoreValue(old.portfolio),attempts:Number(old.attempts)||0,
-   reflection:String(old.reflection||""),evidence:String(old.evidence||"")
+   reflection:String(old.reflection||""),evidence:String(old.evidence||""),snapshots:Array.isArray(old.snapshots)?old.snapshots.slice(-12):[]
  };
 }
 function avg(vals){
@@ -262,29 +262,61 @@ function renderUnits(){
  <div class="unit-grid"><article class="card unit-card" style="--accent:#111"><span class="unit-number">D</span><h3>Calculus Readiness Diagnostic</h3><p>Forty prerequisite questions with explanations and targeted review categories.</p><div class="actions"><a class="btn primary" href="diagnostic/">Open Diagnostic</a></div></article>
  ${D.units.map((u,i)=>`<article class="card unit-card" style="--accent:${colors[i%colors.length]}"><span class="unit-number">${String(u.number).padStart(2,"0")}</span><h3>${esc(u.title)}</h3><p>${esc(u.essential)}</p><p><span class="pill">${u.weeks} week${u.weeks===1?"":"s"}</span><span class="pill">${u.lessons.length} lessons</span><span class="pill">3 pathways</span></p><div class="actions"><a class="btn primary" href="units/unit-${String(u.number).padStart(2,"0")}/">Open Unit</a></div></article>`).join("")}</div></div>`;
 }
-function shuffled(arr){return [...arr].sort(()=>Math.random()-.5)}
+function shuffled(arr){
+ const out=[...arr];
+ for(let i=out.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[out[i],out[j]]=[out[j],out[i]]}
+ return out;
+}
 function makeSet(units,count){
  const pool=Q.filter(q=>units.includes(q.unit));
  return shuffled(pool).slice(0,Math.min(count,pool.length));
 }
 function renderSet(host,set,weekNo,prefix){
  if(!host)return;
- const token=`${prefix}-${Date.now()}-${Math.floor(Math.random()*9999)}`;
- host.innerHTML=set.map((q,i)=>`<article class="question"><fieldset><legend>${i+1}. ${esc(q.prompt)}</legend><div class="options">${q.options.map((o,j)=>`<label class="option"><input type="radio" name="${token}-q${i}" value="${j}"><span>${esc(o)}</span></label>`).join("")}</div><div class="feedback" id="${token}-fb${i}" hidden></div></fieldset></article>`).join("")+`<div class="actions no-print"><button class="btn primary" id="${token}-score" type="button">Submit &amp; Score</button></div><p id="${token}-msg"></p>`;
- $(`#${token}-score`)?.addEventListener("click",()=>{
-   let right=0,complete=true;
-   set.forEach((q,i)=>{
-     const selected=$(`input[name="${token}-q${i}"]:checked`),fb=$(`#${token}-fb${i}`);
-     fb.hidden=false;
-     if(!selected){complete=false;fb.className="feedback bad";fb.textContent="Choose an answer.";return}
-     const ok=Number(selected.value)===q.answer;if(ok)right++;
-     fb.className=`feedback ${ok?"good":"bad"}`;
-     fb.textContent=`${ok?"Correct.":"Review."} ${q.explanation}`;
+ if(!Array.isArray(set)||!set.length){host.textContent="No practice questions are available for this selection.";return}
+ const token=prefix+"-"+Date.now()+"-"+Math.floor(Math.random()*999999);
+ const shuffledSet=set.map(q=>({q,options:shuffled(q.options.map((text,original)=>({text,original})))}));
+ host.innerHTML="<p class='notice'>Formative practice: at least 80% is required for the local practice threshold. Public-source questions are not secure collegiate exams.</p>"+
+ shuffledSet.map((row,i)=>"<article class='question'><fieldset><legend>"+(i+1)+". "+esc(row.q.prompt)+"</legend><div class='options'>"+
+ row.options.map((opt,j)=>"<label class='option'><input type='radio' name='"+token+"-q"+i+"' value='"+j+"'><span>"+esc(opt.text)+"</span></label>").join("")+
+ "</div><div class='feedback' id='"+token+"-fb"+i+"' hidden></div></fieldset></article>").join("")+
+ "<div class='actions no-print'><button class='btn primary' id='"+token+"-score' type='button'>Submit &amp; Score</button></div><p id='"+token+"-msg' role='status' aria-live='polite'></p>";
+ let submitted=false;
+ $("#"+token+"-score")?.addEventListener("click",()=>{
+   if(submitted)return;
+   const choices=shuffledSet.map((row,i)=>{
+     const selected=$('input[name="'+token+'-q'+i+'"]:checked');
+     return selected?Number(selected.value):null;
    });
-   if(!complete){$(`#${token}-msg`).textContent="Answer every item before scoring.";return}
-   const score=Math.round(right/set.length*100);
-   $(`#${token}-msg`).innerHTML=`<span class="score">${score}%</span> · ${right}/${set.length}`;
-   if(weekNo){const r=weekRecord(weekNo);r.attempts++;r.masteryBest=Math.max(r.masteryBest||0,score);save()}
+   if(choices.some(x=>x===null)){
+     $("#"+token+"-msg").textContent="Complete every question before scoring; no answers were revealed.";
+     return;
+   }
+   let right=0;
+   const snapshot=shuffledSet.map((row,i)=>{
+     const selected=choices[i];
+     const correct=row.options[selected].original===row.q.answer;
+     if(correct)right++;
+     const fb=$("#"+token+"-fb"+i);fb.hidden=false;fb.className="feedback "+(correct?"good":"bad");
+     fb.textContent=(correct?"Correct. ":"Review. ")+(row.q.explanation||"Revisit the lesson and explain the reasoning.");
+     return {id:row.q.id,options:row.options.map(o=>o.text),selectedIndex:selected,
+       correctIndex:row.options.findIndex(o=>o.original===row.q.answer)};
+   });
+   const score=Math.round(right/shuffledSet.length*100),practicePassed=score>=80;
+   const msg=$("#"+token+"-msg");
+   msg.textContent=score+"% · "+right+"/"+shuffledSet.length+
+     (practicePassed?" · Practice threshold met (80%+)":" · Below 80%; review corrections before a fresh attempt")+
+     " · Practice only, not verified collegiate completion.";
+   submitted=true;
+   const button=$("#"+token+"-score");if(button)button.disabled=true;
+   host.querySelectorAll('input[name^="'+token+'-"]').forEach(input=>input.disabled=true);
+   if(weekNo){
+     const r=weekRecord(weekNo);r.attempts++;
+     r.masteryBest=Math.max(r.masteryBest||0,score);
+     r.snapshots.push({date:new Date().toISOString(),score,practicePassed,items:snapshot,source:"public-formative-practice"});
+     r.snapshots=r.snapshots.slice(-12);
+     save();
+   }
  });
 }
 function renderPractice(){
@@ -299,14 +331,29 @@ function renderPractice(){
  $("#audit")?.addEventListener("click",runAudit);
 }
 function runAudit(){
- const errors=[];
+ const errors=[],normalized=new Map(),repeats=new Map();
  Q.forEach(q=>{
-   if(!q.prompt||!q.explanation)errors.push(`${q.id}: missing text`);
-   if(!Array.isArray(q.options)||q.options.length!==4)errors.push(`${q.id}: option count`);
-   if(new Set(q.options.map(x=>x.trim().toLowerCase())).size!==4)errors.push(`${q.id}: duplicate choices`);
-   if(q.options[q.answer]!==q.answer_text)errors.push(`${q.id}: key mismatch`);
+  if(!q.prompt||!q.explanation)errors.push(q.id+": missing prompt or explanation");
+  if(!Array.isArray(q.options)||q.options.length!==4)errors.push(q.id+": expected four answer options");
+  else{
+    if(new Set(q.options.map(x=>String(x).trim().toLowerCase())).size!==4)errors.push(q.id+": duplicate answer choices");
+    if(q.options[q.answer]!==q.answer_text)errors.push(q.id+": answer index/text mismatch");
+    q.options.forEach((option,i)=>{if(i!==q.answer)repeats.set(option,(repeats.get(option)||0)+1)});
+  }
+  const key=String(q.prompt||"").toLowerCase().trim();
+  normalized.set(key,(normalized.get(key)||0)+1);
  });
- $("#auditLog").textContent=errors.length?errors.join("\n"):`PASS\n${Q.length} questions\n${new Set(Q.map(q=>q.skill)).size} skill labels\n0 duplicate normalized choices\n0 answer-key mismatches`;
+ const duplicatePrompts=[...normalized.values()].reduce((sum,n)=>sum+Math.max(0,n-1),0);
+ const common=[...repeats.entries()].filter(([text,n])=>n>=Math.ceil(Q.length*.5)).sort((a,b)=>b[1]-a[1]);
+ const messages=[
+  "COLLEGIATE CONTENT REVIEW REQUIRED",
+  Q.length+" existing questions · "+normalized.size+" unique normalized prompts · "+duplicatePrompts+" repeated prompts",
+  common.length+" generic or dominant distractor strings appear in at least half of the bank.",
+  "Repeat distractor examples: "+common.slice(0,3).map(([t,n])=>n+"× "+t).join(" | "),
+  errors.length?errors.length+" structural/key issues: "+errors.slice(0,12).join("; "):"Structural answer-index mapping checks passed.",
+  "The present bank is unsuitable as a secure or independently validated college-level exam."
+ ];
+ $("#auditLog").textContent=messages.join("\n");
 }
 function renderAssessments(){
  const s=activeStudent();
