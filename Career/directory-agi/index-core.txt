@@ -134,5 +134,6 @@ summary{padding:9px 11px;cursor:pointer;font-weight:700}
 })();
 </script>
 <script src="/assets/vnv-beta-link.js" defer></script>
+<script defer src="../../assets/khaemenes-academy-title-v1.js" data-khae-title-standard="v1"></script>
 </body>
 </html>
