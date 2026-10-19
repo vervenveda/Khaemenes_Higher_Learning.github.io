@@ -38,8 +38,8 @@ function render(){
   const pathway=$("#pathwaySelect");if(pathway)pathway.value=rec.pathway||"Core";
   const reflection=$("#lessonReflection");if(reflection&&document.activeElement!==reflection)reflection.value=rec.reflection||"";
   const done=completeCount();if(bar)bar.style.width=`${done/STEPS.length*100}%`;if(count)count.textContent=`${done}/${STEPS.length} lesson stages recorded`;
-  if(button){button.textContent=rec.complete?"✓ Lesson Complete":"Mark Lesson Complete";button.setAttribute("aria-pressed",String(!!rec.complete))}
-  if(status)status.textContent=rec.complete?`Completed locally${rec.quickScore==null?"":` · Quick check ${rec.quickScore}%`}.`:`In progress${rec.quickScore==null?"":` · Quick check ${rec.quickScore}%`}.`;
+  if(button){button.textContent=rec.complete?"✓ Study Activity Reviewed":"Mark Study Activity Reviewed";button.setAttribute("aria-pressed",String(!!rec.complete))}
+  if(status)status.textContent=(rec.complete?"Study activity reviewed locally. ":"Study activity not yet reviewed. ")+(rec.quickScore==null?"No formative quick-check score.":"Formative quick check: "+rec.quickScore+"%. ")+(rec.quickScore>=80?"80% practice threshold met; verified academic mastery remains separate.":"The required 80% academic mastery gate remains separate.");
 }
 function setTheme(theme){document.documentElement.dataset.theme=theme;try{localStorage.setItem(THEME_KEY,theme)}catch{}}
 setTheme(localStorage.getItem(THEME_KEY)||"dark");
@@ -51,7 +51,7 @@ function activatePathway(name){
   const panel=$("#pathwayPanel"),source=$(`[data-pathway-copy="${CSS.escape(name)}"]`);if(panel&&source)panel.innerHTML=source.innerHTML;
 }
 $$('[data-pathway]').forEach(button=>button.addEventListener('click',()=>{rec.pathway=button.dataset.pathway;persist();activatePathway(rec.pathway)}));
-$("#completeLesson")?.addEventListener("click",()=>{rec.complete=!rec.complete;if(rec.complete)STEPS.forEach(step=>rec.steps[step]=true);persist()});
+$("#completeLesson")?.addEventListener("click",()=>{rec.complete=!rec.complete;persist()});
 $("#saveReflection")?.addEventListener("click",()=>{rec.reflection=$("#lessonReflection")?.value.trim()||"";rec.steps.reflection=!!rec.reflection;persist();const msg=$("#reflectionMessage");if(msg)msg.textContent="Reflection saved locally."});
 $("#printLesson")?.addEventListener("click",()=>window.print());
 $("#checkLessonQuestions")?.addEventListener("click",()=>{
