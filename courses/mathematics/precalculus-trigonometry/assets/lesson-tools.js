@@ -14,7 +14,7 @@ const note=document.getElementById("lessonNote");
 const status=document.getElementById("lessonStatus");
 if(box)box.checked=!!rec.complete;
 if(note)note.value=rec.note||"";
-function updateStatus(){if(status)status.textContent=rec.complete?"Marked complete on this device.":"Not yet marked complete."}
+function updateStatus(){if(status)status.textContent=rec.complete?"Study activity self-marked complete; 80% scored mastery is a separate requirement.":"Study activity not yet marked; the next step requires 80% scored mastery."}
 box?.addEventListener("change",()=>{const previous=!!rec.complete;rec.complete=box.checked;rec.updated=new Date().toISOString();data[id]=rec;if(!save(data)){rec.complete=previous;box.checked=previous;if(status)status.textContent="Save paused: select the intended Academy learner and reopen this lesson.";return}updateStatus()});
 document.getElementById("saveLessonNote")?.addEventListener("click",()=>{const next=note.value.trim(),previous=rec.note;rec.note=next;rec.updated=new Date().toISOString();data[id]=rec;if(save(data))alert("Lesson note saved locally for "+(ownerAtLoad?.name||"the active learner")+".");else{rec.note=previous;if(status)status.textContent="Save paused: select the intended Academy learner and reopen this lesson. Export or copy unsaved notes before leaving."}});
 document.getElementById("printLesson")?.addEventListener("click",()=>print());
