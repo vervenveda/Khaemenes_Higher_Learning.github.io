@@ -79,18 +79,23 @@ function localPracticeStatus(){
  return {unitsPassed,unitsTotal:13,midtermPractice:passed("midterm"),finalPractice:passed("final")};
 }
 function courseGateNotice(){
- const r=localPracticeStatus(),s=activeStudent(),formal=s.formal||{};
- const scores=[formal.midterm,formal.final,formal.capstone];
- const possible=scores.every(v=>scoreValue(v)!==null&&scoreValue(v)>=80);
- return "<p class='notice'><strong>Collegiate 80% gates (practice evidence only):</strong> "+
- r.unitsPassed+"/"+r.unitsTotal+" unit practice checks at or above 80%; midterm practice "+
- (r.midtermPractice?"80%+":"pending")+"; final practice "+(r.finalPractice?"80%+":"pending")+
- ". Manual scores: "+(possible?"all selected final categories 80%+, but unverified":"one or more formal categories pending or below 80%")+
- ". No self-entered or browser-saved score is a verified collegiate credit or certificate award. "+
- "Subject-reviewed assessment, written/lab evidence and registrar approval are still required.</p>";
+ const r=localPracticeStatus(),g=scoredGateStatus();
+ const status=g.available?g.lessons+"/7 Unit 01 lesson formative mastery checks at 80%+; Unit 01 cumulative: "+(g.unitOne?"80%+ local practice gate":"pending")+".":"No matching Calculus I scholar profile is selected, so local lesson mastery is not displayed.";
+ return "<p class='notice'><strong>Academy 80% sequential progression policy:</strong> "+status+
+ " Sessions checked: activity only. Week practice scores and self-entered midterm/final/capstone scores: unverified and non-unlocking. "+
+ " Public unit quizzes are formative learning gates, not secure exams. "+
+ " No verified collegiate certificate or transfer credit is awarded by this dashboard. "+
+ " Faculty and registrar approval of formal assessment evidence: pending.</p>";
 }
-function completeWeeks(){
+function checkedWeeks(){
+ // Activity checkboxes describe study participation, never scored 80% mastery.
  return D.weeks.filter(w=>Object.values(weekRecord(w.week).days).filter(Boolean).length===5).length;
+}
+function scoredGateStatus(){
+ const gate=window.CALC1_PROGRESS_GATES;
+ const active=gate?.learner?.();
+ if(!gate||!active||active.id!==activeStudent().id)return {lessons:0,lessonTotal:7,unitOne:false,unitTwo:false,verified:false,available:false};
+ return {lessons:gate.unitOne.filter(id=>gate.lessonMastered(id)).length,lessonTotal:7,unitOne:gate.unitMastered(1),unitTwo:gate.canOpenUnit(2).ok,verified:false,available:true};
 }
 function setTheme(t){
  document.documentElement.dataset.theme=t;
@@ -179,26 +184,27 @@ function bindStudentControls(){
  });
 }
 function nextWeek(){
+ // A recommendation for organizing study—not proof of unlocked mastery.
  return D.weeks.find(w=>Object.values(weekRecord(w.week).days).filter(Boolean).length<5)||D.weeks.at(-1);
 }
 function renderDashboard(){
- const s=activeStudent(),done=completeWeeks(),next=nextWeek(),grade=courseGrade();
+ const s=activeStudent(),done=checkedWeeks(),next=nextWeek(),grade=courseGrade(),gates=scoredGateStatus();
  $("#view-dashboard").innerHTML=`<div class="wrap">
  <div class="section-head"><p class="eyebrow">Local learner dashboard</p><h2>${esc(s.name)} · Calculus I</h2>
  <p>Progress, mastery, assessment evidence, portfolio notes, and exports remain on this device unless deliberately downloaded or printed.</p>${courseGateNotice()}</div>
  <div class="grid">
   <article class="card col4"><h3>Learner Record</h3>${studentControls()}<p class="notice">Prerequisite: Precalculus and Trigonometry readiness or equivalent demonstrated mastery. Placement is based on mastery, not age or grade.</p></article>
-  <article class="card col8"><span class="pill good">Next recommended week</span><h3>Week ${next.week} · ${esc(next.title)}</h3><p>${esc(next.essential)}</p>
-   <div class="progress"><span style="width:${done/36*100}%"></span></div><p>${done}/36 weeks fully checked · ${Math.round(done/36*100)}%</p>
-   <div class="actions"><button class="btn primary" id="openNext" type="button">Open Week ${next.week}</button><a class="btn" href="${esc(next.unit_path)}">Open Detailed Route</a></div>
+  <article class="card col8"><span class="pill">Activity checklist · not a mastery gate</span><h3>Week ${next.week} · ${esc(next.title)}</h3><p>${esc(next.essential)}</p>
+   <div class="progress"><span style="width:${done/36*100}%"></span></div><p>${done}/36 weeks with all five sessions checked · ${Math.round(done/36*100)}% activity checklist only</p>
+   <p class="notice">Study activity checkboxes and recorded classwork scores never unlock the next lesson. Unit 01: ${gates.lessons}/7 local lesson practice gates at 80%+; cumulative unit gate: ${gates.unitOne?"80%+ practice pass":"pending"}; Unit 02 route: ${gates.unitTwo?"open for study":"locked"}. Institutional mastery verification: pending faculty and registrar review.</p><div class="actions"><button class="btn primary" id="openNext" type="button">Review Week ${next.week}</button><a class="btn" href="${esc(next.unit_path)}">Open Detailed Route</a></div>
   </article>
   <article class="card col3"><h4>Coursework Average</h4><p class="score">${pct(avg(D.weeks.map(w=>weekRecord(w.week).classwork)))}</p></article>
-  <article class="card col3"><h4>Mastery Average</h4><p class="score">${pct(avg(D.weeks.map(w=>weekRecord(w.week).masteryBest)))}</p></article>
-  <article class="card col3"><h4>Final Examination</h4><p class="score">${pct(s.formal.final)}</p></article>
-  <article class="card col3"><h4>Calculated Grade</h4><p class="score">${pct(grade)}</p><p>${grade==null?"Appears after required categories are recorded.":"All weighted categories are present."}</p></article>
-  <article class="card col4"><h3>92 Printable Analytical Lessons</h3><p>Topic-specific explanations, large vector diagrams, worked examples, six-problem printable worksheets, differentiated pathways, misconceptions, applications, reflection, and local completion.</p><button class="btn" data-view="units">Browse Units</button></article>
+  <article class="card col3"><h4>Weekly Practice Average</h4><p class="score">${pct(avg(D.weeks.map(w=>weekRecord(w.week).masteryBest)))}</p></article>
+  <article class="card col3"><h4>Manually Reported Final</h4><p class="score">${pct(s.formal.final)}</p></article>
+  <article class="card col3"><h4>Informational Weighted Average</h4><p class="score">${pct(grade)}</p><p>${grade==null?"Appears after required categories are recorded.":"All weighted categories are present."}</p></article>
+  <article class="card col4"><h3>92 Printable Analytical Lessons</h3><p>Free lessons, printables, examples and reflection. Reading or checking off activities does not establish the separate 80% mastery required for progression.</p><button class="btn" data-view="units">Browse Units</button></article>
   <article class="card col4"><h3>Scientific Calculator v4</h3><p>Use the connected calculator for exploration, logarithms, trigonometry, complex-number support, history, and verification. Written reasoning and domain checks remain required.</p><a class="btn primary" href="https://vervenveda.com/Khaemenes_High.github.io/courses/mathematics/tools/calculator/" target="_blank" rel="noopener">Open Calculator</a></article>
-  <article class="card col4"><h3>Formal Evidence</h3><p>40-question readiness diagnostic, 13 mastery checks, 60-question midterm, 100-question final, portfolio, and modelling defense.</p><button class="btn" data-view="assessments">Assessment Center</button></article>
+  <article class="card col4"><h3>Assessment & Evidence Center</h3><p>Public diagnostic, unit practice checks, midterm/final practice forms, portfolio, and modelling work. Formal academic verification remains separate.</p><button class="btn" data-view="assessments">Assessment Center</button></article>
  </div></div>`;
  bindStudentControls();
  $("#openNext")?.addEventListener("click",()=>{state.selectedWeek=next.week;save();setView("week")});
@@ -228,16 +234,16 @@ function renderWeek(){
  $("#view-week").innerHTML=`<div class="wrap">
  <div class="section-head"><p class="eyebrow">180-session classroom</p><h2>Weekly Classwork</h2><p>Five meaningful sessions per week combine instruction, guided work, modelling, error analysis, mastery, corrections, and portfolio evidence.</p></div>
  <article class="card no-print">${weekPicker()}</article>
- <article class="card" style="margin-top:16px"><span class="pill">Week ${w.week}</span><span class="pill">${w.unit?`Unit ${String(w.unit).padStart(2,"0")}`:"Course Milestone"}</span><span class="pill">${esc(activeStudent().pathway)} pathway</span><span class="pill good">${completed}/5 sessions</span>
+ <article class="card" style="margin-top:16px"><span class="pill">Week ${w.week}</span><span class="pill">${w.unit?`Unit ${String(w.unit).padStart(2,"0")}`:"Course Milestone"}</span><span class="pill">${esc(activeStudent().pathway)} pathway</span><span class="pill">${completed}/5 study sessions checked (not mastery)</span>
  <h2>${esc(w.title)}</h2><p><strong>Essential question:</strong> ${esc(w.essential)}</p>${w.focus?`<p class="notice"><strong>Detailed focus:</strong> ${esc(w.focus)}</p>`:""}
  <div class="actions"><a class="btn primary" href="${esc(w.unit_path)}">Open Detailed Route</a>${routes}<button class="btn" id="printWeek" type="button">Print Week</button></div></article>
- <div class="daily-grid">${days.map(x=>`<article class="day-card"><span class="day">${x.day}</span><h4>${esc(x.title)}</h4><p>${esc(x.task)}</p><ul>${x.work.map(y=>`<li>${esc(y)}</li>`).join("")}</ul><label><input type="checkbox" data-day="${x.day}" ${r.days[x.day]?"checked":""}> Session complete</label></article>`).join("")}</div>
+ <div class="daily-grid">${days.map(x=>`<article class="day-card"><span class="day">${x.day}</span><h4>${esc(x.title)}</h4><p>${esc(x.task)}</p><ul>${x.work.map(y=>`<li>${esc(y)}</li>`).join("")}</ul><label><input type="checkbox" data-day="${x.day}" ${r.days[x.day]?"checked":""}> Study session completed (not mastery)</label></article>`).join("")}</div>
  <div class="grid" style="margin-top:16px">
-  <article class="card col4"><h3>Weekly Scores</h3><label>Classwork score<input id="cw" type="number" min="0" max="100" value="${r.classwork??""}"></label><label>Portfolio score<input id="pf" type="number" min="0" max="100" value="${r.portfolio??""}"></label><p>Best generated mastery: ${pct(r.masteryBest)} · ${r.attempts} attempt(s)</p><button class="btn" id="saveWeek" type="button">Save Scores</button></article>
+  <article class="card col4"><h3>Informational Classwork Notes</h3><label>Classwork score<input id="cw" type="number" min="0" max="100" value="${r.classwork??""}"></label><label>Portfolio score<input id="pf" type="number" min="0" max="100" value="${r.portfolio??""}"></label><p>Best local weekly practice: ${pct(r.masteryBest)} · ${r.attempts} formative attempt(s). This score does not satisfy or bypass required lesson mastery.</p><button class="btn" id="saveWeek" type="button">Save Scores</button></article>
   <article class="card col4"><h3>Reflection</h3><textarea id="reflection" placeholder="What became clearer? What still requires work?">${esc(r.reflection)}</textarea><button class="btn" id="saveReflection" type="button">Save Reflection</button></article>
   <article class="card col4"><h3>Evidence Note</h3><textarea id="evidence" placeholder="Describe the work sample, model, correction, or explanation selected for the portfolio.">${esc(r.evidence)}</textarea><button class="btn" id="saveEvidence" type="button">Save Evidence</button></article>
  </div>
- <article class="card" style="margin-top:16px"><h3>Week ${w.week} Mastery Set</h3><div class="actions no-print"><select id="count" style="width:auto"><option>8</option><option>10</option><option>12</option></select><button class="btn primary" id="generate" type="button">Generate Set</button></div><div id="weekPractice"></div></article>
+ <article class="card" style="margin-top:16px"><h3>Week ${w.week} Formative Practice Set · Not a progression gate</h3><div class="actions no-print"><select id="count" style="width:auto"><option>8</option><option>10</option><option>12</option></select><button class="btn primary" id="generate" type="button">Generate Set</button></div><div id="weekPractice"></div></article>
  </div>`;
  $$("[data-week]").forEach(b=>b.addEventListener("click",()=>{state.selectedWeek=Number(b.dataset.week);save();renderWeek()}));
  $$("[data-day]").forEach(c=>c.addEventListener("change",()=>{r.days[c.dataset.day]=c.checked;save();renderWeek()}));
@@ -320,7 +326,7 @@ function renderSet(host,set,weekNo,prefix){
  });
 }
 function renderPractice(){
- $("#view-practice").innerHTML=`<div class="wrap"><div class="section-head"><p class="eyebrow">Fresh definitive-answer practice</p><h2>Adaptive Practice Lab</h2><p>Select a unit or the whole course. Every scored item provides a correction explanation.</p></div>
+ $("#view-practice").innerHTML=`<div class="wrap"><div class="section-head"><p class="eyebrow">Optional formative practice · separate from 80% progression</p><h2>Adaptive Practice Lab</h2><p>Select a unit or the whole course. Every scored item provides a correction explanation. This optional activity does not unlock a lesson, unit, assessment, or credential.</p></div>
  <div class="practice-layout"><article class="card"><div id="practiceHost"><p class="notice">Choose settings and generate a fresh set.</p></div></article>
  <aside class="card practice-side"><label>Content<select id="practiceUnit"><option value="all">Whole Course</option>${D.units.map(u=>`<option value="${u.number}">Unit ${String(u.number).padStart(2,"0")} · ${esc(u.title)}</option>`).join("")}</select></label><label>Count<select id="practiceCount"><option>10</option><option>20</option><option>30</option></select></label><div class="actions"><button class="btn primary" id="makePractice" type="button">Generate</button><button class="btn" id="audit" type="button">Run Bank Audit</button></div><pre id="auditLog" style="white-space:pre-wrap;color:var(--muted)">Audit not yet run.</pre></aside></div></div>`;
  $("#makePractice")?.addEventListener("click",()=>{
@@ -357,14 +363,14 @@ function runAudit(){
 }
 function renderAssessments(){
  const s=activeStudent();
- $("#view-assessments").innerHTML=`<div class="wrap"><div class="section-head"><p class="eyebrow">Formal evidence</p><h2>Assessment Center</h2><p>Assessments support mastery decisions and records; they do not replace jurisdiction-specific transcript, graduation, accreditation, or external testing requirements. Public-source tests here are practice evidence, not secure formal credential examinations.</p>${courseGateNotice()}</div>
+ $("#view-assessments").innerHTML=`<div class="wrap"><div class="section-head"><p class="eyebrow">Practice and evidence</p><h2>Assessment Center</h2><p>Assessments support mastery decisions and records; they do not replace jurisdiction-specific transcript, graduation, accreditation, or external testing requirements. Public-source tests here are practice evidence, not secure formal credential examinations.</p>${courseGateNotice()}</div>
  <div class="resource-grid">
   <a class="card" href="diagnostic/"><h3>Readiness Diagnostic</h3><p>40 Precalculus and Trigonometry prerequisite questions with targeted feedback.</p></a>
-  <a class="card" href="assessments/midterm.html"><h3>Midterm Examination</h3><p>60 practice questions covering Units 01–07: readiness, limits, continuity, derivatives and applications.</p></a>
-  <a class="card" href="assessments/final.html"><h3>Comprehensive Final</h3><p>100 questions across the complete Calculus I course.</p></a>
-  <a class="card" href="records/course-completion-certificate.html"><h3>Completion Record</h3><p>Printable evaluator or family-issued completion and verification record.</p></a>
+  <a class="card" href="assessments/midterm.html"><h3>Public Midterm Practice Form</h3><p>60 practice questions covering Units 01–07: readiness, limits, continuity, derivatives and applications.</p></a>
+  <a class="card" href="assessments/final.html"><h3>Public Final Practice Form</h3><p>100 questions across the complete Calculus I course.</p></a>
+  <a class="card" href="records/course-completion-certificate.html"><h3>Unverified Record Template</h3><p>Printable local documentation template. It is not a recognized completion certificate or automatic mastery decision.</p></a>
  </div>
- <article class="card" style="margin-top:17px"><h3>Record instructor-reported scores (unverified)</h3><p class="notice">Manual scores here are notes only. They do not satisfy institutional mastery gates until subject-reviewed and verified.</p><div class="form-grid"><label>Diagnostic<input id="diagScore" type="number" min="0" max="100" value="${s.formal.diagnostic??""}"></label><label>Midterm<input id="midScore" type="number" min="0" max="100" value="${s.formal.midterm??""}"></label><label>Final<input id="finalScore" type="number" min="0" max="100" value="${s.formal.final??""}"></label><label>Capstone / Defense<input id="capScore" type="number" min="0" max="100" value="${s.formal.capstone??""}"></label></div><div class="actions"><button class="btn primary" id="saveFormal" type="button">Save Scores</button><a class="btn" href="assessments/administration-guide.html">Administration Guide</a></div></article></div>`;
+ <article class="card" style="margin-top:17px"><h3>Record instructor-reported scores (unverified; never unlock a course)</h3><p class="notice">Manual scores here are notes only. They do not satisfy institutional mastery gates until subject-reviewed and verified.</p><div class="form-grid"><label>Diagnostic<input id="diagScore" type="number" min="0" max="100" value="${s.formal.diagnostic??""}"></label><label>Midterm<input id="midScore" type="number" min="0" max="100" value="${s.formal.midterm??""}"></label><label>Final<input id="finalScore" type="number" min="0" max="100" value="${s.formal.final??""}"></label><label>Capstone / Defense<input id="capScore" type="number" min="0" max="100" value="${s.formal.capstone??""}"></label></div><div class="actions"><button class="btn primary" id="saveFormal" type="button">Save Scores</button><a class="btn" href="assessments/administration-guide.html">Administration Guide</a></div></article></div>`;
  $("#saveFormal")?.addEventListener("click",()=>{
    s.formal={diagnostic:scoreValue($("#diagScore").value),midterm:scoreValue($("#midScore").value),final:scoreValue($("#finalScore").value),capstone:scoreValue($("#capScore").value)};save();renderAssessments();
  });
@@ -372,7 +378,7 @@ function renderAssessments(){
 function renderGradebook(){
  const grade=courseGrade();
  $("#view-gradebook").innerHTML=`<div class="wrap"><div class="section-head"><p class="eyebrow">Transparent local records</p><h2>Gradebook</h2><p>Informational weighted average only: coursework 35% · local mastery 20% · midterm 15% · final 20% · capstone defense 10%. An average never overrides an unmet 80% essential gate.</p>${courseGateNotice()}</div>
- <article class="card"><div class="table-wrap"><table><thead><tr><th>Week</th><th>Classwork</th><th>Mastery Best</th><th>Portfolio</th><th>Sessions</th></tr></thead><tbody>${D.weeks.map(w=>{const r=weekRecord(w.week);return `<tr><td>${w.week} · ${esc(w.title)}</td><td>${pct(r.classwork)}</td><td>${pct(r.masteryBest)}</td><td>${pct(r.portfolio)}</td><td>${Object.values(r.days).filter(Boolean).length}/5</td></tr>`}).join("")}</tbody></table></div><h3>Informational weighted average: ${pct(grade)}</h3><p class="notice">Not a verified transcript grade or certificate decision. See separate noncompensatory 80% gates above.</p><div class="actions"><button class="btn" id="gradeCsv" type="button">Download Gradebook CSV</button><button class="btn" id="printGrade" type="button">Print</button></div></article></div>`;
+ <article class="card"><div class="table-wrap"><table><thead><tr><th>Week</th><th>Classwork</th><th>Weekly Practice Best (not verified)</th><th>Portfolio</th><th>Sessions</th></tr></thead><tbody>${D.weeks.map(w=>{const r=weekRecord(w.week);return `<tr><td>${w.week} · ${esc(w.title)}</td><td>${pct(r.classwork)}</td><td>${pct(r.masteryBest)}</td><td>${pct(r.portfolio)}</td><td>${Object.values(r.days).filter(Boolean).length}/5</td></tr>`}).join("")}</tbody></table></div><h3>Informational weighted average: ${pct(grade)}</h3><p class="notice">Not a verified transcript grade or certificate decision. See separate noncompensatory 80% gates above.</p><div class="actions"><button class="btn" id="gradeCsv" type="button">Download Gradebook CSV</button><button class="btn" id="printGrade" type="button">Print</button></div></article></div>`;
  $("#gradeCsv")?.addEventListener("click",downloadGradebook);$("#printGrade")?.addEventListener("click",()=>print());
 }
 function renderPortfolio(){
@@ -382,7 +388,7 @@ function renderPortfolio(){
  mission.units=mission.units&&typeof mission.units==="object"?mission.units:{};
  const rows=Object.values(mission.units).sort((a,b)=>(a.unit||0)-(b.unit||0));
  const missionHtml=rows.length?rows.map(r=>`<article class="card"><span class="pill">Unit ${String(r.unit||"").padStart(2,"0")} · Applied Mission</span><h3>${esc(r.project||"Applied Mission")}</h3><p><strong>Mission:</strong> ${esc(r.mission||"Not named")}</p><p><strong>Best review:</strong> ${r.best_review==null?"Not yet reviewed":pct(r.best_review)}</p><p><strong>Saved:</strong> ${r.saved_at?esc(new Date(r.saved_at).toLocaleString()):"Not yet saved"}</p></article>`).join(""):`<article class="card"><h3>Applied Mission Evidence</h3><p>No Applied Mission Studio evidence has been added to this portfolio yet.</p></article>`;
- $("#view-portfolio").innerHTML=`<div class="wrap"><div class="section-head"><p class="eyebrow">Representative evidence</p><h2>Portfolio Record</h2><p>Portfolio evidence should show reasoning, corrections, modelling, technology use, exact and approximate work, communication, and reflection—not merely scores.</p></div><div class="section-head"><p class="eyebrow">Applied Mission Studio</p><h2>Applied mission evidence</h2><p>These records are browser-local portfolio evidence and do not replace formal mastery or transcript authority.</p></div><div class="unit-grid">${missionHtml}</div><div class="section-head"><p class="eyebrow">Weekly record</p><h2>Course evidence by week</h2></div><div class="unit-grid">${D.weeks.map(w=>{const r=weekRecord(w.week);return `<article class="card"><span class="pill">Week ${w.week}</span><h3>${esc(w.title)}</h3><p><strong>Evidence:</strong> ${esc(r.evidence||"Not yet recorded.")}</p><p><strong>Reflection:</strong> ${esc(r.reflection||"Not yet recorded.")}</p><p>Classwork ${pct(r.classwork)} · Mastery ${pct(r.masteryBest)} · Portfolio ${pct(r.portfolio)}</p></article>`}).join("")}</div><div class="actions"><button class="btn" id="portfolioJson" type="button">Export Portfolio JSON</button><button class="btn" id="printPortfolio" type="button">Print</button></div></div>`;
+ $("#view-portfolio").innerHTML=`<div class="wrap"><div class="section-head"><p class="eyebrow">Representative evidence</p><h2>Portfolio Record</h2><p>Portfolio evidence should show reasoning, corrections, modelling, technology use, exact and approximate work, communication, and reflection—not merely scores.</p></div><div class="section-head"><p class="eyebrow">Applied Mission Studio</p><h2>Applied mission evidence</h2><p>These records are browser-local portfolio evidence and do not replace formal mastery or transcript authority.</p></div><div class="unit-grid">${missionHtml}</div><div class="section-head"><p class="eyebrow">Weekly record</p><h2>Course evidence by week</h2></div><div class="unit-grid">${D.weeks.map(w=>{const r=weekRecord(w.week);return `<article class="card"><span class="pill">Week ${w.week}</span><h3>${esc(w.title)}</h3><p><strong>Evidence:</strong> ${esc(r.evidence||"Not yet recorded.")}</p><p><strong>Reflection:</strong> ${esc(r.reflection||"Not yet recorded.")}</p><p>Classwork ${pct(r.classwork)} · Weekly practice ${pct(r.masteryBest)} · Portfolio ${pct(r.portfolio)}</p></article>`}).join("")}</div><div class="actions"><button class="btn" id="portfolioJson" type="button">Export Portfolio JSON</button><button class="btn" id="printPortfolio" type="button">Print</button></div></div>`;
  $("#portfolioJson")?.addEventListener("click",()=>download("calculus-1-portfolio.json",JSON.stringify({course:D.course,learner:s,applied_missions:mission.units,exported:new Date().toISOString()},null,2),"application/json"));$("#printPortfolio")?.addEventListener("click",()=>print());
 }
 function renderTeacher(){
