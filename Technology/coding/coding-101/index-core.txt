@@ -105,6 +105,7 @@ canvas{max-width:100%;border:1px solid var(--line);border-radius:12px;background
 @media(max-width:680px){.code-lab{grid-template-columns:1fr}.nav{grid-template-columns:1fr auto}.brand small{display:none}}
 @media print{header,.breadcrumb,.no-print,.lesson-nav,.module-side{display:none!important}body{background:#fff}.hero{display:none}.card{box-shadow:none;border:0}.cert{display:block!important}}
 </style>
+<style id="khae-academy-title-standard">h1.khae-academy-heading{font:400 clamp(33px,5vw,53px)/1.16 "Cinzel",Georgia,serif!important;text-align:center;margin:10px auto 0!important}.khae-page-subtitle{font:400 clamp(20px,2.8vw,27px)/1.4 "Cinzel",Georgia,serif!important;text-align:center;margin:9px auto 16px;opacity:.86}</style>
 </head>
 <body>
 <header>
@@ -118,7 +119,7 @@ canvas{max-width:100%;border:1px solid var(--line);border-radius:12px;background
 <main class="shell">
   <section class="hero">
     <div style="font-size:.75rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase">Coding Foundations · Logic · Web Basics</div>
-    <h1>Coding 101</h1>
+    <h1 class="khae-academy-heading">Khaemenes Academy</h1><h2 class="khae-page-subtitle">Coding 101</h2>
     <p>Learn by doing: sequence algorithms, debug problems, trigger events, build loops and conditions, then create a live web page. Score 80% or higher to unlock each next module.</p>
     <div class="pills"><span class="pill">3 Interactive Modules</span><span class="pill">80% Mastery Unlock</span><span class="pill">25-Question Final</span><span class="pill">Local Save</span><span class="pill">Sandboxed Preview</span><span class="pill">Printable Certificate</span></div>
   </section>
