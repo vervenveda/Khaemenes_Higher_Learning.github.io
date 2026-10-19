@@ -22,7 +22,7 @@ function run(){
    if(strong&&small&&strong.textContent.trim()!=="Khaemenes Academy"){
      const prior=strong.textContent.trim();
      strong.textContent="Khaemenes Academy";strong.classList.add("khae-academy-brand");
-     small.textContent=prior.replace(/^Khaemenes (Higher Learning|Academy)\s*[·:|-]?\s*/i,"")||"Higher Learning";
+     small.textContent=prior.replace(/^Khaemenes (Higher Learning|Academy)?\s*[·:|-]?\s*/i,"")||"Higher Learning";
      small.classList.add("khae-academy-brand-subtitle");
    }
  }
@@ -41,7 +41,7 @@ function run(){
  h1.className="khae-academy-main-title";h1.dataset.khaeAcademyHeading="v1";
  if(first.tagName==="H1"){
    const second=document.createElement("h2");
-   for(const a of Array.from(first.attributes)){if(a.name!=="id")second.setAttribute(a.name,a.value)}
+   for(const a of Array.from(first.attributes)){second.setAttribute(a.name,a.value)}
    second.classList.add("khae-academy-page-subtitle");second.append(...Array.from(first.childNodes));
    first.replaceWith(h1,second);
  }else{
