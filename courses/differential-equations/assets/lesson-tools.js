@@ -70,3 +70,10 @@ $("#exportLesson")?.addEventListener("click",()=>{
 });
 activatePathway(rec.pathway||"Core");render();
 })();
+/* Shared accessible Academy H1 → smaller page subtitle presentation (visual only; no records). */
+(function(){
+ const own=document.currentScript;if(!own||document.querySelector('script[data-khae-academy-headings="v1"]'))return;
+ const script=document.createElement("script");script.dataset.khaeAcademyHeadings="v1";
+ script.src=new URL("../../assets/khaemenes-academy-title-v1.js",own.src).href;
+ script.async=false;(document.head||document.documentElement).appendChild(script);
+})();

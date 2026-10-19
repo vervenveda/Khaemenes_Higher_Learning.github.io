@@ -39,3 +39,11 @@ window.addEventListener("storage",event=>{if(event.key===ACTIVE_KEY||event.key==
   s.src=new URL("../../assets/applied-mission-studio-v1.js",current.src).href;
   document.head.appendChild(s);
 })();
+
+/* Shared accessible Academy H1 → smaller page subtitle presentation (visual only; no records). */
+(function(){
+ const own=document.currentScript;if(!own||document.querySelector('script[data-khae-academy-headings="v1"]'))return;
+ const script=document.createElement("script");script.dataset.khaeAcademyHeadings="v1";
+ script.src=new URL("../../../assets/khaemenes-academy-title-v1.js",own.src).href;
+ script.async=false;(document.head||document.documentElement).appendChild(script);
+})();
