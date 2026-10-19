@@ -158,17 +158,17 @@ function renderDashboard(){
  const s=activeStudent(),done=completeWeeks(),next=nextWeek(),grade=courseGrade();
  $("#view-dashboard").innerHTML=`<div class="wrap">
  <div class="section-head"><p class="eyebrow">Local learner dashboard</p><h2>${esc(s.name)} · Discrete Mathematics</h2>
- <p>Progress, mastery, assessment evidence, portfolio notes, and exports remain on this device unless deliberately downloaded or printed.</p></div>
+ <p>Study activity checks, locally generated practice scores, and portfolio notes remain on this device unless deliberately exported. <strong>Academy policy requires at least 80% mastery to unlock each next lesson or activity.</strong> These local checklist/practice/grade averages do not by themselves verify that requirement or award credentials. Course-specific progression-gate review remains pending.</p></div>
  <div class="grid">
   <article class="card col4"><h3>Learner Record</h3>${studentControls()}<p class="notice">Prerequisite: Algebra fluency and mathematical-reasoning readiness. Placement is based on mastery, not age or grade.</p></article>
-  <article class="card col8"><span class="pill good">Next recommended week</span><h3>Week ${next.week} · ${esc(next.title)}</h3><p>${esc(next.essential)}</p>
-   <div class="progress"><span style="width:${done/36*100}%"></span></div><p>${done}/36 weeks fully checked · ${Math.round(done/36*100)}%</p>
+  <article class="card col8"><span class="pill">Next unchecked study week · not verified mastery</span><h3>Week ${next.week} · ${esc(next.title)}</h3><p>${esc(next.essential)}</p>
+   <div class="progress"><span style="width:${done/36*100}%"></span></div><p>${done}/36 weeks with five study sessions checked (activity only) · ${Math.round(done/36*100)}%</p>
    <div class="actions"><button class="btn primary" id="openNext" type="button">Open Week ${next.week}</button><a class="btn" href="${esc(next.unit_path)}">Open Detailed Route</a></div>
   </article>
   <article class="card col3"><h4>Coursework Average</h4><p class="score">${pct(avg(D.weeks.map(w=>weekRecord(w.week).classwork)))}</p></article>
-  <article class="card col3"><h4>Mastery Average</h4><p class="score">${pct(avg(D.weeks.map(w=>weekRecord(w.week).masteryBest)))}</p></article>
-  <article class="card col3"><h4>Final Examination</h4><p class="score">${pct(s.formal.final)}</p></article>
-  <article class="card col3"><h4>Calculated Grade</h4><p class="score">${pct(grade)}</p><p>${grade==null?"Appears after required categories are recorded.":"All weighted categories are present."}</p></article>
+  <article class="card col3"><h4>Weekly Practice Average</h4><p class="score">${pct(avg(D.weeks.map(w=>weekRecord(w.week).masteryBest)))}</p></article>
+  <article class="card col3"><h4>Unverified Reported Final</h4><p class="score">${pct(s.formal.final)}</p></article>
+  <article class="card col3"><h4>Informational Weighted Average</h4><p class="score">${pct(grade)}</p><p>${grade==null?"Appears after required categories are recorded.":"All weighted categories are present."}</p></article>
   <article class="card col4"><h3>92 Printable Analytical Lessons</h3><p>Topic-specific explanations, logic tables, proof structures, graph diagrams, worked examples, six-problem printable worksheets, differentiated pathways, misconceptions, applications, reflection, and local completion.</p><button class="btn" data-view="units">Browse Units</button></article>
   <article class="card col4"><h3>Scientific Calculator v4</h3><p>Use the connected calculator for integer arithmetic, modular checks, combinatorics, probability, recurrence values, history, and verification. Proof and algorithmic reasoning remain required.</p><a class="btn primary" href="https://vervenveda.com/Khaemenes_High.github.io/courses/mathematics/tools/calculator" target="_blank" rel="noopener">Open Calculator</a></article>
   <article class="card col4"><h3>Formal Evidence</h3><p>40-question readiness diagnostic, 13 mastery checks, 60-question midterm, 100-question final, portfolio, and modelling defense.</p><button class="btn" data-view="assessments">Assessment Center</button></article>
@@ -204,9 +204,9 @@ function renderWeek(){
  <article class="card" style="margin-top:16px"><span class="pill">Week ${w.week}</span><span class="pill">${w.unit?`Unit ${String(w.unit).padStart(2,"0")}`:"Course Milestone"}</span><span class="pill">${esc(activeStudent().pathway)} pathway</span><span class="pill good">${completed}/5 sessions</span>
  <h2>${esc(w.title)}</h2><p><strong>Essential question:</strong> ${esc(w.essential)}</p>${w.focus?`<p class="notice"><strong>Detailed focus:</strong> ${esc(w.focus)}</p>`:""}
  <div class="actions"><a class="btn primary" href="${esc(w.unit_path)}">Open Detailed Route</a>${routes}<button class="btn" id="printWeek" type="button">Print Week</button></div></article>
- <div class="daily-grid">${days.map(x=>`<article class="day-card"><span class="day">${x.day}</span><h4>${esc(x.title)}</h4><p>${esc(x.task)}</p><ul>${x.work.map(y=>`<li>${esc(y)}</li>`).join("")}</ul><label><input type="checkbox" data-day="${x.day}" ${r.days[x.day]?"checked":""}> Session complete</label></article>`).join("")}</div>
+ <div class="daily-grid">${days.map(x=>`<article class="day-card"><span class="day">${x.day}</span><h4>${esc(x.title)}</h4><p>${esc(x.task)}</p><ul>${x.work.map(y=>`<li>${esc(y)}</li>`).join("")}</ul><label><input type="checkbox" data-day="${x.day}" ${r.days[x.day]?"checked":""}> Study session completed (not mastery)</label></article>`).join("")}</div>
  <div class="grid" style="margin-top:16px">
-  <article class="card col4"><h3>Weekly Scores</h3><label>Classwork score<input id="cw" type="number" min="0" max="100" value="${r.classwork??""}"></label><label>Portfolio score<input id="pf" type="number" min="0" max="100" value="${r.portfolio??""}"></label><p>Best generated mastery: ${pct(r.masteryBest)} · ${r.attempts} attempt(s)</p><button class="btn" id="saveWeek" type="button">Save Scores</button></article>
+  <article class="card col4"><h3>Weekly Scores</h3><label>Classwork score<input id="cw" type="number" min="0" max="100" value="${r.classwork??""}"></label><label>Portfolio score<input id="pf" type="number" min="0" max="100" value="${r.portfolio??""}"></label><p>Best local formative practice: ${pct(r.masteryBest)} · ${r.attempts} attempt(s)</p><button class="btn" id="saveWeek" type="button">Save Scores</button></article>
   <article class="card col4"><h3>Reflection</h3><textarea id="reflection" placeholder="What became clearer? What still requires work?">${esc(r.reflection)}</textarea><button class="btn" id="saveReflection" type="button">Save Reflection</button></article>
   <article class="card col4"><h3>Evidence Note</h3><textarea id="evidence" placeholder="Describe the work sample, model, correction, or explanation selected for the portfolio.">${esc(r.evidence)}</textarea><button class="btn" id="saveEvidence" type="button">Save Evidence</button></article>
  </div>
@@ -298,7 +298,7 @@ function renderAssessments(){
 function renderGradebook(){
  const grade=courseGrade();
  $("#view-gradebook").innerHTML=`<div class="wrap"><div class="section-head"><p class="eyebrow">Transparent local records</p><h2>Gradebook</h2><p>Coursework 35% · generated or imported mastery 20% · midterm 15% · final 20% · capstone defense 10%.</p></div>
- <article class="card"><div class="table-wrap"><table><thead><tr><th>Week</th><th>Classwork</th><th>Mastery Best</th><th>Portfolio</th><th>Sessions</th></tr></thead><tbody>${D.weeks.map(w=>{const r=weekRecord(w.week);return `<tr><td>${w.week} · ${esc(w.title)}</td><td>${pct(r.classwork)}</td><td>${pct(r.masteryBest)}</td><td>${pct(r.portfolio)}</td><td>${Object.values(r.days).filter(Boolean).length}/5</td></tr>`}).join("")}</tbody></table></div><h3>Calculated course grade: ${pct(grade)}</h3><div class="actions"><button class="btn" id="gradeCsv" type="button">Download Gradebook CSV</button><button class="btn" id="printGrade" type="button">Print</button></div></article></div>`;
+ <article class="card"><div class="table-wrap"><table><thead><tr><th>Week</th><th>Classwork</th><th>Weekly Practice Best (not verified)</th><th>Portfolio</th><th>Sessions</th></tr></thead><tbody>${D.weeks.map(w=>{const r=weekRecord(w.week);return `<tr><td>${w.week} · ${esc(w.title)}</td><td>${pct(r.classwork)}</td><td>${pct(r.masteryBest)}</td><td>${pct(r.portfolio)}</td><td>${Object.values(r.days).filter(Boolean).length}/5</td></tr>`}).join("")}</tbody></table></div><h3>Calculated course grade: ${pct(grade)}</h3><div class="actions"><button class="btn" id="gradeCsv" type="button">Download Gradebook CSV</button><button class="btn" id="printGrade" type="button">Print</button></div></article></div>`;
  $("#gradeCsv")?.addEventListener("click",downloadGradebook);$("#printGrade")?.addEventListener("click",()=>print());
 }
 function renderPortfolio(){
