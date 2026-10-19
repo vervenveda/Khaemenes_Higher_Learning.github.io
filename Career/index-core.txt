@@ -265,6 +265,12 @@ h1{margin-top:24px;max-width:1050px;color:var(--forest-deep);font-size:clamp(62p
   *{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
 </style>
+<style id="khae-academy-title-standard">/* Academy-first visible and semantic title hierarchy */
+.hero h1{font:400 clamp(34px,5.2vw,55px)/1.16 "Cinzel",Georgia,serif!important;letter-spacing:.015em!important;text-align:center;text-wrap:balance;margin:12px auto 0!important}
+.hero .khae-page-subtitle{font:400 clamp(19px,2.75vw,27px)/1.35 "Cinzel",Georgia,serif!important;text-align:center;letter-spacing:.02em;margin:10px auto 0;color:inherit;opacity:.87;text-wrap:balance}
+@media(max-width:540px){.hero h1{font-size:clamp(30px,8vw,40px)!important}}
+@media print{.hero h1{font-size:19pt!important}.hero .khae-page-subtitle{font-size:14pt!important}}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
@@ -348,7 +354,7 @@ h1{margin-top:24px;max-width:1050px;color:var(--forest-deep);font-size:clamp(62p
       <div class="hero-stage">
         <div>
           <p class="eyebrow">Khaemenes Academy · Higher Learning</p>
-          <h1>Career Portal</h1>
+          <h1>Khaemenes Academy</h1><h2 class="khae-page-subtitle">Career Portal</h2>
         </div>
         <div class="hero-aside">
           <p class="hero-lead">
