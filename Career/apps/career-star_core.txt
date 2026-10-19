@@ -248,6 +248,7 @@
       }
     }
   </style>
+<style id="khae-academy-title-standard">h1.khae-academy-heading{font:400 clamp(32px,5vw,53px)/1.15 "Cinzel",Georgia,serif!important;letter-spacing:.012em;text-align:center;margin:12px auto 0!important}.khae-page-subtitle{font:400 clamp(19px,2.7vw,26px)/1.35 "Cinzel",Georgia,serif!important;text-align:center;margin:9px auto 16px;opacity:.87;letter-spacing:.02em}@media(max-width:560px){h1.khae-academy-heading{font-size:clamp(30px,8vw,39px)!important}}</style>
 </head>
 <body>
   <div class="star-ex" id="careerStarApp">
@@ -596,7 +597,7 @@
           </style>
         </head>
         <body>
-          <h1>KHAEMENES CAREER STAR</h1>
+          <h1 class="khae-academy-heading">Khaemenes Academy</h1><h2 class="khae-page-subtitle">Career Star</h2>
           <div class="mut">Mentor Snapshot · ${today}</div>
 
           <h2>Top Career Zones (Student Self-Scored)</h2>

@@ -294,12 +294,13 @@
       color: rgba(245,247,255,.86);
     }
   </style>
+<style id="khae-academy-title-standard">h1.khae-academy-heading{font:400 clamp(32px,5vw,53px)/1.15 "Cinzel",Georgia,serif!important;letter-spacing:.012em;text-align:center;margin:12px auto 0!important}.khae-page-subtitle{font:400 clamp(19px,2.7vw,26px)/1.35 "Cinzel",Georgia,serif!important;text-align:center;margin:9px auto 16px;opacity:.87;letter-spacing:.02em}@media(max-width:560px){h1.khae-academy-heading{font-size:clamp(30px,8vw,39px)!important}}</style>
 </head>
 
 <body>
   <div class="app">
     <header>
-      <h1 class="title">GED® 42-Week Prep Portal</h1>
+      <h1 class="khae-academy-heading">Khaemenes Academy</h1><h2 class="khae-page-subtitle">GED Preparation Portal</h2>
       <p class="subtitle">A self-paced, week-by-week study program with practice quizzes, progress tracking, confidence building, and free resource links.</p>
       <p class="disclaimer">
         <strong>Trademark note:</strong> GED® is a registered trademark of GED Testing Service LLC. This course is independently created and not affiliated with or endorsed by GED Testing Service.
