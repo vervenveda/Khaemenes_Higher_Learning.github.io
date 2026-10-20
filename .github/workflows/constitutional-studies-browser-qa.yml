@@ -1,0 +1,25 @@
+name: Constitutional Studies Browser QA
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'courses/constitutional-studies/**'
+      - 'tests/test_constitutional_studies_browser.py'
+      - '.github/workflows/constitutional-studies-browser-qa.yml'
+  workflow_dispatch:
+jobs:
+  playwright:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install test dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pytest playwright
+          python -m playwright install --with-deps chromium
+      - name: Run offline constitutional learner tests
+        run: python -m pytest -v tests/test_constitutional_studies_browser.py
