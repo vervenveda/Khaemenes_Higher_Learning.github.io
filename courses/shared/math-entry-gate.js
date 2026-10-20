@@ -16,11 +16,14 @@
     set: Storage.prototype.setItem,
     remove: Storage.prototype.removeItem
   };
+  const HIGHER_PIN_KEY = "khaemenes-higher-learning-pinned-courses-v1";
+  const HIGHER_PIN_PREFIX = "khaemenes.higher.pins:";
   const scoped = key => {
     if (!key || key.includes(":learner:")) return key;
+    const profile = contract?.readAcademyProfile?.();
+    if (key === HIGHER_PIN_KEY) return profile ? `${HIGHER_PIN_PREFIX}${profile.learnerId}` : null;
     const learnerScoped = key === "khaemenes-high-pinned-courses-v2" || prefixes.some(prefix => key === prefix || key.startsWith(prefix));
     if (!learnerScoped) return key;
-    const profile = contract?.readAcademyProfile?.();
     return profile ? contract.scopedKey(key, profile) : null;
   };
   Storage.prototype.getItem = function(key) {
