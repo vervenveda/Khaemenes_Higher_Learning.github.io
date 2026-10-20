@@ -1,9 +1,10 @@
-# Profile Integration Notes
+# Higher Learning Profile Integration
 
-- Course profile ID: `calculus-1`
+- Course ID: `calculus-i`
 - Course code: `KH-MATH-CALC1`
 - Storage key: `khaemenes-calculus1-course-v1`
-- Suggested catalog label: `Calculus I`
+- Shared pin key: `khaemenes-higher-learning-pinned-courses-v1`
+- Higher Learning learner-scoped pin storage: `khaemenes.higher.pins:<learnerId>`
 - Route: `courses/mathematics/calculus-1/`
 
-Add to the future High School profile catalog after the mathematics sequence is ready for the planned profile refresh.
+This course serves as the Higher Learning Calculus I bridge. The course portal and Mathematics Department share the same learner-scoped pin shelf while prerequisite links back to High School mathematics remain available.
