@@ -1,5 +1,5 @@
 {
-  "name": "Khaemenes Precalculus & Trigonometry",
+  "name": "Khaemenes Higher Learning Precalculus & Trigonometry",
   "short_name": "Precalculus",
   "id": "./?course=precalculus-trigonometry",
   "start_url": "./",
@@ -7,7 +7,7 @@
   "display": "standalone",
   "background_color": "#090b10",
   "theme_color": "#090b10",
-  "description": "Open-age 36-week Precalculus and Trigonometry course with printable analytical lessons, modelling, assessments, and records.",
+  "description": "Higher Learning 36-week Precalculus and Trigonometry bridge with analytical lessons, modelling, assessments, and learner-controlled records.",
   "categories": [
     "education",
     "mathematics"
