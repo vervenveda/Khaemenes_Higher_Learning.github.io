@@ -1,7 +1,9 @@
 (function attachKhaemenesCourseIdentityAdapter(global){
   "use strict";
 
-  const VERSION="1.1.0";
+  const VERSION="1.2.0";
+  const HIGHER_PIN_KEY="khaemenes-higher-learning-pinned-courses-v1";
+  const HIGHER_PIN_PREFIX="khaemenes.higher.pins:";
   const REGISTRY_URL="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-family-registry.js";
   const CONTINUATION_URL="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-learning-continuation.js";
   const DATA_GLOBALS=Object.freeze({
@@ -38,6 +40,14 @@
     const stage=R.normalizeStage?R.normalizeStage(learner?.stage):learner?.stage;
     return stage==="higher"?learner:null;
   }
+  function soleHigherScholar(s){
+    const R=global.KhaemenesFamilyRegistry;
+    const family=R?.getFamily?.();
+    if(!s?.learnerId||!family)return false;
+    const higher=(family.learners||[]).filter(item=>(R.normalizeStage?R.normalizeStage(item?.stage):item?.stage)==="higher");
+    return higher.length===1&&higher[0]?.learnerId===s.learnerId;
+  }
+  function higherPinKey(s){return s?.learnerId?`${HIGHER_PIN_PREFIX}${s.learnerId}`:null}
 
   function freshState(s){return {version:1,activeId:s.learnerId,selectedWeek:1,students:[{id:s.learnerId,name:s.nickname||"Scholar",pathway:"Core",weeks:{},formal:{diagnostic:null,midterm:null,final:null,capstone:null},notes:""}]}}
   function canonicalize(raw,s){
@@ -57,8 +67,9 @@
 
   function installStorageBoundary(courseId,legacyKey,s){
     const scopedKey=s?.learnerId?`khaemenes.course:${s.learnerId}:higher:${courseId}`:null;
+    const scopedPins=higherPinKey(s);
     const legacy=rawGet(legacyKey);
-    let seeded=false;
+    let seeded=false,pinsSeeded=false;
 
     function seed(){
       if(seeded||!s||!scopedKey)return;seeded=true;
@@ -67,13 +78,28 @@
       const source=old&&Array.isArray(old.students)&&old.students.length===1?old:null;
       rawSet(scopedKey,JSON.stringify(canonicalize(source,s)));
     }
+    function seedPins(){
+      if(pinsSeeded||!s||!scopedPins)return;pinsSeeded=true;
+      if(rawGet(scopedPins)!==null)return;
+      const old=parse(rawGet(HIGHER_PIN_KEY));
+      const pins=soleHigherScholar(s)&&Array.isArray(old)?old:[];
+      rawSet(scopedPins,JSON.stringify(pins));
+    }
     seed();
+    seedPins();
 
     Storage.prototype.getItem=function(key){
+      if(this===global.localStorage&&key===HIGHER_PIN_KEY){if(!s||!scopedPins)return null;seedPins();return rawGet(scopedPins)}
       if(this===global.localStorage&&key===legacyKey){if(!s||!scopedKey)return null;seed();return rawGet(scopedKey)}
       return original.getItem.call(this,key)
     };
     Storage.prototype.setItem=function(key,value){
+      if(this===global.localStorage&&key===HIGHER_PIN_KEY){
+        if(!s||!scopedPins)return;
+        rawSet(scopedPins,String(value));
+        global.dispatchEvent(new CustomEvent("khaemenes-higher-pins-changed",{detail:{courseId,learnerId:s.learnerId,scopedPins}}));
+        return
+      }
       if(this===global.localStorage&&key===legacyKey){
         if(!s||!scopedKey)return;
         const normalized=canonicalize(parse(value),s);if(normalized){rawSet(scopedKey,JSON.stringify(normalized));global.dispatchEvent(new CustomEvent("khaemenes-higher-course-state-changed",{detail:{courseId,learnerId:s.learnerId,scopedKey}}))}return
@@ -81,6 +107,7 @@
       return original.setItem.call(this,key,value)
     };
     Storage.prototype.removeItem=function(key){
+      if(this===global.localStorage&&key===HIGHER_PIN_KEY){if(s&&scopedPins){original.removeItem.call(this,scopedPins);global.dispatchEvent(new CustomEvent("khaemenes-higher-pins-changed",{detail:{courseId,learnerId:s.learnerId,scopedPins,cleared:true}}))}return}
       if(this===global.localStorage&&key===legacyKey){if(s&&scopedKey){original.removeItem.call(this,scopedKey);global.dispatchEvent(new CustomEvent("khaemenes-higher-course-state-changed",{detail:{courseId,learnerId:s.learnerId,scopedKey,cleared:true}}))}return}
       return original.removeItem.call(this,key)
     };
@@ -184,5 +211,5 @@
     global.dispatchEvent(new CustomEvent("khaemenes-course-identity-ready",{detail}));return Object.freeze(detail)
   }
 
-  global.KhaemenesCourseIdentityAdapter=Object.freeze({version:VERSION,boot,courseIdFromPath,currentScholar:scholar,policy:Object.freeze({identityAuthority:"academy-family-registry",legacyKeysPreserved:true,duplicateLearnerCreation:false,multiLearnerCourseAccounts:false,noScholarPersistence:"fail-closed"})});
+  global.KhaemenesCourseIdentityAdapter=Object.freeze({version:VERSION,boot,courseIdFromPath,currentScholar:scholar,policy:Object.freeze({identityAuthority:"academy-family-registry",legacyKeysPreserved:true,duplicateLearnerCreation:false,multiLearnerCourseAccounts:false,learnerScopedPins:true,legacyPinMigration:"sole-higher-scholar-only",noScholarPersistence:"fail-closed"})});
 })(window);
