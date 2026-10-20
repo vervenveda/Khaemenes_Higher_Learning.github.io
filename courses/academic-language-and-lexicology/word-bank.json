@@ -1,0 +1,290 @@
+{
+  "version": 1,
+  "course": "Academic Language and Lexicology",
+  "level": "Higher Learning introductory",
+  "policy": {
+    "gate": 80,
+    "unitQuestions": 4,
+    "progression": "Finish a unit assessment at 80% or above to unlock the next unit; formative practice does not count as mastery."
+  },
+  "units": [
+    {
+      "number": 1,
+      "title": "Academic Language and Evidence",
+      "focus": "Make precise claims in history, science, mathematics, and literature."
+    },
+    {
+      "number": 2,
+      "title": "Morphology, Word Families, and Precision",
+      "focus": "Use roots, affixes, and discipline-sensitive meanings."
+    },
+    {
+      "number": 3,
+      "title": "Arguments Across Disciplines",
+      "focus": "Choose language that makes reasoning testable and transparent."
+    },
+    {
+      "number": 4,
+      "title": "Higher-Learning Lexical Inquiry",
+      "focus": "Research word use, bias, translation, and changes in meaning."
+    }
+  ],
+  "terms": [
+    {
+      "id": "U1T1",
+      "unit": 1,
+      "term": "corroborate",
+      "definition": "To compare independent evidence to test whether a claim is supported.",
+      "context": "A historian corroborates a witness account with a second document.",
+      "task": "Compare corroborate with merely repeat.",
+      "choices": [
+        "corroborate",
+        "contradict",
+        "summarize",
+        "memorize"
+      ],
+      "answer": 0,
+      "translationStatus": "English reviewed; additional languages pending review"
+    },
+    {
+      "id": "U1T2",
+      "unit": 1,
+      "term": "inference",
+      "definition": "A reasoned conclusion drawn from evidence rather than stated directly.",
+      "context": "The population data support an inference about migration.",
+      "task": "Distinguish inference from observation.",
+      "choices": [
+        "inference",
+        "quotation",
+        "measurement",
+        "definition"
+      ],
+      "answer": 0,
+      "translationStatus": "English reviewed; additional languages pending review"
+    },
+    {
+      "id": "U1T3",
+      "unit": 1,
+      "term": "contextualize",
+      "definition": "To interpret an idea, source, or result in its relevant circumstances.",
+      "context": "A reader contextualizes a law by examining the period in which it was written.",
+      "task": "Identify a missing context that could change an interpretation.",
+      "choices": [
+        "contextualize",
+        "generalize",
+        "translate",
+        "catalogue"
+      ],
+      "answer": 0,
+      "translationStatus": "English reviewed; additional languages pending review"
+    },
+    {
+      "id": "U1T4",
+      "unit": 1,
+      "term": "evaluate",
+      "definition": "To judge the quality or significance of something using explicit criteria.",
+      "context": "The researcher evaluates whether the evidence supports a hypothesis.",
+      "task": "Specify criteria before forming a judgment.",
+      "choices": [
+        "evaluate",
+        "describe",
+        "predict",
+        "transcribe"
+      ],
+      "answer": 0,
+      "translationStatus": "English reviewed; additional languages pending review"
+    },
+    {
+      "id": "U2T1",
+      "unit": 2,
+      "term": "morphology",
+      "definition": "The study of the structure and meaningful parts of words.",
+      "context": "Morphology helps a learner connect analyze with analysis and analytical.",
+      "task": "Identify related word forms and explain the meaning shift.",
+      "choices": [
+        "morphology",
+        "phonetics",
+        "chronology",
+        "syntax"
+      ],
+      "answer": 0,
+      "translationStatus": "English reviewed; additional languages pending review"
+    },
+    {
+      "id": "U2T2",
+      "unit": 2,
+      "term": "derivation",
+      "definition": "The formation of a word from another word or a root using a morphological process.",
+      "context": "The derivation of analytical from analysis changes grammatical function.",
+      "task": "Explain how a suffix changes a word's role.",
+      "choices": [
+        "derivation",
+        "quotation",
+        "inference",
+        "corroboration"
+      ],
+      "answer": 0,
+      "translationStatus": "English reviewed; additional languages pending review"
+    },
+    {
+      "id": "U2T3",
+      "unit": 2,
+      "term": "polysemy",
+      "definition": "The presence of multiple related meanings in a single word.",
+      "context": "Model has related meanings in mathematics, science, and everyday language.",
+      "task": "Compare model as a representation with model as an exemplar.",
+      "choices": [
+        "polysemy",
+        "synonymy",
+        "antonymy",
+        "acronymy"
+      ],
+      "answer": 0,
+      "translationStatus": "English reviewed; additional languages pending review"
+    },
+    {
+      "id": "U2T4",
+      "unit": 2,
+      "term": "register",
+      "definition": "A variety of language associated with a particular situation, audience, or purpose.",
+      "context": "A research paper generally uses a more formal register than a text message.",
+      "task": "Rewrite an informal explanation in academic register.",
+      "choices": [
+        "register",
+        "syllable",
+        "tense",
+        "accent"
+      ],
+      "answer": 0,
+      "translationStatus": "English reviewed; additional languages pending review"
+    },
+    {
+      "id": "U3T1",
+      "unit": 3,
+      "term": "qualify",
+      "definition": "To limit or refine a statement so it accurately reflects the available evidence.",
+      "context": "The student qualifies the claim by noting that the sample was small.",
+      "task": "Rewrite a broad claim with a justified condition.",
+      "choices": [
+        "qualify",
+        "amplify",
+        "restate",
+        "illustrate"
+      ],
+      "answer": 0,
+      "translationStatus": "English reviewed; additional languages pending review"
+    },
+    {
+      "id": "U3T2",
+      "unit": 3,
+      "term": "synthesize",
+      "definition": "To integrate information from more than one source into a coherent interpretation.",
+      "context": "A student synthesizes statistics and interviews in a policy brief.",
+      "task": "Combine two sources without treating them as interchangeable.",
+      "choices": [
+        "synthesize",
+        "list",
+        "copy",
+        "omit"
+      ],
+      "answer": 0,
+      "translationStatus": "English reviewed; additional languages pending review"
+    },
+    {
+      "id": "U3T3",
+      "unit": 3,
+      "term": "counterargument",
+      "definition": "A reasoned position that challenges another argument.",
+      "context": "A historian addresses a counterargument before defending a conclusion.",
+      "task": "Explain the difference between a counterargument and an insult.",
+      "choices": [
+        "counterargument",
+        "definition",
+        "premise",
+        "summary"
+      ],
+      "answer": 0,
+      "translationStatus": "English reviewed; additional languages pending review"
+    },
+    {
+      "id": "U3T4",
+      "unit": 3,
+      "term": "nuance",
+      "definition": "A subtle but meaningful distinction in interpretation or expression.",
+      "context": "A nuanced claim distinguishes legal rights from access to those rights in practice.",
+      "task": "Identify one distinction that a simplistic claim misses.",
+      "choices": [
+        "nuance",
+        "certainty",
+        "repetition",
+        "vagueness"
+      ],
+      "answer": 0,
+      "translationStatus": "English reviewed; additional languages pending review"
+    },
+    {
+      "id": "U4T1",
+      "unit": 4,
+      "term": "corpus",
+      "definition": "A systematically assembled collection of language data used for analysis.",
+      "context": "A linguist studies a corpus to compare how a term is used in different disciplines.",
+      "task": "Explain how corpus selection can affect findings.",
+      "choices": [
+        "corpus",
+        "glossary",
+        "thesaurus",
+        "bibliography"
+      ],
+      "answer": 0,
+      "translationStatus": "English reviewed; additional languages pending review"
+    },
+    {
+      "id": "U4T2",
+      "unit": 4,
+      "term": "semantic shift",
+      "definition": "A change in a word's meaning over time or across a speech community.",
+      "context": "Historical dictionaries can document semantic shift in a political term.",
+      "task": "Separate evidence of changing usage from personal preference.",
+      "choices": [
+        "semantic shift",
+        "orthography",
+        "alliteration",
+        "inflection"
+      ],
+      "answer": 0,
+      "translationStatus": "English reviewed; additional languages pending review"
+    },
+    {
+      "id": "U4T3",
+      "unit": 4,
+      "term": "cognate",
+      "definition": "A word related to another through a common linguistic origin.",
+      "context": "English night and German Nacht are cognates.",
+      "task": "Distinguish cognates from accidental look-alikes.",
+      "choices": [
+        "cognate",
+        "loanword",
+        "homograph",
+        "neologism"
+      ],
+      "answer": 0,
+      "translationStatus": "English reviewed; additional languages pending review"
+    },
+    {
+      "id": "U4T4",
+      "unit": 4,
+      "term": "operational definition",
+      "definition": "A definition stating how a concept is measured or identified in a study.",
+      "context": "A researcher gives an operational definition of engagement using observable participation.",
+      "task": "Assess whether a proposed measure captures the intended concept.",
+      "choices": [
+        "operational definition",
+        "metaphor",
+        "translation",
+        "paraphrase"
+      ],
+      "answer": 0,
+      "translationStatus": "English reviewed; additional languages pending review"
+    }
+  ]
+}
