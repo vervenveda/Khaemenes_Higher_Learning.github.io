@@ -124,3 +124,37 @@ def test_final_unlocked_with_all_four_week_records(browser, site):
     assert "correct answer:" not in page.locator("#exam").inner_text().lower()
     assert not errors, errors
     context.close()
+
+
+def test_incorrect_import_rejected_without_loss(browser, site):
+    page, context, errors = visit(browser, site, "week-01/")
+    page.locator("#student").fill("Kept Student")
+    import tempfile
+    with tempfile.NamedTemporaryFile(mode="w", suffix=".json", encoding="utf-8", delete=False) as tmp:
+        json.dump({"week":1,"answers":["x"]*5,"attempts":[{"score":99}],"profile":{}}, tmp)
+        invalid = tmp.name
+    try:
+        page.locator("#importFile").set_input_files(invalid)
+        assert "Import failed" in page.locator("#result").inner_text()
+        assert page.locator("#student").input_value() == "Kept Student"
+    finally:
+        pathlib.Path(invalid).unlink(missing_ok=True)
+    assert not errors, errors
+    context.close()
+
+def test_certificate_requires_final_and_review(browser, site):
+    page, context, errors = visit(browser, site, "completion.html")
+    page.evaluate("""() => {for(let i=1;i<=4;i++){localStorage.setItem('khaemenes.billofrights.week0'+i+'.v1',JSON.stringify({
+        answers:Array(5).fill('A documented primary source supports the reasoned claim discussed in the response.'),
+        profile:{student:'QA Learner'},reviewed:true,attempts:[{
+        total:10,score:10,percent:100,date:'2026-10-20',
+        details:Array.from({length:10},()=>({question:'Test',answer:'Yes',response:'Yes',correct:true}))}]}
+    ))}}""")
+    page.locator("#refresh").click()
+    assert page.locator("#certificate").is_hidden()
+    page.locator("#reviewer").fill("QA Reviewer")
+    page.locator("#capstone").check()
+    page.locator("#saveReview").click()
+    assert page.locator("#certificate").is_hidden()
+    assert not errors, errors
+    context.close()
