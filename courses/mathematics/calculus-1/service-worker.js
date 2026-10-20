@@ -1,6 +1,6 @@
 "use strict";
 // Applied Mission Studio v1.7.0 · compact pop-out evidence recovery.
-const CACHE="khaemenes-calculus-1-v6-higher-bridge-20261020";
+const CACHE="khaemenes-calculus-1-v7-higher-identity-20261020";
 const CORE=["./","index.html","offline.html","../assets/applied-mission-studio-v1.js","../../shared/course-entry-contract.js","../../shared/math-entry-gate.js","manifest.webmanifest","course-data.js","course-map.json","assets/styles.css","assets/app.js","assets/question-bank.js","assets/assessment-engine.js","assets/lesson-tools.js","assets/unit-progress.js","diagnostic/","assessments/","teacher/","teacher-keys/","./units/unit-01/projects/01-project.html","./units/unit-02/projects/02-project.html","./units/unit-03/projects/03-project.html","./units/unit-04/projects/04-project.html","./units/unit-05/projects/05-project.html","./units/unit-06/projects/06-project.html","./units/unit-07/projects/07-project.html","./units/unit-08/projects/08-project.html","./units/unit-09/projects/09-project.html","./units/unit-10/projects/10-project.html","./units/unit-11/projects/11-project.html","./units/unit-12/projects/12-project.html","./units/unit-13/projects/13-project.html"];
 
 const CACHE_PREFIX="khaemenes-calculus-1-";
