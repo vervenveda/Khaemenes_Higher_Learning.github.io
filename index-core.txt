@@ -6,7 +6,7 @@
   <meta name="description" content="Khaemenes Higher Learning — a collegiate campus for undergraduate study, advanced mathematics, career development, research preparation, professional tools, student records, and lifelong scholarship.">
   <meta name="theme-color" content="#08131f">
   <meta name="color-scheme" content="dark light">
-  <meta name="application-version" content="2026.08.12-higher-learning-campus-v3.0">
+  <meta name="application-version" content="2026.10.20-higher-learning-campus-v3.1">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Khaemenes Higher Learning | Collegiate Campus</title>
   <link rel="canonical" href="https://vervenveda.com/Khaemenes_Higher_Learning.github.io/">
@@ -397,7 +397,7 @@
           </div>
           <div class="hero-stat-grid" aria-label="Higher Learning overview">
             <div class="hero-stat"><strong>Collegiate Curriculum</strong><span>Undergraduate, advanced, interdisciplinary, and lifelong-learning pathways.</span></div>
-            <div class="hero-stat"><strong>Mathematics Open</strong><span>Nine complete Higher Learning mathematics courses are already present in the repository.</span></div>
+            <div class="hero-stat"><strong>Mathematics Open</strong><span>Eleven complete Higher Learning mathematics courses are already present in the repository.</span></div>
             <div class="hero-stat"><strong>Career Portal Open</strong><span>Assessment, mentor guidance, Career Star, professional tools, and dynamic skills discovery.</span></div>
             <div class="hero-stat"><strong>Scholar Continuity</strong><span>Academy learner identity stays canonical while Higher Learning keeps learner-scoped study preferences, pins, and evidence.</span></div>
           </div>
@@ -747,7 +747,7 @@
         {group:"Campus",icon:"D",title:"Academic Departments",description:"Current and planned collegiate departments",url:"#departments"},
         {group:"Campus",icon:"P",title:"Academic Pathways",description:"Undergraduate through advanced research",url:"#pathways"},
         {group:"Campus",icon:"R",title:"Campus Resources",description:"Research, professional tools, and games",url:"#resources"},
-        {group:"Active Department",icon:"M",title:"Mathematics",description:"Nine complete Higher Learning mathematics courses",url:"./courses/index.html"},
+        {group:"Active Department",icon:"M",title:"Mathematics",description:"Eleven complete Higher Learning mathematics courses",url:"./courses/index.html"},
         {group:"Active Department",icon:"CP",title:"Career & Professional Studies",description:"Career Portal and professional-development pathway",url:"./Career/index.html"},
         ...Object.entries(COURSES).map(([id,item])=>({group:"Current Mathematics",icon:"M",title:item.title,description:"Current Higher Learning mathematics course",url:item.url})),
         {group:"Connected Halls",icon:"PR",title:"ProResource Hub",description:"Professional and technical tools",url:"https://vervenveda.com/proresource_hub.github.io/"},
