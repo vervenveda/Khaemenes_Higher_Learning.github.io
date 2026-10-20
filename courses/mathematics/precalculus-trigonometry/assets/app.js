@@ -6,7 +6,7 @@ const $=(s,r=document)=>r.querySelector(s);
 const $$=(s,r=document)=>[...r.querySelectorAll(s)];
 const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const KEY=D.course.storage_key;
-const PIN_KEY="khaemenes-high-pinned-courses-v2";
+const PIN_KEY="khaemenes-higher-learning-pinned-courses-v1";
 const COURSE_ID="precalculus-trigonometry";
 const VALID_VIEWS=["dashboard","week","scope","units","practice","assessments","gradebook","portfolio","teacher"];
 
@@ -89,7 +89,7 @@ $("#pinCourseButton")?.addEventListener("click",()=>{
  try{localStorage.setItem(PIN_KEY,JSON.stringify(next))}catch{return alert("This browser could not save the profile pin.")}
  renderPin();
  const status=$("#pinCourseStatus");
- if(status)status.textContent=on?"Precalculus & Trigonometry was removed from the future profile list.":"Precalculus & Trigonometry was pinned for the future High School profile refresh.";
+ if(status)status.textContent=on?"Precalculus & Trigonometry was removed from the Higher Learning mathematics shelf.":"Precalculus & Trigonometry was pinned to the Higher Learning mathematics shelf.";
 });
 renderPin();
 window.addEventListener("storage",e=>{if(e.key===PIN_KEY)renderPin()});
@@ -316,7 +316,7 @@ function renderTeacher(){
  <div class="grid"><article class="card col6"><h3>Local learner records</h3>${studentControls()}<div class="actions"><button class="btn" id="backup" type="button">Export Complete Backup</button><label class="btn">Import Backup<input id="import" type="file" accept=".json" hidden></label><button class="btn" id="report" type="button">Export Progress Report</button></div></article>
  <article class="card col6"><h3>Course documentation</h3><p>The package includes a curriculum map, standards union, assessment model, calculator, CAD, and Arcade policy, accessibility/privacy guidance, pacing guide, gradebook template, mastery template, and completion record.</p><div class="actions"><a class="btn" href="docs/CURRICULUM_MAP.md">Curriculum Map</a><a class="btn" href="docs/STANDARDS_UNION.md">Standards Union</a><a class="btn" href="teacher/">Teacher Center</a></div></article>
  <article class="card col6"><h3>Scientific Calculator v4</h3><p>Use for functions, logarithms, radians, trigonometric graphs and equations, vectors, polar and parametric models, matrices, sequences, limits, and verification while preserving formulas, domains, units, and interpretation.</p><a class="btn primary" href="https://vervenveda.com/Khaemenes_High.github.io/courses/mathematics/tools/calculator/" target="_blank" rel="noopener">Open Calculator</a></article><article class="card col6"><h3>OHMIC CAD &amp; Geometry Arcade</h3><p>Use technical drafting, bearings, vector components, radial design, polar patterns, rotation, and coordinate games as documented mathematical laboratories—not unrecorded extras.</p><div class="actions"><a class="btn primary" href="https://vervenveda.com/proresource_hub.github.io/Protools/Ohmic_CAD_Studio.html" target="_blank" rel="noopener">Open CAD</a><a class="btn" href="https://vervenveda.com/arcade.github.io/a_sacred_geometry_game_index.html" target="_blank" rel="noopener">Open Sacred Geometry Studio</a></div></article>
- <article class="card col6"><h3>Profile integration</h3><p>This course stores the future High School profile ID <code>precalculus-trigonometry</code>. The refreshed High School page can add that course to its catalog after the next courses are complete.</p><a class="btn" href="PROFILE_INTEGRATION_NOTES.md">Read Integration Notes</a></article>
+ <article class="card col6"><h3>Profile integration</h3><p>This Higher Learning bridge course uses the shared profile ID <code>precalculus-trigonometry</code>. Pins follow the selected Higher Learning scholar into the Mathematics Department shelf.</p><a class="btn" href="PROFILE_INTEGRATION_NOTES.md">Read Integration Notes</a></article>
  </div></div>`;
  bindStudentControls();
  $("#backup")?.addEventListener("click",()=>download("precalculus-trigonometry-complete-backup.json",JSON.stringify(state,null,2),"application/json"));
