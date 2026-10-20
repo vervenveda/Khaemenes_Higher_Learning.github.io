@@ -1,5 +1,5 @@
 {
-  "name": "Khaemenes Academy Calculus I",
+  "name": "Khaemenes Higher Learning Calculus I",
   "short_name": "Calculus I",
   "id": "./?course=calculus-1",
   "start_url": "./",
@@ -7,7 +7,7 @@
   "display": "standalone",
   "background_color": "#090b10",
   "theme_color": "#090b10",
-  "description": "Open-age 36-week Calculus I course with 92 printable analytical lessons, modelling, assessments, teacher keys, and local records.",
+  "description": "Higher Learning 36-week Calculus I bridge with 92 analytical lessons, modelling, assessments, faculty keys, and learner-controlled records.",
   "categories": [
     "education",
     "mathematics",
