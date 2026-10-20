@@ -1,7 +1,7 @@
 (function attachKhaemenesHigherLearningProfileAdapter(global){
   "use strict";
 
-  const VERSION="1.1.0";
+  const VERSION="1.2.0";
   const EXPECTED_STAGE="higher";
   const LEGACY_PROFILE_KEY="khaemenes-higher-learning-profile-v1";
   const PINNED_KEY="khaemenes-higher-learning-pinned-courses-v1";
@@ -14,6 +14,8 @@
   const FAMILY_URL="https://vervenveda.com/Khaemenes_Academy.github.io/family/";
   const courseBase=inMathDepartment?"./":"./courses/";
   const COURSE_MAP=Object.freeze({
+    "precalculus-trigonometry":Object.freeze({title:"Precalculus & Trigonometry",url:inMathDepartment?"./mathematics/precalculus-trigonometry/index.html":"./courses/mathematics/precalculus-trigonometry/index.html"}),
+    "calculus-i":Object.freeze({title:"Calculus I",url:inMathDepartment?"./mathematics/calculus-1/index.html":"./courses/mathematics/calculus-1/index.html"}),
     "calculus-ii":Object.freeze({title:"Calculus II",url:`${courseBase}calculus-ii/index.html`}),
     "linear-algebra":Object.freeze({title:"Linear Algebra",url:`${courseBase}linear-algebra/index.html`}),
     "differential-equations":Object.freeze({title:"Differential Equations",url:`${courseBase}differential-equations/index.html`}),
