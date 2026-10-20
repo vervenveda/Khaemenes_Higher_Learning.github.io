@@ -21,4 +21,7 @@ $("exportBtn").onclick=()=>{let blob=new Blob([JSON.stringify({format:"KHAE_HL_A
 $("importFile").addEventListener("change",async e=>{let f=e.target.files?.[0];if(!f)return;try{let j=JSON.parse(await f.text());if(j.format!=="KHAE_HL_ACADEMIC_LANGUAGE_V1"||!j.progress||typeof j.progress.mastery!=="object"||typeof j.progress.responses!=="object"||Array.isArray(j.progress.mastery)||Array.isArray(j.progress.responses))throw Error("Invalid backup");progress=j.progress;save();render();$("status").textContent="Backup imported successfully."}catch(err){$("status").textContent="Import rejected: "+err.message}});
 fetch("word-bank.json").then(r=>{if(!r.ok)throw Error("Bank unavailable");return r.json()}).then(j=>{if(!Array.isArray(j.units)||!Array.isArray(j.terms))throw Error("Invalid bank");data=j;render()}).catch(err=>{$("status").textContent=err.message+" — serve this file from the repository to load its companion bank."});
 })();
-</script></body></html>
+</script>
+<!-- Verve N Veda Beta Program -->
+<script src="https://vervenveda.com/assets/vnv-beta-link.js" defer></script>
+</body></html>
