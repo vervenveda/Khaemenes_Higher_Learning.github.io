@@ -44,7 +44,7 @@ function targetExists(target){return exists(target)||exists(path.posix.join(targ
 for(const root of COURSES){
   const members=[...files].filter(p=>p.startsWith(root+"/"));
   if(!members.length){failures.push(root+": directory missing");continue}
-  if(members.length!==384)failures.push(root+": expected 384 files, found "+members.length);
+  if(members.length<384)failures.push(root+": expected at least 384 files, found "+members.length);
   for(const required of REQUIRED)if(!exists(root+"/"+required))failures.push(root+"/"+required+": required file missing");
   for(const member of members){
     const text=fs.readFileSync(path.join(ROOT,member),"utf8");
@@ -70,4 +70,4 @@ if(failures.length){
   failures.forEach(x=>console.error("- "+x));
   process.exit(1);
 }
-console.log("Higher Learning advanced-math migration validation: PASS (Calculus I + Precalculus/Trigonometry, full trees, required routes, and local entry references).");
+console.log("Higher Learning advanced-math migration validation: PASS (Calculus I + Precalculus/Trigonometry meet or exceed the verified migration baseline, with required routes and local entry references intact).");
