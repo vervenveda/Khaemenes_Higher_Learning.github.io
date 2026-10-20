@@ -8,7 +8,7 @@
 <meta name="application-version" content="2026.08.07-higher-learning-mathematics-v1.1">
 <meta name="color-scheme" content="dark light">
 <title>Khaemenes Higher Learning | Mathematics Department</title>
-<link rel="canonical" href="https://vervenveda.github.io/Khaemenes_Higher_Learning.github.io/courses/">
+<link rel="canonical" href="https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/">
 <style>
 :root{
   --bg:#07111d;--bg2:#0d1928;--panel:#122236;--panel2:#192d43;--ink:#f4f7fa;--muted:#aeb9c5;
