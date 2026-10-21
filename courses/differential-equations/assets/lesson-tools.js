@@ -6,8 +6,12 @@ if(!id)return;
 const LEGACY_KEY="khaemenes-differential-equations-lesson-progress-v1";
 const UTILITY_WIDGET="https://vervenveda.com/assets/vnv-beta-link.js";
 function ensureLearnerToolbar(){
-  if(document.getElementById("vnvBetaProgramLink")||document.querySelector('script[src*="vnv-beta-link.js"]'))return;
-  const script=document.createElement("script");script.src=UTILITY_WIDGET;script.async=false;script.dataset.khaemenesHigherLessonUtility="1";(document.head||document.documentElement).append(script);
+  const mount=()=>{
+    if(document.getElementById("vnvBetaProgramLink")||document.querySelector('script[src*="vnv-beta-link.js"]'))return;
+    const script=document.createElement("script");script.src=UTILITY_WIDGET;script.async=false;script.dataset.khaemenesHigherLessonUtility="1";(document.head||document.documentElement).append(script);
+  };
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",mount,{once:true});
+  else mount();
 }
 function higherScholarLessonKey(legacyKey){
   try{
@@ -25,11 +29,26 @@ const THEME_KEY="khaemenes-higher-learning-theme";
 const STEPS=["concept","examples","worksheet","check","reflection"];
 const $=(selector,root=document)=>root.querySelector(selector);
 const $$=(selector,root=document)=>[...root.querySelectorAll(selector)];
-function loadAll(){try{const x=JSON.parse(localStorage.getItem(KEY)||"{}");return x&&typeof x==="object"?x:{}}catch{return {}}}
-function saveAll(data){try{localStorage.setItem(KEY,JSON.stringify(data));return true}catch{return false}}
-let all=loadAll();
-let rec=all[id]||{complete:false,pathway:"Core",steps:{},reflection:"",quickScore:null,updated:null};
-rec.steps=rec.steps&&typeof rec.steps==="object"?rec.steps:{};
+function storageGet(key){try{return localStorage.getItem(key)}catch{return null}}
+function storageSet(key,value){try{localStorage.setItem(key,value);return true}catch{return false}}
+function loadAll(){try{const x=JSON.parse(storageGet(KEY)||"{}");return x&&typeof x==="object"?x:{}}catch{return {}}}
+function saveAll(data){try{return storageSet(KEY,JSON.stringify(data))}catch{return false}}
+function freshRecord(){return {complete:false,pathway:"Core",steps:{},reflection:"",quickScore:null,updated:null}}
+function normalizeRecord(raw){
+  const base=freshRecord();
+  if(raw===true||raw===false){base.complete=raw;return base}
+  if(typeof raw==="number"&&Number.isFinite(raw)){base.quickScore=Math.max(0,Math.min(100,Math.round(raw)));return base}
+  if(!raw||typeof raw!=="object"||Array.isArray(raw))return base;
+  base.complete=!!raw.complete;
+  base.pathway=typeof raw.pathway==="string"&&raw.pathway?raw.pathway:"Core";
+  base.steps=raw.steps&&typeof raw.steps==="object"&&!Array.isArray(raw.steps)?raw.steps:{};
+  base.reflection=typeof raw.reflection==="string"?raw.reflection:"";
+  base.quickScore=raw.quickScore!=null&&raw.quickScore!==""&&Number.isFinite(Number(raw.quickScore))?Math.max(0,Math.min(100,Math.round(Number(raw.quickScore)))):null;
+  base.updated=typeof raw.updated==="string"?raw.updated:null;
+  return base;
+}
+let all=loadAll();if(Array.isArray(all))all={};
+let rec=normalizeRecord(all[id]);
 function persist(){rec.updated=new Date().toISOString();all[id]=rec;saveAll(all);render()}
 function completeCount(){return STEPS.filter(step=>!!rec.steps[step]).length}
 function render(){
@@ -41,14 +60,14 @@ function render(){
   if(button){button.textContent=rec.complete?"✓ Study Activity Reviewed":"Mark Study Activity Reviewed";button.setAttribute("aria-pressed",String(!!rec.complete))}
   if(status)status.textContent=(rec.complete?"Study activity reviewed locally. ":"Study activity not yet reviewed. ")+(rec.quickScore==null?"No formative quick-check score.":"Formative quick check: "+rec.quickScore+"%. ")+(rec.quickScore>=80?"80% practice threshold met; verified academic mastery remains separate.":"The required 80% academic mastery gate remains separate.");
 }
-function setTheme(theme){document.documentElement.dataset.theme=theme;try{localStorage.setItem(THEME_KEY,theme)}catch{}}
-setTheme(localStorage.getItem(THEME_KEY)||"dark");
+function setTheme(theme){document.documentElement.dataset.theme=theme;try{storageSet(THEME_KEY,theme)}catch{}}
+setTheme(storageGet(THEME_KEY)||"dark");
 $("#themeToggle")?.addEventListener("click",()=>setTheme(document.documentElement.dataset.theme==="dark"?"light":"dark"));
 $$('[data-lesson-step]').forEach(box=>box.addEventListener('change',()=>{rec.steps[box.dataset.lessonStep]=box.checked;persist()}));
 $("#pathwaySelect")?.addEventListener("change",event=>{rec.pathway=event.target.value;persist();activatePathway(rec.pathway)});
 function activatePathway(name){
   $$('[data-pathway]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.pathway===name)));
-  const panel=$("#pathwayPanel"),source=$(`[data-pathway-copy="${CSS.escape(name)}"]`);if(panel&&source)panel.innerHTML=source.innerHTML;
+  const panel=$("#pathwayPanel"),source=$('[data-pathway-copy]').find(node=>node.dataset.pathwayCopy===name);if(panel&&source)panel.innerHTML=source.innerHTML;
 }
 $$('[data-pathway]').forEach(button=>button.addEventListener('click',()=>{rec.pathway=button.dataset.pathway;persist();activatePathway(rec.pathway)}));
 $("#completeLesson")?.addEventListener("click",()=>{rec.complete=!rec.complete;persist()});
@@ -70,10 +89,4 @@ $("#exportLesson")?.addEventListener("click",()=>{
 });
 activatePathway(rec.pathway||"Core");render();
 })();
-/* Shared accessible Academy H1 → smaller page subtitle presentation (visual only; no records). */
-(function(){
- const own=document.currentScript;if(!own||document.querySelector('script[data-khae-academy-headings="v1"]'))return;
- const script=document.createElement("script");script.dataset.khaeAcademyHeadings="v1";
- script.src=new URL("../../../assets/khaemenes-academy-title-v1.js",own.src).href;
- script.async=false;(document.head||document.documentElement).appendChild(script);
-})();
+/* Shared page-title enhancement intentionally omitted: no repository-local dependency is required. */
