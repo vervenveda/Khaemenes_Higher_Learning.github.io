@@ -158,3 +158,57 @@ def test_certificate_requires_final_and_review(browser, site):
     assert page.locator("#certificate").is_hidden()
     assert not errors, errors
     context.close()
+
+
+def test_evidence_export_import_roundtrip(browser, site):
+    page, context, errors = visit(browser, site, "week-01/")
+    page.locator("#student").fill("Roundtrip Learner")
+    page.locator("#lesson textarea").fill("Primary source evidence supplies dates and context for this original response to the historical question.")
+    with page.expect_download() as event:
+        page.locator("#export").click()
+    exported = event.value.path()
+    page.locator("#student").fill("Changed")
+    page.locator("#lesson textarea").fill("Changed response")
+    page.locator("#importFile").set_input_files(str(exported))
+    assert "Evidence imported successfully" in page.locator("#result").inner_text()
+    assert page.locator("#student").input_value() == "Roundtrip Learner"
+    assert page.locator("#lesson textarea").input_value().startswith("Primary source evidence")
+    assert not errors, errors
+    context.close()
+
+def test_print_portfolio_contains_five_days(browser, site):
+    page, context, errors = visit(browser, site, "week-01/")
+    page.locator("#student").fill("Print QA Learner")
+    page.evaluate("window.dispatchEvent(new Event('beforeprint'))")
+    assert page.locator("#printPortfolio article").count() == 5
+    assert "Print QA Learner" in page.locator("#printPortfolio").inner_text()
+    for i in range(1,6):
+        assert f"Day {i}" in page.locator("#printPortfolio").inner_text()
+    assert not errors, errors
+    context.close()
+
+def test_final_qualifying_certificate_journey(browser, site):
+    page, context, errors = visit(browser, site, "completion.html")
+    page.evaluate("""() => {for(let i=1;i<=4;i++){localStorage.setItem('khaemenes.billofrights.week0'+i+'.v1',JSON.stringify({
+      answers:Array(5).fill('A documented primary source and dated historical context support this considered argument.'),
+      profile:{student:'Qualified QA Learner'},reviewed:true,attempts:[{
+        total:10,score:10,percent:100,date:'2026-10-20',
+        details:Array.from({length:10},()=>({question:'Test',answer:'Yes',response:'Yes',correct:true}))}]}
+    ))}}""")
+    page.locator("#refresh").click()
+    page.locator("#start").click()
+    for i in range(40):
+        correct = page.evaluate("""() => {
+          const q = exam.items[exam.step]; return q.answer;
+        }""")
+        page.locator("#exam .choice").get_by_text(correct, exact=True).click()
+        page.locator("#exam button").last.click()
+    assert "40/40" in page.locator("#result").inner_text()
+    assert page.locator("#certificate").is_hidden()
+    page.locator("#reviewer").fill("QA Reviewer")
+    page.locator("#capstone").check()
+    page.locator("#saveReview").click()
+    assert page.locator("#certificate").is_visible()
+    assert "Qualified QA Learner" in page.locator("#certificate").inner_text()
+    assert not errors, errors
+    context.close()
