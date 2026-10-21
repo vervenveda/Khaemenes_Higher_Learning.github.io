@@ -589,7 +589,7 @@
         <a href="#student-portal">Student Profile</a><a href="./Career/index.html">Career</a><a href="#departments">Departments</a><a href="./directory/">Course Directory</a><a href="#pathways">Pathways</a><a href="#resources">Resources</a><a href="./courses/index.html">Mathematics</a><a href="https://vervenveda.com/">Verve N Veda</a>
       </nav>
     </div>
-  </footer>
+   <a href="inquiry-companion.html">Higher Learning · Inquiry Companion</a></footer>
 
   <div class="modal" id="plannedModal" hidden>
     <article class="modal-card" role="dialog" aria-modal="true" aria-labelledby="plannedTitle">
