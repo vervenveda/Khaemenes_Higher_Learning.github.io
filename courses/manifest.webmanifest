@@ -1,0 +1,11 @@
+{
+  "name": "Khaemenes Higher Learning Mathematics",
+  "short_name": "Khaemenes Math",
+  "description": "Khaemenes Higher Learning Mathematics Department.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#07111d",
+  "theme_color": "#08131f",
+  "icons": []
+}
