@@ -363,6 +363,7 @@ html[data-theme="light"] .department-link.developing{color:#234963;border-color:
       <nav class="header-links" aria-label="Higher Learning primary navigation">
         <a href="./start/">Scholar Entry</a>
         <a href="#student-portal">Student</a>
+        <a href="https://vervenveda.com/Khaemenes_Academy.github.io/student/">Academy Profile</a>
         <a href="#departments">Departments</a>
         <a href="./courses/index.html">Mathematics</a>
         <a class="career-link" href="./Career/index.html">Career</a>
@@ -495,6 +496,7 @@ html[data-theme="light"] .department-link.developing{color:#234963;border-color:
             <div class="profile-summary" id="profileSummary" aria-live="polite">No local Higher Learning profile has been saved on this device.</div>
             <div class="portal-links">
               <a href="./start/">Scholar Entry / Identity</a>
+              <a href="https://vervenveda.com/Khaemenes_Academy.github.io/student/">Open Learning Compass &amp; Evidence Passport</a>
               <button id="exportProfileButton" type="button">Export Profile</button>
               <button id="clearProfileButton" type="button">Clear Local Profile</button>
             </div>
