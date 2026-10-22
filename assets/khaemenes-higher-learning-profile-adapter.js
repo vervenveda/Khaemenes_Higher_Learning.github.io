@@ -140,7 +140,7 @@
     key=String(key||"");
     const scholar=currentScholar();
     if(key===LEGACY_PROFILE_KEY){if(scholar)savePreferencesObject(scholar,parse(String(value),{}));return}
-    if(key===PINNED_KEY){if(scholar?.learnerId){rawSet(pinKey(scholar.learnerId),String(value));syncAcademyPins(scholar)}return}
+    if(key===PINNED_KEY){if(scholar?.learnerId)rawSet(pinKey(scholar.learnerId),String(value));if(scholar?.learnerId)syncAcademyPins(scholar);return}
     if(key===FAVORITES_KEY){if(scholar?.learnerId)rawSet(favoritesKey(scholar.learnerId),String(value));return}
     return native.setItem.call(this,key,value);
   };
@@ -149,7 +149,7 @@
     key=String(key||"");
     const scholar=currentScholar();
     if(key===LEGACY_PROFILE_KEY){if(scholar)savePreferencesObject(scholar,defaultPreferences(),"cleared-by-learner");return}
-    if(key===PINNED_KEY){if(scholar?.learnerId){rawSet(pinKey(scholar.learnerId),"[]");syncAcademyPins(scholar)}return}
+    if(key===PINNED_KEY){if(scholar?.learnerId)rawSet(pinKey(scholar.learnerId),"[]");if(scholar?.learnerId)syncAcademyPins(scholar);return}
     if(key===FAVORITES_KEY){if(scholar?.learnerId)rawSet(favoritesKey(scholar.learnerId),"[]");return}
     return native.removeItem.call(this,key);
   };
