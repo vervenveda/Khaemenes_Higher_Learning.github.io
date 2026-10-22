@@ -61,7 +61,7 @@ const age=(Date.now()-Date.parse(catalog.inventoryDate+"T00:00:00Z"))/86400000;
 if(Number.isFinite(age)&&age>45)fail("federated catalog inventoryDate is stale ("+catalog.inventoryDate+")");else pass("federated catalog date within drift window: "+catalog.inventoryDate);
 
 function resolveRef(from,ref){
- if(!ref||ref.startsWith("#")||/^(?:https?:|mailto:|tel:|data:|javascript:|blob:)/i.test(ref))return null;
+ if(!ref||ref.startsWith("#")||ref.includes("${")||/^(?:https?:|mailto:|tel:|data:|javascript:|blob:|about:)/i.test(ref))return null;
  const clean=ref.split("#")[0].split("?")[0];if(!clean)return null;
  return path.normalize(path.join(path.dirname(from),decodeURIComponent(clean))).replace(/\\/g,"/");
 }
