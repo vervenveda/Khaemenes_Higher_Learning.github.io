@@ -49,6 +49,40 @@
   }
   function higherPinKey(s){return s?.learnerId?`${HIGHER_PIN_PREFIX}${s.learnerId}`:null}
 
+  function installPinBoundary(courseId,s){
+    const scopedPins=higherPinKey(s);
+    let seeded=false;
+    function seedPins(){
+      if(seeded||!s||!scopedPins)return;seeded=true;
+      if(rawGet(scopedPins)!==null)return;
+      const old=parse(rawGet(HIGHER_PIN_KEY));
+      const pins=soleHigherScholar(s)&&Array.isArray(old)?old:[];
+      rawSet(scopedPins,JSON.stringify(pins));
+    }
+    seedPins();
+    Storage.prototype.getItem=function(key){
+      if(this===global.localStorage&&key===HIGHER_PIN_KEY){if(!s||!scopedPins)return null;seedPins();return rawGet(scopedPins)}
+      return original.getItem.call(this,key)
+    };
+    Storage.prototype.setItem=function(key,value){
+      if(this===global.localStorage&&key===HIGHER_PIN_KEY){
+        if(!s||!scopedPins)return;
+        rawSet(scopedPins,String(value));
+        global.dispatchEvent(new CustomEvent("khaemenes-higher-pins-changed",{detail:{courseId,learnerId:s.learnerId,scopedPins}}));
+        return
+      }
+      return original.setItem.call(this,key,value)
+    };
+    Storage.prototype.removeItem=function(key){
+      if(this===global.localStorage&&key===HIGHER_PIN_KEY){
+        if(s&&scopedPins){original.removeItem.call(this,scopedPins);global.dispatchEvent(new CustomEvent("khaemenes-higher-pins-changed",{detail:{courseId,learnerId:s.learnerId,scopedPins,cleared:true}}))}
+        return
+      }
+      return original.removeItem.call(this,key)
+    };
+    return scopedPins;
+  }
+
   function freshState(s){return {version:1,activeId:s.learnerId,selectedWeek:1,students:[{id:s.learnerId,name:s.nickname||"Scholar",pathway:"Core",weeks:{},formal:{diagnostic:null,midterm:null,final:null,capstone:null},notes:""}]}}
   function canonicalize(raw,s){
     if(!s?.learnerId)return null;
@@ -196,6 +230,17 @@
     const observer=new MutationObserver(apply);observer.observe(document.documentElement,{childList:true,subtree:true});apply();
   }
 
+  async function bootShell({courseId}={}){
+    courseId=clean(courseId||courseIdFromPath(),100);
+    try{if(!global.KhaemenesFamilyRegistry)await loadScript(REGISTRY_URL)}catch(error){console.error("Khaemenes Family Registry unavailable; shared course pinning remains disabled.",error)}
+    const s=scholar();
+    const scopedPins=installPinBoundary(courseId,s);
+    global.addEventListener("khaemenes-family-changed",()=>global.location.reload());
+    const detail={version:VERSION,status:s?"canonical-scholar":"transient-no-scholar",courseId,learnerId:s?.learnerId||null,scopedPins,courseStateUntouched:true,duplicateLearnerCreation:false};
+    global.dispatchEvent(new CustomEvent("khaemenes-course-identity-ready",{detail}));
+    return Object.freeze(detail);
+  }
+
   async function boot({coreSrc,courseId}={}){
     courseId=clean(courseId||courseIdFromPath(),100);
     const dataName=DATA_GLOBALS[courseId];const data=dataName?global[dataName]:null;
@@ -211,5 +256,5 @@
     global.dispatchEvent(new CustomEvent("khaemenes-course-identity-ready",{detail}));return Object.freeze(detail)
   }
 
-  global.KhaemenesCourseIdentityAdapter=Object.freeze({version:VERSION,boot,courseIdFromPath,currentScholar:scholar,policy:Object.freeze({identityAuthority:"academy-family-registry",legacyKeysPreserved:true,duplicateLearnerCreation:false,multiLearnerCourseAccounts:false,learnerScopedPins:true,legacyPinMigration:"sole-higher-scholar-only",noScholarPersistence:"fail-closed"})});
+  global.KhaemenesCourseIdentityAdapter=Object.freeze({version:VERSION,boot,bootShell,courseIdFromPath,currentScholar:scholar,policy:Object.freeze({identityAuthority:"academy-family-registry",legacyKeysPreserved:true,duplicateLearnerCreation:false,multiLearnerCourseAccounts:false,learnerScopedPins:true,legacyPinMigration:"sole-higher-scholar-only",noScholarPersistence:"fail-closed"})});
 })(window);
