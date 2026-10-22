@@ -28,7 +28,8 @@ ok(vault.includes("Khaemenes Mathematics Evidence Vault"),"Evidence Vault route 
 ok(vault.includes("khaemenes-math-evidence-vault-export-v1")&&vault.includes("SHA-256"),"Evidence Vault creates sealed full-program backups");
 ok(vault.includes("Verify Bundle")&&vault.includes("read-only"),"Evidence Vault verification is read-only");
 ok(vault.includes("prealgebra")&&vault.includes("algebra1")&&vault.includes("geometry")&&vault.includes("algebra2")&&vault.includes("precalculus-trigonometry")&&vault.includes("calculus1"),"Evidence Vault inventories all six mathematics courses");
-ok(vaultSw.includes("khaemenes-math-evidence-vault-v1"),"Evidence Vault has its own offline shell");
+ok(/khaemenes-math-evidence-vault-v(?:1|2)/.test(vaultSw),"Evidence Vault has its own versioned offline shell");
+ok(["calculus-ii","linear-algebra","differential-equations","statistics","discrete-mathematics","introduction-to-proofs","real-complex-analysis","abstract-algebra","topology-differential-geometry","advanced-geometric-topology"].every(id=>vault.includes(id)),"Evidence Vault also inventories the Higher Learning mathematics sequence");
 
 ok(shared.includes("RECOVERY_JOURNAL")&&shared.includes("Evidence Recovery"),"runtime exposes learner-scoped Evidence Recovery");
 ok(shared.includes("Restore as New Revision")&&shared.includes("recovery-restore"),"recovery restores evidence as a new revision");
