@@ -1,7 +1,7 @@
 (function attachKhaemenesHigherLearningProfileAdapter(global){
   "use strict";
 
-  const VERSION="1.2.0";
+  const VERSION="1.3.0";
   const EXPECTED_STAGE="higher";
   const LEGACY_PROFILE_KEY="khaemenes-higher-learning-profile-v1";
   const PINNED_KEY="khaemenes-higher-learning-pinned-courses-v1";
@@ -29,14 +29,9 @@
     "advanced-geometric-topology":Object.freeze({title:"Advanced Geometric Topology & Mathematical Physics",url:`${courseBase}advanced-geometric-topology/index.html`})
   });
 
-  const native=Object.freeze({
-    getItem:Storage.prototype.getItem,
-    setItem:Storage.prototype.setItem,
-    removeItem:Storage.prototype.removeItem
-  });
-  function rawGet(key){try{return native.getItem.call(global.localStorage,key)}catch{return null}}
-  function rawSet(key,value){try{native.setItem.call(global.localStorage,key,String(value));return true}catch{return false}}
-  function rawRemove(key){try{native.removeItem.call(global.localStorage,key);return true}catch{return false}}
+  function rawGet(key){try{return global.localStorage.getItem(key)}catch{return null}}
+  function rawSet(key,value){try{global.localStorage.setItem(key,String(value));return true}catch{return false}}
+  function rawRemove(key){try{global.localStorage.removeItem(key);return true}catch{return false}}
   function registry(){return global.KhaemenesFamilyRegistry||null}
   function clean(value,max=120){return String(value??"").replace(/[\u0000-\u001f\u007f]/g,"").trim().slice(0,max)}
   function escapeHTML(value){return String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[c])}
@@ -127,39 +122,50 @@
     const empty=JSON.stringify(emptyValue);rawSet(physical,empty);return empty;
   }
 
-  Storage.prototype.getItem=function(key){
-    if(this!==global.localStorage)return native.getItem.call(this,key);
+  function logicalGet(key){
     key=String(key||"");
-    if(key===LEGACY_PROFILE_KEY){const scholar=currentScholar();return scholar?JSON.stringify(syntheticProfile(scholar)):null}
+    const scholar=currentScholar();
+    if(key===LEGACY_PROFILE_KEY)return scholar?JSON.stringify(syntheticProfile(scholar)):null;
     if(key===PINNED_KEY)return scopedPreferenceRead(PINNED_KEY,pinKey,[]);
     if(key===FAVORITES_KEY)return scopedPreferenceRead(FAVORITES_KEY,favoritesKey,[]);
-    return native.getItem.call(this,key);
-  };
-  Storage.prototype.setItem=function(key,value){
-    if(this!==global.localStorage)return native.setItem.call(this,key,value);
-    key=String(key||"");
-    const scholar=currentScholar();
-    if(key===LEGACY_PROFILE_KEY){if(scholar)savePreferencesObject(scholar,parse(String(value),{}));return}
-    if(key===PINNED_KEY){if(scholar?.learnerId)rawSet(pinKey(scholar.learnerId),String(value));if(scholar?.learnerId)syncAcademyPins(scholar);return}
-    if(key===FAVORITES_KEY){if(scholar?.learnerId)rawSet(favoritesKey(scholar.learnerId),String(value));return}
-    return native.setItem.call(this,key,value);
-  };
-  Storage.prototype.removeItem=function(key){
-    if(this!==global.localStorage)return native.removeItem.call(this,key);
-    key=String(key||"");
-    const scholar=currentScholar();
-    if(key===LEGACY_PROFILE_KEY){if(scholar)savePreferencesObject(scholar,defaultPreferences(),"cleared-by-learner");return}
-    if(key===PINNED_KEY){if(scholar?.learnerId)rawSet(pinKey(scholar.learnerId),"[]");if(scholar?.learnerId)syncAcademyPins(scholar);return}
-    if(key===FAVORITES_KEY){if(scholar?.learnerId)rawSet(favoritesKey(scholar.learnerId),"[]");return}
-    return native.removeItem.call(this,key);
-  };
+    return rawGet(key);
+  }
+  function logicalSet(key,value){
+    key=String(key||"");const scholar=currentScholar();
+    if(key===LEGACY_PROFILE_KEY)return scholar?savePreferencesObject(scholar,parse(String(value),{})):false;
+    if(key===PINNED_KEY){
+      if(!scholar?.learnerId)return false;
+      const ok=rawSet(pinKey(scholar.learnerId),String(value));if(ok)syncAcademyPins(scholar);return ok;
+    }
+    if(key===FAVORITES_KEY)return scholar?.learnerId?rawSet(favoritesKey(scholar.learnerId),String(value)):false;
+    return rawSet(key,value);
+  }
+  function logicalRemove(key){
+    key=String(key||"");const scholar=currentScholar();
+    if(key===LEGACY_PROFILE_KEY)return scholar?savePreferencesObject(scholar,defaultPreferences(),"cleared-by-learner"):false;
+    if(key===PINNED_KEY){
+      if(!scholar?.learnerId)return false;
+      const ok=rawSet(pinKey(scholar.learnerId),"[]");if(ok)syncAcademyPins(scholar);return ok;
+    }
+    if(key===FAVORITES_KEY)return scholar?.learnerId?rawSet(favoritesKey(scholar.learnerId),"[]"):false;
+    return rawRemove(key);
+  }
+  const profileStore=Object.freeze({
+    version:"1.0.0",
+    getItem:logicalGet,setItem:logicalSet,removeItem:logicalRemove,
+    readJSON:(key,fallback=null)=>parse(logicalGet(key),fallback),
+    writeJSON:(key,value)=>logicalSet(key,JSON.stringify(value)),
+    keys:Object.freeze({profile:LEGACY_PROFILE_KEY,pins:PINNED_KEY,favorites:FAVORITES_KEY}),
+    policy:Object.freeze({learnerScoped:true,prototypeInterception:false,failClosedWithoutScholar:true})
+  });
+  global.KhaemenesHigherProfileStore=profileStore;
 
   function element(...ids){for(const id of ids){const el=document.getElementById(id);if(el)return el}return null}
   function fieldElement(){return element("studentField","studentFocus")}
   function clearElement(){return element("clearProfileButton","clearProfile")}
   function exportElement(){return element("exportProfileButton","exportProfile")}
-  function readJSON(key,fallback=null){try{const raw=global.localStorage.getItem(key);return raw?JSON.parse(raw):fallback}catch{return fallback}}
-  function writeJSON(key,value){try{global.localStorage.setItem(key,JSON.stringify(value));return true}catch{return false}}
+  function readJSON(key,fallback=null){return profileStore.readJSON(key,fallback)}
+  function writeJSON(key,value){return profileStore.writeJSON(key,value)}
   function pinnedIds(){const raw=readJSON(PINNED_KEY,[]);return Array.isArray(raw)?raw.filter(id=>COURSE_MAP[id]):[]}
   function readAcademyPins(){
     const value=parse(rawGet(ACADEMY_PIN_KEY),null);
@@ -295,11 +301,12 @@
     scholarEntryUrl:SCHOLAR_ENTRY_URL,
     familyUrl:FAMILY_URL,
     currentScholar,
+    profileStore,
     preferencesFor,
     syncAcademyPins,
     render,
     bind,
-    policy:Object.freeze({duplicateAccountCreation:false,legacyIdentityImported:false,legacyPreferenceMigration:"only-when-sole-higher-scholar",learnerScopedPins:true,learnerScopedResourceFavorites:true,masterDirectoryNamesUnchanged:true,landingStructureUnchanged:true,landingStylesUnchanged:true})
+    policy:Object.freeze({duplicateAccountCreation:false,legacyIdentityImported:false,legacyPreferenceMigration:"only-when-sole-higher-scholar",learnerScopedPins:true,learnerScopedResourceFavorites:true,prototypeInterception:false,explicitCampusStore:true,masterDirectoryNamesUnchanged:true,landingStructureUnchanged:true,landingStylesUnchanged:true})
   });
 
   bind();
