@@ -62,7 +62,7 @@ if(Number.isFinite(age)&&age>45)fail("federated catalog inventoryDate is stale (
 
 function resolveRef(from,ref){
  if(!ref||ref.startsWith("#")||ref.includes("${")||/^(?:https?:|mailto:|tel:|data:|javascript:|blob:|about:)/i.test(ref))return null;
- const clean=ref.split("#")[0].split("?")[0];if(!clean)return null;
+ const clean=ref.split("#")[0].split("?")[0];if(!clean)return null;\n if(clean.startsWith("/"))return decodeURIComponent(clean.slice(1));
  return path.normalize(path.join(path.dirname(from),decodeURIComponent(clean))).replace(/\\/g,"/");
 }
 const scan=["index-core.txt","courses/index-core.txt",...DEPARTMENTS.map(x=>x[1]),...MATH.map(x=>x+"/index.html")];
