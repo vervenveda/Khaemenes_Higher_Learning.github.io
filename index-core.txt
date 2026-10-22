@@ -626,11 +626,12 @@
         "introduction-to-proofs": {title:"Introduction to Proofs",url:"./courses/introduction-to-proofs/index.html"},
         "real-complex-analysis": {title:"Real & Complex Analysis",url:"./courses/real-complex-analysis/index.html"},
         "abstract-algebra": {title:"Abstract Algebra",url:"./courses/abstract-algebra/index.html"},
-        "topology-differential-geometry": {title:"Topology & Differential Geometry",url:"./courses/topology-differential-geometry/index.html"}
+        "topology-differential-geometry": {title:"Topology & Differential Geometry",url:"./courses/topology-differential-geometry/index.html"},
+        "advanced-geometric-topology": {title:"Advanced Geometric Topology & Mathematical Physics",url:"./courses/advanced-geometric-topology/index.html"}
       };
 
       const DEPARTMENTS = [
-        {number:"01",title:"Mathematics",description:"Calculus, linear algebra, differential equations, statistics, discrete mathematics, proof, analysis, abstract algebra, topology, and differential geometry.",status:"Active",url:"./courses/index.html",active:true},
+        {number:"01",title:"Mathematics",description:"Calculus, linear algebra, differential equations, statistics, discrete mathematics, proof, analysis, abstract algebra, topology, differential geometry, global geometry, and mathematical physics.",status:"Active",url:"./courses/index.html",active:true},
         {number:"02",title:"Natural Sciences",description:"Biology, chemistry, physics, Earth and environmental science, laboratory reasoning, and quantitative scientific literacy.",status:"Campus Roadmap",key:"Natural Sciences"},
         {number:"03",title:"Engineering & Technology",description:"Engineering foundations, systems, design, electronics, mechanics, CAD, technical communication, and applied computation.",status:"Campus Roadmap",key:"Engineering & Technology"},
         {number:"04",title:"Computer Science & Data",description:"Programming, algorithms, data structures, computing systems, artificial intelligence, cybersecurity, and data science.",status:"Campus Roadmap",key:"Computer Science & Data"},
