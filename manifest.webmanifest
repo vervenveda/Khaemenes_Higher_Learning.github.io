@@ -1,0 +1,11 @@
+{
+  "name": "Khaemenes Higher Learning",
+  "short_name": "Khaemenes Higher",
+  "description": "Khaemenes Higher Learning collegiate campus entrance.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#07111d",
+  "theme_color": "#08131f",
+  "icons": []
+}
