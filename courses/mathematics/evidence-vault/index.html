@@ -13,11 +13,11 @@
 <body>
 <header class="top"><div class="shell"><div class="brand"><div class="seal">KHAE</div><div><strong>Khaemenes Mathematics</strong><small>Evidence Vault · sovereign local record</small></div></div><button class="btn" type="button" id="backBtn">Return</button></div></header>
 <main class="shell">
-<section class="hero"><p class="k">Verve N Veda · Evidence Continuity</p><h1>Khaemenes Mathematics Evidence Vault</h1><p>One read-only view of Applied Mission evidence, portfolios, restore points and preserved emergency drafts available for the active Academy learner on this browser.</p></section>
+<section class="hero"><p class="k">Verve N Veda · Evidence Continuity</p><h1>Khaemenes Mathematics Evidence Vault</h1><p>One read-only view of mathematics evidence available for the active Academy learner on this browser—including Applied Missions, collegiate course records, formal assessments, advanced mastery state, portfolios, restore points, and preserved emergency drafts.</p></section>
 <div class="notice" id="ownerNotice"><strong>Checking learner authority…</strong></div>
 <section class="metrics" aria-label="Evidence summary">
 <div class="metric"><strong id="mCourses">0</strong><span>Courses with evidence</span></div>
-<div class="metric"><strong id="mUnits">0</strong><span>Saved mission units</span></div>
+<div class="metric"><strong id="mUnits">0</strong><span>Saved evidence records</span></div>
 <div class="metric"><strong id="mRecovery">0</strong><span>Restore points</span></div>
 <div class="metric"><strong id="mEmergency">0</strong><span>Emergency copies</span></div>
 </section>
@@ -30,36 +30,90 @@
 <section id="verifyBox" class="verify" hidden aria-live="polite"></section>
 <section class="grid" id="courseGrid"></section>
 </main>
-<footer class="footer"><div class="shell">Read-only evidence inventory. This page does not delete, rewrite, restore, grade, or unlock course progress. Recovery remains an explicit action inside the individual Mission Studio.</div></footer>
+<footer class="footer"><div class="shell">Read-only evidence inventory. This page does not delete, rewrite, restore, grade, unlock, or reinterpret course progress. Course-owned assessment and mastery engines remain authoritative.</div></footer>
 <script>
 (function(){
 "use strict";
 var ACTIVE="khaemenes_active_learner_v1",REG="khaemenes_family_registry_v1",MAX_FILE=5242880;
 var COURSES=[
- {course:"pre-algebra",label:"Pre-Algebra",stem:"prealgebra"},
- {course:"algebra-1",label:"Algebra I",stem:"algebra1"},
- {course:"geometry",label:"Geometry",stem:"geometry"},
- {course:"algebra-2",label:"Algebra II",stem:"algebra2"},
- {course:"precalculus-trigonometry",label:"Precalculus & Trigonometry",stem:"precalculus-trigonometry"},
- {course:"calculus-1",label:"Calculus I",stem:"calculus1"}
+ {course:"pre-algebra",label:"Pre-Algebra",stem:"prealgebra",adapter:"mission"},
+ {course:"algebra-1",label:"Algebra I",stem:"algebra1",adapter:"mission"},
+ {course:"geometry",label:"Geometry",stem:"geometry",adapter:"mission"},
+ {course:"algebra-2",label:"Algebra II",stem:"algebra2",adapter:"mission"},
+ {course:"precalculus-trigonometry",label:"Precalculus & Trigonometry",stem:"precalculus-trigonometry",adapter:"mission"},
+ {course:"calculus-1",label:"Calculus I",stem:"calculus1",adapter:"mission"},
+ {course:"calculus-ii",label:"Calculus II",adapter:"higher"},
+ {course:"linear-algebra",label:"Linear Algebra",adapter:"higher"},
+ {course:"differential-equations",label:"Differential Equations",adapter:"higher"},
+ {course:"statistics",label:"Statistics",adapter:"higher"},
+ {course:"discrete-mathematics",label:"Discrete Mathematics",adapter:"higher"},
+ {course:"introduction-to-proofs",label:"Introduction to Proofs",adapter:"higher"},
+ {course:"real-complex-analysis",label:"Real & Complex Analysis",adapter:"higher"},
+ {course:"abstract-algebra",label:"Abstract Algebra",adapter:"higher"},
+ {course:"topology-differential-geometry",label:"Topology & Differential Geometry",adapter:"higher"},
+ {course:"advanced-geometric-topology",label:"Advanced Geometric Topology & Mathematical Physics",adapter:"agt"}
 ];
 var $=function(id){return document.getElementById(id)},parse=function(v,f){try{var x=JSON.parse(v);return x==null?f:x}catch(e){return f}},esc=function(v){return String(v==null?"":v).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})};
 function profile(){try{var id=parse(localStorage.getItem(ACTIVE),null),reg=parse(localStorage.getItem(REG),null),l=typeof id==="string"&&reg&&reg.learners?reg.learners[id]:null;return l&&l.learnerId===id?{learnerId:id,name:String(l.nickname||l.name||"Learner")}:null}catch(e){return null}}
 function scoped(base,id){return base+":learner:"+encodeURIComponent(id)}
 function meaningful(r){if(!r||typeof r!=="object")return false;if(String(r.mission_id||r.custom||"").trim())return true;var values=Object.values(r.fields||{}).concat(Object.values(r.legacy_fields||{}));return values.some(function(v){return String(v||"").trim().length>2})||Array.isArray(r.review&&r.review.attempts)&&r.review.attempts.length>0}
 function latestOf(current,value){if(!value)return current;return !current||String(value)>String(current)?String(value):current}
-function scanCourse(c,p){
+function baseResult(c,key,store){
+ return{course:c.course,label:c.label,stem:c.stem||c.course,adapter:c.adapter,store_key:key,portfolio_key:null,saved_units:0,portfolio_units:0,recovery_points:0,emergency_copies:0,latest:null,current_store:store,portfolio_store:null,recovery_journals:[],emergency_copies_data:[]};
+}
+function scanMission(c,p){
  var base="khaemenes-"+c.stem+"-applied-missions-v1",portBase="khaemenes-"+c.stem+"-applied-mission-portfolio-v1",suffix=":learner:"+encodeURIComponent(p.learnerId);
  var storeKey=scoped(base,p.learnerId),portKey=scoped(portBase,p.learnerId),store=parse(localStorage.getItem(storeKey),null),port=parse(localStorage.getItem(portKey),null);
  var units=store&&store.units&&typeof store.units==="object"?store.units:{},saved=Object.values(units).filter(meaningful),portfolio=port&&port.units&&typeof port.units==="object"?port.units:{};
  var journals=[],emergency=[],latest=null;
  saved.forEach(function(r){latest=latestOf(latest,r.updated_at)});
  for(var i=0;i<localStorage.length;i++){var k=localStorage.key(i);if(!k||!k.endsWith(suffix)||!k.startsWith(base+":"))continue;var d=parse(localStorage.getItem(k),null);
-   if(k.indexOf(":recovery-journal-v1:")>=0){if(d&&Array.isArray(d.points)){journals.push({key:k,data:d});d.points.forEach(function(x){latest=latestOf(latest,x.saved_at)})}}
-   else if(k.indexOf(":draft:")>=0||k.indexOf(":recovery:")>=0){if(d&&d.record){emergency.push({key:k,data:d});latest=latestOf(latest,d.saved_at)}}
+  if(k.indexOf(":recovery-journal-v1:")>=0){if(d&&Array.isArray(d.points)){journals.push({key:k,data:d});d.points.forEach(function(x){latest=latestOf(latest,x.saved_at)})}}
+  else if(k.indexOf(":draft:")>=0||k.indexOf(":recovery:")>=0){if(d&&d.record){emergency.push({key:k,data:d});latest=latestOf(latest,d.saved_at)}}
  }
- var recoveryCount=journals.reduce(function(n,j){return n+j.data.points.length},0),portfolioCount=Object.keys(portfolio).length;
- return{course:c.course,label:c.label,stem:c.stem,store_key:storeKey,portfolio_key:portKey,saved_units:saved.length,portfolio_units:portfolioCount,recovery_points:recoveryCount,emergency_copies:emergency.length,latest:latest,current_store:store,portfolio_store:port,recovery_journals:journals,emergency_copies_data:emergency};
+ return{course:c.course,label:c.label,stem:c.stem,adapter:c.adapter,store_key:storeKey,portfolio_key:portKey,saved_units:saved.length,portfolio_units:Object.keys(portfolio).length,recovery_points:journals.reduce(function(n,j){return n+j.data.points.length},0),emergency_copies:emergency.length,latest:latest,current_store:store,portfolio_store:port,recovery_journals:journals,emergency_copies_data:emergency};
+}
+function nonEmpty(value){
+ if(value==null)return false;
+ if(Array.isArray(value))return value.length>0;
+ if(typeof value==="object")return Object.keys(value).length>0;
+ return String(value).trim()!=="";
+}
+function scanHigher(c,p){
+ var key="khaemenes.course:"+p.learnerId+":higher:"+c.course,store=parse(localStorage.getItem(key),null),out=baseResult(c,key,store);
+ if(!store||typeof store!=="object")return out;
+ var students=Array.isArray(store.students)?store.students:[],student=students.find(function(x){return x&&x.id===p.learnerId})||students[0]||null;
+ var weeks=student&&student.weeks&&typeof student.weeks==="object"?student.weeks:{};
+ var formal=student&&student.formal&&typeof student.formal==="object"?student.formal:{};
+ out.saved_units=Object.values(weeks).filter(nonEmpty).length;
+ out.portfolio_units=Object.values(formal).filter(nonEmpty).length+(student&&String(student.notes||"").trim()?1:0);
+ out.latest=store.updatedAt||student&&student.updatedAt||null;
+ out.record_kind="higher-learning-course-state";
+ return out;
+}
+function meaningfulAGTSession(record){
+ if(!record||typeof record!=="object")return false;
+ return Boolean(record.viewed||record.practice&&record.practice.completed||record.proof&&record.proof.submitted||record.lab&&record.lab.completed||String(record.reflection||"").trim()||Number.isFinite(Number(record.concept&&record.concept.score)));
+}
+function scanAGT(c,p){
+ var base="khaemenes.higher.app:"+p.learnerId+":",key2=base+"khaemenes-hl-agtgmp-progress-v2",key1=base+"khaemenes-hl-agtgmp-progress-v1";
+ var store=parse(localStorage.getItem(key2),null)||parse(localStorage.getItem(key1),null),key=localStorage.getItem(key2)!==null?key2:key1,out=baseResult(c,key,store);
+ if(!store||typeof store!=="object")return out;
+ var sessions=store.sessions&&typeof store.sessions==="object"?store.sessions:{};
+ out.saved_units=Object.values(sessions).filter(meaningfulAGTSession).length;
+ var formal=0;
+ if(store.units&&typeof store.units==="object")formal+=Object.values(store.units).filter(nonEmpty).length;
+ if(store.exams&&typeof store.exams==="object")formal+=Object.values(store.exams).filter(nonEmpty).length;
+ if(nonEmpty(store.capstone))formal+=1;
+ out.portfolio_units=formal;
+ out.latest=store.metadata&&store.metadata.updatedAt||null;
+ out.record_kind="advanced-topology-mastery-state";
+ return out;
+}
+function scanCourse(c,p){
+ if(c.adapter==="higher")return scanHigher(c,p);
+ if(c.adapter==="agt")return scanAGT(c,p);
+ return scanMission(c,p);
 }
 function inventory(){
  var p=profile();if(!p)return{profile:null,courses:[]};
@@ -73,8 +127,8 @@ function render(){
  var sums=inv.courses.reduce(function(a,c){a.units+=c.saved_units;a.recovery+=c.recovery_points;a.emergency+=c.emergency_copies;return a},{units:0,recovery:0,emergency:0});
  $("mCourses").textContent=coursesWith;$("mUnits").textContent=sums.units;$("mRecovery").textContent=sums.recovery;$("mEmergency").textContent=sums.emergency;
  grid.innerHTML=inv.courses.map(function(c){
-   var has=c.saved_units||c.portfolio_units||c.recovery_points||c.emergency_copies,status=has?(c.recovery_points?"Recovery protected":"Evidence saved; no restore point yet"):"No local mission evidence on this browser";
-   return'<article class="card"><p class="k">'+esc(c.course)+'</p><h2>'+esc(c.label)+'</h2><div class="pills"><span class="pill '+(has?"good":"")+'">'+esc(status)+'</span>'+(c.emergency_copies?'<span class="pill warn">Emergency copy available</span>':'')+'</div><div class="meta"><div><b>'+c.saved_units+'</b><span>Saved units</span></div><div><b>'+c.portfolio_units+'</b><span>Portfolio units</span></div><div><b>'+c.recovery_points+'</b><span>Restore points</span></div><div><b>'+c.emergency_copies+'</b><span>Emergency copies</span></div></div><p class="status">Latest local evidence: '+esc(c.latest?new Date(c.latest).toLocaleString():"none recorded")+'</p></article>'
+   var has=c.saved_units||c.portfolio_units||c.recovery_points||c.emergency_copies,status=has?(c.recovery_points?"Recovery protected":"Learner-scoped evidence found"):"No local evidence on this browser";
+   return'<article class="card"><p class="k">'+esc(c.course)+'</p><h2>'+esc(c.label)+'</h2><div class="pills"><span class="pill '+(has?"good":"")+'">'+esc(status)+'</span><span class="pill">'+esc(c.adapter==="mission"?"Applied Mission":c.adapter==="agt"?"Advanced mastery":"Collegiate course state")+'</span>'+(c.emergency_copies?'<span class="pill warn">Emergency copy available</span>':'')+'</div><div class="meta"><div><b>'+c.saved_units+'</b><span>Evidence records</span></div><div><b>'+c.portfolio_units+'</b><span>Formal / portfolio records</span></div><div><b>'+c.recovery_points+'</b><span>Restore points</span></div><div><b>'+c.emergency_copies+'</b><span>Emergency copies</span></div></div><p class="status">Latest local evidence: '+esc(c.latest?new Date(c.latest).toLocaleString():"none recorded")+'</p></article>'
  }).join("");
 }
 function canonical(v){if(Array.isArray(v))return v.map(canonical);if(v&&typeof v==="object"){var o={};Object.keys(v).sort().forEach(function(k){if(v[k]!==undefined)o[k]=canonical(v[k])});return o}return v}
@@ -85,8 +139,8 @@ async function verify(env){if(!env||!env.integrity)return false;var copy=Object.
 function download(name,text){var u=URL.createObjectURL(new Blob([text],{type:"application/json"})),a=document.createElement("a");a.href=u;a.download=name;a.click();setTimeout(function(){URL.revokeObjectURL(u)},900)}
 async function exportVault(){
  var inv=inventory();if(!inv.profile)return;
- var payload={schema:"khaemenes-math-evidence-vault-export-v1",version:1,generated_at:new Date().toISOString(),learner:{id:inv.profile.learnerId,name:inv.profile.name},courses:inv.courses,trust:{authoritative:false,course_progression_authority:false,read_only_snapshot:true,contains_recovery_evidence:true}};
- try{var sealed=await seal(payload),day=new Date().toISOString().slice(0,10);download("khaemenes-math-evidence-vault-"+day+".json",JSON.stringify(sealed,null,2));showVerify(true,"Sealed vault exported. The bundle contains the learner’s local mathematics mission, portfolio and recovery records available on this browser.")}catch(e){showVerify(false,e.message||"Could not create the sealed vault.")}
+ var payload={schema:"khaemenes-math-evidence-vault-export-v1",version:2,generated_at:new Date().toISOString(),learner:{id:inv.profile.learnerId,name:inv.profile.name},courses:inv.courses,trust:{authoritative:false,course_progression_authority:false,read_only_snapshot:true,contains_course_owned_records:true,contains_recovery_evidence:true}};
+ try{var sealed=await seal(payload),day=new Date().toISOString().slice(0,10);download("khaemenes-math-evidence-vault-"+day+".json",JSON.stringify(sealed,null,2));showVerify(true,"Sealed vault exported. The bundle contains the learner’s available local mathematics mission, collegiate course, formal/mastery, portfolio and recovery records from this browser.")}catch(e){showVerify(false,e.message||"Could not create the sealed vault.")}
 }
 function showVerify(good,msg){var b=$("verifyBox");b.hidden=false;b.className="verify "+(good?"good":"bad");b.innerHTML="<strong>"+(good?"Verified":"Attention")+"</strong><br>"+esc(msg)}
 async function verifyFile(file){
