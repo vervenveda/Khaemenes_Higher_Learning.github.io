@@ -6,6 +6,7 @@
   const LEGACY_PROFILE_KEY="khaemenes-higher-learning-profile-v1";
   const PINNED_KEY="khaemenes-higher-learning-pinned-courses-v1";
   const FAVORITES_KEY="khaemenes-higher-learning-resource-favorites-v1";
+  const ACADEMY_PIN_KEY="khaemenes_course_pins_v1";
   const PREFERENCE_PREFIX="khaemenes.higher.preferences:";
   const PIN_PREFIX="khaemenes.higher.pins:";
   const FAVORITES_PREFIX="khaemenes.higher.resource-favorites:";
@@ -84,10 +85,19 @@
     rawSet(key,JSON.stringify(migrated));
     return migrated;
   }
+  function syncLearningMap(scholar,prefs){
+    const P=global.KhaemenesStudentProfileV2;
+    if(!P?.read||!P?.updateLearningMap||!scholar?.learnerId)return true;
+    const field=clean(prefs?.field,80);
+    if(!field||field==="Undeclared / Interdisciplinary")return true;
+    const current=P.read(scholar.learnerId)?.learningMap||{};
+    const interests=[...(Array.isArray(current.interests)?current.interests:[]),field];
+    return P.updateLearningMap({interests},scholar.learnerId);
+  }
   function savePreferencesObject(scholar,value,source="higher-learning-preferences"){
     if(!scholar?.learnerId)return false;
     const incoming=value&&typeof value==="object"?value:{};
-    return rawSet(preferenceKey(scholar.learnerId),JSON.stringify({
+    const prefs={
       version:1,
       level:normalizeLevel(incoming.level),
       field:clean(incoming.field||incoming.focus||"Undeclared / Interdisciplinary",80)||"Undeclared / Interdisciplinary",
@@ -95,7 +105,10 @@
       source,
       legacyIdentityImported:false,
       updatedAt:new Date().toISOString()
-    }));
+    };
+    const ok=rawSet(preferenceKey(scholar.learnerId),JSON.stringify(prefs));
+    if(ok)syncLearningMap(scholar,prefs);
+    return ok;
   }
   function syntheticProfile(scholar){
     if(!scholar)return null;
@@ -127,7 +140,7 @@
     key=String(key||"");
     const scholar=currentScholar();
     if(key===LEGACY_PROFILE_KEY){if(scholar)savePreferencesObject(scholar,parse(String(value),{}));return}
-    if(key===PINNED_KEY){if(scholar?.learnerId)rawSet(pinKey(scholar.learnerId),String(value));return}
+    if(key===PINNED_KEY){if(scholar?.learnerId){rawSet(pinKey(scholar.learnerId),String(value));syncAcademyPins(scholar)}return}
     if(key===FAVORITES_KEY){if(scholar?.learnerId)rawSet(favoritesKey(scholar.learnerId),String(value));return}
     return native.setItem.call(this,key,value);
   };
@@ -136,7 +149,7 @@
     key=String(key||"");
     const scholar=currentScholar();
     if(key===LEGACY_PROFILE_KEY){if(scholar)savePreferencesObject(scholar,defaultPreferences(),"cleared-by-learner");return}
-    if(key===PINNED_KEY){if(scholar?.learnerId)rawSet(pinKey(scholar.learnerId),"[]");return}
+    if(key===PINNED_KEY){if(scholar?.learnerId){rawSet(pinKey(scholar.learnerId),"[]");syncAcademyPins(scholar)}return}
     if(key===FAVORITES_KEY){if(scholar?.learnerId)rawSet(favoritesKey(scholar.learnerId),"[]");return}
     return native.removeItem.call(this,key);
   };
@@ -148,6 +161,27 @@
   function readJSON(key,fallback=null){try{const raw=global.localStorage.getItem(key);return raw?JSON.parse(raw):fallback}catch{return fallback}}
   function writeJSON(key,value){try{global.localStorage.setItem(key,JSON.stringify(value));return true}catch{return false}}
   function pinnedIds(){const raw=readJSON(PINNED_KEY,[]);return Array.isArray(raw)?raw.filter(id=>COURSE_MAP[id]):[]}
+  function readAcademyPins(){
+    const value=parse(rawGet(ACADEMY_PIN_KEY),null);
+    return value&&typeof value==="object"&&!Array.isArray(value)&&value.learners&&typeof value.learners==="object"
+      ? value
+      : {version:1,learners:{}};
+  }
+  function syncAcademyPins(scholar=currentScholar()){
+    if(!scholar?.learnerId)return false;
+    const store=readAcademyPins(),prior=Array.isArray(store.learners?.[scholar.learnerId])?store.learners[scholar.learnerId]:[];
+    const preserved=prior.filter(item=>item?.source!=="khaemenes-higher-learning");
+    const higher=pinnedIds().map(id=>{
+      const meta=COURSE_MAP[id],href=new URL(meta.url,global.location?.href||"https://vervenveda.com/Khaemenes_Higher_Learning.github.io/").href;
+      return {id:"higher-"+id,courseId:id,title:meta.title,subtitle:"Higher Learning · pinned course",href,source:"khaemenes-higher-learning",updatedAt:new Date().toISOString()};
+    });
+    const previous=prior.filter(item=>item?.source==="khaemenes-higher-learning");
+    const unchanged=previous.length===higher.length&&previous.every((item,index)=>item?.courseId===higher[index]?.courseId&&item?.title===higher[index]?.title&&item?.href===higher[index]?.href);
+    if(unchanged)return true;
+    store.version=1;store.learners=store.learners&&typeof store.learners==="object"?store.learners:{};
+    store.learners[scholar.learnerId]=[...preserved,...higher];store.updatedAt=new Date().toISOString();
+    return rawSet(ACADEMY_PIN_KEY,JSON.stringify(store));
+  }
   function pinMarkup(){
     const ids=pinnedIds();
     if(!ids.length)return '<div class="pinned-list"><span>No Higher Learning courses are pinned yet.</span></div>';
@@ -187,6 +221,7 @@
       summary.innerHTML=`<strong>Academy learner identity required.</strong> This landing page cannot create a separate Higher Learning account. Select or create the canonical learner through Scholar Entry or the Academy Family Profile.${pinMarkup()}`;
     }else{
       const prefs=preferencesFor(scholar)||defaultPreferences();
+      syncAcademyPins(scholar);
       name.value=canonicalName(scholar);
       level.disabled=false;field.disabled=false;term.disabled=false;
       level.value=normalizeLevel(prefs.level);
@@ -261,6 +296,7 @@
     familyUrl:FAMILY_URL,
     currentScholar,
     preferencesFor,
+    syncAcademyPins,
     render,
     bind,
     policy:Object.freeze({duplicateAccountCreation:false,legacyIdentityImported:false,legacyPreferenceMigration:"only-when-sole-higher-scholar",learnerScopedPins:true,learnerScopedResourceFavorites:true,masterDirectoryNamesUnchanged:true,landingStructureUnchanged:true,landingStylesUnchanged:true})
