@@ -10,8 +10,28 @@
 <style>
 :root{--mid:#071421;--mid2:#10283f;--paper:#f5f0e7;--card:#fff;--ink:#182537;--muted:#687582;--gold:#b58d4f;--line:rgba(24,37,55,.15);--green:#496b57;--r:7px;--serif:Cinzel,Georgia,serif;--sans:"Brandon Grotesque","Avenir Next",Arial,sans-serif;--shadow:0 22px 58px rgba(7,20,33,.12)}*{box-sizing:border-box}body{margin:0;min-width:300px;color:var(--ink);background:linear-gradient(180deg,#e9eef1,var(--paper));font:16px/1.65 var(--sans)}a{color:inherit}.shell{width:min(calc(100% - 32px),920px);margin:auto}.top{color:#fff;background:linear-gradient(135deg,var(--mid),var(--mid2));border-bottom:1px solid rgba(255,255,255,.12)}.top .shell{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}.brand{font:500 clamp(20px,3vw,31px)/1 var(--serif)}.top a{padding:8px 11px;border:1px solid rgba(255,255,255,.2);border-radius:var(--r);text-decoration:none}.hero{padding:66px 0 35px;text-align:center}.eyebrow{color:#8b6e3c;font:600 11px var(--serif);letter-spacing:.16em;text-transform:uppercase}.hero h1{margin:9px auto 18px;color:var(--mid2);font:500 clamp(45px,8vw,78px)/.98 var(--serif)}.hero p{max-width:760px;margin:auto;color:var(--muted)}.context{display:flex;justify-content:center;gap:7px;flex-wrap:wrap;margin-top:18px}.pill{padding:6px 10px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--muted);font-size:12px}.mentor{margin:0 auto 24px;padding:25px;border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:18px;background:var(--card);box-shadow:var(--shadow)}.mentor h2{margin:7px 0 0;color:var(--mid2);font:500 30px var(--serif)}.mentor p{color:var(--muted)}.boundary{margin-top:16px;padding:13px 14px;border-left:3px solid var(--gold);background:#fff8e8;text-align:left;font-size:13px}.chat{margin-bottom:60px;padding:22px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:var(--shadow)}.log{display:grid;gap:10px;min-height:150px;max-height:440px;overflow:auto;text-align:left}.msg{max-width:90%;padding:11px 13px;border-radius:11px;white-space:pre-wrap}.msg.mentor{justify-self:start;background:#f7f2e9;border:1px solid #e4d7bd}.msg.scholar{justify-self:end;background:#eaf1f5}.msg strong{display:block;margin-bottom:4px;color:#7e6335;font-size:11px;letter-spacing:.06em;text-transform:uppercase}.prompts{display:flex;gap:7px;flex-wrap:wrap;margin:15px 0}.prompt{padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--mid2);font-size:12px;font-weight:700;cursor:pointer}.form{display:grid;grid-template-columns:1fr auto;gap:9px;align-items:end}.form textarea{width:100%;min-height:90px;resize:vertical;padding:12px;border:1px solid #bec8ce;border-radius:var(--r);font:inherit}.send{min-height:44px;padding:9px 15px;border:1px solid var(--mid2);border-radius:var(--r);color:#fff;background:var(--mid2);font-weight:800}.status{min-height:18px;color:var(--muted);font-size:12px;text-align:left}@media(max-width:680px){.form{grid-template-columns:1fr}.send{width:100%}.top .shell{justify-content:center;text-align:center}}
 </style>
+<link rel="stylesheet" href="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-global-header.css">
+<link rel="stylesheet" href="https://vervenveda.com/assets/vnv-ecosystem-menu.css">
 </head>
 <body>
+<header data-khae-header class="khae-global-campus-header">
+  <div data-khae-header-inner>
+    <a data-khae-brand href="https://vervenveda.com/Khaemenes_Academy.github.io/" aria-label="Khaemenes Academy home">
+      <span data-khae-brand-mark>HL</span>
+      <span><strong data-khae-brand-name>Khaemenes Higher Learning</strong><small data-khae-brand-sub>Scholar Mentor</small></span>
+    </a>
+    <nav data-khae-nav aria-label="Academy global navigation">
+      <a href="https://vervenveda.com/Khaemenes_Academy.github.io/">Academy</a>
+      <a href="https://vervenveda.com/Khaemenes_Academy.github.io/student/">Student</a>
+      <a href="https://vervenveda.com/Khaemenes_Academy.github.io/family/">Family</a>
+      <a href="https://vervenveda.com/Khaemenes_Academy.github.io/teacher-admin/">Teacher</a>
+    </nav>
+    <div data-khae-actions>
+      <a data-khae-secondary href="https://vervenveda.com/Khaemenes_Academy.github.io/">Academy</a><a href="https://vervenveda.com/Khaemenes_Higher_Learning.github.io/">Higher Learning</a>
+    </div>
+    <div data-vnv-ecosystem-slot aria-label="Ecosystem menu"></div>
+  </div>
+</header>
 <header class="top"><div class="shell"><div class="brand">Khaemenes Higher Learning</div><div><a href="../start/">Scholar Entry</a> <a href="../">Campus</a></div></div></header>
 <main class="shell">
 <section class="hero"><div class="eyebrow">NAIB · Higher Learning</div><h1>Scholar Mentor</h1><p>Advanced academic guidance for adult, collegiate, professional, and independent learners. The mentor supports understanding and research; formal course engines remain the authority for mastery and progression.</p><div class="context" id="context"></div></section>
@@ -75,4 +95,6 @@
 <a href="https://vervenveda.com/beta/" aria-label="Open the Verve N Veda Beta Program" style="position:fixed;right:14px;bottom:14px;z-index:2147483647;padding:9px 12px;border:1px solid currentColor;border-radius:7px;background:#fff;color:#111;text-decoration:none;font:600 13px/1.2 system-ui,sans-serif">β Beta Program</a>
 <a href="https://vervenveda.com/beta/" aria-label="Open the Verve N Veda Beta Program" style="position:fixed;right:14px;bottom:14px;z-index:2147483647;padding:9px 12px;border:1px solid currentColor;border-radius:7px;background:#fff;color:#111;text-decoration:none;font:600 13px/1.2 system-ui,sans-serif">β Beta Program</a>
 <a href="https://vervenveda.com/beta/" aria-label="Open the Verve N Veda Beta Program" style="position:fixed;right:14px;bottom:14px;z-index:2147483647;padding:9px 12px;border:1px solid currentColor;border-radius:7px;background:#fff;color:#111;text-decoration:none;font:600 13px/1.2 system-ui,sans-serif">β Beta Program</a>
+<script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-global-header.js" defer></script>
+<script src="https://vervenveda.com/assets/vnv-ecosystem-menu.js" defer></script>
 </body></html>
