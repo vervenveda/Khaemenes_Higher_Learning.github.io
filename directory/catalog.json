@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "title": "Khaemenes Higher Learning — Federated Existing-Course Inventory",
-  "inventoryDate": "2026-10-18",
+  "inventoryDate": "2026-10-22",
   "scope": "source-level structural discovery, not live browser acceptance or accreditation verification",
   "policy": {
     "sourceOwnership": "Federated schools retain their courses, portals, records and source URLs; this catalog only links them.",
@@ -16,10 +16,10 @@
     }
   },
   "summary": {
-    "records": 131,
+    "records": 133,
     "byStatus": {
       "pathway": 65,
-      "instructional": 34,
+      "instructional": 36,
       "bridge": 6,
       "outline": 20,
       "resource": 6
@@ -1992,6 +1992,36 @@
       "catalogUrl": null,
       "notes": "80 classics and 33 curriculum modules with optional formal study paths; university-level course completion criteria require QA.",
       "duration": null
+    },
+    {
+      "id": "khaemenes-higher-learning-academic-language-and-lexicology",
+      "title": "Academic Language & Lexicology",
+      "school": "Literature, Language & Humanities",
+      "subject": "Academic Language & Lexicology",
+      "level": "Undergraduate foundation / developing",
+      "status": "instructional",
+      "kind": "Developing course",
+      "sourceRepo": "Khaemenes_Higher_Learning.github.io",
+      "sourcePath": "courses/academic-language-and-lexicology/index.html",
+      "sourceUrl": "https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/academic-language-and-lexicology/",
+      "catalogUrl": null,
+      "notes": "Verified learner-facing course foundation with four introductory modules, 80% objective checkpoints, written investigations, browser-local progress and export/import. Full collegiate expansion remains in development.",
+      "duration": "4-module foundation"
+    },
+    {
+      "id": "khaemenes-higher-learning-constitutional-studies",
+      "title": "Constitutional Studies",
+      "school": "Law, Governance & Civic Studies",
+      "subject": "Constitutional Law & Civic Studies",
+      "level": "Undergraduate / advanced pathway",
+      "status": "instructional",
+      "kind": "Course and research laboratory",
+      "sourceRepo": "Khaemenes_Higher_Learning.github.io",
+      "sourcePath": "courses/constitutional-studies/index.html",
+      "sourceUrl": "https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/constitutional-studies/",
+      "catalogUrl": null,
+      "notes": "Verified learner-facing constitutional study pathway with original weekly instruction, amendment mastery, research laboratory, completion records and browser QA. Educational study only; not legal licensure.",
+      "duration": "expanding multi-week sequence"
     }
   ]
 }
