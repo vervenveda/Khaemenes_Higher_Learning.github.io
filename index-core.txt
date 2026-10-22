@@ -306,6 +306,20 @@
 @media(max-width:540px){.hero h1{font-size:clamp(30px,8vw,40px)!important}}
 @media print{.hero h1{font-size:19pt!important}.hero .khae-page-subtitle{font-size:14pt!important}}
 </style>
+
+<style id="higher-learning-department-state-v1">
+.department-card.active{border-top:4px solid var(--bronze-bright)}
+.department-card.developing{border-top:4px solid #7ea7c7}
+.department-card.roadmap{border-top:1px solid rgba(255,255,255,.11)}
+.department-status.active{color:#f0dfbd;border-color:rgba(220,199,160,.40);background:rgba(220,199,160,.07)}
+.department-status.developing{color:#b9dbf2;border-color:rgba(126,167,199,.42);background:rgba(126,167,199,.08)}
+.department-status.roadmap{color:#a9b3bd;background:rgba(255,255,255,.025)}
+.department-link.developing{color:#eef6fb;border-color:rgba(126,167,199,.38);background:rgba(126,167,199,.10)}
+.department-link.developing:hover{background:rgba(126,167,199,.18)}
+html[data-theme="light"] .department-card.developing{border-top-color:#587f9d}
+html[data-theme="light"] .department-status.developing{color:#385f7d;border-color:rgba(56,95,125,.24);background:#edf5fa}
+html[data-theme="light"] .department-link.developing{color:#234963;border-color:rgba(56,95,125,.24);background:#edf5fa}
+</style>
 </head>
 <body id="top">
   <a class="skip" href="#main">Skip to main content</a>
@@ -398,8 +412,8 @@
           </div>
           <div class="hero-stat-grid" aria-label="Higher Learning overview">
             <div class="hero-stat"><strong>Collegiate Curriculum</strong><span>Undergraduate, advanced, interdisciplinary, and lifelong-learning pathways.</span></div>
-            <div class="hero-stat"><strong>Mathematics Open</strong><span>Eleven complete Higher Learning mathematics courses are already present in the repository.</span></div>
-            <div class="hero-stat"><strong>Career Portal Open</strong><span>Assessment, mentor guidance, Career Star, professional tools, and dynamic skills discovery.</span></div>
+            <div class="hero-stat"><strong>12 Math Entrances</strong><span>From Precalculus and Calculus I bridges through advanced geometric topology and mathematical physics.</span></div>
+            <div class="hero-stat"><strong>5 Active Departments</strong><span>Mathematics, Science, Law & Civic Studies, Career, and Foundational/GED entrances are available now.</span></div>
             <div class="hero-stat"><strong>Scholar Continuity</strong><span>Academy learner identity stays canonical while Higher Learning keeps learner-scoped study preferences, pins, and evidence.</span></div>
           </div>
         </div>
@@ -500,7 +514,7 @@
               <a class="service-link" href="https://vervenveda.github.io/PLERASearch.github.io/"><strong>PLERA Search</strong><span>Research and discovery gateway</span></a>
               <a class="service-link" href="https://vervenveda.com/Khaemenes_High.github.io/"><strong>High School</strong><span>Secondary prerequisite campus</span></a>
             </div>
-            <p class="portal-note">Campus links open existing Verve N Veda learning halls; planned departments below remain clearly identified until their curriculum is built.</p>
+            <p class="portal-note">Campus links open verified Higher Learning and Verve N Veda destinations. Active, developing, and roadmap labels distinguish what learners can enter now from what is still being consolidated or planned.</p>
           </article>
         </div>
       </div>
@@ -511,7 +525,7 @@
         <div class="heading">
           <p class="kicker">Academic Departments</p>
           <h2>A campus designed for a complete collegiate curriculum.</h2>
-          <p>Mathematics is the first fully developed Higher Learning department. The remaining academic families are reserved in the campus architecture so new curricula can be added without redesigning the entrance each time.</p>
+          <p>Verified departments are now shown according to their real campus state: active departments open complete learner-facing entrances, developing departments connect substantial instructional foundations still being expanded, and roadmap departments remain clearly reserved for future coordinated builds.</p>
         </div>
         <div class="department-grid" id="departmentGrid"></div>
       </div>
@@ -632,23 +646,20 @@
       };
 
       const DEPARTMENTS = [
-        {number:"01",title:"Mathematics",description:"Calculus, linear algebra, differential equations, statistics, discrete mathematics, proof, analysis, abstract algebra, topology, differential geometry, global geometry, and mathematical physics.",status:"Active",url:"./courses/index.html",active:true},
-        {number:"02",title:"Natural Sciences",description:"Biology, chemistry, physics, Earth and environmental science, laboratory reasoning, and quantitative scientific literacy.",status:"Campus Roadmap",key:"Natural Sciences"},
-        {number:"03",title:"Engineering & Technology",description:"Engineering foundations, systems, design, electronics, mechanics, CAD, technical communication, and applied computation.",status:"Campus Roadmap",key:"Engineering & Technology"},
-        {number:"04",title:"Computer Science & Data",description:"Programming, algorithms, data structures, computing systems, artificial intelligence, cybersecurity, and data science.",status:"Campus Roadmap",key:"Computer Science & Data"},
-        {number:"05",title:"Humanities & Languages",description:"Literature, philosophy, writing, history of ideas, linguistics, languages, research, and humanistic interpretation.",status:"Campus Roadmap",key:"Humanities & Languages"},
-        {number:"06",title:"Social Sciences, Law & Policy",description:"Psychology, sociology, economics, political science, public policy, law, civics, and evidence-based social inquiry.",status:"Campus Roadmap",key:"Social Sciences, Law & Policy"},
-        {number:"07",title:"Career & Professional Studies",description:"Career assessment, mentoring, professional writing, business, finance, entrepreneurship, communication, portfolio development, and practical professional education.",status:"Career Portal Open",url:"./Career/index.html",active:true,action:"Open Career Portal"},
-        {number:"08",title:"Arts, Design & Interdisciplinary",description:"Studio arts, design, music, communication, architecture, creative technology, and cross-disciplinary capstone work.",status:"Campus Roadmap",key:"Arts, Design & Interdisciplinary"}
+        {number:"01",title:"Mathematics",description:"Calculus, linear algebra, differential equations, statistics, discrete mathematics, proof, analysis, abstract algebra, topology, differential geometry, global geometry, and mathematical physics.",state:"active",status:"Active Department",url:"./courses/index.html",action:"Open Mathematics"},
+        {number:"02",title:"Natural Sciences",description:"Science & Discovery Institute resources, educator materials, scientific reasoning, laboratory study, and expanding collegiate science pathways.",state:"active",status:"Active Department",url:"./Science/index.html",action:"Open Science"},
+        {number:"03",title:"Computer Science & Technology",description:"A verified multi-course coding sequence already spans introductory through advanced programming study while the broader technology department continues to consolidate.",state:"developing",status:"Developing Department",url:"./Technology/coding/coding-101/index.html",action:"Open Coding Sequence"},
+        {number:"04",title:"Humanities & Academic Language",description:"Academic Language & Lexicology provides a live vocabulary, morphology, context, argument, and lexical-research foundation while the full humanities department expands.",state:"developing",status:"Developing Department",url:"./courses/academic-language-and-lexicology/index.html",action:"Open Academic Language"},
+        {number:"05",title:"Social Sciences, Law & Policy",description:"Constitutional Studies provides live weekly instruction, amendment mastery, research laboratories, evidence work, and an expanding law-and-civic-studies pathway.",state:"active",status:"Active Department",url:"./courses/constitutional-studies/index.html",action:"Open Constitutional Studies"},
+        {number:"06",title:"Career & Professional Studies",description:"Career assessment, mentoring, professional writing, business, finance, entrepreneurship, communication, portfolio development, and practical professional education.",state:"active",status:"Active Department",url:"./Career/index.html",action:"Open Career Portal"},
+        {number:"07",title:"Foundational & GED Studies",description:"A live GED portal, preparation resources, learner survey, and interactive readiness tools support adults building or rebuilding core academic foundations.",state:"active",status:"Active Department",url:"./GED/index.html",action:"Open GED Studies"},
+        {number:"08",title:"Life Skills & Practical Independence",description:"The Higher Learning life-skills branch already provides a fourteen-pathway curriculum backbone for practical independence, wellbeing, finance, home systems, and entrepreneurship.",state:"developing",status:"Developing Department",url:"./life-skills/index.html",action:"Open Life Skills"},
+        {number:"09",title:"Engineering & Applied Design",description:"Engineering foundations, systems, electronics, mechanics, CAD, technical communication, and applied computation remain reserved for a complete department build.",state:"roadmap",status:"Roadmap",key:"Engineering & Applied Design"},
+        {number:"10",title:"Arts, Design & Interdisciplinary",description:"Studio arts, design, music, communication, architecture, creative technology, and cross-disciplinary capstone work remain reserved for coordinated collegiate development.",state:"roadmap",status:"Roadmap",key:"Arts, Design & Interdisciplinary"}
       ];
 
       const PLANNED = {
-        "Natural Sciences": ["Biological Sciences","Chemistry","Physics","Earth & Environmental Science","Laboratory Methods"],
-        "Engineering & Technology": ["Engineering Foundations","Mechanics & Systems","Electronics","CAD & Design","Technical Projects"],
-        "Computer Science & Data": ["Programming Foundations","Algorithms & Data Structures","Computer Systems","Artificial Intelligence","Cybersecurity & Data Science"],
-        "Humanities & Languages": ["College Writing","Literature","Philosophy","History","Languages & Linguistics"],
-        "Social Sciences, Law & Policy": ["Psychology","Sociology","Economics","Political Science","Law & Public Policy"],
-        "Career & Professional Studies": ["Accounting","Finance","Management","Entrepreneurship","Professional Communication","Career Development"],
+        "Engineering & Applied Design": ["Engineering Foundations","Mechanics & Systems","Electronics","CAD & Design","Technical Projects"],
         "Arts, Design & Interdisciplinary": ["Studio Art","Design","Music","Architecture & Space","Interdisciplinary Capstones"]
       };
 
@@ -717,8 +728,14 @@
       });
 
       function renderDepartments(){
-        $("departmentGrid").innerHTML=DEPARTMENTS.map(item=>`<article class="department-card${item.active?' active':''}"><span class="department-number">${item.number}</span><h3>${escapeHTML(item.title)}</h3><span class="department-status">${escapeHTML(item.status)}</span><p>${escapeHTML(item.description)}</p>${item.active?`<a class="department-link" href="${item.url}">${escapeHTML(item.action||'Open Mathematics')}</a>`:`<button class="department-link planned" type="button" data-planned="${escapeHTML(item.key)}">View Department Plan</button>`}</article>`).join("");
-        $$('[data-planned]').forEach(button=>button.addEventListener('click',()=>openPlanned(button.dataset.planned)));
+        $("departmentGrid").innerHTML=DEPARTMENTS.map(item=>{
+          const state=["active","developing","roadmap"].includes(item.state)?item.state:"roadmap";
+          const action=state==="roadmap"
+            ? `<button class="department-link planned" type="button" data-planned="${escapeHTML(item.key)}">View Department Plan</button>`
+            : `<a class="department-link ${state}" href="${item.url}">${escapeHTML(item.action||"Open Department")}</a>`;
+          return `<article class="department-card ${state}" data-department-state="${state}"><span class="department-number">${item.number}</span><h3>${escapeHTML(item.title)}</h3><span class="department-status ${state}">${escapeHTML(item.status)}</span><p>${escapeHTML(item.description)}</p>${action}</article>`;
+        }).join("");
+        $('[data-planned]').forEach(button=>button.addEventListener('click',()=>openPlanned(button.dataset.planned)));
       }
 
       const plannedModal=$("plannedModal"),plannedTitle=$("plannedTitle"),plannedDescription=$("plannedDescription"),plannedList=$("plannedList");
