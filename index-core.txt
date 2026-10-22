@@ -679,8 +679,10 @@ html[data-theme="light"] .department-link.developing{color:#234963;border-color:
         {id:"academy",icon:"KA",title:"Khaemenes Academy",kind:"Education Network",category:"network",description:"Return to the broader Khaemenes Academy educational network.",url:"https://vervenveda.com/Khaemenes_Academy.github.io/"}
       ];
 
-      function readJSON(key,fallback){try{const raw=localStorage.getItem(key);return raw?JSON.parse(raw):fallback}catch{return fallback}}
-      function writeJSON(key,value){try{localStorage.setItem(key,JSON.stringify(value));return true}catch{return false}}
+      const profileStore=()=>window.KhaemenesHigherProfileStore||null;
+      function readJSON(key,fallback){try{const store=profileStore(),raw=store?.getItem?store.getItem(key):localStorage.getItem(key);return raw?JSON.parse(raw):fallback}catch{return fallback}}
+      function writeJSON(key,value){try{const store=profileStore();return store?.setItem?store.setItem(key,JSON.stringify(value)):(localStorage.setItem(key,JSON.stringify(value)),true)}catch{return false}}
+      function removeStored(key){try{const store=profileStore();return store?.removeItem?store.removeItem(key):(localStorage.removeItem(key),true)}catch{return false}}
       function escapeHTML(value){return String(value).replace(/[&<>'"]/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]))}
       function toast(message){const el=$("toast");el.textContent=message;el.classList.add("show");clearTimeout(toast.timer);toast.timer=setTimeout(()=>el.classList.remove("show"),1800)}
 
@@ -723,7 +725,7 @@ html[data-theme="light"] .department-link.developing{color:#234963;border-color:
         const profile={version:1,name:$("studentName").value.trim()||"Student",level:normalizeLevel($("studentLevel").value),field:$("studentField").value.trim()||"Undeclared / Interdisciplinary",term:$("studentTerm").value,updatedAt:new Date().toISOString()};
         writeJSON(PROFILE_KEY,profile);renderProfile();toast("Local Higher Learning profile saved.");
       });
-      $("clearProfileButton").addEventListener("click",()=>{localStorage.removeItem(PROFILE_KEY);$("profileForm").reset();renderProfile();toast("Local profile cleared. Course pins were preserved.")});
+      $("clearProfileButton").addEventListener("click",()=>{removeStored(PROFILE_KEY);$("profileForm").reset();renderProfile();toast("Local profile cleared. Course pins were preserved.")});
       $("exportProfileButton").addEventListener("click",()=>{
         const payload={campus:"Khaemenes Higher Learning",exportedAt:new Date().toISOString(),profile:readJSON(PROFILE_KEY,null),pinnedCourses:getPins().map(id=>({id,title:COURSES[id].title,url:COURSES[id].url}))};
         const blob=new Blob([JSON.stringify(payload,null,2)],{type:"application/json"});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download="khaemenes-higher-learning-profile.json";document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);toast("Profile export created.");
