@@ -24,7 +24,8 @@
     "introduction-to-proofs":Object.freeze({title:"Introduction to Proofs",url:`${courseBase}introduction-to-proofs/index.html`}),
     "real-complex-analysis":Object.freeze({title:"Real & Complex Analysis",url:`${courseBase}real-complex-analysis/index.html`}),
     "abstract-algebra":Object.freeze({title:"Abstract Algebra",url:`${courseBase}abstract-algebra/index.html`}),
-    "topology-differential-geometry":Object.freeze({title:"Topology & Differential Geometry",url:`${courseBase}topology-differential-geometry/index.html`})
+    "topology-differential-geometry":Object.freeze({title:"Topology & Differential Geometry",url:`${courseBase}topology-differential-geometry/index.html`}),
+    "advanced-geometric-topology":Object.freeze({title:"Advanced Geometric Topology & Mathematical Physics",url:`${courseBase}advanced-geometric-topology/index.html`})
   });
 
   const native=Object.freeze({
