@@ -14,6 +14,13 @@
     document.open();document.write(html);document.close();
   }).catch(error=>{
     console.error("Khaemenes protected page core could not load.",error);
+    const fallback=document.getElementById("coreFallback");
+    if(fallback){
+      fallback.hidden=false;
+      const status=fallback.querySelector("[data-core-status]");
+      if(status)status.textContent="The full campus interface could not load. Core navigation remains available below.";
+      return;
+    }
     document.body.innerHTML='<main style="max-width:720px;margin:12vh auto;padding:24px;font-family:system-ui;text-align:center"><h1>Page unavailable</h1><p>The protected application could not be initialized. No local learner record was created.</p></main>';
   });
 })();
