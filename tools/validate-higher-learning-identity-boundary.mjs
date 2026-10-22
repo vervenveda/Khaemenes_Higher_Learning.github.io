@@ -56,11 +56,15 @@ expect(courseAdapter.includes('studentSelect'), "mathematics adapter locks legac
 expect(courseAdapter.includes('addLearner'), "mathematics adapter locks legacy learner creation controls");
 
 const profileAdapter = includes("assets/khaemenes-higher-learning-profile-adapter.js", [
-  'identityAuthority:"academy-family-registry"'
+  'identityAuthority:"academy-family-registry"',
+  'explicitCampusStore:true',
+  'prototypeInterception:false',
+  'KhaemenesHigherProfileStore'
 ]);
-expect(profileAdapter.includes('if(key===LEGACY_PROFILE_KEY){if(scholar)savePreferencesObject'), "profile adapter fails closed for profile writes without an Academy scholar");
-expect(profileAdapter.includes('if(key===PINNED_KEY){if(scholar?.learnerId)rawSet'), "profile adapter fails closed for pinned-course writes without an Academy scholar");
-expect(profileAdapter.includes('if(key===FAVORITES_KEY){if(scholar?.learnerId)rawSet'), "profile adapter fails closed for resource-favorite writes without an Academy scholar");
+expect(profileAdapter.includes('if(key===LEGACY_PROFILE_KEY)return scholar?savePreferencesObject'), "profile store fails closed for profile writes without an Academy scholar");
+expect(profileAdapter.includes('if(key===PINNED_KEY){') && profileAdapter.includes('if(!scholar?.learnerId)return false'), "profile store fails closed for pinned-course writes without an Academy scholar");
+expect(profileAdapter.includes('if(key===FAVORITES_KEY)return scholar?.learnerId?rawSet'), "profile store fails closed for resource-favorite writes without an Academy scholar");
+expect(!/Storage\.prototype\.(?:getItem|setItem|removeItem)\s*=/.test(profileAdapter), "profile adapter never mutates global Storage.prototype methods");
 expect(!/legacy[^\n]{0,120}name[^\n]{0,120}(import|promot)/i.test(profileAdapter), "profile adapter does not advertise legacy display-name promotion");
 
 includes("assets/khaemenes-core-page-loader.js", ["dataset?.core", "dataset?.scope"]);
@@ -137,6 +141,7 @@ expect(agtScope.includes("learnerId"), "Advanced Geometric Topology scope is lea
 // Canonical shared-origin scholar path.
 const rootWrapper = file("index.html");
 const campusCore = file("index-core.txt");
+const mathCore = file("courses/index-core.txt");
 const start = file("start/index.html");
 expect(rootWrapper.includes('location.hostname==="vervenveda.github.io"') && rootWrapper.includes('https://vervenveda.com'), "campus wrapper redirects the alternate github.io origin to canonical Verve N Veda");
 expect(start.includes('location.hostname==="vervenveda.github.io"') && start.includes('https://vervenveda.com'), "Scholar Entry redirects the alternate github.io origin before learner storage is read");
@@ -144,6 +149,8 @@ expect(campusCore.includes('href="https://vervenveda.com/Khaemenes_Academy.githu
 expect(!campusCore.includes('https://vervenveda.github.io/Khaemenes_Academy.github.io/'), "campus contains no identity-sensitive Academy link on the alternate github.io origin");
 expect(campusCore.includes('href="./start/"') && campusCore.includes("Scholar Entry"), "campus exposes a visible Scholar Entry doorway");
 expect(campusCore.includes("Academy learner identity stays canonical"), "campus explains the canonical learner identity boundary");
+expect(campusCore.includes("KhaemenesHigherProfileStore") && campusCore.includes("removeStored(PROFILE_KEY)"), "campus core routes profile storage through the explicit Higher Learning store");
+expect(mathCore.includes("KhaemenesHigherProfileStore") && mathCore.includes("removeStored(PROFILE_KEY)"), "Mathematics core routes profile storage through the explicit Higher Learning store");
 // Scholar Entry is a bridge, never a local account factory.
 expect(start.includes("khaemenes-family-registry.js"), "Scholar Entry reads the Academy Family Registry");
 expect(!/(?:registerLearner|createLearner|addLearner)\s*\(/.test(start), "Scholar Entry does not create a separate learner");
