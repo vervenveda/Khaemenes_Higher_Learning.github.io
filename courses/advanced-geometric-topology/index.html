@@ -4,13 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Advanced Geometric Topology · Khaemenes Higher Learning</title>
+  <meta name="theme-color" content="#090b10">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="assets/course.css">
 <style id="khae-academy-title-standard">.hero h1,header h1{font:400 clamp(32px,5vw,52px)/1.15 Cinzel,Georgia,serif!important;text-align:center;margin:10px auto}.hero .khae-page-subtitle,header .khae-page-subtitle{font:400 clamp(20px,2.7vw,27px)/1.35 Cinzel,Georgia,serif!important;text-align:center;margin:8px auto 0;opacity:.85}@media(max-width:550px){.hero h1,header h1{font-size:clamp(30px,8vw,39px)!important}}</style></head>
 <body>
 <header class="top">
   <div class="wrap nav">
     <div class="brand">Khaemenes Higher Learning · Archaemenes Scholar</div>
-    <nav><a href="../">Mathematics Department</a> · <a href="../../">Higher Learning</a> · <a href="labs/">Labs</a> · <a href="assessments/">Assessments</a></nav>
+    <nav><a href="../">Mathematics Department</a> · <a href="../../">Higher Learning</a> · <a id="higherProfileLink" href="../../#student-portal">Profile</a> · <a href="labs/">Labs</a> · <a href="assessments/">Assessments</a></nav>
   </div>
 </header>
 
@@ -36,6 +38,26 @@
     </div>
   </section>
 
+  <section class="section" id="higherLearningIntegration" aria-label="Higher Learning profile and completion integration">
+    <div class="grid">
+      <article class="card span6">
+        <p class="eyebrow">Higher Learning Profile</p>
+        <h2>Scholar continuity</h2>
+        <p id="departmentProfileStatus">Checking the active Higher Learning scholar…</p>
+        <div class="nav">
+          <a class="btn secondary" href="../../#student-portal">Open Student Profile</a>
+          <button class="btn" id="pinCourseButton" type="button" aria-pressed="false">☆ Pin to Profile</button>
+        </div>
+      </article>
+      <article class="card span6">
+        <p class="eyebrow">Course Evidence</p>
+        <h2>Completion status</h2>
+        <p id="departmentProgressStatus">Loading learner-owned mastery evidence…</p>
+        <p class="meta">This summary reads the course’s existing v2 learner/mastery state. It does not recalculate, replace, or certify mastery outside the course runtime.</p>
+      </article>
+    </div>
+  </section>
+
   <section class="section">
     <h2>36-Week Map</h2>
     <div class="weekgrid" id="weeks"></div>
@@ -53,6 +75,8 @@
 <script src="assets/js/storage.js"></script>
 <script src="assets/js/mastery-engine.js"></script>
 <script src="assets/js/app.js"></script>
+<script src="assets/department-integration.js"></script>
+<script>if("serviceWorker" in navigator){addEventListener("load",()=>navigator.serviceWorker.register("./service-worker.js",{updateViaCache:"none"}).then(r=>r.update()).catch(()=>{}),{once:true})}</script>
 
 <script src="../../assets/vnv-beta-link.js" defer></script>
 </body>
