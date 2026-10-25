@@ -1,0 +1,82 @@
+{
+  "schema": "khaemenes-bio101-unit-map-v1",
+  "course": "BIO 101",
+  "unit": 11,
+  "title": "Ecology, Population Dynamics & Biogeochemical Systems",
+  "weeks": [
+    30,
+    31,
+    32
+  ],
+  "essential": "How do energy flow, population regulation, species interactions, and biogeochemical cycles produce ecosystem patterns and resilience?",
+  "investigation": "Ecosystem Systems & Population Data Laboratory",
+  "standards": [
+    "energy flow",
+    "population models",
+    "community interactions",
+    "biodiversity",
+    "carbon cycle",
+    "nitrogen cycle",
+    "ecosystem resilience"
+  ],
+  "lesson_count": 7,
+  "lessons": [
+    {
+      "id": "u11-l01",
+      "number": 1,
+      "title": "Energy Flow, Trophic Structure & Productivity",
+      "week": 30,
+      "focus": "energy flow, trophic structure & productivity"
+    },
+    {
+      "id": "u11-l02",
+      "number": 2,
+      "title": "Exponential and Logistic Population Models",
+      "week": 30,
+      "focus": "exponential and logistic population models"
+    },
+    {
+      "id": "u11-l03",
+      "number": 3,
+      "title": "Competition, Predation & Community Interactions",
+      "week": 30,
+      "focus": "competition, predation & community interactions"
+    },
+    {
+      "id": "u11-l04",
+      "number": 4,
+      "title": "Succession, Biodiversity & Resilience",
+      "week": 31,
+      "focus": "succession, biodiversity & resilience"
+    },
+    {
+      "id": "u11-l05",
+      "number": 5,
+      "title": "Carbon Cycling & Reservoirs",
+      "week": 31,
+      "focus": "carbon cycling & reservoirs"
+    },
+    {
+      "id": "u11-l06",
+      "number": 6,
+      "title": "Nitrogen Cycling, Nutrients & Human Impacts",
+      "week": 32,
+      "focus": "nitrogen cycling, nutrients & human impacts"
+    },
+    {
+      "id": "u11-l07",
+      "number": 7,
+      "title": "Ecosystem Data Investigation & Systems Model",
+      "week": 32,
+      "focus": "ecosystem data investigation & systems model"
+    }
+  ],
+  "mastery": {
+    "target": 80,
+    "questions": 10,
+    "open_book": true,
+    "randomized": true,
+    "retake_fresh_form": true
+  },
+  "status": "architecture-locked-lessons-pending"
+}
