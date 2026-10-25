@@ -1,0 +1,82 @@
+{
+  "schema": "khaemenes-bio101-unit-map-v1",
+  "course": "BIO 101",
+  "unit": 5,
+  "title": "Photosynthesis, Respiration & Energy Transformation",
+  "weeks": [
+    12,
+    13,
+    14
+  ],
+  "essential": "How do photosynthesis and cellular respiration transform matter and energy while obeying conservation and system constraints?",
+  "investigation": "Cellular Energy & Gas-Exchange Investigation",
+  "standards": [
+    "photosynthesis",
+    "light reactions",
+    "carbon fixation",
+    "cellular respiration",
+    "fermentation",
+    "matter conservation",
+    "energy transformation"
+  ],
+  "lesson_count": 7,
+  "lessons": [
+    {
+      "id": "u05-l01",
+      "number": 1,
+      "title": "Photosynthetic Pigments & Light Capture",
+      "week": 12,
+      "focus": "photosynthetic pigments & light capture"
+    },
+    {
+      "id": "u05-l02",
+      "number": 2,
+      "title": "Light Reactions & Chemiosmosis",
+      "week": 12,
+      "focus": "light reactions & chemiosmosis"
+    },
+    {
+      "id": "u05-l03",
+      "number": 3,
+      "title": "Carbon Fixation & Biomass",
+      "week": 12,
+      "focus": "carbon fixation & biomass"
+    },
+    {
+      "id": "u05-l04",
+      "number": 4,
+      "title": "Glycolysis & Pyruvate Processing",
+      "week": 13,
+      "focus": "glycolysis & pyruvate processing"
+    },
+    {
+      "id": "u05-l05",
+      "number": 5,
+      "title": "Citric Acid Cycle & Oxidative Phosphorylation",
+      "week": 13,
+      "focus": "citric acid cycle & oxidative phosphorylation"
+    },
+    {
+      "id": "u05-l06",
+      "number": 6,
+      "title": "Fermentation, Oxygen Limits & Metabolic Flexibility",
+      "week": 14,
+      "focus": "fermentation, oxygen limits & metabolic flexibility"
+    },
+    {
+      "id": "u05-l07",
+      "number": 7,
+      "title": "Energy Transformation Investigation & Carbon Accounting",
+      "week": 14,
+      "focus": "energy transformation investigation & carbon accounting"
+    }
+  ],
+  "mastery": {
+    "target": 80,
+    "questions": 10,
+    "open_book": true,
+    "randomized": true,
+    "retake_fresh_form": true
+  },
+  "status": "architecture-locked-lessons-pending"
+}
