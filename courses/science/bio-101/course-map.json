@@ -1,34 +1,1340 @@
 {
-  "schema": "khaemenes-collegiate-science-course-map-v1",
-  "code": "BIO 101",
-  "title": "General Biology I",
-  "slug": "bio-101",
-  "department": "Science",
-  "track": "Life Sciences",
-  "status": "scaffold",
-  "architectureParity": "advanced-mathematics-course-package",
-  "requiredPackage": [
-    "index.html",
-    "course-data.js",
-    "course-map.json",
-    "manifest.webmanifest",
-    "service-worker.js",
-    "offline.html",
-    "README.md",
-    "FILE_MANIFEST.md",
-    "PROFILE_INTEGRATION_NOTES.md",
-    "UPDATE_NOTES.md",
-    "UPLOAD_MAP.md",
-    "VALIDATION_REPORT.md",
-    "SHA256SUMS.txt",
-    "assessments/",
-    "assets/",
-    "diagnostic/",
-    "docs/",
-    "records/",
-    "teacher/",
-    "teacher-keys/",
-    "tools/",
-    "units/"
+  "schema_version": "1.0",
+  "course": {
+    "id": "higher-learning-bio-101",
+    "profile_course_id": "bio-101",
+    "code": "KH-HL-SCI-BIO101",
+    "catalog_code": "BIO 101",
+    "title": "Khaemenes Higher Learning General Biology I",
+    "short_title": "General Biology I",
+    "duration_weeks": 36,
+    "sessions": 180,
+    "lesson_count": 92,
+    "mastery_target": 80,
+    "pathways": [
+      "Foundation",
+      "Core",
+      "Honors / Extended"
+    ],
+    "storage_key": "khaemenes-bio101-college-course-v1",
+    "assessment_key": "khaemenes-bio101-assessment-records-v1",
+    "laboratory_key": "khaemenes-bio101-laboratory-portfolio-v1",
+    "vocabulary_key": "khaemenes-bio101-vocabulary-v1",
+    "pin_key": "khaemenes-higher-learning-pinned-courses-v1",
+    "audience": "College-level and advanced independent learners entering introductory biology or preparing for life-science study",
+    "prerequisite": "High-school biology or equivalent readiness; foundational chemistry, algebra, graph interpretation, and scientific-writing fluency recommended",
+    "version": "1.0.0-foundation",
+    "credit_guidance": "Designed as a rigorous first-semester college biology course; institutional credit and transfer decisions remain with the receiving institution."
+  },
+  "units": [
+    {
+      "number": 1,
+      "title": "College Biology Readiness, Safety & Scientific Reasoning",
+      "essential": "How do safe practice, quantitative reasoning, uncertainty, experimental design, and scientific argument establish trustworthy biological evidence?",
+      "project": "Readiness Investigation & Evidence Defense",
+      "standards": [
+        "laboratory safety",
+        "variables and controls",
+        "measurement and uncertainty",
+        "graph and table interpretation",
+        "experimental design",
+        "CER and limitations",
+        "reproducibility"
+      ],
+      "weeks": 2,
+      "week_numbers": [
+        1,
+        2
+      ],
+      "lessons": [
+        {
+          "id": "u01-l01",
+          "number": 1,
+          "title": "Laboratory Safety, Risk & Responsible Investigation",
+          "week": 1,
+          "unit": 1,
+          "unit_title": "College Biology Readiness, Safety & Scientific Reasoning",
+          "essential": "How do safe practice, quantitative reasoning, uncertainty, experimental design, and scientific argument establish trustworthy biological evidence?",
+          "project": "Readiness Investigation & Evidence Defense",
+          "focus": "laboratory safety, risk & responsible investigation"
+        },
+        {
+          "id": "u01-l02",
+          "number": 2,
+          "title": "Variables, Controls & Experimental Logic",
+          "week": 1,
+          "unit": 1,
+          "unit_title": "College Biology Readiness, Safety & Scientific Reasoning",
+          "essential": "How do safe practice, quantitative reasoning, uncertainty, experimental design, and scientific argument establish trustworthy biological evidence?",
+          "project": "Readiness Investigation & Evidence Defense",
+          "focus": "variables, controls & experimental logic"
+        },
+        {
+          "id": "u01-l03",
+          "number": 3,
+          "title": "Measurement, Units & Biological Uncertainty",
+          "week": 1,
+          "unit": 1,
+          "unit_title": "College Biology Readiness, Safety & Scientific Reasoning",
+          "essential": "How do safe practice, quantitative reasoning, uncertainty, experimental design, and scientific argument establish trustworthy biological evidence?",
+          "project": "Readiness Investigation & Evidence Defense",
+          "focus": "measurement, units & biological uncertainty"
+        },
+        {
+          "id": "u01-l04",
+          "number": 4,
+          "title": "Graph Choice, Data Displays & Quantitative Claims",
+          "week": 1,
+          "unit": 1,
+          "unit_title": "College Biology Readiness, Safety & Scientific Reasoning",
+          "essential": "How do safe practice, quantitative reasoning, uncertainty, experimental design, and scientific argument establish trustworthy biological evidence?",
+          "project": "Readiness Investigation & Evidence Defense",
+          "focus": "graph choice, data displays & quantitative claims"
+        },
+        {
+          "id": "u01-l05",
+          "number": 5,
+          "title": "Replication, Variation & Reproducibility",
+          "week": 2,
+          "unit": 1,
+          "unit_title": "College Biology Readiness, Safety & Scientific Reasoning",
+          "essential": "How do safe practice, quantitative reasoning, uncertainty, experimental design, and scientific argument establish trustworthy biological evidence?",
+          "project": "Readiness Investigation & Evidence Defense",
+          "focus": "replication, variation & reproducibility"
+        },
+        {
+          "id": "u01-l06",
+          "number": 6,
+          "title": "CER, Alternative Explanations & Limitations",
+          "week": 2,
+          "unit": 1,
+          "unit_title": "College Biology Readiness, Safety & Scientific Reasoning",
+          "essential": "How do safe practice, quantitative reasoning, uncertainty, experimental design, and scientific argument establish trustworthy biological evidence?",
+          "project": "Readiness Investigation & Evidence Defense",
+          "focus": "cer, alternative explanations & limitations"
+        },
+        {
+          "id": "u01-l07",
+          "number": 7,
+          "title": "Readiness Synthesis & Evidence Defense",
+          "week": 2,
+          "unit": 1,
+          "unit_title": "College Biology Readiness, Safety & Scientific Reasoning",
+          "essential": "How do safe practice, quantitative reasoning, uncertainty, experimental design, and scientific argument establish trustworthy biological evidence?",
+          "project": "Readiness Investigation & Evidence Defense",
+          "focus": "readiness synthesis & evidence defense"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Molecular Foundations of Life",
+      "essential": "How do water, carbon chemistry, macromolecular structure, and molecular interactions constrain biological function?",
+      "project": "Structure–Function Molecular Evidence Laboratory",
+      "standards": [
+        "water chemistry",
+        "carbon chemistry",
+        "macromolecules",
+        "molecular interactions",
+        "structure-function",
+        "pH and buffers",
+        "molecular evidence"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        3,
+        4,
+        5
+      ],
+      "lessons": [
+        {
+          "id": "u02-l01",
+          "number": 1,
+          "title": "Water, Polarity & Hydrogen Bonding",
+          "week": 3,
+          "unit": 2,
+          "unit_title": "Molecular Foundations of Life",
+          "essential": "How do water, carbon chemistry, macromolecular structure, and molecular interactions constrain biological function?",
+          "project": "Structure–Function Molecular Evidence Laboratory",
+          "focus": "water, polarity & hydrogen bonding"
+        },
+        {
+          "id": "u02-l02",
+          "number": 2,
+          "title": "Carbon Skeletons & Functional Groups",
+          "week": 3,
+          "unit": 2,
+          "unit_title": "Molecular Foundations of Life",
+          "essential": "How do water, carbon chemistry, macromolecular structure, and molecular interactions constrain biological function?",
+          "project": "Structure–Function Molecular Evidence Laboratory",
+          "focus": "carbon skeletons & functional groups"
+        },
+        {
+          "id": "u02-l03",
+          "number": 3,
+          "title": "Carbohydrates & Lipids",
+          "week": 3,
+          "unit": 2,
+          "unit_title": "Molecular Foundations of Life",
+          "essential": "How do water, carbon chemistry, macromolecular structure, and molecular interactions constrain biological function?",
+          "project": "Structure–Function Molecular Evidence Laboratory",
+          "focus": "carbohydrates & lipids"
+        },
+        {
+          "id": "u02-l04",
+          "number": 4,
+          "title": "Proteins, Folding & Molecular Function",
+          "week": 4,
+          "unit": 2,
+          "unit_title": "Molecular Foundations of Life",
+          "essential": "How do water, carbon chemistry, macromolecular structure, and molecular interactions constrain biological function?",
+          "project": "Structure–Function Molecular Evidence Laboratory",
+          "focus": "proteins, folding & molecular function"
+        },
+        {
+          "id": "u02-l05",
+          "number": 5,
+          "title": "Nucleic Acids & Information Molecules",
+          "week": 4,
+          "unit": 2,
+          "unit_title": "Molecular Foundations of Life",
+          "essential": "How do water, carbon chemistry, macromolecular structure, and molecular interactions constrain biological function?",
+          "project": "Structure–Function Molecular Evidence Laboratory",
+          "focus": "nucleic acids & information molecules"
+        },
+        {
+          "id": "u02-l06",
+          "number": 6,
+          "title": "pH, Buffers & Biological Conditions",
+          "week": 5,
+          "unit": 2,
+          "unit_title": "Molecular Foundations of Life",
+          "essential": "How do water, carbon chemistry, macromolecular structure, and molecular interactions constrain biological function?",
+          "project": "Structure–Function Molecular Evidence Laboratory",
+          "focus": "ph, buffers & biological conditions"
+        },
+        {
+          "id": "u02-l07",
+          "number": 7,
+          "title": "Molecular Structure–Function Investigation",
+          "week": 5,
+          "unit": 2,
+          "unit_title": "Molecular Foundations of Life",
+          "essential": "How do water, carbon chemistry, macromolecular structure, and molecular interactions constrain biological function?",
+          "project": "Structure–Function Molecular Evidence Laboratory",
+          "focus": "molecular structure–function investigation"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Cell Structure, Membranes & Microscopy",
+      "essential": "How do cellular structures, membranes, transport processes, and microscopy evidence explain organization and exchange in living systems?",
+      "project": "Microscopy, Membrane Transport & Scale Laboratory",
+      "standards": [
+        "cell theory",
+        "prokaryotic and eukaryotic organization",
+        "organelles",
+        "membrane structure",
+        "diffusion and osmosis",
+        "active transport",
+        "microscopy and scale"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        6,
+        7,
+        8
+      ],
+      "lessons": [
+        {
+          "id": "u03-l01",
+          "number": 1,
+          "title": "Cell Theory & Evidence Across Scales",
+          "week": 6,
+          "unit": 3,
+          "unit_title": "Cell Structure, Membranes & Microscopy",
+          "essential": "How do cellular structures, membranes, transport processes, and microscopy evidence explain organization and exchange in living systems?",
+          "project": "Microscopy, Membrane Transport & Scale Laboratory",
+          "focus": "cell theory & evidence across scales"
+        },
+        {
+          "id": "u03-l02",
+          "number": 2,
+          "title": "Prokaryotic and Eukaryotic Organization",
+          "week": 6,
+          "unit": 3,
+          "unit_title": "Cell Structure, Membranes & Microscopy",
+          "essential": "How do cellular structures, membranes, transport processes, and microscopy evidence explain organization and exchange in living systems?",
+          "project": "Microscopy, Membrane Transport & Scale Laboratory",
+          "focus": "prokaryotic and eukaryotic organization"
+        },
+        {
+          "id": "u03-l03",
+          "number": 3,
+          "title": "Organelles & Compartmentalization",
+          "week": 6,
+          "unit": 3,
+          "unit_title": "Cell Structure, Membranes & Microscopy",
+          "essential": "How do cellular structures, membranes, transport processes, and microscopy evidence explain organization and exchange in living systems?",
+          "project": "Microscopy, Membrane Transport & Scale Laboratory",
+          "focus": "organelles & compartmentalization"
+        },
+        {
+          "id": "u03-l04",
+          "number": 4,
+          "title": "Membrane Structure & Selective Permeability",
+          "week": 7,
+          "unit": 3,
+          "unit_title": "Cell Structure, Membranes & Microscopy",
+          "essential": "How do cellular structures, membranes, transport processes, and microscopy evidence explain organization and exchange in living systems?",
+          "project": "Microscopy, Membrane Transport & Scale Laboratory",
+          "focus": "membrane structure & selective permeability"
+        },
+        {
+          "id": "u03-l05",
+          "number": 5,
+          "title": "Diffusion, Osmosis & Water Potential Reasoning",
+          "week": 7,
+          "unit": 3,
+          "unit_title": "Cell Structure, Membranes & Microscopy",
+          "essential": "How do cellular structures, membranes, transport processes, and microscopy evidence explain organization and exchange in living systems?",
+          "project": "Microscopy, Membrane Transport & Scale Laboratory",
+          "focus": "diffusion, osmosis & water potential reasoning"
+        },
+        {
+          "id": "u03-l06",
+          "number": 6,
+          "title": "Active Transport & Membrane Gradients",
+          "week": 8,
+          "unit": 3,
+          "unit_title": "Cell Structure, Membranes & Microscopy",
+          "essential": "How do cellular structures, membranes, transport processes, and microscopy evidence explain organization and exchange in living systems?",
+          "project": "Microscopy, Membrane Transport & Scale Laboratory",
+          "focus": "active transport & membrane gradients"
+        },
+        {
+          "id": "u03-l07",
+          "number": 7,
+          "title": "Microscopy, Scale & Membrane Evidence Investigation",
+          "week": 8,
+          "unit": 3,
+          "unit_title": "Cell Structure, Membranes & Microscopy",
+          "essential": "How do cellular structures, membranes, transport processes, and microscopy evidence explain organization and exchange in living systems?",
+          "project": "Microscopy, Membrane Transport & Scale Laboratory",
+          "focus": "microscopy, scale & membrane evidence investigation"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Enzymes, Metabolism & Bioenergetics",
+      "essential": "How do enzymes, coupled reactions, ATP, and metabolic pathways control the rate and direction of cellular chemistry?",
+      "project": "Enzyme Kinetics & Metabolic Rate Laboratory",
+      "standards": [
+        "enzymes",
+        "activation energy",
+        "reaction rates",
+        "ATP coupling",
+        "redox",
+        "metabolic pathways",
+        "experimental kinetics"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        9,
+        10,
+        11
+      ],
+      "lessons": [
+        {
+          "id": "u04-l01",
+          "number": 1,
+          "title": "Enzymes & Activation-Energy Barriers",
+          "week": 9,
+          "unit": 4,
+          "unit_title": "Enzymes, Metabolism & Bioenergetics",
+          "essential": "How do enzymes, coupled reactions, ATP, and metabolic pathways control the rate and direction of cellular chemistry?",
+          "project": "Enzyme Kinetics & Metabolic Rate Laboratory",
+          "focus": "enzymes & activation-energy barriers"
+        },
+        {
+          "id": "u04-l02",
+          "number": 2,
+          "title": "Active Sites, Specificity & Molecular Conditions",
+          "week": 9,
+          "unit": 4,
+          "unit_title": "Enzymes, Metabolism & Bioenergetics",
+          "essential": "How do enzymes, coupled reactions, ATP, and metabolic pathways control the rate and direction of cellular chemistry?",
+          "project": "Enzyme Kinetics & Metabolic Rate Laboratory",
+          "focus": "active sites, specificity & molecular conditions"
+        },
+        {
+          "id": "u04-l03",
+          "number": 3,
+          "title": "Reaction Rates, Temperature, pH & Concentration",
+          "week": 9,
+          "unit": 4,
+          "unit_title": "Enzymes, Metabolism & Bioenergetics",
+          "essential": "How do enzymes, coupled reactions, ATP, and metabolic pathways control the rate and direction of cellular chemistry?",
+          "project": "Enzyme Kinetics & Metabolic Rate Laboratory",
+          "focus": "reaction rates, temperature, ph & concentration"
+        },
+        {
+          "id": "u04-l04",
+          "number": 4,
+          "title": "ATP, Energy Coupling & Cellular Work",
+          "week": 10,
+          "unit": 4,
+          "unit_title": "Enzymes, Metabolism & Bioenergetics",
+          "essential": "How do enzymes, coupled reactions, ATP, and metabolic pathways control the rate and direction of cellular chemistry?",
+          "project": "Enzyme Kinetics & Metabolic Rate Laboratory",
+          "focus": "atp, energy coupling & cellular work"
+        },
+        {
+          "id": "u04-l05",
+          "number": 5,
+          "title": "Oxidation–Reduction & Electron Transfer",
+          "week": 10,
+          "unit": 4,
+          "unit_title": "Enzymes, Metabolism & Bioenergetics",
+          "essential": "How do enzymes, coupled reactions, ATP, and metabolic pathways control the rate and direction of cellular chemistry?",
+          "project": "Enzyme Kinetics & Metabolic Rate Laboratory",
+          "focus": "oxidation–reduction & electron transfer"
+        },
+        {
+          "id": "u04-l06",
+          "number": 6,
+          "title": "Metabolic Pathways & Regulatory Logic",
+          "week": 11,
+          "unit": 4,
+          "unit_title": "Enzymes, Metabolism & Bioenergetics",
+          "essential": "How do enzymes, coupled reactions, ATP, and metabolic pathways control the rate and direction of cellular chemistry?",
+          "project": "Enzyme Kinetics & Metabolic Rate Laboratory",
+          "focus": "metabolic pathways & regulatory logic"
+        },
+        {
+          "id": "u04-l07",
+          "number": 7,
+          "title": "Enzyme Kinetics Investigation & Model Defense",
+          "week": 11,
+          "unit": 4,
+          "unit_title": "Enzymes, Metabolism & Bioenergetics",
+          "essential": "How do enzymes, coupled reactions, ATP, and metabolic pathways control the rate and direction of cellular chemistry?",
+          "project": "Enzyme Kinetics & Metabolic Rate Laboratory",
+          "focus": "enzyme kinetics investigation & model defense"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Photosynthesis, Respiration & Energy Transformation",
+      "essential": "How do photosynthesis and cellular respiration transform matter and energy while obeying conservation and system constraints?",
+      "project": "Cellular Energy & Gas-Exchange Investigation",
+      "standards": [
+        "photosynthesis",
+        "light reactions",
+        "carbon fixation",
+        "cellular respiration",
+        "fermentation",
+        "matter conservation",
+        "energy transformation"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        12,
+        13,
+        14
+      ],
+      "lessons": [
+        {
+          "id": "u05-l01",
+          "number": 1,
+          "title": "Photosynthetic Pigments & Light Capture",
+          "week": 12,
+          "unit": 5,
+          "unit_title": "Photosynthesis, Respiration & Energy Transformation",
+          "essential": "How do photosynthesis and cellular respiration transform matter and energy while obeying conservation and system constraints?",
+          "project": "Cellular Energy & Gas-Exchange Investigation",
+          "focus": "photosynthetic pigments & light capture"
+        },
+        {
+          "id": "u05-l02",
+          "number": 2,
+          "title": "Light Reactions & Chemiosmosis",
+          "week": 12,
+          "unit": 5,
+          "unit_title": "Photosynthesis, Respiration & Energy Transformation",
+          "essential": "How do photosynthesis and cellular respiration transform matter and energy while obeying conservation and system constraints?",
+          "project": "Cellular Energy & Gas-Exchange Investigation",
+          "focus": "light reactions & chemiosmosis"
+        },
+        {
+          "id": "u05-l03",
+          "number": 3,
+          "title": "Carbon Fixation & Biomass",
+          "week": 12,
+          "unit": 5,
+          "unit_title": "Photosynthesis, Respiration & Energy Transformation",
+          "essential": "How do photosynthesis and cellular respiration transform matter and energy while obeying conservation and system constraints?",
+          "project": "Cellular Energy & Gas-Exchange Investigation",
+          "focus": "carbon fixation & biomass"
+        },
+        {
+          "id": "u05-l04",
+          "number": 4,
+          "title": "Glycolysis & Pyruvate Processing",
+          "week": 13,
+          "unit": 5,
+          "unit_title": "Photosynthesis, Respiration & Energy Transformation",
+          "essential": "How do photosynthesis and cellular respiration transform matter and energy while obeying conservation and system constraints?",
+          "project": "Cellular Energy & Gas-Exchange Investigation",
+          "focus": "glycolysis & pyruvate processing"
+        },
+        {
+          "id": "u05-l05",
+          "number": 5,
+          "title": "Citric Acid Cycle & Oxidative Phosphorylation",
+          "week": 13,
+          "unit": 5,
+          "unit_title": "Photosynthesis, Respiration & Energy Transformation",
+          "essential": "How do photosynthesis and cellular respiration transform matter and energy while obeying conservation and system constraints?",
+          "project": "Cellular Energy & Gas-Exchange Investigation",
+          "focus": "citric acid cycle & oxidative phosphorylation"
+        },
+        {
+          "id": "u05-l06",
+          "number": 6,
+          "title": "Fermentation, Oxygen Limits & Metabolic Flexibility",
+          "week": 14,
+          "unit": 5,
+          "unit_title": "Photosynthesis, Respiration & Energy Transformation",
+          "essential": "How do photosynthesis and cellular respiration transform matter and energy while obeying conservation and system constraints?",
+          "project": "Cellular Energy & Gas-Exchange Investigation",
+          "focus": "fermentation, oxygen limits & metabolic flexibility"
+        },
+        {
+          "id": "u05-l07",
+          "number": 7,
+          "title": "Energy Transformation Investigation & Carbon Accounting",
+          "week": 14,
+          "unit": 5,
+          "unit_title": "Photosynthesis, Respiration & Energy Transformation",
+          "essential": "How do photosynthesis and cellular respiration transform matter and energy while obeying conservation and system constraints?",
+          "project": "Cellular Energy & Gas-Exchange Investigation",
+          "focus": "energy transformation investigation & carbon accounting"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Cell Communication, Homeostasis & Cell Cycle",
+      "essential": "How do signaling networks, feedback systems, and cell-cycle controls coordinate multicellular life and constrain disease mechanisms?",
+      "project": "Signaling, Feedback & Cell-Cycle Model Investigation",
+      "standards": [
+        "cell signaling",
+        "receptors",
+        "signal transduction",
+        "homeostasis",
+        "feedback",
+        "cell cycle",
+        "apoptosis and cancer models"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        15,
+        16,
+        17
+      ],
+      "lessons": [
+        {
+          "id": "u06-l01",
+          "number": 1,
+          "title": "Signals, Receptors & Specificity",
+          "week": 15,
+          "unit": 6,
+          "unit_title": "Cell Communication, Homeostasis & Cell Cycle",
+          "essential": "How do signaling networks, feedback systems, and cell-cycle controls coordinate multicellular life and constrain disease mechanisms?",
+          "project": "Signaling, Feedback & Cell-Cycle Model Investigation",
+          "focus": "signals, receptors & specificity"
+        },
+        {
+          "id": "u06-l02",
+          "number": 2,
+          "title": "Signal Transduction & Cellular Response",
+          "week": 15,
+          "unit": 6,
+          "unit_title": "Cell Communication, Homeostasis & Cell Cycle",
+          "essential": "How do signaling networks, feedback systems, and cell-cycle controls coordinate multicellular life and constrain disease mechanisms?",
+          "project": "Signaling, Feedback & Cell-Cycle Model Investigation",
+          "focus": "signal transduction & cellular response"
+        },
+        {
+          "id": "u06-l03",
+          "number": 3,
+          "title": "Negative Feedback & Homeostasis",
+          "week": 15,
+          "unit": 6,
+          "unit_title": "Cell Communication, Homeostasis & Cell Cycle",
+          "essential": "How do signaling networks, feedback systems, and cell-cycle controls coordinate multicellular life and constrain disease mechanisms?",
+          "project": "Signaling, Feedback & Cell-Cycle Model Investigation",
+          "focus": "negative feedback & homeostasis"
+        },
+        {
+          "id": "u06-l04",
+          "number": 4,
+          "title": "Positive Feedback & Biological Amplification",
+          "week": 16,
+          "unit": 6,
+          "unit_title": "Cell Communication, Homeostasis & Cell Cycle",
+          "essential": "How do signaling networks, feedback systems, and cell-cycle controls coordinate multicellular life and constrain disease mechanisms?",
+          "project": "Signaling, Feedback & Cell-Cycle Model Investigation",
+          "focus": "positive feedback & biological amplification"
+        },
+        {
+          "id": "u06-l05",
+          "number": 5,
+          "title": "Cell Cycle, Mitosis & Checkpoints",
+          "week": 16,
+          "unit": 6,
+          "unit_title": "Cell Communication, Homeostasis & Cell Cycle",
+          "essential": "How do signaling networks, feedback systems, and cell-cycle controls coordinate multicellular life and constrain disease mechanisms?",
+          "project": "Signaling, Feedback & Cell-Cycle Model Investigation",
+          "focus": "cell cycle, mitosis & checkpoints"
+        },
+        {
+          "id": "u06-l06",
+          "number": 6,
+          "title": "Apoptosis, Mutation & Cancer Models",
+          "week": 17,
+          "unit": 6,
+          "unit_title": "Cell Communication, Homeostasis & Cell Cycle",
+          "essential": "How do signaling networks, feedback systems, and cell-cycle controls coordinate multicellular life and constrain disease mechanisms?",
+          "project": "Signaling, Feedback & Cell-Cycle Model Investigation",
+          "focus": "apoptosis, mutation & cancer models"
+        },
+        {
+          "id": "u06-l07",
+          "number": 7,
+          "title": "Systems Regulation Investigation & Model Limits",
+          "week": 17,
+          "unit": 6,
+          "unit_title": "Cell Communication, Homeostasis & Cell Cycle",
+          "essential": "How do signaling networks, feedback systems, and cell-cycle controls coordinate multicellular life and constrain disease mechanisms?",
+          "project": "Signaling, Feedback & Cell-Cycle Model Investigation",
+          "focus": "systems regulation investigation & model limits"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Meiosis, Mendelian Genetics & Quantitative Inheritance",
+      "essential": "How do meiosis, segregation, probability, and statistical evidence explain inheritance while preserving uncertainty in biological prediction?",
+      "project": "Inheritance Probability & Pedigree Evidence Laboratory",
+      "standards": [
+        "meiosis",
+        "crossing over",
+        "segregation",
+        "Mendelian inheritance",
+        "probability",
+        "pedigrees",
+        "chi-square reasoning"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        18,
+        19,
+        20
+      ],
+      "lessons": [
+        {
+          "id": "u07-l01",
+          "number": 1,
+          "title": "Midterm Synthesis, Corrections & Genetics Bridge",
+          "week": 18,
+          "unit": 7,
+          "unit_title": "Meiosis, Mendelian Genetics & Quantitative Inheritance",
+          "essential": "How do meiosis, segregation, probability, and statistical evidence explain inheritance while preserving uncertainty in biological prediction?",
+          "project": "Inheritance Probability & Pedigree Evidence Laboratory",
+          "focus": "midterm synthesis, corrections & genetics bridge"
+        },
+        {
+          "id": "u07-l02",
+          "number": 2,
+          "title": "Meiosis & Chromosome Behavior",
+          "week": 18,
+          "unit": 7,
+          "unit_title": "Meiosis, Mendelian Genetics & Quantitative Inheritance",
+          "essential": "How do meiosis, segregation, probability, and statistical evidence explain inheritance while preserving uncertainty in biological prediction?",
+          "project": "Inheritance Probability & Pedigree Evidence Laboratory",
+          "focus": "meiosis & chromosome behavior"
+        },
+        {
+          "id": "u07-l03",
+          "number": 3,
+          "title": "Crossing Over & Independent Assortment",
+          "week": 18,
+          "unit": 7,
+          "unit_title": "Meiosis, Mendelian Genetics & Quantitative Inheritance",
+          "essential": "How do meiosis, segregation, probability, and statistical evidence explain inheritance while preserving uncertainty in biological prediction?",
+          "project": "Inheritance Probability & Pedigree Evidence Laboratory",
+          "focus": "crossing over & independent assortment"
+        },
+        {
+          "id": "u07-l04",
+          "number": 4,
+          "title": "Alleles, Genotypes & Phenotypes",
+          "week": 19,
+          "unit": 7,
+          "unit_title": "Meiosis, Mendelian Genetics & Quantitative Inheritance",
+          "essential": "How do meiosis, segregation, probability, and statistical evidence explain inheritance while preserving uncertainty in biological prediction?",
+          "project": "Inheritance Probability & Pedigree Evidence Laboratory",
+          "focus": "alleles, genotypes & phenotypes"
+        },
+        {
+          "id": "u07-l05",
+          "number": 5,
+          "title": "Probability Models & Punnett Reasoning",
+          "week": 19,
+          "unit": 7,
+          "unit_title": "Meiosis, Mendelian Genetics & Quantitative Inheritance",
+          "essential": "How do meiosis, segregation, probability, and statistical evidence explain inheritance while preserving uncertainty in biological prediction?",
+          "project": "Inheritance Probability & Pedigree Evidence Laboratory",
+          "focus": "probability models & punnett reasoning"
+        },
+        {
+          "id": "u07-l06",
+          "number": 6,
+          "title": "Pedigrees, Sex Linkage & Statistical Evidence",
+          "week": 20,
+          "unit": 7,
+          "unit_title": "Meiosis, Mendelian Genetics & Quantitative Inheritance",
+          "essential": "How do meiosis, segregation, probability, and statistical evidence explain inheritance while preserving uncertainty in biological prediction?",
+          "project": "Inheritance Probability & Pedigree Evidence Laboratory",
+          "focus": "pedigrees, sex linkage & statistical evidence"
+        },
+        {
+          "id": "u07-l07",
+          "number": 7,
+          "title": "Inheritance Investigation & Chi-Square Reasoning",
+          "week": 20,
+          "unit": 7,
+          "unit_title": "Meiosis, Mendelian Genetics & Quantitative Inheritance",
+          "essential": "How do meiosis, segregation, probability, and statistical evidence explain inheritance while preserving uncertainty in biological prediction?",
+          "project": "Inheritance Probability & Pedigree Evidence Laboratory",
+          "focus": "inheritance investigation & chi-square reasoning"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "DNA Replication, Gene Expression & Regulation",
+      "essential": "How does molecular information move from DNA replication through gene expression, and how is that flow regulated in cells?",
+      "project": "Gene Expression & Regulation Evidence Laboratory",
+      "standards": [
+        "DNA structure",
+        "replication",
+        "transcription",
+        "RNA processing",
+        "translation",
+        "gene regulation",
+        "mutation and expression"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        21,
+        22,
+        23
+      ],
+      "lessons": [
+        {
+          "id": "u08-l01",
+          "number": 1,
+          "title": "DNA Structure, Antiparallel Strands & Base Pairing",
+          "week": 21,
+          "unit": 8,
+          "unit_title": "DNA Replication, Gene Expression & Regulation",
+          "essential": "How does molecular information move from DNA replication through gene expression, and how is that flow regulated in cells?",
+          "project": "Gene Expression & Regulation Evidence Laboratory",
+          "focus": "dna structure, antiparallel strands & base pairing"
+        },
+        {
+          "id": "u08-l02",
+          "number": 2,
+          "title": "Semiconservative DNA Replication",
+          "week": 21,
+          "unit": 8,
+          "unit_title": "DNA Replication, Gene Expression & Regulation",
+          "essential": "How does molecular information move from DNA replication through gene expression, and how is that flow regulated in cells?",
+          "project": "Gene Expression & Regulation Evidence Laboratory",
+          "focus": "semiconservative dna replication"
+        },
+        {
+          "id": "u08-l03",
+          "number": 3,
+          "title": "Transcription & RNA Processing",
+          "week": 21,
+          "unit": 8,
+          "unit_title": "DNA Replication, Gene Expression & Regulation",
+          "essential": "How does molecular information move from DNA replication through gene expression, and how is that flow regulated in cells?",
+          "project": "Gene Expression & Regulation Evidence Laboratory",
+          "focus": "transcription & rna processing"
+        },
+        {
+          "id": "u08-l04",
+          "number": 4,
+          "title": "Translation, Codons & Protein Synthesis",
+          "week": 22,
+          "unit": 8,
+          "unit_title": "DNA Replication, Gene Expression & Regulation",
+          "essential": "How does molecular information move from DNA replication through gene expression, and how is that flow regulated in cells?",
+          "project": "Gene Expression & Regulation Evidence Laboratory",
+          "focus": "translation, codons & protein synthesis"
+        },
+        {
+          "id": "u08-l05",
+          "number": 5,
+          "title": "Mutation Types & Molecular Consequences",
+          "week": 22,
+          "unit": 8,
+          "unit_title": "DNA Replication, Gene Expression & Regulation",
+          "essential": "How does molecular information move from DNA replication through gene expression, and how is that flow regulated in cells?",
+          "project": "Gene Expression & Regulation Evidence Laboratory",
+          "focus": "mutation types & molecular consequences"
+        },
+        {
+          "id": "u08-l06",
+          "number": 6,
+          "title": "Promoters, Transcription Factors & Regulatory Networks",
+          "week": 23,
+          "unit": 8,
+          "unit_title": "DNA Replication, Gene Expression & Regulation",
+          "essential": "How does molecular information move from DNA replication through gene expression, and how is that flow regulated in cells?",
+          "project": "Gene Expression & Regulation Evidence Laboratory",
+          "focus": "promoters, transcription factors & regulatory networks"
+        },
+        {
+          "id": "u08-l07",
+          "number": 7,
+          "title": "Gene Expression Investigation & Evidence Defense",
+          "week": 23,
+          "unit": 8,
+          "unit_title": "DNA Replication, Gene Expression & Regulation",
+          "essential": "How does molecular information move from DNA replication through gene expression, and how is that flow regulated in cells?",
+          "project": "Gene Expression & Regulation Evidence Laboratory",
+          "focus": "gene expression investigation & evidence defense"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Genomics, Biotechnology & Bioethics",
+      "essential": "How can molecular tools measure, amplify, sequence, compare, and edit biological information, and what evidentiary and ethical limits govern their use?",
+      "project": "PCR, Electrophoresis & Genomic Evidence Laboratory",
+      "standards": [
+        "PCR",
+        "electrophoresis",
+        "sequencing",
+        "genomics",
+        "CRISPR concepts",
+        "controls and contamination",
+        "bioethics and privacy"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        24,
+        25,
+        26
+      ],
+      "lessons": [
+        {
+          "id": "u09-l01",
+          "number": 1,
+          "title": "PCR Logic, Primers & Amplification",
+          "week": 24,
+          "unit": 9,
+          "unit_title": "Genomics, Biotechnology & Bioethics",
+          "essential": "How can molecular tools measure, amplify, sequence, compare, and edit biological information, and what evidentiary and ethical limits govern their use?",
+          "project": "PCR, Electrophoresis & Genomic Evidence Laboratory",
+          "focus": "pcr logic, primers & amplification"
+        },
+        {
+          "id": "u09-l02",
+          "number": 2,
+          "title": "Gel Electrophoresis & Molecular Separation",
+          "week": 24,
+          "unit": 9,
+          "unit_title": "Genomics, Biotechnology & Bioethics",
+          "essential": "How can molecular tools measure, amplify, sequence, compare, and edit biological information, and what evidentiary and ethical limits govern their use?",
+          "project": "PCR, Electrophoresis & Genomic Evidence Laboratory",
+          "focus": "gel electrophoresis & molecular separation"
+        },
+        {
+          "id": "u09-l03",
+          "number": 3,
+          "title": "DNA Sequencing & Genomic Comparison",
+          "week": 24,
+          "unit": 9,
+          "unit_title": "Genomics, Biotechnology & Bioethics",
+          "essential": "How can molecular tools measure, amplify, sequence, compare, and edit biological information, and what evidentiary and ethical limits govern their use?",
+          "project": "PCR, Electrophoresis & Genomic Evidence Laboratory",
+          "focus": "dna sequencing & genomic comparison"
+        },
+        {
+          "id": "u09-l04",
+          "number": 4,
+          "title": "Genomics, Databases & Biological Inference",
+          "week": 25,
+          "unit": 9,
+          "unit_title": "Genomics, Biotechnology & Bioethics",
+          "essential": "How can molecular tools measure, amplify, sequence, compare, and edit biological information, and what evidentiary and ethical limits govern their use?",
+          "project": "PCR, Electrophoresis & Genomic Evidence Laboratory",
+          "focus": "genomics, databases & biological inference"
+        },
+        {
+          "id": "u09-l05",
+          "number": 5,
+          "title": "CRISPR Concepts & Gene Editing Boundaries",
+          "week": 25,
+          "unit": 9,
+          "unit_title": "Genomics, Biotechnology & Bioethics",
+          "essential": "How can molecular tools measure, amplify, sequence, compare, and edit biological information, and what evidentiary and ethical limits govern their use?",
+          "project": "PCR, Electrophoresis & Genomic Evidence Laboratory",
+          "focus": "crispr concepts & gene editing boundaries"
+        },
+        {
+          "id": "u09-l06",
+          "number": 6,
+          "title": "Consent, Privacy & Biotechnology Ethics",
+          "week": 26,
+          "unit": 9,
+          "unit_title": "Genomics, Biotechnology & Bioethics",
+          "essential": "How can molecular tools measure, amplify, sequence, compare, and edit biological information, and what evidentiary and ethical limits govern their use?",
+          "project": "PCR, Electrophoresis & Genomic Evidence Laboratory",
+          "focus": "consent, privacy & biotechnology ethics"
+        },
+        {
+          "id": "u09-l07",
+          "number": 7,
+          "title": "Biotechnology Evidence Investigation & Chain of Custody",
+          "week": 26,
+          "unit": 9,
+          "unit_title": "Genomics, Biotechnology & Bioethics",
+          "essential": "How can molecular tools measure, amplify, sequence, compare, and edit biological information, and what evidentiary and ethical limits govern their use?",
+          "project": "PCR, Electrophoresis & Genomic Evidence Laboratory",
+          "focus": "biotechnology evidence investigation & chain of custody"
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Evolution, Population Genetics & Phylogeny",
+      "essential": "How do mutation, selection, drift, gene flow, and multiple evidence streams explain population change and common ancestry?",
+      "project": "Population Change & Phylogenetic Evidence Laboratory",
+      "standards": [
+        "evolutionary evidence",
+        "allele frequency",
+        "natural selection",
+        "genetic drift",
+        "gene flow",
+        "speciation",
+        "phylogeny"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        27,
+        28,
+        29
+      ],
+      "lessons": [
+        {
+          "id": "u10-l01",
+          "number": 1,
+          "title": "Lines of Evidence for Evolutionary Change",
+          "week": 27,
+          "unit": 10,
+          "unit_title": "Evolution, Population Genetics & Phylogeny",
+          "essential": "How do mutation, selection, drift, gene flow, and multiple evidence streams explain population change and common ancestry?",
+          "project": "Population Change & Phylogenetic Evidence Laboratory",
+          "focus": "lines of evidence for evolutionary change"
+        },
+        {
+          "id": "u10-l02",
+          "number": 2,
+          "title": "Allele Frequencies & Population Variation",
+          "week": 27,
+          "unit": 10,
+          "unit_title": "Evolution, Population Genetics & Phylogeny",
+          "essential": "How do mutation, selection, drift, gene flow, and multiple evidence streams explain population change and common ancestry?",
+          "project": "Population Change & Phylogenetic Evidence Laboratory",
+          "focus": "allele frequencies & population variation"
+        },
+        {
+          "id": "u10-l03",
+          "number": 3,
+          "title": "Natural Selection & Fitness",
+          "week": 27,
+          "unit": 10,
+          "unit_title": "Evolution, Population Genetics & Phylogeny",
+          "essential": "How do mutation, selection, drift, gene flow, and multiple evidence streams explain population change and common ancestry?",
+          "project": "Population Change & Phylogenetic Evidence Laboratory",
+          "focus": "natural selection & fitness"
+        },
+        {
+          "id": "u10-l04",
+          "number": 4,
+          "title": "Genetic Drift, Bottlenecks & Founder Effects",
+          "week": 28,
+          "unit": 10,
+          "unit_title": "Evolution, Population Genetics & Phylogeny",
+          "essential": "How do mutation, selection, drift, gene flow, and multiple evidence streams explain population change and common ancestry?",
+          "project": "Population Change & Phylogenetic Evidence Laboratory",
+          "focus": "genetic drift, bottlenecks & founder effects"
+        },
+        {
+          "id": "u10-l05",
+          "number": 5,
+          "title": "Gene Flow, Mutation & Population Structure",
+          "week": 28,
+          "unit": 10,
+          "unit_title": "Evolution, Population Genetics & Phylogeny",
+          "essential": "How do mutation, selection, drift, gene flow, and multiple evidence streams explain population change and common ancestry?",
+          "project": "Population Change & Phylogenetic Evidence Laboratory",
+          "focus": "gene flow, mutation & population structure"
+        },
+        {
+          "id": "u10-l06",
+          "number": 6,
+          "title": "Speciation & Reproductive Isolation",
+          "week": 29,
+          "unit": 10,
+          "unit_title": "Evolution, Population Genetics & Phylogeny",
+          "essential": "How do mutation, selection, drift, gene flow, and multiple evidence streams explain population change and common ancestry?",
+          "project": "Population Change & Phylogenetic Evidence Laboratory",
+          "focus": "speciation & reproductive isolation"
+        },
+        {
+          "id": "u10-l07",
+          "number": 7,
+          "title": "Phylogenetic Analysis & Evidence Limits",
+          "week": 29,
+          "unit": 10,
+          "unit_title": "Evolution, Population Genetics & Phylogeny",
+          "essential": "How do mutation, selection, drift, gene flow, and multiple evidence streams explain population change and common ancestry?",
+          "project": "Population Change & Phylogenetic Evidence Laboratory",
+          "focus": "phylogenetic analysis & evidence limits"
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Ecology, Population Dynamics & Biogeochemical Systems",
+      "essential": "How do energy flow, population regulation, species interactions, and biogeochemical cycles produce ecosystem patterns and resilience?",
+      "project": "Ecosystem Systems & Population Data Laboratory",
+      "standards": [
+        "energy flow",
+        "population models",
+        "community interactions",
+        "biodiversity",
+        "carbon cycle",
+        "nitrogen cycle",
+        "ecosystem resilience"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        30,
+        31,
+        32
+      ],
+      "lessons": [
+        {
+          "id": "u11-l01",
+          "number": 1,
+          "title": "Energy Flow, Trophic Structure & Productivity",
+          "week": 30,
+          "unit": 11,
+          "unit_title": "Ecology, Population Dynamics & Biogeochemical Systems",
+          "essential": "How do energy flow, population regulation, species interactions, and biogeochemical cycles produce ecosystem patterns and resilience?",
+          "project": "Ecosystem Systems & Population Data Laboratory",
+          "focus": "energy flow, trophic structure & productivity"
+        },
+        {
+          "id": "u11-l02",
+          "number": 2,
+          "title": "Exponential and Logistic Population Models",
+          "week": 30,
+          "unit": 11,
+          "unit_title": "Ecology, Population Dynamics & Biogeochemical Systems",
+          "essential": "How do energy flow, population regulation, species interactions, and biogeochemical cycles produce ecosystem patterns and resilience?",
+          "project": "Ecosystem Systems & Population Data Laboratory",
+          "focus": "exponential and logistic population models"
+        },
+        {
+          "id": "u11-l03",
+          "number": 3,
+          "title": "Competition, Predation & Community Interactions",
+          "week": 30,
+          "unit": 11,
+          "unit_title": "Ecology, Population Dynamics & Biogeochemical Systems",
+          "essential": "How do energy flow, population regulation, species interactions, and biogeochemical cycles produce ecosystem patterns and resilience?",
+          "project": "Ecosystem Systems & Population Data Laboratory",
+          "focus": "competition, predation & community interactions"
+        },
+        {
+          "id": "u11-l04",
+          "number": 4,
+          "title": "Succession, Biodiversity & Resilience",
+          "week": 31,
+          "unit": 11,
+          "unit_title": "Ecology, Population Dynamics & Biogeochemical Systems",
+          "essential": "How do energy flow, population regulation, species interactions, and biogeochemical cycles produce ecosystem patterns and resilience?",
+          "project": "Ecosystem Systems & Population Data Laboratory",
+          "focus": "succession, biodiversity & resilience"
+        },
+        {
+          "id": "u11-l05",
+          "number": 5,
+          "title": "Carbon Cycling & Reservoirs",
+          "week": 31,
+          "unit": 11,
+          "unit_title": "Ecology, Population Dynamics & Biogeochemical Systems",
+          "essential": "How do energy flow, population regulation, species interactions, and biogeochemical cycles produce ecosystem patterns and resilience?",
+          "project": "Ecosystem Systems & Population Data Laboratory",
+          "focus": "carbon cycling & reservoirs"
+        },
+        {
+          "id": "u11-l06",
+          "number": 6,
+          "title": "Nitrogen Cycling, Nutrients & Human Impacts",
+          "week": 32,
+          "unit": 11,
+          "unit_title": "Ecology, Population Dynamics & Biogeochemical Systems",
+          "essential": "How do energy flow, population regulation, species interactions, and biogeochemical cycles produce ecosystem patterns and resilience?",
+          "project": "Ecosystem Systems & Population Data Laboratory",
+          "focus": "nitrogen cycling, nutrients & human impacts"
+        },
+        {
+          "id": "u11-l07",
+          "number": 7,
+          "title": "Ecosystem Data Investigation & Systems Model",
+          "week": 32,
+          "unit": 11,
+          "unit_title": "Ecology, Population Dynamics & Biogeochemical Systems",
+          "essential": "How do energy flow, population regulation, species interactions, and biogeochemical cycles produce ecosystem patterns and resilience?",
+          "project": "Ecosystem Systems & Population Data Laboratory",
+          "focus": "ecosystem data investigation & systems model"
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Physiology, Systems Integration & Comparative Biology",
+      "essential": "How do cells, tissues, organs, and feedback networks integrate transport, exchange, signaling, and regulation across organisms?",
+      "project": "Comparative Physiology & Homeostatic Systems Investigation",
+      "standards": [
+        "tissues and organs",
+        "transport systems",
+        "gas exchange",
+        "osmoregulation",
+        "neural/endocrine integration",
+        "immune defense",
+        "comparative physiology"
+      ],
+      "weeks": 2,
+      "week_numbers": [
+        33,
+        34
+      ],
+      "lessons": [
+        {
+          "id": "u12-l01",
+          "number": 1,
+          "title": "Tissues, Organs & Functional Integration",
+          "week": 33,
+          "unit": 12,
+          "unit_title": "Physiology, Systems Integration & Comparative Biology",
+          "essential": "How do cells, tissues, organs, and feedback networks integrate transport, exchange, signaling, and regulation across organisms?",
+          "project": "Comparative Physiology & Homeostatic Systems Investigation",
+          "focus": "tissues, organs & functional integration"
+        },
+        {
+          "id": "u12-l02",
+          "number": 2,
+          "title": "Transport Systems & Exchange Surfaces",
+          "week": 33,
+          "unit": 12,
+          "unit_title": "Physiology, Systems Integration & Comparative Biology",
+          "essential": "How do cells, tissues, organs, and feedback networks integrate transport, exchange, signaling, and regulation across organisms?",
+          "project": "Comparative Physiology & Homeostatic Systems Investigation",
+          "focus": "transport systems & exchange surfaces"
+        },
+        {
+          "id": "u12-l03",
+          "number": 3,
+          "title": "Gas Exchange & Oxygen Transport",
+          "week": 33,
+          "unit": 12,
+          "unit_title": "Physiology, Systems Integration & Comparative Biology",
+          "essential": "How do cells, tissues, organs, and feedback networks integrate transport, exchange, signaling, and regulation across organisms?",
+          "project": "Comparative Physiology & Homeostatic Systems Investigation",
+          "focus": "gas exchange & oxygen transport"
+        },
+        {
+          "id": "u12-l04",
+          "number": 4,
+          "title": "Osmoregulation & Water Balance",
+          "week": 33,
+          "unit": 12,
+          "unit_title": "Physiology, Systems Integration & Comparative Biology",
+          "essential": "How do cells, tissues, organs, and feedback networks integrate transport, exchange, signaling, and regulation across organisms?",
+          "project": "Comparative Physiology & Homeostatic Systems Investigation",
+          "focus": "osmoregulation & water balance"
+        },
+        {
+          "id": "u12-l05",
+          "number": 5,
+          "title": "Neural and Endocrine Coordination",
+          "week": 34,
+          "unit": 12,
+          "unit_title": "Physiology, Systems Integration & Comparative Biology",
+          "essential": "How do cells, tissues, organs, and feedback networks integrate transport, exchange, signaling, and regulation across organisms?",
+          "project": "Comparative Physiology & Homeostatic Systems Investigation",
+          "focus": "neural and endocrine coordination"
+        },
+        {
+          "id": "u12-l06",
+          "number": 6,
+          "title": "Immune Defense & Biological Recognition",
+          "week": 34,
+          "unit": 12,
+          "unit_title": "Physiology, Systems Integration & Comparative Biology",
+          "essential": "How do cells, tissues, organs, and feedback networks integrate transport, exchange, signaling, and regulation across organisms?",
+          "project": "Comparative Physiology & Homeostatic Systems Investigation",
+          "focus": "immune defense & biological recognition"
+        },
+        {
+          "id": "u12-l07",
+          "number": 7,
+          "title": "Comparative Physiology Investigation & Systems Defense",
+          "week": 34,
+          "unit": 12,
+          "unit_title": "Physiology, Systems Integration & Comparative Biology",
+          "essential": "How do cells, tissues, organs, and feedback networks integrate transport, exchange, signaling, and regulation across organisms?",
+          "project": "Comparative Physiology & Homeostatic Systems Investigation",
+          "focus": "comparative physiology investigation & systems defense"
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Independent Biological Research, Reproducibility & Capstone Defense",
+      "essential": "How does a biologist design, execute, analyze, revise, and defend an investigation whose claims remain proportional to the evidence?",
+      "project": "BIO 101 Independent Research Capstone & Oral Defense",
+      "standards": [
+        "research question",
+        "literature and source evaluation",
+        "experimental design",
+        "data analysis",
+        "uncertainty",
+        "reproducibility",
+        "scientific communication",
+        "research ethics"
+      ],
+      "weeks": 2,
+      "week_numbers": [
+        35,
+        36
+      ],
+      "lessons": [
+        {
+          "id": "u13-l01",
+          "number": 1,
+          "title": "Research Question, Scope & Literature Triage",
+          "week": 35,
+          "unit": 13,
+          "unit_title": "Independent Biological Research, Reproducibility & Capstone Defense",
+          "essential": "How does a biologist design, execute, analyze, revise, and defend an investigation whose claims remain proportional to the evidence?",
+          "project": "BIO 101 Independent Research Capstone & Oral Defense",
+          "focus": "research question, scope & literature triage"
+        },
+        {
+          "id": "u13-l02",
+          "number": 2,
+          "title": "Hypotheses, Predictions & Operational Definitions",
+          "week": 35,
+          "unit": 13,
+          "unit_title": "Independent Biological Research, Reproducibility & Capstone Defense",
+          "essential": "How does a biologist design, execute, analyze, revise, and defend an investigation whose claims remain proportional to the evidence?",
+          "project": "BIO 101 Independent Research Capstone & Oral Defense",
+          "focus": "hypotheses, predictions & operational definitions"
+        },
+        {
+          "id": "u13-l03",
+          "number": 3,
+          "title": "Experimental Design, Controls & Replication",
+          "week": 35,
+          "unit": 13,
+          "unit_title": "Independent Biological Research, Reproducibility & Capstone Defense",
+          "essential": "How does a biologist design, execute, analyze, revise, and defend an investigation whose claims remain proportional to the evidence?",
+          "project": "BIO 101 Independent Research Capstone & Oral Defense",
+          "focus": "experimental design, controls & replication"
+        },
+        {
+          "id": "u13-l04",
+          "number": 4,
+          "title": "Data Analysis, Effect Size & Uncertainty",
+          "week": 35,
+          "unit": 13,
+          "unit_title": "Independent Biological Research, Reproducibility & Capstone Defense",
+          "essential": "How does a biologist design, execute, analyze, revise, and defend an investigation whose claims remain proportional to the evidence?",
+          "project": "BIO 101 Independent Research Capstone & Oral Defense",
+          "focus": "data analysis, effect size & uncertainty"
+        },
+        {
+          "id": "u13-l05",
+          "number": 5,
+          "title": "Reproducibility, Null Results & Revision",
+          "week": 36,
+          "unit": 13,
+          "unit_title": "Independent Biological Research, Reproducibility & Capstone Defense",
+          "essential": "How does a biologist design, execute, analyze, revise, and defend an investigation whose claims remain proportional to the evidence?",
+          "project": "BIO 101 Independent Research Capstone & Oral Defense",
+          "focus": "reproducibility, null results & revision"
+        },
+        {
+          "id": "u13-l06",
+          "number": 6,
+          "title": "Scientific Figures, Abstracts & Formal Reporting",
+          "week": 36,
+          "unit": 13,
+          "unit_title": "Independent Biological Research, Reproducibility & Capstone Defense",
+          "essential": "How does a biologist design, execute, analyze, revise, and defend an investigation whose claims remain proportional to the evidence?",
+          "project": "BIO 101 Independent Research Capstone & Oral Defense",
+          "focus": "scientific figures, abstracts & formal reporting"
+        },
+        {
+          "id": "u13-l07",
+          "number": 7,
+          "title": "Peer Review, Limitations & Research Ethics",
+          "week": 36,
+          "unit": 13,
+          "unit_title": "Independent Biological Research, Reproducibility & Capstone Defense",
+          "essential": "How does a biologist design, execute, analyze, revise, and defend an investigation whose claims remain proportional to the evidence?",
+          "project": "BIO 101 Independent Research Capstone & Oral Defense",
+          "focus": "peer review, limitations & research ethics"
+        },
+        {
+          "id": "u13-l08",
+          "number": 8,
+          "title": "Capstone Portfolio, Oral Defense & BIO 102 Bridge",
+          "week": 36,
+          "unit": 13,
+          "unit_title": "Independent Biological Research, Reproducibility & Capstone Defense",
+          "essential": "How does a biologist design, execute, analyze, revise, and defend an investigation whose claims remain proportional to the evidence?",
+          "project": "BIO 101 Independent Research Capstone & Oral Defense",
+          "focus": "capstone portfolio, oral defense & bio 102 bridge"
+        }
+      ]
+    }
   ]
 }
