@@ -1,0 +1,10 @@
+{
+  "name": "Khaemenes Higher Learning BIO 101",
+  "short_name": "BIO 101",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#07111d",
+  "theme_color": "#081421",
+  "description": "General Biology I at Khaemenes Higher Learning"
+}
