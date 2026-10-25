@@ -1,0 +1,89 @@
+{
+  "schema": "khaemenes-bio101-unit-map-v1",
+  "course": "BIO 101",
+  "unit": 13,
+  "title": "Independent Biological Research, Reproducibility & Capstone Defense",
+  "weeks": [
+    35,
+    36
+  ],
+  "essential": "How does a biologist design, execute, analyze, revise, and defend an investigation whose claims remain proportional to the evidence?",
+  "investigation": "BIO 101 Independent Research Capstone & Oral Defense",
+  "standards": [
+    "research question",
+    "literature and source evaluation",
+    "experimental design",
+    "data analysis",
+    "uncertainty",
+    "reproducibility",
+    "scientific communication",
+    "research ethics"
+  ],
+  "lesson_count": 8,
+  "lessons": [
+    {
+      "id": "u13-l01",
+      "number": 1,
+      "title": "Research Question, Scope & Literature Triage",
+      "week": 35,
+      "focus": "research question, scope & literature triage"
+    },
+    {
+      "id": "u13-l02",
+      "number": 2,
+      "title": "Hypotheses, Predictions & Operational Definitions",
+      "week": 35,
+      "focus": "hypotheses, predictions & operational definitions"
+    },
+    {
+      "id": "u13-l03",
+      "number": 3,
+      "title": "Experimental Design, Controls & Replication",
+      "week": 35,
+      "focus": "experimental design, controls & replication"
+    },
+    {
+      "id": "u13-l04",
+      "number": 4,
+      "title": "Data Analysis, Effect Size & Uncertainty",
+      "week": 35,
+      "focus": "data analysis, effect size & uncertainty"
+    },
+    {
+      "id": "u13-l05",
+      "number": 5,
+      "title": "Reproducibility, Null Results & Revision",
+      "week": 36,
+      "focus": "reproducibility, null results & revision"
+    },
+    {
+      "id": "u13-l06",
+      "number": 6,
+      "title": "Scientific Figures, Abstracts & Formal Reporting",
+      "week": 36,
+      "focus": "scientific figures, abstracts & formal reporting"
+    },
+    {
+      "id": "u13-l07",
+      "number": 7,
+      "title": "Peer Review, Limitations & Research Ethics",
+      "week": 36,
+      "focus": "peer review, limitations & research ethics"
+    },
+    {
+      "id": "u13-l08",
+      "number": 8,
+      "title": "Capstone Portfolio, Oral Defense & BIO 102 Bridge",
+      "week": 36,
+      "focus": "capstone portfolio, oral defense & bio 102 bridge"
+    }
+  ],
+  "mastery": {
+    "target": 80,
+    "questions": 10,
+    "open_book": true,
+    "randomized": true,
+    "retake_fresh_form": true
+  },
+  "status": "architecture-locked-lessons-pending"
+}
