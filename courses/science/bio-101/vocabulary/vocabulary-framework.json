@@ -1,0 +1,31 @@
+{
+  "schema": "khaemenes-bio101-vocabulary-framework-v1",
+  "course": "BIO 101",
+  "storage_key": "khaemenes-bio101-vocabulary-v1",
+  "weekly_target": 6,
+  "duration_weeks": 36,
+  "placement_target": 216,
+  "practice_only": true,
+  "required_fields": [
+    "term",
+    "definition",
+    "week",
+    "unit",
+    "context",
+    "applicationPrompt",
+    "reviewStatus"
+  ],
+  "review_states": [
+    "editorial-draft",
+    "faculty-reviewed",
+    "released"
+  ],
+  "integration": [
+    "lesson launch",
+    "laboratory notebook",
+    "weekly formative practice",
+    "assessment feedback",
+    "portfolio search"
+  ],
+  "rule": "Vocabulary practice is formative and does not independently satisfy official unit mastery."
+}
