@@ -1,0 +1,82 @@
+{
+  "schema": "khaemenes-bio101-unit-map-v1",
+  "course": "BIO 101",
+  "unit": 8,
+  "title": "DNA Replication, Gene Expression & Regulation",
+  "weeks": [
+    21,
+    22,
+    23
+  ],
+  "essential": "How does molecular information move from DNA replication through gene expression, and how is that flow regulated in cells?",
+  "investigation": "Gene Expression & Regulation Evidence Laboratory",
+  "standards": [
+    "DNA structure",
+    "replication",
+    "transcription",
+    "RNA processing",
+    "translation",
+    "gene regulation",
+    "mutation and expression"
+  ],
+  "lesson_count": 7,
+  "lessons": [
+    {
+      "id": "u08-l01",
+      "number": 1,
+      "title": "DNA Structure, Antiparallel Strands & Base Pairing",
+      "week": 21,
+      "focus": "dna structure, antiparallel strands & base pairing"
+    },
+    {
+      "id": "u08-l02",
+      "number": 2,
+      "title": "Semiconservative DNA Replication",
+      "week": 21,
+      "focus": "semiconservative dna replication"
+    },
+    {
+      "id": "u08-l03",
+      "number": 3,
+      "title": "Transcription & RNA Processing",
+      "week": 21,
+      "focus": "transcription & rna processing"
+    },
+    {
+      "id": "u08-l04",
+      "number": 4,
+      "title": "Translation, Codons & Protein Synthesis",
+      "week": 22,
+      "focus": "translation, codons & protein synthesis"
+    },
+    {
+      "id": "u08-l05",
+      "number": 5,
+      "title": "Mutation Types & Molecular Consequences",
+      "week": 22,
+      "focus": "mutation types & molecular consequences"
+    },
+    {
+      "id": "u08-l06",
+      "number": 6,
+      "title": "Promoters, Transcription Factors & Regulatory Networks",
+      "week": 23,
+      "focus": "promoters, transcription factors & regulatory networks"
+    },
+    {
+      "id": "u08-l07",
+      "number": 7,
+      "title": "Gene Expression Investigation & Evidence Defense",
+      "week": 23,
+      "focus": "gene expression investigation & evidence defense"
+    }
+  ],
+  "mastery": {
+    "target": 80,
+    "questions": 10,
+    "open_book": true,
+    "randomized": true,
+    "retake_fresh_form": true
+  },
+  "status": "architecture-locked-lessons-pending"
+}
