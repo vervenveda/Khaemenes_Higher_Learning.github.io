@@ -1,0 +1,82 @@
+{
+  "schema": "khaemenes-bio101-unit-map-v1",
+  "course": "BIO 101",
+  "unit": 7,
+  "title": "Meiosis, Mendelian Genetics & Quantitative Inheritance",
+  "weeks": [
+    18,
+    19,
+    20
+  ],
+  "essential": "How do meiosis, segregation, probability, and statistical evidence explain inheritance while preserving uncertainty in biological prediction?",
+  "investigation": "Inheritance Probability & Pedigree Evidence Laboratory",
+  "standards": [
+    "meiosis",
+    "crossing over",
+    "segregation",
+    "Mendelian inheritance",
+    "probability",
+    "pedigrees",
+    "chi-square reasoning"
+  ],
+  "lesson_count": 7,
+  "lessons": [
+    {
+      "id": "u07-l01",
+      "number": 1,
+      "title": "Midterm Synthesis, Corrections & Genetics Bridge",
+      "week": 18,
+      "focus": "midterm synthesis, corrections & genetics bridge"
+    },
+    {
+      "id": "u07-l02",
+      "number": 2,
+      "title": "Meiosis & Chromosome Behavior",
+      "week": 18,
+      "focus": "meiosis & chromosome behavior"
+    },
+    {
+      "id": "u07-l03",
+      "number": 3,
+      "title": "Crossing Over & Independent Assortment",
+      "week": 18,
+      "focus": "crossing over & independent assortment"
+    },
+    {
+      "id": "u07-l04",
+      "number": 4,
+      "title": "Alleles, Genotypes & Phenotypes",
+      "week": 19,
+      "focus": "alleles, genotypes & phenotypes"
+    },
+    {
+      "id": "u07-l05",
+      "number": 5,
+      "title": "Probability Models & Punnett Reasoning",
+      "week": 19,
+      "focus": "probability models & punnett reasoning"
+    },
+    {
+      "id": "u07-l06",
+      "number": 6,
+      "title": "Pedigrees, Sex Linkage & Statistical Evidence",
+      "week": 20,
+      "focus": "pedigrees, sex linkage & statistical evidence"
+    },
+    {
+      "id": "u07-l07",
+      "number": 7,
+      "title": "Inheritance Investigation & Chi-Square Reasoning",
+      "week": 20,
+      "focus": "inheritance investigation & chi-square reasoning"
+    }
+  ],
+  "mastery": {
+    "target": 80,
+    "questions": 10,
+    "open_book": true,
+    "randomized": true,
+    "retake_fresh_form": true
+  },
+  "status": "architecture-locked-lessons-pending"
+}
