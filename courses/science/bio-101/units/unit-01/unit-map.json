@@ -1,0 +1,81 @@
+{
+  "schema": "khaemenes-bio101-unit-map-v1",
+  "course": "BIO 101",
+  "unit": 1,
+  "title": "College Biology Readiness, Safety & Scientific Reasoning",
+  "weeks": [
+    1,
+    2
+  ],
+  "essential": "How do safe practice, quantitative reasoning, uncertainty, experimental design, and scientific argument establish trustworthy biological evidence?",
+  "investigation": "Readiness Investigation & Evidence Defense",
+  "standards": [
+    "laboratory safety",
+    "variables and controls",
+    "measurement and uncertainty",
+    "graph and table interpretation",
+    "experimental design",
+    "CER and limitations",
+    "reproducibility"
+  ],
+  "lesson_count": 7,
+  "lessons": [
+    {
+      "id": "u01-l01",
+      "number": 1,
+      "title": "Laboratory Safety, Risk & Responsible Investigation",
+      "week": 1,
+      "focus": "laboratory safety, risk & responsible investigation"
+    },
+    {
+      "id": "u01-l02",
+      "number": 2,
+      "title": "Variables, Controls & Experimental Logic",
+      "week": 1,
+      "focus": "variables, controls & experimental logic"
+    },
+    {
+      "id": "u01-l03",
+      "number": 3,
+      "title": "Measurement, Units & Biological Uncertainty",
+      "week": 1,
+      "focus": "measurement, units & biological uncertainty"
+    },
+    {
+      "id": "u01-l04",
+      "number": 4,
+      "title": "Graph Choice, Data Displays & Quantitative Claims",
+      "week": 1,
+      "focus": "graph choice, data displays & quantitative claims"
+    },
+    {
+      "id": "u01-l05",
+      "number": 5,
+      "title": "Replication, Variation & Reproducibility",
+      "week": 2,
+      "focus": "replication, variation & reproducibility"
+    },
+    {
+      "id": "u01-l06",
+      "number": 6,
+      "title": "CER, Alternative Explanations & Limitations",
+      "week": 2,
+      "focus": "cer, alternative explanations & limitations"
+    },
+    {
+      "id": "u01-l07",
+      "number": 7,
+      "title": "Readiness Synthesis & Evidence Defense",
+      "week": 2,
+      "focus": "readiness synthesis & evidence defense"
+    }
+  ],
+  "mastery": {
+    "target": 80,
+    "questions": 10,
+    "open_book": true,
+    "randomized": true,
+    "retake_fresh_form": true
+  },
+  "status": "architecture-locked-lessons-pending"
+}
