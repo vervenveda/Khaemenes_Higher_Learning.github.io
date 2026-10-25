@@ -1,0 +1,70 @@
+{
+  "schema": "khaemenes-bio101-architecture-contract-v1",
+  "course_id": "higher-learning-bio-101",
+  "profile_course_id": "bio-101",
+  "catalog_code": "BIO 101",
+  "title": "General Biology I",
+  "status": "architecture-locked-lessons-pending",
+  "architecture_parity": "advanced-mathematics-course-package",
+  "duration": {
+    "weeks": 36,
+    "sessions": 180,
+    "units": 13,
+    "lessons": 92
+  },
+  "mastery": {
+    "threshold": 80,
+    "weekly_mastery": false,
+    "unit_mastery": true,
+    "midterm": true,
+    "final": true
+  },
+  "sources": {
+    "course_map": "course-map.json",
+    "course_data": "course-data.js",
+    "diagnostic": "diagnostic/blueprint.json",
+    "diagnostic_bank": "diagnostic/question-bank.json",
+    "assessment_map": "assessments/assessment-map.json",
+    "laboratory_spine": "labs/laboratory-spine.json",
+    "vocabulary_framework": "vocabulary/vocabulary-framework.json",
+    "vocabulary_weekly_map": "vocabulary/weekly-map.json"
+  },
+  "diagnostic": {
+    "questions": 40,
+    "role": "placement/support only",
+    "official_mastery": false
+  },
+  "laboratories": {
+    "investigations": 13,
+    "portfolio_required": true,
+    "faculty_review": true
+  },
+  "vocabulary": {
+    "weeks": 36,
+    "terms_per_week": 6,
+    "total_placements": 216,
+    "practice_only": true
+  },
+  "assessments": {
+    "unit_mastery_checks": 13,
+    "unit_questions_each": 10,
+    "midterm_questions": 60,
+    "final_questions": 100,
+    "question_bank_target_minimum": 220,
+    "retake_requires_fresh_form": true
+  },
+  "evidence": {
+    "laboratory_portfolio_key": "khaemenes-bio101-laboratory-portfolio-v1",
+    "course_record_key": "khaemenes-bio101-college-course-v1",
+    "assessment_record_key": "khaemenes-bio101-assessment-records-v1",
+    "pin_key": "khaemenes-higher-learning-pinned-courses-v1"
+  },
+  "release_boundaries": [
+    "Architecture completeness does not certify instructional completeness.",
+    "Diagnostic results guide support and do not deny course access.",
+    "Vocabulary practice is formative and cannot satisfy official mastery.",
+    "Laboratory evidence requires faculty/educator review.",
+    "Protected cumulative assessments remain separate from public practice.",
+    "No college credit, transfer, accreditation, or licensure claim is made."
+  ]
+}
