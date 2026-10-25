@@ -1,0 +1,479 @@
+{
+  "schema": "khaemenes-bio101-weekly-vocabulary-map-v1",
+  "course": "BIO 101",
+  "weeks": 36,
+  "terms_per_week": 6,
+  "total_placements": 216,
+  "practice_only": true,
+  "review_boundary": "Term placement is locked before lesson writing. Definitions, etymology, examples, translations, and distractor sets require faculty/editorial review before student release.",
+  "placements": [
+    {
+      "week": 1,
+      "unit": 1,
+      "terms": [
+        "hazard",
+        "risk",
+        "independent variable",
+        "dependent variable",
+        "control",
+        "uncertainty"
+      ],
+      "status": "term-plan-locked-definition-review-pending"
+    },
+    {
+      "week": 2,
+      "unit": 1,
+      "terms": [
+        "replication",
+        "reproducibility",
+        "precision",
+        "accuracy",
+        "CER",
+        "limitation"
+      ],
+      "status": "term-plan-locked-definition-review-pending"
+    },
+    {
+      "week": 3,
+      "unit": 2,
+      "terms": [
+        "polarity",
+        "hydrogen bond",
+        "cohesion",
+        "adhesion",
+        "solvent",
+        "hydrophilic"
+      ],
+      "status": "term-plan-locked-definition-review-pending"
+    },
+    {
+      "week": 4,
+      "unit": 2,
+      "terms": [
+        "carbon skeleton",
+        "functional group",
+        "isomer",
+        "monomer",
+        "polymer",
+        "dehydration synthesis"
+      ],
+      "status": "term-plan-locked-definition-review-pending"
+    },
+    {
+      "week": 5,
+      "unit": 2,
+      "terms": [
+        "carbohydrate",
+        "lipid",
+        "protein",
+        "nucleic acid",
+        "amino acid",
+        "nucleotide"
+      ],
+      "status": "term-plan-locked-definition-review-pending"
+    },
+    {
+      "week": 6,
+      "unit": 3,
+      "terms": [
+        "cell theory",
+        "prokaryote",
+        "eukaryote",
+        "organelle",
+        "cytoplasm",
+        "compartmentalization"
+      ],
+      "status": "term-plan-locked-definition-review-pending"
+    },
+    {
+      "week": 7,
+      "unit": 3,
+      "terms": [
+        "phospholipid bilayer",
+        "selective permeability",
+        "diffusion",
+        "osmosis",
+        "tonicity",
+        "water potential"
+      ],
+      "status": "term-plan-locked-definition-review-pending"
+    },
+    {
+      "week": 8,
+      "unit": 3,
+      "terms": [
+        "active transport",
+        "electrochemical gradient",
+        "endocytosis",
+        "exocytosis",
+        "microscopy",
+        "resolution"
+      ],
+      "status": "term-plan-locked-definition-review-pending"
+    },
+    {
+      "week": 9,
+      "unit": 4,
+      "terms": [
+        "enzyme",
+        "active site",
+        "substrate",
+        "activation energy",
+        "catalyst",
+        "denaturation"
+      ],
+      "status": "term-plan-locked-definition-review-pending"
+    },
+    {
+      "week": 10,
+      "unit": 4,
+      "terms": [
+        "reaction rate",
+        "saturation",
+        "competitive inhibition",
+        "allosteric regulation",
+        "cofactor",
+        "coenzyme"
+      ],
+      "status": "term-plan-locked-definition-review-pending"
+    },
+    {
+      "week": 11,
+      "unit": 4,
+      "terms": [
+        "ATP",
+        "energy coupling",
+        "redox",
+        "oxidation",
+        "reduction",
+        "metabolic pathway"
+      ],
+      "status": "term-plan-locked-definition-review-pending"
+    },
+    {
+      "week": 12,
+      "unit": 5,
+      "terms": [
+        "chlorophyll",
+        "photosystem",
+        "electron transport chain",
+        "chemiosmosis",
+        "photophosphorylation",
+        "light reaction"
+      ],
+      "status": "term-plan-locked-definition-review-pending"
+    },
+    {
+      "week": 13,
+      "unit": 5,
+      "terms": [
+        "Calvin cycle",
+        "carbon fixation",
+        "Rubisco",
+        "G3P",
+        "stomata",
+        "limiting factor"
+      ],
+      "status": "term-plan-locked-definition-review-pending"
+    },
+    {
+      "week": 14,
+      "unit": 5,
+      "terms": [
+        "glycolysis",
+        "pyruvate",
+        "citric acid cycle",
+        "oxidative phosphorylation",
+        "fermentation",
+        "respiratory quotient"
+      ],
+      "status": "term-plan-locked-definition-review-pending"
+    },
+    {
+      "week": 15,
+      "unit": 6,
+      "terms": [
+        "ligand",
+        "receptor",
+        "signal transduction",
+        "second messenger",
+        "protein kinase",
+        "cellular response"
+      ],
+      "status": "term-plan-locked-definition-review-pending"
+    },
+    {
+      "week": 16,
+      "unit": 6,
+      "terms": [
+        "homeostasis",
+        "negative feedback",
+        "positive feedback",
+        "set range",
+        "effector",
+        "feedback loop"
+      ],
+      "status": "term-plan-locked-definition-review-pending"
+    },
+    {
+      "week": 17,
+      "unit": 6,
+      "terms": [
+        "cell cycle",
+        "mitosis",
+        "cyclin",
+        "checkpoint",
+        "apoptosis",
+        "oncogene"
+      ],
+      "status": "term-plan-locked-definition-review-pending"
+    },
+    {
+      "week": 18,
+      "unit": 7,
+      "terms": [
+        "homologous chromosome",
+        "meiosis",
+        "synapsis",
+        "crossing over",
+        "independent assortment",
+        "gamete"
+      ],
+      "status": "term-plan-locked-definition-review-pending"
+    },
+    {
+      "week": 19,
+      "unit": 7,
+      "terms": [
+        "allele",
+        "genotype",
+        "phenotype",
+        "dominance",
+        "segregation",
+        "testcross"
+      ],
+      "status": "term-plan-locked-definition-review-pending"
+    },
+    {
+      "week": 20,
+      "unit": 7,
+      "terms": [
+        "pedigree",
+        "sex linkage",
+        "probability",
+        "expected value",
+        "chi-square",
+        "degrees of freedom"
+      ],
+      "status": "term-plan-locked-definition-review-pending"
+    },
+    {
+      "week": 21,
+      "unit": 8,
+      "terms": [
+        "DNA polymerase",
+        "replication fork",
+        "leading strand",
+        "lagging strand",
+        "Okazaki fragment",
+        "semiconservative replication"
+      ],
+      "status": "term-plan-locked-definition-review-pending"
+    },
+    {
+      "week": 22,
+      "unit": 8,
+      "terms": [
+        "transcription",
+        "promoter",
+        "RNA polymerase",
+        "RNA processing",
+        "intron",
+        "exon"
+      ],
+      "status": "term-plan-locked-definition-review-pending"
+    },
+    {
+      "week": 23,
+      "unit": 8,
+      "terms": [
+        "codon",
+        "anticodon",
+        "translation",
+        "ribosome",
+        "mutation",
+        "gene regulation"
+      ],
+      "status": "term-plan-locked-definition-review-pending"
+    },
+    {
+      "week": 24,
+      "unit": 9,
+      "terms": [
+        "PCR",
+        "primer",
+        "template DNA",
+        "amplification",
+        "positive control",
+        "negative control"
+      ],
+      "status": "term-plan-locked-definition-review-pending"
+    },
+    {
+      "week": 25,
+      "unit": 9,
+      "terms": [
+        "gel electrophoresis",
+        "restriction enzyme",
+        "DNA fragment",
+        "sequencing",
+        "genome",
+        "bioinformatics"
+      ],
+      "status": "term-plan-locked-definition-review-pending"
+    },
+    {
+      "week": 26,
+      "unit": 9,
+      "terms": [
+        "CRISPR",
+        "guide RNA",
+        "gene editing",
+        "off-target effect",
+        "informed consent",
+        "genetic privacy"
+      ],
+      "status": "term-plan-locked-definition-review-pending"
+    },
+    {
+      "week": 27,
+      "unit": 10,
+      "terms": [
+        "fossil record",
+        "homology",
+        "biogeography",
+        "molecular evidence",
+        "common ancestry",
+        "evolutionary inference"
+      ],
+      "status": "term-plan-locked-definition-review-pending"
+    },
+    {
+      "week": 28,
+      "unit": 10,
+      "terms": [
+        "allele frequency",
+        "Hardy–Weinberg model",
+        "natural selection",
+        "genetic drift",
+        "gene flow",
+        "mutation"
+      ],
+      "status": "term-plan-locked-definition-review-pending"
+    },
+    {
+      "week": 29,
+      "unit": 10,
+      "terms": [
+        "fitness",
+        "selection coefficient",
+        "bottleneck",
+        "founder effect",
+        "speciation",
+        "reproductive isolation"
+      ],
+      "status": "term-plan-locked-definition-review-pending"
+    },
+    {
+      "week": 30,
+      "unit": 11,
+      "terms": [
+        "producer",
+        "consumer",
+        "trophic level",
+        "primary productivity",
+        "ecological efficiency",
+        "food web"
+      ],
+      "status": "term-plan-locked-definition-review-pending"
+    },
+    {
+      "week": 31,
+      "unit": 11,
+      "terms": [
+        "exponential growth",
+        "logistic growth",
+        "carrying capacity",
+        "competition",
+        "predation",
+        "succession"
+      ],
+      "status": "term-plan-locked-definition-review-pending"
+    },
+    {
+      "week": 32,
+      "unit": 11,
+      "terms": [
+        "carbon cycle",
+        "nitrogen cycle",
+        "reservoir",
+        "flux",
+        "biodiversity",
+        "resilience"
+      ],
+      "status": "term-plan-locked-definition-review-pending"
+    },
+    {
+      "week": 33,
+      "unit": 12,
+      "terms": [
+        "tissue",
+        "organ",
+        "organ system",
+        "exchange surface",
+        "surface-area-to-volume ratio",
+        "transport system"
+      ],
+      "status": "term-plan-locked-definition-review-pending"
+    },
+    {
+      "week": 34,
+      "unit": 12,
+      "terms": [
+        "osmoregulation",
+        "neuron",
+        "hormone",
+        "endocrine signaling",
+        "immune recognition",
+        "homeostatic integration"
+      ],
+      "status": "term-plan-locked-definition-review-pending"
+    },
+    {
+      "week": 35,
+      "unit": 13,
+      "terms": [
+        "research question",
+        "hypothesis",
+        "operational definition",
+        "sampling design",
+        "effect size",
+        "source register"
+      ],
+      "status": "term-plan-locked-definition-review-pending"
+    },
+    {
+      "week": 36,
+      "unit": 13,
+      "terms": [
+        "reproducibility",
+        "null result",
+        "figure legend",
+        "abstract",
+        "peer review",
+        "oral defense"
+      ],
+      "status": "term-plan-locked-definition-review-pending"
+    }
+  ]
+}
