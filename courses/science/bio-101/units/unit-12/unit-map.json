@@ -1,0 +1,81 @@
+{
+  "schema": "khaemenes-bio101-unit-map-v1",
+  "course": "BIO 101",
+  "unit": 12,
+  "title": "Physiology, Systems Integration & Comparative Biology",
+  "weeks": [
+    33,
+    34
+  ],
+  "essential": "How do cells, tissues, organs, and feedback networks integrate transport, exchange, signaling, and regulation across organisms?",
+  "investigation": "Comparative Physiology & Homeostatic Systems Investigation",
+  "standards": [
+    "tissues and organs",
+    "transport systems",
+    "gas exchange",
+    "osmoregulation",
+    "neural/endocrine integration",
+    "immune defense",
+    "comparative physiology"
+  ],
+  "lesson_count": 7,
+  "lessons": [
+    {
+      "id": "u12-l01",
+      "number": 1,
+      "title": "Tissues, Organs & Functional Integration",
+      "week": 33,
+      "focus": "tissues, organs & functional integration"
+    },
+    {
+      "id": "u12-l02",
+      "number": 2,
+      "title": "Transport Systems & Exchange Surfaces",
+      "week": 33,
+      "focus": "transport systems & exchange surfaces"
+    },
+    {
+      "id": "u12-l03",
+      "number": 3,
+      "title": "Gas Exchange & Oxygen Transport",
+      "week": 33,
+      "focus": "gas exchange & oxygen transport"
+    },
+    {
+      "id": "u12-l04",
+      "number": 4,
+      "title": "Osmoregulation & Water Balance",
+      "week": 33,
+      "focus": "osmoregulation & water balance"
+    },
+    {
+      "id": "u12-l05",
+      "number": 5,
+      "title": "Neural and Endocrine Coordination",
+      "week": 34,
+      "focus": "neural and endocrine coordination"
+    },
+    {
+      "id": "u12-l06",
+      "number": 6,
+      "title": "Immune Defense & Biological Recognition",
+      "week": 34,
+      "focus": "immune defense & biological recognition"
+    },
+    {
+      "id": "u12-l07",
+      "number": 7,
+      "title": "Comparative Physiology Investigation & Systems Defense",
+      "week": 34,
+      "focus": "comparative physiology investigation & systems defense"
+    }
+  ],
+  "mastery": {
+    "target": 80,
+    "questions": 10,
+    "open_book": true,
+    "randomized": true,
+    "retake_fresh_form": true
+  },
+  "status": "architecture-locked-lessons-pending"
+}
