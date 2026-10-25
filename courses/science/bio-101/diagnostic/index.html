@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="dark light"><meta name="theme-color" content="#07111d">
+<title>BIO 101 Readiness Diagnostic</title>
+<style>
+:root{--bg:#07111d;--panel:#122236;--panel2:#192d43;--ink:#f4f7fa;--muted:#aeb9c5;--gold:#d9c7a6;--line:rgba(210,220,230,.2);--r:7px;--serif:Cinzel,Georgia,serif;--sans:"Avenir Next","Segoe UI",Arial,sans-serif}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,var(--bg),#0d1928);color:var(--ink);font:400 16px/1.6 var(--sans)}.wrap{width:min(calc(100% - 32px),980px);margin:auto}.head{padding:52px 0 30px;text-align:center}.head h1{font:400 clamp(32px,5vw,52px) var(--serif);margin:8px 0}.muted{color:var(--muted)}.notice,.card{padding:18px;border:1px solid var(--line);border-radius:var(--r);background:var(--panel);margin:14px 0}.q{padding:18px;margin:12px 0;border:1px solid var(--line);border-radius:var(--r);background:var(--panel2)}.q h2{font:400 19px var(--serif)}label{display:block;padding:7px 0}.actions{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.btn{padding:10px 14px;border:1px solid var(--line);border-radius:var(--r);background:#fff;color:#10243a;cursor:pointer}.btn.secondary{background:transparent;color:var(--ink)}.result{padding:20px;border:1px solid var(--line);border-radius:var(--r);background:var(--panel)}.domain{margin:7px 0}.good{color:#b9dbc2}.warn{color:#ead8a6}@media print{.actions{display:none}body{background:white;color:black}.q,.card,.notice,.result{background:white;border-color:#bbb}}
+</style>
+</head>
+<body>
+<header class="head"><div class="wrap"><p class="muted">Khaemenes Higher Learning · Science Department</p><h1>BIO 101 Readiness Diagnostic</h1><p class="muted">40 questions · support planning only · not official mastery</p></div></header>
+<main class="wrap">
+<div class="notice"><strong>Purpose:</strong> identify prerequisite strengths and review needs in scientific reasoning, chemistry of life, cell biology, genetics, evolution, and ecology. This diagnostic does not deny course access and does not count toward the 80% mastery record.</div>
+<div class="actions"><button class="btn" id="start" type="button">Generate Diagnostic</button><button class="btn secondary" id="reset" type="button">New Attempt</button><button class="btn secondary" type="button" onclick="window.print()">Print / Save PDF</button><a class="btn secondary" href="../">Course Home</a></div>
+<div id="root"></div>
+</main>
+<script src="./question-bank.js"></script>
+<script>
+(()=>{const root=document.getElementById("root"),data=window.KhaemenesBIO101DiagnosticBank||{items:[]};let attempt=[];
+const shuffle=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+function build(){attempt=shuffle(data.items).map(q=>({...q,displayOptions:shuffle(q.options.map((text,i)=>({text,original:i})))}));root.innerHTML='<form id="form">'+attempt.map((q,i)=>'<section class="q"><h2>'+(i+1)+'. '+esc(q.prompt)+'</h2>'+q.displayOptions.map((o,j)=>'<label><input type="radio" name="q'+i+'" value="'+o.original+'"> '+esc(o.text)+'</label>').join('')+'</section>').join('')+'<div class="actions"><button class="btn" type="submit">Score Diagnostic</button></div></form>';document.getElementById("form").addEventListener("submit",score)}
+function score(e){e.preventDefault();let correct=0;const domains={};const misses=[];attempt.forEach((q,i)=>{domains[q.domain]??={correct:0,total:0};domains[q.domain].total++;const pick=document.querySelector('input[name="q'+i+'"]:checked');if(pick&&Number(pick.value)===q.answer){correct++;domains[q.domain].correct++}else misses.push(q)});const pct=Math.round(correct/attempt.length*100);const guidance=pct>=80?"Strong readiness: begin the Core pathway and review missed domains.":pct>=60?"Generally ready: use Foundation review in weaker domains before high-load laboratory work.":"Begin with Foundation review and prerequisite refreshers while entering Unit 01.";root.innerHTML='<section class="result"><h2>Readiness Result: '+correct+'/'+attempt.length+' · '+pct+'%</h2><p>'+guidance+'</p>'+Object.entries(domains).map(([d,v])=>'<div class="domain"><strong>'+esc(d)+'</strong>: '+v.correct+'/'+v.total+'</div>').join('')+'<h3>Review notes</h3><ol>'+misses.map(q=>'<li><strong>'+esc(q.skill)+'</strong> — '+esc(q.rationale)+'</li>').join('')+'</ol><p class="muted">This result is formative readiness evidence only and is not an official BIO 101 mastery score.</p></section>'}
+function esc(s){return String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]))}
+document.getElementById("start").addEventListener("click",build);document.getElementById("reset").addEventListener("click",build);
+})();
+</script>
+</body></html>
