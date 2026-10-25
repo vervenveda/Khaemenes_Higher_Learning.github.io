@@ -1,0 +1,44 @@
+{
+  "schema": "khaemenes-bio101-readiness-diagnostic-v1",
+  "questions": 40,
+  "randomized_delivery": true,
+  "role": "readiness and support planning only",
+  "official_mastery": false,
+  "domains": [
+    {
+      "id": "scientific-reasoning",
+      "count": 8
+    },
+    {
+      "id": "chemistry-of-life",
+      "count": 8
+    },
+    {
+      "id": "cell-biology",
+      "count": 8
+    },
+    {
+      "id": "genetics",
+      "count": 8
+    },
+    {
+      "id": "evolution-ecology",
+      "count": 8
+    }
+  ],
+  "interpretation": [
+    {
+      "range": "32-40",
+      "guidance": "Strong readiness; begin Core pathway and use diagnostic misses for targeted review."
+    },
+    {
+      "range": "24-31",
+      "guidance": "Generally ready with targeted Foundation review in weaker domains."
+    },
+    {
+      "range": "0-23",
+      "guidance": "Begin Foundation pathway and complete prerequisite review before high-load quantitative or laboratory work."
+    }
+  ],
+  "boundary": "The diagnostic guides support. It does not deny access by age, grade, or prior schooling and does not count as official course mastery."
+}
