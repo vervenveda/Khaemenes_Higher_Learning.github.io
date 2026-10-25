@@ -38,3 +38,23 @@ Validation type: source-level architecture validation
 - live GitHub Pages behavior
 
 Foundation architecture is ready for lesson development. This report does not certify the course as complete.
+
+
+## Fresh forensic audit — 2026-10-25
+
+Three architecture bubbles were identified and repaired before lesson writing:
+
+1. **Cross-system architecture authority**
+   - Added `architecture-contract.json` linking the course map, diagnostic, assessment framework, laboratory spine, and vocabulary system.
+   - Locked 36 weeks, 180 sessions, 13 units, 92 lesson records, 13 investigations, 216 vocabulary placements, 40 diagnostic questions, 13 unit mastery checks, 60-question midterm, and 100-question final.
+
+2. **Advanced Mathematics package parity**
+   - Added records, teacher, teacher-keys, tools, and assets namespaces.
+   - Added manifest, service worker, offline page, file manifest, update notes, and upload map.
+   - These are architecture scaffolds only; they do not imply instructional completion.
+
+3. **Architecture regression protection**
+   - Added `tools/validate-architecture.mjs`.
+   - The validator checks required package paths and exact structural counts across the course map, diagnostic, assessment map, laboratory spine, and vocabulary map.
+
+Individual lesson writing remains intentionally pending until this foundation is treated as the governing BIO 101 contract.
