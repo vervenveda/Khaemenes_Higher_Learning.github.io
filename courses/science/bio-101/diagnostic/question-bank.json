@@ -1,0 +1,566 @@
+{
+  "schema": "khaemenes-bio101-readiness-bank-v1",
+  "count": 40,
+  "items": [
+    {
+      "id": "bio101-d01",
+      "domain": "scientific-reasoning",
+      "skill": "variables",
+      "prompt": "A study changes light intensity while keeping plant species, water, soil, and temperature constant. What is the independent variable?",
+      "options": [
+        "Plant species",
+        "Light intensity",
+        "Water amount",
+        "Growth rate"
+      ],
+      "answer": 1,
+      "rationale": "The independent variable is the factor deliberately changed."
+    },
+    {
+      "id": "bio101-d02",
+      "domain": "scientific-reasoning",
+      "skill": "controls",
+      "prompt": "Why is a control condition useful in an experiment?",
+      "options": [
+        "It guarantees the hypothesis is correct",
+        "It provides a comparison for isolating the tested effect",
+        "It removes all uncertainty",
+        "It increases sample size automatically"
+      ],
+      "answer": 1,
+      "rationale": "A control provides a baseline comparison that helps isolate the effect of the independent variable."
+    },
+    {
+      "id": "bio101-d03",
+      "domain": "scientific-reasoning",
+      "skill": "percent-change",
+      "prompt": "A population increases from 80 to 100 individuals. What is the percent increase?",
+      "options": [
+        "20%",
+        "25%",
+        "80%",
+        "125%"
+      ],
+      "answer": 1,
+      "rationale": "(100−80)/80 × 100 = 25%."
+    },
+    {
+      "id": "bio101-d04",
+      "domain": "scientific-reasoning",
+      "skill": "mean",
+      "prompt": "Measurements are 4, 5, 5, and 6 cm. What is the mean?",
+      "options": [
+        "4 cm",
+        "5 cm",
+        "5.5 cm",
+        "20 cm"
+      ],
+      "answer": 1,
+      "rationale": "The sum is 20 cm; 20/4 = 5 cm."
+    },
+    {
+      "id": "bio101-d05",
+      "domain": "scientific-reasoning",
+      "skill": "graph",
+      "prompt": "Which graph is usually best for showing how a measured continuous variable changes over time?",
+      "options": [
+        "Line graph",
+        "Pie chart",
+        "Unordered pictogram",
+        "Venn diagram"
+      ],
+      "answer": 0,
+      "rationale": "A line graph is appropriate for continuous change across ordered time."
+    },
+    {
+      "id": "bio101-d06",
+      "domain": "scientific-reasoning",
+      "skill": "replication",
+      "prompt": "Why are repeated trials important?",
+      "options": [
+        "They eliminate all bias",
+        "They help estimate variation and improve reliability",
+        "They make controls unnecessary",
+        "They guarantee statistical significance"
+      ],
+      "answer": 1,
+      "rationale": "Replication reveals variation and supports more reliable estimates."
+    },
+    {
+      "id": "bio101-d07",
+      "domain": "scientific-reasoning",
+      "skill": "correlation",
+      "prompt": "Two variables are strongly correlated. Which conclusion is justified?",
+      "options": [
+        "One variable definitely causes the other",
+        "They are associated, but causation requires additional evidence",
+        "The relationship must be random",
+        "The variables are identical"
+      ],
+      "answer": 1,
+      "rationale": "Correlation alone does not establish causation."
+    },
+    {
+      "id": "bio101-d08",
+      "domain": "scientific-reasoning",
+      "skill": "uncertainty",
+      "prompt": "A result is reported as 12.4 ± 0.3 mg. What does ±0.3 mg communicate?",
+      "options": [
+        "The sample contains exactly 0.3 mg",
+        "A stated uncertainty around the reported value",
+        "The instrument is broken",
+        "The result is automatically inaccurate"
+      ],
+      "answer": 1,
+      "rationale": "The ± value communicates an uncertainty or precision interval around the measurement."
+    },
+    {
+      "id": "bio101-d09",
+      "domain": "chemistry-of-life",
+      "skill": "atoms",
+      "prompt": "Which particle determines the identity of an element?",
+      "options": [
+        "Electron",
+        "Proton",
+        "Neutron",
+        "Photon"
+      ],
+      "answer": 1,
+      "rationale": "Element identity is defined by proton number."
+    },
+    {
+      "id": "bio101-d10",
+      "domain": "chemistry-of-life",
+      "skill": "polarity",
+      "prompt": "Why is water a polar molecule?",
+      "options": [
+        "It contains carbon",
+        "Its electrons are shared unequally and its geometry creates partial charges",
+        "It has no covalent bonds",
+        "It always carries a net ionic charge"
+      ],
+      "answer": 1,
+      "rationale": "Oxygen attracts shared electrons more strongly and the bent geometry produces a molecular dipole."
+    },
+    {
+      "id": "bio101-d11",
+      "domain": "chemistry-of-life",
+      "skill": "hydrogen-bonding",
+      "prompt": "Which property of water is strongly influenced by hydrogen bonding?",
+      "options": [
+        "Cohesion",
+        "Radioactivity",
+        "Metallic conductivity",
+        "Nuclear fission"
+      ],
+      "answer": 0,
+      "rationale": "Hydrogen bonding contributes strongly to water's cohesion."
+    },
+    {
+      "id": "bio101-d12",
+      "domain": "chemistry-of-life",
+      "skill": "ph",
+      "prompt": "A solution with pH 3 is how many times more acidic in hydrogen-ion concentration than a solution with pH 5?",
+      "options": [
+        "2 times",
+        "10 times",
+        "100 times",
+        "1000 times"
+      ],
+      "answer": 2,
+      "rationale": "Each pH unit represents a tenfold change; two units represent 100-fold."
+    },
+    {
+      "id": "bio101-d13",
+      "domain": "chemistry-of-life",
+      "skill": "macromolecules",
+      "prompt": "Proteins are polymers built primarily from which monomers?",
+      "options": [
+        "Nucleotides",
+        "Amino acids",
+        "Monosaccharides",
+        "Fatty acids only"
+      ],
+      "answer": 1,
+      "rationale": "Proteins are polymers of amino acids."
+    },
+    {
+      "id": "bio101-d14",
+      "domain": "chemistry-of-life",
+      "skill": "nucleic-acids",
+      "prompt": "Which macromolecule stores hereditary information in most organisms?",
+      "options": [
+        "DNA",
+        "Triglyceride",
+        "Cellulose",
+        "Glycogen"
+      ],
+      "answer": 0,
+      "rationale": "DNA is the principal hereditary material in most organisms."
+    },
+    {
+      "id": "bio101-d15",
+      "domain": "chemistry-of-life",
+      "skill": "enzymes",
+      "prompt": "What is the main effect of an enzyme on a reaction?",
+      "options": [
+        "It raises activation energy",
+        "It lowers the activation-energy barrier",
+        "It changes the final equilibrium permanently by being consumed",
+        "It creates energy"
+      ],
+      "answer": 1,
+      "rationale": "Enzymes catalyze reactions by lowering activation-energy barriers."
+    },
+    {
+      "id": "bio101-d16",
+      "domain": "chemistry-of-life",
+      "skill": "conservation",
+      "prompt": "During a chemical reaction in a closed system, atoms are best described as",
+      "options": [
+        "created",
+        "destroyed",
+        "rearranged",
+        "converted entirely into energy"
+      ],
+      "answer": 2,
+      "rationale": "Chemical reactions rearrange atoms; they do not create or destroy them."
+    },
+    {
+      "id": "bio101-d17",
+      "domain": "cell-biology",
+      "skill": "cell-theory",
+      "prompt": "Which statement is part of modern cell theory?",
+      "options": [
+        "All cells contain chloroplasts",
+        "Cells arise from preexisting cells",
+        "Only animals are cellular",
+        "Viruses are cells"
+      ],
+      "answer": 1,
+      "rationale": "Modern cell theory includes that cells arise from preexisting cells."
+    },
+    {
+      "id": "bio101-d18",
+      "domain": "cell-biology",
+      "skill": "prokaryote",
+      "prompt": "Which feature distinguishes a typical prokaryotic cell from a eukaryotic cell?",
+      "options": [
+        "It lacks a membrane-bound nucleus",
+        "It lacks DNA",
+        "It lacks ribosomes",
+        "It cannot reproduce"
+      ],
+      "answer": 0,
+      "rationale": "Prokaryotic cells lack a membrane-bound nucleus."
+    },
+    {
+      "id": "bio101-d19",
+      "domain": "cell-biology",
+      "skill": "membranes",
+      "prompt": "The phospholipid bilayer is important because it",
+      "options": [
+        "creates a selectively permeable boundary",
+        "stores chromosomes",
+        "synthesizes all proteins",
+        "eliminates concentration gradients"
+      ],
+      "answer": 0,
+      "rationale": "The bilayer forms a selectively permeable cellular boundary."
+    },
+    {
+      "id": "bio101-d20",
+      "domain": "cell-biology",
+      "skill": "osmosis",
+      "prompt": "Osmosis is the net movement of",
+      "options": [
+        "proteins across any membrane",
+        "water across a selectively permeable membrane",
+        "ATP from high to low concentration",
+        "DNA into the nucleus"
+      ],
+      "answer": 1,
+      "rationale": "Osmosis is diffusion of water across a selectively permeable membrane."
+    },
+    {
+      "id": "bio101-d21",
+      "domain": "cell-biology",
+      "skill": "mitochondria",
+      "prompt": "Which organelle is most directly associated with aerobic ATP production?",
+      "options": [
+        "Golgi apparatus",
+        "Mitochondrion",
+        "Lysosome",
+        "Nucleolus"
+      ],
+      "answer": 1,
+      "rationale": "Mitochondria carry out major stages of aerobic cellular respiration."
+    },
+    {
+      "id": "bio101-d22",
+      "domain": "cell-biology",
+      "skill": "photosynthesis",
+      "prompt": "Which process fixes carbon dioxide into organic molecules?",
+      "options": [
+        "Carbon fixation",
+        "Glycolysis",
+        "Fermentation",
+        "Mitosis"
+      ],
+      "answer": 0,
+      "rationale": "Carbon fixation incorporates inorganic CO2 into organic molecules."
+    },
+    {
+      "id": "bio101-d23",
+      "domain": "cell-biology",
+      "skill": "respiration",
+      "prompt": "What is the main purpose of cellular respiration?",
+      "options": [
+        "To create matter",
+        "To transfer chemical energy from fuels into ATP and other usable forms",
+        "To copy DNA",
+        "To produce chromosomes"
+      ],
+      "answer": 1,
+      "rationale": "Cellular respiration transfers energy from fuels into ATP and related energy carriers."
+    },
+    {
+      "id": "bio101-d24",
+      "domain": "cell-biology",
+      "skill": "homeostasis",
+      "prompt": "Negative feedback generally acts to",
+      "options": [
+        "amplify a deviation indefinitely",
+        "counteract a deviation from a regulated range",
+        "stop all metabolism",
+        "eliminate receptors"
+      ],
+      "answer": 1,
+      "rationale": "Negative feedback counteracts deviations and supports homeostasis."
+    },
+    {
+      "id": "bio101-d25",
+      "domain": "genetics",
+      "skill": "chromosomes",
+      "prompt": "A chromosome is primarily composed of",
+      "options": [
+        "DNA associated with proteins",
+        "lipids only",
+        "ATP only",
+        "cellulose"
+      ],
+      "answer": 0,
+      "rationale": "Chromosomes consist mainly of DNA associated with proteins."
+    },
+    {
+      "id": "bio101-d26",
+      "domain": "genetics",
+      "skill": "meiosis",
+      "prompt": "A major biological role of meiosis is to",
+      "options": [
+        "produce genetically varied haploid cells",
+        "produce identical diploid body cells",
+        "copy RNA only",
+        "eliminate all mutations"
+      ],
+      "answer": 0,
+      "rationale": "Meiosis produces haploid gametes and contributes to genetic variation."
+    },
+    {
+      "id": "bio101-d27",
+      "domain": "genetics",
+      "skill": "segregation",
+      "prompt": "Mendel's law of segregation describes the separation of",
+      "options": [
+        "alleles into different gametes",
+        "organs into tissues",
+        "proteins into amino acids",
+        "ecosystems into populations"
+      ],
+      "answer": 0,
+      "rationale": "Paired alleles segregate during gamete formation."
+    },
+    {
+      "id": "bio101-d28",
+      "domain": "genetics",
+      "skill": "probability",
+      "prompt": "Two independent events each have probability 1/2. What is the probability both occur?",
+      "options": [
+        "1/4",
+        "1/2",
+        "1",
+        "2"
+      ],
+      "answer": 0,
+      "rationale": "For independent events, multiply probabilities: 1/2 × 1/2 = 1/4."
+    },
+    {
+      "id": "bio101-d29",
+      "domain": "genetics",
+      "skill": "replication",
+      "prompt": "DNA replication is described as semiconservative because each daughter DNA molecule contains",
+      "options": [
+        "one parental strand and one newly synthesized strand",
+        "two entirely parental strands",
+        "RNA only",
+        "no original information"
+      ],
+      "answer": 0,
+      "rationale": "Each daughter double helix contains one old strand and one new strand."
+    },
+    {
+      "id": "bio101-d30",
+      "domain": "genetics",
+      "skill": "transcription",
+      "prompt": "Transcription produces",
+      "options": [
+        "RNA from a DNA template",
+        "DNA from protein",
+        "protein directly from DNA without RNA",
+        "lipid from RNA"
+      ],
+      "answer": 0,
+      "rationale": "Transcription synthesizes RNA using DNA as a template."
+    },
+    {
+      "id": "bio101-d31",
+      "domain": "genetics",
+      "skill": "translation",
+      "prompt": "Translation occurs at the",
+      "options": [
+        "ribosome",
+        "lysosome",
+        "centriole only",
+        "cell wall"
+      ],
+      "answer": 0,
+      "rationale": "Ribosomes translate mRNA into polypeptides."
+    },
+    {
+      "id": "bio101-d32",
+      "domain": "genetics",
+      "skill": "mutation",
+      "prompt": "A mutation is best defined as",
+      "options": [
+        "a heritable change in DNA sequence",
+        "any change in behavior",
+        "a guaranteed harmful trait",
+        "a normal protein folding step"
+      ],
+      "answer": 0,
+      "rationale": "A mutation is a change in DNA sequence that can be inherited by descendant cells or offspring depending on context."
+    },
+    {
+      "id": "bio101-d33",
+      "domain": "evolution-ecology",
+      "skill": "natural-selection",
+      "prompt": "Natural selection requires which combination?",
+      "options": [
+        "Heritable variation and differences in reproductive success",
+        "No variation and equal reproduction",
+        "Only acquired traits",
+        "Random mating only"
+      ],
+      "answer": 0,
+      "rationale": "Selection requires heritable variation associated with differential reproductive success."
+    },
+    {
+      "id": "bio101-d34",
+      "domain": "evolution-ecology",
+      "skill": "fitness",
+      "prompt": "In evolutionary biology, fitness refers most directly to",
+      "options": [
+        "relative reproductive success",
+        "physical strength only",
+        "lifespan only",
+        "body size"
+      ],
+      "answer": 0,
+      "rationale": "Fitness is relative reproductive success in a particular environment."
+    },
+    {
+      "id": "bio101-d35",
+      "domain": "evolution-ecology",
+      "skill": "genetic-drift",
+      "prompt": "Genetic drift is",
+      "options": [
+        "random change in allele frequencies",
+        "directed improvement toward perfection",
+        "gene expression within one cell",
+        "migration only"
+      ],
+      "answer": 0,
+      "rationale": "Genetic drift is stochastic change in allele frequencies."
+    },
+    {
+      "id": "bio101-d36",
+      "domain": "evolution-ecology",
+      "skill": "phylogeny",
+      "prompt": "A phylogenetic tree is best interpreted as",
+      "options": [
+        "a hypothesis of evolutionary relationships",
+        "a ladder of progress",
+        "a map of geographic locations only",
+        "proof that every ancestor is known"
+      ],
+      "answer": 0,
+      "rationale": "Phylogenies are evidence-based hypotheses about evolutionary relationships."
+    },
+    {
+      "id": "bio101-d37",
+      "domain": "evolution-ecology",
+      "skill": "energy-flow",
+      "prompt": "Why is energy transfer between trophic levels inefficient?",
+      "options": [
+        "Some energy is dissipated as heat and used in metabolism",
+        "Energy is created at each level",
+        "Matter disappears",
+        "Producers use no energy"
+      ],
+      "answer": 0,
+      "rationale": "Metabolism and heat dissipation limit transfer to the next trophic level."
+    },
+    {
+      "id": "bio101-d38",
+      "domain": "evolution-ecology",
+      "skill": "carrying-capacity",
+      "prompt": "Carrying capacity is",
+      "options": [
+        "the population size an environment can sustain under specified conditions",
+        "the maximum number of species on Earth",
+        "a fixed universal number for every habitat",
+        "the birth rate only"
+      ],
+      "answer": 0,
+      "rationale": "Carrying capacity depends on environmental conditions and resource limits."
+    },
+    {
+      "id": "bio101-d39",
+      "domain": "evolution-ecology",
+      "skill": "carbon-cycle",
+      "prompt": "Which process removes carbon dioxide from the atmosphere and incorporates it into organic matter?",
+      "options": [
+        "Photosynthesis",
+        "Cellular respiration",
+        "Combustion",
+        "Decomposition only"
+      ],
+      "answer": 0,
+      "rationale": "Photosynthesis fixes atmospheric or dissolved CO2 into organic molecules."
+    },
+    {
+      "id": "bio101-d40",
+      "domain": "evolution-ecology",
+      "skill": "biodiversity",
+      "prompt": "Biodiversity includes variation at which levels?",
+      "options": [
+        "Genes, species, and ecosystems",
+        "Only species",
+        "Only genes",
+        "Only ecosystems"
+      ],
+      "answer": 0,
+      "rationale": "Biodiversity includes genetic, species, and ecosystem variation."
+    }
+  ]
+}
