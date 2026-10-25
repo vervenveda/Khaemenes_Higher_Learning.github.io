@@ -1,0 +1,82 @@
+{
+  "schema": "khaemenes-bio101-unit-map-v1",
+  "course": "BIO 101",
+  "unit": 4,
+  "title": "Enzymes, Metabolism & Bioenergetics",
+  "weeks": [
+    9,
+    10,
+    11
+  ],
+  "essential": "How do enzymes, coupled reactions, ATP, and metabolic pathways control the rate and direction of cellular chemistry?",
+  "investigation": "Enzyme Kinetics & Metabolic Rate Laboratory",
+  "standards": [
+    "enzymes",
+    "activation energy",
+    "reaction rates",
+    "ATP coupling",
+    "redox",
+    "metabolic pathways",
+    "experimental kinetics"
+  ],
+  "lesson_count": 7,
+  "lessons": [
+    {
+      "id": "u04-l01",
+      "number": 1,
+      "title": "Enzymes & Activation-Energy Barriers",
+      "week": 9,
+      "focus": "enzymes & activation-energy barriers"
+    },
+    {
+      "id": "u04-l02",
+      "number": 2,
+      "title": "Active Sites, Specificity & Molecular Conditions",
+      "week": 9,
+      "focus": "active sites, specificity & molecular conditions"
+    },
+    {
+      "id": "u04-l03",
+      "number": 3,
+      "title": "Reaction Rates, Temperature, pH & Concentration",
+      "week": 9,
+      "focus": "reaction rates, temperature, ph & concentration"
+    },
+    {
+      "id": "u04-l04",
+      "number": 4,
+      "title": "ATP, Energy Coupling & Cellular Work",
+      "week": 10,
+      "focus": "atp, energy coupling & cellular work"
+    },
+    {
+      "id": "u04-l05",
+      "number": 5,
+      "title": "Oxidation–Reduction & Electron Transfer",
+      "week": 10,
+      "focus": "oxidation–reduction & electron transfer"
+    },
+    {
+      "id": "u04-l06",
+      "number": 6,
+      "title": "Metabolic Pathways & Regulatory Logic",
+      "week": 11,
+      "focus": "metabolic pathways & regulatory logic"
+    },
+    {
+      "id": "u04-l07",
+      "number": 7,
+      "title": "Enzyme Kinetics Investigation & Model Defense",
+      "week": 11,
+      "focus": "enzyme kinetics investigation & model defense"
+    }
+  ],
+  "mastery": {
+    "target": 80,
+    "questions": 10,
+    "open_book": true,
+    "randomized": true,
+    "retake_fresh_form": true
+  },
+  "status": "architecture-locked-lessons-pending"
+}
