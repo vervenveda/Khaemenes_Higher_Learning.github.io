@@ -1,0 +1,79 @@
+{
+  "schema": "khaemenes-higher-learning-science-program-map-v1",
+  "department": "Science",
+  "canonicalPath": "/courses/science/",
+  "architectureParity": "advanced-mathematics-course-package",
+  "status": "department-scaffold",
+  "courses": [
+    {
+      "code": "BIO 101",
+      "slug": "bio-101",
+      "title": "General Biology I",
+      "track": "Life Sciences",
+      "status": "scaffold"
+    },
+    {
+      "code": "BIO 102",
+      "slug": "bio-102",
+      "title": "General Biology II",
+      "track": "Life Sciences",
+      "status": "scaffold"
+    },
+    {
+      "code": "CHEM 101",
+      "slug": "chem-101",
+      "title": "General Chemistry I",
+      "track": "Chemistry",
+      "status": "scaffold"
+    },
+    {
+      "code": "CHEM 102",
+      "slug": "chem-102",
+      "title": "General Chemistry II",
+      "track": "Chemistry",
+      "status": "scaffold"
+    },
+    {
+      "code": "PHYS 101",
+      "slug": "phys-101",
+      "title": "College Physics I",
+      "track": "Physics",
+      "status": "scaffold"
+    },
+    {
+      "code": "PHYS 102",
+      "slug": "phys-102",
+      "title": "College Physics II",
+      "track": "Physics",
+      "status": "scaffold"
+    },
+    {
+      "code": "PHYS 151",
+      "slug": "phys-151",
+      "title": "University Physics I",
+      "track": "Calculus-Based Physics",
+      "status": "scaffold"
+    },
+    {
+      "code": "PHYS 152",
+      "slug": "phys-152",
+      "title": "University Physics II",
+      "track": "Calculus-Based Physics",
+      "status": "scaffold"
+    },
+    {
+      "code": "ENV 101",
+      "slug": "env-101",
+      "title": "Earth & Environmental Science",
+      "track": "Earth & Environment",
+      "status": "scaffold"
+    },
+    {
+      "code": "ASTR 101",
+      "slug": "astr-101",
+      "title": "Astronomy & Space Science",
+      "track": "Earth & Space",
+      "status": "scaffold"
+    }
+  ]
+}
