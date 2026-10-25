@@ -1,0 +1,63 @@
+{
+  "schema": "khaemenes-bio101-assessment-map-v1",
+  "mastery_target": 80,
+  "diagnostic": {
+    "questions": 40,
+    "role": "placement/support only",
+    "official_mastery": false
+  },
+  "unit_mastery": {
+    "count": 13,
+    "questions_each": 10,
+    "open_book": true,
+    "randomized_from_bank": true,
+    "retake_requires_fresh_form": true
+  },
+  "investigations": {
+    "count": 13,
+    "teacher_review": true,
+    "portfolio_required": true
+  },
+  "question_bank": {
+    "target_minimum": 220,
+    "types": [
+      "concept",
+      "evidence",
+      "quantitative",
+      "model",
+      "application"
+    ]
+  },
+  "midterm": {
+    "questions": 60,
+    "closed_book": true,
+    "cumulative_through": "Unit 06",
+    "mastery_target": 80
+  },
+  "final": {
+    "questions": 100,
+    "closed_book": true,
+    "cumulative": true,
+    "mastery_target": 80
+  },
+  "capstone": {
+    "unit": 13,
+    "written": true,
+    "oral_defense": true,
+    "research_portfolio": true
+  },
+  "weighting": {
+    "coursework": 20,
+    "unit_mastery": 20,
+    "laboratory_investigations": 25,
+    "midterm": 10,
+    "final": 15,
+    "capstone": 10
+  },
+  "boundaries": [
+    "formative practice never overwrites official mastery",
+    "protected midterm/final content remains separate from public practice",
+    "laboratory evidence is reviewed rather than auto-certified",
+    "retakes use fresh randomized forms where bank depth permits"
+  ]
+}
