@@ -1,0 +1,251 @@
+{
+  "schema": "khaemenes-bio101-laboratory-spine-v1",
+  "course": "BIO 101",
+  "minimum_investigations": 13,
+  "portfolio_key": "khaemenes-bio101-laboratory-portfolio-v1",
+  "evidence_standard": [
+    "heading and identity",
+    "research question",
+    "source register",
+    "vocabulary",
+    "method and variables",
+    "raw observations/data",
+    "calculations/figures/models",
+    "claim-evidence-reasoning",
+    "uncertainty and limitations",
+    "revision/next question",
+    "faculty review"
+  ],
+  "investigations": [
+    {
+      "unit": 1,
+      "weeks": [
+        1,
+        2
+      ],
+      "title": "Readiness Investigation & Evidence Defense",
+      "mode": "guided inquiry",
+      "question": "How do measurement choices, controls, replication, and uncertainty affect the strength of a biological claim?",
+      "evidence": [
+        "risk assessment",
+        "raw measurement table",
+        "graph",
+        "uncertainty statement",
+        "CER",
+        "limitations"
+      ]
+    },
+    {
+      "unit": 2,
+      "weeks": [
+        3,
+        4,
+        5
+      ],
+      "title": "Structure–Function Molecular Evidence Laboratory",
+      "mode": "comparative wet-lab / simulation-ready",
+      "question": "How do molecular properties predict observable biological behavior?",
+      "evidence": [
+        "controlled comparison",
+        "molecular model",
+        "qualitative/quantitative observations",
+        "structure-function explanation"
+      ]
+    },
+    {
+      "unit": 3,
+      "weeks": [
+        6,
+        7,
+        8
+      ],
+      "title": "Microscopy, Membrane Transport & Scale Laboratory",
+      "mode": "microscopy / virtual microscopy / diffusion investigation",
+      "question": "How do scale, membrane properties, and concentration gradients constrain cellular exchange?",
+      "evidence": [
+        "microscopy evidence",
+        "scale calculation",
+        "transport data",
+        "model revision"
+      ]
+    },
+    {
+      "unit": 4,
+      "weeks": [
+        9,
+        10,
+        11
+      ],
+      "title": "Enzyme Kinetics & Metabolic Rate Laboratory",
+      "mode": "quantitative inquiry",
+      "question": "How do environmental conditions alter enzyme-mediated reaction rates?",
+      "evidence": [
+        "rate data",
+        "replicates",
+        "graph/model",
+        "uncertainty",
+        "mechanistic claim"
+      ]
+    },
+    {
+      "unit": 5,
+      "weeks": [
+        12,
+        13,
+        14
+      ],
+      "title": "Cellular Energy & Gas-Exchange Investigation",
+      "mode": "systems investigation",
+      "question": "How can gas exchange or another proxy test models of photosynthesis and respiration?",
+      "evidence": [
+        "system boundary",
+        "rate proxy",
+        "carbon/energy accounting",
+        "limitations"
+      ]
+    },
+    {
+      "unit": 6,
+      "weeks": [
+        15,
+        16,
+        17
+      ],
+      "title": "Signaling, Feedback & Cell-Cycle Model Investigation",
+      "mode": "data/model inquiry",
+      "question": "How can perturbation evidence distinguish signaling, feedback, and cell-cycle control models?",
+      "evidence": [
+        "pathway model",
+        "perturbation evidence",
+        "feedback analysis",
+        "model boundary"
+      ]
+    },
+    {
+      "unit": 7,
+      "weeks": [
+        18,
+        19,
+        20
+      ],
+      "title": "Inheritance Probability & Pedigree Evidence Laboratory",
+      "mode": "quantitative genetics",
+      "question": "How well do observed inheritance outcomes agree with probabilistic genetic models?",
+      "evidence": [
+        "probability model",
+        "pedigree",
+        "observed/expected table",
+        "chi-square reasoning",
+        "interpretation"
+      ]
+    },
+    {
+      "unit": 8,
+      "weeks": [
+        21,
+        22,
+        23
+      ],
+      "title": "Gene Expression & Regulation Evidence Laboratory",
+      "mode": "molecular data inquiry",
+      "question": "What evidence supports a claim about gene expression or regulation?",
+      "evidence": [
+        "sequence/expression evidence",
+        "regulatory model",
+        "comparison",
+        "alternative explanation"
+      ]
+    },
+    {
+      "unit": 9,
+      "weeks": [
+        24,
+        25,
+        26
+      ],
+      "title": "PCR, Electrophoresis & Genomic Evidence Laboratory",
+      "mode": "biotechnology investigation",
+      "question": "How can molecular separation or amplification data support a bounded genomic inference?",
+      "evidence": [
+        "controls",
+        "band/sequence evidence",
+        "chain of custody",
+        "contamination check",
+        "ethical boundary"
+      ]
+    },
+    {
+      "unit": 10,
+      "weeks": [
+        27,
+        28,
+        29
+      ],
+      "title": "Population Change & Phylogenetic Evidence Laboratory",
+      "mode": "population genetics / phylogeny",
+      "question": "How do allele-frequency data and comparative evidence support evolutionary inference?",
+      "evidence": [
+        "frequency calculations",
+        "population model",
+        "phylogenetic evidence",
+        "uncertainty",
+        "inference limits"
+      ]
+    },
+    {
+      "unit": 11,
+      "weeks": [
+        30,
+        31,
+        32
+      ],
+      "title": "Ecosystem Systems & Population Data Laboratory",
+      "mode": "ecological data investigation",
+      "question": "How do population dynamics, energy transfer, and nutrient cycling interact in an ecosystem model?",
+      "evidence": [
+        "time-series or field data",
+        "population model",
+        "energy/nutrient flow",
+        "systems feedback"
+      ]
+    },
+    {
+      "unit": 12,
+      "weeks": [
+        33,
+        34
+      ],
+      "title": "Comparative Physiology & Homeostatic Systems Investigation",
+      "mode": "comparative systems inquiry",
+      "question": "How do organisms maintain internal function under changing environmental demands?",
+      "evidence": [
+        "physiological dataset",
+        "feedback model",
+        "comparative analysis",
+        "system limitation"
+      ]
+    },
+    {
+      "unit": 13,
+      "weeks": [
+        35,
+        36
+      ],
+      "title": "BIO 101 Independent Research Capstone & Oral Defense",
+      "mode": "independent investigation",
+      "question": "Can the learner design and defend a reproducible biological investigation with claims proportional to evidence?",
+      "evidence": [
+        "research question",
+        "source register",
+        "method",
+        "raw data",
+        "analysis",
+        "figures",
+        "uncertainty",
+        "limitations",
+        "revision history",
+        "oral defense"
+      ]
+    }
+  ]
+}
