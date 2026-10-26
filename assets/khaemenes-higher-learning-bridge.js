@@ -163,8 +163,11 @@
     ensureBetaProgramLink
   });
 
-  ensureAcademyFamilyRegistry();
+  const registryLoader=ensureAcademyFamilyRegistry();
   ensureAcademyMentorRouter();
+  // The shared Family Registry may load after DOMContentLoaded; publish once
+  // it is actually available. This does not create or change learner identity.
+  registryLoader?.addEventListener?.("load",publishReleasedMathLesson,{once:true});
   function ready(){ensureBetaProgramLink();publishReleasedMathLesson();}
   if(global.document?.readyState==="loading")global.document.addEventListener("DOMContentLoaded",ready,{once:true});else ready();
   global.addEventListener("khaemenes-family-changed",publishReleasedMathLesson);
