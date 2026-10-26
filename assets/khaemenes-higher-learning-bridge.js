@@ -130,8 +130,15 @@
   const LESSON_CONTEXT_KEY='khaemenes_higher_mentor_context_v1';
   function publishReleasedMathLesson(){
     const s=status(),page=String(global.location?.pathname||'').toLowerCase();
-    if(!page.endsWith('/courses/linear-algebra/units/unit-01/lessons/u01-l01.html'))return null;
-    if(!s.scholar?.learnerId||s.scholar.stage!==EXPECTED_STAGE)return null;
+    const activeLesson=page.endsWith('/courses/linear-algebra/units/unit-01/lessons/u01-l01.html');
+    if(!activeLesson||!s.scholar?.learnerId||s.scholar.stage!==EXPECTED_STAGE){
+      try{
+        const old=JSON.parse(global.localStorage?.getItem(LESSON_CONTEXT_KEY)||'null');
+        if(old?.currentLessonContext?.courseId==='higher-learning-linear-algebra'&&old?.currentLessonContext?.lessonId==='u01-l01')
+          global.localStorage?.removeItem(LESSON_CONTEXT_KEY);
+      }catch{}
+      return null;
+    }
     // Released public lesson metadata, not assessment prompts or grading keys.
     const payload={version:1,stage:'higher',learnerId:s.scholar.learnerId,
       currentLessonContext:{
