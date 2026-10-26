@@ -127,6 +127,24 @@
     });
   }
 
+  const LESSON_CONTEXT_KEY='khaemenes_higher_mentor_context_v1';
+  function publishReleasedMathLesson(){
+    const s=status(),page=String(global.location?.pathname||'').toLowerCase();
+    if(!page.endsWith('/courses/linear-algebra/units/unit-01/lessons/u01-l01.html'))return null;
+    if(!s.scholar?.learnerId||s.scholar.stage!==EXPECTED_STAGE)return null;
+    // Released public lesson metadata, not assessment prompts or grading keys.
+    const payload={version:1,stage:'higher',learnerId:s.scholar.learnerId,
+      currentLessonContext:{
+        subject:'mathematics',courseId:'higher-learning-linear-algebra',
+        lessonId:'u01-l01',title:'Vectors and Coordinates in Rⁿ',
+        objective:'interpreting vectors as directed quantities, coordinate lists, and data objects',
+        focus:'coordinate vectors and directed displacements'
+      },
+      evidencePrivacy:{answerKeysPublished:false,assessmentPromptsPublished:false},
+      updatedAt:new Date().toISOString()};
+    try{global.localStorage?.setItem(LESSON_CONTEXT_KEY,JSON.stringify(payload));}catch{return null;}
+    return payload;
+  }
   global.KhaemenesHigherLearningBridge=Object.freeze({
     version:VERSION,
     expectedStage:EXPECTED_STAGE,
@@ -137,6 +155,7 @@
     activate,
     scopedCourseKey,
     makeCourseContext,
+    publishReleasedMathLesson,
     mentorAssignment,
     mentorHref,
     ensureAcademyFamilyRegistry,
@@ -146,5 +165,8 @@
 
   ensureAcademyFamilyRegistry();
   ensureAcademyMentorRouter();
-  if(global.document?.readyState==="loading")global.document.addEventListener("DOMContentLoaded",ensureBetaProgramLink,{once:true});else ensureBetaProgramLink();
+  function ready(){ensureBetaProgramLink();publishReleasedMathLesson();}
+  if(global.document?.readyState==="loading")global.document.addEventListener("DOMContentLoaded",ready,{once:true});else ready();
+  global.addEventListener("khaemenes-family-changed",publishReleasedMathLesson);
+  global.addEventListener("pageshow",publishReleasedMathLesson);
 })(window);
