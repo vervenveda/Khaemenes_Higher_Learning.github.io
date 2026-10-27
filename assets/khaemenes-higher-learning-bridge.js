@@ -130,28 +130,39 @@
   const LESSON_CONTEXT_KEY='khaemenes_higher_mentor_context_v1';
   function publishReleasedMathLesson(){
     const s=status(),page=String(global.location?.pathname||'').toLowerCase();
-    const activeLesson=page.endsWith('/courses/linear-algebra/units/unit-01/lessons/u01-l01.html');
-    if(!activeLesson||!s.scholar?.learnerId||s.scholar.stage!==EXPECTED_STAGE){
-      try{
-        const old=JSON.parse(global.localStorage?.getItem(LESSON_CONTEXT_KEY)||'null');
-        if(old?.currentLessonContext?.courseId==='higher-learning-linear-algebra'&&old?.currentLessonContext?.lessonId==='u01-l01')
-          global.localStorage?.removeItem(LESSON_CONTEXT_KEY);
-      }catch{}
-      return null;
-    }
-    // Released public lesson metadata, not assessment prompts or grading keys.
-    const payload={version:1,stage:'higher',learnerId:s.scholar.learnerId,
-      currentLessonContext:{
+    // Released public curriculum metadata. Neither teacher keys nor quiz banks are read.
+    const published={
+      '/courses/linear-algebra/units/unit-01/lessons/u01-l01.html':{
         subject:'mathematics',courseId:'higher-learning-linear-algebra',
         lessonId:'u01-l01',title:'Vectors and Coordinates in Rⁿ',
         objective:'interpreting vectors as directed quantities, coordinate lists, and data objects',
         focus:'coordinate vectors and directed displacements'
       },
+      '/courses/mathematics/calculus-1/units/unit-01/lessons/u01-l01.html':{
+        subject:'mathematics',courseId:'higher-learning-calculus-1',
+        lessonId:'u01-l01',title:'Function Language, Units & Multiple Representations',
+        objective:'identify function inputs, outputs, units, domain and representations',
+        focus:'function language, units and multiple representations'
+      }
+    };
+    const lesson=Object.entries(published).find(([route])=>page.endsWith(route))?.[1]||null;
+    if(!lesson||!s.scholar?.learnerId||s.scholar.stage!==EXPECTED_STAGE){
+      // Clear only this bridge's previously released pointer; never formal records.
+      try{
+        const old=JSON.parse(global.localStorage?.getItem(LESSON_CONTEXT_KEY)||'null');
+        if(Object.values(published).some(x=>x.courseId===old?.currentLessonContext?.courseId&&x.lessonId===old?.currentLessonContext?.lessonId))
+          global.localStorage?.removeItem(LESSON_CONTEXT_KEY);
+      }catch{}
+      return null;
+    }
+    const payload={version:1,stage:'higher',learnerId:s.scholar.learnerId,
+      currentLessonContext:lesson,
       evidencePrivacy:{answerKeysPublished:false,assessmentPromptsPublished:false},
       updatedAt:new Date().toISOString()};
     try{global.localStorage?.setItem(LESSON_CONTEXT_KEY,JSON.stringify(payload));}catch{return null;}
     return payload;
   }
+
   global.KhaemenesHigherLearningBridge=Object.freeze({
     version:VERSION,
     expectedStage:EXPECTED_STAGE,
