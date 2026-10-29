@@ -19,9 +19,9 @@
  const oldCards=section.querySelector(".quick-check-grid");
  const oldButton=document.getElementById("scoreQuickCheck");
  const oldResult=document.getElementById("quickCheckResult");
- if(oldCards)oldCards.hidden=true;
- if(oldButton)oldButton.hidden=true;
- if(oldResult)oldResult.hidden=true;
+ if(oldCards){oldCards.hidden=true;oldCards.style.display="none";}
+ if(oldButton){oldButton.hidden=true;oldButton.style.display="none";}
+ if(oldResult){oldResult.hidden=true;oldResult.style.display="none";}
  const host=document.createElement("div");host.id="topicMasteryCheck";host.className="quick-check-grid";
  host.innerHTML='<article class="card" style="grid-column:1/-1"><h3>Five-question mathematics topic check</h3><p>Four correct answers out of five earn the 80% formative threshold. Below 80%, correct your answers without a shuffle. At 80% or above, your answers lock. Instructor-reviewed proofs remain a separate requirement.</p></article>'+
  selected.map((q,i)=>'<article class="question-card" data-topic-question><h3>'+(i+1)+'. '+esc(q.prompt)+'</h3><div class="answer-list">'+
