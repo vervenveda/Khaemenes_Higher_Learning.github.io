@@ -14,15 +14,17 @@ function ensureLearnerToolbar(){
   else mount();
 }
 function higherScholarLessonKey(legacyKey){
-  try{
-    const registry=JSON.parse(localStorage.getItem("khaemenes_family_registry_v1")||"null");
-    const learnerId=JSON.parse(localStorage.getItem("khaemenes_active_learner_v1")||"null");
-    const learner=learnerId&&registry?.learners?.[learnerId]?registry.learners[learnerId]:null;
-    if(!learner||String(learner.stage||"").toLowerCase()!=="higher")return legacyKey;
-    const course=(location.pathname.match(/\/courses\/([^/]+)\//i)||[])[1]||"higher-course";
-    return `khaemenes.course:${learner.learnerId}:higher:${decodeURIComponent(course)}:lesson-progress-v1`;
-  }catch{return legacyKey}
+ try{
+  const learnerId=JSON.parse(localStorage.getItem("khaemenes_active_learner_v1")||"null");
+  const registry=JSON.parse(localStorage.getItem("khaemenes_family_registry_v1")||"null");
+  if(typeof learnerId==="string"&&registry?.learners?.[learnerId]&&String(registry.learners[learnerId].stage||"").toLowerCase()==="higher"){
+   return "khaemenes-topology-differential-geometry-lessons-v2:"+learnerId;
+  }
+  const course=JSON.parse(localStorage.getItem("khaemenes-topology-differential-geometry-course-v1")||"{}");
+  return "khaemenes-topology-differential-geometry-lessons-v2:"+(course.activeId?String(course.activeId):"learner-1");
+ }catch{return "khaemenes-topology-differential-geometry-lessons-v2:learner-1"}
 }
+
 ensureLearnerToolbar();
 const KEY=higherScholarLessonKey(LEGACY_KEY);
 const THEME_KEY="khaemenes-higher-learning-theme";
@@ -70,7 +72,7 @@ function activatePathway(name){
   const panel=$("#pathwayPanel"),source=$('[data-pathway-copy]').find(node=>node.dataset.pathwayCopy===name);if(panel&&source)panel.innerHTML=source.innerHTML;
 }
 $$('[data-pathway]').forEach(button=>button.addEventListener('click',()=>{rec.pathway=button.dataset.pathway;persist();activatePathway(rec.pathway)}));
-$("#completeLesson")?.addEventListener("click",()=>{rec.complete=!rec.complete;persist()});
+$("#completeLesson")?.addEventListener("click",()=>{if(!rec.complete&&(rec.quickScore==null||rec.quickScore<80)){alert("Complete the formative quick check with at least 80% before marking this activity reviewed. Verified proof mastery is assessed separately.");return}rec.complete=!rec.complete;persist()});
 $("#saveReflection")?.addEventListener("click",()=>{rec.reflection=$("#lessonReflection")?.value.trim()||"";rec.steps.reflection=!!rec.reflection;persist();const msg=$("#reflectionMessage");if(msg)msg.textContent="Reflection saved locally."});
 $("#printLesson")?.addEventListener("click",()=>window.print());
 $("#checkLessonQuestions")?.addEventListener("click",()=>{
