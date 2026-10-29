@@ -285,8 +285,8 @@ function renderAssessments(){
  const s=activeStudent();
  $("#view-assessments").innerHTML=`<div class="wrap"><div class="section-head"><p class="eyebrow">Formative practice and provisional evidence</p><h2>Assessment Center</h2><p>Academy policy requires 80% mastery at every required step. These publicly delivered practice forms, completion checkboxes and manually entered scores are not independently verified academic gates, secure examinations, recognized credit or certificate awards. Free study and reassessment remain available.</p></div>
  <div class="resource-grid">
-  <a class="card" href="diagnostic/"><h3>Readiness Diagnostic</h3><p>40 Calculus I prerequisite questions with targeted feedback.</p></a>
-  <a class="card" href="assessments/midterm.html"><h3>Public Midterm Practice Form</h3><p>60 questions covering Units 01–06: integration fluency, integration by parts, trigonometric methods, partial fractions, improper and numerical integration, and advanced applications of integration.</p></a>
+  <a class="card" href="diagnostic/"><h3>Readiness Diagnostic</h3><p>40 prerequisite questions in proof, sets, functions, metric spaces, real analysis, multivariable calculus and linear algebra.</p></a>
+  <a class="card" href="assessments/midterm.html"><h3>Public Midterm Practice Form</h3><p>60 questions covering Units 01–07: point-set topology, compactness, homotopy, homology foundations, manifolds and differential topology.</p></a>
   <a class="card" href="assessments/final.html"><h3>Public Final Practice Form</h3><p>100 questions across the complete Topology & Differential Geometry course.</p></a>
   <a class="card" href="records/course-completion-certificate.html"><h3>Unverified Completion Record Template</h3><p>Printable evaluator or family-issued completion and verification record.</p></a>
  </div>

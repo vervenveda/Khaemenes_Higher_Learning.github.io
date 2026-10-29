@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Polygon Gluing &amp; Surface Classification Studio · Khaemenes Higher Learning</title>
+<link rel="stylesheet" href="../assets/styles.css">
+<style>body{margin:0;padding:1rem;background:#11151c;color:#f6f0e8;font:16px/1.6 "Brandon Grotesque",Nunito,sans-serif}main{max-width:1100px;margin:0 auto}.stage{background:#252a33;border:1px solid #ac9469;border-radius:7px;padding:1.25rem;margin:1rem 0}.stage h1,.stage h2{font-family:Cinzel,Georgia,serif;color:#e9ce8f}.stage a{color:#e9ce8f}label,select,input,button{font:inherit}select,input,button{padding:.55rem;border-radius:7px;border:1px solid #decaa2;margin:.3rem}button{background:#f2e6cb;color:#17202a;cursor:pointer}.layout{display:grid;grid-template-columns:1fr 1fr;gap:1rem}svg{max-width:100%;background:#faf7ef;border-radius:7px}output{display:block;white-space:pre-wrap}fieldset{border:0;padding:0}small{color:#c8c2b7}@media(max-width:680px){.layout{grid-template-columns:1fr}}</style></head>
+<body><main><p><a href="../index.html#labs">← Course laboratories</a></p>
+<section class="stage"><p>GEOMETRIC TOPOLOGY · INTERACTIVE LABORATORY</p><h1>Polygon Gluing &amp; Surface Classification</h1>
+<p>Discover how identifying pairs of polygon edges produces closed surfaces. Compute vertex equivalence classes, the Euler characteristic, orientability and genus. This is an exact finite combinatorial model, not a pictorial proof.</p></section>
+<div class="layout"><section class="stage"><h2>Choose an edge word</h2><label for="preset">Model</label>
+<select id="preset"><option value="abAB">Torus · a b A B</option><option value="abAb">Klein bottle · a b A b</option><option value="aAbB">Sphere · a A b B</option><option value="aabb">Nonorientable genus 2 · a a b b</option></select>
+<label for="word">Custom polygon word (paired letters)</label><input id="word" value="abAB" maxlength="10" aria-describedby="wordHelp">
+<p id="wordHelp"><small>Every edge name must appear exactly twice. A capital letter denotes inverse boundary direction. Use 4, 6, 8 or 10 letters.</small></p>
+<button id="analyze" type="button">Analyze identifications</button><button id="print" type="button">Print evidence</button>
+<div id="result" role="status" aria-live="polite"></div></section>
+<section class="stage"><h2>Boundary polygon</h2><svg id="polygon" viewBox="0 0 400 390" role="img" aria-label="A polygon annotated with oriented edge labels"></svg><p><small>Edges are arranged counterclockwise. Letters indicate which edges are glued; uppercase letters reverse the boundary direction relative to lowercase.</small></p></section></div>
+<section class="stage"><h2>Reasoning workshop</h2><ol><li>List the polygon vertices and write every identification induced by the paired edges.</li><li>Count the resulting vertex classes V, the paired edges E and the single face F=1.</li><li>Compute χ=V−E+F and compare it to the displayed result.</li><li>Decide orientability by whether any pair has the same boundary orientation; then derive genus from χ.</li><li>Explain why the torus and Klein bottle can have the same Euler characteristic yet not be homeomorphic.</li></ol>
+<p><strong>Instructor evidence:</strong> Require the edge-pairing equivalence classes, a proof of χ, an orientability argument and a limitation statement. A computed value alone does not demonstrate mastery.</p></section></main>
+<script>
+(function(){
+ 'use strict';
+ const svg=document.getElementById('polygon'),result=document.getElementById('result');
+ function node(name,attrs,text){const n=document.createElementNS('http://www.w3.org/2000/svg',name);Object.keys(attrs||{}).forEach(k=>n.setAttribute(k,String(attrs[k])));if(text!==undefined)n.textContent=text;svg.append(n);return n;}
+ function analyze(word){
+  const w=word.replace(/\s/g,'');
+  if(!/^[A-Za-z]{4,10}$/.test(w)||w.length%2)throw Error('Enter an even-length word of 4–10 letters.');
+  const groups={};for(let i=0;i<w.length;i++){const k=w[i].toLowerCase();(groups[k]||(groups[k]=[])).push(i);}
+  const entries=Object.entries(groups);
+  if(entries.some(([k,positions])=>positions.length!==2))throw Error('Each distinct letter must occur exactly twice.');
+  const n=w.length,parent=Array.from({length:n},(_,i)=>i);
+  function root(x){while(parent[x]!==x){parent[x]=parent[parent[x]];x=parent[x]}return x}
+  function unite(a,b){a=root(a);b=root(b);if(a!==b)parent[b]=a}
+  let orientable=true;
+  for(const [k,[i,j]] of entries){
+   const opposite=(w[i]===w[i].toLowerCase())!==(w[j]===w[j].toLowerCase());
+   if(opposite){unite(i,(j+1)%n);unite((i+1)%n,j)}
+   else {unite(i,j);unite((i+1)%n,(j+1)%n);orientable=false}
+  }
+  const grouped={};for(let i=0;i<n;i++){const r=root(i);(grouped[r]||(grouped[r]=[])).push(i)}
+  const classes=Object.values(grouped),V=classes.length,E=entries.length,F=1,chi=V-E+F;
+  const genus=orientable?(2-chi)/2:2-chi;
+  if(!Number.isInteger(genus)||genus<0)throw Error('This word could not be classified as a closed connected surface.');
+  return {w,n,classes,V,E,F,chi,orientable,genus};
+ }
+ function draw(w){
+  svg.replaceChildren();const n=w.length,cx=200,cy=195,R=137;
+  const verts=Array.from({length:n},(_,i)=>({x:cx+R*Math.cos(-Math.PI/2+2*Math.PI*i/n),y:cy+R*Math.sin(-Math.PI/2+2*Math.PI*i/n)}));
+  node('polygon',{points:verts.map(p=>p.x+','+p.y).join(' '),fill:'#f2ead9',stroke:'#283a4d','stroke-width':2});
+  verts.forEach((p,i)=>{const q=verts[(i+1)%n],mx=(p.x+q.x)/2,my=(p.y+q.y)/2;node('line',{x1:p.x,y1:p.y,x2:q.x,y2:q.y,stroke:'#745a33','stroke-width':4});node('text',{x:mx+(mx-cx)*.16,y:my+(my-cy)*.16,'text-anchor':'middle','font-size':20,fill:'#152d49'},w[i]);node('text',{x:p.x,y:p.y-7,'text-anchor':'middle','font-size':12,fill:'#555'},'v'+i)});
+ }
+ function render(){try{const r=analyze(document.getElementById('word').value);draw(r.w);const classes=r.classes.map(x=>'{'+x.map(n=>'v'+n).join(', ')+'}').join('; ');result.textContent='Vertex classes: '+classes+'\nV='+r.V+' · E='+r.E+' · F='+r.F+'\nEuler characteristic χ='+r.chi+'\nOrientability: '+(r.orientable?'orientable':'nonorientable')+'\nGenus: '+r.genus+'\nClassification: '+(r.orientable?'orientable surface of genus ':'nonorientable surface of genus ')+r.genus;}catch(e){result.textContent='Input problem: '+e.message;svg.replaceChildren()}}
+ document.getElementById('preset').addEventListener('change',e=>{document.getElementById('word').value=e.target.value;render()});
+ document.getElementById('analyze').addEventListener('click',render);
+ document.getElementById('print').addEventListener('click',()=>print());
+ render();
+})();
+</script></body></html>
