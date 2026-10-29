@@ -72,3 +72,14 @@ No credential or credit claim is implied by self-scored local practice.
 - Added additional browser tests for A/B learner proof isolation, offline workshop access, and 255px workshop readability; their CI run must pass before release.
 - The existing identity-boundary workflow reports three unrelated Science snapshot checks failing on the repository baseline; those are not repaired in this Topology scope.
 - Faculty review of individual mathematical claims is still needed before accredited or verified academic certification claims.
+
+## Placement and supported entry: supplemental 2026-10-29
+- Retained the existing advanced 40-question diagnostic page and replaced its original answer-key-always-first question bank with a separate `assets/readiness-question-bank-v2.js` containing 40 distinctive, six-strand prerequisite questions and exactly ten correct answers in each A–D position.
+- Diagnostic result `topology-readiness-v2` now carries an explicit assessment version. Old results and drafts are kept for historical review, never silently converted into evidence of passing the new assessment, and never used to lock newly authored question choices after refresh.
+- Added six conditional Unit 00 advanced prerequisite lessons (logic, maps, analysis, multivariable calculus, linear algebra, algebraic structures). Their sixty new practice questions use ten-question lesson checks; eight correct out of ten plus independent written proof and misconception evidence opens the next lesson.
+- The final bridge checkpoint samples four items from each lesson bank (24 total) and needs at least 20 correct with written mathematics and corrections. Scores are self-reported/local practice, not human-approved proof evaluation.
+- A new readiness routing helper serves diagnostic, conditional Unit 00, and official Unit 01 (or grandfathered prior course work). Official sequence remains 13 units / 36 weeks / 92 lessons, with historical progress preserved.
+- Learner profile now includes a readiness summary, direct diagnostic and bridge links, and a separate JSON evidence export. Offline service-worker seed downloads the 92 lesson routes and conditional prerequisites in bounded batches.
+- Browser QA covers placement routes, six bridge lessons, 80% corrections/refresh locks, 24-item exit, isolated learner records, historic draft recovery, placement answer balancing, and fully offline pre-cached Unit 00.
+- Site-wide existing Higher Learning identity validation involving unrelated Science snapshots must not be treated as a topology curriculum defect; it remains a separate release-blocking CI investigation.
+- **Review caveat:** readable public JavaScript and browser-local storage cannot provide secure high-stakes assessment, secret answer keys, or accredited academic credit. A faculty member should sample item difficulty, inspect the original worked proofs, and review constructed responses before credential issuance.
