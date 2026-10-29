@@ -425,6 +425,10 @@ def test_revised_diagnostic_80_percent_direct_route_and_profile(browser,site):
     page.wait_for_timeout(100)
     assert "80%" in page.locator("#assessmentMessage").inner_text()
     assert "Official Unit 01" in page.locator("#readinessOutcome").inner_text()
+    assert page.locator("#readinessOutcome .readiness-strand-table tbody tr").count()==6
+    with page.expect_download() as placement_file:
+        page.get_by_role("button",name="Export Six-Strand Placement Evidence").click()
+    assert placement_file.value.suggested_filename=="topology-placement-six-strand.json"
     history=page.evaluate("""() => JSON.parse(localStorage.getItem('khaemenes-topology-differential-geometry-assessment-v2:learner-1')).diagnostic.attempts""")
     assert history[-1]["assessmentVersion"]=="topology-readiness-v2"
     page.goto(site+BASE+"records/learner-profile.html",wait_until="domcontentloaded")
