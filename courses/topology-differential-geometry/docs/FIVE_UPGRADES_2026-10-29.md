@@ -7,7 +7,7 @@ Status: source-reviewed development changes; published browser testing and facul
 - Added an original, fully worked foundational proof studio to Unit 01 Lesson 01.
 - Added worked mathematical evidence, independent proof tasks, and faculty review criteria to the first lesson of each of Units 02–13.
 - Existing course structure and other lessons were preserved.
-- Follow-up: extend this deeper lesson standard to the other 79 lessons after checking student comprehension and faculty feedback.
+- Follow-up: extend the deeper worked-proof standard to the remaining 72 lessons after checking student comprehension and faculty feedback.
 
 ## 2. Monte Carlo assessment quality
 - Retired 276 repeated generic proof-habit questions from the active 368-item pool.
@@ -52,3 +52,12 @@ Status: source-reviewed development changes; published browser testing and facul
 5. Have a faculty reviewer validate all 78 new questions, revised distractors, and each of the 13 mathematical workshops.
 
 No credential or credit claim is implied by self-scored local practice.
+## Follow-through, 2026-10-29: full Unit 01 / shared student experience
+- Completed individually worked mathematical examples, counterexamples and proof-transfer tasks for Unit 01 Lessons 02–08. The full eight-lesson unit now has this deep instructional layer.
+- Introduced `assets/topic-check.js`: five topical questions (one lesson-specific original and four content-specific unit items) generated consistently on all 92 lessons without replacing their existing pages or assessments. Eighty percent means at least four correct of five.
+- Below 80%, save the answers and let the learner correct the same check; at/above 80%, lock the radios even after refresh.
+- The legacy generic quick check remains as hidden fallback but no longer authorizes the new `Mark Study Activity Reviewed` threshold. Prior study records are preserved, and an old reviewed marker is not silently promoted to topic-specific verified mastery.
+- Lesson records and topic results remain local and learner-scoped; the course learner profile summarizes topic passes and now exports the lesson evidence in JSON.
+- Fixed the pre-existing JavaScript pathway rendering failure (`querySelectorAll` required), added 255px narrow-device CSS, and introduced an automated Playwright test workflow for draft PRs.
+- New browser checks exercise multiple lessons, sub-80 retries, saved 80% locks, two learners, the new labs, evidence exports and 255px overflow. These checks are a test gate and their GitHub Actions status must be inspected before publishing.
+- **Release boundary remains:** none of these self-scored local practice checks provides an authenticated final examination or independently reviewed proof. Faculty review and a deliberate legacy-record migration remain outstanding.
