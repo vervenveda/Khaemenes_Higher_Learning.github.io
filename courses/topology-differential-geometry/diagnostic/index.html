@@ -27,7 +27,7 @@ function refresh(){
    breakdown.push({strand,correct:right,total,percent});
    const tr=document.createElement("tr"),td=document.createElement("td");td.textContent=strand;td.style.padding="9px";tr.append(td);
    const score=document.createElement("td");score.textContent=right+"/"+total+" · "+percent+"%";score.style.padding="9px";tr.append(score);
-   const support=document.createElement("td");support.style.padding="9px";const link=document.createElement("a");link.href="../units/unit-00/lessons/u00-l"+String(i+1).padStart(2,"0")+".html";link.textContent=percent<80?"Review Lesson "+(i+1):"Optional reinforcement";support.append(link);tr.append(support);body.append(tr);
+   const support=document.createElement("td");support.style.padding="9px";const link=document.createElement("a");link.href="../units/unit-00/lessons/u00-l"+String(i+1).padStart(2,"0")+".html";link.textContent=percent<80?"Lesson "+(i+1)+" support · open sequentially":"Lesson "+(i+1)+" · optional review";support.append(link);tr.append(support);body.append(tr);
   });
   table.append(body);el.append(table);
   const exportButton=document.createElement("button");exportButton.className="btn";exportButton.type="button";exportButton.textContent="Export Six-Strand Placement Evidence";
