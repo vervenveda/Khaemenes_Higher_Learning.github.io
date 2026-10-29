@@ -35,7 +35,7 @@ function storageGet(key){try{return localStorage.getItem(key)}catch{return null}
 function storageSet(key,value){try{localStorage.setItem(key,value);return true}catch{return false}}
 function loadAll(){try{const x=JSON.parse(storageGet(KEY)||"{}");return x&&typeof x==="object"?x:{}}catch{return {}}}
 function saveAll(data){try{return storageSet(KEY,JSON.stringify(data))}catch{return false}}
-function freshRecord(){return {complete:false,pathway:"Core",steps:{},reflection:"",quickScore:null,topicScore:null,topicPassed:false,topicChoices:[],topicBankVersion:0,updated:null}}
+function freshRecord(){return {complete:false,pathway:"Core",steps:{},reflection:"",quickScore:null,topicScore:null,topicPassed:false,topicChoices:[],topicBankVersion:0,workshopProof:"",workshopReflection:"",workshopReviewed:false,updated:null}}
 function normalizeRecord(raw){
   const base=freshRecord();
   if(raw===true||raw===false){base.complete=raw;return base}
@@ -50,6 +50,9 @@ function normalizeRecord(raw){
   base.topicPassed=raw.topicPassed===true;
   base.topicChoices=Array.isArray(raw.topicChoices)?raw.topicChoices.slice(0,5):[];
   base.topicBankVersion=Number(raw.topicBankVersion)||0;
+  base.workshopProof=typeof raw.workshopProof==="string"?raw.workshopProof:"";
+  base.workshopReflection=typeof raw.workshopReflection==="string"?raw.workshopReflection:"";
+  base.workshopReviewed=raw.workshopReviewed===true;
   base.updated=typeof raw.updated==="string"?raw.updated:null;
   return base;
 }
@@ -104,6 +107,10 @@ window.KHAEMENES_TOPOLOGY_TOPIC={
  get:()=>({score:rec.topicScore,passed:rec.topicPassed,choices:[...rec.topicChoices],version:rec.topicBankVersion}),
  save:(score,passed,choices)=>{rec.topicScore=score;rec.topicPassed=passed;rec.topicChoices=choices;rec.topicBankVersion=1;rec.steps.check=passed;persist()}
 };
+window.KHAEMENES_TOPOLOGY_WORKSHOP_EVIDENCE={
+ get:()=>({proof:rec.workshopProof,reflection:rec.workshopReflection,reviewed:rec.workshopReviewed}),
+ save:(proof,reflection)=>{rec.workshopProof=String(proof||"");rec.workshopReflection=String(reflection||"");if(rec.workshopReviewed)rec.workshopReviewed=false;persist()}
+};
 const courseScript=document.currentScript?.src||"";
 if(courseScript){
  const bankScript=document.createElement("script");
@@ -113,6 +120,20 @@ if(courseScript){
    checkScript.src=new URL("topic-check.js",courseScript).href;
    document.head.append(checkScript);
  };
+ const unit=Number(body.dataset.unit);
+ const lessonNumber=Number(body.dataset.lessonNumber);
+ if(unit>=2&&unit<=13&&lessonNumber>=2){
+  const dataScript=document.createElement("script");
+  const group=Math.floor((unit-2)/3)+1;
+  dataScript.src=new URL("math-workshops-group-"+group+".js",courseScript).href;
+  dataScript.onload=()=>{
+    const renderScript=document.createElement("script");
+    renderScript.src=new URL("math-workshop-render.js",courseScript).href;
+    document.head.append(renderScript);
+  };
+  dataScript.onerror=()=>{const p=document.createElement("p");p.textContent="Extended proof workshop is unavailable offline; your original lesson, practice and saved progress remain available.";document.querySelector("#examples")?.append(p)};
+  document.head.append(dataScript);
+ }
  bankScript.onerror=()=>{
   const notice=document.getElementById("quickCheckResult");
   if(notice)notice.textContent="Enhanced topic check unavailable. Reconnect or refresh once the course files are cached. Existing study notes remain saved.";
