@@ -73,11 +73,29 @@ body[data-khae-campus-landing="true"] #khaeLandingUtilityDock>[data-landing-tool
 body[data-khae-campus-landing="true"] #khaeLandingUtilityDock>[data-landing-tool="contribute"]{order:50!important}
 body[data-khae-campus-landing="true"] #khaeLandingUtilityDock>:is(#vnvBetaProgramLink,[data-landing-tool="beta"]){order:60!important}
 @media(max-width:380px){body[data-khae-campus-landing="true"] #khaeLandingUtilityDock{width:min(230px,calc(100vw - 16px))!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;right:8px!important;bottom:8px!important;padding:8px!important;gap:6px!important}body[data-khae-campus-landing="true"] #khaeLandingUtilityDock>:is(a,button){font-size:8px!important}}
+/* Final legibility overrides: stronger contrast and deliberate button spacing. */
+.grid>.card .actions>.btn,.grid>.card .actions>.btn:link,.grid>.card .actions>.btn:visited{min-height:46px;height:auto;line-height:1.35!important;padding:9px 7px!important;font-size:9px!important;font-weight:400!important;letter-spacing:0!important;white-space:normal!important;overflow-wrap:normal!important;word-break:normal!important}
+.grid>.card .actions>.btn.gold,.grid>.card .actions>.btn.gold:link,.grid>.card .actions>.btn.gold:visited{color:#10221a!important;background:#ebcf8d!important;border:1px solid #a57a35!important}
+.grid>.card .actions>.btn:not(.secondary):not(.gold){color:#fff!important;background:#102b43!important}
+.grid>.card .actions>.btn.secondary{color:#152b3a!important;background:#fafdfc!important}
+body[data-khae-campus-landing="true"] #khaeLandingUtilityDock [data-landing-tool]{font-size:9px!important;white-space:nowrap!important}
+body[data-khae-campus-landing="true"] #khaeLandingUtilityDock [data-landing-tool] span{font-size:inherit!important}
 </style>
 <script>
 document.addEventListener("DOMContentLoaded",()=>{
  const dock=document.getElementById("khaeLandingUtilityDock");
  if(!dock)return;
+ // Exact Academy home model: only Profile, Search, Updates, Mentor, Support, Beta.
+ for(const control of [...dock.querySelectorAll(':scope > [data-landing-tool]')]){
+   if(["home","academy","parents"].includes(control.dataset.landingTool))control.remove();
+ }
+
+ const existingProfile=dock.querySelector('[data-landing-tool="profile"]');
+ if(existingProfile){
+   existingProfile.href="https://vervenveda.com/Khaemenes_Academy.github.io/adult/";
+   existingProfile.textContent="Profile";
+   existingProfile.setAttribute("aria-label","Adult Scholar Profile");
+ }
  if(!dock.querySelector('[data-landing-tool="profile"]')){
    const profile=document.createElement("a");
    profile.href="https://vervenveda.com/Khaemenes_Academy.github.io/adult/";
