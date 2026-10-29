@@ -8,12 +8,13 @@
       "prompt": "State and justify the governing topological or geometric principle for Why Topology? Space Beyond Distance.",
       "options": [
         "Begin from the exact definitions, verify all hypotheses, use τ⊆P(X), distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
-        "A diagram alone proves every case.",
-        "The converse may replace an implication without proof.",
-        "Several examples establish a universal theorem."
+        "Every topology must arise from a metric.",
+        "A continuous map always maps open sets to open sets.",
+        "Every singleton is open in every topology."
       ],
       "answer": 0,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use τ⊆P(X), distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use τ⊆P(X), distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use τ⊆P(X), distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u01-l02-q1",
@@ -22,13 +23,14 @@
       "skill": "concept and proof",
       "prompt": "How is a proposed family τ verified to be a topology on X?",
       "options": [
-        "The converse may replace an implication without proof.",
-        "Several examples establish a universal theorem.",
-        "A diagram alone proves every case.",
+        "Every topology must arise from a metric.",
+        "A continuous map always maps open sets to open sets.",
+        "Every singleton is open in every topology.",
         "Check that ∅ and X lie in τ, arbitrary unions of members of τ lie in τ, and finite intersections of members of τ lie in τ."
       ],
       "answer": 3,
-      "explanation": "Check that ∅ and X lie in τ, arbitrary unions of members of τ lie in τ, and finite intersections of members of τ lie in τ."
+      "explanation": "Check that ∅ and X lie in τ, arbitrary unions of members of τ lie in τ, and finite intersections of members of τ lie in τ.",
+      "answer_text": "Check that ∅ and X lie in τ, arbitrary unions of members of τ lie in τ, and finite intersections of members of τ lie in τ."
     },
     {
       "id": "u01-l03-q1",
@@ -37,13 +39,14 @@
       "skill": "concept and proof",
       "prompt": "How can a closed-set statement be converted into an open-set statement?",
       "options": [
-        "The converse may replace an implication without proof.",
-        "A diagram alone proves every case.",
+        "A continuous map always maps open sets to open sets.",
+        "Every singleton is open in every topology.",
         "Take complements and use De Morgan’s laws; F is closed exactly when X\\F is open.",
-        "Several examples establish a universal theorem."
+        "Every topology must arise from a metric."
       ],
       "answer": 2,
-      "explanation": "Take complements and use De Morgan’s laws; F is closed exactly when X\\F is open."
+      "explanation": "Take complements and use De Morgan’s laws; F is closed exactly when X\\F is open.",
+      "answer_text": "Take complements and use De Morgan’s laws; F is closed exactly when X\\F is open."
     },
     {
       "id": "u01-l04-q1",
@@ -52,13 +55,14 @@
       "skill": "concept and proof",
       "prompt": "What characterizes x∈cl(A)?",
       "options": [
-        "The converse may replace an implication without proof.",
-        "Several examples establish a universal theorem.",
-        "A diagram alone proves every case.",
-        "Every open neighborhood of x intersects A. In first-countable spaces this is equivalent to a sequence from A converging to x."
+        "Every singleton is open in every topology.",
+        "Every open neighborhood of x intersects A. In first-countable spaces this is equivalent to a sequence from A converging to x.",
+        "Every topology must arise from a metric.",
+        "A continuous map always maps open sets to open sets."
       ],
-      "answer": 3,
-      "explanation": "Every open neighborhood of x intersects A. In first-countable spaces this is equivalent to a sequence from A converging to x."
+      "answer": 1,
+      "explanation": "Every open neighborhood of x intersects A. In first-countable spaces this is equivalent to a sequence from A converging to x.",
+      "answer_text": "Every open neighborhood of x intersects A. In first-countable spaces this is equivalent to a sequence from A converging to x."
     },
     {
       "id": "u01-l05-q1",
@@ -68,12 +72,13 @@
       "prompt": "What must a collection B satisfy to be a basis?",
       "options": [
         "Every point lies in a basis element, and intersections of basis elements contain a basis element around each common point.",
-        "The converse may replace an implication without proof.",
-        "Several examples establish a universal theorem.",
-        "A diagram alone proves every case."
+        "Every topology must arise from a metric.",
+        "A continuous map always maps open sets to open sets.",
+        "Every singleton is open in every topology."
       ],
       "answer": 0,
-      "explanation": "Every point lies in a basis element, and intersections of basis elements contain a basis element around each common point."
+      "explanation": "Every point lies in a basis element, and intersections of basis elements contain a basis element around each common point.",
+      "answer_text": "Every point lies in a basis element, and intersections of basis elements contain a basis element around each common point."
     },
     {
       "id": "u01-l06-q1",
@@ -82,13 +87,14 @@
       "skill": "concept and proof",
       "prompt": "What must a collection B satisfy to be a basis?",
       "options": [
-        "Several examples establish a universal theorem.",
-        "The converse may replace an implication without proof.",
-        "A diagram alone proves every case.",
+        "Every topology must arise from a metric.",
+        "A continuous map always maps open sets to open sets.",
+        "Every singleton is open in every topology.",
         "Every point lies in a basis element, and intersections of basis elements contain a basis element around each common point."
       ],
       "answer": 3,
-      "explanation": "Every point lies in a basis element, and intersections of basis elements contain a basis element around each common point."
+      "explanation": "Every point lies in a basis element, and intersections of basis elements contain a basis element around each common point.",
+      "answer_text": "Every point lies in a basis element, and intersections of basis elements contain a basis element around each common point."
     },
     {
       "id": "u01-l07-q1",
@@ -97,13 +103,14 @@
       "skill": "concept and proof",
       "prompt": "What is the topological definition of continuity?",
       "options": [
-        "A diagram alone proves every case.",
-        "Several examples establish a universal theorem.",
-        "The converse may replace an implication without proof.",
-        "For every open U in the codomain, f⁻¹(U) is open in the domain."
+        "A continuous map always maps open sets to open sets.",
+        "Every singleton is open in every topology.",
+        "For every open U in the codomain, f⁻¹(U) is open in the domain.",
+        "Every topology must arise from a metric."
       ],
-      "answer": 3,
-      "explanation": "For every open U in the codomain, f⁻¹(U) is open in the domain."
+      "answer": 2,
+      "explanation": "For every open U in the codomain, f⁻¹(U) is open in the domain.",
+      "answer_text": "For every open U in the codomain, f⁻¹(U) is open in the domain."
     },
     {
       "id": "u01-l08-q1",
@@ -112,13 +119,14 @@
       "skill": "concept and proof",
       "prompt": "What proves X and Y are homeomorphic?",
       "options": [
-        "The converse may replace an implication without proof.",
-        "A diagram alone proves every case.",
-        "Several examples establish a universal theorem.",
-        "Exhibit a bijection f:X→Y that is continuous and whose inverse is continuous."
+        "Every singleton is open in every topology.",
+        "Exhibit a bijection f:X→Y that is continuous and whose inverse is continuous.",
+        "Every topology must arise from a metric.",
+        "A continuous map always maps open sets to open sets."
       ],
-      "answer": 3,
-      "explanation": "Exhibit a bijection f:X→Y that is continuous and whose inverse is continuous."
+      "answer": 1,
+      "explanation": "Exhibit a bijection f:X→Y that is continuous and whose inverse is continuous.",
+      "answer_text": "Exhibit a bijection f:X→Y that is continuous and whose inverse is continuous."
     },
     {
       "id": "u02-l01-q1",
@@ -127,13 +135,14 @@
       "skill": "concept and proof",
       "prompt": "How does a metric produce a topology?",
       "options": [
-        "Several examples establish a universal theorem.",
         "Declare a set open when each point contains a metric ball lying inside the set; the resulting family satisfies the topology axioms.",
-        "The converse may replace an implication without proof.",
-        "A diagram alone proves every case."
+        "Every metric space is complete.",
+        "Two metrics with the same open sets must have identical distances.",
+        "Every Hausdorff space is compact."
       ],
-      "answer": 1,
-      "explanation": "Declare a set open when each point contains a metric ball lying inside the set; the resulting family satisfies the topology axioms."
+      "answer": 0,
+      "explanation": "Declare a set open when each point contains a metric ball lying inside the set; the resulting family satisfies the topology axioms.",
+      "answer_text": "Declare a set open when each point contains a metric ball lying inside the set; the resulting family satisfies the topology axioms."
     },
     {
       "id": "u02-l02-q1",
@@ -142,13 +151,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Convergence, Cauchy Sequences and Completeness.",
       "options": [
-        "A diagram alone proves every case.",
-        "Begin from the exact definitions, verify all hypotheses, use x_n→x, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
-        "Several examples establish a universal theorem.",
-        "The converse may replace an implication without proof."
+        "Every metric space is complete.",
+        "Two metrics with the same open sets must have identical distances.",
+        "Every Hausdorff space is compact.",
+        "Begin from the exact definitions, verify all hypotheses, use x_n→x, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
       ],
-      "answer": 1,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use x_n→x, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "answer": 3,
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use x_n→x, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use x_n→x, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u02-l03-q1",
@@ -157,13 +167,14 @@
       "skill": "concept and proof",
       "prompt": "How does a metric produce a topology?",
       "options": [
-        "A diagram alone proves every case.",
-        "Several examples establish a universal theorem.",
+        "Two metrics with the same open sets must have identical distances.",
+        "Every Hausdorff space is compact.",
         "Declare a set open when each point contains a metric ball lying inside the set; the resulting family satisfies the topology axioms.",
-        "The converse may replace an implication without proof."
+        "Every metric space is complete."
       ],
       "answer": 2,
-      "explanation": "Declare a set open when each point contains a metric ball lying inside the set; the resulting family satisfies the topology axioms."
+      "explanation": "Declare a set open when each point contains a metric ball lying inside the set; the resulting family satisfies the topology axioms.",
+      "answer_text": "Declare a set open when each point contains a metric ball lying inside the set; the resulting family satisfies the topology axioms."
     },
     {
       "id": "u02-l04-q1",
@@ -172,13 +183,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for First Countability and Sequence Tests.",
       "options": [
-        "Several examples establish a universal theorem.",
+        "Every Hausdorff space is compact.",
         "Begin from the exact definitions, verify all hypotheses, use x∈cl(A) via sequences, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
-        "The converse may replace an implication without proof.",
-        "A diagram alone proves every case."
+        "Every metric space is complete.",
+        "Two metrics with the same open sets must have identical distances."
       ],
       "answer": 1,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use x∈cl(A) via sequences, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use x∈cl(A) via sequences, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use x∈cl(A) via sequences, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u02-l05-q1",
@@ -187,13 +199,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Second Countability, Separability and Lindelöf Ideas.",
       "options": [
-        "The converse may replace an implication without proof.",
-        "Several examples establish a universal theorem.",
         "Begin from the exact definitions, verify all hypotheses, use second countable ⇒ separable, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
-        "A diagram alone proves every case."
+        "Every metric space is complete.",
+        "Two metrics with the same open sets must have identical distances.",
+        "Every Hausdorff space is compact."
       ],
-      "answer": 2,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use second countable ⇒ separable, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "answer": 0,
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use second countable ⇒ separable, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use second countable ⇒ separable, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u02-l06-q1",
@@ -202,13 +215,14 @@
       "skill": "concept and proof",
       "prompt": "What is the Hausdorff condition?",
       "options": [
-        "Any two distinct points have disjoint open neighborhoods.",
-        "Several examples establish a universal theorem.",
-        "The converse may replace an implication without proof.",
-        "A diagram alone proves every case."
+        "Every metric space is complete.",
+        "Two metrics with the same open sets must have identical distances.",
+        "Every Hausdorff space is compact.",
+        "Any two distinct points have disjoint open neighborhoods."
       ],
-      "answer": 0,
-      "explanation": "Any two distinct points have disjoint open neighborhoods."
+      "answer": 3,
+      "explanation": "Any two distinct points have disjoint open neighborhoods.",
+      "answer_text": "Any two distinct points have disjoint open neighborhoods."
     },
     {
       "id": "u02-l07-q1",
@@ -217,13 +231,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Regularity, Normality and Metrization Foundations.",
       "options": [
-        "A diagram alone proves every case.",
-        "The converse may replace an implication without proof.",
+        "Two metrics with the same open sets must have identical distances.",
+        "Every Hausdorff space is compact.",
         "Begin from the exact definitions, verify all hypotheses, use normal + countability ⇒ metrization themes, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
-        "Several examples establish a universal theorem."
+        "Every metric space is complete."
       ],
       "answer": 2,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use normal + countability ⇒ metrization themes, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use normal + countability ⇒ metrization themes, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use normal + countability ⇒ metrization themes, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u03-l01-q1",
@@ -232,13 +247,14 @@
       "skill": "concept and proof",
       "prompt": "How is compactness proved from an open cover?",
       "options": [
-        "Several examples establish a universal theorem.",
+        "Coordinate projections of product spaces are never continuous.",
         "Start with an arbitrary open cover and construct or invoke a finite subcover, keeping the cover arbitrary.",
-        "The converse may replace an implication without proof.",
-        "A diagram alone proves every case."
+        "A compact space must contain finitely many points.",
+        "Every connected space is path connected."
       ],
       "answer": 1,
-      "explanation": "Start with an arbitrary open cover and construct or invoke a finite subcover, keeping the cover arbitrary."
+      "explanation": "Start with an arbitrary open cover and construct or invoke a finite subcover, keeping the cover arbitrary.",
+      "answer_text": "Start with an arbitrary open cover and construct or invoke a finite subcover, keeping the cover arbitrary."
     },
     {
       "id": "u03-l02-q1",
@@ -247,13 +263,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Compactness in Metric and Euclidean Spaces.",
       "options": [
-        "Several examples establish a universal theorem.",
         "Begin from the exact definitions, verify all hypotheses, use Heine–Borel in Rⁿ, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
-        "The converse may replace an implication without proof.",
-        "A diagram alone proves every case."
+        "A compact space must contain finitely many points.",
+        "Every connected space is path connected.",
+        "Coordinate projections of product spaces are never continuous."
       ],
-      "answer": 1,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use Heine–Borel in Rⁿ, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "answer": 0,
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use Heine–Borel in Rⁿ, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use Heine–Borel in Rⁿ, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u03-l03-q1",
@@ -262,13 +279,14 @@
       "skill": "concept and proof",
       "prompt": "What compactness principle controls a continuous image?",
       "options": [
-        "The converse may replace an implication without proof.",
-        "Several examples establish a universal theorem.",
-        "A continuous image of a compact space is compact; in Hausdorff spaces compact subsets are closed.",
-        "A diagram alone proves every case."
+        "A compact space must contain finitely many points.",
+        "Every connected space is path connected.",
+        "Coordinate projections of product spaces are never continuous.",
+        "A continuous image of a compact space is compact; in Hausdorff spaces compact subsets are closed."
       ],
-      "answer": 2,
-      "explanation": "A continuous image of a compact space is compact; in Hausdorff spaces compact subsets are closed."
+      "answer": 3,
+      "explanation": "A continuous image of a compact space is compact; in Hausdorff spaces compact subsets are closed.",
+      "answer_text": "A continuous image of a compact space is compact; in Hausdorff spaces compact subsets are closed."
     },
     {
       "id": "u03-l04-q1",
@@ -277,13 +295,14 @@
       "skill": "concept and proof",
       "prompt": "How is disconnectedness witnessed?",
       "options": [
-        "The converse may replace an implication without proof.",
-        "Several examples establish a universal theorem.",
+        "Every connected space is path connected.",
+        "Coordinate projections of product spaces are never continuous.",
         "Find two disjoint nonempty open subsets whose union is the whole space.",
-        "A diagram alone proves every case."
+        "A compact space must contain finitely many points."
       ],
       "answer": 2,
-      "explanation": "Find two disjoint nonempty open subsets whose union is the whole space."
+      "explanation": "Find two disjoint nonempty open subsets whose union is the whole space.",
+      "answer_text": "Find two disjoint nonempty open subsets whose union is the whole space."
     },
     {
       "id": "u03-l05-q1",
@@ -292,13 +311,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Path Connectedness and Components.",
       "options": [
+        "Coordinate projections of product spaces are never continuous.",
         "Begin from the exact definitions, verify all hypotheses, use γ:[0,1]→X, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
-        "Several examples establish a universal theorem.",
-        "The converse may replace an implication without proof.",
-        "A diagram alone proves every case."
+        "A compact space must contain finitely many points.",
+        "Every connected space is path connected."
       ],
-      "answer": 0,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use γ:[0,1]→X, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "answer": 1,
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use γ:[0,1]→X, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use γ:[0,1]→X, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u03-l06-q1",
@@ -307,13 +327,14 @@
       "skill": "concept and proof",
       "prompt": "How is continuity into a product checked?",
       "options": [
-        "The converse may replace an implication without proof.",
         "A map into a product is continuous exactly when each coordinate projection composed with the map is continuous.",
-        "Several examples establish a universal theorem.",
-        "A diagram alone proves every case."
+        "A compact space must contain finitely many points.",
+        "Every connected space is path connected.",
+        "Coordinate projections of product spaces are never continuous."
       ],
-      "answer": 1,
-      "explanation": "A map into a product is continuous exactly when each coordinate projection composed with the map is continuous."
+      "answer": 0,
+      "explanation": "A map into a product is continuous exactly when each coordinate projection composed with the map is continuous.",
+      "answer_text": "A map into a product is continuous exactly when each coordinate projection composed with the map is continuous."
     },
     {
       "id": "u03-l07-q1",
@@ -322,13 +343,14 @@
       "skill": "concept and proof",
       "prompt": "What defines the quotient topology?",
       "options": [
-        "A diagram alone proves every case.",
-        "Several examples establish a universal theorem.",
-        "U⊆X/~ is open exactly when its preimage under the quotient map is open in X.",
-        "The converse may replace an implication without proof."
+        "A compact space must contain finitely many points.",
+        "Every connected space is path connected.",
+        "Coordinate projections of product spaces are never continuous.",
+        "U⊆X/~ is open exactly when its preimage under the quotient map is open in X."
       ],
-      "answer": 2,
-      "explanation": "U⊆X/~ is open exactly when its preimage under the quotient map is open in X."
+      "answer": 3,
+      "explanation": "U⊆X/~ is open exactly when its preimage under the quotient map is open in X.",
+      "answer_text": "U⊆X/~ is open exactly when its preimage under the quotient map is open in X."
     },
     {
       "id": "u04-l01-q1",
@@ -337,13 +359,14 @@
       "skill": "concept and proof",
       "prompt": "What is a homotopy between f and g?",
       "options": [
-        "The converse may replace an implication without proof.",
+        "Every covering map is globally one-to-one.",
+        "A homotopy requires both maps to remain pointwise equal at all intermediate times.",
         "A continuous H:X×[0,1]→Y with H(x,0)=f(x) and H(x,1)=g(x).",
-        "Several examples establish a universal theorem.",
-        "A diagram alone proves every case."
+        "The fundamental group of any contractible space is the integers."
       ],
-      "answer": 1,
-      "explanation": "A continuous H:X×[0,1]→Y with H(x,0)=f(x) and H(x,1)=g(x)."
+      "answer": 2,
+      "explanation": "A continuous H:X×[0,1]→Y with H(x,0)=f(x) and H(x,1)=g(x).",
+      "answer_text": "A continuous H:X×[0,1]→Y with H(x,0)=f(x) and H(x,1)=g(x)."
     },
     {
       "id": "u04-l02-q1",
@@ -352,13 +375,14 @@
       "skill": "concept and proof",
       "prompt": "What is a homotopy between f and g?",
       "options": [
-        "A diagram alone proves every case.",
+        "A homotopy requires both maps to remain pointwise equal at all intermediate times.",
         "A continuous H:X×[0,1]→Y with H(x,0)=f(x) and H(x,1)=g(x).",
-        "Several examples establish a universal theorem.",
-        "The converse may replace an implication without proof."
+        "The fundamental group of any contractible space is the integers.",
+        "Every covering map is globally one-to-one."
       ],
       "answer": 1,
-      "explanation": "A continuous H:X×[0,1]→Y with H(x,0)=f(x) and H(x,1)=g(x)."
+      "explanation": "A continuous H:X×[0,1]→Y with H(x,0)=f(x) and H(x,1)=g(x).",
+      "answer_text": "A continuous H:X×[0,1]→Y with H(x,0)=f(x) and H(x,1)=g(x)."
     },
     {
       "id": "u04-l03-q1",
@@ -368,12 +392,13 @@
       "prompt": "What does π₁(X,x₀) encode?",
       "options": [
         "It is the group of based-loop homotopy classes under concatenation and records one-dimensional holes.",
-        "The converse may replace an implication without proof.",
-        "A diagram alone proves every case.",
-        "Several examples establish a universal theorem."
+        "The fundamental group of any contractible space is the integers.",
+        "Every covering map is globally one-to-one.",
+        "A homotopy requires both maps to remain pointwise equal at all intermediate times."
       ],
       "answer": 0,
-      "explanation": "It is the group of based-loop homotopy classes under concatenation and records one-dimensional holes."
+      "explanation": "It is the group of based-loop homotopy classes under concatenation and records one-dimensional holes.",
+      "answer_text": "It is the group of based-loop homotopy classes under concatenation and records one-dimensional holes."
     },
     {
       "id": "u04-l04-q1",
@@ -382,13 +407,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Simply Connected Spaces and Contractibility.",
       "options": [
-        "Several examples establish a universal theorem.",
-        "The converse may replace an implication without proof.",
-        "Begin from the exact definitions, verify all hypotheses, use id_X≃constant, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
-        "A diagram alone proves every case."
+        "The fundamental group of any contractible space is the integers.",
+        "Every covering map is globally one-to-one.",
+        "A homotopy requires both maps to remain pointwise equal at all intermediate times.",
+        "Begin from the exact definitions, verify all hypotheses, use id_X≃constant, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
       ],
-      "answer": 2,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use id_X≃constant, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "answer": 3,
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use id_X≃constant, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use id_X≃constant, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u04-l05-q1",
@@ -397,13 +423,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Seifert–van Kampen Strategy.",
       "options": [
-        "A diagram alone proves every case.",
-        "Several examples establish a universal theorem.",
-        "The converse may replace an implication without proof.",
-        "Begin from the exact definitions, verify all hypotheses, use π₁(U∪V) from π₁(U),π₁(V), distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+        "Every covering map is globally one-to-one.",
+        "A homotopy requires both maps to remain pointwise equal at all intermediate times.",
+        "Begin from the exact definitions, verify all hypotheses, use π₁(U∪V) from π₁(U),π₁(V), distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+        "The fundamental group of any contractible space is the integers."
       ],
-      "answer": 3,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use π₁(U∪V) from π₁(U),π₁(V), distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "answer": 2,
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use π₁(U∪V) from π₁(U),π₁(V), distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use π₁(U∪V) from π₁(U),π₁(V), distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u04-l06-q1",
@@ -412,13 +439,14 @@
       "skill": "concept and proof",
       "prompt": "Which property makes covering-space lifting powerful?",
       "options": [
-        "Several examples establish a universal theorem.",
-        "A diagram alone proves every case.",
+        "A homotopy requires both maps to remain pointwise equal at all intermediate times.",
         "Paths lift uniquely after choosing a starting point, and homotopies lift under compatible initial data.",
-        "The converse may replace an implication without proof."
+        "The fundamental group of any contractible space is the integers.",
+        "Every covering map is globally one-to-one."
       ],
-      "answer": 2,
-      "explanation": "Paths lift uniquely after choosing a starting point, and homotopies lift under compatible initial data."
+      "answer": 1,
+      "explanation": "Paths lift uniquely after choosing a starting point, and homotopies lift under compatible initial data.",
+      "answer_text": "Paths lift uniquely after choosing a starting point, and homotopies lift under compatible initial data."
     },
     {
       "id": "u04-l07-q1",
@@ -427,13 +455,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Deck Transformations and Classification Examples.",
       "options": [
-        "The converse may replace an implication without proof.",
         "Begin from the exact definitions, verify all hypotheses, use Deck(E/B), distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
-        "Several examples establish a universal theorem.",
-        "A diagram alone proves every case."
+        "The fundamental group of any contractible space is the integers.",
+        "Every covering map is globally one-to-one.",
+        "A homotopy requires both maps to remain pointwise equal at all intermediate times."
       ],
-      "answer": 1,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use Deck(E/B), distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "answer": 0,
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use Deck(E/B), distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use Deck(E/B), distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u05-l01-q1",
@@ -442,13 +471,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Simplicial Complexes and Triangulated Spaces.",
       "options": [
-        "The converse may replace an implication without proof.",
-        "Begin from the exact definitions, verify all hypotheses, use K finite simplicial complex, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
-        "Several examples establish a universal theorem.",
-        "A diagram alone proves every case."
+        "Every cycle in a chain complex is a boundary.",
+        "Applying the boundary operator twice yields the identity.",
+        "Homology only measures numerical metric distance.",
+        "Begin from the exact definitions, verify all hypotheses, use K finite simplicial complex, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
       ],
-      "answer": 1,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use K finite simplicial complex, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "answer": 3,
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use K finite simplicial complex, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use K finite simplicial complex, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u05-l02-q1",
@@ -457,13 +487,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for CW Complexes and Cell Attachments.",
       "options": [
-        "Several examples establish a universal theorem.",
-        "The converse may replace an implication without proof.",
+        "Applying the boundary operator twice yields the identity.",
+        "Homology only measures numerical metric distance.",
         "Begin from the exact definitions, verify all hypotheses, use Xⁿ=Xⁿ⁻¹∪eⁿ, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
-        "A diagram alone proves every case."
+        "Every cycle in a chain complex is a boundary."
       ],
       "answer": 2,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use Xⁿ=Xⁿ⁻¹∪eⁿ, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use Xⁿ=Xⁿ⁻¹∪eⁿ, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use Xⁿ=Xⁿ⁻¹∪eⁿ, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u05-l03-q1",
@@ -472,13 +503,14 @@
       "skill": "concept and proof",
       "prompt": "Why is ∂²=0 essential?",
       "options": [
-        "The converse may replace an implication without proof.",
-        "Several examples establish a universal theorem.",
-        "A diagram alone proves every case.",
-        "It guarantees every boundary is a cycle, so the quotient ker∂/im∂ defining homology is meaningful."
+        "Homology only measures numerical metric distance.",
+        "It guarantees every boundary is a cycle, so the quotient ker∂/im∂ defining homology is meaningful.",
+        "Every cycle in a chain complex is a boundary.",
+        "Applying the boundary operator twice yields the identity."
       ],
-      "answer": 3,
-      "explanation": "It guarantees every boundary is a cycle, so the quotient ker∂/im∂ defining homology is meaningful."
+      "answer": 1,
+      "explanation": "It guarantees every boundary is a cycle, so the quotient ker∂/im∂ defining homology is meaningful.",
+      "answer_text": "It guarantees every boundary is a cycle, so the quotient ker∂/im∂ defining homology is meaningful."
     },
     {
       "id": "u05-l04-q1",
@@ -487,13 +519,14 @@
       "skill": "concept and proof",
       "prompt": "What does H_n measure?",
       "options": [
-        "The converse may replace an implication without proof.",
         "It records n-dimensional cycles modulo those that bound higher-dimensional chains.",
-        "A diagram alone proves every case.",
-        "Several examples establish a universal theorem."
+        "Every cycle in a chain complex is a boundary.",
+        "Applying the boundary operator twice yields the identity.",
+        "Homology only measures numerical metric distance."
       ],
-      "answer": 1,
-      "explanation": "It records n-dimensional cycles modulo those that bound higher-dimensional chains."
+      "answer": 0,
+      "explanation": "It records n-dimensional cycles modulo those that bound higher-dimensional chains.",
+      "answer_text": "It records n-dimensional cycles modulo those that bound higher-dimensional chains."
     },
     {
       "id": "u05-l05-q1",
@@ -502,13 +535,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Exact Sequences and Mayer–Vietoris Strategy.",
       "options": [
-        "The converse may replace an implication without proof.",
-        "Several examples establish a universal theorem.",
-        "A diagram alone proves every case.",
+        "Every cycle in a chain complex is a boundary.",
+        "Applying the boundary operator twice yields the identity.",
+        "Homology only measures numerical metric distance.",
         "Begin from the exact definitions, verify all hypotheses, use im f=ker g, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
       ],
       "answer": 3,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use im f=ker g, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use im f=ker g, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use im f=ker g, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u05-l06-q1",
@@ -517,13 +551,14 @@
       "skill": "concept and proof",
       "prompt": "How is Euler characteristic computed homologically?",
       "options": [
-        "A diagram alone proves every case.",
+        "Applying the boundary operator twice yields the identity.",
+        "Homology only measures numerical metric distance.",
         "For a finite complex, χ equals the alternating sum of cell counts and also the alternating sum of Betti numbers.",
-        "Several examples establish a universal theorem.",
-        "The converse may replace an implication without proof."
+        "Every cycle in a chain complex is a boundary."
       ],
-      "answer": 1,
-      "explanation": "For a finite complex, χ equals the alternating sum of cell counts and also the alternating sum of Betti numbers."
+      "answer": 2,
+      "explanation": "For a finite complex, χ equals the alternating sum of cell counts and also the alternating sum of Betti numbers.",
+      "answer_text": "For a finite complex, χ equals the alternating sum of cell counts and also the alternating sum of Betti numbers."
     },
     {
       "id": "u05-l07-q1",
@@ -532,13 +567,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Cohomology, Products and Duality Preview.",
       "options": [
-        "The converse may replace an implication without proof.",
-        "Several examples establish a universal theorem.",
-        "A diagram alone proves every case.",
-        "Begin from the exact definitions, verify all hypotheses, use H^n=kerδ/imδ, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+        "Homology only measures numerical metric distance.",
+        "Begin from the exact definitions, verify all hypotheses, use H^n=kerδ/imδ, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+        "Every cycle in a chain complex is a boundary.",
+        "Applying the boundary operator twice yields the identity."
       ],
-      "answer": 3,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use H^n=kerδ/imδ, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "answer": 1,
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use H^n=kerδ/imδ, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use H^n=kerδ/imδ, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u06-l01-q1",
@@ -547,13 +583,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Topological Manifolds and Local Euclidean Structure.",
       "options": [
-        "A diagram alone proves every case.",
         "Begin from the exact definitions, verify all hypotheses, use M locally homeomorphic to Rⁿ, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
-        "Several examples establish a universal theorem.",
-        "The converse may replace an implication without proof."
+        "Every continuous bijection between manifolds is a diffeomorphism.",
+        "Transition maps in a smooth atlas need not be continuous.",
+        "Tangent vectors can only be ambient arrows in an embedding."
       ],
-      "answer": 1,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use M locally homeomorphic to Rⁿ, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "answer": 0,
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use M locally homeomorphic to Rⁿ, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use M locally homeomorphic to Rⁿ, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u06-l02-q1",
@@ -562,13 +599,14 @@
       "skill": "concept and proof",
       "prompt": "What makes two manifold charts smoothly compatible?",
       "options": [
-        "A diagram alone proves every case.",
-        "Their transition maps are smooth wherever the chart domains overlap.",
-        "The converse may replace an implication without proof.",
-        "Several examples establish a universal theorem."
+        "Every continuous bijection between manifolds is a diffeomorphism.",
+        "Transition maps in a smooth atlas need not be continuous.",
+        "Tangent vectors can only be ambient arrows in an embedding.",
+        "Their transition maps are smooth wherever the chart domains overlap."
       ],
-      "answer": 1,
-      "explanation": "Their transition maps are smooth wherever the chart domains overlap."
+      "answer": 3,
+      "explanation": "Their transition maps are smooth wherever the chart domains overlap.",
+      "answer_text": "Their transition maps are smooth wherever the chart domains overlap."
     },
     {
       "id": "u06-l03-q1",
@@ -577,13 +615,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Smooth Maps and Diffeomorphisms.",
       "options": [
-        "The converse may replace an implication without proof.",
-        "A diagram alone proves every case.",
-        "Several examples establish a universal theorem.",
-        "Begin from the exact definitions, verify all hypotheses, use F:M→N smooth, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+        "Transition maps in a smooth atlas need not be continuous.",
+        "Tangent vectors can only be ambient arrows in an embedding.",
+        "Begin from the exact definitions, verify all hypotheses, use F:M→N smooth, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+        "Every continuous bijection between manifolds is a diffeomorphism."
       ],
-      "answer": 3,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use F:M→N smooth, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "answer": 2,
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use F:M→N smooth, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use F:M→N smooth, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u06-l04-q1",
@@ -592,13 +631,14 @@
       "skill": "concept and proof",
       "prompt": "Give two equivalent views of a tangent vector.",
       "options": [
-        "A diagram alone proves every case.",
-        "Several examples establish a universal theorem.",
+        "Tangent vectors can only be ambient arrows in an embedding.",
         "It can be represented by the velocity of a curve through p or as a derivation on germs of smooth functions at p.",
-        "The converse may replace an implication without proof."
+        "Every continuous bijection between manifolds is a diffeomorphism.",
+        "Transition maps in a smooth atlas need not be continuous."
       ],
-      "answer": 2,
-      "explanation": "It can be represented by the velocity of a curve through p or as a derivation on germs of smooth functions at p."
+      "answer": 1,
+      "explanation": "It can be represented by the velocity of a curve through p or as a derivation on germs of smooth functions at p.",
+      "answer_text": "It can be represented by the velocity of a curve through p or as a derivation on germs of smooth functions at p."
     },
     {
       "id": "u06-l05-q1",
@@ -607,13 +647,14 @@
       "skill": "concept and proof",
       "prompt": "What does the differential dF_p describe?",
       "options": [
-        "Several examples establish a universal theorem.",
-        "A diagram alone proves every case.",
-        "The converse may replace an implication without proof.",
-        "It is the linear map between tangent spaces that gives the first-order behavior of F at p."
+        "It is the linear map between tangent spaces that gives the first-order behavior of F at p.",
+        "Every continuous bijection between manifolds is a diffeomorphism.",
+        "Transition maps in a smooth atlas need not be continuous.",
+        "Tangent vectors can only be ambient arrows in an embedding."
       ],
-      "answer": 3,
-      "explanation": "It is the linear map between tangent spaces that gives the first-order behavior of F at p."
+      "answer": 0,
+      "explanation": "It is the linear map between tangent spaces that gives the first-order behavior of F at p.",
+      "answer_text": "It is the linear map between tangent spaces that gives the first-order behavior of F at p."
     },
     {
       "id": "u06-l06-q1",
@@ -622,13 +663,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Cotangent Spaces, Covectors and Tensors.",
       "options": [
-        "Several examples establish a universal theorem.",
-        "The converse may replace an implication without proof.",
-        "Begin from the exact definitions, verify all hypotheses, use T_p^*M, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
-        "A diagram alone proves every case."
+        "Every continuous bijection between manifolds is a diffeomorphism.",
+        "Transition maps in a smooth atlas need not be continuous.",
+        "Tangent vectors can only be ambient arrows in an embedding.",
+        "Begin from the exact definitions, verify all hypotheses, use T_p^*M, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
       ],
-      "answer": 2,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use T_p^*M, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "answer": 3,
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use T_p^*M, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use T_p^*M, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u06-l07-q1",
@@ -637,13 +679,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Vector Fields, Flows and Lie Brackets.",
       "options": [
-        "A diagram alone proves every case.",
-        "Several examples establish a universal theorem.",
+        "Transition maps in a smooth atlas need not be continuous.",
+        "Tangent vectors can only be ambient arrows in an embedding.",
         "Begin from the exact definitions, verify all hypotheses, use [X,Y], distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
-        "The converse may replace an implication without proof."
+        "Every continuous bijection between manifolds is a diffeomorphism."
       ],
       "answer": 2,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use [X,Y], distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use [X,Y], distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use [X,Y], distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u07-l01-q1",
@@ -652,13 +695,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Inverse and Implicit Function Theorems on Manifolds.",
       "options": [
-        "A diagram alone proves every case.",
-        "The converse may replace an implication without proof.",
-        "Several examples establish a universal theorem.",
-        "Begin from the exact definitions, verify all hypotheses, use det dF_p≠0, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+        "Transversality requires the tangent spaces of two submanifolds to coincide.",
+        "Begin from the exact definitions, verify all hypotheses, use det dF_p≠0, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+        "A smooth map with full-rank differential must be globally injective.",
+        "Every critical value is a regular value."
       ],
-      "answer": 3,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use det dF_p≠0, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "answer": 1,
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use det dF_p≠0, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use det dF_p≠0, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u07-l02-q1",
@@ -667,13 +711,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Immersions, Submersions and Embeddings.",
       "options": [
-        "A diagram alone proves every case.",
-        "Several examples establish a universal theorem.",
         "Begin from the exact definitions, verify all hypotheses, use rank dF_p, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
-        "The converse may replace an implication without proof."
+        "A smooth map with full-rank differential must be globally injective.",
+        "Every critical value is a regular value.",
+        "Transversality requires the tangent spaces of two submanifolds to coincide."
       ],
-      "answer": 2,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use rank dF_p, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "answer": 0,
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use rank dF_p, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use rank dF_p, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u07-l03-q1",
@@ -682,13 +727,14 @@
       "skill": "concept and proof",
       "prompt": "What does the preimage theorem conclude?",
       "options": [
-        "A diagram alone proves every case.",
-        "Several examples establish a universal theorem.",
-        "The converse may replace an implication without proof.",
+        "A smooth map with full-rank differential must be globally injective.",
+        "Every critical value is a regular value.",
+        "Transversality requires the tangent spaces of two submanifolds to coincide.",
         "If q is a regular value of F:M→N, then F⁻¹(q) is an embedded submanifold of codimension dim N."
       ],
       "answer": 3,
-      "explanation": "If q is a regular value of F:M→N, then F⁻¹(q) is an embedded submanifold of codimension dim N."
+      "explanation": "If q is a regular value of F:M→N, then F⁻¹(q) is an embedded submanifold of codimension dim N.",
+      "answer_text": "If q is a regular value of F:M→N, then F⁻¹(q) is an embedded submanifold of codimension dim N."
     },
     {
       "id": "u07-l04-q1",
@@ -697,13 +743,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Critical Points, Sard’s Theorem and Genericity.",
       "options": [
-        "A diagram alone proves every case.",
-        "The converse may replace an implication without proof.",
+        "Every critical value is a regular value.",
+        "Transversality requires the tangent spaces of two submanifolds to coincide.",
         "Begin from the exact definitions, verify all hypotheses, use critical values have measure zero, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
-        "Several examples establish a universal theorem."
+        "A smooth map with full-rank differential must be globally injective."
       ],
       "answer": 2,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use critical values have measure zero, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use critical values have measure zero, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use critical values have measure zero, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u07-l05-q1",
@@ -712,13 +759,14 @@
       "skill": "concept and proof",
       "prompt": "What is the tangent-space condition for transverse submanifolds?",
       "options": [
+        "Transversality requires the tangent spaces of two submanifolds to coincide.",
         "At every intersection point p, T_pA+T_pB=T_pM.",
-        "The converse may replace an implication without proof.",
-        "A diagram alone proves every case.",
-        "Several examples establish a universal theorem."
+        "A smooth map with full-rank differential must be globally injective.",
+        "Every critical value is a regular value."
       ],
-      "answer": 0,
-      "explanation": "At every intersection point p, T_pA+T_pB=T_pM."
+      "answer": 1,
+      "explanation": "At every intersection point p, T_pA+T_pB=T_pM.",
+      "answer_text": "At every intersection point p, T_pA+T_pB=T_pM."
     },
     {
       "id": "u07-l06-q1",
@@ -727,13 +775,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Orientation, Degree and Winding.",
       "options": [
-        "The converse may replace an implication without proof.",
         "Begin from the exact definitions, verify all hypotheses, use deg F, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
-        "A diagram alone proves every case.",
-        "Several examples establish a universal theorem."
+        "A smooth map with full-rank differential must be globally injective.",
+        "Every critical value is a regular value.",
+        "Transversality requires the tangent spaces of two submanifolds to coincide."
       ],
-      "answer": 1,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use deg F, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "answer": 0,
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use deg F, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use deg F, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u07-l07-q1",
@@ -742,13 +791,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Vector-Field Index and Poincaré–Hopf Preview.",
       "options": [
-        "A diagram alone proves every case.",
-        "The converse may replace an implication without proof.",
-        "Begin from the exact definitions, verify all hypotheses, use Σ index(X,p)=χ(M), distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
-        "Several examples establish a universal theorem."
+        "A smooth map with full-rank differential must be globally injective.",
+        "Every critical value is a regular value.",
+        "Transversality requires the tangent spaces of two submanifolds to coincide.",
+        "Begin from the exact definitions, verify all hypotheses, use Σ index(X,p)=χ(M), distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
       ],
-      "answer": 2,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use Σ index(X,p)=χ(M), distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "answer": 3,
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use Σ index(X,p)=χ(M), distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use Σ index(X,p)=χ(M), distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u08-l01-q1",
@@ -757,13 +807,14 @@
       "skill": "concept and proof",
       "prompt": "Why is arc length parameter-independent?",
       "options": [
-        "Several examples establish a universal theorem.",
-        "A diagram alone proves every case.",
+        "Gaussian curvature of a round sphere is zero.",
+        "The first fundamental form depends only on second derivatives.",
         "A regular orientation-preserving reparametrization changes speed and parameter measure inversely, leaving the integral of speed unchanged.",
-        "The converse may replace an implication without proof."
+        "Any two curves with the same endpoints have identical lengths."
       ],
       "answer": 2,
-      "explanation": "A regular orientation-preserving reparametrization changes speed and parameter measure inversely, leaving the integral of speed unchanged."
+      "explanation": "A regular orientation-preserving reparametrization changes speed and parameter measure inversely, leaving the integral of speed unchanged.",
+      "answer_text": "A regular orientation-preserving reparametrization changes speed and parameter measure inversely, leaving the integral of speed unchanged."
     },
     {
       "id": "u08-l02-q1",
@@ -772,13 +823,14 @@
       "skill": "concept and proof",
       "prompt": "How is curvature of a unit-speed curve defined?",
       "options": [
+        "The first fundamental form depends only on second derivatives.",
         "κ(s)=||T′(s)||, measuring the rate at which the unit tangent turns.",
-        "The converse may replace an implication without proof.",
-        "Several examples establish a universal theorem.",
-        "A diagram alone proves every case."
+        "Any two curves with the same endpoints have identical lengths.",
+        "Gaussian curvature of a round sphere is zero."
       ],
-      "answer": 0,
-      "explanation": "κ(s)=||T′(s)||, measuring the rate at which the unit tangent turns."
+      "answer": 1,
+      "explanation": "κ(s)=||T′(s)||, measuring the rate at which the unit tangent turns.",
+      "answer_text": "κ(s)=||T′(s)||, measuring the rate at which the unit tangent turns."
     },
     {
       "id": "u08-l03-q1",
@@ -787,13 +839,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Local and Global Geometry of Plane Curves.",
       "options": [
-        "A diagram alone proves every case.",
-        "The converse may replace an implication without proof.",
         "Begin from the exact definitions, verify all hypotheses, use ∫κ ds, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
-        "Several examples establish a universal theorem."
+        "Any two curves with the same endpoints have identical lengths.",
+        "Gaussian curvature of a round sphere is zero.",
+        "The first fundamental form depends only on second derivatives."
       ],
-      "answer": 2,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use ∫κ ds, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "answer": 0,
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use ∫κ ds, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use ∫κ ds, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u08-l04-q1",
@@ -802,13 +855,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Parametrized Surfaces and Tangent Planes.",
       "options": [
-        "Begin from the exact definitions, verify all hypotheses, use X_u×X_v≠0, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
-        "A diagram alone proves every case.",
-        "The converse may replace an implication without proof.",
-        "Several examples establish a universal theorem."
+        "Any two curves with the same endpoints have identical lengths.",
+        "Gaussian curvature of a round sphere is zero.",
+        "The first fundamental form depends only on second derivatives.",
+        "Begin from the exact definitions, verify all hypotheses, use X_u×X_v≠0, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
       ],
-      "answer": 0,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use X_u×X_v≠0, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "answer": 3,
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use X_u×X_v≠0, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use X_u×X_v≠0, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u08-l05-q1",
@@ -817,13 +871,14 @@
       "skill": "concept and proof",
       "prompt": "What geometric data come from the first fundamental form?",
       "options": [
-        "The converse may replace an implication without proof.",
-        "A diagram alone proves every case.",
+        "Gaussian curvature of a round sphere is zero.",
+        "The first fundamental form depends only on second derivatives.",
         "It determines tangent-vector lengths, angles, surface area, and intrinsic curve length.",
-        "Several examples establish a universal theorem."
+        "Any two curves with the same endpoints have identical lengths."
       ],
       "answer": 2,
-      "explanation": "It determines tangent-vector lengths, angles, surface area, and intrinsic curve length."
+      "explanation": "It determines tangent-vector lengths, angles, surface area, and intrinsic curve length.",
+      "answer_text": "It determines tangent-vector lengths, angles, surface area, and intrinsic curve length."
     },
     {
       "id": "u08-l06-q1",
@@ -832,13 +887,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for The Second Fundamental Form and Shape Operator.",
       "options": [
-        "Several examples establish a universal theorem.",
-        "A diagram alone proves every case.",
-        "The converse may replace an implication without proof.",
-        "Begin from the exact definitions, verify all hypotheses, use II=e du²+2f du dv+g dv², distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+        "The first fundamental form depends only on second derivatives.",
+        "Begin from the exact definitions, verify all hypotheses, use II=e du²+2f du dv+g dv², distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+        "Any two curves with the same endpoints have identical lengths.",
+        "Gaussian curvature of a round sphere is zero."
       ],
-      "answer": 3,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use II=e du²+2f du dv+g dv², distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "answer": 1,
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use II=e du²+2f du dv+g dv², distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use II=e du²+2f du dv+g dv², distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u08-l07-q1",
@@ -847,13 +903,14 @@
       "skill": "concept and proof",
       "prompt": "What is Gauss’s Theorema Egregium?",
       "options": [
-        "A diagram alone proves every case.",
-        "Several examples establish a universal theorem.",
-        "The converse may replace an implication without proof.",
-        "Gaussian curvature can be computed from the first fundamental form, so it is intrinsic despite being defined through an embedding."
+        "Gaussian curvature can be computed from the first fundamental form, so it is intrinsic despite being defined through an embedding.",
+        "Any two curves with the same endpoints have identical lengths.",
+        "Gaussian curvature of a round sphere is zero.",
+        "The first fundamental form depends only on second derivatives."
       ],
-      "answer": 3,
-      "explanation": "Gaussian curvature can be computed from the first fundamental form, so it is intrinsic despite being defined through an embedding."
+      "answer": 0,
+      "explanation": "Gaussian curvature can be computed from the first fundamental form, so it is intrinsic despite being defined through an embedding.",
+      "answer_text": "Gaussian curvature can be computed from the first fundamental form, so it is intrinsic despite being defined through an embedding."
     },
     {
       "id": "u09-l01-q1",
@@ -862,13 +919,14 @@
       "skill": "concept and proof",
       "prompt": "How does a metric produce a topology?",
       "options": [
-        "The converse may replace an implication without proof.",
-        "Declare a set open when each point contains a metric ball lying inside the set; the resulting family satisfies the topology axioms.",
-        "Several examples establish a universal theorem.",
-        "A diagram alone proves every case."
+        "Every Riemannian manifold is flat.",
+        "Every geodesic appears as a straight line in every coordinate system.",
+        "A Riemannian metric is an indefinite bilinear form.",
+        "Declare a set open when each point contains a metric ball lying inside the set; the resulting family satisfies the topology axioms."
       ],
-      "answer": 1,
-      "explanation": "Declare a set open when each point contains a metric ball lying inside the set; the resulting family satisfies the topology axioms."
+      "answer": 3,
+      "explanation": "Declare a set open when each point contains a metric ball lying inside the set; the resulting family satisfies the topology axioms.",
+      "answer_text": "Declare a set open when each point contains a metric ball lying inside the set; the resulting family satisfies the topology axioms."
     },
     {
       "id": "u09-l02-q1",
@@ -877,13 +935,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Length, Energy and Riemannian Distance.",
       "options": [
-        "A diagram alone proves every case.",
-        "Several examples establish a universal theorem.",
-        "The converse may replace an implication without proof.",
-        "Begin from the exact definitions, verify all hypotheses, use L(γ)=∫√g(γ′,γ′), distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+        "Every geodesic appears as a straight line in every coordinate system.",
+        "A Riemannian metric is an indefinite bilinear form.",
+        "Begin from the exact definitions, verify all hypotheses, use L(γ)=∫√g(γ′,γ′), distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+        "Every Riemannian manifold is flat."
       ],
-      "answer": 3,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use L(γ)=∫√g(γ′,γ′), distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "answer": 2,
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use L(γ)=∫√g(γ′,γ′), distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use L(γ)=∫√g(γ′,γ′), distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u09-l03-q1",
@@ -892,13 +951,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Connections and Covariant Differentiation.",
       "options": [
-        "Several examples establish a universal theorem.",
-        "A diagram alone proves every case.",
+        "A Riemannian metric is an indefinite bilinear form.",
         "Begin from the exact definitions, verify all hypotheses, use ∇_X Y, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
-        "The converse may replace an implication without proof."
+        "Every Riemannian manifold is flat.",
+        "Every geodesic appears as a straight line in every coordinate system."
       ],
-      "answer": 2,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use ∇_X Y, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "answer": 1,
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use ∇_X Y, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use ∇_X Y, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u09-l04-q1",
@@ -908,12 +968,13 @@
       "prompt": "What characterizes the Levi–Civita connection?",
       "options": [
         "It is the unique connection that is metric-compatible and torsion-free.",
-        "A diagram alone proves every case.",
-        "The converse may replace an implication without proof.",
-        "Several examples establish a universal theorem."
+        "Every Riemannian manifold is flat.",
+        "Every geodesic appears as a straight line in every coordinate system.",
+        "A Riemannian metric is an indefinite bilinear form."
       ],
       "answer": 0,
-      "explanation": "It is the unique connection that is metric-compatible and torsion-free."
+      "explanation": "It is the unique connection that is metric-compatible and torsion-free.",
+      "answer_text": "It is the unique connection that is metric-compatible and torsion-free."
     },
     {
       "id": "u09-l05-q1",
@@ -922,13 +983,14 @@
       "skill": "concept and proof",
       "prompt": "What equation defines geodesics intrinsically?",
       "options": [
-        "A diagram alone proves every case.",
-        "Their velocity field is parallel along the curve: ∇_{γ′}γ′=0.",
-        "Several examples establish a universal theorem.",
-        "The converse may replace an implication without proof."
+        "Every Riemannian manifold is flat.",
+        "Every geodesic appears as a straight line in every coordinate system.",
+        "A Riemannian metric is an indefinite bilinear form.",
+        "Their velocity field is parallel along the curve: ∇_{γ′}γ′=0."
       ],
-      "answer": 1,
-      "explanation": "Their velocity field is parallel along the curve: ∇_{γ′}γ′=0."
+      "answer": 3,
+      "explanation": "Their velocity field is parallel along the curve: ∇_{γ′}γ′=0.",
+      "answer_text": "Their velocity field is parallel along the curve: ∇_{γ′}γ′=0."
     },
     {
       "id": "u09-l06-q1",
@@ -937,13 +999,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Exponential Maps, Normal Coordinates and Completeness.",
       "options": [
-        "The converse may replace an implication without proof.",
-        "A diagram alone proves every case.",
+        "Every geodesic appears as a straight line in every coordinate system.",
+        "A Riemannian metric is an indefinite bilinear form.",
         "Begin from the exact definitions, verify all hypotheses, use exp_p:T_pM→M, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
-        "Several examples establish a universal theorem."
+        "Every Riemannian manifold is flat."
       ],
       "answer": 2,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use exp_p:T_pM→M, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use exp_p:T_pM→M, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use exp_p:T_pM→M, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u09-l07-q1",
@@ -952,13 +1015,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Riemann, Sectional, Ricci and Scalar Curvature.",
       "options": [
-        "A diagram alone proves every case.",
+        "A Riemannian metric is an indefinite bilinear form.",
         "Begin from the exact definitions, verify all hypotheses, use R(X,Y)Z, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
-        "Several examples establish a universal theorem.",
-        "The converse may replace an implication without proof."
+        "Every Riemannian manifold is flat.",
+        "Every geodesic appears as a straight line in every coordinate system."
       ],
       "answer": 1,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use R(X,Y)Z, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use R(X,Y)Z, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use R(X,Y)Z, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u10-l01-q1",
@@ -967,13 +1031,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Alternating Tensors and the Exterior Algebra.",
       "options": [
-        "Several examples establish a universal theorem.",
-        "A diagram alone proves every case.",
         "Begin from the exact definitions, verify all hypotheses, use Λ^kT_p^*M, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
-        "The converse may replace an implication without proof."
+        "The exterior derivative squared is the identity.",
+        "Every closed differential form is exact on every manifold.",
+        "The wedge product of one-forms is symmetric."
       ],
-      "answer": 2,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use Λ^kT_p^*M, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "answer": 0,
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use Λ^kT_p^*M, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use Λ^kT_p^*M, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u10-l02-q1",
@@ -982,13 +1047,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Differential Forms and Pullbacks.",
       "options": [
-        "The converse may replace an implication without proof.",
-        "A diagram alone proves every case.",
-        "Several examples establish a universal theorem.",
+        "The exterior derivative squared is the identity.",
+        "Every closed differential form is exact on every manifold.",
+        "The wedge product of one-forms is symmetric.",
         "Begin from the exact definitions, verify all hypotheses, use F^*(ω∧η)=F^*ω∧F^*η, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
       ],
       "answer": 3,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use F^*(ω∧η)=F^*ω∧F^*η, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use F^*(ω∧η)=F^*ω∧F^*η, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use F^*(ω∧η)=F^*ω∧F^*η, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u10-l03-q1",
@@ -997,13 +1063,14 @@
       "skill": "concept and proof",
       "prompt": "Why does d²=0 matter?",
       "options": [
-        "Several examples establish a universal theorem.",
-        "The converse may replace an implication without proof.",
+        "Every closed differential form is exact on every manifold.",
+        "The wedge product of one-forms is symmetric.",
         "It makes exact forms closed and creates the cochain complex whose cohomology is de Rham cohomology.",
-        "A diagram alone proves every case."
+        "The exterior derivative squared is the identity."
       ],
       "answer": 2,
-      "explanation": "It makes exact forms closed and creates the cochain complex whose cohomology is de Rham cohomology."
+      "explanation": "It makes exact forms closed and creates the cochain complex whose cohomology is de Rham cohomology.",
+      "answer_text": "It makes exact forms closed and creates the cochain complex whose cohomology is de Rham cohomology."
     },
     {
       "id": "u10-l04-q1",
@@ -1012,13 +1079,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Integration on Oriented Manifolds.",
       "options": [
-        "Several examples establish a universal theorem.",
+        "The wedge product of one-forms is symmetric.",
         "Begin from the exact definitions, verify all hypotheses, use ∫_M ω, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
-        "A diagram alone proves every case.",
-        "The converse may replace an implication without proof."
+        "The exterior derivative squared is the identity.",
+        "Every closed differential form is exact on every manifold."
       ],
       "answer": 1,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use ∫_M ω, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use ∫_M ω, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use ∫_M ω, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u10-l05-q1",
@@ -1027,13 +1095,14 @@
       "skill": "concept and proof",
       "prompt": "State generalized Stokes.",
       "options": [
-        "Several examples establish a universal theorem.",
         "For an oriented manifold with boundary, ∫_M dω=∫_{∂M}ω under the usual support and regularity hypotheses.",
-        "The converse may replace an implication without proof.",
-        "A diagram alone proves every case."
+        "The exterior derivative squared is the identity.",
+        "Every closed differential form is exact on every manifold.",
+        "The wedge product of one-forms is symmetric."
       ],
-      "answer": 1,
-      "explanation": "For an oriented manifold with boundary, ∫_M dω=∫_{∂M}ω under the usual support and regularity hypotheses."
+      "answer": 0,
+      "explanation": "For an oriented manifold with boundary, ∫_M dω=∫_{∂M}ω under the usual support and regularity hypotheses.",
+      "answer_text": "For an oriented manifold with boundary, ∫_M dω=∫_{∂M}ω under the usual support and regularity hypotheses."
     },
     {
       "id": "u10-l06-q1",
@@ -1042,13 +1111,14 @@
       "skill": "concept and proof",
       "prompt": "What does de Rham cohomology measure?",
       "options": [
-        "It is closed differential forms modulo exact forms and encodes topological information using smooth calculus.",
-        "The converse may replace an implication without proof.",
-        "A diagram alone proves every case.",
-        "Several examples establish a universal theorem."
+        "The exterior derivative squared is the identity.",
+        "Every closed differential form is exact on every manifold.",
+        "The wedge product of one-forms is symmetric.",
+        "It is closed differential forms modulo exact forms and encodes topological information using smooth calculus."
       ],
-      "answer": 0,
-      "explanation": "It is closed differential forms modulo exact forms and encodes topological information using smooth calculus."
+      "answer": 3,
+      "explanation": "It is closed differential forms modulo exact forms and encodes topological information using smooth calculus.",
+      "answer_text": "It is closed differential forms modulo exact forms and encodes topological information using smooth calculus."
     },
     {
       "id": "u10-l07-q1",
@@ -1057,13 +1127,14 @@
       "skill": "concept and proof",
       "prompt": "What does de Rham cohomology measure?",
       "options": [
-        "Several examples establish a universal theorem.",
-        "The converse may replace an implication without proof.",
+        "Every closed differential form is exact on every manifold.",
+        "The wedge product of one-forms is symmetric.",
         "It is closed differential forms modulo exact forms and encodes topological information using smooth calculus.",
-        "A diagram alone proves every case."
+        "The exterior derivative squared is the identity."
       ],
       "answer": 2,
-      "explanation": "It is closed differential forms modulo exact forms and encodes topological information using smooth calculus."
+      "explanation": "It is closed differential forms modulo exact forms and encodes topological information using smooth calculus.",
+      "answer_text": "It is closed differential forms modulo exact forms and encodes topological information using smooth calculus."
     },
     {
       "id": "u11-l01-q1",
@@ -1072,13 +1143,14 @@
       "skill": "concept and proof",
       "prompt": "What is local triviality?",
       "options": [
+        "All vector-bundle connections have zero curvature.",
         "Every base point has a neighborhood over which the bundle is isomorphic to a product with a fixed vector space.",
-        "The converse may replace an implication without proof.",
-        "Several examples establish a universal theorem.",
-        "A diagram alone proves every case."
+        "Every vector bundle is globally a product bundle.",
+        "The underlying topology alone uniquely determines a connection."
       ],
-      "answer": 0,
-      "explanation": "Every base point has a neighborhood over which the bundle is isomorphic to a product with a fixed vector space."
+      "answer": 1,
+      "explanation": "Every base point has a neighborhood over which the bundle is isomorphic to a product with a fixed vector space.",
+      "answer_text": "Every base point has a neighborhood over which the bundle is isomorphic to a product with a fixed vector space."
     },
     {
       "id": "u11-l02-q1",
@@ -1087,13 +1159,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Transition Functions and Bundle Gluing.",
       "options": [
-        "The converse may replace an implication without proof.",
         "Begin from the exact definitions, verify all hypotheses, use g_{αβ}g_{βγ}=g_{αγ}, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
-        "A diagram alone proves every case.",
-        "Several examples establish a universal theorem."
+        "Every vector bundle is globally a product bundle.",
+        "The underlying topology alone uniquely determines a connection.",
+        "All vector-bundle connections have zero curvature."
       ],
-      "answer": 1,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use g_{αβ}g_{βγ}=g_{αγ}, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "answer": 0,
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use g_{αβ}g_{βγ}=g_{αγ}, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use g_{αβ}g_{βγ}=g_{αγ}, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u11-l03-q1",
@@ -1102,13 +1175,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Tangent, Cotangent and Tensor Bundles.",
       "options": [
-        "The converse may replace an implication without proof.",
-        "Begin from the exact definitions, verify all hypotheses, use TM=⋃_p T_pM, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
-        "A diagram alone proves every case.",
-        "Several examples establish a universal theorem."
+        "Every vector bundle is globally a product bundle.",
+        "The underlying topology alone uniquely determines a connection.",
+        "All vector-bundle connections have zero curvature.",
+        "Begin from the exact definitions, verify all hypotheses, use TM=⋃_p T_pM, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
       ],
-      "answer": 1,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use TM=⋃_p T_pM, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "answer": 3,
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use TM=⋃_p T_pM, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use TM=⋃_p T_pM, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u11-l04-q1",
@@ -1117,13 +1191,14 @@
       "skill": "concept and proof",
       "prompt": "How are Lie groups and Lie algebras connected?",
       "options": [
+        "The underlying topology alone uniquely determines a connection.",
+        "All vector-bundle connections have zero curvature.",
         "The tangent space at the identity carries a bracket from left-invariant vector fields and describes infinitesimal symmetry.",
-        "A diagram alone proves every case.",
-        "The converse may replace an implication without proof.",
-        "Several examples establish a universal theorem."
+        "Every vector bundle is globally a product bundle."
       ],
-      "answer": 0,
-      "explanation": "The tangent space at the identity carries a bracket from left-invariant vector fields and describes infinitesimal symmetry."
+      "answer": 2,
+      "explanation": "The tangent space at the identity carries a bracket from left-invariant vector fields and describes infinitesimal symmetry.",
+      "answer_text": "The tangent space at the identity carries a bracket from left-invariant vector fields and describes infinitesimal symmetry."
     },
     {
       "id": "u11-l05-q1",
@@ -1132,13 +1207,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Principal Bundles and Gauge Symmetry.",
       "options": [
-        "Several examples establish a universal theorem.",
+        "All vector-bundle connections have zero curvature.",
         "Begin from the exact definitions, verify all hypotheses, use P→M with G-action, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
-        "A diagram alone proves every case.",
-        "The converse may replace an implication without proof."
+        "Every vector bundle is globally a product bundle.",
+        "The underlying topology alone uniquely determines a connection."
       ],
       "answer": 1,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use P→M with G-action, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use P→M with G-action, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use P→M with G-action, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u11-l06-q1",
@@ -1147,13 +1223,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Connections, Curvature Forms and Holonomy.",
       "options": [
-        "A diagram alone proves every case.",
-        "Several examples establish a universal theorem.",
-        "The converse may replace an implication without proof.",
-        "Begin from the exact definitions, verify all hypotheses, use Ω=dω+ω∧ω, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+        "Begin from the exact definitions, verify all hypotheses, use Ω=dω+ω∧ω, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+        "Every vector bundle is globally a product bundle.",
+        "The underlying topology alone uniquely determines a connection.",
+        "All vector-bundle connections have zero curvature."
       ],
-      "answer": 3,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use Ω=dω+ω∧ω, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "answer": 0,
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use Ω=dω+ω∧ω, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use Ω=dω+ω∧ω, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u11-l07-q1",
@@ -1162,13 +1239,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Characteristic-Class Foundations.",
       "options": [
-        "Several examples establish a universal theorem.",
-        "A diagram alone proves every case.",
-        "The converse may replace an implication without proof.",
+        "Every vector bundle is globally a product bundle.",
+        "The underlying topology alone uniquely determines a connection.",
+        "All vector-bundle connections have zero curvature.",
         "Begin from the exact definitions, verify all hypotheses, use c(E), p(E), e(E), distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
       ],
       "answer": 3,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use c(E), p(E), e(E), distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use c(E), p(E), e(E), distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use c(E), p(E), e(E), distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u12-l01-q1",
@@ -1177,13 +1255,14 @@
       "skill": "concept and proof",
       "prompt": "What is a nondegenerate critical point?",
       "options": [
-        "Several examples establish a universal theorem.",
+        "Every critical point of every smooth function is nondegenerate.",
+        "Gauss-Bonnet on surfaces with boundary has no boundary-curvature term.",
         "A critical point where the Hessian is nonsingular; its index counts negative Hessian directions.",
-        "A diagram alone proves every case.",
-        "The converse may replace an implication without proof."
+        "Euler characteristic equals manifold dimension."
       ],
-      "answer": 1,
-      "explanation": "A critical point where the Hessian is nonsingular; its index counts negative Hessian directions."
+      "answer": 2,
+      "explanation": "A critical point where the Hessian is nonsingular; its index counts negative Hessian directions.",
+      "answer_text": "A critical point where the Hessian is nonsingular; its index counts negative Hessian directions."
     },
     {
       "id": "u12-l02-q1",
@@ -1192,13 +1271,14 @@
       "skill": "concept and proof",
       "prompt": "What is a nondegenerate critical point?",
       "options": [
-        "The converse may replace an implication without proof.",
-        "Several examples establish a universal theorem.",
+        "Gauss-Bonnet on surfaces with boundary has no boundary-curvature term.",
         "A critical point where the Hessian is nonsingular; its index counts negative Hessian directions.",
-        "A diagram alone proves every case."
+        "Euler characteristic equals manifold dimension.",
+        "Every critical point of every smooth function is nondegenerate."
       ],
-      "answer": 2,
-      "explanation": "A critical point where the Hessian is nonsingular; its index counts negative Hessian directions."
+      "answer": 1,
+      "explanation": "A critical point where the Hessian is nonsingular; its index counts negative Hessian directions.",
+      "answer_text": "A critical point where the Hessian is nonsingular; its index counts negative Hessian directions."
     },
     {
       "id": "u12-l03-q1",
@@ -1207,13 +1287,14 @@
       "skill": "concept and proof",
       "prompt": "What global relation does Gauss–Bonnet give for a closed oriented surface?",
       "options": [
-        "A diagram alone proves every case.",
-        "Several examples establish a universal theorem.",
         "The integral of Gaussian curvature equals 2π times the Euler characteristic.",
-        "The converse may replace an implication without proof."
+        "Euler characteristic equals manifold dimension.",
+        "Every critical point of every smooth function is nondegenerate.",
+        "Gauss-Bonnet on surfaces with boundary has no boundary-curvature term."
       ],
-      "answer": 2,
-      "explanation": "The integral of Gaussian curvature equals 2π times the Euler characteristic."
+      "answer": 0,
+      "explanation": "The integral of Gaussian curvature equals 2π times the Euler characteristic.",
+      "answer_text": "The integral of Gaussian curvature equals 2π times the Euler characteristic."
     },
     {
       "id": "u12-l04-q1",
@@ -1222,13 +1303,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Poincaré–Hopf and Vector-Field Indices.",
       "options": [
-        "A diagram alone proves every case.",
-        "Several examples establish a universal theorem.",
-        "Begin from the exact definitions, verify all hypotheses, use Σ ind_p X=χ(M), distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
-        "The converse may replace an implication without proof."
+        "Euler characteristic equals manifold dimension.",
+        "Every critical point of every smooth function is nondegenerate.",
+        "Gauss-Bonnet on surfaces with boundary has no boundary-curvature term.",
+        "Begin from the exact definitions, verify all hypotheses, use Σ ind_p X=χ(M), distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
       ],
-      "answer": 2,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use Σ ind_p X=χ(M), distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "answer": 3,
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use Σ ind_p X=χ(M), distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use Σ ind_p X=χ(M), distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u12-l05-q1",
@@ -1237,13 +1319,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Jacobi Fields and Geodesic Variation.",
       "options": [
-        "The converse may replace an implication without proof.",
+        "Every critical point of every smooth function is nondegenerate.",
+        "Gauss-Bonnet on surfaces with boundary has no boundary-curvature term.",
         "Begin from the exact definitions, verify all hypotheses, use J″+R(J,γ′)γ′=0, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
-        "A diagram alone proves every case.",
-        "Several examples establish a universal theorem."
+        "Euler characteristic equals manifold dimension."
       ],
-      "answer": 1,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use J″+R(J,γ′)γ′=0, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "answer": 2,
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use J″+R(J,γ′)γ′=0, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use J″+R(J,γ′)γ′=0, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u12-l06-q1",
@@ -1252,13 +1335,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Comparison Geometry and Curvature Bounds.",
       "options": [
-        "Several examples establish a universal theorem.",
-        "The converse may replace an implication without proof.",
+        "Gauss-Bonnet on surfaces with boundary has no boundary-curvature term.",
         "Begin from the exact definitions, verify all hypotheses, use sectional-curvature comparison, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
-        "A diagram alone proves every case."
+        "Euler characteristic equals manifold dimension.",
+        "Every critical point of every smooth function is nondegenerate."
       ],
-      "answer": 2,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use sectional-curvature comparison, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "answer": 1,
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use sectional-curvature comparison, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use sectional-curvature comparison, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u12-l07-q1",
@@ -1268,12 +1352,13 @@
       "prompt": "State and justify the governing topological or geometric principle for Global Rigidity, Finiteness and Research Frontiers.",
       "options": [
         "Begin from the exact definitions, verify all hypotheses, use local geometry ⇒ global constraints, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
-        "A diagram alone proves every case.",
-        "Several examples establish a universal theorem.",
-        "The converse may replace an implication without proof."
+        "Euler characteristic equals manifold dimension.",
+        "Every critical point of every smooth function is nondegenerate.",
+        "Gauss-Bonnet on surfaces with boundary has no boundary-curvature term."
       ],
       "answer": 0,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use local geometry ⇒ global constraints, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use local geometry ⇒ global constraints, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use local geometry ⇒ global constraints, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u13-l01-q1",
@@ -1282,13 +1367,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Classification of Compact Surfaces.",
       "options": [
-        "Several examples establish a universal theorem.",
-        "Begin from the exact definitions, verify all hypotheses, use surface determined by genus/orientability, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
-        "The converse may replace an implication without proof.",
-        "A diagram alone proves every case."
+        "A convincing diagram alone proves a universal mathematical claim.",
+        "All connected closed surfaces have the same Euler characteristic.",
+        "Betti numbers depend solely on the aesthetic style of a drawing.",
+        "Begin from the exact definitions, verify all hypotheses, use surface determined by genus/orientability, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
       ],
-      "answer": 1,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use surface determined by genus/orientability, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "answer": 3,
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use surface determined by genus/orientability, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use surface determined by genus/orientability, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u13-l02-q1",
@@ -1297,13 +1383,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Knots, Links and Reidemeister Moves.",
       "options": [
-        "A diagram alone proves every case.",
+        "All connected closed surfaces have the same Euler characteristic.",
+        "Betti numbers depend solely on the aesthetic style of a drawing.",
         "Begin from the exact definitions, verify all hypotheses, use K:S¹↪R³, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
-        "The converse may replace an implication without proof.",
-        "Several examples establish a universal theorem."
+        "A convincing diagram alone proves a universal mathematical claim."
       ],
-      "answer": 1,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use K:S¹↪R³, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "answer": 2,
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use K:S¹↪R³, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use K:S¹↪R³, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u13-l03-q1",
@@ -1312,13 +1399,14 @@
       "skill": "concept and proof",
       "prompt": "What does persistent homology track?",
       "options": [
-        "A diagram alone proves every case.",
-        "The converse may replace an implication without proof.",
-        "Several examples establish a universal theorem.",
-        "It records when homological features appear and disappear across a filtration, summarized by intervals or a persistence diagram."
+        "Betti numbers depend solely on the aesthetic style of a drawing.",
+        "It records when homological features appear and disappear across a filtration, summarized by intervals or a persistence diagram.",
+        "A convincing diagram alone proves a universal mathematical claim.",
+        "All connected closed surfaces have the same Euler characteristic."
       ],
-      "answer": 3,
-      "explanation": "It records when homological features appear and disappear across a filtration, summarized by intervals or a persistence diagram."
+      "answer": 1,
+      "explanation": "It records when homological features appear and disappear across a filtration, summarized by intervals or a persistence diagram.",
+      "answer_text": "It records when homological features appear and disappear across a filtration, summarized by intervals or a persistence diagram."
     },
     {
       "id": "u13-l04-q1",
@@ -1327,13 +1415,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Geometric Flows and Shape Evolution.",
       "options": [
-        "Several examples establish a universal theorem.",
         "Begin from the exact definitions, verify all hypotheses, use ∂_t g=-2Ric, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
-        "A diagram alone proves every case.",
-        "The converse may replace an implication without proof."
+        "A convincing diagram alone proves a universal mathematical claim.",
+        "All connected closed surfaces have the same Euler characteristic.",
+        "Betti numbers depend solely on the aesthetic style of a drawing."
       ],
-      "answer": 1,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use ∂_t g=-2Ric, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "answer": 0,
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use ∂_t g=-2Ric, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use ∂_t g=-2Ric, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u13-l05-q1",
@@ -1342,13 +1431,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Geometry in Relativity, Gauge Theory and Physics.",
       "options": [
-        "Begin from the exact definitions, verify all hypotheses, use Einstein tensor and gauge curvature, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
-        "Several examples establish a universal theorem.",
-        "A diagram alone proves every case.",
-        "The converse may replace an implication without proof."
+        "A convincing diagram alone proves a universal mathematical claim.",
+        "All connected closed surfaces have the same Euler characteristic.",
+        "Betti numbers depend solely on the aesthetic style of a drawing.",
+        "Begin from the exact definitions, verify all hypotheses, use Einstein tensor and gauge curvature, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
       ],
-      "answer": 0,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use Einstein tensor and gauge curvature, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "answer": 3,
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use Einstein tensor and gauge curvature, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use Einstein tensor and gauge curvature, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u13-l06-q1",
@@ -1357,13 +1447,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Research Design, Literature and Reproducibility.",
       "options": [
-        "The converse may replace an implication without proof.",
-        "A diagram alone proves every case.",
+        "All connected closed surfaces have the same Euler characteristic.",
+        "Betti numbers depend solely on the aesthetic style of a drawing.",
         "Begin from the exact definitions, verify all hypotheses, use claim→hypotheses→method→evidence, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
-        "Several examples establish a universal theorem."
+        "A convincing diagram alone proves a universal mathematical claim."
       ],
       "answer": 2,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use claim→hypotheses→method→evidence, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use claim→hypotheses→method→evidence, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use claim→hypotheses→method→evidence, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "u13-l07-q1",
@@ -1372,13 +1463,14 @@
       "skill": "concept and proof",
       "prompt": "State and justify the governing topological or geometric principle for Capstone Synthesis and Oral Defense.",
       "options": [
-        "A diagram alone proves every case.",
+        "Betti numbers depend solely on the aesthetic style of a drawing.",
         "Begin from the exact definitions, verify all hypotheses, use local structure + global invariant + proof, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
-        "The converse may replace an implication without proof.",
-        "Several examples establish a universal theorem."
+        "A convincing diagram alone proves a universal mathematical claim.",
+        "All connected closed surfaces have the same Euler characteristic."
       ],
       "answer": 1,
-      "explanation": "Begin from the exact definitions, verify all hypotheses, use local structure + global invariant + proof, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
+      "explanation": "Begin from the exact definitions, verify all hypotheses, use local structure + global invariant + proof, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case.",
+      "answer_text": "Begin from the exact definitions, verify all hypotheses, use local structure + global invariant + proof, distinguish local from global conclusions, and test the result on a standard model and a boundary or counterexample case."
     },
     {
       "id": "rigor-u01-q001",
