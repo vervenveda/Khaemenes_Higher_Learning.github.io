@@ -62,9 +62,9 @@ function start(newAttempt=false){
    if(box)box.checked=true;
   }
  });
- host.addEventListener("change",event=>{
+ host.onchange=event=>{
   if(event.target?.matches('input[type="radio"]'))rememberDraft(token);
- },{once:false});
+ };
  rememberDraft(token);
  document.getElementById("submitAssessment").addEventListener("click",()=>score(token));
  document.getElementById("printAssessment").addEventListener("click",()=>print());
