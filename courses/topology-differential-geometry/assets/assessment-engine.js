@@ -8,8 +8,10 @@ if(!host||!Array.isArray(all))return;
 function activeLearnerId(){
  try{
   const id=JSON.parse(localStorage.getItem("khaemenes_active_learner_v1")||"null");
-  if(typeof id==="string"&&id.trim())return id.trim().slice(0,90);
-  if(id&&typeof id==="object"&&id.learnerId)return String(id.learnerId).slice(0,90);
+  const registry=JSON.parse(localStorage.getItem("khaemenes_family_registry_v1")||"null");
+  const learnerKey=typeof id==="string"?id:id?.learnerId;
+  if(learnerKey&&registry?.learners?.[learnerKey]&&String(registry.learners[learnerKey].stage||"").toLowerCase()==="higher")
+   return String(learnerKey).slice(0,90);
  }catch{}
  try{
   const course=JSON.parse(localStorage.getItem("khaemenes-topology-differential-geometry-course-v1")||"{}");
@@ -43,13 +45,29 @@ function best(){
  const arr=records()[cfg.recordKey]?.attempts||[];
  return arr.length?Math.max(...arr.map(x=>x.score)):null;
 }
+function balancedSet(items,count){
+ const n=Math.min(Number(count)||10,items.length);
+ const groups=new Map();
+ items.forEach(q=>{if(!groups.has(q.unit))groups.set(q.unit,[]);groups.get(q.unit).push(q)});
+ const unitGroups=[...groups.values()].map(a=>shuffle(a));
+ const chosen=[];
+ while(chosen.length<n){
+  let added=false;
+  for(const group of unitGroups){
+   if(chosen.length>=n)break;
+   if(group.length){chosen.push(group.pop());added=true}
+  }
+  if(!added)break;
+ }
+ return shuffle(chosen);
+}
 function start(newAttempt=false){
  const d=records(),key=cfg.recordKey||"assessment",old=d[key]?.draft;
  const items=pool(),byId=new Map(items.map(q=>[q.id,q]));
  if(!newAttempt&&old&&!old.passed&&Array.isArray(old.ids)&&old.ids.every(id=>byId.has(id))){
   set=old.ids.map(id=>byId.get(id));
  }else{
-  set=shuffle(items).slice(0,Math.min(Number(cfg.count)||10,items.length));
+  set=balancedSet(items,cfg.count);
  }
  const token=`topology-differential-geometry-${Date.now()}`;
  host.innerHTML=`<article class="card"><div class="form-grid"><label>Learner name or initials<input id="assessmentLearner" maxlength="60" placeholder="Optional local label"></label><label>Pathway<select id="assessmentPathway"><option>Foundation</option><option selected>Core</option><option>Research / Graduate</option></select></label></div><p class="notice">${esc(cfg.instructions||"Answer every question. Submit once complete, review explanations, and correct missed work.")}</p></article>`+
