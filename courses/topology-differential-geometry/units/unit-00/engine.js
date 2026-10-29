@@ -29,7 +29,7 @@ function buildQuestions(list,record,locked){
 }
 function renderLesson(n){
  const m=M[n-1],previous=state.lessons[n-1],blocked=n>1&&!previous?.passed;
- if(blocked){host.innerHTML='<section class="stage"><h1>Lesson '+n+' preparation</h1><p>Lesson '+(n-1)+' requires 80% first. Existing evidence remains saved.</p><a class="btn" href="'+link(n-1)+'">Return to previous lesson</a></section>';return}
+ if(blocked){host.innerHTML='<section class="stage"><h1>Lesson '+n+' preparation</h1><p>Lesson '+(n-1)+' requires 80% first. Existing evidence remains saved.</p><a class="btn" href="'+link(n-1).split("/").pop()+'">Return to previous lesson</a></section>';return}
  const qs=Q.filter(q=>q.module===n),rec=state.lessons[n]||{choices:[],attempts:[],proof:"",corrections:"",passed:false,score:null};
  state.lessons[n]=rec;
  host.innerHTML='<section class="stage"><p class="eyebrow">Unit 00 · Lesson '+n+' of 6</p><h1>'+esc(m.title)+'</h1><p>'+esc(m.lecture)+'</p><h2>Worked mathematical examples</h2><ol>'+m.worked.map(w=>'<li>'+esc(w)+'</li>').join("")+'</ol><h2>Independent proof and transfer</h2><p>'+esc(m.task)+'</p><h3>Common misconception to address</h3><p>'+esc(m.pitfall)+'</p><label class="block-label" for="bridgeProof">Your mathematical derivation and reasoning</label><textarea id="bridgeProof" rows="5" placeholder="State each definition and justify your inferences."></textarea><label class="block-label" for="bridgeCorrections">Counterexample, limitation or corrected misconception</label><textarea id="bridgeCorrections" rows="4" placeholder="Explain a meaningful counterexample or why a hypothesis matters."></textarea></section>'+
