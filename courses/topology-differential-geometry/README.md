@@ -5,7 +5,7 @@ A complete 36-week advanced upper-level and graduate-preparatory course in point
 - 13 units
 - 36 weeks / 180 sessions
 - 92 interactive lessons and faculty keys
-- three geometric laboratories
+- five original geometry and topology laboratories (finite topologies, polygon gluing, simplicial homology, surface curvature, and geodesics/Gauss–Bonnet)
 - front-door 40-question readiness placement diagnostic; optional six-lesson Unit 00 proof and calculus bridge (60 questions, 24-question exit) before the 36-week sequence
 - 13 mastery checks, midterm and final
 - portfolio, research capstone and oral defense
