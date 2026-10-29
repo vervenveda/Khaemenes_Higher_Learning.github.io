@@ -39,6 +39,8 @@ Status: source-reviewed development changes; published browser testing and facul
 ## Source-level validation performed
 - Compiled patched JS source and landing/record/laboratory inline scripts successfully.
 - Loaded the revised question-bank script to confirm 170 active questions, 13 units, unique identifiers, valid options and matching answer_text.
+- Using a small deterministic in-memory DOM/storage harness, confirmed below-80% assessment correction preserved question IDs, 80%+ locked the answer controls, and attempt histories remained in their learner-specific key.
+- Verified simplicial homology presets: triangle boundary (β0=1, β1=1), filled triangle (β0=1, β1=0), square cycle (β0=1, β1=1), and disconnected edges (β0=2, β1=0); Euler–Poincaré matched each.
 - Verified polygon-gluing computations: torus (χ=0, orientable genus 1); Klein bottle (χ=0, nonorientable genus 2); sphere (χ=2, orientable genus 0); aabb (χ=0, nonorientable genus 2).
 - Check exact lesson count and internal paths after the merge candidate is deployed.
 
