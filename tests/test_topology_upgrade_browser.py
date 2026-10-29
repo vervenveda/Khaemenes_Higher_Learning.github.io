@@ -73,8 +73,9 @@ def choose_formal(page, correct_count):
       if(boxes.length!==12)throw Error('expected 12 mastery items');
       boxes.forEach((card,i)=>{
         const prompt=card.querySelector('legend').textContent.replace(/^\\d+\\.\\s*/, '');
-        const q=bank.find(item=>item.prompt===prompt);
-        if(!q)throw Error('formal question missing: '+prompt);
+        const options=[...card.querySelectorAll(".option span")].map(el=>el.textContent);
+        const q=bank.find(item=>item.prompt===prompt && item.options.length===options.length && item.options.every((x,i)=>x===options[i]));
+        if(!q)throw Error('formal question or answer options missing: '+prompt);
         card.querySelectorAll('input[type=radio]')[(i<correctCount)?q.answer:(q.answer+1)%4].click();
       });
       return boxes.length;
