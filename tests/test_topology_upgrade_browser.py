@@ -379,3 +379,69 @@ def test_unit00_two_learners_isolated(browser,site):
     assert page.locator("#bridgeProof").input_value()==""
     assert not errors, errors
     ctx.close()
+
+
+
+def test_revised_diagnostic_has_balanced_answer_positions(browser,site):
+    ctx,page,errors=visit(browser,site,"diagnostic/index.html")
+    page.locator("#assessmentRoot article.question").first.wait_for(timeout=20000)
+    vals=page.evaluate("""() => {
+      const q=window.TOPOLOGY_DIFFERENTIAL_GEOMETRY_DIAGNOSTIC;
+      const freq=[0,0,0,0];
+      q.forEach(item=>{freq[item.answer]++;if(!item.id.startsWith('diagnostic-v2-'))throw Error('old question bank')});
+      return {total:q.length,unique:new Set(q.map(x=>x.prompt)).size,frequency:freq};
+    }""")
+    assert vals=={"total":40,"unique":40,"frequency":[10,10,10,10]}
+    assert not errors,errors
+    ctx.close()
+
+
+def test_legacy_diagnostic_does_not_lock_or_claim_revised_placement(browser,site):
+    ctx,page,errors=visit(browser,site,"diagnostic/index.html")
+    page.evaluate("""() => localStorage.setItem('khaemenes-topology-differential-geometry-assessment-v2:learner-1',
+      JSON.stringify({diagnostic:{attempts:[{date:'2026-10-01',score:100,total:40}],draft:{ids:['diagnostic-01'],choices:[0],passed:true,lastScore:100}}}))""")
+    page.reload(wait_until="domcontentloaded")
+    page.locator("#assessmentRoot article.question").first.wait_for(timeout=20000)
+    assert not page.locator("#submitAssessment").is_disabled()
+    assert "earlier" in page.locator("#readinessOutcome").inner_text().lower()
+    assert page.locator("#assessmentRoot input:checked").count()==0
+    assert not errors,errors
+    ctx.close()
+
+
+def test_revised_diagnostic_80_percent_direct_route_and_profile(browser,site):
+    ctx,page,errors=visit(browser,site,"diagnostic/index.html")
+    page.locator("#assessmentRoot article.question").first.wait_for(timeout=20000)
+    page.evaluate("""() => {
+      const bank=window.TOPOLOGY_DIFFERENTIAL_GEOMETRY_DIAGNOSTIC;
+      [...document.querySelectorAll('#assessmentRoot article.question')].forEach((card,i)=>{
+        const prompt=card.querySelector('legend').textContent.replace(/^\\d+\\.\\s*/, '');
+        const q=bank.find(x=>x.prompt===prompt);
+        if(!q)throw Error('question lookup failed');
+        card.querySelectorAll('input[type=radio]')[i<32?q.answer:(q.answer+1)%4].click();
+      });
+    }""")
+    page.locator("#submitAssessment").click()
+    page.wait_for_timeout(100)
+    assert "80%" in page.locator("#assessmentMessage").inner_text()
+    assert "Official Unit 01" in page.locator("#readinessOutcome").inner_text()
+    history=page.evaluate("""() => JSON.parse(localStorage.getItem('khaemenes-topology-differential-geometry-assessment-v2:learner-1')).diagnostic.attempts""")
+    assert history[-1]["assessmentVersion"]=="topology-readiness-v2"
+    page.goto(site+BASE+"records/learner-profile.html",wait_until="domcontentloaded")
+    assert "80%" in page.locator("#preCourseSummary").inner_text()
+    assert page.locator("#exportReadiness").count()==1
+    assert not errors,errors
+    ctx.close()
+
+
+def test_offline_unit00_lessons_open_with_questions(browser,site):
+    ctx,page,errors=visit(browser,site,"index.html")
+    page.evaluate("""async () => {await navigator.serviceWorker.ready}""")
+    page.reload(wait_until="domcontentloaded")
+    page.wait_for_function("!!navigator.serviceWorker.controller",timeout=20000)
+    ctx.set_offline(True)
+    page.goto(site+BASE+"units/unit-00/lessons/u00-l01.html",wait_until="domcontentloaded",timeout=20000)
+    page.locator("#bridgeQuestions [data-q]").first.wait_for(timeout=20000)
+    assert page.locator("#bridgeQuestions [data-q]").count()==10
+    ctx.set_offline(False)
+    ctx.close()
