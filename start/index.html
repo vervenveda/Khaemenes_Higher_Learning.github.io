@@ -73,6 +73,9 @@ body[data-khae-campus-landing="true"] #khaeLandingUtilityDock>[data-landing-tool
 body[data-khae-campus-landing="true"] #khaeLandingUtilityDock>[data-landing-tool="contribute"]{order:50!important}
 body[data-khae-campus-landing="true"] #khaeLandingUtilityDock>:is(#vnvBetaProgramLink,[data-landing-tool="beta"]){order:60!important}
 @media(max-width:380px){body[data-khae-campus-landing="true"] #khaeLandingUtilityDock{width:min(230px,calc(100vw - 16px))!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;right:8px!important;bottom:8px!important;padding:8px!important;gap:6px!important}body[data-khae-campus-landing="true"] #khaeLandingUtilityDock>:is(a,button){font-size:8px!important}}
+/* Final rail labels are text-only and remain legible in each cell. */
+body[data-khae-campus-landing="true"] #khaeLandingUtilityDock>[data-landing-tool]{font:400 9px/1.15 Arial,sans-serif!important;min-width:0!important;padding:6px 4px!important;overflow:hidden!important;white-space:nowrap!important;text-overflow:clip!important}
+body[data-khae-campus-landing="true"] #khaeLandingUtilityDock>[data-landing-tool="contribute"]{background:#708676!important;color:#fff!important}
 /* Final legibility overrides: stronger contrast and deliberate button spacing. */
 .grid>.card .actions>.btn,.grid>.card .actions>.btn:link,.grid>.card .actions>.btn:visited{min-height:46px;height:auto;line-height:1.35!important;padding:9px 7px!important;font-size:9px!important;font-weight:400!important;letter-spacing:0!important;white-space:normal!important;overflow-wrap:normal!important;word-break:normal!important}
 .grid>.card .actions>.btn.gold,.grid>.card .actions>.btn.gold:link,.grid>.card .actions>.btn.gold:visited{color:#10221a!important;background:#ebcf8d!important;border:1px solid #a57a35!important}
@@ -82,29 +85,45 @@ body[data-khae-campus-landing="true"] #khaeLandingUtilityDock [data-landing-tool
 body[data-khae-campus-landing="true"] #khaeLandingUtilityDock [data-landing-tool] span{font-size:inherit!important}
 </style>
 <script>
-document.addEventListener("DOMContentLoaded",()=>{
- const dock=document.getElementById("khaeLandingUtilityDock");
- if(!dock)return;
- // Exact Academy home model: only Profile, Search, Updates, Mentor, Support, Beta.
- for(const control of [...dock.querySelectorAll(':scope > [data-landing-tool]')]){
-   if(["home","academy","parents"].includes(control.dataset.landingTool))control.remove();
+/* Toolbar script is deferred: reconcile after it mounts, not just at DOMContentLoaded. */
+(()=>{
+"use strict";
+const dockId="khaeLandingUtilityDock";
+function sync(){
+ const dock=document.getElementById(dockId);
+ if(!dock)return false;
+ const entries=[...dock.children];
+ for(const el of entries){
+  const kind=el.dataset?.landingTool||"";
+  if(["home","academy","parents"].includes(kind))el.remove();
  }
-
- const existingProfile=dock.querySelector('[data-landing-tool="profile"]');
- if(existingProfile){
-   existingProfile.href="https://vervenveda.com/Khaemenes_Academy.github.io/adult/";
-   existingProfile.textContent="Profile";
-   existingProfile.setAttribute("aria-label","Adult Scholar Profile");
+ let profile=dock.querySelector('[data-landing-tool="profile"]');
+ if(!profile){
+  profile=document.createElement("a");
+  profile.dataset.landingTool="profile";
+  dock.prepend(profile);
  }
- if(!dock.querySelector('[data-landing-tool="profile"]')){
-   const profile=document.createElement("a");
-   profile.href="https://vervenveda.com/Khaemenes_Academy.github.io/adult/";
-   profile.dataset.landingTool="profile";profile.setAttribute("aria-label","Adult Scholar Profile");
-   profile.textContent="Profile";dock.append(profile);
- }
+ profile.href="https://vervenveda.com/Khaemenes_Academy.github.io/adult/";
+ profile.setAttribute("aria-label","Adult Scholar Profile");
+ if(profile.textContent!=="Profile"||profile.children.length)profile.textContent="Profile";
  const support=dock.querySelector('[data-landing-tool="contribute"]');
- if(support){support.textContent="Support";support.setAttribute("aria-label","Support free Academy education")}
-});
+ if(support){
+  if(support.textContent!=="Support"||support.children.length)support.textContent="Support";
+  support.setAttribute("aria-label","Support free Academy education");
+ }
+ const beta=dock.querySelector('#vnvBetaProgramLink,[data-landing-tool="beta"]');
+ if(beta&&beta.textContent.trim()!=="Beta")beta.textContent="Beta";
+ return true;
+}
+function begin(){
+ sync();
+ const observer=new MutationObserver(()=>sync());
+ observer.observe(document.body,{childList:true,subtree:true});
+ window.addEventListener("pageshow",sync);
+}
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",begin,{once:true});
+else begin();
+})();
 </script>
 </body>
 </html>
