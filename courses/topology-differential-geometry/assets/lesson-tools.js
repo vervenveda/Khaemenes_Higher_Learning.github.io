@@ -67,6 +67,26 @@ function render(){
   const reflection=$("#lessonReflection");if(reflection&&document.activeElement!==reflection)reflection.value=rec.reflection||"";
   const done=completeCount();if(bar)bar.style.width=`${done/STEPS.length*100}%`;if(count)count.textContent=`${done}/${STEPS.length} lesson stages recorded`;
   if(button){button.textContent=rec.complete?"✓ Study Activity Reviewed":"Mark Study Activity Reviewed";button.setAttribute("aria-pressed",String(!!rec.complete))}
+  // Canonical next-lesson UI requires the current learner's >=80% topic practice.
+  // Public lesson files remain open educational resources, not authenticated exams.
+  const next=$(".lesson-nav a.btn.primary[href]");
+  if(next){
+   if(!next.dataset.masteryHref){
+    next.dataset.masteryHref=next.getAttribute("href");
+    next.dataset.masteryLabel=next.textContent;
+   }
+   if(rec.topicPassed===true){
+    next.setAttribute("href",next.dataset.masteryHref);
+    next.textContent=next.dataset.masteryLabel;
+    next.removeAttribute("aria-disabled");
+    next.onclick=null;
+   }else{
+    next.setAttribute("href","#check");
+    next.textContent="Locked · earn 80% on this lesson's topic check";
+    next.setAttribute("aria-disabled","true");
+    next.onclick=event=>{event.preventDefault();$("#topicMasteryCheck")?.scrollIntoView({block:"start",behavior:"smooth"})};
+   }
+  }
   if(status)status.textContent=(rec.complete?"Study activity reviewed locally. ":"Study activity not yet reviewed. ")+(rec.quickScore==null?"No formative quick-check score.":"Formative quick check: "+rec.quickScore+"%. ")+(rec.topicPassed?"80% topic-specific practice threshold met; proof review remains separate.":rec.complete&&rec.topicScore==null?"Legacy study activity reviewed; new mathematics-specific topic check remains outstanding.":"Mathematics-specific topic check outstanding; verified proof mastery is separate.");
 }
 function setTheme(theme){document.documentElement.dataset.theme=theme;try{storageSet(THEME_KEY,theme)}catch{}}
