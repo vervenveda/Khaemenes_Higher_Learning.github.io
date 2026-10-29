@@ -13,7 +13,7 @@
 html{scroll-behavior:smooth;scroll-padding-top:100px;color-scheme:dark}
 html[data-theme="light"]{color-scheme:light}
 body{
-  margin:0;min-width:320px;min-height:100vh;overflow-x:hidden;color:var(--ink);
+  margin:0;min-width:255px;min-height:100vh;overflow-x:hidden;color:var(--ink);
   font:16px/1.68 var(--sans);
   background:
     radial-gradient(circle at 12% 0,rgba(120,175,233,.14),transparent 29rem),
@@ -237,3 +237,6 @@ h1,h2,h3,.brand-copy strong,.worksheet-title{font-family:var(--display);font-wei
 .hero .khae-course-subtitle{font:400 clamp(20px,2.75vw,28px)/1.35 "Cinzel",Georgia,serif!important;letter-spacing:.025em;text-align:center;text-wrap:balance;margin:10px auto 0;color:inherit;opacity:.87}
 @media(max-width:540px){:where(.hero h1,.lesson-header h1,main#main>.wrap>.section-head>h2,main.section>.wrap>.section-head>h2):not(.khae-academy-heading)::before{font-size:clamp(28px,8vw,35px)}.hero h1.khae-academy-heading{font-size:clamp(31px,8vw,40px)!important}}
 @media print{:where(.hero h1,.lesson-header h1,main#main>.wrap>.section-head>h2,main.section>.wrap>.section-head>h2):not(.khae-academy-heading)::before{font-size:18pt!important;color:#111!important;margin-bottom:5pt!important}:where(.hero h1,.lesson-header h1,main#main>.wrap>.section-head>h2,main.section>.wrap>.section-head>h2):not(.khae-academy-heading){font-size:14pt!important}.hero h1.khae-academy-heading{font-size:19pt!important}.hero .khae-course-subtitle{font-size:14pt!important}}
+
+/* 255px narrow-device compatibility; wider viewport composition unchanged. */
+@media(max-width:300px){.header-tools{grid-template-columns:1fr!important}.header-tools>*{min-width:0!important;max-width:100%}.header-control,.btn{max-width:100%;overflow-wrap:anywhere}.wrap{width:calc(100% - 18px)}.hero h1,.lesson-hero h1{font-size:clamp(1.65rem,9vw,2.2rem)}}
