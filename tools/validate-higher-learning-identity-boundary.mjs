@@ -72,7 +72,21 @@ includes("assets/khaemenes-core-page-loader.js", ["dataset?.core", "dataset?.sco
 // Campus and department identity wrappers.
 includes("index.html", ["index-core.txt", "assets/khaemenes-higher-learning-profile-adapter.js"]);
 includes("courses/index.html", ["index-core.txt", "../assets/khaemenes-higher-learning-profile-adapter.js"]);
-includes("Science/index.html", ["index-core.txt", "../assets/khaemenes-higher-app-scope.js"]);
+// Science is now a stateless same-origin redirect to the consolidated department.
+// Verify that boundary directly instead of requiring a retired active-wrapper/snapshot.
+const scienceAlias=file("Science/index.html");
+expect(scienceAlias.includes('location.replace(target.href)')&&
+       scienceAlias.includes('new URL("../courses/science/", location.href)'),
+       "Science alias explicitly redirects to its canonical same-origin department");
+expect(scienceAlias.includes('href="../courses/science/"'),
+       "Science alias keeps a usable static fallback link");
+expect(!/(?:localStorage|sessionStorage|indexedDB)/.test(scienceAlias),
+       "Science redirect has no persistent learner state or registry handling");
+const scienceHome=file("courses/science/index.html");
+expect(scienceHome.includes("Science Department"),
+       "Canonical consolidated Science department exists");
+expect(!/(?:localStorage|sessionStorage|indexedDB)/.test(scienceHome),
+       "Canonical Science landing is stateless; learner-bearing courses manage identity separately");
 includes("Career/index.html", ["index-core.txt", "../assets/khaemenes-higher-app-scope.js"]);
 
 // GED learner-bearing surfaces. Interactive_index.html is intentionally direct and has no persistent learner record.
@@ -165,7 +179,6 @@ expect(!/(?:localStorage|sessionStorage|indexedDB)/.test(mentor), "Higher Learni
 const protectedSnapshots = [
   "index-core.txt",
   "courses/index-core.txt",
-  "Science/index-core.txt",
   "Career/index-core.txt",
   "GED/Preparation_core.txt",
   "GED/Survey_core.txt",
