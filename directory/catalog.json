@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "title": "Khaemenes Higher Learning — Federated Existing-Course Inventory",
-  "inventoryDate": "2026-10-22",
+  "inventoryDate": "2026-10-29",
   "scope": "source-level structural discovery, not live browser acceptance or accreditation verification",
   "policy": {
     "sourceOwnership": "Federated schools retain their courses, portals, records and source URLs; this catalog only links them.",
@@ -16,13 +16,13 @@
     }
   },
   "summary": {
-    "records": 133,
+    "records": 137,
     "byStatus": {
-      "pathway": 65,
-      "instructional": 36,
+      "pathway": 66,
+      "instructional": 37,
       "bridge": 6,
       "outline": 20,
-      "resource": 6
+      "resource": 8
     },
     "arshifUniversityPathways": 63,
     "linguisticsCollegeOutlines": 20
@@ -2022,6 +2022,66 @@
       "catalogUrl": null,
       "notes": "Verified learner-facing constitutional study pathway with original weekly instruction, amendment mastery, research laboratory, completion records and browser QA. Educational study only; not legal licensure.",
       "duration": "expanding multi-week sequence"
+    },
+    {
+      "id": "health-is-wealth-six-weeks",
+      "title": "Health Is Wealth · Six-Week Personal Wellness",
+      "school": "Health, Psychology & Wellbeing",
+      "subject": "Personal Wellness",
+      "level": "Foundation / introductory",
+      "status": "instructional",
+      "kind": "Short course",
+      "sourceRepo": "Khaemenes_Academy.github.io",
+      "sourcePath": "Health_learning/Health_is_wealth_6weeks_index.html",
+      "sourceUrl": "https://vervenveda.com/Khaemenes_Academy.github.io/Health_learning/Health_is_wealth_6weeks_index.html",
+      "catalogUrl": null,
+      "notes": "Six-week public wellness instruction; university credit, independent final examination, and credentialing are not verified.",
+      "duration": "6 weeks"
+    },
+    {
+      "id": "ongoing-wellness-workshop",
+      "title": "Ongoing Wellness Workshop · Twelve Weeks",
+      "school": "Health, Psychology & Wellbeing",
+      "subject": "Wellness & Health Literacy",
+      "level": "Foundation / introductory",
+      "status": "pathway",
+      "kind": "Structured workshop",
+      "sourceRepo": "Khaemenes_Academy.github.io",
+      "sourcePath": "Health_learning/wellness_workshop_index.html",
+      "sourceUrl": "https://vervenveda.com/Khaemenes_Academy.github.io/Health_learning/wellness_workshop_index.html",
+      "catalogUrl": null,
+      "notes": "Twelve-week workshop entrance; interdisciplinary enrichment rather than verified college-credit coursework.",
+      "duration": "12 weeks"
+    },
+    {
+      "id": "bazaar-art-hall",
+      "title": "Bazaar Art Hall · Visual Art Resources",
+      "school": "Visual Arts & Design",
+      "subject": "Studio Arts",
+      "level": "Undergraduate / exploratory",
+      "status": "resource",
+      "kind": "Art hall",
+      "sourceRepo": "bazaarart.github.io",
+      "sourcePath": "apps/Class_art_hall_index.html",
+      "sourceUrl": "https://vervenveda.com/bazaarart.github.io/apps/Class_art_hall_index.html",
+      "catalogUrl": null,
+      "notes": "Visual art hall and resource doorway; Art 101 is separately catalogued and not duplicated here.",
+      "duration": null
+    },
+    {
+      "id": "finance-financial-hall",
+      "title": "Financial Hall · Finance and Enterprise",
+      "school": "Business & Financial Studies",
+      "subject": "Finance & Enterprise",
+      "level": "Professional / introductory",
+      "status": "resource",
+      "kind": "Financial learning hall",
+      "sourceRepo": "finance.github.io",
+      "sourcePath": "financial-hall/index.html",
+      "sourceUrl": "https://vervenveda.com/finance.github.io/financial-hall/index.html",
+      "catalogUrl": null,
+      "notes": "Financial education and certification-oriented hall; independently verified collegiate credit is not established.",
+      "duration": null
     }
   ]
 }
