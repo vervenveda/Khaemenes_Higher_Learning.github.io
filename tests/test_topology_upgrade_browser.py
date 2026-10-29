@@ -112,6 +112,11 @@ def test_same_questions_below_80_and_saved_lock_after_refresh(browser, site):
     page.locator("#topicMasteryCheck").wait_for(timeout=20000)
     assert page.locator("#scoreTopicCheck").is_disabled()
     assert page.locator("#topicMasteryCheck input:checked").count()==5
+    page.goto(site + BASE + "records/learner-profile.html", wait_until="domcontentloaded")
+    assert "1 of 92 mathematics topic checks" in page.locator("#topicSummary").inner_text()
+    with page.expect_download() as download_info:
+        page.locator("#exportLessonRecords").click()
+    assert download_info.value.suggested_filename == "topology-lesson-evidence.json"
     assert not errors, errors
     ctx.close()
 
