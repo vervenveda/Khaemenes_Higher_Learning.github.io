@@ -2,6 +2,7 @@ name: Beta Program index rollout
 
 on:
   push:
+    branches: [main]
     paths:
       - '**/index.html'
       - '.github/workflows/beta-index-rollout.yml'
@@ -33,7 +34,7 @@ jobs:
               has_direct='Open the Verve N Veda Beta Program' in t
               has_widget='vnv-beta-link.js' in t
               if has_csp:
-                  if has_widget: t=script_re.sub(direct,t)
+                  if has_widget and not has_direct: t=script_re.sub(direct,t)
                   elif not has_direct:
                       pos=t.lower().rfind('</body>')
                       if pos>=0: t=t[:pos]+'\n<!-- Verve N Veda Beta Program -->\n'+direct+'\n'+t[pos:]
