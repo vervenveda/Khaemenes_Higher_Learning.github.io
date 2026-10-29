@@ -2051,5 +2051,41 @@
         "Mastery evidence, correction, reflection and portfolio update"
       ]
     }
-  ]
+  ],
+  "readiness_gateway": {
+    "path": "diagnostic/index.html",
+    "question_count": 40,
+    "counts_toward_official_duration": false,
+    "threshold": 80,
+    "source": "Existing 40-question advanced readiness diagnostic",
+    "routing": {
+      "ready": "units/unit-01/index.html",
+      "support": "units/unit-00/index.html",
+      "legacy": "Existing course work remains preserved; retrospective diagnostic recommended"
+    },
+    "confidential": false
+  },
+  "conditional_unit_0": {
+    "id": "u00",
+    "number": 0,
+    "title": "Advanced Proof & Geometry Readiness Bridge",
+    "path": "units/unit-00/index.html",
+    "conditional": true,
+    "counts_toward_official_duration": false,
+    "lessons": 6,
+    "questions_per_lesson": 10,
+    "exit_questions": 24,
+    "exit_threshold_percent": 80,
+    "requires_reasoned_corrections": true,
+    "prerequisite_strands": [
+      "Logic & Proof",
+      "Functions & Continuity",
+      "Metric & Real Analysis",
+      "Multivariable Calculus",
+      "Linear Algebra",
+      "Algebraic Structures & Proof Defense"
+    ],
+    "official_course_weeks_after_exit": 36,
+    "record_rule": "Locally saved Unit 00 readiness evidence never downgrades or erases official course mastery; faculty validation remains separate."
+  }
 }

@@ -156,14 +156,19 @@ function nextWeek(){
 }
 function renderDashboard(){
  const s=activeStudent(),done=completeWeeks(),next=nextWeek(),grade=courseGrade();
+ const readiness=window.KhaemenesTopologyReadiness?.summary()||{mode:"diagnostic",route:"diagnostic/index.html",message:"Complete the prerequisite readiness diagnostic."};
+ const readyForOfficial=["direct","supported","legacy"].includes(readiness.mode);
  $("#view-dashboard").innerHTML=`<div class="wrap">
  <div class="section-head"><p class="eyebrow">Local learner dashboard</p><h2>${esc(s.name)} · Topology & Differential Geometry</h2>
  <p>Study activity checks, locally generated practice scores, and portfolio notes remain on this device unless deliberately exported. <strong>Academy policy requires at least 80% mastery to unlock each next lesson or activity.</strong> These local checklist/practice/grade averages do not by themselves verify that requirement or award credentials. Course-specific progression-gate review remains pending.</p></div>
  <div class="grid">
+  <article class="card col12" id="topologyReadinessCard"><p class="eyebrow">Pre-course Readiness · conditional Unit 00</p><h3>${readyForOfficial?"Official Course Ready":"Complete the Readiness Gateway First"}</h3>
+  <p>${esc(readiness.message)} · ${readiness.done||0}/6 Unit 00 lessons completed.</p><div class="actions"><a class="btn primary" href="${esc(readiness.route)}">${readyForOfficial?"Continue Official Unit 01":"Open Required Preparation"}</a><a class="btn" href="diagnostic/index.html">40-Question Placement Diagnostic</a><a class="btn" href="units/unit-00/index.html">Unit 00 Foundation Lessons</a></div>
+  <p>Existing course activity is never silently downgraded. Placement is local guidance; verified proof review remains separate.</p></article>
   <article class="card col4"><h3>Learner Record</h3>${studentControls()}<p class="notice">Prerequisite: Introduction to Proofs or equivalent proof fluency, Real Analysis, multivariable calculus, and Linear Algebra are required. Abstract Algebra is strongly recommended for fundamental groups, homology, and bundle theory. Placement is based on mastery, not age or grade.</p></article>
   <article class="card col8"><span class="pill">Next unchecked study week · not verified mastery</span><h3>Week ${next.week} · ${esc(next.title)}</h3><p>${esc(next.essential)}</p>
    <div class="progress"><span style="width:${done/36*100}%"></span></div><p>${done}/36 weeks with five study sessions checked (activity only) · ${Math.round(done/36*100)}%</p>
-   <div class="actions"><button class="btn primary" id="openNext" type="button">Open Week ${next.week}</button><a class="btn" href="${esc(next.unit_path)}">Open Detailed Route</a></div>
+   <div class="actions"><button class="btn primary" id="openNext" type="button">${readyForOfficial?`Open Week ${next.week}`:"Complete Readiness First"}</button><a class="btn" href="${esc(next.unit_path)}">Open Detailed Route</a></div>
   </article>
   <article class="card col3"><h4>Coursework Average</h4><p class="score">${pct(avg(D.weeks.map(w=>weekRecord(w.week).classwork)))}</p></article>
   <article class="card col3"><h4>Weekly Practice Average</h4><p class="score">${pct(avg(D.weeks.map(w=>weekRecord(w.week).masteryBest)))}</p></article>
@@ -174,7 +179,7 @@ function renderDashboard(){
   <article class="card col4"><h3>Formal Evidence</h3><p>40-question readiness diagnostic, 13 mastery checks, 60-question midterm, 100-question final, portfolio, and modelling defense.</p><button class="btn" data-view="assessments">Assessment Center</button></article>
  </div></div>`;
  bindStudentControls();
- $("#openNext")?.addEventListener("click",()=>{state.selectedWeek=next.week;save();setView("week")});
+ $("#openNext")?.addEventListener("click",()=>{if(!readyForOfficial){location.href=readiness.route;return}state.selectedWeek=next.week;save();setView("week")});
 }
 function dailyPlan(w){
  const focus=w.focus||w.title;
@@ -285,8 +290,8 @@ function renderAssessments(){
  const s=activeStudent();
  $("#view-assessments").innerHTML=`<div class="wrap"><div class="section-head"><p class="eyebrow">Formative practice and provisional evidence</p><h2>Assessment Center</h2><p>Academy policy requires 80% mastery at every required step. These publicly delivered practice forms, completion checkboxes and manually entered scores are not independently verified academic gates, secure examinations, recognized credit or certificate awards. Free study and reassessment remain available.</p></div>
  <div class="resource-grid">
-  <a class="card" href="diagnostic/"><h3>Readiness Diagnostic</h3><p>40 Calculus I prerequisite questions with targeted feedback.</p></a>
-  <a class="card" href="assessments/midterm.html"><h3>Public Midterm Practice Form</h3><p>60 questions covering Units 01–06: integration fluency, integration by parts, trigonometric methods, partial fractions, improper and numerical integration, and advanced applications of integration.</p></a>
+  <a class="card" href="diagnostic/"><h3>Readiness Diagnostic</h3><p>40 prerequisite questions in proof, sets, functions, metric spaces, real analysis, multivariable calculus and linear algebra.</p></a>
+  <a class="card" href="assessments/midterm.html"><h3>Public Midterm Practice Form</h3><p>60 questions covering Units 01–07: point-set topology, compactness, homotopy, homology foundations, manifolds and differential topology.</p></a>
   <a class="card" href="assessments/final.html"><h3>Public Final Practice Form</h3><p>100 questions across the complete Topology & Differential Geometry course.</p></a>
   <a class="card" href="records/course-completion-certificate.html"><h3>Unverified Completion Record Template</h3><p>Printable evaluator or family-issued completion and verification record.</p></a>
  </div>

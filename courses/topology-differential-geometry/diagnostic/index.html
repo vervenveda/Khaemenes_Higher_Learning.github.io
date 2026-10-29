@@ -1,3 +1,48 @@
-<!doctype html><html lang="en" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="color-scheme" content="dark light"><meta name="theme-color" content="#090b10"><meta name="description" content="Forty placement questions in proof, sets, functions, metric spaces, real analysis, multivariable calculus, linear algebra, basic algebraic structures, curves, surfaces, and mathematical writing. Use results for placement and support, not exclusion."><meta name="application-version" content="2026.08.06-topology-differential-geometry-1"><title>Topology &amp; Differential Geometry Readiness Diagnostic</title><link rel="stylesheet" href="../assets/styles.css?v=topology-differential-geometry-1"></head><body><a class="skip screen-only" href="#main">Skip to main content</a><header class="site-header screen-only"><div class="wrap header-inner"><div class="brand-group"><a class="brand-home" href="https://vervenveda.com/Khaemenes_Higher_Learning.github.io/" aria-label="Khaemenes Higher Learning home">K</a><a class="brand-copy" href="../index.html"><strong>Topology &amp; Differential Geometry Readiness Diagnostic</strong><small>Topology &amp; Differential Geometry Assessment</small></a></div><div class="header-tools"><a class="header-control" href="../index.html">Course Home</a><a class="header-control" href="../records/learner-profile.html">Profile</a><button class="header-control" id="themeToggle" type="button">◐ Theme</button><button class="header-control" onclick="window.print()" type="button">Print / Save PDF</button></div></div></header><main class="assessment-shell" id="main"><div class="assessment-head"><p class="eyebrow">Advanced mastery evidence</p><h1>Topology &amp; Differential Geometry Readiness Diagnostic</h1><p>Forty placement questions in proof, sets, functions, metric spaces, real analysis, multivariable calculus, linear algebra, basic algebraic structures, curves, surfaces, and mathematical writing. Use results for placement and support, not exclusion.</p><div class="assessment-controls"><button class="btn primary" id="startAssessment" type="button">Start / New Attempt</button><button class="btn" id="resetAssessment" type="button">Reset</button></div></div><div id="assessmentRoot"></div></main><script src="../assets/question-bank.js"></script><script>window.TOPOLOGY_DIFFERENTIAL_GEOMETRY_ASSESSMENT_CONFIG={"title": "Topology & Differential Geometry Readiness Diagnostic", "recordKey": "diagnostic", "count": 40, "instructions": "Answer every question, submit once complete, study the explanations, and document corrections before a new attempt.", "source": "diagnostic"};</script><script src="../assets/assessment-engine.js"></script>
+<!doctype html><html lang="en" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="color-scheme" content="dark light"><meta name="theme-color" content="#090b10"><meta name="description" content="Forty revised prerequisite questions with balanced correct-answer positions across six advanced mathematics strands. Previous placement attempts remain historical practice evidence; 80% on this version determines the new starting route."><meta name="application-version" content="2026.08.06-topology-differential-geometry-1"><title>Topology &amp; Differential Geometry Readiness Diagnostic</title><link rel="stylesheet" href="../assets/styles.css?v=topology-differential-geometry-1"></head><body><a class="skip screen-only" href="#main">Skip to main content</a><header class="site-header screen-only"><div class="wrap header-inner"><div class="brand-group"><a class="brand-home" href="https://vervenveda.com/Khaemenes_Higher_Learning.github.io/" aria-label="Khaemenes Higher Learning home">K</a><a class="brand-copy" href="../index.html"><strong>Topology &amp; Differential Geometry Readiness Diagnostic</strong><small>Topology &amp; Differential Geometry Assessment</small></a></div><div class="header-tools"><a class="header-control" href="../index.html">Course Home</a><a class="header-control" href="../records/learner-profile.html">Profile</a><button class="header-control" id="themeToggle" type="button">◐ Theme</button><button class="header-control" onclick="window.print()" type="button">Print / Save PDF</button></div></div></header><main class="assessment-shell" id="main"><div class="assessment-head"><p class="eyebrow">Advanced mastery evidence</p><h1>Topology &amp; Differential Geometry Readiness Diagnostic</h1><p>Forty placement questions in proof, sets, functions, metric spaces, real analysis, multivariable calculus, linear algebra, basic algebraic structures, curves, surfaces, and mathematical writing. Use results for placement and support, not exclusion.</p><div class="assessment-controls"><button class="btn primary" id="startAssessment" type="button">Start / New Attempt</button><button class="btn" id="resetAssessment" type="button">Reset</button></div></div><div id="assessmentRoot"></div></main><script src="../assets/question-bank.js"></script><script src="../assets/readiness-question-bank-v2.js"></script><script>window.TOPOLOGY_DIFFERENTIAL_GEOMETRY_ASSESSMENT_CONFIG={"title": "Topology & Differential Geometry Readiness Diagnostic", "recordKey": "diagnostic", "count": 40, "instructions": "Answer every question, submit once complete, study the explanations, and document corrections before a new attempt.", "source": "diagnostic", "assessmentVersion":"topology-readiness-v2"};</script><div class="assessment-head" id="readinessOutcome" role="status" aria-live="polite"><p>Your placement guidance will appear here after you submit all 40 questions. Results are stored locally for this learner.</p></div>
+<script src="../assets/readiness-bridge.js"></script><script src="../assets/assessment-engine.js"></script>
+<script>
+(()=>{"use strict";
+const el=document.getElementById("readinessOutcome");
+function refresh(){
+ const r=window.KhaemenesTopologyReadiness?.summary();
+ if(!r||!el)return;
+ el.replaceChildren();
+ const h=document.createElement("h2");h.textContent="Readiness Route";el.append(h);
+ const p=document.createElement("p");p.textContent=r.message;el.append(p);
+ if(r.best!==null){const score=document.createElement("p");score.textContent="Best diagnostic: "+r.best+"%";el.append(score)}
+ const a=document.createElement("a");a.className="btn primary";a.href="../"+r.route;a.textContent=r.mode==="bridge"?"Begin Unit 00 Foundations":r.mode==="diagnostic"?"Take Readiness Diagnostic":"Begin Official Unit 01";el.append(a);
+ const completed=window.KhaemenesTopologyReadiness.attempts().filter(attempt=>attempt.assessmentVersion==="topology-readiness-v2");
+ const recent=completed[completed.length-1];
+ const bank=window.TOPOLOGY_DIFFERENTIAL_GEOMETRY_DIAGNOSTIC||[];
+ if(recent&&bank.length===40&&Array.isArray(recent.missed)){
+  const table=document.createElement("table");table.className="readiness-strand-table";
+  table.style.cssText="width:100%;border-collapse:collapse;text-align:left;margin:16px 0";
+  const caption=document.createElement("caption");caption.textContent="Six-strand readiness profile · most recent revised attempt";caption.style.textAlign="left";table.append(caption);
+  const head=document.createElement("thead"),row=document.createElement("tr");for(const cell of ["Prerequisite strand","Correct","Practice support"]){const th=document.createElement("th");th.textContent=cell;th.style.padding="9px";row.append(th)}head.append(row);table.append(head);
+  const body=document.createElement("tbody"),missed=new Set(recent.missed);
+  const strands=[...new Set(bank.map(q=>q.strand))];
+  const breakdown=[];
+  strands.forEach((strand,i)=>{
+   const questions=bank.filter(q=>q.strand===strand),right=questions.filter(q=>!missed.has(q.id)).length,total=questions.length,percent=Math.round(right/total*100);
+   breakdown.push({strand,correct:right,total,percent});
+   const tr=document.createElement("tr"),td=document.createElement("td");td.textContent=strand;td.style.padding="9px";tr.append(td);
+   const score=document.createElement("td");score.textContent=right+"/"+total+" · "+percent+"%";score.style.padding="9px";tr.append(score);
+   const support=document.createElement("td");support.style.padding="9px";const link=document.createElement("a");link.href="../units/unit-00/lessons/u00-l"+String(i+1).padStart(2,"0")+".html";link.textContent=percent<80?"Lesson "+(i+1)+" support · open sequentially":"Lesson "+(i+1)+" · optional review";support.append(link);tr.append(support);body.append(tr);
+  });
+  table.append(body);el.append(table);
+  const exportButton=document.createElement("button");exportButton.className="btn";exportButton.type="button";exportButton.textContent="Export Six-Strand Placement Evidence";
+  exportButton.onclick=()=>{
+   const payload={course:"Topology & Differential Geometry",learner:r.id,assessmentVersion:"topology-readiness-v2",score:recent.score,attemptDate:recent.date,route:r.mode,strands:breakdown,confidential:false,verified:false};
+   const url=URL.createObjectURL(new Blob([JSON.stringify(payload,null,2)],{type:"application/json"})),anchor=document.createElement("a");
+   anchor.href=url;anchor.download="topology-placement-six-strand.json";anchor.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+  };
+  el.append(exportButton);
+ }
+
+}
+document.addEventListener("click",e=>{if(e.target?.id==="submitAssessment")setTimeout(refresh,0)},true);
+refresh();
+})();
+</script>
 <script src="/assets/vnv-beta-link.js" defer></script>
 </body></html>
