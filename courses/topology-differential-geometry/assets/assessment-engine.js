@@ -64,7 +64,7 @@ function balancedSet(items,count){
 function start(newAttempt=false){
  const d=records(),key=cfg.recordKey||"assessment",old=d[key]?.draft;
  const items=pool(),byId=new Map(items.map(q=>[q.id,q]));
- if(!newAttempt&&old&&!old.passed&&Array.isArray(old.ids)&&old.ids.every(id=>byId.has(id))){
+ if(!newAttempt&&old&&Array.isArray(old.ids)&&old.ids.length>0&&old.ids.every(id=>byId.has(id))){
   set=old.ids.map(id=>byId.get(id));
  }else{
   set=balancedSet(items,cfg.count);
@@ -73,17 +73,24 @@ function start(newAttempt=false){
  host.innerHTML=`<article class="card"><div class="form-grid"><label>Learner name or initials<input id="assessmentLearner" maxlength="60" placeholder="Optional local label"></label><label>Pathway<select id="assessmentPathway"><option>Foundation</option><option selected>Core</option><option>Research / Graduate</option></select></label></div><p class="notice">${esc(cfg.instructions||"Answer every question. Submit once complete, review explanations, and correct missed work.")}</p></article>`+
  set.map((q,i)=>`<article class="question"><fieldset><legend>${i+1}. ${esc(q.prompt)}</legend><div class="options">${q.options.map((o,j)=>`<label class="option"><input type="radio" name="${token}-q${i}" value="${j}"><span>${esc(o)}</span></label>`).join("")}</div><div class="feedback" id="${token}-fb${i}" hidden></div></fieldset></article>`).join("")+
  `<div class="assessment-result"><button class="btn primary" id="submitAssessment" type="button">Submit &amp; Score</button><button class="btn" id="printAssessment" type="button">Print</button><p id="assessmentMessage">Best saved score: ${best()==null?"—":best()+"%"}</p></div>`;
- const choices=(!newAttempt&&old&&!old.passed&&Array.isArray(old.choices))?old.choices:[];
+ const choices=(!newAttempt&&old&&Array.isArray(old.choices))?old.choices:[];
  set.forEach((q,i)=>{
   if(choices[i]!==null&&choices[i]!==undefined){
    const box=document.querySelector('input[name="'+token+'-q'+i+'"][value="'+choices[i]+'"]');
    if(box)box.checked=true;
   }
  });
- host.onchange=event=>{
+ const passedPreviously=!newAttempt&&old?.passed===true;
+ host.onchange=passedPreviously?null:event=>{
   if(event.target?.matches('input[type="radio"]'))rememberDraft(token);
  };
- rememberDraft(token);
+ if(passedPreviously){
+  host.querySelectorAll('input[type="radio"]').forEach(box=>box.disabled=true);
+  document.getElementById("submitAssessment").disabled=true;
+  document.getElementById("assessmentMessage").textContent="Saved passing attempt: "+old.lastScore+"%. Answers locked; start a new attempt for additional practice. Academic proof review remains separate.";
+ }else{
+  rememberDraft(token);
+ }
  document.getElementById("submitAssessment").addEventListener("click",()=>score(token));
  document.getElementById("printAssessment").addEventListener("click",()=>print());
 }
@@ -102,6 +109,10 @@ function score(token){
  data[key]=data[key]||{title:cfg.title||key,attempts:[]};
  data[key].attempts.push({date:new Date().toISOString(),score,right,total:set.length,missed,learner:document.getElementById("assessmentLearner").value.trim(),pathway:document.getElementById("assessmentPathway").value});
  if(data[key].draft){
+  data[key].draft.choices=set.map((q,i)=>{
+    const selected=document.querySelector('input[name="'+token+'-q'+i+'"]:checked');
+    return selected?Number(selected.value):null;
+  });
   data[key].draft.passed=score>=80;
   data[key].draft.lastScore=score;
  }
