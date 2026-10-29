@@ -73,7 +73,7 @@ $$('[data-lesson-step]').forEach(box=>box.addEventListener('change',()=>{rec.ste
 $("#pathwaySelect")?.addEventListener("change",event=>{rec.pathway=event.target.value;persist();activatePathway(rec.pathway)});
 function activatePathway(name){
   $$('[data-pathway]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.pathway===name)));
-  const panel=$("#pathwayPanel"),source=$('[data-pathway-copy]').find(node=>node.dataset.pathwayCopy===name);if(panel&&source)panel.innerHTML=source.innerHTML;
+  const panel=$("#pathwayPanel"),source=$$('[data-pathway-copy]').find(node=>node.dataset.pathwayCopy===name);if(panel&&source)panel.innerHTML=source.innerHTML;
 }
 $$('[data-pathway]').forEach(button=>button.addEventListener('click',()=>{rec.pathway=button.dataset.pathway;persist();activatePathway(rec.pathway)}));
 $("#completeLesson")?.addEventListener("click",()=>{if(!rec.complete&&!rec.topicPassed){alert("Complete the new mathematics-specific topic check with at least 80% before marking this activity reviewed. Verified proof mastery is assessed separately.");return}rec.complete=!rec.complete;persist()});
