@@ -297,7 +297,7 @@ def test_placement_diagnostic_routes_under_80_to_unit00(browser, site):
     page.wait_for_timeout(100)
     assert "75%" in page.locator("#assessmentMessage").inner_text()
     assert "Unit 00" in page.locator("#readinessOutcome").inner_text()
-    assert page.locator("#readinessOutcome a").get_attribute("href").endswith("units/unit-00/index.html")
+    assert page.locator("#readinessOutcome a.btn.primary").get_attribute("href").endswith("units/unit-00/index.html")
     assert not errors, errors
     ctx.close()
 
