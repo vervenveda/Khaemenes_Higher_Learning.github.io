@@ -178,3 +178,42 @@ def test_255px_mobile_no_document_overflow(browser, site, path):
     assert page.evaluate("document.documentElement.scrollWidth<=window.innerWidth+2"),path
     assert not errors, errors
     ctx.close()
+
+
+def test_all_remaining_72_lessons_have_distinct_math_workshops(browser, site):
+    ctx, page, errors = visit(browser, site, "units/unit-02/lessons/u02-l02.html")
+    seen = set()
+    for unit in range(2, 14):
+        for lesson in range(2, 8):
+            lesson_id = f"u{unit:02d}-l{lesson:02d}"
+            if lesson_id != "u02-l02":
+                page.goto(
+                    site + BASE + f"units/unit-{unit:02d}/lessons/{lesson_id}.html",
+                    wait_until="domcontentloaded"
+                )
+            page.locator("#mathWorkshopProof").wait_for(timeout=20000)
+            assert page.locator("#rigor-workshop").count() == 1, lesson_id
+            example = page.locator("#rigor-workshop h3").first.inner_text()
+            assert "Statement and verified reasoning" in example
+            assert page.locator("#rigor-workshop textarea").count() == 2
+            title = page.locator("#rigor-workshop .lesson-section p").first.inner_text()
+            assert len(title) > 80, lesson_id
+            seen.add(lesson_id)
+    assert len(seen) == 72
+    assert not errors, errors
+    ctx.close()
+
+
+def test_workshop_proof_evidence_saved_by_student(browser, site):
+    ctx, page, errors = visit(browser, site, "units/unit-08/lessons/u08-l04.html")
+    page.locator("#mathWorkshopProof").wait_for(timeout=20000)
+    page.locator("#mathWorkshopProof").fill("Given regularity of the parameter derivatives, their cross product is nonzero; the tangent plane is spanned by them.")
+    page.locator("#mathWorkshopReflection").fill("Without independent derivatives a singular patch could fail to define a surface.")
+    page.locator("#saveMathWorkshop").click()
+    assert "saved locally" in page.locator("#mathWorkshopStatus").inner_text().lower()
+    page.reload(wait_until="domcontentloaded")
+    page.locator("#mathWorkshopProof").wait_for(timeout=20000)
+    assert "Given regularity" in page.locator("#mathWorkshopProof").input_value()
+    assert "singular patch" in page.locator("#mathWorkshopReflection").input_value()
+    assert not errors, errors
+    ctx.close()
