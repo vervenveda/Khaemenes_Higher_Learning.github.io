@@ -61,3 +61,14 @@ No credential or credit claim is implied by self-scored local practice.
 - Fixed the pre-existing JavaScript pathway rendering failure (`querySelectorAll` required), added 255px narrow-device CSS, and introduced an automated Playwright test workflow for draft PRs.
 - New browser checks exercise multiple lessons, sub-80 retries, saved 80% locks, two learners, the new labs, evidence exports and 255px overflow. These checks are a test gate and their GitHub Actions status must be inspected before publishing.
 - **Release boundary remains:** none of these self-scored local practice checks provides an authenticated final examination or independently reviewed proof. Faculty review and a deliberate legacy-record migration remain outstanding.
+
+## Final curriculum expansion — Units 02–13, lessons 02–07
+- Four mathematics-specific JavaScript data modules now cover **72 of 72** remaining lesson IDs. Each entry contains its own worked mathematical argument, independent proof or calculation, and a named mathematical misconception or hypothesis limitation.
+- A shared renderer adds a proof workshop and an editable learner evidence area to each corresponding existing lesson; no lesson URLs, course map records or pre-existing HTML lesson content were replaced.
+- The local learner record stores workshop proof and reflection separately by learner ID; proof editing clears any previous local reviewed marker rather than silently claiming approval. This is evidence collection, not faculty-verified credit.
+- A print-friendly rubric and proof submission area accompanies each workshop. The rubric assigns definitions/hypotheses 20%, mathematical derivation 40%, counterexample/transfer 20%, and clarity/interpretation 20%.
+- The service worker precaches the renderer and all four data modules, while the landing registration query was refreshed to prompt offline updates.
+- Source inspection verified **72 unique workshop IDs, 18 in each data module, zero missing and zero orphaned IDs**, with valid JS parse. The first full Chromium suite with the new workshops reported **17 passed**.
+- Added additional browser tests for A/B learner proof isolation, offline workshop access, and 255px workshop readability; their CI run must pass before release.
+- The existing identity-boundary workflow reports three unrelated Science snapshot checks failing on the repository baseline; those are not repaired in this Topology scope.
+- Faculty review of individual mathematical claims is still needed before accredited or verified academic certification claims.
