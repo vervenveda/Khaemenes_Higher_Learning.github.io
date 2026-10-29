@@ -217,3 +217,49 @@ def test_workshop_proof_evidence_saved_by_student(browser, site):
     assert "singular patch" in page.locator("#mathWorkshopReflection").input_value()
     assert not errors, errors
     ctx.close()
+
+
+def test_proof_evidence_is_separated_for_two_course_learners(browser, site):
+    ctx, page, errors = visit(browser, site, "units/unit-08/lessons/u08-l04.html")
+    page.evaluate("""() => localStorage.setItem('khaemenes-topology-differential-geometry-course-v1',
+         JSON.stringify({activeId:'proof-learner-A', students:[]}))""")
+    page.reload(wait_until="domcontentloaded")
+    page.locator("#mathWorkshopProof").wait_for(timeout=20000)
+    page.locator("#mathWorkshopProof").fill("Learner A proves that two tangent derivatives are independent.")
+    page.locator("#saveMathWorkshop").click()
+    page.evaluate("""() => localStorage.setItem('khaemenes-topology-differential-geometry-course-v1',
+         JSON.stringify({activeId:'proof-learner-B', students:[]}))""")
+    page.reload(wait_until="domcontentloaded")
+    page.locator("#mathWorkshopProof").wait_for(timeout=20000)
+    assert page.locator("#mathWorkshopProof").input_value()==""
+    page.locator("#mathWorkshopProof").fill("Learner B submits a distinct argument.")
+    page.locator("#saveMathWorkshop").click()
+    page.evaluate("""() => localStorage.setItem('khaemenes-topology-differential-geometry-course-v1',
+         JSON.stringify({activeId:'proof-learner-A', students:[]}))""")
+    page.reload(wait_until="domcontentloaded")
+    page.locator("#mathWorkshopProof").wait_for(timeout=20000)
+    assert page.locator("#mathWorkshopProof").input_value().startswith("Learner A")
+    assert not errors, errors
+    ctx.close()
+
+
+def test_offline_workshop_cache_after_course_install(browser, site):
+    ctx, page, errors = visit(browser, site, "index.html")
+    page.evaluate("""async () => { if (!('serviceWorker' in navigator)) throw Error('service worker unavailable');
+       await navigator.serviceWorker.ready; }""")
+    page.reload(wait_until="domcontentloaded")
+    page.wait_for_function("!!navigator.serviceWorker.controller", timeout=20000)
+    ctx.set_offline(True)
+    page.goto(site + BASE + "units/unit-08/lessons/u08-l04.html", wait_until="domcontentloaded", timeout=20000)
+    page.locator("#mathWorkshopProof").wait_for(timeout=20000)
+    assert "Worked mathematical investigation" in page.locator("#rigor-workshop").inner_text()
+    ctx.set_offline(False)
+    ctx.close()
+
+
+def test_narrow_mobile_workshop_visible(browser, site):
+    ctx, page, errors = visit(browser, site, "units/unit-08/lessons/u08-l04.html", width=255)
+    page.locator("#mathWorkshopProof").wait_for(timeout=20000)
+    assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 2")
+    assert not errors, errors
+    ctx.close()
