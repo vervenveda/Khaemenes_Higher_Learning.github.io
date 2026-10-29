@@ -449,3 +449,37 @@ def test_offline_unit00_lessons_open_with_questions(browser,site):
     assert page.locator("#bridgeQuestions [data-q]").count()==10
     ctx.set_offline(False)
     ctx.close()
+
+
+@pytest.mark.parametrize("unit", range(1,14))
+def test_all_thirteen_unit_overviews_show_learner_progress(browser,site,unit):
+    ctx,page,errors=visit(browser,site,f"units/unit-{unit:02d}/index.html")
+    page.locator("#unitProgress").wait_for(timeout=20000)
+    count=page.locator('a.card[href^="lessons/"]').count()
+    assert count>0
+    assert f"0/{count}" in page.locator("#unitProgress").inner_text()
+    assert not errors,errors
+    ctx.close()
+
+
+def test_unit_overview_ignores_unassigned_and_other_learners(browser,site):
+    ctx,page,errors=visit(browser,site,"units/unit-01/index.html")
+    page.evaluate("""() => {
+      const course={activeId:'learner-alpha',students:[{id:'learner-alpha',weeks:{}}]};
+      localStorage.setItem('khaemenes-topology-differential-geometry-course-v1',JSON.stringify(course));
+      localStorage.setItem('khaemenes-topology-differential-geometry-lessons-v1',JSON.stringify({'u01-l03':{complete:true}}));
+      localStorage.setItem('khaemenes-topology-differential-geometry-lessons-v2:learner-alpha',JSON.stringify({'u01-l02':{complete:true,topicPassed:true}}));
+    }""")
+    page.reload(wait_until="domcontentloaded")
+    assert "1/8" in page.locator("#unitProgress").inner_text()
+    assert page.locator('a.card.completed[href="lessons/u01-l02.html"]').count()==1
+    assert page.locator('a.card.completed[href="lessons/u01-l03.html"]').count()==0
+    page.evaluate("""() => {
+      localStorage.setItem('khaemenes-topology-differential-geometry-course-v1',
+        JSON.stringify({activeId:'learner-beta',students:[{id:'learner-beta',weeks:{}}]}));
+    }""")
+    page.reload(wait_until="domcontentloaded")
+    assert "0/8" in page.locator("#unitProgress").inner_text()
+    assert page.locator("a.card.completed").count()==0
+    assert not errors,errors
+    ctx.close()
