@@ -406,6 +406,7 @@ html[data-theme="light"] .department-link.developing{color:#234963;border-color:
           <p class="lead">A scholarly, independent higher-learning campus designed to grow into a complete collegiate curriculum—connecting rigorous courses, career development, research, professional tools, student records, creative study, and advanced pathways in one organized academic environment.</p>
           <div class="actions">
             <a class="btn btn-primary" href="#departments">Academic Departments</a>
+            <a class="btn" href="./directory/">Browse Full Course Directory</a>
             <a class="btn career-cta" href="./Career/index.html">Career Portal</a>
             <a class="btn" href="./courses/index.html">Mathematics</a>
             <a class="btn btn-bronze" href="./start/">Scholar Entry</a>
