@@ -3,5 +3,19 @@
   "midterm": 60,
   "final": 100,
   "unit_mastery": 13,
-  "mastery_target": 80
+  "mastery_target": 80,
+  "readiness_gateway": {
+    "questions": 40,
+    "threshold": 80,
+    "conditional_unit_0": true,
+    "counts_toward_course": false
+  },
+  "unit_00_exit": {
+    "questions": 24,
+    "threshold": 80,
+    "required_correct": 20,
+    "reasoning_corrections_required": true,
+    "local_self_check": true,
+    "faculty_review_required": true
+  }
 }

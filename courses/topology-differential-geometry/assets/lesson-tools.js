@@ -14,15 +14,17 @@ function ensureLearnerToolbar(){
   else mount();
 }
 function higherScholarLessonKey(legacyKey){
-  try{
-    const registry=JSON.parse(localStorage.getItem("khaemenes_family_registry_v1")||"null");
-    const learnerId=JSON.parse(localStorage.getItem("khaemenes_active_learner_v1")||"null");
-    const learner=learnerId&&registry?.learners?.[learnerId]?registry.learners[learnerId]:null;
-    if(!learner||String(learner.stage||"").toLowerCase()!=="higher")return legacyKey;
-    const course=(location.pathname.match(/\/courses\/([^/]+)\//i)||[])[1]||"higher-course";
-    return `khaemenes.course:${learner.learnerId}:higher:${decodeURIComponent(course)}:lesson-progress-v1`;
-  }catch{return legacyKey}
+ try{
+  const learnerId=JSON.parse(localStorage.getItem("khaemenes_active_learner_v1")||"null");
+  const registry=JSON.parse(localStorage.getItem("khaemenes_family_registry_v1")||"null");
+  if(typeof learnerId==="string"&&registry?.learners?.[learnerId]&&String(registry.learners[learnerId].stage||"").toLowerCase()==="higher"){
+   return "khaemenes-topology-differential-geometry-lessons-v2:"+learnerId;
+  }
+  const course=JSON.parse(localStorage.getItem("khaemenes-topology-differential-geometry-course-v1")||"{}");
+  return "khaemenes-topology-differential-geometry-lessons-v2:"+(course.activeId?String(course.activeId):"learner-1");
+ }catch{return "khaemenes-topology-differential-geometry-lessons-v2:learner-1"}
 }
+
 ensureLearnerToolbar();
 const KEY=higherScholarLessonKey(LEGACY_KEY);
 const THEME_KEY="khaemenes-higher-learning-theme";
@@ -33,7 +35,7 @@ function storageGet(key){try{return localStorage.getItem(key)}catch{return null}
 function storageSet(key,value){try{localStorage.setItem(key,value);return true}catch{return false}}
 function loadAll(){try{const x=JSON.parse(storageGet(KEY)||"{}");return x&&typeof x==="object"?x:{}}catch{return {}}}
 function saveAll(data){try{return storageSet(KEY,JSON.stringify(data))}catch{return false}}
-function freshRecord(){return {complete:false,pathway:"Core",steps:{},reflection:"",quickScore:null,updated:null}}
+function freshRecord(){return {complete:false,pathway:"Core",steps:{},reflection:"",quickScore:null,topicScore:null,topicPassed:false,topicChoices:[],topicBankVersion:0,workshopProof:"",workshopReflection:"",workshopReviewed:false,updated:null}}
 function normalizeRecord(raw){
   const base=freshRecord();
   if(raw===true||raw===false){base.complete=raw;return base}
@@ -44,6 +46,13 @@ function normalizeRecord(raw){
   base.steps=raw.steps&&typeof raw.steps==="object"&&!Array.isArray(raw.steps)?raw.steps:{};
   base.reflection=typeof raw.reflection==="string"?raw.reflection:"";
   base.quickScore=raw.quickScore!=null&&raw.quickScore!==""&&Number.isFinite(Number(raw.quickScore))?Math.max(0,Math.min(100,Math.round(Number(raw.quickScore)))):null;
+  base.topicScore=raw.topicScore==null?null:Math.max(0,Math.min(100,Number(raw.topicScore)||0));
+  base.topicPassed=raw.topicPassed===true;
+  base.topicChoices=Array.isArray(raw.topicChoices)?raw.topicChoices.slice(0,5):[];
+  base.topicBankVersion=Number(raw.topicBankVersion)||0;
+  base.workshopProof=typeof raw.workshopProof==="string"?raw.workshopProof:"";
+  base.workshopReflection=typeof raw.workshopReflection==="string"?raw.workshopReflection:"";
+  base.workshopReviewed=raw.workshopReviewed===true;
   base.updated=typeof raw.updated==="string"?raw.updated:null;
   return base;
 }
@@ -58,7 +67,27 @@ function render(){
   const reflection=$("#lessonReflection");if(reflection&&document.activeElement!==reflection)reflection.value=rec.reflection||"";
   const done=completeCount();if(bar)bar.style.width=`${done/STEPS.length*100}%`;if(count)count.textContent=`${done}/${STEPS.length} lesson stages recorded`;
   if(button){button.textContent=rec.complete?"✓ Study Activity Reviewed":"Mark Study Activity Reviewed";button.setAttribute("aria-pressed",String(!!rec.complete))}
-  if(status)status.textContent=(rec.complete?"Study activity reviewed locally. ":"Study activity not yet reviewed. ")+(rec.quickScore==null?"No formative quick-check score.":"Formative quick check: "+rec.quickScore+"%. ")+(rec.quickScore>=80?"80% practice threshold met; verified academic mastery remains separate.":"The required 80% academic mastery gate remains separate.");
+  // Canonical next-lesson UI requires the current learner's >=80% topic practice.
+  // Public lesson files remain open educational resources, not authenticated exams.
+  const next=$(".lesson-nav a.btn.primary[href]");
+  if(next){
+   if(!next.dataset.masteryHref){
+    next.dataset.masteryHref=next.getAttribute("href");
+    next.dataset.masteryLabel=next.textContent;
+   }
+   if(rec.topicPassed===true){
+    next.setAttribute("href",next.dataset.masteryHref);
+    next.textContent=next.dataset.masteryLabel;
+    next.removeAttribute("aria-disabled");
+    next.onclick=null;
+   }else{
+    next.setAttribute("href","#check");
+    next.textContent="Locked · earn 80% on this lesson's topic check";
+    next.setAttribute("aria-disabled","true");
+    next.onclick=event=>{event.preventDefault();$("#topicMasteryCheck")?.scrollIntoView({block:"start",behavior:"smooth"})};
+   }
+  }
+  if(status)status.textContent=(rec.complete?"Study activity reviewed locally. ":"Study activity not yet reviewed. ")+(rec.quickScore==null?"No formative quick-check score.":"Formative quick check: "+rec.quickScore+"%. ")+(rec.topicPassed?"80% topic-specific practice threshold met; proof review remains separate.":rec.complete&&rec.topicScore==null?"Legacy study activity reviewed; new mathematics-specific topic check remains outstanding.":"Mathematics-specific topic check outstanding; verified proof mastery is separate.");
 }
 function setTheme(theme){document.documentElement.dataset.theme=theme;try{storageSet(THEME_KEY,theme)}catch{}}
 setTheme(storageGet(THEME_KEY)||"dark");
@@ -67,10 +96,10 @@ $$('[data-lesson-step]').forEach(box=>box.addEventListener('change',()=>{rec.ste
 $("#pathwaySelect")?.addEventListener("change",event=>{rec.pathway=event.target.value;persist();activatePathway(rec.pathway)});
 function activatePathway(name){
   $$('[data-pathway]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.pathway===name)));
-  const panel=$("#pathwayPanel"),source=$('[data-pathway-copy]').find(node=>node.dataset.pathwayCopy===name);if(panel&&source)panel.innerHTML=source.innerHTML;
+  const panel=$("#pathwayPanel"),source=$$('[data-pathway-copy]').find(node=>node.dataset.pathwayCopy===name);if(panel&&source)panel.innerHTML=source.innerHTML;
 }
 $$('[data-pathway]').forEach(button=>button.addEventListener('click',()=>{rec.pathway=button.dataset.pathway;persist();activatePathway(rec.pathway)}));
-$("#completeLesson")?.addEventListener("click",()=>{rec.complete=!rec.complete;persist()});
+$("#completeLesson")?.addEventListener("click",()=>{if(!rec.complete&&!rec.topicPassed){alert("Complete the new mathematics-specific topic check with at least 80% before marking this activity reviewed. Verified proof mastery is assessed separately.");return}rec.complete=!rec.complete;persist()});
 $("#saveReflection")?.addEventListener("click",()=>{rec.reflection=$("#lessonReflection")?.value.trim()||"";rec.steps.reflection=!!rec.reflection;persist();const msg=$("#reflectionMessage");if(msg)msg.textContent="Reflection saved locally."});
 $("#printLesson")?.addEventListener("click",()=>window.print());
 $("#checkLessonQuestions")?.addEventListener("click",()=>{
@@ -93,6 +122,44 @@ $("#scoreQuickCheck")?.addEventListener("click",()=>{
   cards.forEach(card=>{const chosen=card.querySelector("input:checked"),answer=Number(card.dataset.correct),explanation=card.querySelector(".explanation");if(chosen){answered++;const good=Number(chosen.value)===answer;if(good)correct++;card.classList.toggle("good",good);card.classList.toggle("bad",!good);if(explanation){explanation.hidden=false;explanation.textContent=(good?"Correct. ":"Review: ")+explanation.textContent.replace(/^(Correct\. |Review: )/,"")}}});
   const result=$("#quickCheckResult");if(answered===cards.length&&cards.length){rec.quickScore=Math.round(correct/cards.length*100);rec.steps.check=true;persist();if(result)result.textContent=`${correct}/${cards.length} correct · ${rec.quickScore}%`}else if(result)result.textContent=`Answer all ${cards.length} questions to save the check.`;
 });
+// Shared academic check enhances each of the 92 lessons without rewriting its existing worksheet.
+window.KHAEMENES_TOPOLOGY_TOPIC={
+ get:()=>({score:rec.topicScore,passed:rec.topicPassed,choices:[...rec.topicChoices],version:rec.topicBankVersion}),
+ save:(score,passed,choices)=>{rec.topicScore=score;rec.topicPassed=passed;rec.topicChoices=choices;rec.topicBankVersion=1;rec.steps.check=passed;persist()}
+};
+window.KHAEMENES_TOPOLOGY_WORKSHOP_EVIDENCE={
+ get:()=>({proof:rec.workshopProof,reflection:rec.workshopReflection,reviewed:rec.workshopReviewed}),
+ save:(proof,reflection)=>{rec.workshopProof=String(proof||"");rec.workshopReflection=String(reflection||"");if(rec.workshopReviewed)rec.workshopReviewed=false;persist()}
+};
+const courseScript=document.currentScript?.src||"";
+if(courseScript){
+ const bankScript=document.createElement("script");
+ bankScript.src=new URL("question-bank.js",courseScript).href;
+ bankScript.onload=()=>{
+   const checkScript=document.createElement("script");
+   checkScript.src=new URL("topic-check.js",courseScript).href;
+   document.head.append(checkScript);
+ };
+ const unit=Number(body.dataset.unit);
+ const lessonNumber=Number(body.dataset.lessonNumber);
+ if(unit>=2&&unit<=13&&lessonNumber>=2){
+  const dataScript=document.createElement("script");
+  const group=Math.floor((unit-2)/3)+1;
+  dataScript.src=new URL("math-workshops-group-"+group+".js",courseScript).href;
+  dataScript.onload=()=>{
+    const renderScript=document.createElement("script");
+    renderScript.src=new URL("math-workshop-render.js",courseScript).href;
+    document.head.append(renderScript);
+  };
+  dataScript.onerror=()=>{const p=document.createElement("p");p.textContent="Extended proof workshop is unavailable offline; your original lesson, practice and saved progress remain available.";document.querySelector("#examples")?.append(p)};
+  document.head.append(dataScript);
+ }
+ bankScript.onerror=()=>{
+  const notice=document.getElementById("quickCheckResult");
+  if(notice)notice.textContent="Enhanced topic check unavailable. Reconnect or refresh once the course files are cached. Existing study notes remain saved.";
+ };
+ document.head.append(bankScript);
+}
 activatePathway(rec.pathway||"Core");render();
 })();
 /* Shared page-title enhancement intentionally omitted: no repository-local dependency is required. */
