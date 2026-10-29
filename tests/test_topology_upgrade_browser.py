@@ -483,3 +483,25 @@ def test_unit_overview_ignores_unassigned_and_other_learners(browser,site):
     assert page.locator("a.card.completed").count()==0
     assert not errors,errors
     ctx.close()
+
+
+def test_next_lesson_navigation_waits_for_80_percent_topic_practice(browser,site):
+    ctx,page,errors=visit(browser,site,"units/unit-01/lessons/u01-l02.html")
+    page.locator("#topicMasteryCheck").wait_for(timeout=20000)
+    nxt=page.locator(".lesson-nav a.btn.primary")
+    assert nxt.get_attribute("aria-disabled")=="true"
+    assert nxt.get_attribute("href")=="#check"
+    choose_topic(page,3)
+    page.locator("#scoreTopicCheck").click()
+    assert "60%" in page.locator("#topicResult").inner_text()
+    assert nxt.get_attribute("aria-disabled")=="true"
+    choose_topic(page,4)
+    page.locator("#scoreTopicCheck").click()
+    assert "80%" in page.locator("#topicResult").inner_text()
+    assert nxt.get_attribute("href")=="u01-l03.html"
+    assert nxt.get_attribute("aria-disabled") is None
+    page.reload(wait_until="domcontentloaded")
+    page.locator("#topicMasteryCheck").wait_for(timeout=20000)
+    assert page.locator(".lesson-nav a.btn.primary").get_attribute("href")=="u01-l03.html"
+    assert not errors,errors
+    ctx.close()
