@@ -54,32 +54,39 @@
 <script src="https://vervenveda.com/assets/vnv-ecosystem-menu.js" defer></script>
 <script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-landing-toolbar.js" defer></script>
 <style id="khae-scholar-entry-polish">
-/* Scholar Entry: retain one Academy header and an unclipped, three-column utility rail. */
-body[data-khae-campus-landing="true"] #khaeLandingUtilityDock{
- display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;
- width:min(354px,calc(100vw - 24px))!important;max-width:calc(100vw - 24px)!important;
- padding:10px!important;gap:7px!important;right:12px!important;bottom:12px!important;
- border-radius:7px!important;box-sizing:border-box!important;
-}
-body[data-khae-campus-landing="true"] #khaeLandingUtilityDock>:is(a,button){
- box-sizing:border-box!important;width:100%!important;min-width:0!important;max-width:none!important;
- height:42px!important;min-height:42px!important;padding:7px 4px!important;
- display:flex!important;align-items:center!important;justify-content:center!important;
- font:400 9px/1.15 Arial,sans-serif!important;letter-spacing:0!important;
- text-transform:none!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:clip!important;
- border-radius:7px!important;
-}
-body[data-khae-campus-landing="true"] #khaeLandingUtilityDock>:is(a,button)>span{
- max-width:100%!important;overflow:hidden!important;text-overflow:clip!important;white-space:nowrap!important;
-}
-@media(max-width:380px){
- body[data-khae-campus-landing="true"] #khaeLandingUtilityDock{width:min(230px,calc(100vw - 16px))!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;right:8px!important;bottom:8px!important;padding:8px!important;gap:6px!important}
- body[data-khae-campus-landing="true"] #khaeLandingUtilityDock>:is(a,button){font-size:8px!important}
-}
-.hero{padding-top:48px}
-.grid>.card{border-radius:7px}
-.grid>.card .actions{align-items:stretch;justify-content:flex-start}
-.grid>.card .actions>.btn{font-weight:400;line-height:1.3;text-align:center}
+/* Adult campus visual presentation; no course or identity logic changes. */
+body{background:linear-gradient(180deg,#dbe4e7 0%,#e9eeec 38%,#dfe7e4 100%);color:#182a30}
+.hero{padding-top:46px}
+.grid>.card{border-radius:7px;background:#fffdf9;border:1px solid #b9c8c5;box-shadow:0 8px 24px rgba(13,34,43,.12);min-width:0}
+.grid>.card .actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;align-items:stretch;justify-content:stretch;width:100%}
+.grid>.card .actions>.btn{box-sizing:border-box;width:100%;min-width:0;min-height:42px;height:42px;padding:5px 7px;margin:0;display:flex;align-items:center;justify-content:center;border-radius:7px;font:400 9px/1.2 "Brandon Grotesque","Avenir Next",Arial,sans-serif;letter-spacing:0;text-align:center;white-space:normal;overflow-wrap:anywhere}
+.grid>.card .actions>.btn.gold{color:#17211d;background:#c8a360;border-color:#90713a}
+.grid>.card .actions>.btn.secondary{color:#142c39;background:#f5f8f7;border-color:#a4b6b5}
+.grid>.card .actions>.btn:only-child{grid-column:1/-1}
+body[data-khae-campus-landing="true"] #khaeLandingUtilityDock{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;width:min(354px,calc(100vw - 24px))!important;max-width:calc(100vw - 24px)!important;padding:10px!important;gap:7px!important;right:12px!important;bottom:12px!important;box-sizing:border-box!important}
+body[data-khae-campus-landing="true"] #khaeLandingUtilityDock>[data-landing-tool="home"],body[data-khae-campus-landing="true"] #khaeLandingUtilityDock>[data-landing-tool="academy"],body[data-khae-campus-landing="true"] #khaeLandingUtilityDock>[data-landing-tool="parents"]{display:none!important}
+body[data-khae-campus-landing="true"] #khaeLandingUtilityDock>:is(a,button){box-sizing:border-box!important;width:100%!important;min-width:0!important;max-width:100%!important;height:42px!important;min-height:42px!important;display:flex!important;align-items:center!important;justify-content:center!important;padding:6px 3px!important;border-radius:7px!important;font:400 9px/1.1 Arial,sans-serif!important;letter-spacing:0!important;text-transform:none!important;white-space:nowrap!important;overflow:hidden!important}
+body[data-khae-campus-landing="true"] #khaeLandingUtilityDock>[data-landing-tool="profile"]{order:10!important}
+body[data-khae-campus-landing="true"] #khaeLandingUtilityDock>[data-landing-tool="search"]{order:20!important}
+body[data-khae-campus-landing="true"] #khaeLandingUtilityDock>[data-landing-tool="updates"]{order:30!important}
+body[data-khae-campus-landing="true"] #khaeLandingUtilityDock>[data-landing-tool="mentor"]{order:40!important}
+body[data-khae-campus-landing="true"] #khaeLandingUtilityDock>[data-landing-tool="contribute"]{order:50!important}
+body[data-khae-campus-landing="true"] #khaeLandingUtilityDock>:is(#vnvBetaProgramLink,[data-landing-tool="beta"]){order:60!important}
+@media(max-width:380px){body[data-khae-campus-landing="true"] #khaeLandingUtilityDock{width:min(230px,calc(100vw - 16px))!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;right:8px!important;bottom:8px!important;padding:8px!important;gap:6px!important}body[data-khae-campus-landing="true"] #khaeLandingUtilityDock>:is(a,button){font-size:8px!important}}
 </style>
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+ const dock=document.getElementById("khaeLandingUtilityDock");
+ if(!dock)return;
+ if(!dock.querySelector('[data-landing-tool="profile"]')){
+   const profile=document.createElement("a");
+   profile.href="https://vervenveda.com/Khaemenes_Academy.github.io/adult/";
+   profile.dataset.landingTool="profile";profile.setAttribute("aria-label","Adult Scholar Profile");
+   profile.textContent="Profile";dock.append(profile);
+ }
+ const support=dock.querySelector('[data-landing-tool="contribute"]');
+ if(support){support.textContent="Support";support.setAttribute("aria-label","Support free Academy education")}
+});
+</script>
 </body>
 </html>
