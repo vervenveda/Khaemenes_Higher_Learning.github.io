@@ -11,6 +11,34 @@ function refresh(){
  const p=document.createElement("p");p.textContent=r.message;el.append(p);
  if(r.best!==null){const score=document.createElement("p");score.textContent="Best diagnostic: "+r.best+"%";el.append(score)}
  const a=document.createElement("a");a.className="btn primary";a.href="../"+r.route;a.textContent=r.mode==="bridge"?"Begin Unit 00 Foundations":r.mode==="diagnostic"?"Take Readiness Diagnostic":"Begin Official Unit 01";el.append(a);
+ const completed=window.KhaemenesTopologyReadiness.attempts().filter(attempt=>attempt.assessmentVersion==="topology-readiness-v2");
+ const recent=completed[completed.length-1];
+ const bank=window.TOPOLOGY_DIFFERENTIAL_GEOMETRY_DIAGNOSTIC||[];
+ if(recent&&bank.length===40&&Array.isArray(recent.missed)){
+  const table=document.createElement("table");table.className="readiness-strand-table";
+  table.style.cssText="width:100%;border-collapse:collapse;text-align:left;margin:16px 0";
+  const caption=document.createElement("caption");caption.textContent="Six-strand readiness profile · most recent revised attempt";caption.style.textAlign="left";table.append(caption);
+  const head=document.createElement("thead"),row=document.createElement("tr");for(const cell of ["Prerequisite strand","Correct","Practice support"]){const th=document.createElement("th");th.textContent=cell;th.style.padding="9px";row.append(th)}head.append(row);table.append(head);
+  const body=document.createElement("tbody"),missed=new Set(recent.missed);
+  const strands=[...new Set(bank.map(q=>q.strand))];
+  const breakdown=[];
+  strands.forEach((strand,i)=>{
+   const questions=bank.filter(q=>q.strand===strand),right=questions.filter(q=>!missed.has(q.id)).length,total=questions.length,percent=Math.round(right/total*100);
+   breakdown.push({strand,correct:right,total,percent});
+   const tr=document.createElement("tr"),td=document.createElement("td");td.textContent=strand;td.style.padding="9px";tr.append(td);
+   const score=document.createElement("td");score.textContent=right+"/"+total+" · "+percent+"%";score.style.padding="9px";tr.append(score);
+   const support=document.createElement("td");support.style.padding="9px";const link=document.createElement("a");link.href="../units/unit-00/lessons/u00-l"+String(i+1).padStart(2,"0")+".html";link.textContent=percent<80?"Review Lesson "+(i+1):"Optional reinforcement";support.append(link);tr.append(support);body.append(tr);
+  });
+  table.append(body);el.append(table);
+  const exportButton=document.createElement("button");exportButton.className="btn";exportButton.type="button";exportButton.textContent="Export Six-Strand Placement Evidence";
+  exportButton.onclick=()=>{
+   const payload={course:"Topology & Differential Geometry",learner:r.id,assessmentVersion:"topology-readiness-v2",score:recent.score,attemptDate:recent.date,route:r.mode,strands:breakdown,confidential:false,verified:false};
+   const url=URL.createObjectURL(new Blob([JSON.stringify(payload,null,2)],{type:"application/json"})),anchor=document.createElement("a");
+   anchor.href=url;anchor.download="topology-placement-six-strand.json";anchor.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+  };
+  el.append(exportButton);
+ }
+
 }
 document.addEventListener("click",e=>{if(e.target?.id==="submitAssessment")setTimeout(refresh,0)},true);
 refresh();
