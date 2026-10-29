@@ -263,3 +263,119 @@ def test_narrow_mobile_workshop_visible(browser, site):
     assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 2")
     assert not errors, errors
     ctx.close()
+
+
+def check_unit00(page, correct_count):
+    return page.evaluate("""correctCount => {
+      const bank=window.KHAEMENES_TOPOLOGY_UNIT00_QUESTIONS;
+      const cards=[...document.querySelectorAll('#bridgeQuestions [data-q]')];
+      if(!cards.length)throw Error('Unit 00 question list absent');
+      cards.forEach((card,i)=>{
+        const prompt=card.querySelector('legend').textContent.replace(/^\\d+\\.\\s*/, '');
+        const q=bank.find(q=>q.prompt===prompt);
+        if(!q)throw Error('Question missing from Unit 00 bank: '+prompt);
+        card.querySelectorAll('input[type=radio]')[i<correctCount?q.answer:(q.answer+1)%4].click();
+      });
+      return cards.length;
+    }""", correct_count)
+
+
+def test_placement_diagnostic_routes_under_80_to_unit00(browser, site):
+    ctx, page, errors = visit(browser,site,"diagnostic/index.html")
+    page.locator("#assessmentRoot article.question").first.wait_for(timeout=20000)
+    assert page.locator("#assessmentRoot article.question").count()==40
+    page.evaluate("""() => {
+      const bank=window.TOPOLOGY_DIFFERENTIAL_GEOMETRY_DIAGNOSTIC;
+      [...document.querySelectorAll('#assessmentRoot article.question')].forEach((card,i)=>{
+        const prompt=card.querySelector('legend').textContent.replace(/^\\d+\\.\\s*/, '');
+        const q=bank.find(x=>x.prompt===prompt);
+        if(!q)throw Error('diagnostic item not found');
+        card.querySelectorAll('input[type=radio]')[i<30?q.answer:(q.answer+1)%4].click();
+      });
+    }""")
+    page.locator("#submitAssessment").click()
+    page.wait_for_timeout(100)
+    assert "75%" in page.locator("#assessmentMessage").inner_text()
+    assert "Unit 00" in page.locator("#readinessOutcome").inner_text()
+    assert page.locator("#readinessOutcome a").get_attribute("href").endswith("units/unit-00/index.html")
+    assert not errors, errors
+    ctx.close()
+
+
+@pytest.mark.parametrize("n", list(range(1,7)))
+def test_six_unit00_lesson_routes_and_questions(browser, site, n):
+    ctx, page, errors = visit(browser,site,f"units/unit-00/lessons/u00-l{n:02d}.html")
+    if n>1:
+        page.evaluate("""n => {
+            let record={lessons:{}};
+            for(let i=1;i<n;i++)record.lessons[i]={passed:true,score:80};
+            localStorage.setItem('khaemenes-topology-differential-geometry-unit00-v1:learner-1',JSON.stringify(record));
+        }""",n)
+        page.reload(wait_until="domcontentloaded")
+    page.locator("#bridgeQuestions [data-q]").first.wait_for(timeout=20000)
+    assert page.locator("#bridgeQuestions [data-q]").count()==10
+    assert page.locator("#bridgeProof").count()==1
+    assert not errors, errors
+    ctx.close()
+
+
+def test_unit00_80_percent_correct_and_reload_locks(browser, site):
+    ctx, page, errors=visit(browser,site,"units/unit-00/lessons/u00-l01.html")
+    page.locator("#bridgeQuestions").wait_for(timeout=20000)
+    check_unit00(page,7)
+    page.locator("#bridgeProof").fill("Choose arbitrary x in A∩B; the definition of intersection guarantees x belongs to A and B, hence x belongs to A.")
+    page.locator("#bridgeCorrections").fill("One confirming example cannot establish that all elements satisfy an assertion.")
+    page.locator("#submitBridge").click()
+    assert "70%" in page.locator("#lessonScore").inner_text()
+    assert not page.locator("#submitBridge").is_disabled()
+    page.reload(wait_until="domcontentloaded")
+    page.locator("#bridgeQuestions").wait_for(timeout=20000)
+    assert page.locator("#bridgeQuestions input:checked").count()==10
+    check_unit00(page,8)
+    page.locator("#submitBridge").click()
+    assert "80%" in page.locator("#lessonScore").inner_text()
+    assert page.locator("#submitBridge").is_disabled()
+    page.reload(wait_until="domcontentloaded")
+    assert page.locator("#submitBridge").is_disabled()
+    assert page.locator("#bridgeQuestions input:disabled").count()==40
+    assert not errors, errors
+    ctx.close()
+
+
+def test_unit00_exit_requires_six_lessons_and_20_correct(browser,site):
+    ctx,page,errors=visit(browser,site,"units/unit-00/exit-check.html")
+    assert "not yet open" in page.locator("#bridgeContent").inner_text().lower()
+    page.evaluate("""() => {
+      let record={lessons:{}};
+      for(let i=1;i<=6;i++)record.lessons[i]={passed:true,score:80};
+      localStorage.setItem('khaemenes-topology-differential-geometry-unit00-v1:learner-1',JSON.stringify(record));
+    }""")
+    page.reload(wait_until="domcontentloaded")
+    page.locator("#bridgeQuestions").wait_for(timeout=20000)
+    assert check_unit00(page,20)==24
+    page.locator("#bridgeProof").fill("For continuous maps f:X→Y and g:Y→Z, the inverse image of each open set U in Z under g∘f is f⁻¹(g⁻¹(U)); continuity of g makes the inner preimage open in Y and continuity of f makes the outer preimage open in X.")
+    page.locator("#bridgeCorrections").fill("A bijection can fail continuity, and a continuous bijection can have an inverse that is not continuous. The inverse hypotheses must be independently checked.")
+    page.locator("#submitBridge").click()
+    assert page.locator("#submitBridge").is_disabled()
+    record=page.evaluate("""() => JSON.parse(localStorage.getItem('khaemenes-topology-differential-geometry-unit00-v1:learner-1'))""")
+    assert record["exit"]["score"]>=80
+    assert record["exit"]["passed"] is True
+    page.reload(wait_until="domcontentloaded")
+    assert page.locator("#submitBridge").is_disabled()
+    assert not errors, errors
+    ctx.close()
+
+
+def test_unit00_two_learners_isolated(browser,site):
+    ctx,page,errors=visit(browser,site,"units/unit-00/lessons/u00-l01.html")
+    page.locator("#bridgeProof").wait_for(timeout=20000)
+    page.locator("#bridgeProof").fill("Learner A proof evidence remains entirely separate from Learner B.")
+    page.evaluate("""() => {
+      document.getElementById('bridgeProof').dispatchEvent(new Event('input',{bubbles:true}));
+      localStorage.setItem('khaemenes-topology-differential-geometry-course-v1',JSON.stringify({activeId:'second-learner',students:[{id:'second-learner',weeks:{}}]}))
+    }""")
+    page.reload(wait_until="domcontentloaded")
+    page.locator("#bridgeProof").wait_for(timeout=20000)
+    assert page.locator("#bridgeProof").input_value()==""
+    assert not errors, errors
+    ctx.close()
