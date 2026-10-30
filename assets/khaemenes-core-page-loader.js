@@ -54,7 +54,7 @@
 
   Promise.all([textNetworkThenCache(coreURL),registryText()]).then(([html,registryCode])=>{
     const manifest=manifestURL?`<link rel="manifest" href="${manifestURL}">`:"";
-    const injection=`${manifest}<script>${safeInline(registryCode)}<\/script><script src="${scopeURL}"><\/script>`;
+    const injection=`${manifest}<script>${safeInline(registryCode)}<\/script><script src="${scopeURL}"><\/script><script src="https://vervenveda.com/assets/vnv-ecosystem-toolbar.js"><\/script>`;
     html=/<head(?:\s[^>]*)?>/i.test(html)
       ? html.replace(/<head(?:\s[^>]*)?>/i,m=>m+injection)
       : injection+html;
