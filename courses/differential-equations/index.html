@@ -173,7 +173,7 @@ main{padding:clamp(56px,7vw,92px) 0 100px}.view{display:none}.view.active{displa
       </a>
     </div>
     <div class="header-tools" aria-label="Course account and navigation controls">
-      <a class="header-control" href="records/learner-profile.html" aria-label="Open the Differential Equations learner profile">Profile</a>
+      <a class="header-control" href="records/learner-profile.html" data-ticker data-ticker-label="Profile" aria-label="Open the Differential Equations learner profile">Profile</a>
       <button class="header-control pin-control" id="pinCourseButton" type="button" aria-pressed="false" aria-describedby="pinCourseStatus">☆ Pin to Profile</button>
 
       <details class="course-menu games-menu" id="gamesMenu">
@@ -198,7 +198,7 @@ main{padding:clamp(56px,7vw,92px) 0 100px}.view{display:none}.view.active{displa
         <div class="course-menu-panel">
           <div class="course-menu-label">Khaemenes Higher Learning</div>
           <a href="https://vervenveda.com/Khaemenes_Higher_Learning.github.io/">Higher Learning Home</a>
-          <a href="https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/">Mathematics Department</a>
+          <a href="https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/" data-ticker>Mathematics Department</a>
           <a href="https://vervenveda.com/Khaemenes_High.github.io/courses/mathematics/calculus-1/">Calculus I Readiness</a><a href="https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/calculus-ii/">Calculus II</a><a href="https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/linear-algebra/">Linear Algebra</a>
           <a href="./" aria-current="page">Differential Equations</a>
           <div class="course-menu-divider" aria-hidden="true"></div>
@@ -224,7 +224,7 @@ main{padding:clamp(56px,7vw,92px) 0 100px}.view{display:none}.view.active{displa
 </header>
 
 <nav class="breadcrumb" aria-label="Breadcrumb"><div class="wrap">
-  <a href="https://vervenveda.com/Khaemenes_Higher_Learning.github.io/">Khaemenes Higher Learning</a><span>›</span>
+  <a href="https://vervenveda.com/Khaemenes_Higher_Learning.github.io/" data-ticker>Khaemenes Higher Learning</a><span>›</span>
   <a href="https://vervenveda.com/Khaemenes_Higher_Learning.github.io/courses/">Mathematics Department</a><span>›</span>
   <span aria-current="page">Differential Equations</span>
 </div></nav>
@@ -421,6 +421,8 @@ if("serviceWorker" in navigator){
 <script defer src="../../assets/khaemenes-academy-title-v1.js" data-khae-title-standard="v1"></script>
 <script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-global-header.js" defer></script>
 <script src="https://vervenveda.com/assets/vnv-ecosystem-menu.js" defer></script>
+<script src="https://vervenveda.com/assets/vnv-ticker-autopopulate.js" data-vnv-ticker-autopopulate></script>
+<script>VNV_TICKER.autoPopulate({label:"Differential Equations Quick Links",max:14});</script>
 <script src="https://vervenveda.com/assets/vnv-ecosystem-toolbar.js"></script>
 </body>
 </html>
