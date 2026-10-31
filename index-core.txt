@@ -757,6 +757,7 @@ html[data-theme="light"] .department-link.developing{color:#234963;border-color:
     })();
   </script>
   <script src="./data/university-network.js"></script>
+<script src="https://vervenveda.com/assets/vnv-333-ticker.js"></script>
 <script src="https://vervenveda.com/assets/vnv-ticker-autopopulate.js" data-vnv-ticker-autopopulate></script>
 <script>VNV_TICKER.autoPopulate({label:"Higher Learning Quick Links",max:12});</script>
 <script src="assets/vnv-beta-link.js" defer></script>
