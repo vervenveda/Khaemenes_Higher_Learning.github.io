@@ -308,33 +308,6 @@ html[data-theme="light"] .department-link.developing{color:#234963;border-color:
 <body id="top">
   <a class="skip" href="#main">Skip to main content</a>
 
-  <header class="header">
-    <div class="shell nav">
-      <a class="brand" href="#top" aria-label="Khaemenes Higher Learning home">
-        <span class="seal">K</span>
-        <span class="brand-copy">
-          <strong>Khaemenes Higher Learning</strong>
-          <small>Collegiate Campus</small>
-        </span>
-      </a>
-
-      <nav class="header-links" aria-label="Higher Learning primary navigation">
-        <a href="./start/" data-ticker>Scholar Entry</a>
-        <a href="#student-portal" data-ticker>Student</a>
-        <a href="https://vervenveda.com/Khaemenes_Academy.github.io/student/" data-ticker>Academy Profile</a>
-        <a href="#departments" data-ticker>Departments</a>
-        <a href="./courses/index.html" data-ticker>Mathematics</a>
-        <a class="career-link" href="./Career/index.html" data-ticker>Career</a>
-        <a href="#resources" data-ticker>Resources</a>
-      </nav>
-
-      <nav class="header-actions" aria-label="Display and campus directory">
-        <button class="theme-button" id="themeButton" type="button" aria-pressed="false">Light</button>
-        <button class="menu-button" id="menuButton" type="button" aria-label="Open campus directory" aria-expanded="false" aria-controls="drawerBg"><span class="menu-lines" aria-hidden="true"></span></button>
-      </nav>
-    </div>
-  </header>
-
   <nav class="breadcrumbs" aria-label="Breadcrumb">
     <div class="shell">
       <a href="https://vervenveda.com/">Verve N Veda</a><span aria-hidden="true">›</span>
