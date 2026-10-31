@@ -58,6 +58,6 @@
     html=/<head(?:\s[^>]*)?>/i.test(html)
       ? html.replace(/<head(?:\s[^>]*)?>/i,m=>m+injection)
       : injection+html;
-    const headerInjection='<script src="https://vervenveda.com/assets/vnv-header-autopopulate.js"><\\/script><script>VNV_HEADER.mount({replaceLegacy:true});<\\/script>';\n    html=/<\\/body>/i.test(html) ? html.replace(/<\\/body>/i,headerInjection+"</body>") : html+headerInjection;\n    document.open();document.write(html);document.close();
+    document.open();document.write(html);document.close();
   }).catch(showFallback);
 })();
