@@ -303,6 +303,30 @@ h1{margin-top:24px;max-width:1050px;color:var(--forest-deep);font-size:clamp(62p
   <button class="ticker-control" id="tickerControl" aria-label="Pause career ticker">Ⅱ</button>
 </div>
 
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="index.html" aria-label="Career Portal home">
+      <span class="brand-mark">K</span>
+      <span class="brand-copy">
+        <span class="brand-name">Khaemenes Career Portal</span>
+        <span class="brand-sub">Assessment · Exploration · Professional Skills</span>
+      </span>
+    </a>
+
+    <nav class="header-links" aria-label="Career portal">
+      <button data-scroll="#career-path">Career Path</button>
+      <button data-scroll="#skills-directory">Skills Directory</button>
+      <a href="../directory/">Course Directory</a><a href="../directory/collegiate/">Collegiate Programs</a>
+      <button data-scroll="#directory-intelligence">Directory AGI</button>
+      <button data-core="hub">Mentor Hub</button>
+    </nav>
+
+    <button class="menu-button" id="menuButton" aria-expanded="false" aria-controls="menuOverlay" aria-label="Open Career menu">
+      <span class="menu-lines" aria-hidden="true"></span>
+    </button>
+  </div>
+</header>
+
 <div class="breadcrumb-bar">
   <div class="shell breadcrumbs" aria-label="Breadcrumb">
     <a href="../index.html">Higher Learning</a><span>›</span><span>Career Portal</span>
