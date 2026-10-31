@@ -227,28 +227,12 @@
       --vnv-gold-pale:#e7d7b6;
       --vnv-line:rgba(18,23,19,.14);
       --vnv-line-strong:rgba(18,23,19,.25);
-      --ticker-height:36px;
+      --ticker-height:var(--vnv-autopopulate-ticker-height,33px);
       --header-height:72px;
       --sticky-stack:calc(var(--ticker-height) + var(--header-height));
     }
     html{scroll-padding-top:calc(var(--sticky-stack) + 54px)}
 
-    .network-ticker{
-      position:sticky;top:0;z-index:1500;height:var(--ticker-height);display:grid;
-      grid-template-columns:minmax(0,1fr) 40px;overflow:hidden;color:#f4ead1;
-      background:linear-gradient(90deg,#07101d,#10243b 48%,#07101d);
-      border-bottom:1px solid rgba(255,255,255,.13);box-shadow:0 4px 14px rgba(6,15,27,.15)
-    }
-    .network-ticker-viewport{min-width:0;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 27px,#000 calc(100% - 27px),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 27px,#000 calc(100% - 27px),transparent 100%)}
-    .network-ticker-track{width:max-content;height:100%;display:flex;align-items:center;white-space:nowrap;animation:hlTicker 27s linear infinite;will-change:transform}
-    .network-ticker:hover .network-ticker-track,.network-ticker:focus-within .network-ticker-track,.network-ticker[data-paused="true"] .network-ticker-track{animation-play-state:paused}
-    .network-ticker-set{height:100%;display:flex;align-items:center;gap:22px;padding-inline:11px}
-    .network-ticker-label{color:var(--vnv-gold-pale);font-family:var(--serif);font-size:10px;font-weight:500;letter-spacing:.25em;text-transform:uppercase}
-    .network-ticker-app{min-height:28px;display:inline-flex;align-items:center;gap:7px;color:#eef3f7;font-size:11px;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
-    .network-ticker-app::before{content:"";width:3px;height:3px;border-radius:50%;background:var(--vnv-gold);box-shadow:0 0 0 2px rgba(180,139,69,.13)}
-    .network-ticker-app:hover{color:#fff;text-decoration:underline;text-underline-offset:3px}
-    .ticker-control{width:40px;height:var(--ticker-height);display:grid;place-items:center;border:0;border-left:1px solid rgba(255,255,255,.13);color:#f4ead1;background:rgba(0,0,0,.14);font-size:15px}
-    @keyframes hlTicker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
     /* exact VNV 72px light header treatment */
     .header{position:sticky;top:var(--ticker-height);z-index:1400;height:var(--header-height);color:var(--vnv-ink);background:rgba(244,240,231,.96);border-bottom:1px solid var(--vnv-line);backdrop-filter:blur(18px);box-shadow:none}
@@ -324,32 +308,6 @@ html[data-theme="light"] .department-link.developing{color:#234963;border-color:
 <body id="top">
   <a class="skip" href="#main">Skip to main content</a>
 
-  <div class="network-ticker" id="networkTicker">
-    <div class="network-ticker-viewport">
-      <div class="network-ticker-track">
-        <div class="network-ticker-set">
-          <span class="network-ticker-label">Higher Learning Network</span>
-          <a class="network-ticker-app" href="./Career/index.html">Career Portal</a>
-          <a class="network-ticker-app" href="./courses/index.html">Mathematics</a>
-          <a class="network-ticker-app" href="https://vervenveda.com/proresource_hub.github.io/">ProResources</a>
-          <a class="network-ticker-app" href="https://vervenveda.github.io/Arshif.github.io/">ARSHIF</a>
-          <a class="network-ticker-app" href="https://vervenveda.github.io/PLERASearch.github.io/">PLERA Search</a>
-          <a class="network-ticker-app" href="https://vervenveda.com/arcade.github.io/">Games & Logic</a>
-        </div>
-        <div class="network-ticker-set" aria-hidden="true">
-          <span class="network-ticker-label">Higher Learning Network</span>
-          <a tabindex="-1" class="network-ticker-app" href="./Career/index.html">Career Portal</a>
-          <a tabindex="-1" class="network-ticker-app" href="./courses/index.html">Mathematics</a>
-          <a tabindex="-1" class="network-ticker-app" href="https://vervenveda.com/proresource_hub.github.io/">ProResources</a>
-          <a tabindex="-1" class="network-ticker-app" href="https://vervenveda.github.io/Arshif.github.io/">ARSHIF</a>
-          <a tabindex="-1" class="network-ticker-app" href="https://vervenveda.github.io/PLERASearch.github.io/">PLERA Search</a>
-          <a tabindex="-1" class="network-ticker-app" href="https://vervenveda.com/arcade.github.io/">Games & Logic</a>
-        </div>
-      </div>
-    </div>
-    <button class="ticker-control" id="tickerControl" type="button" aria-label="Pause Higher Learning ticker">Ⅱ</button>
-  </div>
-
   <header class="header">
     <div class="shell nav">
       <a class="brand" href="#top" aria-label="Khaemenes Higher Learning home">
@@ -361,13 +319,13 @@ html[data-theme="light"] .department-link.developing{color:#234963;border-color:
       </a>
 
       <nav class="header-links" aria-label="Higher Learning primary navigation">
-        <a href="./start/">Scholar Entry</a>
-        <a href="#student-portal">Student</a>
-        <a href="https://vervenveda.com/Khaemenes_Academy.github.io/student/">Academy Profile</a>
-        <a href="#departments">Departments</a>
-        <a href="./courses/index.html">Mathematics</a>
-        <a class="career-link" href="./Career/index.html">Career</a>
-        <a href="#resources">Resources</a>
+        <a href="./start/" data-ticker>Scholar Entry</a>
+        <a href="#student-portal" data-ticker>Student</a>
+        <a href="https://vervenveda.com/Khaemenes_Academy.github.io/student/" data-ticker>Academy Profile</a>
+        <a href="#departments" data-ticker>Departments</a>
+        <a href="./courses/index.html" data-ticker>Mathematics</a>
+        <a class="career-link" href="./Career/index.html" data-ticker>Career</a>
+        <a href="#resources" data-ticker>Resources</a>
       </nav>
 
       <nav class="header-actions" aria-label="Display and campus directory">
@@ -788,13 +746,6 @@ html[data-theme="light"] .department-link.developing{color:#234963;border-color:
       function closeDrawer(){const bg=$("drawerBg");bg.classList.remove("open");bg.setAttribute("aria-hidden","true");$("menuButton").setAttribute("aria-expanded","false");document.body.classList.remove("menu-open");$("menuButton").focus()}
       $("menuButton").addEventListener("click",openDrawer);$("closeButton").addEventListener("click",closeDrawer);$("drawerBg").addEventListener("click",event=>{if(event.target===$("drawerBg"))closeDrawer()});$("drawerSearch").addEventListener("input",event=>renderDirectory(event.target.value.trim()));
 
-      $("tickerControl").addEventListener("click",()=>{
-        const ticker=$("networkTicker");
-        const paused=ticker.dataset.paused==="true";
-        ticker.dataset.paused=paused?"false":"true";
-        $("tickerControl").textContent=paused?"Ⅱ":"▶";
-        $("tickerControl").setAttribute("aria-label",paused?"Pause Higher Learning ticker":"Resume Higher Learning ticker");
-      });
 
       function setTheme(theme){const safe=theme==="light"?"light":"dark";document.documentElement.dataset.theme=safe;try{localStorage.setItem(THEME_KEY,safe)}catch{};$("themeButton").textContent=safe==="dark"?"Light":"Dark";$("themeButton").setAttribute("aria-pressed",String(safe==="light"));document.querySelector('meta[name="theme-color"]').setAttribute("content",safe==="dark"?"#08131f":"#f4f0e8")}
       $("themeButton").addEventListener("click",()=>setTheme(document.documentElement.dataset.theme==="dark"?"light":"dark"));
@@ -806,6 +757,8 @@ html[data-theme="light"] .department-link.developing{color:#234963;border-color:
     })();
   </script>
   <script src="./data/university-network.js"></script>
+<script src="https://vervenveda.com/assets/vnv-ticker-autopopulate.js" data-vnv-ticker-autopopulate></script>
+<script>VNV_TICKER.autoPopulate({label:"Higher Learning Quick Links",max:12});</script>
 <script src="assets/vnv-beta-link.js" defer></script>
 <script defer src="assets/khaemenes-academy-title-v1.js" data-khae-title-standard="v1"></script>
 </body>
