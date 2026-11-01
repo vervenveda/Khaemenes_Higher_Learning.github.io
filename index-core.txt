@@ -307,34 +307,6 @@ html[data-theme="light"] .department-link.developing{color:#234963;border-color:
 </head>
 <body id="top">
   <a class="skip" href="#main">Skip to main content</a>
-
-  <header class="header">
-    <div class="shell nav">
-      <a class="brand" href="#top" aria-label="Khaemenes Higher Learning home">
-        <span class="seal">K</span>
-        <span class="brand-copy">
-          <strong>Khaemenes Higher Learning</strong>
-          <small>Collegiate Campus</small>
-        </span>
-      </a>
-
-      <nav class="header-links" aria-label="Higher Learning primary navigation">
-        <a href="./start/" data-ticker>Scholar Entry</a>
-        <a href="#student-portal" data-ticker>Student</a>
-        <a href="https://vervenveda.com/Khaemenes_Academy.github.io/student/" data-ticker>Academy Profile</a>
-        <a href="#departments" data-ticker>Departments</a>
-        <a href="./courses/index.html" data-ticker>Mathematics</a>
-        <a class="career-link" href="./Career/index.html" data-ticker>Career</a>
-        <a href="#resources" data-ticker>Resources</a>
-      </nav>
-
-      <nav class="header-actions" aria-label="Display and campus directory">
-        <button class="theme-button" id="themeButton" type="button" aria-pressed="false">Light</button>
-        <button class="menu-button" id="menuButton" type="button" aria-label="Open campus directory" aria-expanded="false" aria-controls="drawerBg"><span class="menu-lines" aria-hidden="true"></span></button>
-      </nav>
-    </div>
-  </header>
-
   <nav class="breadcrumbs" aria-label="Breadcrumb">
     <div class="shell">
       <a href="https://vervenveda.com/">Verve N Veda</a><span aria-hidden="true">›</span>
@@ -742,13 +714,25 @@ html[data-theme="light"] .department-link.developing{color:#234963;border-color:
         $("drawerContent").innerHTML=groups.map(group=>`<p class="menu-group">${escapeHTML(group)}</p><div class="menu-list">${matches.filter(item=>item.group===group).map(item=>`<a class="menu-link" href="${item.url}"><i>${escapeHTML(item.icon)}</i><span><strong>${escapeHTML(item.title)}</strong><small>${escapeHTML(item.description)}</small></span><span>›</span></a>`).join("")}</div>`).join("")||'<p class="menu-group">No matching campus destination</p>';
         $$('.menu-link',$("drawerContent")).forEach(link=>link.addEventListener('click',closeDrawer));
       }
-      function openDrawer(){const bg=$("drawerBg");bg.classList.add("open");bg.setAttribute("aria-hidden","false");$("menuButton").setAttribute("aria-expanded","true");document.body.classList.add("menu-open");renderDirectory($("drawerSearch").value.trim());setTimeout(()=>$("drawerSearch").focus(),40)}
-      function closeDrawer(){const bg=$("drawerBg");bg.classList.remove("open");bg.setAttribute("aria-hidden","true");$("menuButton").setAttribute("aria-expanded","false");document.body.classList.remove("menu-open");$("menuButton").focus()}
-      $("menuButton").addEventListener("click",openDrawer);$("closeButton").addEventListener("click",closeDrawer);$("drawerBg").addEventListener("click",event=>{if(event.target===$("drawerBg"))closeDrawer()});$("drawerSearch").addEventListener("input",event=>renderDirectory(event.target.value.trim()));
+      function openDrawer(){const bg=$("drawerBg");bg.classList.add("open");bg.setAttribute("aria-hidden","false");$("menuButton")?.setAttribute("aria-expanded","true");document.body.classList.add("menu-open");renderDirectory($("drawerSearch").value.trim());setTimeout(()=>$("drawerSearch").focus(),40)}
+      function closeDrawer(){const bg=$("drawerBg");bg.classList.remove("open");bg.setAttribute("aria-hidden","true");$("menuButton")?.setAttribute("aria-expanded","false");document.body.classList.remove("menu-open");$("menuButton")?.focus()}
+      $("menuButton")?.addEventListener("click",openDrawer);$("closeButton").addEventListener("click",closeDrawer);$("drawerBg").addEventListener("click",event=>{if(event.target===$("drawerBg"))closeDrawer()});$("drawerSearch").addEventListener("input",event=>renderDirectory(event.target.value.trim()));
+      document.addEventListener("click",event=>{
+        const link=event.target.closest?.('a[href="#higher-directory"]');
+        if(!link)return;
+        event.preventDefault();
+        openDrawer();
+      });
 
 
-      function setTheme(theme){const safe=theme==="light"?"light":"dark";document.documentElement.dataset.theme=safe;try{localStorage.setItem(THEME_KEY,safe)}catch{};$("themeButton").textContent=safe==="dark"?"Light":"Dark";$("themeButton").setAttribute("aria-pressed",String(safe==="light"));document.querySelector('meta[name="theme-color"]').setAttribute("content",safe==="dark"?"#08131f":"#f4f0e8")}
-      $("themeButton").addEventListener("click",()=>setTheme(document.documentElement.dataset.theme==="dark"?"light":"dark"));
+      function setTheme(theme){const safe=theme==="light"?"light":"dark";document.documentElement.dataset.theme=safe;try{localStorage.setItem(THEME_KEY,safe)}catch{};const oldTheme=$("themeButton");if(oldTheme){oldTheme.textContent=safe==="dark"?"Light":"Dark";oldTheme.setAttribute("aria-pressed",String(safe==="light"))}document.querySelectorAll('a[href="#theme-toggle"]').forEach(link=>{link.textContent=safe==="dark"?"Light Theme":"Dark Theme";link.setAttribute("aria-label",safe==="dark"?"Switch to light theme":"Switch to dark theme")});document.querySelector('meta[name="theme-color"]')?.setAttribute("content",safe==="dark"?"#08131f":"#f4f0e8")}
+      $("themeButton")?.addEventListener("click",()=>setTheme(document.documentElement.dataset.theme==="dark"?"light":"dark"));
+      document.addEventListener("click",event=>{
+        const link=event.target.closest?.('a[href="#theme-toggle"]');
+        if(!link)return;
+        event.preventDefault();
+        setTheme(document.documentElement.dataset.theme==="dark"?"light":"dark");
+      });
       try{setTheme(localStorage.getItem(THEME_KEY)||"dark")}catch{setTheme("dark")}
 
       document.addEventListener("keydown",event=>{if(event.key!=="Escape")return;if(!plannedModal.hidden)closePlanned();else if($("drawerBg").classList.contains("open"))closeDrawer()});
@@ -757,10 +741,12 @@ html[data-theme="light"] .department-link.developing{color:#234963;border-color:
     })();
   </script>
   <script src="./data/university-network.js"></script>
+<script src="https://vervenveda.com/assets/vnv-header-autopopulate.js"></script>
+<script>VNV_HEADER.mount({"title":"Khaemenes Higher Learning","subtitle":"Collegiate Campus · Undergraduate · Advanced · Research","icon":"HL","home":"https://vervenveda.com/Khaemenes_Academy.github.io/","actions":[{"label":"Student","href":"#student-portal"},{"label":"Departments","href":"#departments"},{"label":"Career","href":"./Career/index.html"},{"label":"Directory","href":"#higher-directory"},{"label":"Theme","href":"#theme-toggle"}]});</script>
 <script src="https://vervenveda.com/assets/vnv-333-ticker.js"></script>
 <script src="https://vervenveda.com/assets/vnv-ticker-autopopulate.js" data-vnv-ticker-autopopulate></script>
 <script>VNV_TICKER.autoPopulate({label:"Higher Learning Quick Links",max:12});</script>
-<script src="assets/vnv-beta-link.js" defer></script>
+<script>VNV_HEADER.mount({"title":"Khaemenes Higher Learning","subtitle":"Collegiate Campus · Undergraduate · Advanced · Research","icon":"HL","home":"https://vervenveda.com/Khaemenes_Academy.github.io/","actions":[{"label":"Student","href":"#student-portal"},{"label":"Departments","href":"#departments"},{"label":"Career","href":"./Career/index.html"},{"label":"Directory","href":"#higher-directory"},{"label":"Theme","href":"#theme-toggle"}]});</script>
 <script defer src="assets/khaemenes-academy-title-v1.js" data-khae-title-standard="v1"></script>
 </body>
 </html>
