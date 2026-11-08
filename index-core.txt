@@ -802,5 +802,7 @@ main .section.final>.section-inner>p:not(.kicker){
 <script>VNV_HEADER.mount({"title":"Khaemenes Higher Learning","subtitle":"Collegiate Campus · Undergraduate · Advanced · Research","icon":"K","home":"https://vervenveda.com/KhaemenesAcademy_Home.github.io/","actions":[{"label":"Student","href":"#student-portal"},{"label":"Departments","href":"#departments"},{"label":"Career","href":"./Career/index.html"},{"label":"Directory","href":"#higher-directory"},{"label":"Theme","href":"#theme-toggle"}]});</script>
 <script defer src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/vnv-language.js" data-official-vnv-language="true"></script>
 <script defer src="assets/khaemenes-academy-title-v1.js" data-khae-title-standard="v1"></script>
+<!-- Canonical six-control ecosystem toolbar: mounted after the actual Higher Learning campus is parsed. -->
+<script src="https://vervenveda.com/assets/vnv-ecosystem-toolbar.js"></script>
 </body>
 </html>
