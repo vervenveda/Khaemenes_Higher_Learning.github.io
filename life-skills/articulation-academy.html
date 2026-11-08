@@ -1,0 +1,591 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#172b3d">
+<title>Articulation Academy</title>
+<style>
+:root{
+ --navy:#172b3d;--navy2:#233e53;--gold:#b89555;
+ --gold2:#ddc38e;--ivory:#f7f4ec;--paper:#fffdf8;
+ --ink:#293744;--muted:#75818a;--line:#e5dfd2;
+ --green:#557969;--shadow:0 8px 28px #172b3d12;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ivory);color:var(--ink);
+ font-family:Georgia,"Times New Roman",serif;line-height:1.6}
+header{background:var(--navy);color:white;padding:30px 20px 25px;
+ text-align:center;border-bottom:4px solid var(--gold)}
+header .eyebrow{letter-spacing:4px;text-transform:uppercase;
+ color:var(--gold2);font:11px Arial,sans-serif}
+h1{font-size:clamp(27px,5vw,43px);font-weight:normal;
+ letter-spacing:2px;margin:8px 0}
+header p{color:#d9e0e4;margin:4px auto;max-width:650px}
+nav{background:var(--navy2);display:flex;flex-wrap:wrap;
+ justify-content:center;gap:5px;padding:10px;position:sticky;top:0;z-index:5}
+nav button{background:transparent;color:#e8e5dd;border:1px solid transparent;
+ padding:9px 13px;cursor:pointer;font:12px Arial,sans-serif;letter-spacing:.5px}
+nav button.active,nav button:hover{border-color:var(--gold);color:var(--gold2)}
+main{max-width:1100px;margin:30px auto;padding:0 18px 60px}
+section.page{display:none}
+section.page.active{display:block}
+h2{font-weight:normal;color:var(--navy);font-size:27px;margin:0 0 7px}
+h3{font-weight:normal;color:var(--navy);margin:0 0 8px}
+.subtitle{color:var(--muted);margin:0 0 22px}
+.card{background:var(--paper);border:1px solid var(--line);
+ border-radius:5px;padding:22px;margin:14px 0;box-shadow:var(--shadow)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.stat{font-size:30px;color:var(--gold);display:block}
+.small{font:12px Arial,sans-serif;color:var(--muted)}
+button,.btn{font-family:Arial,sans-serif}
+.action{background:var(--navy);color:white;border:1px solid var(--navy);
+ padding:10px 16px;cursor:pointer;border-radius:3px;margin:4px 3px 4px 0}
+.action:hover{background:var(--navy2)}
+.action.secondary{background:transparent;color:var(--navy);border-color:var(--gold)}
+.action.gold{background:var(--gold);border-color:var(--gold);color:#172b3d}
+input,select,textarea{width:100%;padding:12px;border:1px solid var(--line);
+ background:white;color:var(--ink);font:14px Arial,sans-serif;border-radius:3px}
+label{font:12px Arial,sans-serif;color:var(--muted);display:block;margin:10px 0 5px}
+.phrase{font-size:22px;line-height:1.45;color:var(--navy);margin:12px 0}
+.quote{border-left:3px solid var(--gold);padding:8px 15px;margin:12px 0}
+.tag{display:inline-block;background:#eee8da;color:#725d39;
+ padding:3px 8px;border-radius:2px;font:11px Arial,sans-serif;margin:3px}
+.progress{height:8px;background:#e8e3d9;border-radius:8px;overflow:hidden}
+.progress span{display:block;height:100%;background:var(--gold);width:0}
+.item{border-bottom:1px solid var(--line);padding:14px 0}
+.item:last-child{border:0}
+footer{text-align:center;color:var(--muted);font:11px Arial,sans-serif;
+ padding:20px;border-top:1px solid var(--line)}
+button:focus,input:focus,select:focus{outline:2px solid var(--gold2);outline-offset:2px}
+@media(max-width:600px){nav button{padding:8px;font-size:11px}
+ .card{padding:16px}main{margin-top:20px}}
+</style>
+</head>
+<body>
+<header>
+ <div class="eyebrow">The Art of Thoughtful Communication</div>
+ <h1>ARTICULATION ACADEMY</h1>
+ <p>Language, presence, composure, and the practice of meaningful conversation.</p>
+</header>
+
+<nav id="nav">
+ <button class="active" data-page="home">Academy</button>
+ <button data-page="library">Phrase Library</button>
+ <button data-page="course">21-Day Course</button>
+ <button data-page="studios">Mastery Studios</button>
+ <button data-page="scenarios">Practice</button>
+ <button data-page="daily">Daily Practice</button>
+</nav>
+
+<main>
+<section id="home" class="page active">
+ <h2>Welcome to the Academy</h2>
+ <p class="subtitle">A practical education in expressing ideas with clarity, courtesy, confidence, and consideration.</p>
+ <div class="grid">
+  <div class="card"><span class="stat" id="phraseCount">500</span><b>Conversation Phrases</b><p class="small">Open, continue, clarify, disagree, and close conversations.</p></div>
+  <div class="card"><span class="stat">21</span><b>Days of Training</b><p class="small">A structured course in thoughtful communication.</p></div>
+  <div class="card"><span class="stat" id="completedCount">0</span><b>Lessons Completed</b><p class="small">Your learning progress is stored on this device.</p></div>
+  <div class="card"><span class="stat" id="practiceCount">0</span><b>Daily Practices</b><p class="small">Build a consistent habit of articulate expression.</p></div>
+ </div>
+ <div class="card">
+  <h3>Today's Conversation Thought</h3>
+  <div class="phrase" id="homeThought"></div>
+  <button class="action" onclick="randomThought()">Another thought</button>
+  <button class="action secondary" onclick="go('library')">Explore phrases</button>
+ </div>
+ <div class="card">
+  <h3>Your Learning Progress</h3>
+  <div class="progress"><span id="homeProgress"></span></div>
+  <p class="small" id="progressText">Begin with the first lesson.</p>
+  <button class="action gold" onclick="go('course')">Continue the course</button>
+ </div>
+ <div class="card">
+  <h3>Daily Language Enrichment</h3>
+  <p>Expand your vocabulary and discover how thoughtful word choices improve everyday conversation.</p>
+  <a href="https://github.com/vervenveda/arcade.github.io/blob/main/Learn_a_New_Word_index.html" target="_blank" rel="noopener">
+   <button class="action">Open Arcade — Word of the Day ↗</button>
+  </a>
+ </div>
+</section>
+
+<section id="library" class="page">
+ <h2>The Conversation Library</h2>
+ <p class="subtitle">Explore 500 generated phrase variations across ten essential communication skills.</p>
+ <div class="card">
+  <label for="search">Search words, phrases, or situations</label>
+  <input id="search" placeholder="Try: respectfully disagree, introduce, clarify..." oninput="renderLibrary()">
+  <label for="category">Communication category</label>
+  <select id="category" onchange="renderLibrary()"><option value="">All categories</option></select>
+  <div style="margin-top:15px">
+   <button class="action" onclick="nextPhrase()">Random phrase</button>
+   <button class="action secondary" onclick="resetRotation()">Reset rotation</button>
+  </div>
+  <div id="libraryResults"></div>
+ </div>
+ <div class="card" id="featured">
+  <span class="tag">RANDOM SELECTION</span>
+  <div class="phrase" id="featuredPhrase">Choose a phrase to begin.</div>
+  <p id="featuredMeta" class="small"></p>
+  <button class="action" onclick="nextPhrase()">Next phrase</button>
+  <button class="action secondary" onclick="copyFeatured()">Copy</button>
+ </div>
+</section>
+
+<section id="course" class="page">
+ <h2>The 21-Day Articulation Course</h2>
+ <p class="subtitle">A progressive introduction to clear, courteous, and confident communication.</p>
+ <div class="card">
+  <div class="progress"><span id="courseProgress"></span></div>
+  <p class="small" id="courseProgressText"></p>
+  <div id="lessons"></div>
+ </div>
+ <div class="card" id="lessonDetail">
+  <h3>Select a lesson</h3>
+  <p>Choose a day above to explore its learning objective and exercise.</p>
+ </div>
+ <div class="card">
+  <h3>Final Assessment</h3>
+  <p>Complete the 21 lessons, then take the final assessment. A score of 80% is the suggested mastery threshold.</p>
+  <button class="action gold" onclick="startFinal()">Begin final assessment</button>
+  <div id="finalTest"></div>
+ </div>
+</section>
+
+<section id="studios" class="page">
+ <h2>Five Mastery Studios</h2>
+ <p class="subtitle">Five complementary disciplines for developing mature communication.</p>
+ <div id="studioList" class="grid"></div>
+</section>
+
+<section id="scenarios" class="page">
+ <h2>Situational Practice</h2>
+ <p class="subtitle">Consider the situation. Choose your words carefully. Practice a response that is both honest and respectful.</p>
+ <div class="card">
+  <div id="scenarioArea"></div>
+  <button class="action" onclick="nextScenario()">New scenario</button>
+ </div>
+</section>
+
+<section id="daily" class="page">
+ <h2>Five-Minute Daily Practice</h2>
+ <p class="subtitle">A brief routine for vocabulary, conversational judgment, and spoken expression.</p>
+ <div class="card">
+  <span class="tag">ONE WORD · ONE CHALLENGE · ONE SPEAKING EXERCISE</span>
+  <h3 id="dailyDate"></h3>
+  <h3>1. Word of the Day</h3>
+  <div class="phrase" id="dailyWord"></div>
+  <p id="dailyDefinition"></p>
+  <p class="quote" id="dailyExample"></p>
+  <button class="action secondary" onclick="copyDailyWord()">Copy word and example</button>
+ </div>
+ <div class="card">
+  <h3>2. Conversational Challenge</h3>
+  <p id="dailyChallenge"></p>
+  <p class="small">Think about your opening, your tone, and the effect your words may have on the listener.</p>
+ </div>
+ <div class="card">
+  <h3>3. Two-Minute Speaking Exercise</h3>
+  <p id="dailySpeaking"></p>
+  <p class="quote"><b>Try this structure:</b> Point → Reason → Example → Close.</p>
+  <textarea id="dailyNotes" rows="3" placeholder="Optional: write a few notes before speaking..."></textarea>
+  <button class="action gold" onclick="completeDaily()">Mark today's practice complete</button>
+  <p id="dailyStatus" class="small"></p>
+ </div>
+ <div class="card">
+  <h3>Daily Reflection</h3>
+  <p>Did your words communicate your meaning while respecting the other person's perspective?</p>
+  <textarea id="dailyReflection" rows="3" placeholder="Write a short reflection..."></textarea>
+  <button class="action secondary" onclick="saveReflection()">Save reflection</button>
+  <p class="small" id="reflectionStatus"></p>
+ </div>
+</section>
+</main>
+
+<footer>ARTICULATION ACADEMY · Independent Learning Resource · All progress remains on this device</footer>
+
+<script>
+"use strict";
+
+const STORE="articulationAcademy_v3";
+let state={};
+try{state=JSON.parse(localStorage.getItem(STORE)||"{}")}catch(e){state={}}
+state.lessons=state.lessons||[];
+state.daily=state.daily||[];
+state.rotation=state.rotation||[];
+state.favorites=state.favorites||[];
+state.reflections=state.reflections||{};
+
+function save(){localStorage.setItem(STORE,JSON.stringify(state))}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function go(id){
+ document.querySelectorAll(".page").forEach(p=>p.classList.toggle("active",p.id===id));
+ document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("active",b.dataset.page===id));
+ window.scrollTo({top:0,behavior:"smooth"});
+}
+document.querySelectorAll("nav button").forEach(b=>b.addEventListener("click",()=>go(b.dataset.page)));
+
+const categories=[
+ ["Open","Begin a conversation with warmth and ease"],
+ ["Continue","Keep a conversation flowing naturally"],
+ ["Listen","Show attention and genuine understanding"],
+ ["Ask","Invite thoughtful discussion"],
+ ["Clarify","Seek precision without embarrassment"],
+ ["Contribute","Add a useful observation or idea"],
+ ["Disagree","Express a different perspective respectfully"],
+ ["Repair","Address misunderstandings with care"],
+ ["Gratitude","Express appreciation sincerely"],
+ ["Close","Bring a conversation to a graceful conclusion"]
+];
+
+const contexts=[
+ "a new acquaintance","a professional meeting","a community gathering",
+ "a thoughtful discussion","a family conversation","a classroom discussion",
+ "a collaborative project","a difficult conversation","a social introduction",
+ "an exchange of ideas"
+];
+
+const templates=[
+ [
+ "It is a pleasure to meet you. I would enjoy hearing more about your interests in {c}.",
+ "I hope you are having a pleasant day. What has brought you to {c}?",
+ "I have been looking forward to learning more about {c}. What are your thoughts?",
+ "It is always worthwhile to exchange perspectives. How did you become interested in {c}?",
+ "I appreciate the opportunity to connect. What would you most like to discuss about {c}?"
+ ],
+ [
+ "That is an interesting point. What led you to that perspective in {c}?",
+ "I would like to hear a little more about what you just shared regarding {c}.",
+ "You have raised something worth considering. How do you see it developing in {c}?",
+ "That gives me another perspective on {c}. What do you think is most important?",
+ "I appreciate that observation. Is there another aspect of {c} you would add?"
+ ],
+ [
+ "If I understand correctly, your main point about {c} is that it deserves careful consideration.",
+ "I want to make sure I understand your perspective on {c} before responding.",
+ "Thank you for explaining that. I am listening, and I would like to understand {c} more fully.",
+ "Let me reflect back what I heard about {c}, so I can be certain I understood.",
+ "That sounds important to you. Would you like to tell me more about {c}?"
+ ],
+ [
+ "What do you consider the most meaningful part of {c}?",
+ "How might someone approach {c} from a different perspective?",
+ "What experiences have shaped your thinking about {c}?",
+ "Which part of {c} do you think deserves more attention?",
+ "What would a constructive next step look like for {c}?"
+ ],
+ [
+ "Could you help me understand what you mean by {c}?",
+ "When you refer to {c}, are you speaking about the broader idea or a particular example?",
+ "I would appreciate a little clarification about {c}.",
+ "Would you mind explaining how you arrived at that conclusion about {c}?",
+ "I want to avoid making assumptions. Could we define what {c} means here?"
+ ],
+ [
+ "One additional consideration regarding {c} may be worth exploring.",
+ "I would like to add a thought that may complement what we have discussed about {c}.",
+ "There is another angle to {c} that might help us see the larger picture.",
+ "Perhaps we can connect this idea to a practical example of {c}.",
+ "A useful distinction in this discussion of {c} may be worth making."
+ ],
+ [
+ "I see the matter somewhat differently, although I appreciate your perspective on {c}.",
+ "May I offer another interpretation of {c} for consideration?",
+ "I agree with part of your point, but I reach a different conclusion about {c}.",
+ "I respect your view. My understanding of {c} leads me in another direction.",
+ "Perhaps we can examine the evidence for both perspectives on {c}."
+ ],
+ [
+ "I believe I may not have expressed myself clearly about {c}. Let me try again.",
+ "I appreciate your patience. I would like to revisit what I said about {c}.",
+ "I am sorry if my wording about {c} came across differently than I intended.",
+ "Perhaps we misunderstood one another regarding {c}. Could we start that point again?",
+ "I value our conversation and would like to resolve the misunderstanding about {c}."
+ ],
+ [
+ "Thank you for taking the time to share your thoughts about {c}.",
+ "I genuinely appreciate your consideration and perspective on {c}.",
+ "Your contribution to this discussion of {c} has been valuable.",
+ "Thank you for approaching {c} with such thoughtfulness.",
+ "I am grateful for the opportunity to learn from your perspective on {c}."
+ ],
+ [
+ "I have enjoyed our conversation about {c}. Thank you for your time.",
+ "This has been a worthwhile exchange. I hope we can continue discussing {c} another time.",
+ "I appreciate the discussion. I will leave you with my thanks regarding {c}.",
+ "It has been a pleasure exchanging ideas about {c}. Enjoy the rest of your day.",
+ "Thank you again. I think this is a good place to pause our discussion of {c}."
+ ]
+];
+
+const phrases=[];
+categories.forEach((cat,ci)=>{
+ contexts.forEach((ctx,xi)=>{
+  templates[ci].forEach((t,ti)=>{
+   const subject=ctx.replace(/^a /,"");
+   phrases.push({
+    id:ci+"-"+xi+"-"+ti,
+    category:cat[0],
+    context:ctx,
+    text:t.replaceAll("{c}",subject)
+   });
+  });
+ });
+});
+document.getElementById("phraseCount").textContent=phrases.length;
+
+const categorySelect=document.getElementById("category");
+categories.forEach(c=>categorySelect.add(new Option(c[0],c[0])));
+
+function renderLibrary(){
+ const q=document.getElementById("search").value.toLowerCase().trim();
+ const cat=categorySelect.value;
+ const found=phrases.filter(p=>(!cat||p.category===cat)&&
+  (!q||(p.text+" "+p.category+" "+p.context).toLowerCase().includes(q)));
+ document.getElementById("libraryResults").innerHTML=
+  `<p class="small">${found.length} phrases found</p>`+
+  found.slice(0,100).map(p=>`
+  <div class="item">
+   <span class="tag">${esc(p.category)}</span><span class="tag">${esc(p.context)}</span>
+   <div>${esc(p.text)}</div>
+   <button class="action secondary" onclick="copyText(${JSON.stringify(p.text).replaceAll("'","\\'")})">Copy</button>
+   <button class="action secondary" onclick="favorite('${p.id}')">${state.favorites.includes(p.id)?"★ Saved":"☆ Save"}</button>
+  </div>`).join("")+
+  (found.length>100?'<p class="small">Showing the first 100 results. Refine your search to see more.</p>':"");
+}
+document.getElementById("search").addEventListener("input",renderLibrary);
+categorySelect.addEventListener("change",renderLibrary);
+
+function nextPhrase(){
+ if(state.rotation.length>=phrases.length)state.rotation=[];
+ let remaining=phrases.filter(p=>!state.rotation.includes(p.id));
+ if(!remaining.length){state.rotation=[];remaining=phrases}
+ const p=remaining[Math.floor(Math.random()*remaining.length)];
+ state.rotation.push(p.id);save();
+ document.getElementById("featuredPhrase").textContent=p.text;
+ document.getElementById("featuredMeta").textContent=p.category+" · "+p.context;
+}
+function resetRotation(){state.rotation=[];save();nextPhrase()}
+function copyText(t){if(navigator.clipboard)navigator.clipboard.writeText(t).then(()=>alert("Copied."));else alert(t)}
+function copyFeatured(){copyText(document.getElementById("featuredPhrase").textContent)}
+function favorite(id){
+ state.favorites=state.favorites.includes(id)?state.favorites.filter(x=>x!==id):[...state.favorites,id];
+ save();renderLibrary();
+}
+function randomThought(){nextPhrase();document.getElementById("homeThought").textContent=document.getElementById("featuredPhrase").textContent}
+
+const lessons=[
+ ["The Foundation of Articulation","Understand that articulate speech is clear, organized, considerate, and appropriate to its audience.","Introduce yourself in three sentences. State who you are, what interests you, and one idea you value."],
+ ["Clarity Before Complexity","Choose words that communicate meaning rather than words that merely sound impressive.","Explain a familiar subject in plain language without losing its important meaning."],
+ ["The Art of the Opening","Begin conversations with genuine interest, situational awareness, and courtesy.","Practice three openings: professional, social, and familiar."],
+ ["Listening as a Skill","Give attention without preparing a response before the other person has finished.","Summarize someone's viewpoint fairly before sharing your own."],
+ ["The Thoughtful Question","Use open questions that invite explanation instead of limiting answers.","Turn five yes-or-no questions into open-ended questions."],
+ ["Vocabulary and Precision","Select words for their meaning, tone, and context.","Choose five everyday words and find more precise alternatives."],
+ ["Tone and Composure","Recognize that delivery influences how words are received.","Read the same sentence in a calm, curious, and encouraging tone."],
+ ["Continuing a Conversation","Build on what has been said rather than abruptly changing subjects.","Use an observation, a follow-up question, and a relevant contribution."],
+ ["Professional Etiquette","Communicate respectfully in meetings, introductions, and correspondence.","Practice a concise professional introduction and a courteous request."],
+ ["Expressing Disagreement","Challenge ideas without attacking the person expressing them.","Use the structure: acknowledge, explain, support, invite."],
+ ["Facts and Interpretations","Distinguish observable information from assumptions and conclusions.","Label five statements as fact, interpretation, or opinion."],
+ ["Explaining an Idea","Organize information so another person can follow your reasoning.","Explain an idea using point, reason, example, and conclusion."],
+ ["Empathy and Emotional Intelligence","Recognize another person's perspective without pretending to agree.","Practice acknowledging a concern before offering a response."],
+ ["Clarifying Misunderstandings","Ask for clarification without blame or embarrassment.","Rewrite three accusatory questions as neutral questions."],
+ ["Diplomacy and Tact","Communicate difficult information with honesty and consideration.","Practice delivering constructive feedback respectfully."],
+ ["Boundaries and Courtesy","Be considerate without surrendering your right to decline.","Write three polite but clear ways to say no."],
+ ["The Graceful Recovery","Take responsibility for unclear wording and repair a conversation.","Practice acknowledging a misunderstanding and restating your intention."],
+ ["Constructive Contribution","Add information that moves a discussion forward.","Offer a relevant observation, supporting reason, and practical suggestion."],
+ ["Gratitude and Recognition","Make appreciation specific, sincere, and proportionate.","Thank someone by identifying the particular action you appreciated."],
+ ["The Art of the Pause","Use silence to consider, listen, and respond thoughtfully.","Practice pausing briefly before answering a challenging question."],
+ ["Graceful Conclusions","Close conversations with clarity, appreciation, and appropriate warmth.","Practice ending a social, professional, and difficult conversation."]
+];
+
+function renderLessons(){
+ const box=document.getElementById("lessons");
+ box.innerHTML=lessons.map((l,i)=>`
+ <div class="item">
+  <b>Day ${i+1}: ${esc(l[0])}</b>
+  <span class="tag">${state.lessons.includes(i)?"Completed":"Lesson"}</span>
+  <button class="action secondary" onclick="openLesson(${i})">Study lesson</button>
+ </div>`).join("");
+ const n=state.lessons.length;
+ document.getElementById("courseProgress").style.width=(n/21*100)+"%";
+ document.getElementById("courseProgressText").textContent=n+" of 21 lessons completed";
+}
+function openLesson(i){
+ const l=lessons[i];
+ document.getElementById("lessonDetail").innerHTML=`
+ <span class="tag">DAY ${i+1}</span><h3>${esc(l[0])}</h3>
+ <p><b>Learning objective</b></p><p>${esc(l[1])}</p>
+ <p><b>Today's exercise</b></p><p>${esc(l[2])}</p>
+ <button class="action gold" onclick="completeLesson(${i})">${state.lessons.includes(i)?"Completed":"Mark lesson complete"}</button>`;
+}
+function completeLesson(i){
+ if(!state.lessons.includes(i))state.lessons.push(i);
+ save();renderLessons();updateDashboard();openLesson(i);
+}
+
+const studios=[
+ ["Eloquence","Vocabulary, precision, expressive language, and the ability to communicate complex ideas clearly.","Practice replacing vague expressions with precise language. Explain the difference between similar words. Read a short passage aloud and identify its central idea."],
+ ["Emotional Intelligence","Empathy, composure, sensitivity, and awareness of how communication affects others.","Practice acknowledging an emotion without assuming you know exactly how another person feels. Consider how tone changes a message."],
+ ["Professional Etiquette","Introductions, meetings, interviews, correspondence, and respectful workplace communication.","Prepare a professional introduction. Practice making a request, offering feedback, and following up after a meeting."],
+ ["Intellectual Conversation","Evidence, reasoning, facts versus interpretation, and fair discussion.","Choose a claim and identify what evidence would support it. Present an opposing argument fairly before responding."],
+ ["Conversational Judgment","Timing, boundaries, silence, context, and the ability to recognize when to speak or listen.","Consider when a question is appropriate, when a pause is useful, and how to close a conversation graciously."]
+];
+document.getElementById("studioList").innerHTML=studios.map((s,i)=>`
+ <div class="card"><span class="tag">MASTERY STUDIO ${i+1}</span><h3>${esc(s[0])}</h3>
+ <p>${esc(s[1])}</p><p><b>Practice</b></p><p>${esc(s[2])}</p></div>`).join("");
+
+const scenarios=[
+ ["A colleague interrupts you during a meeting.","How can you reclaim your speaking time without embarrassing the other person?","I would like to finish this thought, and then I would be glad to hear your perspective."],
+ ["Someone shares an opinion you strongly disagree with.","How can you acknowledge their perspective while presenting a different view?","I understand why you see it that way. I interpret the information differently, and I would like to explain why."],
+ ["You realize your words were misunderstood.","How can you take responsibility and clarify your intention?","I may not have expressed that clearly. What I intended to communicate was..."],
+ ["A new person joins a group conversation.","How can you make them feel included?","We were just discussing this topic. Have you had any experience with it?"],
+ ["Someone gives you thoughtful feedback.","How can you respond without becoming defensive?","Thank you for taking the time to explain that. I will consider what you have shared."],
+ ["You need to decline an invitation.","How can you be gracious while maintaining your boundary?","Thank you for thinking of me. I won't be able to attend, but I appreciate the invitation."],
+ ["A conversation becomes emotionally charged.","How can you slow it down constructively?","I think this matters to both of us. Perhaps we can pause and make sure we understand each other."],
+ ["You want to contribute but do not want to dominate.","How can you add something useful?","May I add one consideration that might help us look at this from another angle?"],
+ ["Someone explains a complex idea.","How can you demonstrate that you were listening?","If I understand correctly, your central point is... Have I understood you accurately?"],
+ ["You need to end a pleasant conversation.","How can you close it warmly?","I have enjoyed speaking with you. Thank you for the conversation, and I hope you enjoy the rest of your day."]
+];
+let scenarioIndex=0;
+function nextScenario(){
+ scenarioIndex=(scenarioIndex+1)%scenarios.length;
+ showScenario();
+}
+function showScenario(){
+ const s=scenarios[scenarioIndex];
+ document.getElementById("scenarioArea").innerHTML=`
+ <span class="tag">SCENARIO ${scenarioIndex+1} OF ${scenarios.length}</span>
+ <h3>${esc(s[0])}</h3><p><b>Your challenge</b></p><p>${esc(s[1])}</p>
+ <label for="scenarioAnswer">Write your response</label>
+ <textarea id="scenarioAnswer" rows="4" placeholder="Compose your response..."></textarea>
+ <button class="action" onclick="document.getElementById('modelAnswer').hidden=false">Compare with an example</button>
+ <div id="modelAnswer" hidden class="quote"><b>One possible response</b><p>${esc(s[2])}</p></div>`;
+}
+
+const dailyWords=[
+ ["Articulate","Able to express ideas clearly and effectively.","She articulated her concerns with clarity and respect."],
+ ["Considerate","Thoughtful about the needs and feelings of others.","A considerate response makes room for another perspective."],
+ ["Nuance","A subtle distinction in meaning, feeling, or expression.","The nuance of her explanation changed how I understood the issue."],
+ ["Diplomatic","Tactful and sensitive when dealing with people or difficult subjects.","He offered a diplomatic response without avoiding the question."],
+ ["Concise","Expressing something clearly in few words.","Her concise summary helped everyone understand the decision."],
+ ["Empathy","The ability to understand or appreciate another person's perspective.","Empathy can help us listen before we respond."],
+ ["Clarify","To make something easier to understand.","Could you clarify which part of the proposal you mean?"],
+ ["Receptive","Willing to consider or listen to new ideas.","She remained receptive to constructive feedback."],
+ ["Measured","Carefully considered and controlled.","He gave a measured response rather than reacting immediately."],
+ ["Constructive","Intended to help improve or resolve something.","They offered constructive suggestions for the project."],
+ ["Perceptive","Quick to notice or understand important details.","That was a perceptive observation about the discussion."],
+ ["Integrity","The quality of being honest and guided by strong principles.","Integrity means being truthful even when it is inconvenient."],
+ ["Artful","Skillful and thoughtful in expression or action.","An artful question can invite a deeper conversation."],
+ ["Impartial","Fair and not favoring one side.","An impartial review considers all relevant evidence."],
+ ["Eloquent","Fluent, expressive, and persuasive in communication.","Her eloquent explanation made a complex idea accessible."],
+ ["Prudent","Showing careful judgment about what may happen.","It is prudent to verify information before repeating it."],
+ ["Sincere","Genuine and free from pretense.","A sincere apology acknowledges the effect of one's words."],
+ ["Substantive","Meaningful and dealing with important matters.","The meeting moved from small talk to substantive discussion."],
+ ["Diplomacy","The practice of managing sensitive relationships through tactful communication.","Diplomacy requires honesty as well as careful language."],
+ ["Discerning","Showing good judgment and the ability to recognize distinctions.","A discerning listener notices both the words and the context."],
+ ["Composure","The ability to remain calm and in control.","She maintained her composure during a difficult exchange."]
+];
+const dailyChallenges=[
+ "Introduce yourself to someone new and ask a question that invites more than a one-word answer.",
+ "Listen to someone's viewpoint and summarize it fairly before adding your own thought.",
+ "Disagree with an idea while making it clear that you respect the person expressing it.",
+ "Ask for clarification about an unclear statement without suggesting that the speaker was careless.",
+ "Offer a sincere expression of appreciation that identifies something specific.",
+ "Explain a complicated idea in three clear sentences.",
+ "Practice declining a request politely while maintaining a clear boundary.",
+ "Turn a conversation back toward a constructive subject without dismissing anyone's concern.",
+ "Ask a thoughtful follow-up question instead of immediately sharing a related story.",
+ "Close a conversation warmly while making your next steps clear."
+];
+const dailySpeaking=[
+ "Describe an idea that you believe deserves more thoughtful public discussion. Explain why it matters and give one example.",
+ "Explain a subject you know well to someone encountering it for the first time.",
+ "Describe a time when listening carefully could improve the outcome of a disagreement.",
+ "Present two sides of a question fairly, then explain your own considered view.",
+ "Explain how courtesy and honesty can work together in a difficult conversation.",
+ "Describe a meaningful goal and identify one practical step toward achieving it.",
+ "Explain why a person might reasonably interpret the same situation differently.",
+ "Give a short introduction to a subject you find interesting, then invite questions.",
+ "Describe a problem and suggest a constructive way to address it.",
+ "Summarize an important idea in under one minute without losing its central meaning."
+];
+
+function dayNumber(){
+ const start=new Date(new Date().getFullYear(),0,0);
+ const now=new Date();
+ return Math.floor((now-start)/86400000);
+}
+function setupDaily(){
+ const d=dayNumber(),w=d%dailyWords.length,c=d%dailyChallenges.length,s=d%dailySpeaking.length;
+ document.getElementById("dailyDate").textContent=new Date().toLocaleDateString(undefined,{weekday:"long",year:"numeric",month:"long",day:"numeric"});
+ document.getElementById("dailyWord").textContent=dailyWords[w][0];
+ document.getElementById("dailyDefinition").textContent=dailyWords[w][1];
+ document.getElementById("dailyExample").textContent=dailyWords[w][2];
+ document.getElementById("dailyChallenge").textContent=dailyChallenges[c];
+ document.getElementById("dailySpeaking").textContent=dailySpeaking[s];
+ document.getElementById("dailyStatus").textContent=state.daily.includes(d)?"Today's practice is complete.":"Today's practice has not yet been marked complete.";
+ document.getElementById("dailyReflection").value=state.reflections[d]||"";
+}
+function copyDailyWord(){const w=document.getElementById("dailyWord").textContent;copyText(w+" — "+document.getElementById("dailyDefinition").textContent+"\n"+document.getElementById("dailyExample").textContent)}
+function completeDaily(){
+ const d=dayNumber();if(!state.daily.includes(d))state.daily.push(d);
+ save();setupDaily();updateDashboard();
+}
+function saveReflection(){
+ state.reflections[dayNumber()]=document.getElementById("dailyReflection").value;
+ save();document.getElementById("reflectionStatus").textContent="Reflection saved on this device.";
+}
+
+const finalQuestions=[
+ ["Which response best demonstrates active listening?",["Interrupting with advice","Summarizing the speaker's point fairly","Changing the subject"],1],
+ ["What is the purpose of a clarifying question?",["To embarrass the speaker","To prove a point","To understand meaning more accurately"],2],
+ ["Which is the most constructive disagreement?",["I see it differently, and here is why.","That is ridiculous.","You clearly do not understand."],0],
+ ["What should guide vocabulary selection?",["Complexity alone","Meaning, audience, and context","The longest available word"],1],
+ ["What is a useful way to repair a misunderstanding?",["Assign blame","Ignore it","Acknowledge and clarify"],2],
+ ["Which question invites a fuller answer?",["Did you like it?","What did you find most useful?","Was it good?"],1],
+ ["What does composure involve?",["Never expressing emotion","Staying thoughtful and controlled","Avoiding every difficult subject"],1],
+ ["What makes appreciation more meaningful?",["Specific and sincere recognition","Exaggeration","A generic compliment"],0],
+ ["What is a useful structure for explaining an idea?",["Point, reason, example, close","Opinion, interruption, conclusion","Question, joke, subject change"],0],
+ ["What is conversational judgment?",["Speaking as much as possible","Recognizing timing, context, and boundaries","Always agreeing"],1],
+ ["Which is a professional way to make a request?",["Do this now.","You owe me this.","Would you be able to help with this?"],2],
+ ["What distinguishes fact from interpretation?",["Facts are verifiable; interpretations explain meaning.","They are identical.","Interpretations are always correct."],0],
+ ["What is empathy?",["Agreeing with everything","Understanding another perspective","Offering immediate advice"],1],
+ ["What is a graceful conversation close?",["Leaving without acknowledgment","Thanking the person and closing clearly","Continuing after the other person must leave"],1],
+ ["How should feedback be approached?",["With specific, constructive language","With personal attacks","With vague criticism"],0],
+ ["What is the value of a pause?",["It prevents all disagreement","It allows thought and listening","It makes a speaker appear uncertain"],1],
+ ["How can a boundary be communicated courteously?",["With clarity and respect","With an insult","By making a promise you cannot keep"],0],
+ ["What is an eloquent explanation?",["A long explanation full of jargon","An expressive and clear explanation","A statement without evidence"],1],
+ ["How should an opposing view be presented?",["As unfairly as possible","By mocking it","Accurately and respectfully"],2],
+ ["What is the strongest foundation for articulate communication?",["Clarity, consideration, and sound judgment","Impressive vocabulary alone","Speaking without pauses"],0]
+];
+function startFinal(){
+ const box=document.getElementById("finalTest");
+ let answers={};
+ function draw(){
+  box.innerHTML=finalQuestions.map((q,i)=>`
+   <div class="item"><b>${i+1}. ${esc(q[0])}</b>
+   ${q[1].map((a,j)=>`<label><input type="radio" name="q${i}" value="${j}" style="width:auto" ${answers[i]===j?"checked":""}> ${esc(a)}</label>`).join("")}</div>`).join("")+
+   '<button class="action gold" onclick="gradeFinal()">Submit assessment</button><div id="finalResult"></div>';
+  finalQuestions.forEach((q,i)=>box.querySelectorAll(`[name=q${i}]`).forEach(r=>r.addEventListener("change",()=>answers[i]=Number(r.value))));
+ }
+ window.gradeFinal=function(){
+  const score=finalQuestions.reduce((n,q,i)=>n+(answers[i]===q[2]?1:0),0);
+  const pct=Math.round(score/finalQuestions.length*100);
+  document.getElementById("finalResult").innerHTML=`<h3>Assessment result: ${pct}%</h3><p>${pct>=80?"Suggested mastery threshold achieved.":"Keep practicing and revisit the lessons before trying again."}</p><p>${score} of ${finalQuestions.length} correct.</p>`;
+  state.finalScore=pct;save();
+ };
+ draw();
+}
+
+function updateDashboard(){
+ const n=state.lessons.length;
+ document.getElementById("completedCount").textContent=n;
+ document.getElementById("practiceCount").textContent=state.daily.length;
+ document.getElementById("homeProgress").style.width=(n/21*100)+"%";
+ document.getElementById("progressText").textContent=n+" of 21 lessons completed.";
+}
+renderLibrary();renderLessons();showScenario();setupDaily();updateDashboard();nextPhrase();randomThought();
+</script>
+</body>
+</html>
