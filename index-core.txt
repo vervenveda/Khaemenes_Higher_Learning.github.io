@@ -2,6 +2,13 @@
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
+  <!-- Opt-in only, parser-time diagnostic: observes the toolbar before campus scripts run. -->
+  <script id="higher-toolbar-forensic-optin-loader">
+    if(new URLSearchParams(location.search).get("chrome_audit")==="1"){
+      document.write('<script src="./assets/higher-toolbar-forensic-optin.js?v=1.0.0"><'+'/script>');
+    }
+  </script>
+
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="description" content="Khaemenes Higher Learning — a collegiate campus for undergraduate study, advanced mathematics, career development, research preparation, professional tools, student records, and lifelong scholarship.">
   <meta name="theme-color" content="#08131f">
