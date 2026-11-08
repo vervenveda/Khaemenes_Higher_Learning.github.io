@@ -322,6 +322,42 @@ html[data-theme="light"] .department-link.developing{color:#234963;border-color:
  #network .network-strip>.network-card{flex:1 1 100%;max-width:none}
 }
 </style>
+<style id="higher-learning-heading-hierarchy-codex-v1-20261108">
+/* KA-PAGE-AUDIT-001 / HL-HIERARCHY-001
+   Scoped to Higher Learning main-section headings, not profile cards or app widgets. */
+main .section>.section-inner>.heading{max-width:920px;text-align:center}
+main .section>.section-inner>.heading>p.kicker{
+  display:block;margin:0 auto 11px;font-family:var(--serif);
+  font-size:16px;line-height:1.45;letter-spacing:.095em;
+  font-weight:400;text-transform:uppercase;color:#e5c58c;
+}
+main .section>.section-inner>.heading>h2{
+  max-width:900px;margin:0 auto 15px;
+  font-family:var(--serif);font-size:clamp(34px,4.1vw,53px);
+  font-weight:400;line-height:1.2;letter-spacing:.008em;
+  text-align:center;text-wrap:balance;
+}
+main .section>.section-inner>.heading>p:not(.kicker){
+  max-width:760px;margin:0 auto;
+  font-family:var(--sans);font-size:clamp(16px,1.35vw,18px);
+  font-weight:400;line-height:1.65;text-align:center;
+}
+main .section.section-light>.section-inner>.heading>p.kicker{color:#74512d}
+html[data-theme="light"] main .section>.section-inner>.heading>p.kicker{color:#74512d}
+html[data-theme="dark"] main .section:not(.section-light)>.section-inner>.heading>p.kicker{color:#e5c58c}
+main .section.final>.section-inner>h2{
+  max-width:900px;margin:10px auto 16px;
+  font-family:var(--serif);font-size:clamp(34px,4.1vw,53px);
+  line-height:1.2;font-weight:400;
+}
+main .section.final>.section-inner>p.kicker{
+  margin:0 auto;font-size:16px;line-height:1.45;letter-spacing:.095em;font-weight:400;
+}
+main .section.final>.section-inner>p:not(.kicker){
+  max-width:760px;margin:0 auto 16px;
+  font-size:clamp(16px,1.35vw,18px);line-height:1.65;
+}
+</style>
 </head>
 <body id="top">
   <a class="skip" href="#main">Skip to main content</a>
@@ -373,9 +409,9 @@ html[data-theme="light"] .department-link.developing{color:#234963;border-color:
     <section class="section section-light" id="career">
       <div class="section-inner">
         <div class="heading">
-          <p class="kicker">Career & Professional Development</p>
-          <h2>Connect advanced study to meaningful work.</h2>
-          <p>The Career Portal brings assessment, mentor interpretation, reflective exploration, professional preparation, and dynamically discovered skills resources into one contained Higher Learning workspace.</p>
+          <p class="kicker">Collegiate Campus · Career</p>
+          <h2>Career &amp; Professional Development</h2>
+          <p>Connect advanced study to meaningful work through career assessment, mentoring, professional preparation, and practical skills resources.</p>
         </div>
         <div class="career-gateway-grid">
           <article class="career-gateway-card primary">
@@ -409,9 +445,9 @@ html[data-theme="light"] .department-link.developing{color:#234963;border-color:
     <section class="section section-alt" id="student-portal">
       <div class="section-inner">
         <div class="heading">
-          <p class="kicker">Student Portal</p>
-          <h2>Your academic starting point.</h2>
-          <p>Continue with the Academy learner identity selected at Scholar Entry, then keep study level, field, term, pinned courses, and learner-owned evidence scoped to that same scholar on this device.</p>
+          <p class="kicker">Scholar Services</p>
+          <h2>Student Portal</h2>
+          <p>Your academic starting point for continuing with your Academy learner identity, study level, field, term, pinned courses, and evidence.</p>
         </div>
 
         <div class="portal-grid">
@@ -474,9 +510,9 @@ html[data-theme="light"] .department-link.developing{color:#234963;border-color:
     <section class="section" id="departments">
       <div class="section-inner">
         <div class="heading">
-          <p class="kicker">Academic Departments</p>
-          <h2>A campus designed for a complete collegiate curriculum.</h2>
-          <p>Verified departments are now shown according to their real campus state: active departments open complete learner-facing entrances, developing departments connect substantial instructional foundations still being expanded, and roadmap departments remain clearly reserved for future coordinated builds.</p>
+          <p class="kicker">Collegiate Curriculum</p>
+          <h2>Academic Departments</h2>
+          <p>Explore a complete collegiate curriculum: active departments offer live study, developing departments connect established foundations, and roadmap departments identify future pathways.</p>
         </div>
         <div class="department-grid" id="departmentGrid"></div>
       </div>
@@ -485,9 +521,9 @@ html[data-theme="light"] .department-link.developing{color:#234963;border-color:
     <section class="section section-light" id="pathways">
       <div class="section-inner">
         <div class="heading">
-          <p class="kicker">Academic Pathways</p>
-          <h2>Study deeply without forcing every learner into one route.</h2>
-          <p>The campus can support structured collegiate foundations, concentrated disciplinary study, advanced research preparation, and practical continuing education while maintaining rigorous course records.</p>
+          <p class="kicker">Flexible Study Routes</p>
+          <h2>Academic Pathways</h2>
+          <p>Study deeply at your own level through collegiate foundations, specialized disciplines, research preparation, or continuing education with rigorous course records.</p>
         </div>
         <div class="pathway-grid">
           <article class="pathway-card"><span class="department-number">01</span><h3>Undergraduate Foundations</h3><p>Build the conceptual and technical groundwork required for sustained college-level study.</p><ul><li>Prerequisite diagnostics</li><li>Complete core sequences</li><li>Projects and examinations</li></ul></article>
@@ -501,9 +537,9 @@ html[data-theme="light"] .department-link.developing{color:#234963;border-color:
     <section class="section" id="resources">
       <div class="section-inner">
         <div class="heading">
-          <p class="kicker">Campus Resource Library</p>
-          <h2>Research, professional tools, and creative practice in one shelf.</h2>
-          <p>Search the connected Verve N Veda resource network. Favorite resources remain locally on this device so students can build a personal study shelf alongside pinned courses.</p>
+          <p class="kicker">Research &amp; Creative Tools</p>
+          <h2>Campus Resource Library</h2>
+          <p>Explore research, professional tools, and creative practice in one connected library. Save favorite resources on your device alongside pinned courses.</p>
         </div>
         <div class="catalog">
           <div class="toolbar">
@@ -524,9 +560,9 @@ html[data-theme="light"] .department-link.developing{color:#234963;border-color:
     <section class="section section-dark" id="network">
       <div class="section-inner">
         <div class="heading">
-          <p class="kicker">Connected Learning Halls</p>
-          <h2>One campus inside a larger educational network.</h2>
-          <p>Higher Learning can remain scholarly and focused while students move outward to research, tools, prerequisite study, creative practice, and the wider Verve N Veda ecosystem.</p>
+          <p class="kicker">Academy Network</p>
+          <h2>Connected Learning Halls</h2>
+          <p>One campus inside a larger educational network, connecting scholarly study with research, tools, prerequisite learning, creative practice, and Verve N Veda.</p>
         </div>
         <div class="network-strip">
           <a class="network-card" href="https://vervenveda.com/"><strong>Verve N Veda</strong><span>Main network home</span></a>
@@ -540,9 +576,9 @@ html[data-theme="light"] .department-link.developing{color:#234963;border-color:
 
     <section class="section final">
       <div class="section-inner">
-        <p class="kicker">Welcome to the Collegiate Campus</p>
-        <h2>Study beyond the requirement. Build toward mastery.</h2>
-        <p>Khaemenes Higher Learning is organized to grow course by course into a broad collegiate environment where rigorous academics, research, practical tools, creativity, and independent scholarship remain connected.</p>
+        <p class="kicker">Your Next Academic Chapter</p>
+        <h2>Khaemenes Higher Learning</h2>
+        <p>Study beyond the requirement and build toward mastery through rigorous academics, research, practical tools, creativity, and independent scholarship.</p>
         <div class="actions"><a class="btn btn-primary" href="./directory/">Browse Course Directory</a><a class="btn" href="./directory/collegiate/">Collegiate Academic Review</a><a class="btn" href="#departments">Enter the Campus</a><a class="btn btn-bronze" href="./Career/index.html">Career Portal</a><a class="btn" href="./courses/index.html">Mathematics Department</a></div>
       </div>
     </section>
