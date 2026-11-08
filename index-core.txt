@@ -304,6 +304,24 @@ html[data-theme="light"] .department-card.developing{border-top-color:#587f9d}
 html[data-theme="light"] .department-status.developing{color:#385f7d;border-color:rgba(56,95,125,.24);background:#edf5fa}
 html[data-theme="light"] .department-link.developing{color:#234963;border-color:rgba(56,95,125,.24);background:#edf5fa}
 </style>
+<style id="higher-learning-even-resource-grids-20261108">
+/* Collegiate campus: balanced real-resource grids; no new cards or portal changes. */
+#departments .department-grid{grid-template-columns:repeat(5,minmax(0,1fr));align-items:stretch;gap:14px}
+#departments .department-grid>.department-card{min-width:0;height:100%}
+#resources .tool-grid{grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch;gap:16px}
+#resources .tool-grid>.tool-card{min-width:0;height:100%}
+#network .network-strip{grid-template-columns:repeat(5,minmax(0,1fr));align-items:stretch}
+#network .network-strip>.network-card{min-width:0;height:100%}
+@media(max-width:1050px){
+ #departments .department-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #network .network-strip{display:flex;flex-wrap:wrap;justify-content:center;gap:14px}
+ #network .network-strip>.network-card{flex:0 1 calc((100% - 28px)/3);min-width:200px}
+}
+@media(max-width:660px){
+ #departments .department-grid,#resources .tool-grid{grid-template-columns:1fr}
+ #network .network-strip>.network-card{flex:1 1 100%;max-width:none}
+}
+</style>
 </head>
 <body id="top">
   <a class="skip" href="#main">Skip to main content</a>
@@ -742,11 +760,11 @@ html[data-theme="light"] .department-link.developing{color:#234963;border-color:
   </script>
   <script src="./data/university-network.js"></script>
 <script src="https://vervenveda.com/assets/vnv-header-autopopulate.js"></script>
-<script>VNV_HEADER.mount({"title":"Khaemenes Higher Learning","subtitle":"Collegiate Campus · Undergraduate · Advanced · Research","icon":"HL","home":"https://vervenveda.com/Khaemenes_Academy.github.io/","actions":[{"label":"Student","href":"#student-portal"},{"label":"Departments","href":"#departments"},{"label":"Career","href":"./Career/index.html"},{"label":"Directory","href":"#higher-directory"},{"label":"Theme","href":"#theme-toggle"}]});</script>
 <script src="https://vervenveda.com/assets/vnv-333-ticker.js"></script>
 <script src="https://vervenveda.com/assets/vnv-ticker-autopopulate.js" data-vnv-ticker-autopopulate></script>
 <script>VNV_TICKER.autoPopulate({label:"Higher Learning Quick Links",max:12});</script>
-<script>VNV_HEADER.mount({"title":"Khaemenes Higher Learning","subtitle":"Collegiate Campus · Undergraduate · Advanced · Research","icon":"HL","home":"https://vervenveda.com/Khaemenes_Academy.github.io/","actions":[{"label":"Student","href":"#student-portal"},{"label":"Departments","href":"#departments"},{"label":"Career","href":"./Career/index.html"},{"label":"Directory","href":"#higher-directory"},{"label":"Theme","href":"#theme-toggle"}]});</script>
+<script>VNV_HEADER.mount({"title":"Khaemenes Higher Learning","subtitle":"Collegiate Campus · Undergraduate · Advanced · Research","icon":"K","home":"https://vervenveda.com/KhaemenesAcademy_Home.github.io/","actions":[{"label":"Student","href":"#student-portal"},{"label":"Departments","href":"#departments"},{"label":"Career","href":"./Career/index.html"},{"label":"Directory","href":"#higher-directory"},{"label":"Theme","href":"#theme-toggle"}]});</script>
+<script defer src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/vnv-language.js" data-official-vnv-language="true"></script>
 <script defer src="assets/khaemenes-academy-title-v1.js" data-khae-title-standard="v1"></script>
 </body>
 </html>
