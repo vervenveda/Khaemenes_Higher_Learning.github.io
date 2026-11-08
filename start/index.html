@@ -48,10 +48,10 @@
 </script>
 
 <script defer src="../assets/khaemenes-academy-title-v1.js" data-khae-title-standard="v1"></script>
-<script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-global-header.js" defer></script>
+<!-- Legacy Academy header retired in favor of canonical VNV header. -->
 <link rel="stylesheet" href="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-landing-toolbar.css">
 <script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/vnv-language.js" defer></script>
-<script src="https://vervenveda.com/assets/vnv-ecosystem-menu.js" defer></script>
+<!-- Ecosystem menu supplied by the canonical VNV branched header. -->
 <script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-landing-toolbar.js" defer></script>
 <style id="khae-scholar-entry-polish">
 /* Adult campus visual presentation; no course or identity logic changes. */
@@ -125,8 +125,28 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
 else begin();
 })();
 </script>
+<script src="https://vervenveda.com/assets/vnv-333-ticker.js"></script>
 <script src="https://vervenveda.com/assets/vnv-ticker-autopopulate.js" data-vnv-ticker-autopopulate></script>
 <script>VNV_TICKER.autoPopulate({label:"Scholar Entry Quick Links",max:14});</script>
+<script src="https://vervenveda.com/assets/vnv-header-autopopulate.js"></script>
+<script>
+if (window.VNV_HEADER?.mount) {
+  VNV_HEADER.mount({
+    title:"Higher Learning",
+    subtitle:"Khaemenes Academy · Scholar Entry",
+    icon:"K",
+    home:"https://vervenveda.com/KhaemenesAcademy_Home.github.io/",
+    actions:[
+      {label:"Academy Home",href:"https://vervenveda.com/KhaemenesAcademy_Home.github.io/"},
+      {label:"Student",href:"https://vervenveda.com/Khaemenes_Academy.github.io/student/"},
+      {label:"Family",href:"https://vervenveda.com/Khaemenes_Academy.github.io/family/"},
+      {label:"Higher Learning Campus",href:"https://vervenveda.com/Khaemenes_Higher_Learning.github.io/"}
+    ],
+    replaceLegacy:true,
+    legacySelectors:["header[data-khae-header]"]
+  });
+}
+</script>
 <script src="https://vervenveda.com/assets/vnv-ecosystem-toolbar.js"></script>
 </body>
 </html>
