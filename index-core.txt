@@ -731,7 +731,7 @@ main .section.final>.section-inner>p:not(.kicker){
             : `<a class="department-link ${state}" href="${item.url}">${escapeHTML(item.action||"Open Department")}</a>`;
           return `<article class="department-card ${state}" data-department-state="${state}"><span class="department-number">${item.number}</span><h3>${escapeHTML(item.title)}</h3><span class="department-status ${state}">${escapeHTML(item.status)}</span><p>${escapeHTML(item.description)}</p>${action}</article>`;
         }).join("");
-        $('[data-planned]').forEach(button=>button.addEventListener('click',()=>openPlanned(button.dataset.planned)));
+        $$('[data-planned]').forEach(button=>button.addEventListener('click',()=>openPlanned(button.dataset.planned)));
       }
 
       const plannedModal=$("plannedModal"),plannedTitle=$("plannedTitle"),plannedDescription=$("plannedDescription"),plannedList=$("plannedList");
