@@ -317,7 +317,7 @@ html[data-theme="light"] .department-link.developing{color:#234963;border-color:
 #departments .department-grid>.department-card{min-width:0;height:100%}
 #resources .tool-grid{grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch;gap:16px}
 #resources .tool-grid>.tool-card{min-width:0;height:100%}
-#network .network-strip{grid-template-columns:repeat(5,minmax(0,1fr));align-items:stretch}
+#network .network-strip{grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch}
 #network .network-strip>.network-card{min-width:0;height:100%}
 @media(max-width:1050px){
  #departments .department-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -507,6 +507,7 @@ main .section.final>.section-inner>p:not(.kicker){
               <a class="service-link" href="https://vervenveda.github.io/Arshif.github.io/"><strong>ARSHIF</strong><span>Reading, archives, and research</span></a>
               <a class="service-link" href="https://vervenveda.github.io/PLERASearch.github.io/"><strong>PLERA Search</strong><span>Research and discovery gateway</span></a>
               <a class="service-link" href="https://vervenveda.com/Khaemenes_High.github.io/"><strong>High School</strong><span>Secondary prerequisite campus</span></a>
+              <a class="service-link" href="./courses/academic-language-and-lexicology/index.html"><strong>Academic Language</strong><span>Advanced vocabulary, research &amp; scholarly writing</span></a>
             </div>
             <p class="portal-note">Campus links open verified Higher Learning and Verve N Veda destinations. Active, developing, and roadmap labels distinguish what learners can enter now from what is still being consolidated or planned.</p>
           </article>
@@ -577,6 +578,7 @@ main .section.final>.section-inner>p:not(.kicker){
           <a class="network-card" href="./Career/index.html"><strong>Career Portal</strong><span>Career assessment, mentoring, and skills</span></a>
           <a class="network-card" href="https://vervenveda.com/proresource_hub.github.io/"><strong>ProResource Hub</strong><span>Technical and professional tools</span></a>
           <a class="network-card" href="https://vervenveda.com/arcade.github.io/"><strong>Arcade</strong><span>Games, logic, and creative practice</span></a>
+          <a class="network-card" href="./Science/index.html"><strong>Science &amp; Discovery</strong><span>Scientific study and collegiate exploration</span></a>
         </div>
       </div>
     </section>
