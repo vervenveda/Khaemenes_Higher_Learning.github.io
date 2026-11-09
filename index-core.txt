@@ -486,6 +486,7 @@ main .section.final>.section-inner>p:not(.kicker){
               <button class="portal-button full" type="submit">Save Local Profile</button>
             </form>
             <div class="profile-summary" id="profileSummary" aria-live="polite">No local Higher Learning profile has been saved on this device.</div>
+            <div id="higherProfilePhotoEntry" aria-label="Optional scholar picture editor"></div>
             <div class="portal-links">
               <a href="./start/">Scholar Entry / Identity</a>
               <a href="https://vervenveda.com/Khaemenes_Academy.github.io/student/">Open Learning Compass &amp; Evidence Passport</a>
@@ -813,5 +814,16 @@ main .section.final>.section-inner>p:not(.kicker){
 <!-- The hero already has semantic h1/h2 headings; the legacy title-normalizer is not loaded on this campus. -->
 <!-- Canonical six-control ecosystem toolbar: mounted after the actual Higher Learning campus is parsed. -->
 <script src="https://vervenveda.com/assets/vnv-ecosystem-toolbar.js?v=1.0.7"></script>
+<!-- Shared Academy Picture & Colors Studio: local scholarly presentation only. -->
+<script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-yearbook-profile-images.js?v=20261109-modal-v4"></script>
+<script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-universal-profile-look-editor.js?v=20261109-swatch-yearbook-v3"></script>
+<script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-stage-photo-entry.js?v=20261109-stage-hero-v5"></script>
+<script>
+(function(){ "use strict";
+ const mount=()=>window.KhaemenesStagePhotoEntry?.create?.("higher","higherProfilePhotoEntry");
+ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",mount,{once:true});
+ else mount();
+})();
+</script>
 </body>
 </html>
