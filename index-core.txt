@@ -817,7 +817,7 @@ main .section.final>.section-inner>p:not(.kicker){
 <!-- Shared Academy Picture & Colors Studio: local scholarly presentation only. -->
 <script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-yearbook-profile-images.js?v=20261109-yearbook-popup-v2"></script>
 <script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-universal-profile-look-editor.js?v=20261109-yearbook-popup-v3"></script>
-<script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-stage-photo-entry.js?v=20261109-yearbook-popup-v3"></script>
+<script src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/khaemenes-stage-photo-entry.js?v=20261109-yearbook-popup-v4"></script>
 <script>
 (function(){ "use strict";
  const mount=()=>window.KhaemenesStagePhotoEntry?.create?.("higher","higherProfilePhotoEntry");
