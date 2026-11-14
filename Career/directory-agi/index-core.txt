@@ -36,6 +36,7 @@ summary{padding:9px 11px;cursor:pointer;font-weight:700}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:10px 0}.stat{padding:9px;border:1px solid var(--line);border-radius:7px;background:#fff;text-align:center}.stat b{display:block;font-size:20px;font-family:var(--display)}.stat span{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
 @media(max-width:1050px){#container{grid-template-columns:1fr}.scroll{max-height:360px}}
 </style>
+  <script src="/Khaemenes_Higher_Learning.github.io/assets/higher-learning-global-standard-v1.js" defer data-higher-global-standard="16-33-66-chrome"></script>
 </head>
 <body>
 <h1>Career Directory AGI</h1>

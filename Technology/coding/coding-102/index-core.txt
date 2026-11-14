@@ -50,6 +50,7 @@ h2,h3{font-family:var(--serif);color:#3b52aa}h2{margin-top:0}.hidden{display:non
 @media(max-width:860px){.module-layout{grid-template-columns:1fr}.module-side{position:static}.dashboard-grid{grid-template-columns:1fr}}@media(max-width:680px){.nav{grid-template-columns:1fr auto}.brand small{display:none}.binary-row,.weights{grid-template-columns:repeat(4,1fr)}}@media print{header,.breadcrumb,.no-print,.lesson-nav,.module-side{display:none!important}body{background:#fff}.hero{display:none}.card{box-shadow:none;border:0}.cert{display:block!important}}
 </style>
 <style id="khae-academy-title-standard">h1.khae-academy-heading{font:400 clamp(33px,5vw,53px)/1.16 "Cinzel",Georgia,serif!important;text-align:center;margin:10px auto 0!important}.khae-page-subtitle{font:400 clamp(20px,2.8vw,27px)/1.4 "Cinzel",Georgia,serif!important;text-align:center;margin:9px auto 16px;opacity:.86}</style>
+  <script src="/Khaemenes_Higher_Learning.github.io/assets/higher-learning-global-standard-v1.js" defer data-higher-global-standard="16-33-66-chrome"></script>
 </head>
 <body>
 <header><div class="shell nav"><div class="brand"><div class="logo">🧠</div><div><strong>Coding 102 — Inside the Machine</strong><small>Khaemenes Academy · Computing Systems & Networks</small></div></div><div></div><div class="header-actions"><button id="homeBtn">🏠 Hub</button><button id="exportBtn">💾 Export Progress</button></div></div></header>

@@ -42,6 +42,7 @@ a{color:inherit;text-decoration:none}button,input,select{font:inherit;color:inhe
 @media(max-width:620px){.shell{width:min(calc(100% - 22px),var(--max))}.utility-inner{flex-direction:column;justify-content:center;padding:7px 0}.brand-copy small{display:none}.hero-inner{min-height:560px;padding:58px 0 67px}h1{font-size:clamp(2.8rem,13vw,4rem)}.actions{display:grid}.btn{width:100%}.quick-inner{justify-content:flex-start}.catalog-summary,.toolbar,.course-grid,.pathway-grid,.activity-grid,.faculty-grid,.resource-grid{grid-template-columns:1fr}.toolbar .show-pinned{grid-column:auto}.profile-form{grid-template-columns:1fr}.profile-form button{grid-column:auto}.footer-inner{flex-direction:column;justify-content:center;text-align:center}.footer-nav{justify-content:center}.activity-dialog{width:100vw;height:100vh;border-radius:0}.dialog-shell{border-radius:0}.dialog-toolbar{align-items:flex-start;flex-direction:column;gap:3px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 </style>
+  <script src="/Khaemenes_Higher_Learning.github.io/assets/higher-learning-global-standard-v1.js" defer data-higher-global-standard="16-33-66-chrome"></script>
 </head>
 <body id="top">
 <a class="skip" href="#main">Skip to main content</a>

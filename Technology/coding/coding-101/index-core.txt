@@ -106,6 +106,7 @@ canvas{max-width:100%;border:1px solid var(--line);border-radius:12px;background
 @media print{header,.breadcrumb,.no-print,.lesson-nav,.module-side{display:none!important}body{background:#fff}.hero{display:none}.card{box-shadow:none;border:0}.cert{display:block!important}}
 </style>
 <style id="khae-academy-title-standard">h1.khae-academy-heading{font:400 clamp(33px,5vw,53px)/1.16 "Cinzel",Georgia,serif!important;text-align:center;margin:10px auto 0!important}.khae-page-subtitle{font:400 clamp(20px,2.8vw,27px)/1.4 "Cinzel",Georgia,serif!important;text-align:center;margin:9px auto 16px;opacity:.86}</style>
+  <script src="/Khaemenes_Higher_Learning.github.io/assets/higher-learning-global-standard-v1.js" defer data-higher-global-standard="16-33-66-chrome"></script>
 </head>
 <body>
 <header>
