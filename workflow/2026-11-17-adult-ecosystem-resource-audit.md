@@ -192,3 +192,44 @@ Replace the hard-coded Higher Learning RESOURCES catalogue with a directory-back
 - no grading/mastery mutations
 
 Then expand the Connected Learning Halls section into balanced adult ecosystem gateway cards driven by the same canonical directory.
+
+
+## Priority gateways added by review
+
+### Firmament Law
+Promote `firmament-law` — **Law & Governance Hall** — as a first-class Higher Learning civic/legal gateway. It belongs directly in:
+- Social Sciences, Law & Policy
+- Constitutional and governance studies
+- public-service and veterans pathways
+- civic research/resource filtering
+
+Firmament itself remains eligible as the broader civic gateway, while Veterans Hub · National and Veterans Hub · Florida can surface contextually within public-service pathways.
+
+### Aurora
+Aurora has multiple directory identities and should be context-filtered:
+- `aurora` — Aurora creative gateway
+- `aurora-inspiration` — creative/inspiration app
+- `mentor-aurora` — **Aurora · Restorative Wellness**
+
+For Higher Learning adult study, the restorative-wellness Aurora should be promoted in wellness, psychology/life-balance, resilience, and student-support contexts. The creative Aurora gateway remains eligible under arts/creative practice.
+
+### The Verifier
+Promote `verifier` as a first-class adult research and media-literacy gateway, with:
+- Modern News Engine
+- Global News Digest
+- Science News
+- World Wire
+
+Do **not** include Kids News Network in the default Higher Learning adult resource catalogue.
+
+### Solanar
+Promote `solanar` as a first-class environment, weather, Earth-systems, and observational-science gateway, with:
+- Solanar Live Weather
+- Solanar Planetarium
+- Solanar TraceLab
+
+Do **not** include Solanar Kids SkyLab in the default Higher Learning adult resource catalogue.
+
+## Adult default exclusion rule
+
+Directory-backed Higher Learning resources should exclude child-targeted variants by default, including records clearly marked or titled for kids, preschool, kindergarten, elementary, or child-only learning. Adult learners may still reach prerequisite material deliberately through prerequisite/review pathways, but those resources should not crowd the default adult academic shelf.
