@@ -1,0 +1,48 @@
+{
+  "schema": "khaemenes-advanced-geometric-topology-hybrid-runtime-v1",
+  "course_id": "advanced-geometric-topology",
+  "title": "Advanced Geometric Topology & Mathematical Physics",
+  "architecture": "hybrid-legacy-v2",
+  "identity": {
+    "authority": "academy-family-registry",
+    "adapter": "courses/advanced-geometric-topology/assets/identity-scope.js",
+    "learner_scoped_storage": true,
+    "legacy_migration_policy": "only-when-sole-higher-scholar"
+  },
+  "curriculum": {
+    "canonical_fallback": "courses/advanced-geometric-topology/assets/course-data.js",
+    "weeks": 36,
+    "sessions": 180,
+    "migrated_rich_modules": [
+      "W01D1"
+    ],
+    "migrated_module_source": "courses/advanced-geometric-topology/curriculum/unit-01/week-01/w01d1.js",
+    "fallback_rule": "If a rich module is absent, lesson-engine renders the corresponding legacy 180-session record and labels migration pending.",
+    "retirement_rule": "Do not archive or remove course-data.js until every one of the 180 sessions has an accepted rich-module replacement."
+  },
+  "assessment": {
+    "objective_threshold_percent": 80,
+    "objective_authority": "conceptual-threshold-only",
+    "proof_review": "required",
+    "lab_review": "required-where-assigned",
+    "corrections": "required-when-triggered",
+    "defense": "required",
+    "overall_mastery": "conceptual AND proof AND lab-if-required AND corrections-if-required AND defense"
+  },
+  "persistence": {
+    "legacy_key": "khaemenes-hl-agtgmp-progress-v1",
+    "current_key": "khaemenes-hl-agtgmp-progress-v2",
+    "storage_module": "courses/advanced-geometric-topology/assets/js/storage.js",
+    "legacy_preserved": true,
+    "v1_to_v2_migration": "supported-without-proof-approval",
+    "proof_evidence_from_legacy": "submitted-unreviewed"
+  },
+  "release_boundary": {
+    "full_v2_migration": false,
+    "current_v2_rich_session_count": 1,
+    "current_legacy_fallback_session_count": 179,
+    "source_static_status": "hybrid-contract-declared",
+    "browser_acceptance": "pending",
+    "hosted_ci": "pending"
+  }
+}
