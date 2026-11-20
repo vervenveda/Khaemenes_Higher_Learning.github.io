@@ -4,10 +4,29 @@ const cfg=window.CALC2_ASSESSMENT_CONFIG||{};
 const all=cfg.source==="diagnostic"?window.CALCULUS2_DIAGNOSTIC:window.CALCULUS2_QUESTIONS;
 const host=document.getElementById("assessmentRoot");
 if(!host||!Array.isArray(all))return;
-const KEY="khaemenes-calculus2-assessment-records-v1";
+const ROOT_KEY="khaemenes-calculus2-college-course-v1";
+const HISTORY_PREFIX="khaemenes-calculus2-assessment-records-v2";
+const LEGACY_KEY="khaemenes-calculus2-assessment-records-v1";
+function activeLearner(){
+ try{
+  const state=JSON.parse(localStorage.getItem(ROOT_KEY)||"null");
+  const learner=state?.students?.find?.(x=>x?.id===state?.activeId)||state?.students?.[0]||null;
+  return learner?.id?{id:String(learner.id),name:String(learner.name||"")}:null;
+ }catch{return null}
+}
+function key(){const learner=activeLearner();return learner?HISTORY_PREFIX+":"+encodeURIComponent(learner.id):null}
 const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-function load(){try{return JSON.parse(localStorage.getItem(KEY)||"{}")}catch{return {}}}
-function save(x){try{localStorage.setItem(KEY,JSON.stringify(x))}catch{}}
+function load(){
+ const KEY=key();if(!KEY)return {};
+ try{return JSON.parse(localStorage.getItem(KEY)||"{}")}catch{return {}}
+}
+function legacyRecords(){
+ try{return JSON.parse(localStorage.getItem(LEGACY_KEY)||"{}")}catch{return {}}
+}
+function save(x){
+ const KEY=key();if(!KEY)return false;
+ try{localStorage.setItem(KEY,JSON.stringify(x));return true}catch{return false}
+}
 function shuffle(a){const x=[...a];for(let i=x.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[x[i],x[j]]=[x[j],x[i]]}return x}
 function pool(){
  let p=[...all];
@@ -25,7 +44,7 @@ function start(){
  const token=`calc2-${Date.now()}`;
  host.innerHTML=`<article class="card"><div class="form-grid"><label>Learner name or initials<input id="assessmentLearner" maxlength="60" placeholder="Optional local label"></label><label>Pathway<select id="assessmentPathway"><option>Foundation</option><option selected>Core</option><option>Honors / Extended</option></select></label></div><p class="notice">${esc(cfg.instructions||"Answer every question. Submit once complete, review explanations, and correct missed work.")}</p></article>`+
  set.map((q,i)=>`<article class="question"><fieldset><legend>${i+1}. ${esc(q.prompt)}</legend><div class="options">${q.options.map((o,j)=>`<label class="option"><input type="radio" name="${token}-q${i}" value="${j}"><span>${esc(o)}</span></label>`).join("")}</div><div class="feedback" id="${token}-fb${i}" hidden></div></fieldset></article>`).join("")+
- `<div class="assessment-result"><button class="btn primary" id="submitAssessment" type="button">Submit &amp; Score</button><button class="btn" id="printAssessment" type="button">Print</button><p id="assessmentMessage">Best saved score: ${best()==null?"—":best()+"%"}</p></div>`;
+ `<div class="assessment-result"><button class="btn primary" id="submitAssessment" type="button">Submit &amp; Score</button><button class="btn" id="printAssessment" type="button">Print</button><p id="assessmentMessage">Best saved score: ${best()==null?"—":best()+"%"}</p><p class="notice">New attempts are saved only to the active local course learner. Older unscoped v1 history remains untouched and is not automatically reassigned.</p></div>`;
  document.getElementById("submitAssessment").addEventListener("click",()=>score(token));
  document.getElementById("printAssessment").addEventListener("click",()=>print());
 }
@@ -42,7 +61,8 @@ function score(token){
  if(!complete){document.getElementById("assessmentMessage").textContent="Answer every question before scoring.";return}
  const score=Math.round(right/set.length*100),data=records(),key=cfg.recordKey||"assessment";
  data[key]=data[key]||{title:cfg.title||key,attempts:[]};
- data[key].attempts.push({date:new Date().toISOString(),score,right,total:set.length,missed,learner:document.getElementById("assessmentLearner").value.trim(),pathway:document.getElementById("assessmentPathway").value});
+ const learner=activeLearner();
+ data[key].attempts.push({date:new Date().toISOString(),score,right,total:set.length,missed,learner:document.getElementById("assessmentLearner").value.trim(),learnerId:learner?.id||null,pathway:document.getElementById("assessmentPathway").value,source:"public-formative-practice",practicePassed:score>=80});
  save(data);
  document.getElementById("assessmentMessage").innerHTML=`<span class="score">${score}%</span> · ${right}/${set.length} · Best ${Math.max(...data[key].attempts.map(x=>x.score))}%`;
  document.getElementById("submitAssessment").disabled=true;
