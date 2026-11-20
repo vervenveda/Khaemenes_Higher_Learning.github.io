@@ -12,7 +12,8 @@
     "identity_boundary": "Academy learner identity and course-local learner identity are distinct unless explicitly bound; name similarity is not sufficient.",
     "historical_records": "Do not overwrite or silently reattribute existing attempts.",
     "high_school_return": "Precalculus and Calculus I may export read-only evidence receipts. High School import remains uncertified until the receiving contract is implemented and tested.",
-    "college_core_progression": "Calculus II, Linear Algebra, and Differential Equations form a flexible college-core cluster. Recommendations guide readiness but do not create automatic locks."
+    "college_core_progression": "Calculus II, Linear Algebra, and Differential Equations form a flexible college-core cluster. Recommendations guide readiness but do not create automatic locks.",
+    "proof_sequence": "Proof-based courses require evaluator-reviewed written proof evidence. Objective/browser practice may support learning but cannot compensate for an unmet proof-review requirement."
   },
   "courses": [
     {
@@ -296,7 +297,7 @@
       "units": 13,
       "mastery_target": 80,
       "storage_key": "khaemenes-introduction-to-proofs-course-v1",
-      "assessment_key": "khaemenes-introduction-to-proofs-assessment-v1",
+      "assessment_key": "khaemenes-introduction-to-proofs-assessment-v2",
       "prerequisite": "Algebra fluency and willingness to read and write mathematical arguments. Calculus or Discrete Mathematics is recommended but not required.",
       "authority": {
         "diagnostic": {
@@ -304,7 +305,7 @@
           "status": "declared"
         },
         "weekly": {
-          "owner": "courses/introduction-to-proofs/assets/app.js",
+          "owner": "courses/introduction-to-proofs/assets/app-core.js",
           "status": "declared"
         },
         "midterm": {
@@ -322,10 +323,34 @@
         "completion": {
           "owner": "courses/introduction-to-proofs/records/course-completion-certificate.html",
           "status": "evaluator-review"
+        },
+        "proof_review": {
+          "owner": "qualified-evaluator/faculty",
+          "status": "required-evaluator-review"
         }
       },
       "return_record": {
-        "status": "higher-learning-internal; no high-school return required"
+        "exporter": "courses/shared/higher-math-evidence-receipt-v1.js",
+        "status": "read-only mathematics evidence receipt; proof review remains separately authoritative"
+      },
+      "progression": {
+        "prerequisite_courses": [],
+        "prerequisite_description": "Algebra fluency and readiness to read/write mathematical arguments; Calculus or Discrete Mathematics recommended.",
+        "recommended_next": [
+          "abstract-algebra",
+          "real-complex-analysis",
+          "topology-differential-geometry"
+        ]
+      },
+      "legacy_assessment_key": "khaemenes-introduction-to-proofs-assessment-v1",
+      "assessment_scope": "local-course-learner",
+      "proof_mastery_contract": {
+        "required": true,
+        "threshold_percent": 80,
+        "objective_practice_authority": "formative-only",
+        "written_proof_review": "required-evaluator-review",
+        "noncompensatory": true,
+        "rule": "Written proof portfolio and evaluator-reviewed proof defense are noncompensatory completion requirements. Browser-scored objective practice cannot satisfy proof mastery."
       }
     },
     {
@@ -451,7 +476,7 @@
       "units": 13,
       "mastery_target": 80,
       "storage_key": "khaemenes-abstract-algebra-course-v1",
-      "assessment_key": "khaemenes-abstract-algebra-assessment-v1",
+      "assessment_key": "khaemenes-abstract-algebra-assessment-v2",
       "prerequisite": "Introduction to Proofs or equivalent proof fluency is required. Linear Algebra and Discrete Mathematics are strongly recommended; number-theory familiarity is helpful",
       "authority": {
         "diagnostic": {
@@ -459,7 +484,7 @@
           "status": "declared"
         },
         "weekly": {
-          "owner": "courses/abstract-algebra/assets/app.js",
+          "owner": "courses/abstract-algebra/assets/app-core.js",
           "status": "declared"
         },
         "midterm": {
@@ -477,10 +502,38 @@
         "completion": {
           "owner": "courses/abstract-algebra/records/course-completion-certificate.html",
           "status": "evaluator-review"
+        },
+        "proof_review": {
+          "owner": "qualified-evaluator/faculty",
+          "status": "required-evaluator-review"
         }
       },
       "return_record": {
-        "status": "higher-learning-internal; no high-school return required"
+        "exporter": "courses/shared/higher-math-evidence-receipt-v1.js",
+        "status": "read-only mathematics evidence receipt; proof review remains separately authoritative"
+      },
+      "progression": {
+        "prerequisite_courses": [
+          "introduction-to-proofs"
+        ],
+        "concurrent_or_supporting": [
+          "linear-algebra",
+          "discrete-mathematics"
+        ],
+        "recommended_next": [
+          "topology-differential-geometry",
+          "advanced-geometric-topology"
+        ]
+      },
+      "legacy_assessment_key": "khaemenes-abstract-algebra-assessment-v1",
+      "assessment_scope": "local-course-learner",
+      "proof_mastery_contract": {
+        "required": true,
+        "threshold_percent": 80,
+        "objective_practice_authority": "formative-only",
+        "written_proof_review": "required-evaluator-review",
+        "noncompensatory": true,
+        "rule": "Evaluator-reviewed written proofs of algebraic structure, homomorphism/isomorphism reasoning, and theorem application are noncompensatory completion requirements."
       }
     },
     {
@@ -497,7 +550,7 @@
       "units": 13,
       "mastery_target": 80,
       "storage_key": "khaemenes-real-complex-analysis-course-v1",
-      "assessment_key": "khaemenes-real-complex-analysis-assessment-v1",
+      "assessment_key": "khaemenes-real-complex-analysis-assessment-v2",
       "prerequisite": "A completed Introduction to Proofs course or equivalent proof fluency, single-variable calculus, and mathematical maturity. Linear algebra is strongly recommended.",
       "authority": {
         "diagnostic": {
@@ -505,7 +558,7 @@
           "status": "declared"
         },
         "weekly": {
-          "owner": "courses/real-complex-analysis/assets/app.js",
+          "owner": "courses/real-complex-analysis/assets/app-core.js",
           "status": "declared"
         },
         "midterm": {
@@ -523,10 +576,38 @@
         "completion": {
           "owner": "courses/real-complex-analysis/records/course-completion-certificate.html",
           "status": "evaluator-review"
+        },
+        "proof_review": {
+          "owner": "qualified-evaluator/faculty",
+          "status": "required-evaluator-review"
         }
       },
       "return_record": {
-        "status": "higher-learning-internal; no high-school return required"
+        "exporter": "courses/shared/higher-math-evidence-receipt-v1.js",
+        "status": "read-only mathematics evidence receipt; proof review remains separately authoritative"
+      },
+      "progression": {
+        "prerequisite_courses": [
+          "introduction-to-proofs"
+        ],
+        "concurrent_or_supporting": [
+          "linear-algebra",
+          "calculus-ii"
+        ],
+        "recommended_next": [
+          "topology-differential-geometry",
+          "advanced-geometric-topology"
+        ]
+      },
+      "legacy_assessment_key": "khaemenes-real-complex-analysis-assessment-v1",
+      "assessment_scope": "local-course-learner",
+      "proof_mastery_contract": {
+        "required": true,
+        "threshold_percent": 80,
+        "objective_practice_authority": "formative-only",
+        "written_proof_review": "required-evaluator-review",
+        "noncompensatory": true,
+        "rule": "Evaluator-reviewed epsilon/limit, convergence, continuity, analytic-function, and theorem-based proof evidence is a noncompensatory completion requirement."
       }
     },
     {
