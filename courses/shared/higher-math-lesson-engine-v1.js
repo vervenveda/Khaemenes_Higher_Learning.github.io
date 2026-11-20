@@ -33,6 +33,8 @@ function navUrl(item){return "math-lesson.html?lesson="+encodeURIComponent(item.
 function storeNote(id,text){try{localStorage.setItem("khaemenes-higher-math-engine-note:"+courseId+":"+id,text)}catch{}}
 function readNote(id){try{return localStorage.getItem("khaemenes-higher-math-engine-note:"+courseId+":"+id)||""}catch{return""}}
 async function render(){
+ const access=await window.KhaemenesHigherMathClassEntry?.requireAccess?.();
+ if(!access)return;
  const data=hybrid?await loadHybrid():await loadFull(),l=data.lesson,prev=data.lessons[data.idx-1],next=data.lessons[data.idx+1],src=await sourceHTML(data);
  document.title=l.title+" · "+data.title+" · Khaemenes Higher Learning";
  document.body.dataset.lesson=l.id;
