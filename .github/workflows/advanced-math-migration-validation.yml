@@ -15,6 +15,7 @@ on:
       - 'tools/validate-calculus1-higher-math-engine-wiring.mjs'
       - 'tools/validate-calculus2-higher-math-engine-wiring.mjs'
       - 'tools/validate-differential-equations-higher-math-engine-wiring.mjs'
+      - 'tools/validate-linear-algebra-higher-math-engine-wiring.mjs'
       - 'tools/validate-higher-math-execution-matrix.mjs'
       - 'courses/advanced-geometric-topology/**'
       - 'courses/topology-differential-geometry/**'
@@ -22,6 +23,7 @@ on:
       - 'courses/abstract-algebra/**'
       - 'courses/statistics/**'
       - 'courses/linear-algebra/**'
+      - 'tools/validate-linear-algebra-higher-math-engine-wiring.mjs'
       - 'courses/introduction-to-proofs/**'
       - 'courses/discrete-mathematics/**'
       - 'courses/differential-equations/**'
@@ -77,3 +79,5 @@ jobs:
         run: node tools/validate-calculus2-higher-math-engine-wiring.mjs
       - name: Validate Differential Equations lesson-to-engine wiring
         run: node tools/validate-differential-equations-higher-math-engine-wiring.mjs
+      - name: Validate Linear Algebra lesson-to-engine wiring
+        run: node tools/validate-linear-algebra-higher-math-engine-wiring.mjs
