@@ -1,6 +1,8 @@
 # Higher Learning Profile Integration
 
 - Course ID: `precalculus-trigonometry`
+- Assessment key: `khaemenes-precalculus-trigonometry-assessment-records-v2:<localLearnerId>`
+- Legacy unscoped assessment key retained read-only: `khaemenes-precalculus-trigonometry-assessment-records-v1`
 - Course code: `KH-MATH-PCT`
 - Shared pin key: `khaemenes-higher-learning-pinned-courses-v1`
 - Higher Learning learner-scoped pin storage: `khaemenes.higher.pins:<learnerId>`
