@@ -29,6 +29,17 @@ function save(value){
  if(!KEY)return false;
  try{localStorage.setItem(KEY,JSON.stringify(value));return true}catch(e){return false}
 }
+function publishReadinessCompatibility(record){
+ if(cfg.recordKey!=="diagnostic"||!record)return false;
+ var contract=window.KhaemenesCourseEntryContract,profile=contract&&contract.readAcademyProfile?contract.readAcademyProfile():null;
+ if(!contract||!contract.writeJSON||!profile||!profile.learnerId)return false;
+ try{
+  return contract.writeJSON(READINESS_COMPAT_KEY,{diagnostic:{title:cfg.title||"Calculus I Readiness Diagnostic",attempts:[{
+   date:record.date,score:record.score,right:record.right,total:record.total,learnerId:profile.learnerId,
+   source:"readiness-compatibility-summary-v1",practicePassed:record.practicePassed===true
+  }]}},profile)!==false;
+ }catch(e){return false}
+}
 function shuffle(a){
  var out=a.slice();
  for(var i=out.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=out[i];out[i]=out[j];out[j]=t}
@@ -135,6 +146,7 @@ function score(){
  records[key].attempts.push(attempt);
  records[key].attempts=records[key].attempts.slice(-HISTORY_LIMIT);
  var saved=save(records);
+ publishReadinessCompatibility(attempt);
  submitted=true;
  document.querySelectorAll('input[name^="'+attemptToken+'-"]').forEach(function(input){input.disabled=true});
  var btn=document.getElementById("submitAssessment");if(btn)btn.disabled=true;
