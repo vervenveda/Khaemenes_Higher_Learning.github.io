@@ -11,7 +11,8 @@
     "public_assessment_boundary": "Public/browser-local assessment forms are evidence or formative practice unless evaluator/faculty review says otherwise.",
     "identity_boundary": "Academy learner identity and course-local learner identity are distinct unless explicitly bound; name similarity is not sufficient.",
     "historical_records": "Do not overwrite or silently reattribute existing attempts.",
-    "high_school_return": "Precalculus and Calculus I may export read-only evidence receipts. High School import remains uncertified until the receiving contract is implemented and tested."
+    "high_school_return": "Precalculus and Calculus I may export read-only evidence receipts. High School import remains uncertified until the receiving contract is implemented and tested.",
+    "college_core_progression": "Calculus II, Linear Algebra, and Differential Equations form a flexible college-core cluster. Recommendations guide readiness but do not create automatic locks."
   },
   "courses": [
     {
@@ -124,7 +125,7 @@
       "units": 13,
       "mastery_target": 80,
       "storage_key": "khaemenes-calculus2-college-course-v1",
-      "assessment_key": "khaemenes-calculus2-assessment-records-v1",
+      "assessment_key": "khaemenes-calculus2-assessment-records-v2",
       "prerequisite": "Calculus I with fluent algebra, trigonometry, differentiation, definite integration, substitution, and mathematical communication",
       "authority": {
         "diagnostic": {
@@ -132,7 +133,7 @@
           "status": "declared"
         },
         "weekly": {
-          "owner": "courses/calculus-ii/assets/app.js",
+          "owner": "courses/calculus-ii/assets/app-core.js",
           "status": "declared"
         },
         "midterm": {
@@ -153,8 +154,23 @@
         }
       },
       "return_record": {
-        "status": "higher-learning-internal; no high-school return required"
-      }
+        "exporter": "courses/shared/higher-math-evidence-receipt-v1.js",
+        "status": "read-only mathematics evidence receipt; internal/portable evidence only"
+      },
+      "progression": {
+        "prerequisite_courses": [
+          "calculus-i"
+        ],
+        "concurrent_or_supporting": [
+          "linear-algebra"
+        ],
+        "recommended_next": [
+          "differential-equations",
+          "real-complex-analysis"
+        ]
+      },
+      "legacy_assessment_key": "khaemenes-calculus2-assessment-records-v1",
+      "assessment_scope": "local-course-learner"
     },
     {
       "id": "differential-equations",
@@ -170,7 +186,7 @@
       "units": 13,
       "mastery_target": 80,
       "storage_key": "khaemenes-differential-equations-college-course-v1",
-      "assessment_key": "khaemenes-differential-equations-assessment-records-v1",
+      "assessment_key": "khaemenes-differential-equations-assessment-records-v2",
       "prerequisite": "Calculus I fluency in derivatives and integrals is required. Calculus II topics, complex numbers, and basic differential equations are developed or refreshed as needed.",
       "authority": {
         "diagnostic": {
@@ -178,7 +194,7 @@
           "status": "declared"
         },
         "weekly": {
-          "owner": "courses/differential-equations/assets/app.js",
+          "owner": "courses/differential-equations/assets/app-core.js",
           "status": "declared"
         },
         "midterm": {
@@ -199,8 +215,26 @@
         }
       },
       "return_record": {
-        "status": "higher-learning-internal; no high-school return required"
-      }
+        "exporter": "courses/shared/higher-math-evidence-receipt-v1.js",
+        "status": "read-only mathematics evidence receipt; internal/portable evidence only"
+      },
+      "progression": {
+        "prerequisite_courses": [
+          "calculus-i"
+        ],
+        "recommended_preparation": [
+          "calculus-ii",
+          "linear-algebra"
+        ],
+        "concurrent_or_supporting": [
+          "linear-algebra"
+        ],
+        "recommended_next": [
+          "real-complex-analysis"
+        ]
+      },
+      "legacy_assessment_key": "khaemenes-differential-equations-assessment-records-v1",
+      "assessment_scope": "local-course-learner"
     },
     {
       "id": "discrete-mathematics",
@@ -308,7 +342,7 @@
       "units": 13,
       "mastery_target": 80,
       "storage_key": "khaemenes-linear-algebra-college-course-v1",
-      "assessment_key": "khaemenes-linear-algebra-assessment-records-v1",
+      "assessment_key": "khaemenes-linear-algebra-assessment-records-v2",
       "prerequisite": "Fluent high-school algebra and mathematical notation. Calculus is helpful for selected applications but is not required for the core course.",
       "authority": {
         "diagnostic": {
@@ -316,7 +350,7 @@
           "status": "declared"
         },
         "weekly": {
-          "owner": "courses/linear-algebra/assets/app.js",
+          "owner": "courses/linear-algebra/assets/app-core.js",
           "status": "declared"
         },
         "midterm": {
@@ -337,8 +371,25 @@
         }
       },
       "return_record": {
-        "status": "higher-learning-internal; no high-school return required"
-      }
+        "exporter": "courses/shared/higher-math-evidence-receipt-v1.js",
+        "status": "read-only mathematics evidence receipt; internal/portable evidence only"
+      },
+      "progression": {
+        "prerequisite_courses": [],
+        "prerequisite_description": "Strong algebraic fluency and mathematical communication; may be taken alongside Calculus II.",
+        "concurrent_or_supporting": [
+          "calculus-ii",
+          "differential-equations",
+          "introduction-to-proofs"
+        ],
+        "recommended_next": [
+          "differential-equations",
+          "abstract-algebra",
+          "topology-differential-geometry"
+        ]
+      },
+      "legacy_assessment_key": "khaemenes-linear-algebra-assessment-records-v1",
+      "assessment_scope": "local-course-learner"
     },
     {
       "id": "statistics",
