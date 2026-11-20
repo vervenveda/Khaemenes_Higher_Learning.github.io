@@ -12,6 +12,7 @@ on:
       - 'tools/validate-higher-math-landing-engine-rollout.mjs'
       - 'tools/validate-higher-learning-clean-course-navigation.mjs'
       - 'tools/validate-precalculus-higher-math-engine-wiring.mjs'
+      - 'tools/validate-calculus1-higher-math-engine-wiring.mjs'
       - 'tools/validate-higher-math-execution-matrix.mjs'
       - 'courses/advanced-geometric-topology/**'
       - 'courses/topology-differential-geometry/**'
@@ -65,3 +66,5 @@ jobs:
         run: node tools/validate-higher-learning-clean-course-navigation.mjs
       - name: Validate Precalculus lesson-to-engine wiring
         run: node tools/validate-precalculus-higher-math-engine-wiring.mjs
+      - name: Validate Calculus I lesson-to-engine wiring
+        run: node tools/validate-calculus1-higher-math-engine-wiring.mjs
