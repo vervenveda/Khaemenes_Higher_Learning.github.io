@@ -365,7 +365,32 @@ main .section.final>.section-inner>p:not(.kicker){
   font-size:clamp(16px,1.35vw,18px);line-height:1.65;
 }
 </style>
-  <script src="/Khaemenes_Higher_Learning.github.io/assets/higher-learning-global-standard-v1.js" defer data-higher-global-standard="16-33-66-chrome"></script>
+<style id="higher-learning-canonical-landing-contract">
+:root{--ticker-height:33px;--vnv-autopopulate-ticker-height:33px;--radius:7px!important;--control:7px!important}
+body > #vnvTickerAutoPopulate{top:var(--ticker-height,33px)!important}
+body > #vnvHeaderAutoPopulate{top:calc(var(--ticker-height,33px) + var(--vnv-autopopulate-ticker-height,33px))!important}
+.higher-canonical-hero{min-height:auto!important;padding:66px 24px!important;background:#243038!important;color:#fff8e9!important;border-bottom:1px solid #b48b45!important}
+.higher-canonical-hero .hero-inner{min-height:auto!important;padding:0!important}
+.higher-canonical-hero .hero-copy{width:min(100%,980px)!important;margin:auto!important;display:grid!important;justify-items:center!important;gap:14px!important}
+.higher-canonical-hero .higher-academy-label{margin:0!important;color:#fff8e9!important;font:400 33px/1.15 Cinzel,Georgia,serif!important}
+.higher-canonical-hero h1{margin:0!important;color:#fff8e9!important;font:400 66px/1.05 Cinzel,Georgia,serif!important;white-space:normal!important}
+.higher-canonical-hero .tag{margin:0!important;color:#fff8e9!important;font:400 24px/1.35 "Brandon Grotesque",Montserrat,Arial,sans-serif!important;letter-spacing:.015em!important}
+.higher-canonical-hero .lead{max-width:760px!important;margin:7px auto 0!important;color:#e8dfcf!important;font-size:16px!important;line-height:1.65!important}
+.higher-access-actions{width:min(100%,760px)!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:11px!important;margin:18px auto 0!important}
+.higher-access-actions .btn{box-sizing:border-box!important;width:100%!important;min-height:48px!important;margin:0!important;padding:11px 14px!important;border:1px solid #fff8e9!important;border-radius:7px!important;background:#fff8e9!important;color:#243038!important;font:400 16px/1.3 "Brandon Grotesque",Montserrat,Arial,sans-serif!important;text-transform:none!important;letter-spacing:0!important}
+.higher-access-actions .btn:first-child{background:#243038!important;color:#fff8e9!important}
+.higher-about{background:#fff8e9!important;color:#243038!important}
+.higher-about .heading{max-width:820px!important;margin:0 auto 28px!important}
+.higher-about .heading .kicker{color:#76572d!important;font:400 24px/1.2 Cinzel,Georgia,serif!important}
+.higher-about .heading h2{color:#243038!important;font:400 33px/1.25 Cinzel,Georgia,serif!important}
+.higher-about .heading p:last-child{max-width:760px!important;margin:14px auto 0!important;color:#46534e!important;font-size:16px!important}
+.higher-feature-grid{width:min(100%,980px);margin:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:stretch}
+.higher-feature-card{min-height:190px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;border:1px solid #243038;border-radius:7px;background:#fff;color:#243038;text-align:center}
+.higher-feature-card span{color:#76572d;font:400 16px/1 Cinzel,Georgia,serif}.higher-feature-card h3{margin:9px 0 7px;color:#243038;font:400 24px/1.2 Cinzel,Georgia,serif}.higher-feature-card p{max-width:360px;margin:0;color:#46534e;font-size:16px;line-height:1.55}
+footer{background:#243038!important;color:#fff8e9!important;text-align:center!important}footer .footer-inner{grid-template-columns:1fr!important;justify-items:center!important;text-align:center!important}footer .footer-links{justify-content:center!important}
+:where(.portal-card,.career-gateway-card,.department-card,.pathway-card,.resource-card,.network-card,.service-link,.profile-summary,.field,.portal-button,.btn,.modal-card,.drawer-search,.menu-link,.higher-feature-card){border-radius:7px!important}
+@media(max-width:720px){.higher-access-actions,.higher-feature-grid{grid-template-columns:1fr}.higher-canonical-hero h1{font-size:clamp(48px,15vw,66px)!important}.higher-canonical-hero .higher-academy-label{font-size:clamp(24px,8vw,33px)!important}.higher-canonical-hero .tag{font-size:clamp(20px,6vw,24px)!important}}
+</style>
 </head>
 <body id="top">
   <a class="skip" href="#main">Skip to main content</a>
@@ -388,28 +413,34 @@ main .section.final>.section-inner>p:not(.kicker){
   </div>
 
   <main id="main">
-    <section class="hero">
+    <section class="hero higher-canonical-hero" aria-labelledby="higherHeroTitle">
       <div class="shell hero-inner">
         <div class="hero-copy">
-          <span class="campus-mark">HL</span>
-          <p class="eyebrow">Verve N Veda Educational Network</p>
-          <h1>Khaemenes Academy</h1><h2 class="khae-page-subtitle">Higher Learning</h2>
+          <p class="higher-academy-label">Khaemenes Academy</p>
+          <h1 id="higherHeroTitle">Higher Learning</h1>
           <p class="tag">Collegiate Campus · Undergraduate · Advanced · Research</p>
-          <p class="lead">A scholarly, independent higher-learning campus designed to grow into a complete collegiate curriculum—connecting rigorous courses, career development, research, professional tools, student records, creative study, and advanced pathways in one organized academic environment.</p>
-          <div class="actions">
-            <a class="btn btn-primary" href="#departments">Academic Departments</a>
-            <a class="btn" href="./directory/">Browse Full Course Directory</a>
-            <a class="btn career-cta" href="./Career/index.html">Career Portal</a>
-            <a class="btn" href="./courses/index.html">Mathematics</a>
-            <a class="btn btn-bronze" href="./start/">Scholar Entry</a>
-            <a class="btn" href="#student-portal">Student Profile</a>
-          </div>
-          <div class="hero-stat-grid" aria-label="Higher Learning overview">
-            <div class="hero-stat"><strong>Collegiate Curriculum</strong><span>Undergraduate, advanced, interdisciplinary, and lifelong-learning pathways.</span></div>
-            <div class="hero-stat"><strong>12 Math Entrances</strong><span>From Precalculus and Calculus I bridges through advanced geometric topology and mathematical physics.</span></div>
-            <div class="hero-stat"><strong>5 Active Departments</strong><span>Mathematics, Science, Law & Civic Studies, Career, and Foundational/GED entrances are available now.</span></div>
-            <div class="hero-stat"><strong>Scholar Continuity</strong><span>Academy learner identity stays canonical while Higher Learning keeps learner-scoped study preferences, pins, and evidence.</span></div>
-          </div>
+          <p class="lead">A scholarly higher-learning campus connecting rigorous coursework, research, career development, professional tools, and independent study in one organized academic environment.</p>
+          <nav class="actions higher-access-actions" aria-label="Higher Learning access">
+            <a class="btn btn-primary" href="https://vervenveda.com/Khaemenes_Academy.github.io/student/">Learner Profile</a>
+            <a class="btn" href="https://vervenveda.com/Khaemenes_Academy.github.io/family/">Parent Profile</a>
+            <a class="btn btn-bronze" href="https://vervenveda.com/Khaemenes_Academy.github.io/family/enroll/">Enrollment</a>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light higher-about" aria-labelledby="aboutHigherTitle">
+      <div class="section-inner">
+        <div class="heading">
+          <p class="kicker">About Higher Learning</p>
+          <h2 id="aboutHigherTitle">Advanced study with clear academic pathways.</h2>
+          <p>Khaemenes Higher Learning brings collegiate coursework, research preparation, professional development, learner-scoped academic preferences, and connected Academy resources into one organized campus.</p>
+        </div>
+        <div class="higher-feature-grid" aria-label="Higher Learning features">
+          <article class="higher-feature-card"><span>01</span><h3>Collegiate Study</h3><p>Undergraduate, advanced, interdisciplinary, and continuing-learning pathways organized by department and field.</p></article>
+          <article class="higher-feature-card"><span>02</span><h3>Research & Evidence</h3><p>Source work, inquiry, proof, academic language, laboratory study, and evidence-centered scholarship.</p></article>
+          <article class="higher-feature-card"><span>03</span><h3>Career Development</h3><p>Career assessment, professional skills, mentoring, portfolios, and practical tools connect study to meaningful work.</p></article>
+          <article class="higher-feature-card"><span>04</span><h3>Scholar Continuity</h3><p>Academy learner identity stays authoritative while Higher Learning keeps only learner-scoped study preferences, pins, and evidence.</p></article>
         </div>
       </div>
     </section>
@@ -810,8 +841,13 @@ main .section.final>.section-inner>p:not(.kicker){
 <script src="https://vervenveda.com/assets/vnv-333-ticker.js"></script>
 <script src="https://vervenveda.com/assets/vnv-ticker-autopopulate.js" data-vnv-ticker-autopopulate></script>
 <script>VNV_TICKER.autoPopulate({label:"Higher Learning Quick Links",max:12});</script>
-<script>VNV_HEADER.mount({"title":"Khaemenes Higher Learning","subtitle":"Collegiate Campus · Undergraduate · Advanced · Research","icon":"K","home":"https://vervenveda.com/KhaemenesAcademy_Home.github.io/","actions":[{"label":"Student","href":"#student-portal"},{"label":"Departments","href":"#departments"},{"label":"Career","href":"./Career/index.html"},{"label":"Directory","href":"#higher-directory"},{"label":"Theme","href":"#theme-toggle"}]});</script>
-<script defer src="https://vervenveda.com/Khaemenes_Academy.github.io/assets/vnv-language.js" data-official-vnv-language="true"></script>
+<script>VNV_HEADER.mount({"title":"Khaemenes Academy","subtitle":"Higher Learning · Collegiate Campus","icon":"K","home":"https://vervenveda.com/Khaemenes_Academy.github.io/","actions":[]});</script>
+<script src="https://vervenveda.com/assets/khaemenes-campus-phrases.js" defer></script>
+<script src="https://vervenveda.com/assets/khaemenes-interlingual-core.js" defer></script>
+<script src="https://vervenveda.com/Khaemenes_Linguistics.github.io/assets/khaemenes-translator-loader.js?v=1.1.1" defer></script>
+<script defer src="https://vervenveda.com/assets/vnv-language.js?v=20261108-cream-buttons" data-official-vnv-language="true"></script>
+<script src="./assets/higher-learning-landing-class-tools-v1.js" defer data-higher-learning-class-tools="v1"></script>
+<script src="https://vervenveda.com/assets/vnv-class-tools-toolbar.js?v=1.6.1" defer data-vnv-class-tools="higher-learning-landing"></script>
 <!-- The hero already has semantic h1/h2 headings; the legacy title-normalizer is not loaded on this campus. -->
 <!-- Canonical six-control ecosystem toolbar: mounted after the actual Higher Learning campus is parsed. -->
 <script src="https://vervenveda.com/assets/vnv-ecosystem-toolbar.js?v=1.0.7"></script>
