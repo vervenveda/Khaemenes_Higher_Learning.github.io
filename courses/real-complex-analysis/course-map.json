@@ -16,7 +16,7 @@
       "Research / Graduate"
     ],
     "storage_key": "khaemenes-real-complex-analysis-course-v1",
-    "assessment_key": "khaemenes-real-complex-analysis-assessment-v1",
+    "assessment_key": "khaemenes-real-complex-analysis-assessment-v2",
     "pin_key": "khaemenes-higher-learning-pinned-courses-v1",
     "audience": "Advanced undergraduates, graduate-preparatory learners, and independent researchers entering analysis, mathematical physics, PDE, probability, or complex variables.",
     "prerequisite": "A completed Introduction to Proofs course or equivalent proof fluency, single-variable calculus, and mathematical maturity. Linear algebra is strongly recommended.",
@@ -24,7 +24,18 @@
     "cad": "https://vervenveda.com/proresource_hub.github.io/Protools/Ohmic_CAD_Studio.html",
     "arcade": "https://vervenveda.com/arcade.github.io/",
     "version": "1.0.0",
-    "credit_guidance": "An advanced upper-level and graduate-preparatory sequence with selected beginning-graduate topics. It is not represented as a replacement for a university graduate qualifying sequence."
+    "credit_guidance": "An advanced upper-level and graduate-preparatory sequence with selected beginning-graduate topics. It is not represented as a replacement for a university graduate qualifying sequence.",
+    "legacy_assessment_key": "khaemenes-real-complex-analysis-assessment-v1",
+    "assessment_scope": "local-course-learner",
+    "assessment_history_policy": "New browser attempts write to learner-scoped v2 history; legacy v1 history is preserved and never silently reassigned.",
+    "proof_mastery_contract": {
+      "required": true,
+      "threshold_percent": 80,
+      "objective_practice_authority": "formative-only",
+      "written_proof_review": "required-evaluator-review",
+      "noncompensatory": true,
+      "rule": "Evaluator-reviewed epsilon/limit, convergence, continuity, analytic-function, and theorem-based proof evidence is a noncompensatory completion requirement."
+    }
   },
   "units": [
     {
