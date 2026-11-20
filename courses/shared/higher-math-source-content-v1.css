@@ -52,3 +52,24 @@
 .khm-source .worksheet-footer{margin-top:16px;padding-top:12px;border-top:1px solid var(--hm-soft);color:var(--hm-muted)}
 .khm-source .record-actions{display:flex;gap:8px;flex-wrap:wrap}
 @media(max-width:760px){.khm-source .concept-grid-college,.khm-source .worked-grid,.khm-source .quick-check-grid{grid-template-columns:1fr}}
+
+
+/* Differential Equations source-content bridge */
+.khm-source .lesson-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,.34fr);gap:18px;align-items:start}
+.khm-source .lesson-side{display:grid;gap:14px}
+.khm-source .lesson-section,.khm-source .section,.khm-source .reflection-card,.khm-source .reveal-box{padding:20px;border:1px solid var(--hm-soft);border-radius:7px;background:#fff}
+.khm-source .pathway-grid,.khm-source .quick-check-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.khm-source .pathway,.khm-source .proof-step,.khm-source .question{padding:16px;border:1px solid var(--hm-soft);border-radius:7px;background:#fff}
+.khm-source .pathway h3,.khm-source .proof-step h3,.khm-source .question h3{margin-top:0;font-family:Cinzel,Georgia,serif;font-weight:400}
+.khm-source .formula{padding:8px 11px;border:1px solid var(--hm-line);border-radius:7px;background:#fff;color:#6d521e;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.khm-source .options{display:grid;gap:8px;margin-top:10px}
+.khm-source .option{padding:10px 12px;border:1px solid var(--hm-line);border-radius:7px;background:#fff}
+.khm-source .interactive-answer{margin-top:10px;padding:11px;border-left:3px solid var(--hm-teal);border-radius:7px;background:#f7fbfa}
+.khm-source .reveal-box{border-left:4px solid var(--hm-purple)}
+.khm-source .checklist{display:grid;gap:8px;padding-left:22px}
+.khm-source .worksheet-sheet{margin-top:22px;padding:28px;border:1px solid var(--hm-line);border-radius:7px;background:#fff}
+.khm-source .worksheet-header{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;padding-bottom:14px;border-bottom:2px solid var(--hm-purple)}
+.khm-source .worksheet-problems{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border:2px solid var(--hm-purple);margin-top:18px}
+.khm-source .stage-nav{display:flex;gap:8px;flex-wrap:wrap}
+.khm-source .progress{min-height:8px;border-radius:7px;background:var(--hm-soft)}
+@media(max-width:900px){.khm-source .lesson-layout{grid-template-columns:1fr}.khm-source .pathway-grid,.khm-source .quick-check-grid,.khm-source .worksheet-problems{grid-template-columns:1fr}}
