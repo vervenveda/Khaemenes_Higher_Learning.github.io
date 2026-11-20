@@ -26,3 +26,11 @@
 .khm-source .model-table{width:100%;border-collapse:collapse}.khm-source .model-table th,.khm-source .model-table td{padding:9px;border:1px solid var(--hm-soft)}
 @media(max-width:920px){.khm-source .worksheet-grid{grid-template-columns:1fr}.khm-source .problem-box,.khm-source .problem-box:nth-child(2n){border-right:0;border-bottom:1px solid var(--hm-purple)}.khm-source .problem-box:last-child{border-bottom:0}.khm-source .name-date{grid-template-columns:1fr}}
 @media print{.khm-source .visual-card:not(.print-sheet){display:none!important}.khm-source .print-sheet{display:block!important;border:0!important;padding:0!important}.khm-source .worksheet-grid{grid-template-columns:1fr 1fr!important}}
+
+.khm-source .grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:14px}
+.khm-source .col3{grid-column:span 3}.khm-source .col4{grid-column:span 4}.khm-source .col6{grid-column:span 6}.khm-source .col8{grid-column:span 8}.khm-source .col12{grid-column:1/-1}
+.khm-source .card{min-width:0;padding:20px;border:1px solid var(--hm-soft);border-radius:7px;background:#fff}
+.khm-source .card h2,.khm-source .card h3,.khm-source .card h4{margin-top:0;font-family:Cinzel,Georgia,serif;font-weight:400}
+.khm-source .card p,.khm-source .card li{color:var(--hm-muted)}
+.khm-source .work-lines{display:grid;gap:13px;margin-top:18px}.khm-source .work-lines span{display:block;height:18px;border-bottom:1px solid #8b8b8b}
+@media(max-width:900px){.khm-source .col3,.khm-source .col4,.khm-source .col6,.khm-source .col8{grid-column:1/-1}}
