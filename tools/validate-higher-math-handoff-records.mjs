@@ -22,8 +22,8 @@ assert(receipt.includes("includesAssessmentAnswers:false"));
 assert(receipt.includes("highSchoolImportCertified:false"));
 assert(!receipt.includes("localStorage.setItem("),"receipt exporter must remain read-only");
 for(const p of [
- "courses/mathematics/precalculus-trigonometry/index.html",
- "courses/mathematics/calculus-1/index.html"
+ "courses/mathematics/precalculus-trigonometry/course-console.html",
+ "courses/mathematics/calculus-1/course-console.html"
 ]){
  const html=read(p);assert(html.includes("higher-math-evidence-receipt-v1.js"),p+" missing receipt exporter");
 }
