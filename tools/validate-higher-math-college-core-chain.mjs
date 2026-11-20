@@ -1,0 +1,37 @@
+import fs from "node:fs";
+import path from "node:path";
+import assert from "node:assert/strict";
+const root=path.resolve(process.cwd());
+const read=p=>fs.readFileSync(path.join(root,p),"utf8");
+const matrix=JSON.parse(read("courses/mathematics-execution-matrix-v1.json"));
+const ids=["calculus-ii","differential-equations","linear-algebra"];
+for(const id of ids){
+ const c=matrix.courses.find(x=>x.id===id);
+ assert(c,id+" missing from matrix");
+ assert.equal(c.assessment_scope,"local-course-learner",id+" assessment scope");
+ assert.match(c.assessment_key,/assessment-records-v2$/,id+" assessment v2");
+ assert.match(c.legacy_assessment_key,/assessment-records-v1$/,id+" legacy key");
+ assert.equal(c.return_record?.exporter,"courses/shared/higher-math-evidence-receipt-v1.js");
+ const map=JSON.parse(read(c.source)).course;
+ assert.equal(map.assessment_key,c.assessment_key,id+" map/matrix assessment key mismatch");
+ assert.equal(map.legacy_assessment_key,c.legacy_assessment_key,id+" legacy mismatch");
+ assert.equal(map.mastery_target,80,id+" mastery");
+ const engine=read(c.root+"assets/assessment-engine.js");
+ assert(engine.includes("HISTORY_PREFIX=\""+c.assessment_key+"\""),id+" engine v2 prefix missing");
+ assert(engine.includes("LEGACY_KEY=\""+c.legacy_assessment_key+"\""),id+" legacy preservation missing");
+ assert(engine.includes("learnerId:learner?.id||null"),id+" learner-tagged attempts missing");
+ assert(engine.includes("practicePassed:score>=80"),id+" practice threshold metadata missing");
+ const app=read(c.root+"assets/app-core.js");
+ assert(app.includes("data-higher-math-evidence-receipt"),id+" evidence receipt control missing");
+ const html=read(c.entry);
+ assert(html.includes("higher-math-evidence-receipt-v1.js"),id+" exporter not loaded");
+}
+const calc=matrix.courses.find(x=>x.id==="calculus-ii").progression;
+assert.deepEqual(calc.prerequisite_courses,["calculus-i"]);
+assert(calc.concurrent_or_supporting.includes("linear-algebra"));
+const de=matrix.courses.find(x=>x.id==="differential-equations").progression;
+assert(de.recommended_preparation.includes("calculus-ii")&&de.recommended_preparation.includes("linear-algebra"));
+const la=matrix.courses.find(x=>x.id==="linear-algebra").progression;
+assert.equal(la.prerequisite_courses.length,0);
+assert(la.concurrent_or_supporting.includes("calculus-ii"));
+console.log("PASS College Core chain: Calc II, Differential Equations, Linear Algebra learner-scoped records, receipts, 80% policy, flexible progression graph.");
