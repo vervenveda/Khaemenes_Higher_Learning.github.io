@@ -21,7 +21,11 @@
     "calculator": "https://vervenveda.com/Khaemenes_High.github.io/courses/mathematics/tools/calculator/",
     "cad": "https://vervenveda.com/proresource_hub.github.io/Protools/Ohmic_CAD_Studio.html",
     "arcade": "https://vervenveda.com/arcade.github.io/",
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "assessment_key": "khaemenes-precalculus-trigonometry-assessment-records-v2",
+    "legacy_assessment_key": "khaemenes-precalculus-trigonometry-assessment-records-v1",
+    "assessment_scope": "local-course-learner",
+    "return_record_status": "exportable-evidence-receipt; high-school import bridge pending certification"
   },
   "units": [
     {
