@@ -39,8 +39,14 @@ for(const [id,base,hybrid] of courses){
  assert.equal((landing.match(/class="khm-academy"/g)||[]).length,1,id+" academy hero");
  assert.equal((landing.match(/class="khm-title"/g)||[]).length,1,id+" course title");
  assert.equal((landing.match(/class="khm-descriptor"/g)||[]).length,1,id+" descriptor");
- for(const label of ["Learner Profile","Parent Profile","Enrollment","About ","Lessons","Assessments &amp; Mastery","Math Labs &amp; Tools","Course Records"])assert(landing.includes(label),id+" missing landing element "+label);
+ for(const label of ["Campus Tour","Enrollment","Enter Class","About ","Lessons","Assessments &amp; Mastery","Math Labs &amp; Tools","Course Records"])assert(landing.includes(label),id+" missing landing element "+label);
  assert.equal((landing.match(/class="khm-card"/g)||[]).length,4,id+" must have one 2x2 four-card feature grid");
+ const landingLinks=[...landing.matchAll(/<a\b[^>]*href="([^"]+)"[^>]*>/g)].map(m=>m[1]);
+ assert.deepEqual(landingLinks,[
+  "https://vervenveda.com/Khaemenes_Higher_Learning.github.io/#campus-tour",
+  "https://vervenveda.com/Khaemenes_Academy.github.io/family/enroll/",
+  "math-lesson.html"
+ ],id+" landing must expose exactly Campus Tour, Enrollment, Enter Class");
  assert(lesson.includes('id="higherMathEngine"'),id+" lesson engine mount missing");
  assert(lesson.includes("higher-math-lesson-engine-v1.js"),id+" shared lesson engine missing");
  if(!hybrid){
@@ -51,9 +57,9 @@ for(const [id,base,hybrid] of courses){
    const unit=String(l.unit).padStart(2,"0");
    assert(exists(base+"/units/unit-"+unit+"/lessons/"+l.id+".html"),id+" missing authoritative lesson source "+l.id);
   }
-  assert(landing.includes('href="course-console.html#practice">Open Labs &amp; Tools'),id+" labs/tools must use preserved console");
+  assert(!/href="(?:assessments\/|course-console\.html|diagnostic\/|labs\/)/.test(landing),id+" landing must not bypass clean navigation");
  }else{
-  assert(landing.includes('href="labs/">Open Labs &amp; Tools'),"advanced topology labs registry");
+  assert(!/href="(?:assessments\/|course-console\.html|diagnostic\/|labs\/)/.test(landing),"advanced topology landing must not bypass clean navigation");
   assert(lesson.includes('data-hybrid="true"'),"advanced topology engine must declare hybrid");
   assert(exists(base+"/lesson.html"),"advanced topology protected hybrid runtime missing");
   const manifest=JSON.parse(read(base+"/hybrid-runtime-contract-v1.json"));
