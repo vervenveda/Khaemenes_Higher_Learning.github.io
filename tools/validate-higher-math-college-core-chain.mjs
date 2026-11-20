@@ -23,8 +23,8 @@ for(const id of ids){
  assert(engine.includes("practicePassed:score>=80"),id+" practice threshold metadata missing");
  const app=read(c.root+"assets/app-core.js");
  assert(app.includes("data-higher-math-evidence-receipt"),id+" evidence receipt control missing");
- const html=read(c.entry);
- assert(html.includes("higher-math-evidence-receipt-v1.js"),id+" exporter not loaded");
+ const consoleHtml=read(c.root+"course-console.html");
+ assert(consoleHtml.includes("higher-math-evidence-receipt-v1.js"),id+" course-records console missing exporter");
 }
 const calc=matrix.courses.find(x=>x.id==="calculus-ii").progression;
 assert.deepEqual(calc.prerequisite_courses,["calculus-i"]);
