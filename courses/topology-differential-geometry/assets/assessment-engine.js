@@ -108,7 +108,7 @@ function score(token){
  if(!complete){document.getElementById("assessmentMessage").textContent="Answer every question before scoring.";return}
  const score=Math.round(right/set.length*100),data=records(),key=cfg.recordKey||"assessment";
  data[key]=data[key]||{title:cfg.title||key,attempts:[]};
- data[key].attempts.push({date:new Date().toISOString(),assessmentVersion:cfg.assessmentVersion||"legacy-v1",score,right,total:set.length,missed,learner:document.getElementById("assessmentLearner").value.trim(),pathway:document.getElementById("assessmentPathway").value});
+ data[key].attempts.push({date:new Date().toISOString(),assessmentVersion:cfg.assessmentVersion||"v2",score,right,total:set.length,missed,learner:document.getElementById("assessmentLearner").value.trim(),learnerId:LEARNER,pathway:document.getElementById("assessmentPathway").value,source:"public-formative-practice",practicePassed:score>=80,proofReviewSatisfied:false});
  if(data[key].draft){
   data[key].draft.choices=set.map((q,i)=>{
     const selected=document.querySelector('input[name="'+token+'-q'+i+'"]:checked');
