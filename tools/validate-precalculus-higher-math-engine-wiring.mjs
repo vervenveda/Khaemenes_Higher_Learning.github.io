@@ -4,6 +4,13 @@ import assert from "node:assert/strict";
 const root=path.resolve(process.cwd());
 const read=p=>fs.readFileSync(path.join(root,p),"utf8");
 const exists=p=>fs.existsSync(path.join(root,p));
+const normalize=s=>String(s||"")
+ .replaceAll("&amp;","&")
+ .replaceAll("&#x27;","'")
+ .replaceAll("&#39;","'")
+ .replaceAll("&quot;",'"')
+ .replaceAll("&lt;","<")
+ .replaceAll("&gt;",">");
 const base="courses/mathematics/precalculus-trigonometry/";
 const map=JSON.parse(read(base+"course-map.json"));
 const lessons=(map.units||[]).flatMap(u=>(u.lessons||[]).map(l=>({...l,unitMeta:u})));
@@ -23,7 +30,8 @@ for(const l of lessons){
  const html=read(p);
  assert(html.includes('data-lesson-id="'+l.id+'"'),l.id+" body lesson id mismatch");
  assert(html.includes('class="lesson-main"'),l.id+" missing authoritative lesson-main content container");
- assert(html.includes(l.title.replaceAll("&","&amp;"))||html.includes(l.title),l.id+" source title/content mismatch");
+ const title=(html.match(/<h1>([\s\S]*?)<\/h1>/i)||[])[1]||"";
+ assert.equal(normalize(title).trim(),normalize(l.title).trim(),l.id+" source title/content mismatch");
  assert(html.includes("../../../assets/styles.css"),l.id+" source lesson stylesheet contract missing");
 }
 assert.equal(ids.size,92);
