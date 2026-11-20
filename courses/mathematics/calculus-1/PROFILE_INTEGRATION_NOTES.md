@@ -1,8 +1,10 @@
 # Higher Learning Profile Integration
 
-- Course ID: `calculus-i`
+- Canonical course ID: `calculus-i`
+- Accepted legacy/path alias: `calculus-1`
 - Course code: `KH-MATH-CALC1`
 - Storage key: `khaemenes-calculus1-course-v1`
+- Assessment key: `khaemenes-calculus1-assessment-records-v2:<localLearnerId>`
 - Shared pin key: `khaemenes-higher-learning-pinned-courses-v1`
 - Higher Learning learner-scoped pin storage: `khaemenes.higher.pins:<learnerId>`
 - Route: `courses/mathematics/calculus-1/`
