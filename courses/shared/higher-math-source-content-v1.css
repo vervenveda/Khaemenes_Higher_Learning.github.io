@@ -73,3 +73,14 @@
 .khm-source .stage-nav{display:flex;gap:8px;flex-wrap:wrap}
 .khm-source .progress{min-height:8px;border-radius:7px;background:var(--hm-soft)}
 @media(max-width:900px){.khm-source .lesson-layout{grid-template-columns:1fr}.khm-source .pathway-grid,.khm-source .quick-check-grid,.khm-source .worksheet-problems{grid-template-columns:1fr}}
+
+
+/* Introduction to Proofs source-content bridge */
+.khm-source .question-card{padding:16px;border:1px solid var(--hm-soft);border-radius:7px;background:#fff}
+.khm-source .answer-list{display:grid;gap:8px;margin-top:10px}
+.khm-source .answer-option{padding:10px 12px;border:1px solid var(--hm-line);border-radius:7px;background:#fff}
+.khm-source .explanation{margin-top:10px;padding:12px;border-left:3px solid var(--hm-teal);border-radius:7px;background:#f7fbfa}
+.khm-source .lesson-record{padding:18px;border:1px solid var(--hm-line);border-radius:7px;background:#fff}
+.khm-source .progress-track{min-height:8px;border-radius:7px;background:var(--hm-soft);overflow:hidden}
+.khm-source .worksheet{margin-top:22px;padding:24px;border:1px solid var(--hm-line);border-radius:7px;background:#fff}
+.khm-source .worked-example{padding:16px;border:1px solid var(--hm-soft);border-radius:7px;background:#fff}
