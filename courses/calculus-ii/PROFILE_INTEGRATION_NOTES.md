@@ -6,3 +6,6 @@ Course records key: `khaemenes-calculus2-college-course-v1`
 Assessment records key: `khaemenes-calculus2-assessment-records-v1`
 
 The included `records/learner-profile.html` works immediately. A future Higher Learning-wide profile can read the same keys.
+
+Assessment key: `khaemenes-calculus2-assessment-records-v2:<localLearnerId>`
+Legacy unscoped assessment key retained read-only: `khaemenes-calculus2-assessment-records-v1`
