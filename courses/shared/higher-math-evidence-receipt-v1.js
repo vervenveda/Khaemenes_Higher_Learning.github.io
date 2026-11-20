@@ -16,9 +16,33 @@ const CONFIG={
   title:"Calculus I",courseId:"calculus-i",aliases:["calculus-1"],
   rootKey:"khaemenes-calculus1-course-v1",
   assessmentPrefix:"khaemenes-calculus1-assessment-records-v2"
+ },
+ "calculus-ii":{
+  title:"Calculus II",courseId:"calculus-ii",aliases:[],
+  rootKey:"khaemenes-calculus2-college-course-v1",
+  assessmentPrefix:"khaemenes-calculus2-assessment-records-v2",
+  legacyAssessmentKey:"khaemenes-calculus2-assessment-records-v1"
+ },
+ "differential-equations":{
+  title:"Differential Equations",courseId:"differential-equations",aliases:[],
+  rootKey:"khaemenes-differential-equations-college-course-v1",
+  assessmentPrefix:"khaemenes-differential-equations-assessment-records-v2",
+  legacyAssessmentKey:"khaemenes-differential-equations-assessment-records-v1"
+ },
+ "linear-algebra":{
+  title:"Linear Algebra",courseId:"linear-algebra",aliases:[],
+  rootKey:"khaemenes-linear-algebra-college-course-v1",
+  assessmentPrefix:"khaemenes-linear-algebra-assessment-records-v2",
+  legacyAssessmentKey:"khaemenes-linear-algebra-assessment-records-v1"
  }
 };
-function config(){const m=String(location.pathname).match(/\/courses\/mathematics\/(precalculus-trigonometry|calculus-1)(?:\/|$)/);return m?CONFIG[m[1]]:null}
+function config(){
+ const path=String(location.pathname);
+ let m=path.match(/\/courses\/mathematics\/(precalculus-trigonometry|calculus-1)(?:\/|$)/);
+ if(m)return CONFIG[m[1]];
+ m=path.match(/\/courses\/(calculus-ii|differential-equations|linear-algebra)(?:\/|$)/);
+ return m?CONFIG[m[1]]:null;
+}
 function parse(key){try{const raw=localStorage.getItem(key);return raw?JSON.parse(raw):null}catch{return null}}
 function academyLearner(){
  try{
