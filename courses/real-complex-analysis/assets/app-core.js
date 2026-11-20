@@ -158,7 +158,7 @@ function renderDashboard(){
  const s=activeStudent(),done=completeWeeks(),next=nextWeek(),grade=courseGrade();
  $("#view-dashboard").innerHTML=`<div class="wrap">
  <div class="section-head"><p class="eyebrow">Local learner dashboard</p><h2>${esc(s.name)} · Real & Complex Analysis</h2>
- <p>Study activity checks, locally generated practice scores, and portfolio notes remain on this device unless deliberately exported. <strong>Academy policy requires at least 80% mastery to unlock each next lesson or activity.</strong> These local checklist/practice/grade averages do not by themselves verify that requirement or award credentials. Course-specific progression-gate review remains pending.</p></div>
+ <p>Study activity checks, locally generated practice scores, and portfolio notes remain on this device unless deliberately exported. <strong>Academy policy requires at least 80% mastery to unlock each next lesson or activity.</strong> These local checklist/practice/grade averages do not by themselves verify that requirement or award credentials. Written proof evidence and evaluator review are noncompensatory requirements for proof-based mastery. Course-specific progression-gate review remains pending.</p></div>
  <div class="grid">
   <article class="card col4"><h3>Learner Record</h3>${studentControls()}<p class="notice">Prerequisite: A completed Introduction to Proofs course or equivalent proof fluency, single-variable calculus, and mathematical maturity. Linear algebra is strongly recommended.. Placement is based on mastery, not age or grade.</p></article>
   <article class="card col8"><span class="pill">Next unchecked study week · not verified mastery</span><h3>Week ${next.week} · ${esc(next.title)}</h3><p>${esc(next.essential)}</p>
@@ -171,7 +171,7 @@ function renderDashboard(){
   <article class="card col3"><h4>Informational Weighted Average</h4><p class="score">${pct(grade)}</p><p>${grade==null?"Appears after required categories are recorded.":"All weighted categories are present."}</p></article>
   <article class="card col4"><h3>92 Printable Analytical Lessons</h3><p>Topic-specific definitions, theorem maps, proof structures, analytical diagrams, worked examples, six-problem printable worksheets, differentiated pathways, misconceptions, applications, reflection, and local completion.</p><button class="btn" data-view="units">Browse Units</button></article>
   <article class="card col4"><h3>Scientific Calculator v4</h3><p>Use the connected calculator for exact arithmetic, sequence values, complex arithmetic, combinatorics, numerical checks, history, and verification. Proof and theorem reasoning remain required.</p><a class="btn primary" href="https://vervenveda.com/Khaemenes_High.github.io/courses/mathematics/tools/calculator" target="_blank" rel="noopener">Open Calculator</a></article>
-  <article class="card col4"><h3>Formal Evidence</h3><p>40-question readiness diagnostic, 13 mastery checks, 60-question midterm, 100-question final, portfolio, and modelling defense.</p><button class="btn" data-view="assessments">Assessment Center</button></article>
+  <article class="card col4"><h3>Formal Evidence</h3><p>40-question readiness diagnostic, 13 mastery checks, 60-question midterm, 100-question final, written proof portfolio, and evaluator-reviewed proof defense. Objective practice is formative and cannot certify proof mastery by itself.</p><button class="btn" data-view="assessments">Assessment Center</button></article>
  </div></div>`;
  bindStudentControls();
  $("#openNext")?.addEventListener("click",()=>{state.selectedWeek=next.week;save();setView("week")});
@@ -297,7 +297,7 @@ function renderAssessments(){
 }
 function renderGradebook(){
  const grade=courseGrade();
- $("#view-gradebook").innerHTML=`<div class="wrap"><div class="section-head"><p class="eyebrow">Transparent local records</p><h2>Gradebook</h2><p>Coursework 35% · generated or imported mastery 20% · midterm 15% · final 20% · capstone defense 10%.</p></div>
+ $("#view-gradebook").innerHTML=`<div class="wrap"><div class="section-head"><p class="eyebrow">Transparent local records</p><h2>Gradebook</h2><p>Informational weighting only: coursework 35% · generated or imported mastery 20% · midterm 15% · final 20% · capstone defense 10%. A weighted average never substitutes for required written-proof review.</p></div>
  <article class="card"><div class="table-wrap"><table><thead><tr><th>Week</th><th>Classwork</th><th>Weekly Practice Best (not verified)</th><th>Portfolio</th><th>Sessions</th></tr></thead><tbody>${D.weeks.map(w=>{const r=weekRecord(w.week);return `<tr><td>${w.week} · ${esc(w.title)}</td><td>${pct(r.classwork)}</td><td>${pct(r.masteryBest)}</td><td>${pct(r.portfolio)}</td><td>${Object.values(r.days).filter(Boolean).length}/5</td></tr>`}).join("")}</tbody></table></div><h3>Calculated course grade: ${pct(grade)}</h3><div class="actions"><button class="btn" id="gradeCsv" type="button">Download Gradebook CSV</button><button class="btn" id="printGrade" type="button">Print</button></div></article></div>`;
  $("#gradeCsv")?.addEventListener("click",downloadGradebook);$("#printGrade")?.addEventListener("click",()=>print());
 }
