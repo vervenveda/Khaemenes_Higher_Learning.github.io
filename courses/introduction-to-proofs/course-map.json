@@ -16,7 +16,7 @@
       "Research / Graduate"
     ],
     "storage_key": "khaemenes-introduction-to-proofs-course-v1",
-    "assessment_key": "khaemenes-introduction-to-proofs-assessment-v1",
+    "assessment_key": "khaemenes-introduction-to-proofs-assessment-v2",
     "pin_key": "khaemenes-higher-learning-pinned-courses-v1",
     "audience": "Advanced undergraduates, independent learners, and prospective graduate students preparing for proof-based mathematics and research.",
     "prerequisite": "Algebra fluency and willingness to read and write mathematical arguments. Calculus or Discrete Mathematics is recommended but not required.",
@@ -24,7 +24,18 @@
     "cad": "https://vervenveda.com/proresource_hub.github.io/Protools/Ohmic_CAD_Studio.html",
     "arcade": "https://vervenveda.com/arcade.github.io/",
     "version": "1.0.0",
-    "credit_guidance": "Designed as an advanced transition-to-proof course. It prepares learners for upper-level and graduate-preparatory mathematics but does not claim to be a graduate core course."
+    "credit_guidance": "Designed as an advanced transition-to-proof course. It prepares learners for upper-level and graduate-preparatory mathematics but does not claim to be a graduate core course.",
+    "legacy_assessment_key": "khaemenes-introduction-to-proofs-assessment-v1",
+    "assessment_scope": "local-course-learner",
+    "assessment_history_policy": "New browser attempts write to learner-scoped v2 history; legacy v1 history is preserved and never silently reassigned.",
+    "proof_mastery_contract": {
+      "required": true,
+      "threshold_percent": 80,
+      "objective_practice_authority": "formative-only",
+      "written_proof_review": "required-evaluator-review",
+      "noncompensatory": true,
+      "rule": "Written proof portfolio and evaluator-reviewed proof defense are noncompensatory completion requirements. Browser-scored objective practice cannot satisfy proof mastery."
+    }
   },
   "units": [
     {
