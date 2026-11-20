@@ -16,7 +16,7 @@
       "Research / Graduate"
     ],
     "storage_key": "khaemenes-topology-differential-geometry-course-v1",
-    "assessment_key": "khaemenes-topology-differential-geometry-assessment-v1",
+    "assessment_key": "khaemenes-topology-differential-geometry-assessment-v2",
     "pin_key": "khaemenes-higher-learning-pinned-courses-v1",
     "audience": "Advanced undergraduates, graduate-preparatory learners, and independent researchers entering topology, geometry, mathematical physics, relativity, geometric analysis, robotics, topological data analysis, or related fields.",
     "prerequisite": "Introduction to Proofs or equivalent proof fluency, Real Analysis, multivariable calculus, and Linear Algebra are required. Abstract Algebra is strongly recommended for fundamental groups, homology, and bundle theory",
@@ -24,7 +24,20 @@
     "cad": "https://vervenveda.com/proresource_hub.github.io/Protools/Ohmic_CAD_Studio.html",
     "arcade": "https://vervenveda.com/arcade.github.io/",
     "version": "1.0.0",
-    "credit_guidance": "An advanced upper-level and graduate-preparatory topology and differential geometry sequence with selected beginning-graduate topics. It is not represented as a replacement for a university graduate topology or geometry qualifying sequence."
+    "credit_guidance": "An advanced upper-level and graduate-preparatory topology and differential geometry sequence with selected beginning-graduate topics. It is not represented as a replacement for a university graduate topology or geometry qualifying sequence.",
+    "legacy_assessment_key": "khaemenes-topology-differential-geometry-assessment-v1",
+    "assessment_scope": "higher-learning-learner",
+    "assessment_history_policy": "New attempts write to learner-scoped v2 history; legacy v1 history remains preserved and is never silently reassigned.",
+    "proof_mastery_contract": {
+      "required": true,
+      "threshold_percent": 80,
+      "objective_practice_authority": "formative-only",
+      "written_proof_review": "required-evaluator-review",
+      "lab_evidence": "required-where-assigned",
+      "defense_review": "required-for-completion",
+      "noncompensatory": true,
+      "rule": "Objective practice, weighted averages, or lab output alone cannot certify topology/geometry mastery; reviewed proof, required lab evidence, corrections, and defense remain separate evidence streams."
+    }
   },
   "units": [
     {
