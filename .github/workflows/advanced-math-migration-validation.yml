@@ -18,10 +18,12 @@ on:
       - 'tools/validate-linear-algebra-higher-math-engine-wiring.mjs'
       - 'tools/validate-introduction-to-proofs-higher-math-engine-wiring.mjs'
       - 'tools/validate-discrete-mathematics-higher-math-engine-wiring.mjs'
+      - 'tools/validate-real-complex-analysis-higher-math-engine-wiring.mjs'
       - 'tools/validate-higher-math-execution-matrix.mjs'
       - 'courses/advanced-geometric-topology/**'
       - 'courses/topology-differential-geometry/**'
       - 'courses/real-complex-analysis/**'
+      - 'tools/validate-real-complex-analysis-higher-math-engine-wiring.mjs'
       - 'courses/abstract-algebra/**'
       - 'courses/statistics/**'
       - 'courses/linear-algebra/**'
@@ -89,3 +91,5 @@ jobs:
         run: node tools/validate-introduction-to-proofs-higher-math-engine-wiring.mjs
       - name: Validate Discrete Mathematics lesson-to-engine wiring
         run: node tools/validate-discrete-mathematics-higher-math-engine-wiring.mjs
+      - name: Validate Real and Complex Analysis lesson-to-engine wiring
+        run: node tools/validate-real-complex-analysis-higher-math-engine-wiring.mjs
