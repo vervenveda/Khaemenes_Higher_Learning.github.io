@@ -13,7 +13,8 @@
     "historical_records": "Do not overwrite or silently reattribute existing attempts.",
     "high_school_return": "Precalculus and Calculus I may export read-only evidence receipts. High School import remains uncertified until the receiving contract is implemented and tested.",
     "college_core_progression": "Calculus II, Linear Algebra, and Differential Equations form a flexible college-core cluster. Recommendations guide readiness but do not create automatic locks.",
-    "proof_sequence": "Proof-based courses require evaluator-reviewed written proof evidence. Objective/browser practice may support learning but cannot compensate for an unmet proof-review requirement."
+    "proof_sequence": "Proof-based courses require evaluator-reviewed written proof evidence. Objective/browser practice may support learning but cannot compensate for an unmet proof-review requirement.",
+    "advanced_geometry_transition": "Topology & Differential Geometry is the mature proof-based prerequisite. Advanced Geometric Topology is an explicit hybrid legacy/V2 sequel; its 1 rich V2 session and 179 legacy fallback sessions must not be represented as a completed V2 migration."
   },
   "courses": [
     {
@@ -624,7 +625,7 @@
       "units": 13,
       "mastery_target": 80,
       "storage_key": "khaemenes-topology-differential-geometry-course-v1",
-      "assessment_key": "khaemenes-topology-differential-geometry-assessment-v1",
+      "assessment_key": "khaemenes-topology-differential-geometry-assessment-v2",
       "prerequisite": "Introduction to Proofs or equivalent proof fluency, Real Analysis, multivariable calculus, and Linear Algebra are required. Abstract Algebra is strongly recommended for fundamental groups, homology, and bundle theory",
       "authority": {
         "diagnostic": {
@@ -632,7 +633,7 @@
           "status": "declared"
         },
         "weekly": {
-          "owner": "courses/topology-differential-geometry/assets/app.js",
+          "owner": "courses/topology-differential-geometry/assets/app-core.js",
           "status": "declared"
         },
         "midterm": {
@@ -650,10 +651,49 @@
         "completion": {
           "owner": "courses/topology-differential-geometry/records/course-completion-certificate.html",
           "status": "evaluator-review"
+        },
+        "proof_review": {
+          "owner": "qualified-evaluator/faculty",
+          "status": "required-evaluator-review"
+        },
+        "lab_review": {
+          "owner": "qualified-evaluator/faculty",
+          "status": "required-where-assigned"
+        },
+        "defense_review": {
+          "owner": "qualified-evaluator/faculty",
+          "status": "required-for-completion"
         }
       },
       "return_record": {
-        "status": "higher-learning-internal; no high-school return required"
+        "exporter": "courses/shared/higher-math-evidence-receipt-v1.js",
+        "status": "read-only mathematics evidence receipt; proof/lab/defense review remains separately authoritative"
+      },
+      "legacy_assessment_key": "khaemenes-topology-differential-geometry-assessment-v1",
+      "assessment_scope": "higher-learning-learner",
+      "proof_mastery_contract": {
+        "required": true,
+        "threshold_percent": 80,
+        "objective_practice_authority": "formative-only",
+        "written_proof_review": "required-evaluator-review",
+        "lab_evidence": "required-where-assigned",
+        "defense_review": "required-for-completion",
+        "noncompensatory": true,
+        "rule": "Objective practice, weighted averages, or lab output alone cannot certify topology/geometry mastery; reviewed proof, required lab evidence, corrections, and defense remain separate evidence streams."
+      },
+      "progression": {
+        "prerequisite_courses": [
+          "introduction-to-proofs",
+          "real-complex-analysis",
+          "linear-algebra"
+        ],
+        "recommended_preparation": [
+          "abstract-algebra",
+          "calculus-ii"
+        ],
+        "recommended_next": [
+          "advanced-geometric-topology"
+        ]
       }
     },
     {
@@ -662,44 +702,87 @@
       "aliases": [],
       "root": "courses/advanced-geometric-topology/",
       "entry": "courses/advanced-geometric-topology/index.html",
-      "source": "courses/advanced-geometric-topology/README.md",
+      "source": "courses/advanced-geometric-topology/hybrid-runtime-contract-v1.json",
       "architecture": "hybrid-legacy-v2",
       "weeks": 36,
       "sessions": 180,
       "lessons": 180,
-      "units": null,
+      "units": 13,
       "mastery_target": 80,
-      "storage_key": "legacy-course-data/runtime",
-      "assessment_key": "hybrid formative records",
-      "prerequisite": "Advanced topology/geometry preparation; see course documentation",
+      "storage_key": "khaemenes-hl-agtgmp-progress-v2",
+      "assessment_key": "session-native-v2-objective+proof+lab+correction+defense",
+      "prerequisite": "Topology & Differential Geometry or equivalent proof-based topology/geometry maturity; supporting analysis, algebra, and differential geometry expected.",
       "authority": {
         "diagnostic": {
           "owner": "courses/advanced-geometric-topology/index.html",
-          "status": "legacy/hybrid"
+          "status": "hybrid/declared"
         },
         "weekly": {
           "owner": "courses/advanced-geometric-topology/lesson.html",
-          "status": "hybrid-v2-w01d1+legacy-fallback"
+          "status": "1-rich-v2+179-legacy-fallback"
         },
         "midterm": {
           "owner": "courses/advanced-geometric-topology/assessments/",
-          "status": "legacy/hybrid"
+          "status": "hybrid/evaluator-review"
         },
         "final": {
           "owner": "courses/advanced-geometric-topology/assessments/",
-          "status": "legacy/hybrid"
+          "status": "hybrid/evaluator-review"
         },
         "persistence": {
-          "owner": "courses/advanced-geometric-topology/assets/js/lesson-engine.js",
-          "status": "hybrid"
+          "owner": "courses/advanced-geometric-topology/assets/js/storage.js",
+          "status": "v2-learner-scoped-with-v1-migration"
+        },
+        "proof_review": {
+          "owner": "qualified-evaluator/faculty",
+          "status": "required-evaluator-review"
+        },
+        "lab_review": {
+          "owner": "qualified-evaluator/faculty",
+          "status": "required-where-assigned"
+        },
+        "defense_review": {
+          "owner": "qualified-evaluator/faculty",
+          "status": "required"
         },
         "completion": {
-          "owner": "courses/advanced-geometric-topology/README.md",
-          "status": "pending-normalization"
+          "owner": "courses/advanced-geometric-topology/assets/js/mastery-engine.js",
+          "status": "multi-stream-noncompensatory"
         }
       },
       "return_record": {
-        "status": "not-applicable"
+        "status": "higher-learning-internal; learner-owned V2 session export available; full-course V2 completion certification pending migration"
+      },
+      "legacy_storage_key": "khaemenes-hl-agtgmp-progress-v1",
+      "assessment_scope": "academy-family-learner-scoped-via-identity-adapter",
+      "progression": {
+        "prerequisite_courses": [
+          "topology-differential-geometry"
+        ],
+        "recommended_preparation": [
+          "real-complex-analysis",
+          "abstract-algebra",
+          "linear-algebra"
+        ],
+        "recommended_next": [
+          "independent-research"
+        ]
+      },
+      "migration": {
+        "rich_v2_sessions": 1,
+        "legacy_fallback_sessions": 179,
+        "fallback_source": "courses/advanced-geometric-topology/assets/course-data.js",
+        "retirement_gate": "Do not remove legacy course data until all 180 sessions have accepted rich-module replacements."
+      },
+      "proof_mastery_contract": {
+        "required": true,
+        "threshold_percent": 80,
+        "objective_practice_authority": "conceptual-threshold-only",
+        "written_proof_review": "required-evaluator-review",
+        "lab_evidence": "required-where-assigned",
+        "corrections": "required-when-triggered",
+        "defense_review": "required",
+        "noncompensatory": true
       }
     }
   ]
