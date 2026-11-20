@@ -34,13 +34,34 @@ const CONFIG={
   rootKey:"khaemenes-linear-algebra-college-course-v1",
   assessmentPrefix:"khaemenes-linear-algebra-assessment-records-v2",
   legacyAssessmentKey:"khaemenes-linear-algebra-assessment-records-v1"
+ },
+ "introduction-to-proofs":{
+  title:"Introduction to Proofs",courseId:"introduction-to-proofs",aliases:[],
+  rootKey:"khaemenes-introduction-to-proofs-course-v1",
+  assessmentPrefix:"khaemenes-introduction-to-proofs-assessment-v2",
+  legacyAssessmentKey:"khaemenes-introduction-to-proofs-assessment-v1",
+  proofReviewRequired:true
+ },
+ "abstract-algebra":{
+  title:"Abstract Algebra",courseId:"abstract-algebra",aliases:[],
+  rootKey:"khaemenes-abstract-algebra-course-v1",
+  assessmentPrefix:"khaemenes-abstract-algebra-assessment-v2",
+  legacyAssessmentKey:"khaemenes-abstract-algebra-assessment-v1",
+  proofReviewRequired:true
+ },
+ "real-complex-analysis":{
+  title:"Real & Complex Analysis",courseId:"real-complex-analysis",aliases:[],
+  rootKey:"khaemenes-real-complex-analysis-course-v1",
+  assessmentPrefix:"khaemenes-real-complex-analysis-assessment-v2",
+  legacyAssessmentKey:"khaemenes-real-complex-analysis-assessment-v1",
+  proofReviewRequired:true
  }
 };
 function config(){
  const path=String(location.pathname);
  let m=path.match(/\/courses\/mathematics\/(precalculus-trigonometry|calculus-1)(?:\/|$)/);
  if(m)return CONFIG[m[1]];
- m=path.match(/\/courses\/(calculus-ii|differential-equations|linear-algebra)(?:\/|$)/);
+ m=path.match(/\/courses\/(calculus-ii|differential-equations|linear-algebra|introduction-to-proofs|abstract-algebra|real-complex-analysis)(?:\/|$)/);
  return m?CONFIG[m[1]]:null;
 }
 function parse(key){try{const raw=localStorage.getItem(key);return raw?JSON.parse(raw):null}catch{return null}}
@@ -117,7 +138,9 @@ function build(){
    includesAssessmentAnswers:false,
    writesSourceRecords:false,
    awardsCredit:false,
-   highSchoolImportCertified:false
+   highSchoolImportCertified:false,
+   proofReviewRequired:cfg.proofReviewRequired===true,
+   proofReviewStatus:cfg.proofReviewRequired===true?"requires-evaluator-review":"not-applicable"
   }
  };
 }
