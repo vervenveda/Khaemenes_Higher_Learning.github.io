@@ -6,6 +6,7 @@ on:
     paths:
       - 'courses/mathematics/**'
       - 'tools/validate-higher-math-handoff-records.mjs'
+      - 'tools/validate-higher-math-college-core-chain.mjs'
       - 'tools/validate-higher-math-execution-matrix.mjs'
       - 'courses/advanced-geometric-topology/**'
       - 'courses/topology-differential-geometry/**'
@@ -47,3 +48,5 @@ jobs:
         run: node tools/validate-higher-math-execution-matrix.mjs
       - name: Validate Precalculus and Calculus I handoff records
         run: node tools/validate-higher-math-handoff-records.mjs
+      - name: Validate College Core mathematics chain
+        run: node tools/validate-higher-math-college-core-chain.mjs
