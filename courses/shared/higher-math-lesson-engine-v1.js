@@ -30,11 +30,14 @@ async function sourceHTML(data){
  }catch{return '<p>Detailed lesson source is available at <a href="'+path+'">'+path+'</a>.</p>'}
 }
 function navUrl(item){return "math-lesson.html?lesson="+encodeURIComponent(item.id)}
-function storeNote(id,text){try{localStorage.setItem("khaemenes-higher-math-engine-note:"+courseId+":"+id,text)}catch{}}
-function readNote(id){try{return localStorage.getItem("khaemenes-higher-math-engine-note:"+courseId+":"+id)||""}catch{return""}}
+let activeLearnerId=null;
+function noteKey(id){return activeLearnerId?"khaemenes-higher-math-engine-note:v2:"+encodeURIComponent(activeLearnerId)+":"+courseId+":"+id:null}
+function storeNote(id,text){const key=noteKey(id);if(!key)return false;try{localStorage.setItem(key,text);return localStorage.getItem(key)===text}catch{return false}}
+function readNote(id){const key=noteKey(id);if(!key)return"";try{return localStorage.getItem(key)||""}catch{return""}}
 async function render(){
  const access=await window.KhaemenesHigherMathClassEntry?.requireAccess?.();
  if(!access)return;
+ activeLearnerId=access.learner?.learnerId||null;
  const data=hybrid?await loadHybrid():await loadFull(),l=data.lesson,prev=data.lessons[data.idx-1],next=data.lessons[data.idx+1],src=await sourceHTML(data);
  document.title=l.title+" · "+data.title+" · Khaemenes Higher Learning";
  document.body.dataset.lesson=l.id;
@@ -48,7 +51,7 @@ async function render(){
  '<section class="khm-step"><p class="khm-kicker">10 · Reflect</p><h2>Save a learner-owned reflection</h2><textarea class="khm-note" id="khmReflection" placeholder="Strategy, correction, question, proof note or next step">'+esc(readNote(l.id))+'</textarea><p><button class="khm-btn dark" id="khmSaveReflection" type="button">Save Reflection</button></p><p class="khm-status" id="khmStatus"></p></section>'+
  '</div></div>';
  $("#khmLessonSelect")?.addEventListener("change",e=>{location.href=navUrl({id:e.target.value})});
- $("#khmSaveReflection")?.addEventListener("click",()=>{storeNote(l.id,$("#khmReflection").value.trim());$("#khmStatus").textContent="Reflection saved locally for this lesson."});
+ $("#khmSaveReflection")?.addEventListener("click",()=>{const ok=storeNote(l.id,$("#khmReflection").value.trim());$("#khmStatus").textContent=ok?"Reflection saved locally for this learner and lesson.":"Reflection save paused because learner ownership could not be verified.";});
  window.PAGE_REF={course:courseId,unit:String(l.unit||l.week||1).padStart(2,"0"),lesson:String(l.number||l.day||1).padStart(2,"0")};
 }
 render().catch(err=>{root.innerHTML='<div class="shell khm-lesson-shell"><section class="khm-step"><h1>Lesson engine unavailable</h1><p>The curriculum source could not be loaded. Existing course records were not changed.</p><p>'+esc(err.message)+'</p></section></div>'});
