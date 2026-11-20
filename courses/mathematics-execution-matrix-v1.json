@@ -1,0 +1,574 @@
+{
+  "schema": "khaemenes-higher-learning-mathematics-execution-matrix-v1",
+  "generated_for": "2026-11-20-hardening",
+  "canonical_department": {
+    "route": "courses/",
+    "compatibility_route": "courses/mathematics/",
+    "catalog_source": "courses/index-core.txt"
+  },
+  "policy": {
+    "mastery_floor_percent": 80,
+    "public_assessment_boundary": "Public/browser-local assessment forms are evidence or formative practice unless evaluator/faculty review says otherwise.",
+    "identity_boundary": "Academy learner identity and course-local learner identity are distinct unless explicitly bound; name similarity is not sufficient.",
+    "historical_records": "Do not overwrite or silently reattribute existing attempts.",
+    "high_school_return": "Precalculus and Calculus I may export read-only evidence receipts. High School import remains uncertified until the receiving contract is implemented and tested."
+  },
+  "courses": [
+    {
+      "id": "precalculus-trigonometry",
+      "title": "Precalculus & Trigonometry",
+      "aliases": [],
+      "root": "courses/mathematics/precalculus-trigonometry/",
+      "entry": "courses/mathematics/precalculus-trigonometry/index.html",
+      "source": "courses/mathematics/precalculus-trigonometry/course-map.json",
+      "architecture": "full-map",
+      "weeks": 36,
+      "sessions": 180,
+      "lessons": 92,
+      "units": 13,
+      "mastery_target": 80,
+      "storage_key": "khaemenes-precalculus-trigonometry-course-v1",
+      "assessment_key": "khaemenes-precalculus-trigonometry-assessment-records-v2",
+      "prerequisite": "Algebra II and Geometry readiness or equivalent mastery",
+      "authority": {
+        "diagnostic": {
+          "owner": "courses/mathematics/precalculus-trigonometry/diagnostic/index.html",
+          "status": "declared"
+        },
+        "weekly": {
+          "owner": "courses/mathematics/precalculus-trigonometry/assets/app.js",
+          "status": "declared"
+        },
+        "midterm": {
+          "owner": "courses/mathematics/precalculus-trigonometry/assessments/midterm.html",
+          "status": "public-formative/evaluator-review"
+        },
+        "final": {
+          "owner": "courses/mathematics/precalculus-trigonometry/assessments/final.html",
+          "status": "public-formative/evaluator-review"
+        },
+        "persistence": {
+          "owner": "khaemenes-precalculus-trigonometry-course-v1",
+          "status": "declared"
+        },
+        "completion": {
+          "owner": "courses/mathematics/precalculus-trigonometry/records/course-completion-certificate.html",
+          "status": "evaluator-review"
+        }
+      },
+      "return_record": {
+        "exporter": "courses/shared/higher-math-evidence-receipt-v1.js",
+        "status": "exportable-evidence-receipt; high-school import pending certification"
+      }
+    },
+    {
+      "id": "calculus-i",
+      "title": "Calculus I",
+      "aliases": [
+        "calculus-1"
+      ],
+      "root": "courses/mathematics/calculus-1/",
+      "entry": "courses/mathematics/calculus-1/index.html",
+      "source": "courses/mathematics/calculus-1/course-map.json",
+      "architecture": "full-map",
+      "weeks": 36,
+      "sessions": 180,
+      "lessons": 92,
+      "units": 13,
+      "mastery_target": 80,
+      "storage_key": "khaemenes-calculus1-course-v1",
+      "assessment_key": "khaemenes-calculus1-assessment-records-v2",
+      "prerequisite": "Precalculus and Trigonometry readiness or equivalent demonstrated mastery",
+      "authority": {
+        "diagnostic": {
+          "owner": "courses/mathematics/calculus-1/diagnostic/index.html",
+          "status": "declared"
+        },
+        "weekly": {
+          "owner": "courses/mathematics/calculus-1/assets/app.js",
+          "status": "declared"
+        },
+        "midterm": {
+          "owner": "courses/mathematics/calculus-1/assessments/midterm.html",
+          "status": "public-formative/evaluator-review"
+        },
+        "final": {
+          "owner": "courses/mathematics/calculus-1/assessments/final.html",
+          "status": "public-formative/evaluator-review"
+        },
+        "persistence": {
+          "owner": "khaemenes-calculus1-course-v1",
+          "status": "declared"
+        },
+        "completion": {
+          "owner": "courses/mathematics/calculus-1/records/course-completion-certificate.html",
+          "status": "evaluator-review"
+        }
+      },
+      "return_record": {
+        "exporter": "courses/shared/higher-math-evidence-receipt-v1.js",
+        "status": "exportable-evidence-receipt; high-school import pending certification"
+      }
+    },
+    {
+      "id": "calculus-ii",
+      "title": "Calculus II",
+      "aliases": [],
+      "root": "courses/calculus-ii/",
+      "entry": "courses/calculus-ii/index.html",
+      "source": "courses/calculus-ii/course-map.json",
+      "architecture": "full-map",
+      "weeks": 36,
+      "sessions": 180,
+      "lessons": 92,
+      "units": 13,
+      "mastery_target": 80,
+      "storage_key": "khaemenes-calculus2-college-course-v1",
+      "assessment_key": "khaemenes-calculus2-assessment-records-v1",
+      "prerequisite": "Calculus I with fluent algebra, trigonometry, differentiation, definite integration, substitution, and mathematical communication",
+      "authority": {
+        "diagnostic": {
+          "owner": "courses/calculus-ii/diagnostic/index.html",
+          "status": "declared"
+        },
+        "weekly": {
+          "owner": "courses/calculus-ii/assets/app.js",
+          "status": "declared"
+        },
+        "midterm": {
+          "owner": "courses/calculus-ii/assessments/midterm.html",
+          "status": "public-formative/evaluator-review"
+        },
+        "final": {
+          "owner": "courses/calculus-ii/assessments/final.html",
+          "status": "public-formative/evaluator-review"
+        },
+        "persistence": {
+          "owner": "khaemenes-calculus2-college-course-v1",
+          "status": "declared"
+        },
+        "completion": {
+          "owner": "courses/calculus-ii/records/course-completion-certificate.html",
+          "status": "evaluator-review"
+        }
+      },
+      "return_record": {
+        "status": "higher-learning-internal; no high-school return required"
+      }
+    },
+    {
+      "id": "differential-equations",
+      "title": "Differential Equations",
+      "aliases": [],
+      "root": "courses/differential-equations/",
+      "entry": "courses/differential-equations/index.html",
+      "source": "courses/differential-equations/course-map.json",
+      "architecture": "full-map",
+      "weeks": 36,
+      "sessions": 180,
+      "lessons": 92,
+      "units": 13,
+      "mastery_target": 80,
+      "storage_key": "khaemenes-differential-equations-college-course-v1",
+      "assessment_key": "khaemenes-differential-equations-assessment-records-v1",
+      "prerequisite": "Calculus I fluency in derivatives and integrals is required. Calculus II topics, complex numbers, and basic differential equations are developed or refreshed as needed.",
+      "authority": {
+        "diagnostic": {
+          "owner": "courses/differential-equations/diagnostic/index.html",
+          "status": "declared"
+        },
+        "weekly": {
+          "owner": "courses/differential-equations/assets/app.js",
+          "status": "declared"
+        },
+        "midterm": {
+          "owner": "courses/differential-equations/assessments/midterm.html",
+          "status": "public-formative/evaluator-review"
+        },
+        "final": {
+          "owner": "courses/differential-equations/assessments/final.html",
+          "status": "public-formative/evaluator-review"
+        },
+        "persistence": {
+          "owner": "khaemenes-differential-equations-college-course-v1",
+          "status": "declared"
+        },
+        "completion": {
+          "owner": "courses/differential-equations/records/course-completion-certificate.html",
+          "status": "evaluator-review"
+        }
+      },
+      "return_record": {
+        "status": "higher-learning-internal; no high-school return required"
+      }
+    },
+    {
+      "id": "discrete-mathematics",
+      "title": "Discrete Mathematics",
+      "aliases": [],
+      "root": "courses/discrete-mathematics/",
+      "entry": "courses/discrete-mathematics/index.html",
+      "source": "courses/discrete-mathematics/course-map.json",
+      "architecture": "full-map",
+      "weeks": 36,
+      "sessions": 180,
+      "lessons": 92,
+      "units": 13,
+      "mastery_target": 80,
+      "storage_key": "khaemenes-discrete-mathematics-college-course-v1",
+      "assessment_key": "khaemenes-discrete-mathematics-assessment-records-v1",
+      "prerequisite": "Algebra fluency is required. Prior programming experience is helpful but not required. Calculus is not required.",
+      "authority": {
+        "diagnostic": {
+          "owner": "courses/discrete-mathematics/diagnostic/index.html",
+          "status": "declared"
+        },
+        "weekly": {
+          "owner": "courses/discrete-mathematics/assets/app.js",
+          "status": "declared"
+        },
+        "midterm": {
+          "owner": "courses/discrete-mathematics/assessments/midterm.html",
+          "status": "public-formative/evaluator-review"
+        },
+        "final": {
+          "owner": "courses/discrete-mathematics/assessments/final.html",
+          "status": "public-formative/evaluator-review"
+        },
+        "persistence": {
+          "owner": "khaemenes-discrete-mathematics-college-course-v1",
+          "status": "declared"
+        },
+        "completion": {
+          "owner": "courses/discrete-mathematics/records/course-completion-certificate.html",
+          "status": "evaluator-review"
+        }
+      },
+      "return_record": {
+        "status": "higher-learning-internal; no high-school return required"
+      }
+    },
+    {
+      "id": "introduction-to-proofs",
+      "title": "Introduction to Proofs",
+      "aliases": [],
+      "root": "courses/introduction-to-proofs/",
+      "entry": "courses/introduction-to-proofs/index.html",
+      "source": "courses/introduction-to-proofs/course-map.json",
+      "architecture": "full-map",
+      "weeks": 36,
+      "sessions": 180,
+      "lessons": 92,
+      "units": 13,
+      "mastery_target": 80,
+      "storage_key": "khaemenes-introduction-to-proofs-course-v1",
+      "assessment_key": "khaemenes-introduction-to-proofs-assessment-v1",
+      "prerequisite": "Algebra fluency and willingness to read and write mathematical arguments. Calculus or Discrete Mathematics is recommended but not required.",
+      "authority": {
+        "diagnostic": {
+          "owner": "courses/introduction-to-proofs/diagnostic/index.html",
+          "status": "declared"
+        },
+        "weekly": {
+          "owner": "courses/introduction-to-proofs/assets/app.js",
+          "status": "declared"
+        },
+        "midterm": {
+          "owner": "courses/introduction-to-proofs/assessments/midterm.html",
+          "status": "public-formative/evaluator-review"
+        },
+        "final": {
+          "owner": "courses/introduction-to-proofs/assessments/final.html",
+          "status": "public-formative/evaluator-review"
+        },
+        "persistence": {
+          "owner": "khaemenes-introduction-to-proofs-course-v1",
+          "status": "declared"
+        },
+        "completion": {
+          "owner": "courses/introduction-to-proofs/records/course-completion-certificate.html",
+          "status": "evaluator-review"
+        }
+      },
+      "return_record": {
+        "status": "higher-learning-internal; no high-school return required"
+      }
+    },
+    {
+      "id": "linear-algebra",
+      "title": "Linear Algebra",
+      "aliases": [],
+      "root": "courses/linear-algebra/",
+      "entry": "courses/linear-algebra/index.html",
+      "source": "courses/linear-algebra/course-map.json",
+      "architecture": "full-map",
+      "weeks": 36,
+      "sessions": 180,
+      "lessons": 92,
+      "units": 13,
+      "mastery_target": 80,
+      "storage_key": "khaemenes-linear-algebra-college-course-v1",
+      "assessment_key": "khaemenes-linear-algebra-assessment-records-v1",
+      "prerequisite": "Fluent high-school algebra and mathematical notation. Calculus is helpful for selected applications but is not required for the core course.",
+      "authority": {
+        "diagnostic": {
+          "owner": "courses/linear-algebra/diagnostic/index.html",
+          "status": "declared"
+        },
+        "weekly": {
+          "owner": "courses/linear-algebra/assets/app.js",
+          "status": "declared"
+        },
+        "midterm": {
+          "owner": "courses/linear-algebra/assessments/midterm.html",
+          "status": "public-formative/evaluator-review"
+        },
+        "final": {
+          "owner": "courses/linear-algebra/assessments/final.html",
+          "status": "public-formative/evaluator-review"
+        },
+        "persistence": {
+          "owner": "khaemenes-linear-algebra-college-course-v1",
+          "status": "declared"
+        },
+        "completion": {
+          "owner": "courses/linear-algebra/records/course-completion-certificate.html",
+          "status": "evaluator-review"
+        }
+      },
+      "return_record": {
+        "status": "higher-learning-internal; no high-school return required"
+      }
+    },
+    {
+      "id": "statistics",
+      "title": "Statistics",
+      "aliases": [],
+      "root": "courses/statistics/",
+      "entry": "courses/statistics/index.html",
+      "source": "courses/statistics/course-map.json",
+      "architecture": "full-map",
+      "weeks": 36,
+      "sessions": 180,
+      "lessons": 92,
+      "units": 13,
+      "mastery_target": 80,
+      "storage_key": "khaemenes-statistics-college-course-v1",
+      "assessment_key": "khaemenes-statistics-assessment-records-v1",
+      "prerequisite": "Algebra I fluency is required; Algebra II is recommended. Calculus is not required for the core course.",
+      "authority": {
+        "diagnostic": {
+          "owner": "courses/statistics/diagnostic/index.html",
+          "status": "declared"
+        },
+        "weekly": {
+          "owner": "courses/statistics/assets/app.js",
+          "status": "declared"
+        },
+        "midterm": {
+          "owner": "courses/statistics/assessments/midterm.html",
+          "status": "public-formative/evaluator-review"
+        },
+        "final": {
+          "owner": "courses/statistics/assessments/final.html",
+          "status": "public-formative/evaluator-review"
+        },
+        "persistence": {
+          "owner": "khaemenes-statistics-college-course-v1",
+          "status": "declared"
+        },
+        "completion": {
+          "owner": "courses/statistics/records/course-completion-certificate.html",
+          "status": "evaluator-review"
+        }
+      },
+      "return_record": {
+        "status": "higher-learning-internal; no high-school return required"
+      }
+    },
+    {
+      "id": "abstract-algebra",
+      "title": "Abstract Algebra",
+      "aliases": [],
+      "root": "courses/abstract-algebra/",
+      "entry": "courses/abstract-algebra/index.html",
+      "source": "courses/abstract-algebra/course-map.json",
+      "architecture": "full-map",
+      "weeks": 36,
+      "sessions": 180,
+      "lessons": 92,
+      "units": 13,
+      "mastery_target": 80,
+      "storage_key": "khaemenes-abstract-algebra-course-v1",
+      "assessment_key": "khaemenes-abstract-algebra-assessment-v1",
+      "prerequisite": "Introduction to Proofs or equivalent proof fluency is required. Linear Algebra and Discrete Mathematics are strongly recommended; number-theory familiarity is helpful",
+      "authority": {
+        "diagnostic": {
+          "owner": "courses/abstract-algebra/diagnostic/index.html",
+          "status": "declared"
+        },
+        "weekly": {
+          "owner": "courses/abstract-algebra/assets/app.js",
+          "status": "declared"
+        },
+        "midterm": {
+          "owner": "courses/abstract-algebra/assessments/midterm.html",
+          "status": "public-formative/evaluator-review"
+        },
+        "final": {
+          "owner": "courses/abstract-algebra/assessments/final.html",
+          "status": "public-formative/evaluator-review"
+        },
+        "persistence": {
+          "owner": "khaemenes-abstract-algebra-course-v1",
+          "status": "declared"
+        },
+        "completion": {
+          "owner": "courses/abstract-algebra/records/course-completion-certificate.html",
+          "status": "evaluator-review"
+        }
+      },
+      "return_record": {
+        "status": "higher-learning-internal; no high-school return required"
+      }
+    },
+    {
+      "id": "real-complex-analysis",
+      "title": "Real & Complex Analysis",
+      "aliases": [],
+      "root": "courses/real-complex-analysis/",
+      "entry": "courses/real-complex-analysis/index.html",
+      "source": "courses/real-complex-analysis/course-map.json",
+      "architecture": "full-map",
+      "weeks": 36,
+      "sessions": 180,
+      "lessons": 92,
+      "units": 13,
+      "mastery_target": 80,
+      "storage_key": "khaemenes-real-complex-analysis-course-v1",
+      "assessment_key": "khaemenes-real-complex-analysis-assessment-v1",
+      "prerequisite": "A completed Introduction to Proofs course or equivalent proof fluency, single-variable calculus, and mathematical maturity. Linear algebra is strongly recommended.",
+      "authority": {
+        "diagnostic": {
+          "owner": "courses/real-complex-analysis/diagnostic/index.html",
+          "status": "declared"
+        },
+        "weekly": {
+          "owner": "courses/real-complex-analysis/assets/app.js",
+          "status": "declared"
+        },
+        "midterm": {
+          "owner": "courses/real-complex-analysis/assessments/midterm.html",
+          "status": "public-formative/evaluator-review"
+        },
+        "final": {
+          "owner": "courses/real-complex-analysis/assessments/final.html",
+          "status": "public-formative/evaluator-review"
+        },
+        "persistence": {
+          "owner": "khaemenes-real-complex-analysis-course-v1",
+          "status": "declared"
+        },
+        "completion": {
+          "owner": "courses/real-complex-analysis/records/course-completion-certificate.html",
+          "status": "evaluator-review"
+        }
+      },
+      "return_record": {
+        "status": "higher-learning-internal; no high-school return required"
+      }
+    },
+    {
+      "id": "topology-differential-geometry",
+      "title": "Topology & Differential Geometry",
+      "aliases": [],
+      "root": "courses/topology-differential-geometry/",
+      "entry": "courses/topology-differential-geometry/index.html",
+      "source": "courses/topology-differential-geometry/course-map.json",
+      "architecture": "full-map",
+      "weeks": 36,
+      "sessions": 180,
+      "lessons": 92,
+      "units": 13,
+      "mastery_target": 80,
+      "storage_key": "khaemenes-topology-differential-geometry-course-v1",
+      "assessment_key": "khaemenes-topology-differential-geometry-assessment-v1",
+      "prerequisite": "Introduction to Proofs or equivalent proof fluency, Real Analysis, multivariable calculus, and Linear Algebra are required. Abstract Algebra is strongly recommended for fundamental groups, homology, and bundle theory",
+      "authority": {
+        "diagnostic": {
+          "owner": "courses/topology-differential-geometry/diagnostic/index.html",
+          "status": "declared"
+        },
+        "weekly": {
+          "owner": "courses/topology-differential-geometry/assets/app.js",
+          "status": "declared"
+        },
+        "midterm": {
+          "owner": "courses/topology-differential-geometry/assessments/midterm.html",
+          "status": "public-formative/evaluator-review"
+        },
+        "final": {
+          "owner": "courses/topology-differential-geometry/assessments/final.html",
+          "status": "public-formative/evaluator-review"
+        },
+        "persistence": {
+          "owner": "khaemenes-topology-differential-geometry-course-v1",
+          "status": "declared"
+        },
+        "completion": {
+          "owner": "courses/topology-differential-geometry/records/course-completion-certificate.html",
+          "status": "evaluator-review"
+        }
+      },
+      "return_record": {
+        "status": "higher-learning-internal; no high-school return required"
+      }
+    },
+    {
+      "id": "advanced-geometric-topology",
+      "title": "Advanced Geometric Topology & Mathematical Physics",
+      "aliases": [],
+      "root": "courses/advanced-geometric-topology/",
+      "entry": "courses/advanced-geometric-topology/index.html",
+      "source": "courses/advanced-geometric-topology/README.md",
+      "architecture": "hybrid-legacy-v2",
+      "weeks": 36,
+      "sessions": 180,
+      "lessons": 180,
+      "units": null,
+      "mastery_target": 80,
+      "storage_key": "legacy-course-data/runtime",
+      "assessment_key": "hybrid formative records",
+      "prerequisite": "Advanced topology/geometry preparation; see course documentation",
+      "authority": {
+        "diagnostic": {
+          "owner": "courses/advanced-geometric-topology/index.html",
+          "status": "legacy/hybrid"
+        },
+        "weekly": {
+          "owner": "courses/advanced-geometric-topology/lesson.html",
+          "status": "hybrid-v2-w01d1+legacy-fallback"
+        },
+        "midterm": {
+          "owner": "courses/advanced-geometric-topology/assessments/",
+          "status": "legacy/hybrid"
+        },
+        "final": {
+          "owner": "courses/advanced-geometric-topology/assessments/",
+          "status": "legacy/hybrid"
+        },
+        "persistence": {
+          "owner": "courses/advanced-geometric-topology/assets/js/lesson-engine.js",
+          "status": "hybrid"
+        },
+        "completion": {
+          "owner": "courses/advanced-geometric-topology/README.md",
+          "status": "pending-normalization"
+        }
+      },
+      "return_record": {
+        "status": "not-applicable"
+      }
+    }
+  ]
+}
