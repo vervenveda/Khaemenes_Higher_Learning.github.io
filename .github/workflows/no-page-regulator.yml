@@ -14,4 +14,5 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: node tools/validate-no-page-regulator.mjs\n      - run: node tools/validate-higher-learning-landing-shell.mjs
+      - run: node tools/validate-no-page-regulator.mjs
+      - run: node tools/validate-higher-learning-landing-shell.mjs
