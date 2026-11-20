@@ -33,9 +33,20 @@ for(const [id,base,campusUrl,deptUrl] of courses){
   "https://vervenveda.com/Khaemenes_Academy.github.io/family/enroll/",
   "math-lesson.html"
  ],id+" landing navigation topology");
+ assert(landing.includes("higher-math-class-entry-v1.js"),id+" landing must load class enrollment gate");
+ assert(landing.includes("data-higher-math-enter-class"),id+" Enter Class must be account-gated");
+ const lesson=read(base+"math-lesson.html");
+ assert(lesson.includes("higher-math-class-entry-v1.js"),id+" lesson doorway must load class enrollment gate");
  assert(!/(?:href|url)=?["']?[^"'\s]*(?:course-console|assessments\/|diagnostic\/|records\/|labs\/)/i.test(landing),id+" public landing exposes internal route");
 }
 for(const forbidden of ["math-lesson.html","course-console.html","/assessments/","/diagnostic/"]){
  assert(!campus.includes('url:"'+forbidden), "main campus must not register direct internal course route "+forbidden);
 }
-console.log("PASS clean Higher Learning course topology: main campus and Mathematics Department terminate at 12 course landings; every landing exposes only Campus Tour, Enrollment, or Enter Class.");
+const gate=read("courses/shared/higher-math-class-entry-v1.js");
+assert(gate.includes("academy-family-registry"),"class gate identity authority");
+assert(gate.includes("family/enroll/"),"class gate enrollment destination");
+assert(gate.includes("failClosedWithoutLearner:true"),"class gate must fail closed without learner");
+assert(gate.includes("getLearner"),"class gate must resolve a real Academy learner");
+const engine=read("courses/shared/higher-math-lesson-engine-v1.js");
+assert(engine.includes("KhaemenesHigherMathClassEntry?.requireAccess"),"lesson engine must verify enrollment before rendering");
+console.log("PASS clean Higher Learning course topology: campus -> landing -> Tour/Enrollment/Class; Enter Class and direct lesson doorways fail closed to enrollment without an Academy learner account.");
