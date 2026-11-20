@@ -429,7 +429,7 @@ footer{background:#243038!important;color:#fff8e9!important;text-align:center!im
       </div>
     </section>
 
-    <section class="section section-light higher-about" aria-labelledby="aboutHigherTitle">
+    <section class="section section-light higher-about" id="campus-tour" aria-labelledby="aboutHigherTitle">
       <div class="section-inner">
         <div class="heading">
           <p class="kicker">About Higher Learning</p>
