@@ -7,7 +7,7 @@ var host=document.getElementById("assessmentRoot");
 if(!host||!Array.isArray(all))return;
 var ROOT_KEY="khaemenes-calculus1-course-v1";
 var HISTORY_PREFIX="khaemenes-calculus1-assessment-records-v2";
-var PASS=80, HISTORY_LIMIT=20;
+var PASS=80, HISTORY_LIMIT=20, READINESS_COMPAT_KEY="khaemenes-calculus1-assessment-records-v1";
 var esc=function(v){return String(v==null?"":v).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})};
 function activeLearner(){
  try{
