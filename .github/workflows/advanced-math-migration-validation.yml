@@ -5,6 +5,19 @@ on:
     branches: [main]
     paths:
       - 'courses/mathematics/**'
+      - 'tools/validate-higher-math-handoff-records.mjs'
+      - 'tools/validate-higher-math-execution-matrix.mjs'
+      - 'courses/advanced-geometric-topology/**'
+      - 'courses/topology-differential-geometry/**'
+      - 'courses/real-complex-analysis/**'
+      - 'courses/abstract-algebra/**'
+      - 'courses/statistics/**'
+      - 'courses/linear-algebra/**'
+      - 'courses/introduction-to-proofs/**'
+      - 'courses/discrete-mathematics/**'
+      - 'courses/differential-equations/**'
+      - 'courses/calculus-ii/**'
+      - 'courses/mathematics-execution-matrix-v1.json'
       - 'courses/shared/**'
       - 'tools/validate-advanced-math-migration.mjs'
       - '.github/workflows/advanced-math-migration-validation.yml'
@@ -30,3 +43,7 @@ jobs:
           node-version: '20'
       - name: Validate advanced mathematics migration
         run: node tools/validate-advanced-math-migration.mjs
+      - name: Validate mathematics continuum authority
+        run: node tools/validate-higher-math-execution-matrix.mjs
+      - name: Validate Precalculus and Calculus I handoff records
+        run: node tools/validate-higher-math-handoff-records.mjs
