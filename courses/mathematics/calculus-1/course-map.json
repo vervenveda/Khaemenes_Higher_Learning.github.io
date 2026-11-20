@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "course": {
     "id": "math-calculus-1",
-    "profile_course_id": "calculus-1",
+    "profile_course_id": "calculus-i",
     "code": "KH-MATH-CALC1",
     "title": "Khaemenes Academy Calculus I",
     "short_title": "Calculus I",
@@ -20,7 +20,13 @@
     "prerequisite": "Precalculus and Trigonometry readiness or equivalent demonstrated mastery",
     "calculator": "https://vervenveda.com/Khaemenes_High.github.io/courses/mathematics/tools/calculator/",
     "cad": "https://vervenveda.com/proresource_hub.github.io/Protools/Ohmic_CAD_Studio.html",
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "profile_course_aliases": [
+      "calculus-1"
+    ],
+    "assessment_key": "khaemenes-calculus1-assessment-records-v2",
+    "assessment_scope": "local-course-learner",
+    "return_record_status": "exportable-evidence-receipt; high-school import bridge pending certification"
   },
   "units": [
     {
