@@ -16,7 +16,7 @@
       "Honors / Extended"
     ],
     "storage_key": "khaemenes-differential-equations-college-course-v1",
-    "assessment_key": "khaemenes-differential-equations-assessment-records-v1",
+    "assessment_key": "khaemenes-differential-equations-assessment-records-v2",
     "pin_key": "khaemenes-higher-learning-pinned-courses-v1",
     "audience": "College and advanced independent learners ready to model, solve, simulate, and interpret changing systems in mathematics, physics, and engineering",
     "prerequisite": "Calculus I fluency in derivatives and integrals is required. Calculus II topics, complex numbers, and basic differential equations are developed or refreshed as needed.",
@@ -24,7 +24,10 @@
     "cad": "https://vervenveda.com/proresource_hub.github.io/Protools/Ohmic_CAD_Studio.html",
     "arcade": "https://vervenveda.com/arcade.github.io/",
     "version": "1.0.0",
-    "credit_guidance": "Designed as a rigorous first college course in ordinary differential equations; institutional credit decisions remain with the receiving institution."
+    "credit_guidance": "Designed as a rigorous first college course in ordinary differential equations; institutional credit decisions remain with the receiving institution.",
+    "legacy_assessment_key": "khaemenes-differential-equations-assessment-records-v1",
+    "assessment_scope": "local-course-learner",
+    "assessment_history_policy": "New attempts write to learner-scoped v2 history; legacy v1 history is preserved and never silently reassigned."
   },
   "units": [
     {
