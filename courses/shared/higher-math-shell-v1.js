@@ -20,7 +20,7 @@ function configureTools(){
    {type:"help",label:"Instructions",sub:"How tools work"}
   ],
   materials:{title:"Mathematics Materials",intro:"Lessons remain primary. Use approved tools for practice and verification.",links:[
-   {label:"Scientific Calculator",fallbackHref:"https://vervenveda.com/proresource_hub.github.io/Protools/Khaemenes_Scientific_Calculator_index.html"}
+   {label:"Scientific Calculator",href:"https://vervenveda.com/proresource_hub.github.io/Protools/Khaemenes_Scientific_Calculator_index.html"}
   ]},
   actions:{translate:({root})=>{translatorIntoTools();const p=root.querySelector("[data-vct-translator-panel]");if(p){root.querySelectorAll(".vct-pop").forEach(x=>{if(x!==p)x.hidden=true});p.hidden=!p.hidden}}},
   help:{title:"Higher Learning Mathematics Tools",paragraphs:["<strong>Lessons stay primary.</strong> Tools support mathematics; they do not replace proof, written work or mastery evidence.","<strong>Translator stays inside this dock.</strong> No separate translator bar is added to the course layout."]}
