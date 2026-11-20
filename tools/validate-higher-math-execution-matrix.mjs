@@ -29,7 +29,15 @@ for(const c of matrix.courses){
  }else if(c.architecture==="hybrid-legacy-v2"){
   hybrid++;
   assert.equal(c.id,"advanced-geometric-topology");
-  assert.match(read(c.source),/Only W01D1 receives the rich module/i);
+  const manifest=JSON.parse(read(c.source));
+  assert.equal(manifest.architecture,"hybrid-legacy-v2");
+  assert.equal(manifest.curriculum?.weeks,36);
+  assert.equal(manifest.curriculum?.sessions,180);
+  assert.deepEqual(manifest.curriculum?.migrated_rich_modules,["W01D1"]);
+  assert.equal(manifest.release_boundary?.current_v2_rich_session_count,1);
+  assert.equal(manifest.release_boundary?.current_legacy_fallback_session_count,179);
+  assert.equal(manifest.release_boundary?.full_v2_migration,false);
+  assert.match(manifest.curriculum?.retirement_rule||"",/course-data\.js/);
  }
 }
 assert.equal(full,11);
