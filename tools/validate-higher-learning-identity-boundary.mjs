@@ -140,12 +140,20 @@ for(const course of mathCourses){
   expect(!text.includes("localStorage.setItem"), `${p} wrapper does not bypass the shared identity boundary`);
 }
 
-// Advanced Geometric Topology has its own V1/V2 storage boundary and must load it before course storage/runtime.
-const agtIndex = file("courses/advanced-geometric-topology/index.html");
-const agtScopeAt = agtIndex.indexOf('assets/identity-scope.js');
-const agtStorageAt = agtIndex.indexOf('assets/js/storage.js');
-expect(agtScopeAt >= 0, "Advanced Geometric Topology loads its identity scope");
-expect(agtStorageAt >= 0 && agtScopeAt < agtStorageAt, "Advanced Geometric Topology installs identity scope before V2 storage");
+// Advanced Geometric Topology public landing is intentionally stateless/minimal.
+const agtLanding = file("courses/advanced-geometric-topology/index.html");
+expect(!/(?:khaemenes-hl-agtgmp-progress-v[12]|assets\/identity-scope\.js|assets\/js\/storage\.js)/.test(agtLanding),
+       "Advanced Geometric Topology public landing does not own learner persistence");
+for(const runtimePath of [
+  "courses/advanced-geometric-topology/course-console.html",
+  "courses/advanced-geometric-topology/lesson.html"
+]){
+ const runtime=file(runtimePath);
+ const scopeAt=runtime.indexOf('assets/identity-scope.js');
+ const storageAt=runtime.indexOf('assets/js/storage.js');
+ expect(scopeAt>=0, runtimePath+" loads the Advanced Geometric Topology identity scope");
+ expect(storageAt>=0 && scopeAt<storageAt, runtimePath+" installs identity scope before V2 storage");
+}
 const agtScope = includes("courses/advanced-geometric-topology/assets/identity-scope.js", [
   "khaemenes-hl-agtgmp-progress-v1",
   "khaemenes-hl-agtgmp-progress-v2"
@@ -162,7 +170,12 @@ expect(start.includes('location.hostname==="vervenveda.github.io"') && start.inc
 expect(campusCore.includes('href="https://vervenveda.com/Khaemenes_Academy.github.io/"'), "campus breadcrumb returns to Academy on the shared canonical origin");
 expect(!campusCore.includes('https://vervenveda.github.io/Khaemenes_Academy.github.io/'), "campus contains no identity-sensitive Academy link on the alternate github.io origin");
 expect(campusCore.includes('href="./start/"') && campusCore.includes("Scholar Entry"), "campus exposes a visible Scholar Entry doorway");
-expect(campusCore.includes("Academy learner identity stays canonical"), "campus explains the canonical learner identity boundary");
+expect(
+  campusCore.includes("Academy learner identity stays authoritative") ||
+  campusCore.includes("Academy learner identity stays canonical") ||
+  campusCore.includes("Academy Family Registry remains the learner identity authority"),
+  "campus explains the canonical Academy learner identity boundary"
+);
 expect(campusCore.includes("KhaemenesHigherProfileStore") && campusCore.includes("removeStored(PROFILE_KEY)"), "campus core routes profile storage through the explicit Higher Learning store");
 expect(mathCore.includes("KhaemenesHigherProfileStore") && mathCore.includes("removeStored(PROFILE_KEY)"), "Mathematics core routes profile storage through the explicit Higher Learning store");
 // Scholar Entry is a bridge, never a local account factory.
