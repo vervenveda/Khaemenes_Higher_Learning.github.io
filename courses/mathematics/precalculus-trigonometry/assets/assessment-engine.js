@@ -27,6 +27,17 @@ function save(x){
  const KEY=key();if(!KEY)return false;
  try{localStorage.setItem(KEY,JSON.stringify(x));return true}catch{return false}
 }
+function publishReadinessCompatibility(record){
+ if(cfg.recordKey!=="diagnostic"||!record)return false;
+ const contract=window.KhaemenesCourseEntryContract,profile=contract?.readAcademyProfile?.();
+ if(!contract?.writeJSON||!profile?.learnerId)return false;
+ try{
+  return contract.writeJSON(LEGACY_KEY,{diagnostic:{title:cfg.title||"Readiness Diagnostic",attempts:[{
+   date:record.date,score:record.score,right:record.right,total:record.total,learnerId:profile.learnerId,
+   source:"readiness-compatibility-summary-v1",practicePassed:record.practicePassed===true
+  }]}},profile)!==false;
+ }catch{return false}
+}
 function shuffle(a){const x=[...a];for(let i=x.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[x[i],x[j]]=[x[j],x[i]]}return x}
 function pool(){
  let p=[...all];
@@ -62,8 +73,10 @@ function score(token){
  const score=Math.round(right/set.length*100),data=records(),key=cfg.recordKey||"assessment";
  data[key]=data[key]||{title:cfg.title||key,attempts:[]};
  const learner=activeLearner();
-data[key].attempts.push({date:new Date().toISOString(),score,right,total:set.length,missed,learner:document.getElementById("assessmentLearner").value.trim(),learnerId:learner?.id||null,pathway:document.getElementById("assessmentPathway").value,source:"public-formative-practice",practicePassed:score>=80});
+const attempt={date:new Date().toISOString(),score,right,total:set.length,missed,learner:document.getElementById("assessmentLearner").value.trim(),learnerId:learner?.id||null,pathway:document.getElementById("assessmentPathway").value,source:"public-formative-practice",practicePassed:score>=80};
+ data[key].attempts.push(attempt);
  save(data);
+ publishReadinessCompatibility(attempt);
  document.getElementById("assessmentMessage").innerHTML=`<span class="score">${score}%</span> · ${right}/${set.length} · Best ${Math.max(...data[key].attempts.map(x=>x.score))}%`;
  document.getElementById("submitAssessment").disabled=true;
 }
