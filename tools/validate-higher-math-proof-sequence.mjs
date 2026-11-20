@@ -28,8 +28,8 @@ for(const id of ids){
  assert(app.includes("written proof")||app.includes("written-proof"),id+" learner-facing proof requirement missing");
  assert(app.includes("weighted average never substitutes"),id+" noncompensatory gradebook notice missing");
  assert(app.includes("data-higher-math-evidence-receipt"),id+" evidence receipt control missing");
- const html=read(c.entry);
- assert(html.includes("higher-math-evidence-receipt-v1.js"),id+" shared receipt exporter missing");
+ const consoleHtml=read(c.root+"course-console.html");
+ assert(consoleHtml.includes("higher-math-evidence-receipt-v1.js"),id+" course-records console missing shared receipt exporter");
 }
 const intro=matrix.courses.find(x=>x.id==="introduction-to-proofs").progression;
 assert(intro.recommended_next.includes("abstract-algebra")&&intro.recommended_next.includes("real-complex-analysis"));
