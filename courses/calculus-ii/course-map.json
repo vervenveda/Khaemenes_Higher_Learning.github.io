@@ -16,7 +16,7 @@
       "Honors / Extended"
     ],
     "storage_key": "khaemenes-calculus2-college-course-v1",
-    "assessment_key": "khaemenes-calculus2-assessment-records-v1",
+    "assessment_key": "khaemenes-calculus2-assessment-records-v2",
     "pin_key": "khaemenes-higher-learning-pinned-courses-v1",
     "audience": "College-level and advanced independent learners who have completed Calculus I or demonstrated equivalent mastery",
     "prerequisite": "Calculus I with fluent algebra, trigonometry, differentiation, definite integration, substitution, and mathematical communication",
@@ -24,7 +24,10 @@
     "cad": "https://vervenveda.com/proresource_hub.github.io/Protools/Ohmic_CAD_Studio.html",
     "arcade": "https://vervenveda.com/arcade.github.io/",
     "version": "1.1.0",
-    "credit_guidance": "Designed as a rigorous second-semester college calculus course; institutional credit decisions remain with the receiving institution."
+    "credit_guidance": "Designed as a rigorous second-semester college calculus course; institutional credit decisions remain with the receiving institution.",
+    "legacy_assessment_key": "khaemenes-calculus2-assessment-records-v1",
+    "assessment_scope": "local-course-learner",
+    "assessment_history_policy": "New attempts write to learner-scoped v2 history; legacy v1 history is preserved and never silently reassigned."
   },
   "units": [
     {
