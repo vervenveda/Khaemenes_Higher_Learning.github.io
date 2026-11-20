@@ -55,13 +55,20 @@ const CONFIG={
   assessmentPrefix:"khaemenes-real-complex-analysis-assessment-v2",
   legacyAssessmentKey:"khaemenes-real-complex-analysis-assessment-v1",
   proofReviewRequired:true
+ },
+ "topology-differential-geometry":{
+  title:"Topology & Differential Geometry",courseId:"topology-differential-geometry",aliases:[],
+  rootKey:"khaemenes-topology-differential-geometry-course-v1",
+  assessmentPrefix:"khaemenes-topology-differential-geometry-assessment-v2",
+  legacyAssessmentKey:"khaemenes-topology-differential-geometry-assessment-v1",
+  proofReviewRequired:true
  }
 };
 function config(){
  const path=String(location.pathname);
  let m=path.match(/\/courses\/mathematics\/(precalculus-trigonometry|calculus-1)(?:\/|$)/);
  if(m)return CONFIG[m[1]];
- m=path.match(/\/courses\/(calculus-ii|differential-equations|linear-algebra|introduction-to-proofs|abstract-algebra|real-complex-analysis)(?:\/|$)/);
+ m=path.match(/\/courses\/(calculus-ii|differential-equations|linear-algebra|introduction-to-proofs|abstract-algebra|real-complex-analysis|topology-differential-geometry)(?:\/|$)/);
  return m?CONFIG[m[1]]:null;
 }
 function parse(key){try{const raw=localStorage.getItem(key);return raw?JSON.parse(raw):null}catch{return null}}
