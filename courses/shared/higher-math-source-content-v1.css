@@ -34,3 +34,21 @@
 .khm-source .card p,.khm-source .card li{color:var(--hm-muted)}
 .khm-source .work-lines{display:grid;gap:13px;margin-top:18px}.khm-source .work-lines span{display:block;height:18px;border-bottom:1px solid #8b8b8b}
 @media(max-width:900px){.khm-source .col3,.khm-source .col4,.khm-source .col6,.khm-source .col8{grid-column:1/-1}}
+
+
+/* Calculus II source-content bridge */
+.khm-source .lesson-main-card,.khm-source .lesson-section,.khm-source .application-card,.khm-source .reflection-card,.khm-source .pathway-panel,.khm-source .proof-note,.khm-source .lesson-record-card{padding:20px;border:1px solid var(--hm-soft);border-radius:7px;background:#fff}
+.khm-source .lesson-section+.lesson-section{margin-top:14px}
+.khm-source .concept-grid-college,.khm-source .worked-grid,.khm-source .quick-check-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.khm-source .concept-step,.khm-source .worked-card,.khm-source .lesson-check-question{padding:16px;border:1px solid var(--hm-soft);border-radius:7px;background:#fff}
+.khm-source .concept-step h3,.khm-source .worked-card h3,.khm-source .application-card h3,.khm-source .pathway-panel h3{margin-top:0;font-family:Cinzel,Georgia,serif;font-weight:400}
+.khm-source .objective-list,.khm-source .lesson-checklist,.khm-source .lesson-route-list{display:grid;gap:8px;padding-left:22px}
+.khm-source .pathway-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.khm-source .pathway-tabs button,.khm-source .lesson-check-options button{min-height:44px;padding:9px 14px;border:1px solid var(--hm-line);border-radius:7px;background:#fff;color:#202724;font:inherit}
+.khm-source .lesson-check-options{display:grid;gap:8px;margin-top:10px}
+.khm-source .lesson-check-feedback{margin-top:10px;padding:11px;border-left:3px solid var(--hm-teal);border-radius:7px;background:#f7fbfa}
+.khm-source .proof-note{border-left:4px solid var(--hm-purple)}
+.khm-source .worksheet-section{margin-top:18px}
+.khm-source .worksheet-footer{margin-top:16px;padding-top:12px;border-top:1px solid var(--hm-soft);color:var(--hm-muted)}
+.khm-source .record-actions{display:flex;gap:8px;flex-wrap:wrap}
+@media(max-width:760px){.khm-source .concept-grid-college,.khm-source .worked-grid,.khm-source .quick-check-grid{grid-template-columns:1fr}}
