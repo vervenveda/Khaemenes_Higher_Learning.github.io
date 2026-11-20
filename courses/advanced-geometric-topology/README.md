@@ -28,3 +28,12 @@ Evidence notes survive navigation and refresh.
 Week 1 Day 2 still loads using the legacy fallback without a JavaScript error.
 Navigation through old sessions remains intact.
 Do not archive course-data.js yet.
+
+
+Hybrid runtime contract
+- Machine-readable authority: `hybrid-runtime-contract-v1.json`
+- Current architecture: hybrid legacy/V2
+- Rich migrated sessions: W01D1 only
+- Legacy fallback sessions: 179
+- V2 concept score >=80% is conceptual evidence only; proof/lab/correction/defense streams remain separately authoritative.
+- Do not archive `assets/course-data.js` until all 180 sessions have accepted rich replacements.
