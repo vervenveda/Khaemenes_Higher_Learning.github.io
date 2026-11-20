@@ -8,6 +8,7 @@ on:
       - 'tools/validate-higher-math-handoff-records.mjs'
       - 'tools/validate-higher-math-college-core-chain.mjs'
       - 'tools/validate-higher-math-proof-sequence.mjs'
+      - 'tools/validate-higher-math-advanced-geometry-boundary.mjs'
       - 'tools/validate-higher-math-execution-matrix.mjs'
       - 'courses/advanced-geometric-topology/**'
       - 'courses/topology-differential-geometry/**'
@@ -53,3 +54,5 @@ jobs:
         run: node tools/validate-higher-math-college-core-chain.mjs
       - name: Validate proof-based mathematics sequence
         run: node tools/validate-higher-math-proof-sequence.mjs
+      - name: Validate advanced geometry hybrid boundary
+        run: node tools/validate-higher-math-advanced-geometry-boundary.mjs
