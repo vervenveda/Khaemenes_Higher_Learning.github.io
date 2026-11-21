@@ -6,7 +6,7 @@ const read=p=>fs.readFileSync(path.join(root,p),"utf8");
 const exists=p=>fs.existsSync(path.join(root,p));
 const matrix=JSON.parse(read("courses/mathematics-execution-matrix-v1.json"));
 assert.equal(matrix.policy.mastery_floor_percent,80);
-assert.equal(matrix.courses.length,12);
+assert.equal(matrix.courses.length,13);
 const ids=new Set();
 let full=0,hybrid=0;
 for(const c of matrix.courses){
@@ -40,6 +40,6 @@ for(const c of matrix.courses){
   assert.match(manifest.curriculum?.retirement_rule||"",/course-data\.js/);
  }
 }
-assert.equal(full,11);
+assert.equal(full,12);
 assert.equal(hybrid,1);
-console.log("PASS Higher Learning math matrix: 12 courses, 11 full 36x180x92 maps, 1 explicit hybrid legacy/V2 course.");
+console.log("PASS Higher Learning math matrix: 13 courses, 12 full 36x180x92 maps, 1 explicit hybrid legacy/V2 course.");
