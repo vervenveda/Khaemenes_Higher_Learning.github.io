@@ -22,6 +22,9 @@ on:
       - 'tools/validate-abstract-algebra-higher-math-engine-wiring.mjs'
       - 'tools/validate-topology-differential-geometry-higher-math-engine-wiring.mjs'
       - 'tools/validate-higher-math-execution-matrix.mjs'
+      - 'tools/validate-mathematics-continuum-hardening.mjs'
+      - 'courses/mathematics-progression-graph-v1.json'
+      - 'courses/calculus-iii-multivariable/**'
       - 'courses/advanced-geometric-topology/**'
       - 'courses/topology-differential-geometry/**'
       - 'tools/validate-topology-differential-geometry-higher-math-engine-wiring.mjs'
@@ -69,6 +72,8 @@ jobs:
         run: node tools/validate-advanced-math-migration.mjs
       - name: Validate mathematics continuum authority
         run: node tools/validate-higher-math-execution-matrix.mjs
+      - name: Validate mathematics continuum hardening
+        run: node tools/validate-mathematics-continuum-hardening.mjs
       - name: Validate Precalculus and Calculus I handoff records
         run: node tools/validate-higher-math-handoff-records.mjs
       - name: Validate College Core mathematics chain
