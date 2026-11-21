@@ -1,9 +1,23 @@
 # Calculus III · Multivariable & Vector Calculus
 
-**Status: planned, not released.**
+A 36-week / 180-session / 92-lesson Higher Learning course closing the prerequisite gap between Calculus II and Topology & Differential Geometry.
 
-This directory records the authoritative build target for the missing course identified by the mathematics-continuum forensic audit.
+## Course sequence
 
-It must not be presented as a completed course, used to unlock Topology & Differential Geometry, or added to the active Higher Learning execution matrix until the full 13-unit / 36-week / 180-session / 92-lesson package, assessments, learner records, and regression validators are built and passed.
+13 units progress through 3D vectors, space curves, multivariable limits, partial derivatives, gradients and optimization, multiple integrals, coordinate changes, vector fields, line integrals, Green's theorem, surface integrals, divergence/curl, Stokes' theorem, the Divergence theorem, and a geometry-facing capstone.
 
-The course closes the current prerequisite gap between Calculus II and Topology & Differential Geometry by covering multivariable limits, partial derivatives, gradients, Jacobians, multiple integrals, vector fields, line/surface integrals, and the Green/Stokes/Divergence theorem sequence.
+## Evidence
+
+- 40-prompt readiness diagnostic
+- 13 ten-prompt unit mastery reviews
+- 60-prompt midterm
+- 100-prompt comprehensive final
+- learner-scoped local record
+- capstone / oral defense completion record
+- 80% mastery floor where objective or evaluator-scored gates apply
+- corrections remain required below threshold
+- browser-local work does not independently award institutional credit
+
+## Progression boundary
+
+This course is the formal multivariable/vector-calculus prerequisite named by Topology & Differential Geometry. Completion evidence must be reviewed; mere route access or lesson preview is not equivalent to mastery.

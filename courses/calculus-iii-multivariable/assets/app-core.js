@@ -1,0 +1,11 @@
+(()=>{"use strict";
+const COURSE="calculus-iii-multivariable",ROOT="khaemenes-calculus3-multivariable-course-v1";
+function parse(k){try{return JSON.parse(localStorage.getItem(k)||"null")}catch{return null}}
+function activeAcademy(){try{const a=parse("khaemenes_active_learner_v1"),r=parse("khaemenes_family_registry_v1"),id=typeof a==="string"?a:a?.learnerId,l=id?r?.learners?.[id]:null;return l?.learnerId===id?{learnerId:String(id),name:String(l.nickname||l.name||"Learner")}:null}catch{return null}}
+function state(){const l=activeAcademy();return{schema:"khaemenes-calculus3-record-v1",courseId:COURSE,learner:l,updatedAt:new Date().toISOString(),formal:{diagnostic:null,midterm:null,final:null,capstone:null},notes:"",authority:"local learner record; evaluator review required for formal completion"}}
+function key(){const l=activeAcademy();return l?"khaemenes-calculus3-record-v1:"+encodeURIComponent(l.learnerId):null}
+function load(){const k=key();return k?(parse(k)||state()):state()}
+function save(x){const k=key();if(!k)return false;try{const raw=JSON.stringify(x);localStorage.setItem(k,raw);return localStorage.getItem(k)===raw}catch{return false}}
+function render(){const root=document.querySelector("#recordRoot");if(!root)return;const s=load(),l=s.learner;root.innerHTML='<section class="lesson-section"><h1>Calculus III Learner Record</h1><p>'+(l?l.name+" · "+l.learnerId:"No Academy learner is currently bound.")+'</p><p>This local record never awards credit by itself. Diagnostic, unit mastery, midterm, final, corrections, portfolio and capstone defense remain separate evidence streams.</p><p><a href="diagnostic/">Readiness Diagnostic</a> · <a href="assessments/midterm.html">Midterm</a> · <a href="assessments/final.html">Final</a></p><button id="exportRecord" type="button">Export Learner Record</button></section>';document.querySelector("#exportRecord")?.addEventListener("click",()=>{const blob=new Blob([JSON.stringify(load(),null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="calculus-iii-learner-record.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)})}
+addEventListener("DOMContentLoaded",render,{once:true});window.KhaemenesCalculus3Record=Object.freeze({load,save,key,activeAcademy});
+})();
