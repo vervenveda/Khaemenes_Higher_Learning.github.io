@@ -1,0 +1,28 @@
+name: Associate-Level Certificate Catalog
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'associate-certificate/**'
+      - 'tools/validate-associate-certificate-catalog.mjs'
+      - '.github/workflows/associate-certificate-catalog-validation.yml'
+      - 'index-core.txt'
+  pull_request:
+    paths:
+      - 'associate-certificate/**'
+      - 'tools/validate-associate-certificate-catalog.mjs'
+      - 'index-core.txt'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: node tools/validate-associate-certificate-catalog.mjs
