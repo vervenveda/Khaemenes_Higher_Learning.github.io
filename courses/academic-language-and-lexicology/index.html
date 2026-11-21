@@ -40,6 +40,15 @@ main{padding:33px 0 55px}
 .feature-card{min-height:180px;padding:22px;border:1px solid var(--line);border-radius:7px;background:var(--paper-bright);text-align:center}
 .feature-card h3{margin:0 0 9px;font:400 24px/1.25 var(--display)}
 .feature-card p{margin:0;color:var(--muted)}
+.sovereign-dictionary-panel .lookup-controls{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:12px;max-width:740px;margin:14px auto}
+.sovereign-dictionary-panel input{min-height:44px;width:100%;padding:10px 12px;background:#fff;color:var(--ink);border:1px solid #a89a79;border-radius:7px}
+.sovereign-dictionary-panel .lookup-results{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.sovereign-dictionary-panel .lookup-result{padding:16px;border:1px solid var(--line);background:var(--paper);border-radius:7px;min-width:0;overflow-wrap:anywhere}
+.sovereign-dictionary-panel .lookup-result h3{margin:0 0 7px;font:400 24px/1.3 var(--display)}
+.sovereign-dictionary-panel .lookup-result p{margin:6px 0;font-size:16px;text-align:left}
+.sovereign-dictionary-panel .lookup-result .lookup-meta{color:var(--muted)}
+.sovereign-dictionary-panel .lookup-status{font-size:16px}
+@media(max-width:700px){.sovereign-dictionary-panel .lookup-results{grid-template-columns:1fr}.sovereign-dictionary-panel .lookup-controls{grid-template-columns:1fr}}
 .workspace-head{text-align:center;margin:33px 0 18px}
 .workspace-head h2{margin:0;font:400 33px/1.2 var(--display)}
 .workspace-head p{color:var(--muted)}
@@ -135,6 +144,18 @@ textarea{width:100%;min-height:110px;padding:11px;border:1px solid #cbbda8;borde
         <p>Complete the written investigations and save evidence for teacher review; the automatic score assesses only the objective questions.</p>
         <p id="status" class="muted" role="status" aria-live="polite">Loading the local word bank…</p>
       </section>
+      <section class="panel sovereign-dictionary-panel" aria-labelledby="sovereignDictionaryTitle">
+        <h2 id="sovereignDictionaryTitle">Sovereign Dictionary · Word Inquiry</h2>
+        <p>Consult the source-attributed Linguistics dictionary for definitions, examples and explicitly listed bilingual vocabulary. This reference lookup is separate from course mastery, teacher review and your written responses.</p>
+        <div class="lookup-controls">
+          <div><label for="sovereignLookupTerm">Look up a word or meaning</label>
+          <input id="sovereignLookupTerm" type="search" maxlength="120" autocomplete="off" placeholder="Try morphology, polysemy, or cat"></div>
+          <button id="sovereignLookupButton" type="button">Search Dictionary</button>
+        </div>
+        <p class="lookup-status muted" role="status" aria-live="polite" id="sovereignLookupStatus">Loading the Linguistics reference dictionary…</p>
+        <div class="lookup-results" id="sovereignLookupResults" aria-live="polite"></div>
+        <p><a href="https://vervenveda.com/Khaemenes_Linguistics.github.io/apps/translator.html#dictionaryTitle">Open full Sovereign Dictionary &amp; Thesaurus</a></p>
+      </section>
       <div id="units"></div>
     </section>
   </div>
@@ -147,6 +168,11 @@ textarea{width:100%;min-height:110px;padding:11px;border:1px solid #cbbda8;borde
   </div>
 </footer>
 
+<!-- Canonical Linguistics dictionary assets; no competing local dictionary runtime. -->
+<script src="https://vervenveda.com/Khaemenes_Linguistics.github.io/assets/sovereign-dictionary.generated.js" defer></script>
+<script src="https://vervenveda.com/Khaemenes_Linguistics.github.io/assets/sovereign-dictionary-v1-errata.js" defer></script>
+<script src="https://vervenveda.com/Khaemenes_Linguistics.github.io/assets/khaemenes-lexicon-expansion.js" defer></script>
+<script src="https://vervenveda.com/Khaemenes_Linguistics.github.io/assets/khaemenes-interlingual-core.js" defer></script>
 <script>
 (()=>{
 "use strict";
@@ -160,6 +186,41 @@ function shuffled(arr){let a=arr.slice();for(let i=a.length-1;i>0;i--){let j=Mat
 function unlocked(n){return n===1||Number(progress.mastery[n-1]||0)>=80}
 function render(){if(!data)return;const host=$("units");host.replaceChildren();const search=$("findTerm").value.trim().toLocaleLowerCase();for(const u of data.units){let rows=data.terms.filter(t=>t.unit===u.number);let matches=rows.filter(t=>(t.term+" "+t.definition+" "+t.context).toLocaleLowerCase().includes(search));let d=elem("details",undefined,"unit");d.open=u.number===1||(search.length>0&&matches.length>0);let sum=elem("summary",`Unit ${u.number} · ${u.title} ${unlocked(u.number)?"":"— locked"}`);d.append(sum);let body=elem("div",undefined,"unit-body");body.append(elem("p",u.focus));if(!unlocked(u.number)){body.append(elem("p","Master the preceding unit at 80% to unlock these activities.","muted"));d.append(body);host.append(d);continue}if(search&&!matches.length){body.append(elem("p","No matching terms in this unit.","muted"))}for(let t of matches){let card=elem("article",undefined,"entry");card.append(elem("h3",t.term));card.append(elem("p",t.definition));card.append(elem("p",t.context));card.append(elem("p",t.task,"muted"));let label=elem("label","Your evidence-based response");let textarea=elem("textarea");textarea.setAttribute("aria-label","Written investigation: "+t.term);textarea.value=progress.responses[t.id]||"";textarea.addEventListener("input",()=>{progress.responses[t.id]=textarea.value;save()});card.append(label,textarea);body.append(card)}
 let section=elem("section",undefined,"assessment");section.append(elem("h3","Unit checkpoint · 80% mastery"));section.append(elem("p","Four randomized questions. Each requires choosing the precise disciplinary term for its definition. Reattempts reshuffle questions and options; written work is reviewed separately.","muted"));let form=elem("form"),list=shuffled(rows);for(let [i,t] of list.entries()){let field=elem("fieldset",undefined,"question");field.style.border="0";field.style.padding="0";let legend=elem("legend",`${i+1}. ${t.definition}`);field.append(legend);for(let choice of shuffled(t.choices)){let label=elem("label",undefined,"choice");let input=document.createElement("input");input.type="radio";input.name="q"+i;input.value=choice;label.append(input,document.createTextNode(" "+choice));field.append(label)}form.append(field)}let submit=elem("button","Submit checkpoint");submit.type="submit";form.append(submit);let result=elem("p",undefined,"result");result.setAttribute("role","status");form.addEventListener("submit",e=>{e.preventDefault();let answers=list.map((t,i)=>form.querySelector('input[name="q'+i+'"]:checked'));if(answers.some(x=>!x)){result.textContent="Answer all four questions before submitting.";return}let hits=answers.filter((x,i)=>x.value===list[i].term).length;let score=Math.round(hits/list.length*100);progress.mastery[u.number]=Math.max(Number(progress.mastery[u.number]||0),score);save();result.textContent=`Checkpoint: ${hits}/${list.length} · ${score}% · ${score>=80?"Mastery achieved.":"Review the vocabulary and try again."}`;if(score>=80)render()});section.append(form,result);body.append(section);d.append(body);host.append(d)}$("status").textContent=`${data.terms.length} reviewed English terms · ${data.units.length} foundation modules · Progress stored on this device.`}
+/* Supplemental source-attributed dictionary lookup; never changes course answers or mastery. */
+function dictionaryInquiry(){
+ const result=$("sovereignLookupResults"),status=$("sovereignLookupStatus");
+ result.replaceChildren();
+ const query=$("sovereignLookupTerm").value.trim();
+ if(!query){status.textContent="Enter a word to search the local Linguistics reference collection.";return}
+ const api=window.KhaemenesSovereignTranslate;
+ if(!api?.searchDictionary||!window.KhaemenesSovereignDictionary?.entries?.length){
+   status.textContent="Dictionary resources unavailable. Course lessons and assessments still work.";return;
+ }
+ const rows=api.searchDictionary(query,{limit:16,includeCreative:false});
+ status.textContent=rows.length?rows.length+" source-attributed records; published source material is not automatically an approved translation.":"No matching source entry. Try a different word or consult the full dictionary.";
+ for(const entry of rows){
+   const item=elem("article",undefined,"lookup-result");
+   item.append(elem("h3",entry.term));
+   item.append(elem("p",entry.definition||"Translation-only source record; no independently provided definition."));
+   if(entry.simpleDefinition)item.append(elem("p","Simplified: "+entry.simpleDefinition));
+   if(entry.example)item.append(elem("p","Example: "+entry.example));
+   if(entry.partOfSpeech)item.append(elem("p",entry.partOfSpeech,"lookup-meta"));
+   if(entry.editorial?.status)item.append(elem("p","Editorial status: "+entry.editorial.status,"lookup-meta"));
+   const bilingual=Object.entries(entry.translations||{}).filter(([language,value])=>typeof value==="string"&&value.trim());
+   if(bilingual.length)item.append(elem("p","Source-provided bilingual vocabulary (unreviewed): "+bilingual.map(([language,value])=>language+": "+value).join(" · "),"lookup-meta"));
+   if(entry.provenance?.repository&&entry.provenance?.path){
+     const link=document.createElement("a");link.textContent="View original source";link.target="_blank";link.rel="noopener noreferrer";
+     link.href="https://github.com/"+entry.provenance.repository+"/blob/"+encodeURIComponent(entry.provenance.sha||"main")+"/"+entry.provenance.path.split("/").map(encodeURIComponent).join("/");
+     item.append(link);
+   }
+   result.append(item);
+ }
+}
+$("sovereignLookupButton").addEventListener("click",dictionaryInquiry);
+$("sovereignLookupTerm").addEventListener("keydown",event=>{if(event.key==="Enter"){event.preventDefault();dictionaryInquiry()}});
+window.addEventListener("load",()=>{
+ $("sovereignLookupStatus").textContent=window.KhaemenesSovereignTranslate?.searchDictionary?"Local Linguistics dictionary ready. Search without changing grades.":"Dictionary unavailable; course curriculum remains independent.";
+});
 $("findTerm").addEventListener("input",render);$("clearSearch").onclick=()=>{$("findTerm").value="";render()};
 $("exportBtn").onclick=()=>{let blob=new Blob([JSON.stringify({format:"KHAE_HL_ACADEMIC_LANGUAGE_V1",exported:new Date().toISOString(),progress},null,2)],{type:"application/json"});let url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="khaemenes-academic-language-progress.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1200)};
 $("importFile").addEventListener("change",async e=>{let f=e.target.files?.[0];if(!f)return;try{let j=JSON.parse(await f.text());if(j.format!=="KHAE_HL_ACADEMIC_LANGUAGE_V1"||!j.progress||typeof j.progress.mastery!=="object"||typeof j.progress.responses!=="object"||Array.isArray(j.progress.mastery)||Array.isArray(j.progress.responses))throw Error("Invalid backup");progress=j.progress;save();render();$("status").textContent="Backup imported successfully."}catch(err){$("status").textContent="Import rejected: "+err.message}});
