@@ -1,0 +1,1261 @@
+{
+  "schema_version": "1.0",
+  "course": {
+    "id": "higher-learning-calculus-iii-multivariable",
+    "profile_course_id": "calculus-iii-multivariable",
+    "code": "KH-HL-MATH-CALC3",
+    "title": "Khaemenes Higher Learning Calculus III · Multivariable & Vector Calculus",
+    "short_title": "Calculus III · Multivariable & Vector Calculus",
+    "duration_weeks": 36,
+    "sessions": 180,
+    "lesson_count": 92,
+    "mastery_target": 80,
+    "pathways": [
+      "Foundation",
+      "Core",
+      "Honors / Extended"
+    ],
+    "storage_key": "khaemenes-calculus3-multivariable-course-v1",
+    "assessment_key": "khaemenes-calculus3-multivariable-assessment-records-v2",
+    "legacy_assessment_key": "khaemenes-calculus3-multivariable-assessment-records-v1",
+    "assessment_scope": "local-course-learner",
+    "assessment_history_policy": "New attempts write to learner-scoped v2 history; legacy v1 history is preserved and never silently reassigned.",
+    "pin_key": "khaemenes-higher-learning-pinned-courses-v1",
+    "audience": "College-level and advanced independent learners who have completed Calculus II or demonstrated equivalent mastery",
+    "prerequisite": "Calculus II or equivalent mastery of single-variable differentiation, integration, sequences/series, parametric curves, polar coordinates and mathematical communication",
+    "credit_guidance": "Designed as a rigorous third-semester college calculus course; institutional credit decisions remain with the receiving institution.",
+    "version": "1.0.0"
+  },
+  "units": [
+    {
+      "number": 1,
+      "title": "Three-Dimensional Coordinates, Vectors & Geometry",
+      "essential": "How do coordinates, vectors, dot/cross products, lines and planes describe geometry in three dimensions?",
+      "project": "3D Navigation & Geometry Portfolio",
+      "standards": [
+        "‖v‖=√(v·v) · a·b=‖a‖‖b‖cosθ · ‖a×b‖=‖a‖‖b‖sinθ"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        1,
+        2,
+        3
+      ],
+      "lessons": [
+        {
+          "id": "u01-l01",
+          "number": 1,
+          "title": "Coordinates and Distance in Three Dimensions",
+          "week": 1,
+          "unit": 1,
+          "unit_title": "Three-Dimensional Coordinates, Vectors & Geometry",
+          "essential": "How do coordinates, vectors, dot/cross products, lines and planes describe geometry in three dimensions?",
+          "project": "3D Navigation & Geometry Portfolio",
+          "focus": "representing points in ℝ³ and computing distance, displacement and midpoint"
+        },
+        {
+          "id": "u01-l02",
+          "number": 2,
+          "title": "Vectors, Magnitude and Direction",
+          "week": 1,
+          "unit": 1,
+          "unit_title": "Three-Dimensional Coordinates, Vectors & Geometry",
+          "essential": "How do coordinates, vectors, dot/cross products, lines and planes describe geometry in three dimensions?",
+          "project": "3D Navigation & Geometry Portfolio",
+          "focus": "interpreting vectors geometrically and algebraically"
+        },
+        {
+          "id": "u01-l03",
+          "number": 3,
+          "title": "Dot Product, Angles and Orthogonality",
+          "week": 1,
+          "unit": 1,
+          "unit_title": "Three-Dimensional Coordinates, Vectors & Geometry",
+          "essential": "How do coordinates, vectors, dot/cross products, lines and planes describe geometry in three dimensions?",
+          "project": "3D Navigation & Geometry Portfolio",
+          "focus": "using inner products to measure angle, projection and perpendicularity"
+        },
+        {
+          "id": "u01-l04",
+          "number": 4,
+          "title": "Vector Projections and Work",
+          "week": 2,
+          "unit": 1,
+          "unit_title": "Three-Dimensional Coordinates, Vectors & Geometry",
+          "essential": "How do coordinates, vectors, dot/cross products, lines and planes describe geometry in three dimensions?",
+          "project": "3D Navigation & Geometry Portfolio",
+          "focus": "decomposing vectors into parallel and perpendicular components"
+        },
+        {
+          "id": "u01-l05",
+          "number": 5,
+          "title": "Cross Product, Area and Orientation",
+          "week": 2,
+          "unit": 1,
+          "unit_title": "Three-Dimensional Coordinates, Vectors & Geometry",
+          "essential": "How do coordinates, vectors, dot/cross products, lines and planes describe geometry in three dimensions?",
+          "project": "3D Navigation & Geometry Portfolio",
+          "focus": "using cross products for normals, area and orientation"
+        },
+        {
+          "id": "u01-l06",
+          "number": 6,
+          "title": "Lines in Space",
+          "week": 3,
+          "unit": 1,
+          "unit_title": "Three-Dimensional Coordinates, Vectors & Geometry",
+          "essential": "How do coordinates, vectors, dot/cross products, lines and planes describe geometry in three dimensions?",
+          "project": "3D Navigation & Geometry Portfolio",
+          "focus": "building vector and parametric equations of lines"
+        },
+        {
+          "id": "u01-l07",
+          "number": 7,
+          "title": "Planes, Intersections and Distance",
+          "week": 3,
+          "unit": 1,
+          "unit_title": "Three-Dimensional Coordinates, Vectors & Geometry",
+          "essential": "How do coordinates, vectors, dot/cross products, lines and planes describe geometry in three dimensions?",
+          "project": "3D Navigation & Geometry Portfolio",
+          "focus": "using normal vectors to analyze planes and line-plane relationships"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Vector-Valued Functions, Curves & Motion in Space",
+      "essential": "How do vector-valued functions encode curves, velocity, acceleration and geometric motion?",
+      "project": "Space-Curve Motion Analysis",
+      "standards": [
+        "r(t)=⟨x(t),y(t),z(t)⟩ · v=r′(t) · a=r″(t) · s=∫‖r′(t)‖dt"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        4,
+        5,
+        6
+      ],
+      "lessons": [
+        {
+          "id": "u02-l01",
+          "number": 1,
+          "title": "Vector-Valued Functions and Space Curves",
+          "week": 4,
+          "unit": 2,
+          "unit_title": "Vector-Valued Functions, Curves & Motion in Space",
+          "essential": "How do vector-valued functions encode curves, velocity, acceleration and geometric motion?",
+          "project": "Space-Curve Motion Analysis",
+          "focus": "reading and constructing vector functions and their traces"
+        },
+        {
+          "id": "u02-l02",
+          "number": 2,
+          "title": "Limits and Continuity of Vector Functions",
+          "week": 4,
+          "unit": 2,
+          "unit_title": "Vector-Valued Functions, Curves & Motion in Space",
+          "essential": "How do vector-valued functions encode curves, velocity, acceleration and geometric motion?",
+          "project": "Space-Curve Motion Analysis",
+          "focus": "extending componentwise limit reasoning to vector-valued functions"
+        },
+        {
+          "id": "u02-l03",
+          "number": 3,
+          "title": "Derivatives, Velocity and Acceleration",
+          "week": 4,
+          "unit": 2,
+          "unit_title": "Vector-Valued Functions, Curves & Motion in Space",
+          "essential": "How do vector-valued functions encode curves, velocity, acceleration and geometric motion?",
+          "project": "Space-Curve Motion Analysis",
+          "focus": "connecting vector derivatives to motion"
+        },
+        {
+          "id": "u02-l04",
+          "number": 4,
+          "title": "Arc Length and Reparameterization",
+          "week": 5,
+          "unit": 2,
+          "unit_title": "Vector-Valued Functions, Curves & Motion in Space",
+          "essential": "How do vector-valued functions encode curves, velocity, acceleration and geometric motion?",
+          "project": "Space-Curve Motion Analysis",
+          "focus": "measuring curve length and using arc-length parameters"
+        },
+        {
+          "id": "u02-l05",
+          "number": 5,
+          "title": "Unit Tangent and Normal Vectors",
+          "week": 5,
+          "unit": 2,
+          "unit_title": "Vector-Valued Functions, Curves & Motion in Space",
+          "essential": "How do vector-valued functions encode curves, velocity, acceleration and geometric motion?",
+          "project": "Space-Curve Motion Analysis",
+          "focus": "constructing moving frames along curves"
+        },
+        {
+          "id": "u02-l06",
+          "number": 6,
+          "title": "Curvature and Geometric Bending",
+          "week": 6,
+          "unit": 2,
+          "unit_title": "Vector-Valued Functions, Curves & Motion in Space",
+          "essential": "How do vector-valued functions encode curves, velocity, acceleration and geometric motion?",
+          "project": "Space-Curve Motion Analysis",
+          "focus": "quantifying how rapidly a curve changes direction"
+        },
+        {
+          "id": "u02-l07",
+          "number": 7,
+          "title": "Motion Synthesis: Position, Velocity, Acceleration and Curvature",
+          "week": 6,
+          "unit": 2,
+          "unit_title": "Vector-Valued Functions, Curves & Motion in Space",
+          "essential": "How do vector-valued functions encode curves, velocity, acceleration and geometric motion?",
+          "project": "Space-Curve Motion Analysis",
+          "focus": "coordinating kinematic and geometric interpretations of a space curve"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Functions of Several Variables & Multivariable Limits",
+      "essential": "How do domains, level sets, limits and continuity change when outputs depend on several inputs?",
+      "project": "Multivariable Surface & Limit Atlas",
+      "standards": [
+        "z=f(x,y) · level curve f(x,y)=c · lim_(x,y)→(a,b) f(x,y)"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        7,
+        8,
+        9
+      ],
+      "lessons": [
+        {
+          "id": "u03-l01",
+          "number": 1,
+          "title": "Functions of Two and Three Variables",
+          "week": 7,
+          "unit": 3,
+          "unit_title": "Functions of Several Variables & Multivariable Limits",
+          "essential": "How do domains, level sets, limits and continuity change when outputs depend on several inputs?",
+          "project": "Multivariable Surface & Limit Atlas",
+          "focus": "defining multivariable functions, domains and ranges"
+        },
+        {
+          "id": "u03-l02",
+          "number": 2,
+          "title": "Graphs, Level Curves and Level Surfaces",
+          "week": 7,
+          "unit": 3,
+          "unit_title": "Functions of Several Variables & Multivariable Limits",
+          "essential": "How do domains, level sets, limits and continuity change when outputs depend on several inputs?",
+          "project": "Multivariable Surface & Limit Atlas",
+          "focus": "using slices and level sets to understand high-dimensional graphs"
+        },
+        {
+          "id": "u03-l03",
+          "number": 3,
+          "title": "Multivariable Limits from Tables, Paths and Geometry",
+          "week": 7,
+          "unit": 3,
+          "unit_title": "Functions of Several Variables & Multivariable Limits",
+          "essential": "How do domains, level sets, limits and continuity change when outputs depend on several inputs?",
+          "project": "Multivariable Surface & Limit Atlas",
+          "focus": "testing limits numerically and geometrically"
+        },
+        {
+          "id": "u03-l04",
+          "number": 4,
+          "title": "Path Dependence and Nonexistent Limits",
+          "week": 8,
+          "unit": 3,
+          "unit_title": "Functions of Several Variables & Multivariable Limits",
+          "essential": "How do domains, level sets, limits and continuity change when outputs depend on several inputs?",
+          "project": "Multivariable Surface & Limit Atlas",
+          "focus": "using contrasting approaches to disprove limits"
+        },
+        {
+          "id": "u03-l05",
+          "number": 5,
+          "title": "Continuity in Several Variables",
+          "week": 8,
+          "unit": 3,
+          "unit_title": "Functions of Several Variables & Multivariable Limits",
+          "essential": "How do domains, level sets, limits and continuity change when outputs depend on several inputs?",
+          "project": "Multivariable Surface & Limit Atlas",
+          "focus": "applying algebraic and compositional continuity rules"
+        },
+        {
+          "id": "u03-l06",
+          "number": 6,
+          "title": "Multivariable Limit Laws and Squeeze Reasoning",
+          "week": 9,
+          "unit": 3,
+          "unit_title": "Functions of Several Variables & Multivariable Limits",
+          "essential": "How do domains, level sets, limits and continuity change when outputs depend on several inputs?",
+          "project": "Multivariable Surface & Limit Atlas",
+          "focus": "establishing limits with inequalities and bounding"
+        },
+        {
+          "id": "u03-l07",
+          "number": 7,
+          "title": "Limit and Continuity Synthesis",
+          "week": 9,
+          "unit": 3,
+          "unit_title": "Functions of Several Variables & Multivariable Limits",
+          "essential": "How do domains, level sets, limits and continuity change when outputs depend on several inputs?",
+          "project": "Multivariable Surface & Limit Atlas",
+          "focus": "choosing appropriate evidence for multivariable limit claims"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Partial Derivatives, Tangent Planes & Linearization",
+      "essential": "How do partial derivatives and derivative maps approximate multivariable change?",
+      "project": "Local Linear Model Laboratory",
+      "standards": [
+        "f_x=∂f/∂x · f_y=∂f/∂y · L(x,y)=f(a,b)+f_xΔx+f_yΔy"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        10,
+        11,
+        12
+      ],
+      "lessons": [
+        {
+          "id": "u04-l01",
+          "number": 1,
+          "title": "Partial Derivatives as Local Rates",
+          "week": 10,
+          "unit": 4,
+          "unit_title": "Partial Derivatives, Tangent Planes & Linearization",
+          "essential": "How do partial derivatives and derivative maps approximate multivariable change?",
+          "project": "Local Linear Model Laboratory",
+          "focus": "computing and interpreting first partial derivatives"
+        },
+        {
+          "id": "u04-l02",
+          "number": 2,
+          "title": "Higher-Order and Mixed Partials",
+          "week": 10,
+          "unit": 4,
+          "unit_title": "Partial Derivatives, Tangent Planes & Linearization",
+          "essential": "How do partial derivatives and derivative maps approximate multivariable change?",
+          "project": "Local Linear Model Laboratory",
+          "focus": "analyzing second-order and mixed derivative structure"
+        },
+        {
+          "id": "u04-l03",
+          "number": 3,
+          "title": "Tangent Planes and Normal Lines",
+          "week": 10,
+          "unit": 4,
+          "unit_title": "Partial Derivatives, Tangent Planes & Linearization",
+          "essential": "How do partial derivatives and derivative maps approximate multivariable change?",
+          "project": "Local Linear Model Laboratory",
+          "focus": "constructing tangent-plane approximations to surfaces"
+        },
+        {
+          "id": "u04-l04",
+          "number": 4,
+          "title": "Linearization and Local Approximation",
+          "week": 11,
+          "unit": 4,
+          "unit_title": "Partial Derivatives, Tangent Planes & Linearization",
+          "essential": "How do partial derivatives and derivative maps approximate multivariable change?",
+          "project": "Local Linear Model Laboratory",
+          "focus": "using the derivative as a local linear model"
+        },
+        {
+          "id": "u04-l05",
+          "number": 5,
+          "title": "Differentials and Error Propagation",
+          "week": 11,
+          "unit": 4,
+          "unit_title": "Partial Derivatives, Tangent Planes & Linearization",
+          "essential": "How do partial derivatives and derivative maps approximate multivariable change?",
+          "project": "Local Linear Model Laboratory",
+          "focus": "estimating sensitivity and measurement error"
+        },
+        {
+          "id": "u04-l06",
+          "number": 6,
+          "title": "The Multivariable Chain Rule",
+          "week": 12,
+          "unit": 4,
+          "unit_title": "Partial Derivatives, Tangent Planes & Linearization",
+          "essential": "How do partial derivatives and derivative maps approximate multivariable change?",
+          "project": "Local Linear Model Laboratory",
+          "focus": "tracking dependence through several variables and parameters"
+        },
+        {
+          "id": "u04-l07",
+          "number": 7,
+          "title": "Jacobian Matrices and Derivative Maps",
+          "week": 12,
+          "unit": 4,
+          "unit_title": "Partial Derivatives, Tangent Planes & Linearization",
+          "essential": "How do partial derivatives and derivative maps approximate multivariable change?",
+          "project": "Local Linear Model Laboratory",
+          "focus": "organizing derivatives of vector-valued multivariable maps"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Gradient, Directional Derivatives & Optimization",
+      "essential": "How do gradients identify steepest change, constraints and optimal points?",
+      "project": "Optimization & Sensitivity Case Study",
+      "standards": [
+        "∇f=⟨f_x,f_y,f_z⟩ · D_u f=∇f·u · ∇f=λ∇g"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        13,
+        14,
+        15
+      ],
+      "lessons": [
+        {
+          "id": "u05-l01",
+          "number": 1,
+          "title": "The Gradient Vector and Level Sets",
+          "week": 13,
+          "unit": 5,
+          "unit_title": "Gradient, Directional Derivatives & Optimization",
+          "essential": "How do gradients identify steepest change, constraints and optimal points?",
+          "project": "Optimization & Sensitivity Case Study",
+          "focus": "connecting gradients to local change and level geometry"
+        },
+        {
+          "id": "u05-l02",
+          "number": 2,
+          "title": "Directional Derivatives",
+          "week": 13,
+          "unit": 5,
+          "unit_title": "Gradient, Directional Derivatives & Optimization",
+          "essential": "How do gradients identify steepest change, constraints and optimal points?",
+          "project": "Optimization & Sensitivity Case Study",
+          "focus": "computing rates in arbitrary unit directions"
+        },
+        {
+          "id": "u05-l03",
+          "number": 3,
+          "title": "Steepest Ascent, Descent and Sensitivity",
+          "week": 13,
+          "unit": 5,
+          "unit_title": "Gradient, Directional Derivatives & Optimization",
+          "essential": "How do gradients identify steepest change, constraints and optimal points?",
+          "project": "Optimization & Sensitivity Case Study",
+          "focus": "interpreting the magnitude and direction of the gradient"
+        },
+        {
+          "id": "u05-l04",
+          "number": 4,
+          "title": "Critical Points in Several Variables",
+          "week": 14,
+          "unit": 5,
+          "unit_title": "Gradient, Directional Derivatives & Optimization",
+          "essential": "How do gradients identify steepest change, constraints and optimal points?",
+          "project": "Optimization & Sensitivity Case Study",
+          "focus": "locating candidate extrema and saddle points"
+        },
+        {
+          "id": "u05-l05",
+          "number": 5,
+          "title": "The Second-Derivative Test",
+          "week": 14,
+          "unit": 5,
+          "unit_title": "Gradient, Directional Derivatives & Optimization",
+          "essential": "How do gradients identify steepest change, constraints and optimal points?",
+          "project": "Optimization & Sensitivity Case Study",
+          "focus": "classifying critical points with Hessian information"
+        },
+        {
+          "id": "u05-l06",
+          "number": 6,
+          "title": "Constrained Optimization and Lagrange Multipliers",
+          "week": 15,
+          "unit": 5,
+          "unit_title": "Gradient, Directional Derivatives & Optimization",
+          "essential": "How do gradients identify steepest change, constraints and optimal points?",
+          "project": "Optimization & Sensitivity Case Study",
+          "focus": "optimizing subject to geometric constraints"
+        },
+        {
+          "id": "u05-l07",
+          "number": 7,
+          "title": "Optimization Synthesis and Model Validation",
+          "week": 15,
+          "unit": 5,
+          "unit_title": "Gradient, Directional Derivatives & Optimization",
+          "essential": "How do gradients identify steepest change, constraints and optimal points?",
+          "project": "Optimization & Sensitivity Case Study",
+          "focus": "testing assumptions, boundaries and sensitivity of multivariable optima"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Multiple Integrals in Rectangular Coordinates",
+      "essential": "How do iterated integrals accumulate mass, volume and other quantities over planar and spatial regions?",
+      "project": "Mass, Volume & Density Integration Studio",
+      "standards": [
+        "∬_R f dA · ∭_E f dV · Fubini: ∬ f dA=∫∫f dy dx"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        16,
+        17,
+        18
+      ],
+      "lessons": [
+        {
+          "id": "u06-l01",
+          "number": 1,
+          "title": "Double Integrals over Rectangles",
+          "week": 16,
+          "unit": 6,
+          "unit_title": "Multiple Integrals in Rectangular Coordinates",
+          "essential": "How do iterated integrals accumulate mass, volume and other quantities over planar and spatial regions?",
+          "project": "Mass, Volume & Density Integration Studio",
+          "focus": "building double integrals from Riemann-sum accumulation"
+        },
+        {
+          "id": "u06-l02",
+          "number": 2,
+          "title": "Iterated Integrals and Fubini's Theorem",
+          "week": 16,
+          "unit": 6,
+          "unit_title": "Multiple Integrals in Rectangular Coordinates",
+          "essential": "How do iterated integrals accumulate mass, volume and other quantities over planar and spatial regions?",
+          "project": "Mass, Volume & Density Integration Studio",
+          "focus": "evaluating double integrals by repeated single-variable integration"
+        },
+        {
+          "id": "u06-l03",
+          "number": 3,
+          "title": "General Planar Regions",
+          "week": 16,
+          "unit": 6,
+          "unit_title": "Multiple Integrals in Rectangular Coordinates",
+          "essential": "How do iterated integrals accumulate mass, volume and other quantities over planar and spatial regions?",
+          "project": "Mass, Volume & Density Integration Studio",
+          "focus": "setting bounds for Type I and Type II regions"
+        },
+        {
+          "id": "u06-l04",
+          "number": 4,
+          "title": "Changing the Order of Integration",
+          "week": 17,
+          "unit": 6,
+          "unit_title": "Multiple Integrals in Rectangular Coordinates",
+          "essential": "How do iterated integrals accumulate mass, volume and other quantities over planar and spatial regions?",
+          "project": "Mass, Volume & Density Integration Studio",
+          "focus": "redrawing regions and reversing integration order"
+        },
+        {
+          "id": "u06-l05",
+          "number": 5,
+          "title": "Area, Volume, Mass and Average Value",
+          "week": 17,
+          "unit": 6,
+          "unit_title": "Multiple Integrals in Rectangular Coordinates",
+          "essential": "How do iterated integrals accumulate mass, volume and other quantities over planar and spatial regions?",
+          "project": "Mass, Volume & Density Integration Studio",
+          "focus": "interpreting double integrals in geometric and physical contexts"
+        },
+        {
+          "id": "u06-l06",
+          "number": 6,
+          "title": "Triple Integrals in Rectangular Coordinates",
+          "week": 18,
+          "unit": 6,
+          "unit_title": "Multiple Integrals in Rectangular Coordinates",
+          "essential": "How do iterated integrals accumulate mass, volume and other quantities over planar and spatial regions?",
+          "project": "Mass, Volume & Density Integration Studio",
+          "focus": "accumulating over three-dimensional regions"
+        },
+        {
+          "id": "u06-l07",
+          "number": 7,
+          "title": "Centers of Mass and Moments",
+          "week": 18,
+          "unit": 6,
+          "unit_title": "Multiple Integrals in Rectangular Coordinates",
+          "essential": "How do iterated integrals accumulate mass, volume and other quantities over planar and spatial regions?",
+          "project": "Mass, Volume & Density Integration Studio",
+          "focus": "using density integrals to locate balance and rotational quantities"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Change of Variables, Polar, Cylindrical & Spherical Coordinates",
+      "essential": "How do coordinate transformations simplify geometry and integration while preserving local scale?",
+      "project": "Coordinate-System Decision Atlas",
+      "standards": [
+        "dA=r dr dθ · dV=r dr dθ dz · dV=ρ²sinφ dρ dφ dθ · dA=|J|du dv"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        19,
+        20,
+        21
+      ],
+      "lessons": [
+        {
+          "id": "u07-l01",
+          "number": 1,
+          "title": "Polar Coordinates for Double Integrals",
+          "week": 19,
+          "unit": 7,
+          "unit_title": "Change of Variables, Polar, Cylindrical & Spherical Coordinates",
+          "essential": "How do coordinate transformations simplify geometry and integration while preserving local scale?",
+          "project": "Coordinate-System Decision Atlas",
+          "focus": "translating regions and area elements into polar form"
+        },
+        {
+          "id": "u07-l02",
+          "number": 2,
+          "title": "Polar Area, Mass and Probability Models",
+          "week": 19,
+          "unit": 7,
+          "unit_title": "Change of Variables, Polar, Cylindrical & Spherical Coordinates",
+          "essential": "How do coordinate transformations simplify geometry and integration while preserving local scale?",
+          "project": "Coordinate-System Decision Atlas",
+          "focus": "applying polar integration to circular and radial systems"
+        },
+        {
+          "id": "u07-l03",
+          "number": 3,
+          "title": "Cylindrical Coordinates",
+          "week": 19,
+          "unit": 7,
+          "unit_title": "Change of Variables, Polar, Cylindrical & Spherical Coordinates",
+          "essential": "How do coordinate transformations simplify geometry and integration while preserving local scale?",
+          "project": "Coordinate-System Decision Atlas",
+          "focus": "integrating volumes with axial symmetry"
+        },
+        {
+          "id": "u07-l04",
+          "number": 4,
+          "title": "Spherical Coordinates",
+          "week": 20,
+          "unit": 7,
+          "unit_title": "Change of Variables, Polar, Cylindrical & Spherical Coordinates",
+          "essential": "How do coordinate transformations simplify geometry and integration while preserving local scale?",
+          "project": "Coordinate-System Decision Atlas",
+          "focus": "representing radial three-dimensional regions"
+        },
+        {
+          "id": "u07-l05",
+          "number": 5,
+          "title": "Triple Integrals in Spherical Coordinates",
+          "week": 20,
+          "unit": 7,
+          "unit_title": "Change of Variables, Polar, Cylindrical & Spherical Coordinates",
+          "essential": "How do coordinate transformations simplify geometry and integration while preserving local scale?",
+          "project": "Coordinate-System Decision Atlas",
+          "focus": "evaluating mass and volume in spherical geometry"
+        },
+        {
+          "id": "u07-l06",
+          "number": 6,
+          "title": "Jacobian Determinants and Change of Variables",
+          "week": 21,
+          "unit": 7,
+          "unit_title": "Change of Variables, Polar, Cylindrical & Spherical Coordinates",
+          "essential": "How do coordinate transformations simplify geometry and integration while preserving local scale?",
+          "project": "Coordinate-System Decision Atlas",
+          "focus": "measuring local area and volume scaling under transformations"
+        },
+        {
+          "id": "u07-l07",
+          "number": 7,
+          "title": "Coordinate Transformation Synthesis",
+          "week": 21,
+          "unit": 7,
+          "unit_title": "Change of Variables, Polar, Cylindrical & Spherical Coordinates",
+          "essential": "How do coordinate transformations simplify geometry and integration while preserving local scale?",
+          "project": "Coordinate-System Decision Atlas",
+          "focus": "selecting coordinates and validating transformed bounds and scale factors"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Vector Fields & Line Integrals",
+      "essential": "How do vector fields represent distributed direction and how do line integrals measure accumulated work and circulation?",
+      "project": "Vector-Field Work & Circulation Investigation",
+      "standards": [
+        "F=⟨P,Q,R⟩ · ∫_C f ds · ∫_C F·dr=∫ F(r(t))·r′(t)dt"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        22,
+        23,
+        24
+      ],
+      "lessons": [
+        {
+          "id": "u08-l01",
+          "number": 1,
+          "title": "Vector Fields and Flow Geometry",
+          "week": 22,
+          "unit": 8,
+          "unit_title": "Vector Fields & Line Integrals",
+          "essential": "How do vector fields represent distributed direction and how do line integrals measure accumulated work and circulation?",
+          "project": "Vector-Field Work & Circulation Investigation",
+          "focus": "visualizing and interpreting scalar and vector fields"
+        },
+        {
+          "id": "u08-l02",
+          "number": 2,
+          "title": "Line Integrals of Scalar Fields",
+          "week": 22,
+          "unit": 8,
+          "unit_title": "Vector Fields & Line Integrals",
+          "essential": "How do vector fields represent distributed direction and how do line integrals measure accumulated work and circulation?",
+          "project": "Vector-Field Work & Circulation Investigation",
+          "focus": "accumulating density or cost along a curve"
+        },
+        {
+          "id": "u08-l03",
+          "number": 3,
+          "title": "Line Integrals of Vector Fields and Work",
+          "week": 22,
+          "unit": 8,
+          "unit_title": "Vector Fields & Line Integrals",
+          "essential": "How do vector fields represent distributed direction and how do line integrals measure accumulated work and circulation?",
+          "project": "Vector-Field Work & Circulation Investigation",
+          "focus": "computing work and circulation along parameterized paths"
+        },
+        {
+          "id": "u08-l04",
+          "number": 4,
+          "title": "Conservative Fields and Potential Functions",
+          "week": 23,
+          "unit": 8,
+          "unit_title": "Vector Fields & Line Integrals",
+          "essential": "How do vector fields represent distributed direction and how do line integrals measure accumulated work and circulation?",
+          "project": "Vector-Field Work & Circulation Investigation",
+          "focus": "recognizing path-independent fields and recovering potentials"
+        },
+        {
+          "id": "u08-l05",
+          "number": 5,
+          "title": "The Fundamental Theorem for Line Integrals",
+          "week": 23,
+          "unit": 8,
+          "unit_title": "Vector Fields & Line Integrals",
+          "essential": "How do vector fields represent distributed direction and how do line integrals measure accumulated work and circulation?",
+          "project": "Vector-Field Work & Circulation Investigation",
+          "focus": "using endpoint potentials to replace path integration"
+        },
+        {
+          "id": "u08-l06",
+          "number": 6,
+          "title": "Path Independence and Simply Connected Domains",
+          "week": 24,
+          "unit": 8,
+          "unit_title": "Vector Fields & Line Integrals",
+          "essential": "How do vector fields represent distributed direction and how do line integrals measure accumulated work and circulation?",
+          "project": "Vector-Field Work & Circulation Investigation",
+          "focus": "connecting geometry, curl-free behavior and potentials"
+        },
+        {
+          "id": "u08-l07",
+          "number": 7,
+          "title": "Line-Integral Synthesis and Physical Interpretation",
+          "week": 24,
+          "unit": 8,
+          "unit_title": "Vector Fields & Line Integrals",
+          "essential": "How do vector fields represent distributed direction and how do line integrals measure accumulated work and circulation?",
+          "project": "Vector-Field Work & Circulation Investigation",
+          "focus": "choosing parameterizations and validating orientation, units and work"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Green's Theorem & Planar Vector Calculus",
+      "essential": "How does Green's Theorem connect circulation or flux around a boundary with derivatives throughout a planar region?",
+      "project": "Boundary-to-Interior Verification Lab",
+      "standards": [
+        "∮_C P dx+Q dy=∬_D(Q_x−P_y)dA"
+      ],
+      "weeks": 2,
+      "week_numbers": [
+        25,
+        26
+      ],
+      "lessons": [
+        {
+          "id": "u09-l01",
+          "number": 1,
+          "title": "Orientation, Simple Closed Curves and Planar Regions",
+          "week": 25,
+          "unit": 9,
+          "unit_title": "Green's Theorem & Planar Vector Calculus",
+          "essential": "How does Green's Theorem connect circulation or flux around a boundary with derivatives throughout a planar region?",
+          "project": "Boundary-to-Interior Verification Lab",
+          "focus": "preparing geometric hypotheses for Green's Theorem"
+        },
+        {
+          "id": "u09-l02",
+          "number": 2,
+          "title": "Circulation Form of Green's Theorem",
+          "week": 25,
+          "unit": 9,
+          "unit_title": "Green's Theorem & Planar Vector Calculus",
+          "essential": "How does Green's Theorem connect circulation or flux around a boundary with derivatives throughout a planar region?",
+          "project": "Boundary-to-Interior Verification Lab",
+          "focus": "converting boundary circulation into a double integral"
+        },
+        {
+          "id": "u09-l03",
+          "number": 3,
+          "title": "Flux Form of Green's Theorem",
+          "week": 25,
+          "unit": 9,
+          "unit_title": "Green's Theorem & Planar Vector Calculus",
+          "essential": "How does Green's Theorem connect circulation or flux around a boundary with derivatives throughout a planar region?",
+          "project": "Boundary-to-Interior Verification Lab",
+          "focus": "relating outward planar flux to divergence"
+        },
+        {
+          "id": "u09-l04",
+          "number": 4,
+          "title": "Area from Boundary Integrals",
+          "week": 25,
+          "unit": 9,
+          "unit_title": "Green's Theorem & Planar Vector Calculus",
+          "essential": "How does Green's Theorem connect circulation or flux around a boundary with derivatives throughout a planar region?",
+          "project": "Boundary-to-Interior Verification Lab",
+          "focus": "using Green's Theorem to derive area formulas"
+        },
+        {
+          "id": "u09-l05",
+          "number": 5,
+          "title": "Piecewise Boundaries and Regions with Holes",
+          "week": 26,
+          "unit": 9,
+          "unit_title": "Green's Theorem & Planar Vector Calculus",
+          "essential": "How does Green's Theorem connect circulation or flux around a boundary with derivatives throughout a planar region?",
+          "project": "Boundary-to-Interior Verification Lab",
+          "focus": "managing composite and multiply connected boundaries"
+        },
+        {
+          "id": "u09-l06",
+          "number": 6,
+          "title": "Green's Theorem as a Test and Computational Tool",
+          "week": 26,
+          "unit": 9,
+          "unit_title": "Green's Theorem & Planar Vector Calculus",
+          "essential": "How does Green's Theorem connect circulation or flux around a boundary with derivatives throughout a planar region?",
+          "project": "Boundary-to-Interior Verification Lab",
+          "focus": "comparing direct line integration with region integration"
+        },
+        {
+          "id": "u09-l07",
+          "number": 7,
+          "title": "Planar Vector Calculus Synthesis",
+          "week": 26,
+          "unit": 9,
+          "unit_title": "Green's Theorem & Planar Vector Calculus",
+          "essential": "How does Green's Theorem connect circulation or flux around a boundary with derivatives throughout a planar region?",
+          "project": "Boundary-to-Interior Verification Lab",
+          "focus": "integrating orientation, divergence, curl and boundary reasoning"
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Parametric Surfaces & Surface Integrals",
+      "essential": "How do parameterizations encode surfaces and how do surface integrals accumulate scalar and vector quantities?",
+      "project": "Surface Geometry & Flux Portfolio",
+      "standards": [
+        "r(u,v) · dS=‖r_u×r_v‖du dv · ∬_S F·n dS"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        27,
+        28,
+        29
+      ],
+      "lessons": [
+        {
+          "id": "u10-l01",
+          "number": 1,
+          "title": "Parametric Surfaces and Coordinate Patches",
+          "week": 27,
+          "unit": 10,
+          "unit_title": "Parametric Surfaces & Surface Integrals",
+          "essential": "How do parameterizations encode surfaces and how do surface integrals accumulate scalar and vector quantities?",
+          "project": "Surface Geometry & Flux Portfolio",
+          "focus": "constructing and reading surface parameterizations"
+        },
+        {
+          "id": "u10-l02",
+          "number": 2,
+          "title": "Tangent Vectors and Surface Normals",
+          "week": 27,
+          "unit": 10,
+          "unit_title": "Parametric Surfaces & Surface Integrals",
+          "essential": "How do parameterizations encode surfaces and how do surface integrals accumulate scalar and vector quantities?",
+          "project": "Surface Geometry & Flux Portfolio",
+          "focus": "building tangent planes from parameter derivatives"
+        },
+        {
+          "id": "u10-l03",
+          "number": 3,
+          "title": "Surface Area from Parameterization",
+          "week": 27,
+          "unit": 10,
+          "unit_title": "Parametric Surfaces & Surface Integrals",
+          "essential": "How do parameterizations encode surfaces and how do surface integrals accumulate scalar and vector quantities?",
+          "project": "Surface Geometry & Flux Portfolio",
+          "focus": "deriving and applying the surface-area element"
+        },
+        {
+          "id": "u10-l04",
+          "number": 4,
+          "title": "Surface Integrals of Scalar Fields",
+          "week": 28,
+          "unit": 10,
+          "unit_title": "Parametric Surfaces & Surface Integrals",
+          "essential": "How do parameterizations encode surfaces and how do surface integrals accumulate scalar and vector quantities?",
+          "project": "Surface Geometry & Flux Portfolio",
+          "focus": "accumulating density or intensity over curved surfaces"
+        },
+        {
+          "id": "u10-l05",
+          "number": 5,
+          "title": "Oriented Surfaces and Flux",
+          "week": 28,
+          "unit": 10,
+          "unit_title": "Parametric Surfaces & Surface Integrals",
+          "essential": "How do parameterizations encode surfaces and how do surface integrals accumulate scalar and vector quantities?",
+          "project": "Surface Geometry & Flux Portfolio",
+          "focus": "selecting consistent normals and measuring flow through surfaces"
+        },
+        {
+          "id": "u10-l06",
+          "number": 6,
+          "title": "Graphs, Cylinders, Spheres and Common Surface Parameterizations",
+          "week": 29,
+          "unit": 10,
+          "unit_title": "Parametric Surfaces & Surface Integrals",
+          "essential": "How do parameterizations encode surfaces and how do surface integrals accumulate scalar and vector quantities?",
+          "project": "Surface Geometry & Flux Portfolio",
+          "focus": "choosing efficient parameterizations for standard geometries"
+        },
+        {
+          "id": "u10-l07",
+          "number": 7,
+          "title": "Surface-Integral Synthesis and Orientation Checks",
+          "week": 29,
+          "unit": 10,
+          "unit_title": "Parametric Surfaces & Surface Integrals",
+          "essential": "How do parameterizations encode surfaces and how do surface integrals accumulate scalar and vector quantities?",
+          "project": "Surface Geometry & Flux Portfolio",
+          "focus": "coordinating parameterization, normal direction, bounds and units"
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Divergence, Curl & Stokes' Theorem",
+      "essential": "How do local rotation and expansion connect to global circulation on oriented surfaces?",
+      "project": "Curl, Circulation & Stokes Verification Studio",
+      "standards": [
+        "div F=∇·F · curl F=∇×F · ∮_∂S F·dr=∬_S (∇×F)·n dS"
+      ],
+      "weeks": 3,
+      "week_numbers": [
+        30,
+        31,
+        32
+      ],
+      "lessons": [
+        {
+          "id": "u11-l01",
+          "number": 1,
+          "title": "Divergence as Local Expansion",
+          "week": 30,
+          "unit": 11,
+          "unit_title": "Divergence, Curl & Stokes' Theorem",
+          "essential": "How do local rotation and expansion connect to global circulation on oriented surfaces?",
+          "project": "Curl, Circulation & Stokes Verification Studio",
+          "focus": "computing and interpreting divergence in physical fields"
+        },
+        {
+          "id": "u11-l02",
+          "number": 2,
+          "title": "Curl as Local Rotation",
+          "week": 30,
+          "unit": 11,
+          "unit_title": "Divergence, Curl & Stokes' Theorem",
+          "essential": "How do local rotation and expansion connect to global circulation on oriented surfaces?",
+          "project": "Curl, Circulation & Stokes Verification Studio",
+          "focus": "computing and interpreting curl and rotational tendency"
+        },
+        {
+          "id": "u11-l03",
+          "number": 3,
+          "title": "Geometric Meaning of Divergence and Curl",
+          "week": 30,
+          "unit": 11,
+          "unit_title": "Divergence, Curl & Stokes' Theorem",
+          "essential": "How do local rotation and expansion connect to global circulation on oriented surfaces?",
+          "project": "Curl, Circulation & Stokes Verification Studio",
+          "focus": "connecting derivative operators to local flow behavior"
+        },
+        {
+          "id": "u11-l04",
+          "number": 4,
+          "title": "Stokes' Theorem: Boundary and Surface",
+          "week": 31,
+          "unit": 11,
+          "unit_title": "Divergence, Curl & Stokes' Theorem",
+          "essential": "How do local rotation and expansion connect to global circulation on oriented surfaces?",
+          "project": "Curl, Circulation & Stokes Verification Studio",
+          "focus": "relating circulation around a boundary to curl through a surface"
+        },
+        {
+          "id": "u11-l05",
+          "number": 5,
+          "title": "Choosing Surfaces Strategically",
+          "week": 31,
+          "unit": 11,
+          "unit_title": "Divergence, Curl & Stokes' Theorem",
+          "essential": "How do local rotation and expansion connect to global circulation on oriented surfaces?",
+          "project": "Curl, Circulation & Stokes Verification Studio",
+          "focus": "replacing difficult surfaces with easier surfaces sharing the same boundary"
+        },
+        {
+          "id": "u11-l06",
+          "number": 6,
+          "title": "Orientation and Right-Hand Conventions",
+          "week": 32,
+          "unit": 11,
+          "unit_title": "Divergence, Curl & Stokes' Theorem",
+          "essential": "How do local rotation and expansion connect to global circulation on oriented surfaces?",
+          "project": "Curl, Circulation & Stokes Verification Studio",
+          "focus": "maintaining consistent boundary and normal orientation"
+        },
+        {
+          "id": "u11-l07",
+          "number": 7,
+          "title": "Stokes' Theorem Synthesis and Verification",
+          "week": 32,
+          "unit": 11,
+          "unit_title": "Divergence, Curl & Stokes' Theorem",
+          "essential": "How do local rotation and expansion connect to global circulation on oriented surfaces?",
+          "project": "Curl, Circulation & Stokes Verification Studio",
+          "focus": "comparing direct and theorem-based circulation computations"
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Divergence Theorem, Flux & Physical Models",
+      "essential": "How does the Divergence Theorem connect total outward flux with sources and sinks inside a volume?",
+      "project": "Flux Conservation & Source Model",
+      "standards": [
+        "∯_∂E F·n dS=∭_E ∇·F dV"
+      ],
+      "weeks": 2,
+      "week_numbers": [
+        33,
+        34
+      ],
+      "lessons": [
+        {
+          "id": "u12-l01",
+          "number": 1,
+          "title": "Closed Surfaces and Outward Flux",
+          "week": 33,
+          "unit": 12,
+          "unit_title": "Divergence Theorem, Flux & Physical Models",
+          "essential": "How does the Divergence Theorem connect total outward flux with sources and sinks inside a volume?",
+          "project": "Flux Conservation & Source Model",
+          "focus": "distinguishing open-surface flux from closed-boundary flux"
+        },
+        {
+          "id": "u12-l02",
+          "number": 2,
+          "title": "The Divergence Theorem",
+          "week": 33,
+          "unit": 12,
+          "unit_title": "Divergence Theorem, Flux & Physical Models",
+          "essential": "How does the Divergence Theorem connect total outward flux with sources and sinks inside a volume?",
+          "project": "Flux Conservation & Source Model",
+          "focus": "converting outward flux into a volume integral"
+        },
+        {
+          "id": "u12-l03",
+          "number": 3,
+          "title": "Choosing Volume or Surface Methods",
+          "week": 33,
+          "unit": 12,
+          "unit_title": "Divergence Theorem, Flux & Physical Models",
+          "essential": "How does the Divergence Theorem connect total outward flux with sources and sinks inside a volume?",
+          "project": "Flux Conservation & Source Model",
+          "focus": "comparing direct flux and divergence-theorem strategies"
+        },
+        {
+          "id": "u12-l04",
+          "number": 4,
+          "title": "Sources, Sinks and Conservation Laws",
+          "week": 33,
+          "unit": 12,
+          "unit_title": "Divergence Theorem, Flux & Physical Models",
+          "essential": "How does the Divergence Theorem connect total outward flux with sources and sinks inside a volume?",
+          "project": "Flux Conservation & Source Model",
+          "focus": "interpreting divergence in physical models"
+        },
+        {
+          "id": "u12-l05",
+          "number": 5,
+          "title": "Singularities and Excluded Regions",
+          "week": 34,
+          "unit": 12,
+          "unit_title": "Divergence Theorem, Flux & Physical Models",
+          "essential": "How does the Divergence Theorem connect total outward flux with sources and sinks inside a volume?",
+          "project": "Flux Conservation & Source Model",
+          "focus": "recognizing when fields fail theorem hypotheses"
+        },
+        {
+          "id": "u12-l06",
+          "number": 6,
+          "title": "Applications to Fluids, Fields and Continuity",
+          "week": 34,
+          "unit": 12,
+          "unit_title": "Divergence Theorem, Flux & Physical Models",
+          "essential": "How does the Divergence Theorem connect total outward flux with sources and sinks inside a volume?",
+          "project": "Flux Conservation & Source Model",
+          "focus": "using divergence reasoning in physical systems"
+        },
+        {
+          "id": "u12-l07",
+          "number": 7,
+          "title": "Vector-Calculus Theorem Synthesis",
+          "week": 34,
+          "unit": 12,
+          "unit_title": "Divergence Theorem, Flux & Physical Models",
+          "essential": "How does the Divergence Theorem connect total outward flux with sources and sinks inside a volume?",
+          "project": "Flux Conservation & Source Model",
+          "focus": "comparing the Fundamental Theorem, Green, Stokes and Divergence theorems"
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Multivariable Synthesis, Geometry Bridge & Capstone",
+      "essential": "How can multivariable and vector calculus be synthesized into a defensible model that prepares the learner for differential geometry and advanced analysis?",
+      "project": "Multivariable Geometry Capstone & Oral Defense",
+      "standards": [
+        "Derivative maps · Jacobians · vector fields · ∫, ∬, ∭ · Green · Stokes · Divergence"
+      ],
+      "weeks": 2,
+      "week_numbers": [
+        35,
+        36
+      ],
+      "lessons": [
+        {
+          "id": "u13-l01",
+          "number": 1,
+          "title": "Derivative Maps, Jacobians and Geometry Review",
+          "week": 35,
+          "unit": 13,
+          "unit_title": "Multivariable Synthesis, Geometry Bridge & Capstone",
+          "essential": "How can multivariable and vector calculus be synthesized into a defensible model that prepares the learner for differential geometry and advanced analysis?",
+          "project": "Multivariable Geometry Capstone & Oral Defense",
+          "focus": "connecting local linearization to tangent-space thinking"
+        },
+        {
+          "id": "u13-l02",
+          "number": 2,
+          "title": "Curves, Surfaces and Tangent Geometry Review",
+          "week": 35,
+          "unit": 13,
+          "unit_title": "Multivariable Synthesis, Geometry Bridge & Capstone",
+          "essential": "How can multivariable and vector calculus be synthesized into a defensible model that prepares the learner for differential geometry and advanced analysis?",
+          "project": "Multivariable Geometry Capstone & Oral Defense",
+          "focus": "coordinating curve frames, surface patches and normals"
+        },
+        {
+          "id": "u13-l03",
+          "number": 3,
+          "title": "Integral Theorems as a Unified Boundary Principle",
+          "week": 35,
+          "unit": 13,
+          "unit_title": "Multivariable Synthesis, Geometry Bridge & Capstone",
+          "essential": "How can multivariable and vector calculus be synthesized into a defensible model that prepares the learner for differential geometry and advanced analysis?",
+          "project": "Multivariable Geometry Capstone & Oral Defense",
+          "focus": "seeing the major vector-calculus theorems as boundary-to-interior relationships"
+        },
+        {
+          "id": "u13-l04",
+          "number": 4,
+          "title": "Model Design: Variables, Coordinates and Assumptions",
+          "week": 35,
+          "unit": 13,
+          "unit_title": "Multivariable Synthesis, Geometry Bridge & Capstone",
+          "essential": "How can multivariable and vector calculus be synthesized into a defensible model that prepares the learner for differential geometry and advanced analysis?",
+          "project": "Multivariable Geometry Capstone & Oral Defense",
+          "focus": "framing a multivariable model with defensible choices"
+        },
+        {
+          "id": "u13-l05",
+          "number": 5,
+          "title": "Computation, Visualization and Error Analysis",
+          "week": 36,
+          "unit": 13,
+          "unit_title": "Multivariable Synthesis, Geometry Bridge & Capstone",
+          "essential": "How can multivariable and vector calculus be synthesized into a defensible model that prepares the learner for differential geometry and advanced analysis?",
+          "project": "Multivariable Geometry Capstone & Oral Defense",
+          "focus": "combining analytic, numerical and graphical evidence"
+        },
+        {
+          "id": "u13-l06",
+          "number": 6,
+          "title": "Sensitivity, Limits and Model Validation",
+          "week": 36,
+          "unit": 13,
+          "unit_title": "Multivariable Synthesis, Geometry Bridge & Capstone",
+          "essential": "How can multivariable and vector calculus be synthesized into a defensible model that prepares the learner for differential geometry and advanced analysis?",
+          "project": "Multivariable Geometry Capstone & Oral Defense",
+          "focus": "testing robustness, uncertainty and limitations"
+        },
+        {
+          "id": "u13-l07",
+          "number": 7,
+          "title": "Technical Exposition and Geometry Bridge",
+          "week": 36,
+          "unit": 13,
+          "unit_title": "Multivariable Synthesis, Geometry Bridge & Capstone",
+          "essential": "How can multivariable and vector calculus be synthesized into a defensible model that prepares the learner for differential geometry and advanced analysis?",
+          "project": "Multivariable Geometry Capstone & Oral Defense",
+          "focus": "communicating multivariable reasoning in forms used by advanced mathematics"
+        },
+        {
+          "id": "u13-l08",
+          "number": 8,
+          "title": "Capstone Presentation, Oral Defense and Topology Readiness",
+          "week": 36,
+          "unit": 13,
+          "unit_title": "Multivariable Synthesis, Geometry Bridge & Capstone",
+          "essential": "How can multivariable and vector calculus be synthesized into a defensible model that prepares the learner for differential geometry and advanced analysis?",
+          "project": "Multivariable Geometry Capstone & Oral Defense",
+          "focus": "defending the final model and documenting readiness for topology and differential geometry"
+        }
+      ]
+    }
+  ]
+}
