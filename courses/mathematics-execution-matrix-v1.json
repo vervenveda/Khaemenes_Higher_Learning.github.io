@@ -14,7 +14,9 @@
     "high_school_return": "Precalculus and Calculus I may export read-only evidence receipts. High School import remains uncertified until the receiving contract is implemented and tested.",
     "college_core_progression": "Calculus II, Linear Algebra, and Differential Equations form a flexible college-core cluster. Recommendations guide readiness but do not create automatic locks.",
     "proof_sequence": "Proof-based courses require evaluator-reviewed written proof evidence. Objective/browser practice may support learning but cannot compensate for an unmet proof-review requirement.",
-    "advanced_geometry_transition": "Topology & Differential Geometry is the mature proof-based prerequisite. Advanced Geometric Topology is an explicit hybrid legacy/V2 sequel; its 1 rich V2 session and 179 legacy fallback sessions must not be represented as a completed V2 migration."
+    "advanced_geometry_transition": "Topology & Differential Geometry is the mature proof-based prerequisite. Advanced Geometric Topology is an explicit hybrid legacy/V2 sequel; its 1 rich V2 session and 179 legacy fallback sessions must not be represented as a completed V2 migration.",
+    "post_calculus_architecture": "After Calculus II the program branches. Linear Algebra, Introduction to Proofs, Discrete Mathematics, Differential Equations, and planned Calculus III are not one forced linear ladder.",
+    "calculus_iii_gap": "Calculus III / Multivariable & Vector Calculus is a planned-required gap. It must not be represented as completed or progression-clearing until released and validated."
   },
   "courses": [
     {
@@ -233,6 +235,11 @@
         ],
         "recommended_next": [
           "real-complex-analysis"
+        ],
+        "preferred_route": [
+          "calculus-ii",
+          "linear-algebra",
+          "differential-equations"
         ]
       },
       "legacy_assessment_key": "khaemenes-differential-equations-assessment-records-v1",
@@ -341,7 +348,12 @@
           "abstract-algebra",
           "real-complex-analysis",
           "topology-differential-geometry"
-        ]
+        ],
+        "earliest_recommended_entry": [
+          "algebra-2",
+          "geometry"
+        ],
+        "sequence_role": "May begin before Calculus II; intended to preserve the proof strand from Geometry into advanced mathematics."
       },
       "legacy_assessment_key": "khaemenes-introduction-to-proofs-assessment-v1",
       "assessment_scope": "local-course-learner",
@@ -412,7 +424,11 @@
           "differential-equations",
           "abstract-algebra",
           "topology-differential-geometry"
-        ]
+        ],
+        "earliest_recommended_entry": [
+          "algebra-2"
+        ],
+        "sequence_role": "College-core branch; preferred before or alongside Differential Equations."
       },
       "legacy_assessment_key": "khaemenes-linear-algebra-assessment-records-v1",
       "assessment_scope": "local-course-learner"
@@ -685,15 +701,19 @@
         "prerequisite_courses": [
           "introduction-to-proofs",
           "real-complex-analysis",
-          "linear-algebra"
+          "linear-algebra",
+          "calculus-iii-multivariable"
         ],
         "recommended_preparation": [
-          "abstract-algebra",
-          "calculus-ii"
+          "abstract-algebra"
         ],
         "recommended_next": [
           "advanced-geometric-topology"
-        ]
+        ],
+        "planned_gap_courses": [
+          "calculus-iii-multivariable"
+        ],
+        "gap_policy": "Topology course text requires multivariable calculus. Until Calculus III is released, readiness bridge work does not substitute for the missing full course."
       }
     },
     {
