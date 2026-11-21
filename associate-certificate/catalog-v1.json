@@ -1,0 +1,1053 @@
+{
+  "schema": "khaemenes-associate-level-certificate-catalog-v1",
+  "version": "1.0.0",
+  "title": "Khaemenes Higher Learning Associate-Level Certificate",
+  "credential": {
+    "type": "free non-accredited educational certificate",
+    "level": "associate-level / first-two-years-of-bachelor-preparation",
+    "duration": "2 years / 4 terms",
+    "total_learning_units": 60,
+    "learning_unit_definition": "One certificate learning unit represents approximately 15 hours of documented study, practice, assessment, project, laboratory, studio, field, or supervised learning evidence. Learning units are internal Khaemenes measures, not institutional college credits.",
+    "transfer_statement": "This certificate is not an accredited degree, does not itself award college credit, and does not guarantee transfer or admission. Learners may preserve course maps, assessments, projects, portfolios, laboratory records, and completion evidence for review by a future school, employer, or credential evaluator.",
+    "tuition": "free",
+    "mastery_floor_percent": 80,
+    "completion_rule": "All required core and concentration learning units, required practical/lab/studio evidence, corrections below mastery, portfolio artifacts, and the final integrative capstone must be completed and reviewed."
+  },
+  "structure": {
+    "shared_collegiate_core": 24,
+    "concentration_study": 30,
+    "integrative_capstone": 6,
+    "terms": 4,
+    "suggested_term_load": 15
+  },
+  "status_legend": {
+    "full": "Standalone instructional course/package is available.",
+    "instructional": "Instructional course or workshop exists but may need associate-certificate packaging or expanded assessment evidence.",
+    "pathway": "Structured pathway exists inside a learning hall; not independently verified as a standalone course.",
+    "resource": "Resource or research hall supports study but is not a course by itself.",
+    "scaffold": "Course shell/course map exists but the full instructional package is not yet complete.",
+    "composed": "Certificate course-equivalent intentionally combines multiple existing resources and requires a certificate-specific assessment wrapper."
+  },
+  "shared_core": [
+    {
+      "code": "KHL-CORE-101",
+      "title": "Academic Language, Research & College Communication",
+      "units": 3,
+      "status": "composed",
+      "sources": [
+        {
+          "title": "Academic Language & Lexicology",
+          "status": "instructional",
+          "repo": "Khaemenes_Higher_Learning.github.io",
+          "path": "courses/academic-language-and-lexicology/"
+        },
+        {
+          "title": "Poetry 403 · Poetry Research, Criticism & Scholarly Writing",
+          "status": "pathway",
+          "repo": "Arshif.github.io",
+          "path": "halls/literacy-poetry-9th-university/index.html"
+        }
+      ],
+      "outcomes": [
+        "academic vocabulary and scholarly register",
+        "source-based writing and citation habits",
+        "research question development",
+        "clear written communication"
+      ]
+    },
+    {
+      "code": "KHL-CORE-102",
+      "title": "Critical Thinking, Logic & Evidence",
+      "units": 3,
+      "status": "composed",
+      "sources": [
+        {
+          "title": "Philosophy 401 · Logic, Argument & Epistemology",
+          "status": "pathway",
+          "repo": "Arshif.github.io",
+          "path": "halls/philosophy/index.html"
+        },
+        {
+          "title": "Introduction to Proofs",
+          "status": "full",
+          "repo": "Khaemenes_Higher_Learning.github.io",
+          "path": "courses/introduction-to-proofs/"
+        }
+      ],
+      "outcomes": [
+        "argument structure",
+        "claims and evidence",
+        "fallacies and counterexamples",
+        "reasoned disagreement"
+      ]
+    },
+    {
+      "code": "KHL-CORE-103",
+      "title": "Quantitative Reasoning & Statistics",
+      "units": 3,
+      "status": "full",
+      "sources": [
+        {
+          "title": "Statistics",
+          "status": "full",
+          "repo": "Khaemenes_Higher_Learning.github.io",
+          "path": "courses/statistics/"
+        }
+      ],
+      "outcomes": [
+        "data literacy",
+        "descriptive statistics",
+        "probability and uncertainty",
+        "interpreting quantitative claims"
+      ]
+    },
+    {
+      "code": "KHL-CORE-104",
+      "title": "Digital Literacy, Information Verification & Research Tools",
+      "units": 3,
+      "status": "composed",
+      "sources": [
+        {
+          "title": "Digital Literacy & Citizenship",
+          "status": "pathway",
+          "repo": "Khaemenes_Higher_Learning.github.io",
+          "path": "life-skills/"
+        },
+        {
+          "title": "Coding 101",
+          "status": "instructional",
+          "repo": "Khaemenes_Higher_Learning.github.io",
+          "path": "Technology/coding/coding-101/"
+        }
+      ],
+      "outcomes": [
+        "digital research",
+        "privacy and security basics",
+        "information verification",
+        "accessible digital work"
+      ]
+    },
+    {
+      "code": "KHL-CORE-105",
+      "title": "Constitutional, Civic & Community Literacy",
+      "units": 3,
+      "status": "instructional",
+      "sources": [
+        {
+          "title": "Constitutional Studies",
+          "status": "instructional",
+          "repo": "Khaemenes_Higher_Learning.github.io",
+          "path": "courses/constitutional-studies/"
+        },
+        {
+          "title": "Civic & Community Living",
+          "status": "pathway",
+          "repo": "Khaemenes_Higher_Learning.github.io",
+          "path": "life-skills/"
+        }
+      ],
+      "outcomes": [
+        "constitutional structure",
+        "rights and responsibilities",
+        "civil discourse",
+        "public institutions and community participation"
+      ]
+    },
+    {
+      "code": "KHL-CORE-106",
+      "title": "Personal Health, Wellbeing & Resilience",
+      "units": 3,
+      "status": "composed",
+      "sources": [
+        {
+          "title": "10-Week Wellness Program",
+          "status": "instructional",
+          "repo": "medicament-hub.github.io",
+          "path": "workshops/10-Week_Wellness_Program_index.html"
+        },
+        {
+          "title": "Health Is Wealth · Six-Week Personal Wellness",
+          "status": "instructional",
+          "repo": "Khaemenes_Academy.github.io",
+          "path": "Health_learning/Health_is_wealth_6weeks_index.html"
+        },
+        {
+          "title": "Emergency Readiness & Resilience",
+          "status": "pathway",
+          "repo": "Khaemenes_Higher_Learning.github.io",
+          "path": "life-skills/"
+        }
+      ],
+      "outcomes": [
+        "wellbeing literacy",
+        "preventive habits",
+        "basic safety and emergency readiness",
+        "knowing when professional care is required"
+      ]
+    },
+    {
+      "code": "KHL-CORE-107",
+      "title": "Personal Finance, Economic Life & Consumer Decisions",
+      "units": 3,
+      "status": "instructional",
+      "sources": [
+        {
+          "title": "Adult Personal Finance",
+          "status": "instructional",
+          "repo": "finance.github.io",
+          "path": "workshops/6-week-personal-finance_index.html"
+        },
+        {
+          "title": "Personal Finance",
+          "status": "pathway",
+          "repo": "Khaemenes_Higher_Learning.github.io",
+          "path": "life-skills/"
+        }
+      ],
+      "outcomes": [
+        "budgeting and saving",
+        "banking and credit",
+        "consumer literacy",
+        "tax and debt awareness"
+      ]
+    },
+    {
+      "code": "KHL-CORE-108",
+      "title": "World Humanities, Culture & Ethical Inquiry",
+      "units": 3,
+      "status": "composed",
+      "sources": [
+        {
+          "title": "World Classics & Humanities Hall",
+          "status": "pathway",
+          "repo": "Arshif.github.io",
+          "path": "halls/literacy-world-classics/index.html"
+        },
+        {
+          "title": "Philosophy 402 · Ethics, Political Philosophy & the Good Society",
+          "status": "pathway",
+          "repo": "Arshif.github.io",
+          "path": "halls/philosophy/index.html"
+        }
+      ],
+      "outcomes": [
+        "comparative cultural literacy",
+        "historical perspective",
+        "ethical reasoning",
+        "humanities-based interpretation"
+      ]
+    }
+  ],
+  "concentrations": {
+    "arts": {
+      "code": "ARTS",
+      "title": "Arts, Design & Creative Practice",
+      "certificate_title": "Associate-Level Certificate in Arts, Design & Creative Practice",
+      "concentration_units": 30,
+      "capstone_units": 6,
+      "courses": [
+        {
+          "code": "ARTS-111",
+          "title": "Foundations of Drawing & Observation",
+          "units": 3,
+          "status": "instructional",
+          "sources": [
+            {
+              "title": "Art 101 — Foundations of Drawing",
+              "repo": "bazaarart.github.io",
+              "path": "apps/Class_art_101_index.html"
+            }
+          ]
+        },
+        {
+          "code": "ARTS-121",
+          "title": "Composition, Design & Artistic Voice",
+          "units": 3,
+          "status": "instructional",
+          "sources": [
+            {
+              "title": "Art 201 — Composition & Artistic Voice",
+              "repo": "bazaarart.github.io",
+              "path": "apps/Class_art_201_index.html"
+            }
+          ]
+        },
+        {
+          "code": "ARTS-131",
+          "title": "Visual Storytelling & Portfolio",
+          "units": 3,
+          "status": "instructional",
+          "sources": [
+            {
+              "title": "Art 301 — Visual Storytelling & Portfolio",
+              "repo": "bazaarart.github.io",
+              "path": "apps/Class_art_301_index.html"
+            }
+          ]
+        },
+        {
+          "code": "ARTS-141",
+          "title": "Music Literacy & Creative Listening",
+          "units": 3,
+          "status": "instructional",
+          "sources": [
+            {
+              "title": "Music 101 Workshop",
+              "repo": "the_refrain.github.io",
+              "path": "education/Music 101 Workshop_index.html"
+            }
+          ]
+        },
+        {
+          "code": "ARTS-151",
+          "title": "Music Theory & Harmonic Practice",
+          "units": 3,
+          "status": "instructional",
+          "sources": [
+            {
+              "title": "Music Theory 201 Workshop",
+              "repo": "the_refrain.github.io",
+              "path": "education/Music 201 Workshop_index.html"
+            }
+          ]
+        },
+        {
+          "code": "ARTS-211",
+          "title": "Poetry, Form & Creative Writing",
+          "units": 3,
+          "status": "pathway",
+          "sources": [
+            {
+              "title": "Poetry 401 / 402",
+              "repo": "Arshif.github.io",
+              "path": "halls/literacy-poetry-9th-university/index.html"
+            }
+          ]
+        },
+        {
+          "code": "ARTS-221",
+          "title": "Theatre, Performance & Dramatic Literature",
+          "units": 3,
+          "status": "pathway",
+          "sources": [
+            {
+              "title": "Theatre 401 / 402",
+              "repo": "Arshif.github.io",
+              "path": "halls/theatre/index.html"
+            }
+          ]
+        },
+        {
+          "code": "ARTS-231",
+          "title": "Aesthetics, Visual Culture & Creative Ethics",
+          "units": 3,
+          "status": "pathway",
+          "sources": [
+            {
+              "title": "Philosophy 503 · Aesthetics, Environment, Gender & Liberation",
+              "repo": "Arshif.github.io",
+              "path": "halls/philosophy/index.html"
+            }
+          ]
+        },
+        {
+          "code": "ARTS-241",
+          "title": "Digital Creative Studio",
+          "units": 3,
+          "status": "composed",
+          "sources": [
+            {
+              "title": "Composer Studio · The Refrain",
+              "repo": "the_refrain.github.io",
+              "path": "apps/composer_studio_index.html"
+            },
+            {
+              "title": "Bazaar Art Hall",
+              "repo": "bazaarart.github.io",
+              "path": "apps/Class_art_hall_index.html"
+            }
+          ]
+        },
+        {
+          "code": "ARTS-251",
+          "title": "Creative Enterprise & Public Presentation",
+          "units": 3,
+          "status": "composed",
+          "sources": [
+            {
+              "title": "Business Incubator",
+              "repo": "finance.github.io",
+              "path": "nonprofit-hall/business-incubator_index.html"
+            },
+            {
+              "title": "Career & Work Readiness",
+              "repo": "Khaemenes_Higher_Learning.github.io",
+              "path": "life-skills/"
+            }
+          ]
+        }
+      ],
+      "capstone": {
+        "code": "ARTS-298",
+        "title": "Exhibition, Performance or Creative Portfolio Capstone",
+        "units": 6,
+        "evidence": [
+          "curated portfolio",
+          "artist statement or critical essay",
+          "public-facing exhibition/performance/presentation",
+          "oral defense/reflection"
+        ]
+      }
+    },
+    "sciences": {
+      "code": "SCI",
+      "title": "Sciences & Scientific Inquiry",
+      "certificate_title": "Associate-Level Certificate in Sciences & Scientific Inquiry",
+      "concentration_units": 30,
+      "capstone_units": 6,
+      "courses": [
+        {
+          "code": "SCI-111",
+          "title": "General Biology I with Laboratory",
+          "units": 6,
+          "status": "full",
+          "sources": [
+            {
+              "title": "General Biology I",
+              "repo": "Khaemenes_Higher_Learning.github.io",
+              "path": "courses/science/bio-101/"
+            }
+          ]
+        },
+        {
+          "code": "SCI-121",
+          "title": "Scientific Measurement, Data & Statistics",
+          "units": 3,
+          "status": "composed",
+          "sources": [
+            {
+              "title": "Statistics",
+              "repo": "Khaemenes_Higher_Learning.github.io",
+              "path": "courses/statistics/"
+            },
+            {
+              "title": "BIO 101 laboratory spine",
+              "repo": "Khaemenes_Higher_Learning.github.io",
+              "path": "courses/science/bio-101/labs/"
+            }
+          ]
+        },
+        {
+          "code": "SCI-131",
+          "title": "College Mathematics for Science",
+          "units": 3,
+          "status": "full",
+          "sources": [
+            {
+              "title": "Precalculus & Trigonometry",
+              "repo": "Khaemenes_Higher_Learning.github.io",
+              "path": "courses/mathematics/precalculus-trigonometry/"
+            }
+          ]
+        },
+        {
+          "code": "SCI-211",
+          "title": "Calculus & Change for the Sciences",
+          "units": 3,
+          "status": "full",
+          "sources": [
+            {
+              "title": "Calculus I",
+              "repo": "Khaemenes_Higher_Learning.github.io",
+              "path": "courses/mathematics/calculus-1/"
+            }
+          ]
+        },
+        {
+          "code": "SCI-221",
+          "title": "Earth, Atmosphere & Weather Systems",
+          "units": 3,
+          "status": "instructional",
+          "sources": [
+            {
+              "title": "Professional Meteorology Certificate — Year I",
+              "repo": "solanar.github.io",
+              "path": "weather-academy/Solanar-Certification-year-01/index.html"
+            }
+          ]
+        },
+        {
+          "code": "SCI-231",
+          "title": "Climate, Environment & Earth Systems",
+          "units": 3,
+          "status": "composed",
+          "sources": [
+            {
+              "title": "Professional Meteorology Certificate — Year II",
+              "repo": "solanar.github.io",
+              "path": "weather-academy/Solanar-Certification-year-02/index.html"
+            },
+            {
+              "title": "Earth & Environmental Science",
+              "repo": "Khaemenes_Higher_Learning.github.io",
+              "path": "courses/science/env-101/"
+            }
+          ]
+        },
+        {
+          "code": "SCI-241",
+          "title": "Scientific Computing & Reproducible Work",
+          "units": 3,
+          "status": "instructional",
+          "sources": [
+            {
+              "title": "Coding 101",
+              "repo": "Khaemenes_Higher_Learning.github.io",
+              "path": "Technology/coding/coding-101/"
+            }
+          ]
+        },
+        {
+          "code": "SCI-251",
+          "title": "Science Elective / Guided Independent Investigation",
+          "units": 3,
+          "status": "composed",
+          "sources": [
+            {
+              "title": "Astronomy & Space Science",
+              "repo": "Khaemenes_Higher_Learning.github.io",
+              "path": "courses/science/astr-101/"
+            },
+            {
+              "title": "Science & Discovery Hall",
+              "repo": "Khaemenes_Higher_Learning.github.io",
+              "path": "Science/"
+            }
+          ]
+        }
+      ],
+      "capstone": {
+        "code": "SCI-298",
+        "title": "Scientific Investigation & Research Capstone",
+        "units": 6,
+        "evidence": [
+          "research question and literature review",
+          "laboratory/field/data protocol",
+          "analysis with uncertainty",
+          "research report",
+          "oral defense"
+        ]
+      }
+    },
+    "civics": {
+      "code": "CIV",
+      "title": "Civics, Governance & Public Life",
+      "certificate_title": "Associate-Level Certificate in Civics, Governance & Public Life",
+      "concentration_units": 30,
+      "capstone_units": 6,
+      "courses": [
+        {
+          "code": "CIV-111",
+          "title": "Constitutional Studies I",
+          "units": 3,
+          "status": "instructional",
+          "sources": [
+            {
+              "title": "Constitutional Studies",
+              "repo": "Khaemenes_Higher_Learning.github.io",
+              "path": "courses/constitutional-studies/"
+            }
+          ]
+        },
+        {
+          "code": "CIV-121",
+          "title": "Law, Governance & Public Institutions",
+          "units": 3,
+          "status": "resource",
+          "sources": [
+            {
+              "title": "Law & Governance Hall",
+              "repo": "firmament.github.io",
+              "path": "apps/Law_Governance_hall_index.html"
+            }
+          ]
+        },
+        {
+          "code": "CIV-131",
+          "title": "Logic, Argument & Public Reason",
+          "units": 3,
+          "status": "pathway",
+          "sources": [
+            {
+              "title": "Philosophy 401",
+              "repo": "Arshif.github.io",
+              "path": "halls/philosophy/index.html"
+            }
+          ]
+        },
+        {
+          "code": "CIV-141",
+          "title": "Ethics, Political Philosophy & the Good Society",
+          "units": 3,
+          "status": "pathway",
+          "sources": [
+            {
+              "title": "Philosophy 402",
+              "repo": "Arshif.github.io",
+              "path": "halls/philosophy/index.html"
+            }
+          ]
+        },
+        {
+          "code": "CIV-211",
+          "title": "Community, Rights & Civic Responsibility",
+          "units": 3,
+          "status": "pathway",
+          "sources": [
+            {
+              "title": "Civic & Community Living",
+              "repo": "Khaemenes_Higher_Learning.github.io",
+              "path": "life-skills/"
+            }
+          ]
+        },
+        {
+          "code": "CIV-221",
+          "title": "Indigenous Knowledge, Law & Ecology",
+          "units": 3,
+          "status": "pathway",
+          "sources": [
+            {
+              "title": "IOT 501",
+              "repo": "Arshif.github.io",
+              "path": "halls/literacy-indiginous-oral-traditions/index.html"
+            }
+          ]
+        },
+        {
+          "code": "CIV-231",
+          "title": "Data Sovereignty, Archives & Community Governance",
+          "units": 3,
+          "status": "pathway",
+          "sources": [
+            {
+              "title": "IOT 602",
+              "repo": "Arshif.github.io",
+              "path": "halls/literacy-indiginous-oral-traditions/index.html"
+            }
+          ]
+        },
+        {
+          "code": "CIV-241",
+          "title": "History, Empire, Mobility & Public Memory",
+          "units": 3,
+          "status": "composed",
+          "sources": [
+            {
+              "title": "Travelogues 402",
+              "repo": "Arshif.github.io",
+              "path": "halls/exploration-travelogues/index.html"
+            },
+            {
+              "title": "Vault 402",
+              "repo": "Arshif.github.io",
+              "path": "halls/vault/index.html"
+            }
+          ]
+        },
+        {
+          "code": "CIV-251",
+          "title": "Public Communication, Civil Discourse & Community Practice",
+          "units": 3,
+          "status": "composed",
+          "sources": [
+            {
+              "title": "Relationships & Communication",
+              "repo": "Khaemenes_Higher_Learning.github.io",
+              "path": "life-skills/"
+            },
+            {
+              "title": "Career & Work Readiness",
+              "repo": "Khaemenes_Higher_Learning.github.io",
+              "path": "life-skills/"
+            }
+          ]
+        },
+        {
+          "code": "CIV-261",
+          "title": "Civic Research Elective",
+          "units": 3,
+          "status": "composed",
+          "sources": [
+            {
+              "title": "Philosophy / Archives / History pathways",
+              "repo": "Arshif.github.io",
+              "path": ""
+            }
+          ]
+        }
+      ],
+      "capstone": {
+        "code": "CIV-298",
+        "title": "Civic Inquiry & Public-Service Capstone",
+        "units": 6,
+        "evidence": [
+          "policy or constitutional research dossier",
+          "community issue analysis",
+          "source and evidence audit",
+          "public-facing brief or presentation",
+          "oral defense"
+        ]
+      }
+    },
+    "health": {
+      "code": "HLT",
+      "title": "Health, Psychology & Wellbeing",
+      "certificate_title": "Associate-Level Certificate in Health, Psychology & Wellbeing",
+      "concentration_units": 30,
+      "capstone_units": 6,
+      "courses": [
+        {
+          "code": "HLT-111",
+          "title": "Personal Wellness Foundations",
+          "units": 3,
+          "status": "instructional",
+          "sources": [
+            {
+              "title": "10-Week Wellness Program",
+              "repo": "medicament-hub.github.io",
+              "path": "workshops/10-Week_Wellness_Program_index.html"
+            }
+          ]
+        },
+        {
+          "code": "HLT-121",
+          "title": "Health Habits, Nutrition & Self-Care",
+          "units": 3,
+          "status": "instructional",
+          "sources": [
+            {
+              "title": "Health Is Wealth · Six-Week Personal Wellness",
+              "repo": "Khaemenes_Academy.github.io",
+              "path": "Health_learning/Health_is_wealth_6weeks_index.html"
+            }
+          ]
+        },
+        {
+          "code": "HLT-131",
+          "title": "Psychology & Mind Foundations",
+          "units": 3,
+          "status": "composed",
+          "sources": [
+            {
+              "title": "Psychology & Mind Hall",
+              "repo": "medicament-hub.github.io",
+              "path": "halls/Psychology_Mind_Hall/index.html"
+            }
+          ]
+        },
+        {
+          "code": "HLT-141",
+          "title": "Health Information Literacy & Evidence",
+          "units": 3,
+          "status": "composed",
+          "sources": [
+            {
+              "title": "Psychology & Mind Hall",
+              "repo": "medicament-hub.github.io",
+              "path": "halls/Psychology_Mind_Hall/index.html"
+            },
+            {
+              "title": "Critical Thinking core resources",
+              "repo": "Arshif.github.io",
+              "path": "halls/philosophy/index.html"
+            }
+          ]
+        },
+        {
+          "code": "HLT-211",
+          "title": "Traditional Medicine in Historical & Cultural Context",
+          "units": 3,
+          "status": "resource",
+          "sources": [
+            {
+              "title": "Traditional Medicine Hall",
+              "repo": "medicament-hub.github.io",
+              "path": "halls/Traditional_Medicine_Hall/index.html"
+            }
+          ]
+        },
+        {
+          "code": "HLT-221",
+          "title": "Holistic Health Claims, Evidence & Safety",
+          "units": 3,
+          "status": "resource",
+          "sources": [
+            {
+              "title": "Holistic Medicine Hall",
+              "repo": "medicament-hub.github.io",
+              "path": "halls/ Holistic_Medicine_Hall/index.html"
+            }
+          ]
+        },
+        {
+          "code": "HLT-231",
+          "title": "Family & Child Health Literacy",
+          "units": 3,
+          "status": "resource",
+          "sources": [
+            {
+              "title": "Children's Medicine Hall",
+              "repo": "medicament-hub.github.io",
+              "path": "halls/Childrens_Medicine_Hall/index.html"
+            }
+          ]
+        },
+        {
+          "code": "HLT-241",
+          "title": "First Aid, Emergency Readiness & Trusted Help",
+          "units": 3,
+          "status": "composed",
+          "sources": [
+            {
+              "title": "Health, First Aid & Wellbeing",
+              "repo": "Khaemenes_Higher_Learning.github.io",
+              "path": "life-skills/"
+            },
+            {
+              "title": "Emergency Readiness & Resilience",
+              "repo": "Khaemenes_Higher_Learning.github.io",
+              "path": "life-skills/"
+            }
+          ]
+        },
+        {
+          "code": "HLT-251",
+          "title": "Relationships, Communication & Community Wellbeing",
+          "units": 3,
+          "status": "pathway",
+          "sources": [
+            {
+              "title": "Relationships & Communication",
+              "repo": "Khaemenes_Higher_Learning.github.io",
+              "path": "life-skills/"
+            }
+          ]
+        },
+        {
+          "code": "HLT-261",
+          "title": "Wellness Practice & Reflective Portfolio",
+          "units": 3,
+          "status": "pathway",
+          "sources": [
+            {
+              "title": "Ongoing Wellness Workshop · Twelve Weeks",
+              "repo": "Khaemenes_Academy.github.io",
+              "path": "Health_learning/wellness_workshop_index.html"
+            }
+          ]
+        }
+      ],
+      "capstone": {
+        "code": "HLT-298",
+        "title": "Health Literacy & Community Wellbeing Capstone",
+        "units": 6,
+        "evidence": [
+          "evidence-based health education project",
+          "source-quality review",
+          "safety and scope-of-practice statement",
+          "community-facing educational artifact",
+          "oral defense"
+        ],
+        "safety": "This track is educational only. It does not qualify a learner to diagnose, treat, prescribe, counsel clinically, or practice a regulated health profession."
+      }
+    },
+    "business": {
+      "code": "BUS",
+      "title": "Business, Finance & Enterprise",
+      "certificate_title": "Associate-Level Certificate in Business, Finance & Enterprise",
+      "concentration_units": 30,
+      "capstone_units": 6,
+      "courses": [
+        {
+          "code": "BUS-111",
+          "title": "Business Management Foundations",
+          "units": 3,
+          "status": "instructional",
+          "sources": [
+            {
+              "title": "Business Management Hall",
+              "repo": "finance.github.io",
+              "path": "nonprofit-hall/business-management_index.html"
+            }
+          ]
+        },
+        {
+          "code": "BUS-121",
+          "title": "Personal Finance & Financial Decision-Making",
+          "units": 3,
+          "status": "instructional",
+          "sources": [
+            {
+              "title": "Adult Personal Finance",
+              "repo": "finance.github.io",
+              "path": "workshops/6-week-personal-finance_index.html"
+            }
+          ]
+        },
+        {
+          "code": "BUS-131",
+          "title": "Investment Foundations",
+          "units": 3,
+          "status": "instructional",
+          "sources": [
+            {
+              "title": "Investment Foundations",
+              "repo": "finance.github.io",
+              "path": "workshops/investment-foundations_index.html"
+            }
+          ]
+        },
+        {
+          "code": "BUS-141",
+          "title": "Entrepreneurship & Small Business",
+          "units": 3,
+          "status": "pathway",
+          "sources": [
+            {
+              "title": "Entrepreneurship & Small Business",
+              "repo": "Khaemenes_Higher_Learning.github.io",
+              "path": "life-skills/"
+            }
+          ]
+        },
+        {
+          "code": "BUS-211",
+          "title": "Business Planning & Incubation",
+          "units": 3,
+          "status": "resource",
+          "sources": [
+            {
+              "title": "Business Incubator",
+              "repo": "finance.github.io",
+              "path": "nonprofit-hall/business-incubator_index.html"
+            }
+          ]
+        },
+        {
+          "code": "BUS-221",
+          "title": "Financial Systems & Enterprise Resources",
+          "units": 3,
+          "status": "resource",
+          "sources": [
+            {
+              "title": "Financial Hall",
+              "repo": "finance.github.io",
+              "path": "financial-hall/index.html"
+            }
+          ]
+        },
+        {
+          "code": "BUS-231",
+          "title": "Nonprofit & Social Enterprise Foundations",
+          "units": 3,
+          "status": "resource",
+          "sources": [
+            {
+              "title": "Nonprofit Hall",
+              "repo": "finance.github.io",
+              "path": "nonprofit-hall/index.html"
+            }
+          ]
+        },
+        {
+          "code": "BUS-241",
+          "title": "Business Data & Statistics",
+          "units": 3,
+          "status": "full",
+          "sources": [
+            {
+              "title": "Statistics",
+              "repo": "Khaemenes_Higher_Learning.github.io",
+              "path": "courses/statistics/"
+            }
+          ]
+        },
+        {
+          "code": "BUS-251",
+          "title": "Digital Work, Communication & Operations",
+          "units": 3,
+          "status": "composed",
+          "sources": [
+            {
+              "title": "Digital Literacy & Citizenship",
+              "repo": "Khaemenes_Higher_Learning.github.io",
+              "path": "life-skills/"
+            },
+            {
+              "title": "Career & Work Readiness",
+              "repo": "Khaemenes_Higher_Learning.github.io",
+              "path": "life-skills/"
+            }
+          ]
+        },
+        {
+          "code": "BUS-261",
+          "title": "Ethics, Regulation & Responsible Enterprise",
+          "units": 3,
+          "status": "composed",
+          "sources": [
+            {
+              "title": "Philosophy 402",
+              "repo": "Arshif.github.io",
+              "path": "halls/philosophy/index.html"
+            },
+            {
+              "title": "Law & Governance Hall",
+              "repo": "firmament.github.io",
+              "path": "apps/Law_Governance_hall_index.html"
+            }
+          ]
+        }
+      ],
+      "capstone": {
+        "code": "BUS-298",
+        "title": "Business or Social Enterprise Capstone",
+        "units": 6,
+        "evidence": [
+          "business/social-enterprise plan",
+          "budget and financial model",
+          "market/customer evidence",
+          "risk/ethics/regulatory review",
+          "pitch or oral defense"
+        ]
+      }
+    }
+  },
+  "suggested_sequence": {
+    "term_1": [
+      "KHL-CORE-101",
+      "KHL-CORE-102",
+      "KHL-CORE-103",
+      "KHL-CORE-104",
+      "track course 1"
+    ],
+    "term_2": [
+      "KHL-CORE-105",
+      "KHL-CORE-106",
+      "KHL-CORE-107",
+      "KHL-CORE-108",
+      "track course 2"
+    ],
+    "term_3": [
+      "five concentration courses / 15 units"
+    ],
+    "term_4": [
+      "three concentration courses / 9 units",
+      "remaining concentration course / 3 units",
+      "6-unit integrative capstone"
+    ],
+    "note": "Sequence may be individualized where prerequisites and evidence requirements permit. The 60-unit total and required core/track/capstone evidence remain fixed."
+  },
+  "certificate_statement": "Khaemenes Higher Learning certifies that the learner completed the published 60-unit non-accredited associate-level curriculum and its evidence requirements. This is a free educational certificate, not an accredited associate degree and not a representation of institutional college credit."
+}
