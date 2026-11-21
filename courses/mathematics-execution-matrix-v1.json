@@ -774,11 +774,7 @@
         ],
         "recommended_next": [
           "advanced-geometric-topology"
-        ],
-        "planned_gap_courses": [
-          "calculus-iii-multivariable"
-        ],
-        "gap_policy": "Topology course text requires multivariable calculus. Until Calculus III is released, readiness bridge work does not substitute for the missing full course."
+        ]
       }
     },
     {
