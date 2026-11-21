@@ -16,7 +16,7 @@
     "proof_sequence": "Proof-based courses require evaluator-reviewed written proof evidence. Objective/browser practice may support learning but cannot compensate for an unmet proof-review requirement.",
     "advanced_geometry_transition": "Topology & Differential Geometry is the mature proof-based prerequisite. Advanced Geometric Topology is an explicit hybrid legacy/V2 sequel; its 1 rich V2 session and 179 legacy fallback sessions must not be represented as a completed V2 migration.",
     "post_calculus_architecture": "After Calculus II the program branches. Linear Algebra, Introduction to Proofs, Discrete Mathematics, Differential Equations, and planned Calculus III are not one forced linear ladder.",
-    "calculus_iii_gap": "Calculus III / Multivariable & Vector Calculus is a planned-required gap. It must not be represented as completed or progression-clearing until released and validated."
+    "calculus_iii_gap": "Resolved: Calculus III / Multivariable & Vector Calculus is now an active 13-unit / 36-week / 180-session / 92-lesson Higher Learning course with readiness, unit mastery, midterm, final, records and regression coverage."
   },
   "courses": [
     {
@@ -175,6 +175,71 @@
       },
       "legacy_assessment_key": "khaemenes-calculus2-assessment-records-v1",
       "assessment_scope": "local-course-learner"
+    },
+    {
+      "id": "calculus-iii-multivariable",
+      "title": "Calculus III · Multivariable & Vector Calculus",
+      "aliases": [
+        "calculus-3",
+        "multivariable-calculus"
+      ],
+      "root": "courses/calculus-iii-multivariable/",
+      "entry": "courses/calculus-iii-multivariable/index.html",
+      "source": "courses/calculus-iii-multivariable/course-map.json",
+      "architecture": "full-map",
+      "weeks": 36,
+      "sessions": 180,
+      "lessons": 92,
+      "units": 13,
+      "mastery_target": 80,
+      "storage_key": "khaemenes-calculus3-multivariable-course-v1",
+      "assessment_key": "khaemenes-calculus3-multivariable-assessment-records-v2",
+      "legacy_assessment_key": "khaemenes-calculus3-multivariable-assessment-records-v1",
+      "assessment_scope": "local-course-learner",
+      "prerequisite": "Calculus II or equivalent mastery of single-variable differentiation, integration, sequences/series, parametric curves, polar coordinates and mathematical communication",
+      "authority": {
+        "diagnostic": {
+          "owner": "courses/calculus-iii-multivariable/diagnostic/index.html",
+          "status": "public-formative/evaluator-review"
+        },
+        "weekly": {
+          "owner": "courses/calculus-iii-multivariable/assets/calculus3-progress-adapter-v1.js",
+          "status": "learner-scoped-80%-progression-evidence"
+        },
+        "midterm": {
+          "owner": "courses/calculus-iii-multivariable/assessments/midterm.html",
+          "status": "closed-book/evaluator-review"
+        },
+        "final": {
+          "owner": "courses/calculus-iii-multivariable/assessments/final.html",
+          "status": "closed-book/evaluator-review"
+        },
+        "persistence": {
+          "owner": "khaemenes-calculus3-multivariable-course-v1",
+          "status": "learner-scoped"
+        },
+        "completion": {
+          "owner": "courses/calculus-iii-multivariable/records/course-completion-certificate.html",
+          "status": "evaluator-review"
+        }
+      },
+      "return_record": {
+        "exporter": "courses/shared/higher-math-evidence-receipt-v1.js",
+        "status": "read-only mathematics evidence receipt; internal/portable evidence only"
+      },
+      "progression": {
+        "prerequisite_courses": [
+          "calculus-ii"
+        ],
+        "concurrent_or_supporting": [
+          "linear-algebra"
+        ],
+        "recommended_next": [
+          "topology-differential-geometry",
+          "differential-equations"
+        ],
+        "sequence_role": "Required multivariable/vector-calculus bridge for Topology & Differential Geometry."
+      }
     },
     {
       "id": "differential-equations",
