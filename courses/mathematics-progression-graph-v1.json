@@ -1,0 +1,204 @@
+{
+  "schema": "khaemenes-mathematics-progression-graph-v1",
+  "version": "1.0.0",
+  "policy": {
+    "mastery_floor_percent": 80,
+    "architecture": "foundation-trunk-then-branch",
+    "repository_boundary": "High School owns Pre-Algebra through Algebra II; Higher Learning owns Precalculus and advanced mathematics. Repository placement does not imply an academic discontinuity.",
+    "preview_vs_progression": "Learners may browse/preview lessons freely. Official progression requires a reviewed mastery authority and must fail closed when such an authority is unavailable.",
+    "planned_course_rule": "Planned nodes may satisfy curriculum design requirements but must never be represented as completed, enrolled, or progression-clearing courses."
+  },
+  "trunk": [
+    {
+      "id": "pre-algebra",
+      "owner": "high-school",
+      "status": "active"
+    },
+    {
+      "id": "algebra-1",
+      "owner": "high-school",
+      "status": "active"
+    },
+    {
+      "id": "geometry",
+      "owner": "high-school",
+      "status": "active",
+      "parallel_with": [
+        "algebra-1"
+      ],
+      "reason": "proof, coordinate, trigonometric, and spatial reasoning"
+    },
+    {
+      "id": "algebra-2",
+      "owner": "high-school",
+      "status": "active"
+    },
+    {
+      "id": "precalculus-trigonometry",
+      "owner": "higher-learning",
+      "status": "active"
+    },
+    {
+      "id": "calculus-i",
+      "owner": "higher-learning",
+      "status": "active"
+    },
+    {
+      "id": "calculus-ii",
+      "owner": "higher-learning",
+      "status": "active"
+    }
+  ],
+  "branch_nodes": [
+    {
+      "id": "linear-algebra",
+      "owner": "higher-learning",
+      "status": "active",
+      "entry_after": [
+        "algebra-2"
+      ],
+      "recommended_after": [
+        "calculus-i"
+      ],
+      "supports": [
+        "differential-equations",
+        "abstract-algebra",
+        "topology-differential-geometry"
+      ]
+    },
+    {
+      "id": "introduction-to-proofs",
+      "owner": "higher-learning",
+      "status": "active",
+      "entry_after": [
+        "algebra-2",
+        "geometry"
+      ],
+      "supports": [
+        "real-complex-analysis",
+        "abstract-algebra",
+        "topology-differential-geometry"
+      ]
+    },
+    {
+      "id": "discrete-mathematics",
+      "owner": "higher-learning",
+      "status": "active",
+      "entry_after": [
+        "algebra-2"
+      ],
+      "supports": [
+        "introduction-to-proofs",
+        "abstract-algebra"
+      ]
+    },
+    {
+      "id": "calculus-iii-multivariable",
+      "owner": "higher-learning",
+      "status": "planned-required-gap",
+      "entry_after": [
+        "calculus-ii"
+      ],
+      "supports": [
+        "topology-differential-geometry",
+        "differential-equations"
+      ],
+      "note": "Required to close the multivariable/vector-calculus prerequisite gap. Not yet a released course."
+    },
+    {
+      "id": "differential-equations",
+      "owner": "higher-learning",
+      "status": "active",
+      "entry_after": [
+        "calculus-i"
+      ],
+      "recommended_after": [
+        "calculus-ii",
+        "linear-algebra"
+      ]
+    },
+    {
+      "id": "real-complex-analysis",
+      "owner": "higher-learning",
+      "status": "active",
+      "requires": [
+        "introduction-to-proofs",
+        "calculus-i"
+      ],
+      "recommended": [
+        "linear-algebra",
+        "calculus-ii"
+      ]
+    },
+    {
+      "id": "abstract-algebra",
+      "owner": "higher-learning",
+      "status": "active",
+      "requires": [
+        "introduction-to-proofs"
+      ],
+      "recommended": [
+        "linear-algebra",
+        "discrete-mathematics"
+      ]
+    },
+    {
+      "id": "topology-differential-geometry",
+      "owner": "higher-learning",
+      "status": "active",
+      "requires": [
+        "introduction-to-proofs",
+        "real-complex-analysis",
+        "linear-algebra",
+        "calculus-iii-multivariable"
+      ],
+      "recommended": [
+        "abstract-algebra"
+      ],
+      "note": "Until Calculus III is released, the Topology readiness bridge cannot by itself be treated as equivalent to a full multivariable/vector-calculus course."
+    }
+  ],
+  "recommended_routes": {
+    "calculus_applied": [
+      "calculus-ii",
+      "linear-algebra",
+      "differential-equations"
+    ],
+    "proof_analysis": [
+      "introduction-to-proofs",
+      "real-complex-analysis"
+    ],
+    "proof_algebra": [
+      "introduction-to-proofs",
+      "discrete-mathematics",
+      "abstract-algebra"
+    ],
+    "geometry_topology": [
+      "introduction-to-proofs",
+      "linear-algebra",
+      "real-complex-analysis",
+      "calculus-iii-multivariable",
+      "topology-differential-geometry"
+    ]
+  },
+  "unresolved_gaps": [
+    {
+      "id": "gap-calculus-iii",
+      "severity": "critical",
+      "status": "open",
+      "description": "No released Calculus III / Multivariable & Vector Calculus course currently satisfies the prerequisite named by Topology & Differential Geometry."
+    },
+    {
+      "id": "gap-hs-hl-evidence-import",
+      "severity": "high",
+      "status": "open",
+      "description": "High School → Higher Learning evidence export exists, but receiving/import certification is not yet complete."
+    },
+    {
+      "id": "gap-early-map-normalization",
+      "severity": "medium",
+      "status": "open",
+      "description": "Pre-Algebra and Algebra I use weaker lesson-map schemas than later mathematics courses."
+    }
+  ]
+}
