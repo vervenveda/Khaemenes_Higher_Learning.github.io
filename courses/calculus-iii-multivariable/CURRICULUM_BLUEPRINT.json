@@ -1,0 +1,123 @@
+{
+  "schema": "khaemenes-calculus-iii-multivariable-blueprint-v1",
+  "status": "planned-not-released",
+  "course": {
+    "id": "calculus-iii-multivariable",
+    "title": "Calculus III · Multivariable & Vector Calculus",
+    "owner": "Khaemenes Higher Learning",
+    "duration_weeks": 36,
+    "sessions": 180,
+    "target_lesson_count": 92,
+    "target_units": 13,
+    "mastery_target": 80,
+    "prerequisite": "Calculus II or equivalent single-variable calculus mastery",
+    "pathways": [
+      "Foundation",
+      "Core",
+      "Honors / Extended"
+    ]
+  },
+  "design_rule": "Do not register this course as complete or progression-clearing until all mapped lessons, assessments, records, and validators exist and pass.",
+  "units": [
+    {
+      "number": 1,
+      "title": "Three-Dimensional Coordinates, Vectors & Geometry",
+      "weeks": 3,
+      "target_lessons": 7
+    },
+    {
+      "number": 2,
+      "title": "Vector-Valued Functions, Curves & Motion in Space",
+      "weeks": 3,
+      "target_lessons": 7
+    },
+    {
+      "number": 3,
+      "title": "Functions of Several Variables & Multivariable Limits",
+      "weeks": 3,
+      "target_lessons": 7
+    },
+    {
+      "number": 4,
+      "title": "Partial Derivatives, Tangent Planes & Linearization",
+      "weeks": 3,
+      "target_lessons": 7
+    },
+    {
+      "number": 5,
+      "title": "Gradient, Directional Derivatives & Optimization",
+      "weeks": 3,
+      "target_lessons": 7
+    },
+    {
+      "number": 6,
+      "title": "Multiple Integrals in Rectangular Coordinates",
+      "weeks": 3,
+      "target_lessons": 7
+    },
+    {
+      "number": 7,
+      "title": "Change of Variables, Polar, Cylindrical & Spherical Coordinates",
+      "weeks": 3,
+      "target_lessons": 7
+    },
+    {
+      "number": 8,
+      "title": "Vector Fields & Line Integrals",
+      "weeks": 3,
+      "target_lessons": 7
+    },
+    {
+      "number": 9,
+      "title": "Green's Theorem & Planar Vector Calculus",
+      "weeks": 2,
+      "target_lessons": 7
+    },
+    {
+      "number": 10,
+      "title": "Parametric Surfaces & Surface Integrals",
+      "weeks": 3,
+      "target_lessons": 7
+    },
+    {
+      "number": 11,
+      "title": "Divergence, Curl & Stokes' Theorem",
+      "weeks": 3,
+      "target_lessons": 7
+    },
+    {
+      "number": 12,
+      "title": "Divergence Theorem, Flux & Physical Models",
+      "weeks": 2,
+      "target_lessons": 7
+    },
+    {
+      "number": 13,
+      "title": "Multivariable Synthesis, Geometry Bridge & Capstone",
+      "weeks": 2,
+      "target_lessons": 8
+    }
+  ],
+  "downstream_alignment": {
+    "topology_differential_geometry": [
+      "coordinate geometry in R^n",
+      "vector-valued curves",
+      "Jacobian and derivative maps",
+      "multivariable chain rule",
+      "tangent planes and linearization",
+      "gradient and directional derivatives",
+      "multiple integration",
+      "line and surface integrals",
+      "vector fields",
+      "Green's theorem",
+      "Stokes' theorem",
+      "Divergence theorem"
+    ],
+    "differential_equations": [
+      "vector fields",
+      "phase-space geometry",
+      "Jacobian matrices",
+      "multivariable linearization"
+    ]
+  }
+}
