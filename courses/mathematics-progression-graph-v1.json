@@ -95,7 +95,7 @@
     {
       "id": "calculus-iii-multivariable",
       "owner": "higher-learning",
-      "status": "planned-required-gap",
+      "status": "active",
       "entry_after": [
         "calculus-ii"
       ],
@@ -103,7 +103,7 @@
         "topology-differential-geometry",
         "differential-equations"
       ],
-      "note": "Required to close the multivariable/vector-calculus prerequisite gap. Not yet a released course."
+      "note": "Released Higher Learning course closing the multivariable/vector-calculus prerequisite gap."
     },
     {
       "id": "differential-equations",
@@ -185,20 +185,23 @@
     {
       "id": "gap-calculus-iii",
       "severity": "critical",
-      "status": "open",
-      "description": "No released Calculus III / Multivariable & Vector Calculus course currently satisfies the prerequisite named by Topology & Differential Geometry."
+      "status": "resolved",
+      "description": "No released Calculus III / Multivariable & Vector Calculus course currently satisfies the prerequisite named by Topology & Differential Geometry.",
+      "resolution": "Calculus III · Multivariable & Vector Calculus released with 92 lessons and formal evidence structure."
     },
     {
       "id": "gap-hs-hl-evidence-import",
       "severity": "high",
-      "status": "open",
-      "description": "High School → Higher Learning evidence export exists, but receiving/import certification is not yet complete."
+      "status": "resolved",
+      "description": "High School → Higher Learning evidence export exists, but receiving/import certification is not yet complete.",
+      "resolution": "High School Algebra II/Geometry readiness receipts now import into Higher Learning as exact-learner-ID advisory prerequisite evidence."
     },
     {
       "id": "gap-early-map-normalization",
       "severity": "medium",
-      "status": "open",
-      "description": "Pre-Algebra and Algebra I use weaker lesson-map schemas than later mathematics courses."
+      "status": "resolved",
+      "description": "Pre-Algebra and Algebra I use weaker lesson-map schemas than later mathematics courses.",
+      "resolution": "Pre-Algebra and Algebra I course-map-v2 files now enumerate canonical lesson IDs and exact source paths."
     }
   ]
 }
