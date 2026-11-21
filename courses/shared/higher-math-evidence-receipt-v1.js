@@ -23,6 +23,12 @@ const CONFIG={
   assessmentPrefix:"khaemenes-calculus2-assessment-records-v2",
   legacyAssessmentKey:"khaemenes-calculus2-assessment-records-v1"
  },
+ "calculus-iii-multivariable":{
+  title:"Calculus III · Multivariable & Vector Calculus",courseId:"calculus-iii-multivariable",aliases:["calculus-3","multivariable-calculus"],
+  rootKey:"khaemenes-calculus3-multivariable-course-v1",
+  assessmentPrefix:"khaemenes-calculus3-multivariable-assessment-records-v2",
+  legacyAssessmentKey:"khaemenes-calculus3-multivariable-assessment-records-v1"
+ },
  "differential-equations":{
   title:"Differential Equations",courseId:"differential-equations",aliases:[],
   rootKey:"khaemenes-differential-equations-college-course-v1",
@@ -68,7 +74,7 @@ function config(){
  const path=String(location.pathname);
  let m=path.match(/\/courses\/mathematics\/(precalculus-trigonometry|calculus-1)(?:\/|$)/);
  if(m)return CONFIG[m[1]];
- m=path.match(/\/courses\/(calculus-ii|differential-equations|linear-algebra|introduction-to-proofs|abstract-algebra|real-complex-analysis|topology-differential-geometry)(?:\/|$)/);
+ m=path.match(/\/courses\/(calculus-ii|calculus-iii-multivariable|differential-equations|linear-algebra|introduction-to-proofs|abstract-algebra|real-complex-analysis|topology-differential-geometry)(?:\/|$)/);
  return m?CONFIG[m[1]]:null;
 }
 function parse(key){try{const raw=localStorage.getItem(key);return raw?JSON.parse(raw):null}catch{return null}}
