@@ -27,3 +27,17 @@ The current page shuffles question order and options in a unit, scores four obje
 2. Add teacher-review rubrics, more authentic reading passages, cited word histories, and 10+ varied questions per unit.
 3. Build a complete higher-learning weekly syllabus (readings, assignments, midterm, final, capstone) and reusability contract for earlier grades.
 4. Audit and reuse High School vocabulary studio and Grade 9 glossary as connected sibling resources, not silently replace them.
+
+## Sovereign Dictionary and Creative Spark archive connection — 2026-11-21
+
+- The course's original `word-bank.json` is the **sole** source for its four-unit lessons and grade assessments. Nothing in the dictionary sync modifies unit gates, word IDs, learner written work, or progress exports.
+- The workspace now includes a read-only **Sovereign Dictionary · Word Inquiry** panel, backed by the canonical Linguistics browser assets (`sovereign-dictionary.generated.js`, dictionary errata, academic expansion, and `khaemenes-interlingual-core.js`). No competing dictionary implementation or auto-promotion was added.
+- The shared lower-left universal toolbar includes a **Dictionary** shortcut to that panel.
+- Creative Spark's unified archive has a separate, exact copy of this word bank at `artist1970/creative-spark.github.io/Dictionary/archive/higher-learning-academic-language-v1.json`. The archive manifest pins this repository's original source Git blob `e3f8ed4152956ef629bce8cf3265cb89b65e560a`.
+- These 16 records are cataloged as **course-reviewed English vocabulary, other languages pending review**. Their definitions and contexts are study references, *not* verified bilingual translation pairs. Student assessment outcomes and answers are never exported into the archive.
+- The encrypted Mac AGI Mini Cloud is a separate, owner-paired private vocabulary store. This course does not send browser or learner records to it or expose its terminal identity, credentials, or ciphertext.
+- Offline/failed dictionary resource loading must leave the course's curriculum, grading and progress functionality available. Live end-to-end acceptance is still required.
+
+### Source-contract checks
+
+Confirm the archived and source `word-bank.json` match exactly, there remain four units and sixteen terms, and unit mastery requires 80%. The dictionary lookup must not touch the existing `KHAE_HL_ACADEMIC_LANGUAGE_V1` progress key or the objective checkpoint code.
