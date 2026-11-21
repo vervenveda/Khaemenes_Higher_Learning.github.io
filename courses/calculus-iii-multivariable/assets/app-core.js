@@ -1,11 +1,23 @@
 (()=>{"use strict";
-const COURSE="calculus-iii-multivariable",ROOT="khaemenes-calculus3-multivariable-course-v1";
+const ROOT="khaemenes-calculus3-multivariable-course-v1";
 function parse(k){try{return JSON.parse(localStorage.getItem(k)||"null")}catch{return null}}
-function activeAcademy(){try{const a=parse("khaemenes_active_learner_v1"),r=parse("khaemenes_family_registry_v1"),id=typeof a==="string"?a:a?.learnerId,l=id?r?.learners?.[id]:null;return l?.learnerId===id?{learnerId:String(id),name:String(l.nickname||l.name||"Learner")}:null}catch{return null}}
-function state(){const l=activeAcademy();return{schema:"khaemenes-calculus3-record-v1",courseId:COURSE,learner:l,updatedAt:new Date().toISOString(),formal:{diagnostic:null,midterm:null,final:null,capstone:null},notes:"",authority:"local learner record; evaluator review required for formal completion"}}
-function key(){const l=activeAcademy();return l?"khaemenes-calculus3-record-v1:"+encodeURIComponent(l.learnerId):null}
-function load(){const k=key();return k?(parse(k)||state()):state()}
-function save(x){const k=key();if(!k)return false;try{const raw=JSON.stringify(x);localStorage.setItem(k,raw);return localStorage.getItem(k)===raw}catch{return false}}
-function render(){const root=document.querySelector("#recordRoot");if(!root)return;const s=load(),l=s.learner;root.innerHTML='<section class="lesson-section"><h1>Calculus III Learner Record</h1><p>'+(l?l.name+" · "+l.learnerId:"No Academy learner is currently bound.")+'</p><p>This local record never awards credit by itself. Diagnostic, unit mastery, midterm, final, corrections, portfolio and capstone defense remain separate evidence streams.</p><p><a href="diagnostic/">Readiness Diagnostic</a> · <a href="assessments/midterm.html">Midterm</a> · <a href="assessments/final.html">Final</a></p><button id="exportRecord" type="button">Export Learner Record</button></section>';document.querySelector("#exportRecord")?.addEventListener("click",()=>{const blob=new Blob([JSON.stringify(load(),null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="calculus-iii-learner-record.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)})}
-addEventListener("DOMContentLoaded",render,{once:true});window.KhaemenesCalculus3Record=Object.freeze({load,save,key,activeAcademy});
+function academyLearner(){try{const a=parse("khaemenes_active_learner_v1"),reg=parse("khaemenes_family_registry_v1"),id=typeof a==="string"?a:a?.learnerId,l=id?reg?.learners?.[id]:null;return l?.learnerId===id?{id:String(id),name:String(l.nickname||l.name||"Learner")}:null}catch{return null}}
+function defaultStudent(l){return{id:l?.id||"unbound",name:l?.name||"Learner",pathway:"Core",weeks:{},formal:{diagnostic:null,midterm:null,final:null,capstone:null},notes:""}}
+function normalize(raw){
+ const a=academyLearner();
+ if(!raw||!Array.isArray(raw.students))raw={version:1,activeId:a?.id||"unbound",students:[defaultStudent(a)]};
+ if(a&&!raw.students.some(s=>s?.id===a.id))raw.students.push(defaultStudent(a));
+ if(a)raw.activeId=a.id;
+ return raw;
+}
+function load(){return normalize(parse(ROOT))}
+function save(s){try{const raw=JSON.stringify(s);localStorage.setItem(ROOT,raw);return localStorage.getItem(ROOT)===raw}catch{return false}}
+function active(s=load()){return s.students.find(x=>x?.id===s.activeId)||s.students[0]||null}
+function render(){
+ const root=document.querySelector("#recordRoot");if(!root)return;
+ const s=load(),l=active(s);save(s);
+ root.innerHTML='<section class="lesson-section"><p class="eyebrow">Calculus III · Learner-owned records</p><h1>Calculus III Course Records</h1><p>'+(l?l.name+" · "+l.id:"No Academy learner is currently bound.")+'</p><p>Diagnostic, unit mastery reviews, corrections, midterm, final and capstone defense remain separate evidence streams. This browser-local record never awards credit by itself.</p><p><a href="diagnostic/">Readiness Diagnostic</a> · <a href="assessments/midterm.html">Midterm</a> · <a href="assessments/final.html">Final</a> · <a href="records/course-completion-certificate.html">Completion Record</a></p><button type="button" data-higher-math-evidence-receipt>Export Mathematics Evidence Receipt</button></section>';
+}
+addEventListener("DOMContentLoaded",render,{once:true});
+window.KhaemenesCalculus3Record=Object.freeze({load,save,active,academyLearner});
 })();
