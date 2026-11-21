@@ -30,6 +30,17 @@ async function sourceHTML(data){
  }catch{return '<p>Detailed lesson source is available at <a href="'+path+'">'+path+'</a>.</p>'}
 }
 function navUrl(item){return "math-lesson.html?lesson="+encodeURIComponent(item.id)}
+async function officialProgressionDecision(current,next){
+ if(!next)return {ok:false,reason:"Course complete",verified:true};
+ const hook=window.KhaemenesHigherMathProgression?.canOpenLesson;
+ if(typeof hook==="function"){
+  try{
+   const r=await hook(next.id,{courseId,currentLessonId:current?.id||null,nextLessonId:next.id});
+   if(r&&typeof r==="object")return {ok:r.ok===true,reason:r.reason||"",verified:r.verified!==false,required:r.required||null};
+  }catch{}
+ }
+ return {ok:false,reason:"Official progression is not yet backed by a reviewed lesson-level mastery adapter for this course. You may preview the next lesson without advancing the official mastery path.",verified:false};
+}
 let activeLearnerId=null;
 function noteKey(id){return activeLearnerId?"khaemenes-higher-math-engine-note:v2:"+encodeURIComponent(activeLearnerId)+":"+courseId+":"+id:null}
 function storeNote(id,text){const key=noteKey(id);if(!key)return false;try{localStorage.setItem(key,text);return localStorage.getItem(key)===text}catch{return false}}
@@ -38,11 +49,12 @@ async function render(){
  const access=await window.KhaemenesHigherMathClassEntry?.requireAccess?.();
  if(!access)return;
  activeLearnerId=access.learner?.learnerId||null;
- const data=hybrid?await loadHybrid():await loadFull(),l=data.lesson,prev=data.lessons[data.idx-1],next=data.lessons[data.idx+1],src=await sourceHTML(data);
+ const data=hybrid?await loadHybrid():await loadFull(),l=data.lesson,prev=data.lessons[data.idx-1],next=data.lessons[data.idx+1],src=await sourceHTML(data),progression=await officialProgressionDecision(l,next);
  document.title=l.title+" · "+data.title+" · Khaemenes Higher Learning";
  document.body.dataset.lesson=l.id;
  root.innerHTML='<div class="shell khm-lesson-shell"><header class="khm-lesson-head"><p class="khm-eyebrow">'+esc(data.title)+' · '+esc(data.hybrid?("Week "+l.week+" · Day "+l.day):("Unit "+String(l.unit).padStart(2,"0")+" · Lesson "+String(l.number).padStart(2,"0")))+'</p><h1>'+esc(l.title)+'</h1><p class="lead">'+esc(l.focus||l.purpose||l.essential||"Proof-centered mathematics with explicit reasoning, evidence and reflection.")+'</p></header>'+
- '<div class="khm-lesson-nav"><a class="khm-btn dark" href="index.html">Course Home</a>'+(prev?'<a class="khm-btn" href="'+navUrl(prev)+'">← Previous</a>':'')+'<select class="khm-select" id="khmLessonSelect" aria-label="Choose lesson">'+data.lessons.map(x=>'<option value="'+esc(x.id)+'" '+(x.id===l.id?'selected':'')+'>'+esc(x.id+" · "+x.title)+'</option>').join("")+'</select>'+(next?'<a class="khm-btn dark" href="'+navUrl(next)+'">Next →</a>':'')+'</div>'+
+ '<div class="khm-lesson-nav"><a class="khm-btn dark" href="index.html">Course Home</a>'+(prev?'<a class="khm-btn" href="'+navUrl(prev)+'">← Previous</a>':'')+'<select class="khm-select" id="khmLessonSelect" aria-label="Browse lesson">'+data.lessons.map(x=>'<option value="'+esc(x.id)+'" '+(x.id===l.id?'selected':'')+'>'+esc(x.id+" · "+x.title)+'</option>').join("")+'</select>'+(next?'<a class="khm-btn" href="'+navUrl(next)+'">Preview Next →</a>':'')+(next&&progression.ok?'<a class="khm-btn dark" href="'+navUrl(next)+'" data-official-continue>Official Continue →</a>':'')+'</div>'+
+ '<p class="khm-status" role="status">'+(next?(progression.ok?'Official progression verified for the next lesson.':'Browsing remains available, but official progression is locked: '+esc(progression.reason)):'Final mapped lesson reached.')+'</p>'+
  '<div class="khm-flow">'+
  '<section class="khm-step"><p class="khm-kicker">01 · Orient</p><h2>Lesson purpose</h2><p>'+esc(l.essential||l.purpose||l.focus||l.title)+'</p></section>'+
  '<section class="khm-step"><p class="khm-kicker">02 · Recall</p><h2>Prerequisite connection</h2><p>'+esc(data.hybrid?"Retrieve the definitions, theorem hypotheses and prior unit results this session depends on.":data.map.course?.prerequisite||"Retrieve the prerequisite definitions and methods needed for this lesson.")+'</p></section>'+
