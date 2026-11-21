@@ -541,6 +541,7 @@ footer{background:#243038!important;color:#fff8e9!important;text-align:center!im
               <a class="service-link" href="https://vervenveda.github.io/PLERASearch.github.io/"><strong>PLERA Search</strong><span>Research and discovery gateway</span></a>
               <a class="service-link" href="https://vervenveda.com/Khaemenes_High.github.io/"><strong>High School</strong><span>Secondary prerequisite campus</span></a>
               <a class="service-link" href="./courses/academic-language-and-lexicology/index.html"><strong>Academic Language</strong><span>Advanced vocabulary, research &amp; scholarly writing</span></a>
+              <a class="service-link" href="./associate-certificate/"><strong>Associate-Level Certificate</strong><span>Two-year free study · Arts, Sciences, Civics, Health &amp; Business</span></a>
             </div>
             <p class="portal-note">Campus links open verified Higher Learning and Verve N Veda destinations. Active, developing, and roadmap labels distinguish what learners can enter now from what is still being consolidated or planned.</p>
           </article>
@@ -621,7 +622,7 @@ footer{background:#243038!important;color:#fff8e9!important;text-align:center!im
         <p class="kicker">Your Next Academic Chapter</p>
         <h2>Khaemenes Higher Learning</h2>
         <p>Study beyond the requirement and build toward mastery through rigorous academics, research, practical tools, creativity, and independent scholarship.</p>
-        <div class="actions"><a class="btn btn-primary" href="./directory/">Browse Course Directory</a><a class="btn" href="./directory/collegiate/">Collegiate Academic Review</a><a class="btn" href="#departments">Enter the Campus</a><a class="btn btn-bronze" href="./Career/index.html">Career Portal</a><a class="btn" href="./courses/index.html">Mathematics Department</a></div>
+        <div class="actions"><a class="btn btn-primary" href="./directory/">Browse Course Directory</a><a class="btn btn-bronze" href="./associate-certificate/">Two-Year Certificate</a><a class="btn" href="./directory/collegiate/">Collegiate Academic Review</a><a class="btn" href="#departments">Enter the Campus</a><a class="btn btn-bronze" href="./Career/index.html">Career Portal</a><a class="btn" href="./courses/index.html">Mathematics Department</a></div>
       </div>
     </section>
   </main>
@@ -630,7 +631,7 @@ footer{background:#243038!important;color:#fff8e9!important;text-align:center!im
     <div class="shell footer-inner">
       <span><strong>Khaemenes Higher Learning</strong><br><small>© <span id="year"></span> Jennifer Pearl · Verve N Veda</small></span>
       <nav class="footer-links" aria-label="Footer navigation">
-        <a href="#student-portal">Student Profile</a><a href="./Career/index.html">Career</a><a href="#departments">Departments</a><a href="./directory/">Course Directory</a><a href="#pathways">Pathways</a><a href="#resources">Resources</a><a href="./courses/index.html">Mathematics</a><a href="https://vervenveda.com/">Verve N Veda</a>
+        <a href="#student-portal">Student Profile</a><a href="./Career/index.html">Career</a><a href="#departments">Departments</a><a href="./directory/">Course Directory</a><a href="./associate-certificate/">Associate-Level Certificate</a><a href="#pathways">Pathways</a><a href="#resources">Resources</a><a href="./courses/index.html">Mathematics</a><a href="https://vervenveda.com/">Verve N Veda</a>
       </nav>
     </div>
    <a href="inquiry-companion.html">Higher Learning · Inquiry Companion</a></footer>
