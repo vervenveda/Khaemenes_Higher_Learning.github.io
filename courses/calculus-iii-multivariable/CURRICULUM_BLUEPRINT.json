@@ -1,6 +1,6 @@
 {
   "schema": "khaemenes-calculus-iii-multivariable-blueprint-v1",
-  "status": "planned-not-released",
+  "status": "released",
   "course": {
     "id": "calculus-iii-multivariable",
     "title": "Calculus III · Multivariable & Vector Calculus",
@@ -17,7 +17,7 @@
       "Honors / Extended"
     ]
   },
-  "design_rule": "Do not register this course as complete or progression-clearing until all mapped lessons, assessments, records, and validators exist and pass.",
+  "design_rule": "Release criteria satisfied when the active course map, 92 lessons, assessments, records, progression adapter and hosted validators pass.",
   "units": [
     {
       "number": 1,
@@ -119,5 +119,6 @@
       "Jacobian matrices",
       "multivariable linearization"
     ]
-  }
+  },
+  "released_as": "courses/calculus-iii-multivariable/course-map.json"
 }
