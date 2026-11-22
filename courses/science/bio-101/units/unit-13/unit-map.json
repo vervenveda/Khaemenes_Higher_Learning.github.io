@@ -1,5 +1,5 @@
 {
-  "schema": "khaemenes-bio101-unit-map-v1",
+  "schema": "khaemenes-bio101-unit-map-v2",
   "course": "BIO 101",
   "unit": 13,
   "title": "Independent Biological Research, Reproducibility & Capstone Defense",
@@ -26,56 +26,136 @@
       "number": 1,
       "title": "Research Question, Scope & Literature Triage",
       "week": 35,
-      "focus": "research question, scope & literature triage"
+      "focus": "research question, scope & literature triage",
+      "application": "independent research design, data analysis, reproducibility, scientific reporting, and oral defense",
+      "evidence_target": "research question",
+      "vocabulary": [
+        "research question",
+        "hypothesis",
+        "operational definition",
+        "sampling design",
+        "effect size",
+        "source register"
+      ]
     },
     {
       "id": "u13-l02",
       "number": 2,
       "title": "Hypotheses, Predictions & Operational Definitions",
       "week": 35,
-      "focus": "hypotheses, predictions & operational definitions"
+      "focus": "hypotheses, predictions & operational definitions",
+      "application": "independent research design, data analysis, reproducibility, scientific reporting, and oral defense",
+      "evidence_target": "source register",
+      "vocabulary": [
+        "research question",
+        "hypothesis",
+        "operational definition",
+        "sampling design",
+        "effect size",
+        "source register"
+      ]
     },
     {
       "id": "u13-l03",
       "number": 3,
       "title": "Experimental Design, Controls & Replication",
       "week": 35,
-      "focus": "experimental design, controls & replication"
+      "focus": "experimental design, controls & replication",
+      "application": "independent research design, data analysis, reproducibility, scientific reporting, and oral defense",
+      "evidence_target": "method",
+      "vocabulary": [
+        "research question",
+        "hypothesis",
+        "operational definition",
+        "sampling design",
+        "effect size",
+        "source register"
+      ]
     },
     {
       "id": "u13-l04",
       "number": 4,
       "title": "Data Analysis, Effect Size & Uncertainty",
       "week": 35,
-      "focus": "data analysis, effect size & uncertainty"
+      "focus": "data analysis, effect size & uncertainty",
+      "application": "independent research design, data analysis, reproducibility, scientific reporting, and oral defense",
+      "evidence_target": "raw data",
+      "vocabulary": [
+        "research question",
+        "hypothesis",
+        "operational definition",
+        "sampling design",
+        "effect size",
+        "source register"
+      ]
     },
     {
       "id": "u13-l05",
       "number": 5,
       "title": "Reproducibility, Null Results & Revision",
       "week": 36,
-      "focus": "reproducibility, null results & revision"
+      "focus": "reproducibility, null results & revision",
+      "application": "independent research design, data analysis, reproducibility, scientific reporting, and oral defense",
+      "evidence_target": "analysis",
+      "vocabulary": [
+        "reproducibility",
+        "null result",
+        "figure legend",
+        "abstract",
+        "peer review",
+        "oral defense"
+      ]
     },
     {
       "id": "u13-l06",
       "number": 6,
       "title": "Scientific Figures, Abstracts & Formal Reporting",
       "week": 36,
-      "focus": "scientific figures, abstracts & formal reporting"
+      "focus": "scientific figures, abstracts & formal reporting",
+      "application": "independent research design, data analysis, reproducibility, scientific reporting, and oral defense",
+      "evidence_target": "figures",
+      "vocabulary": [
+        "reproducibility",
+        "null result",
+        "figure legend",
+        "abstract",
+        "peer review",
+        "oral defense"
+      ]
     },
     {
       "id": "u13-l07",
       "number": 7,
       "title": "Peer Review, Limitations & Research Ethics",
       "week": 36,
-      "focus": "peer review, limitations & research ethics"
+      "focus": "peer review, limitations & research ethics",
+      "application": "independent research design, data analysis, reproducibility, scientific reporting, and oral defense",
+      "evidence_target": "uncertainty",
+      "vocabulary": [
+        "reproducibility",
+        "null result",
+        "figure legend",
+        "abstract",
+        "peer review",
+        "oral defense"
+      ]
     },
     {
       "id": "u13-l08",
       "number": 8,
       "title": "Capstone Portfolio, Oral Defense & BIO 102 Bridge",
       "week": 36,
-      "focus": "capstone portfolio, oral defense & bio 102 bridge"
+      "focus": "capstone portfolio, oral defense & bio 102 bridge",
+      "application": "independent research design, data analysis, reproducibility, scientific reporting, and oral defense",
+      "evidence_target": "limitations",
+      "vocabulary": [
+        "reproducibility",
+        "null result",
+        "figure legend",
+        "abstract",
+        "peer review",
+        "oral defense"
+      ]
     }
   ],
   "mastery": {
@@ -85,5 +165,7 @@
     "randomized": true,
     "retake_fresh_form": true
   },
-  "status": "architecture-locked-lessons-pending"
+  "status": "architecture-locked-lessons-pending",
+  "application": "independent research design, data analysis, reproducibility, scientific reporting, and oral defense",
+  "laboratory_ref": "../../labs/laboratory-spine.json#unit-13"
 }
