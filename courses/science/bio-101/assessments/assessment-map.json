@@ -1,5 +1,5 @@
 {
-  "schema": "khaemenes-bio101-assessment-map-v1",
+  "schema": "khaemenes-bio101-assessment-map-v2",
   "mastery_target": 80,
   "diagnostic": {
     "questions": 40,
@@ -19,26 +19,46 @@
     "portfolio_required": true
   },
   "question_bank": {
-    "target_minimum": 220,
+    "target_minimum": 260,
     "types": [
       "concept",
       "evidence",
       "quantitative",
       "model",
       "application"
-    ]
+    ],
+    "minimum_per_unit": 20,
+    "minimum_per_type_per_unit": 4
   },
   "midterm": {
     "questions": 60,
     "closed_book": true,
     "cumulative_through": "Unit 06",
-    "mastery_target": 80
+    "mastery_target": 80,
+    "type_distribution": {
+      "concept": 12,
+      "evidence": 12,
+      "quantitative": 12,
+      "model": 12,
+      "application": 12
+    },
+    "selection_scope": "Units 01-06",
+    "protected_bank": true
   },
   "final": {
     "questions": 100,
     "closed_book": true,
     "cumulative": true,
-    "mastery_target": 80
+    "mastery_target": 80,
+    "type_distribution": {
+      "concept": 20,
+      "evidence": 20,
+      "quantitative": 20,
+      "model": 20,
+      "application": 20
+    },
+    "selection_scope": "Units 01-13",
+    "protected_bank": true
   },
   "capstone": {
     "unit": 13,
@@ -59,5 +79,222 @@
     "protected midterm/final content remains separate from public practice",
     "laboratory evidence is reviewed rather than auto-certified",
     "retakes use fresh randomized forms where bank depth permits"
+  ],
+  "unit_blueprints": [
+    {
+      "unit": 1,
+      "bank_target_minimum": 20,
+      "mastery_form_questions": 10,
+      "selected_type_distribution": {
+        "concept": 2,
+        "evidence": 2,
+        "quantitative": 2,
+        "model": 2,
+        "application": 2
+      },
+      "mastery_target": 80,
+      "open_book": true,
+      "retake": "fresh-randomized-form",
+      "protected_from_public_practice": true
+    },
+    {
+      "unit": 2,
+      "bank_target_minimum": 20,
+      "mastery_form_questions": 10,
+      "selected_type_distribution": {
+        "concept": 2,
+        "evidence": 2,
+        "quantitative": 2,
+        "model": 2,
+        "application": 2
+      },
+      "mastery_target": 80,
+      "open_book": true,
+      "retake": "fresh-randomized-form",
+      "protected_from_public_practice": true
+    },
+    {
+      "unit": 3,
+      "bank_target_minimum": 20,
+      "mastery_form_questions": 10,
+      "selected_type_distribution": {
+        "concept": 2,
+        "evidence": 2,
+        "quantitative": 2,
+        "model": 2,
+        "application": 2
+      },
+      "mastery_target": 80,
+      "open_book": true,
+      "retake": "fresh-randomized-form",
+      "protected_from_public_practice": true
+    },
+    {
+      "unit": 4,
+      "bank_target_minimum": 20,
+      "mastery_form_questions": 10,
+      "selected_type_distribution": {
+        "concept": 2,
+        "evidence": 2,
+        "quantitative": 2,
+        "model": 2,
+        "application": 2
+      },
+      "mastery_target": 80,
+      "open_book": true,
+      "retake": "fresh-randomized-form",
+      "protected_from_public_practice": true
+    },
+    {
+      "unit": 5,
+      "bank_target_minimum": 20,
+      "mastery_form_questions": 10,
+      "selected_type_distribution": {
+        "concept": 2,
+        "evidence": 2,
+        "quantitative": 2,
+        "model": 2,
+        "application": 2
+      },
+      "mastery_target": 80,
+      "open_book": true,
+      "retake": "fresh-randomized-form",
+      "protected_from_public_practice": true
+    },
+    {
+      "unit": 6,
+      "bank_target_minimum": 20,
+      "mastery_form_questions": 10,
+      "selected_type_distribution": {
+        "concept": 2,
+        "evidence": 2,
+        "quantitative": 2,
+        "model": 2,
+        "application": 2
+      },
+      "mastery_target": 80,
+      "open_book": true,
+      "retake": "fresh-randomized-form",
+      "protected_from_public_practice": true
+    },
+    {
+      "unit": 7,
+      "bank_target_minimum": 20,
+      "mastery_form_questions": 10,
+      "selected_type_distribution": {
+        "concept": 2,
+        "evidence": 2,
+        "quantitative": 2,
+        "model": 2,
+        "application": 2
+      },
+      "mastery_target": 80,
+      "open_book": true,
+      "retake": "fresh-randomized-form",
+      "protected_from_public_practice": true
+    },
+    {
+      "unit": 8,
+      "bank_target_minimum": 20,
+      "mastery_form_questions": 10,
+      "selected_type_distribution": {
+        "concept": 2,
+        "evidence": 2,
+        "quantitative": 2,
+        "model": 2,
+        "application": 2
+      },
+      "mastery_target": 80,
+      "open_book": true,
+      "retake": "fresh-randomized-form",
+      "protected_from_public_practice": true
+    },
+    {
+      "unit": 9,
+      "bank_target_minimum": 20,
+      "mastery_form_questions": 10,
+      "selected_type_distribution": {
+        "concept": 2,
+        "evidence": 2,
+        "quantitative": 2,
+        "model": 2,
+        "application": 2
+      },
+      "mastery_target": 80,
+      "open_book": true,
+      "retake": "fresh-randomized-form",
+      "protected_from_public_practice": true
+    },
+    {
+      "unit": 10,
+      "bank_target_minimum": 20,
+      "mastery_form_questions": 10,
+      "selected_type_distribution": {
+        "concept": 2,
+        "evidence": 2,
+        "quantitative": 2,
+        "model": 2,
+        "application": 2
+      },
+      "mastery_target": 80,
+      "open_book": true,
+      "retake": "fresh-randomized-form",
+      "protected_from_public_practice": true
+    },
+    {
+      "unit": 11,
+      "bank_target_minimum": 20,
+      "mastery_form_questions": 10,
+      "selected_type_distribution": {
+        "concept": 2,
+        "evidence": 2,
+        "quantitative": 2,
+        "model": 2,
+        "application": 2
+      },
+      "mastery_target": 80,
+      "open_book": true,
+      "retake": "fresh-randomized-form",
+      "protected_from_public_practice": true
+    },
+    {
+      "unit": 12,
+      "bank_target_minimum": 20,
+      "mastery_form_questions": 10,
+      "selected_type_distribution": {
+        "concept": 2,
+        "evidence": 2,
+        "quantitative": 2,
+        "model": 2,
+        "application": 2
+      },
+      "mastery_target": 80,
+      "open_book": true,
+      "retake": "fresh-randomized-form",
+      "protected_from_public_practice": true
+    },
+    {
+      "unit": 13,
+      "bank_target_minimum": 20,
+      "mastery_form_questions": 10,
+      "selected_type_distribution": {
+        "concept": 2,
+        "evidence": 2,
+        "quantitative": 2,
+        "model": 2,
+        "application": 2
+      },
+      "mastery_target": 80,
+      "open_book": true,
+      "retake": "fresh-randomized-form",
+      "protected_from_public_practice": true
+    }
+  ],
+  "balance_rules": [
+    "Every official unit form samples all five reasoning types.",
+    "No single unit or reasoning type may dominate cumulative assessments.",
+    "Public formative practice does not expose protected midterm/final items.",
+    "Fresh retakes require different item IDs when sufficient reviewed bank depth exists.",
+    "Assessment items require answer validation and rationale before release."
   ]
 }
