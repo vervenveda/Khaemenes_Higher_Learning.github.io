@@ -10,13 +10,13 @@ BIO 101 is organized to the same full-course structural standard used by Advance
 - 36 weeks
 - 180 sessions
 - 13 units
-- 92 planned lessons
-- 13 evidence-bearing investigations
+- 92 planned lessons with application, evidence-target, and week-vocabulary bindings
+- 13 evidence-bearing investigations with faculty review, safety approval, portfolio artifacts, and reproducibility criteria
 - 40-question readiness diagnostic
 - 13 randomized unit mastery checks at 80%
 - 60-question cumulative midterm
 - 100-question comprehensive final
-- original assessment-bank target of at least 220 items
+- original assessment-bank target of at least 260 items
 - 216 vocabulary placements across all 36 weeks
 - laboratory portfolio
 - independent research capstone and oral defense
