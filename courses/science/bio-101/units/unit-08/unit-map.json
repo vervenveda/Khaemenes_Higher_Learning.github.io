@@ -1,5 +1,5 @@
 {
-  "schema": "khaemenes-bio101-unit-map-v1",
+  "schema": "khaemenes-bio101-unit-map-v2",
   "course": "BIO 101",
   "unit": 8,
   "title": "DNA Replication, Gene Expression & Regulation",
@@ -26,49 +26,119 @@
       "number": 1,
       "title": "DNA Structure, Antiparallel Strands & Base Pairing",
       "week": 21,
-      "focus": "dna structure, antiparallel strands & base pairing"
+      "focus": "dna structure, antiparallel strands & base pairing",
+      "application": "DNA replication, gene expression, mutation, and regulatory mechanism analysis",
+      "evidence_target": "sequence/expression evidence",
+      "vocabulary": [
+        "DNA polymerase",
+        "replication fork",
+        "leading strand",
+        "lagging strand",
+        "Okazaki fragment",
+        "semiconservative replication"
+      ]
     },
     {
       "id": "u08-l02",
       "number": 2,
       "title": "Semiconservative DNA Replication",
       "week": 21,
-      "focus": "semiconservative dna replication"
+      "focus": "semiconservative dna replication",
+      "application": "DNA replication, gene expression, mutation, and regulatory mechanism analysis",
+      "evidence_target": "regulatory model",
+      "vocabulary": [
+        "DNA polymerase",
+        "replication fork",
+        "leading strand",
+        "lagging strand",
+        "Okazaki fragment",
+        "semiconservative replication"
+      ]
     },
     {
       "id": "u08-l03",
       "number": 3,
       "title": "Transcription & RNA Processing",
       "week": 21,
-      "focus": "transcription & rna processing"
+      "focus": "transcription & rna processing",
+      "application": "DNA replication, gene expression, mutation, and regulatory mechanism analysis",
+      "evidence_target": "comparison",
+      "vocabulary": [
+        "DNA polymerase",
+        "replication fork",
+        "leading strand",
+        "lagging strand",
+        "Okazaki fragment",
+        "semiconservative replication"
+      ]
     },
     {
       "id": "u08-l04",
       "number": 4,
       "title": "Translation, Codons & Protein Synthesis",
       "week": 22,
-      "focus": "translation, codons & protein synthesis"
+      "focus": "translation, codons & protein synthesis",
+      "application": "DNA replication, gene expression, mutation, and regulatory mechanism analysis",
+      "evidence_target": "alternative explanation",
+      "vocabulary": [
+        "transcription",
+        "promoter",
+        "RNA polymerase",
+        "RNA processing",
+        "intron",
+        "exon"
+      ]
     },
     {
       "id": "u08-l05",
       "number": 5,
       "title": "Mutation Types & Molecular Consequences",
       "week": 22,
-      "focus": "mutation types & molecular consequences"
+      "focus": "mutation types & molecular consequences",
+      "application": "DNA replication, gene expression, mutation, and regulatory mechanism analysis",
+      "evidence_target": "sequence/expression evidence",
+      "vocabulary": [
+        "transcription",
+        "promoter",
+        "RNA polymerase",
+        "RNA processing",
+        "intron",
+        "exon"
+      ]
     },
     {
       "id": "u08-l06",
       "number": 6,
       "title": "Promoters, Transcription Factors & Regulatory Networks",
       "week": 23,
-      "focus": "promoters, transcription factors & regulatory networks"
+      "focus": "promoters, transcription factors & regulatory networks",
+      "application": "DNA replication, gene expression, mutation, and regulatory mechanism analysis",
+      "evidence_target": "regulatory model",
+      "vocabulary": [
+        "codon",
+        "anticodon",
+        "translation",
+        "ribosome",
+        "mutation",
+        "gene regulation"
+      ]
     },
     {
       "id": "u08-l07",
       "number": 7,
       "title": "Gene Expression Investigation & Evidence Defense",
       "week": 23,
-      "focus": "gene expression investigation & evidence defense"
+      "focus": "gene expression investigation & evidence defense",
+      "application": "DNA replication, gene expression, mutation, and regulatory mechanism analysis",
+      "evidence_target": "comparison",
+      "vocabulary": [
+        "codon",
+        "anticodon",
+        "translation",
+        "ribosome",
+        "mutation",
+        "gene regulation"
+      ]
     }
   ],
   "mastery": {
@@ -78,5 +148,7 @@
     "randomized": true,
     "retake_fresh_form": true
   },
-  "status": "architecture-locked-lessons-pending"
+  "status": "architecture-locked-lessons-pending",
+  "application": "DNA replication, gene expression, mutation, and regulatory mechanism analysis",
+  "laboratory_ref": "../../labs/laboratory-spine.json#unit-08"
 }
