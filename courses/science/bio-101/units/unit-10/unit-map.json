@@ -1,5 +1,5 @@
 {
-  "schema": "khaemenes-bio101-unit-map-v1",
+  "schema": "khaemenes-bio101-unit-map-v2",
   "course": "BIO 101",
   "unit": 10,
   "title": "Evolution, Population Genetics & Phylogeny",
@@ -26,49 +26,119 @@
       "number": 1,
       "title": "Lines of Evidence for Evolutionary Change",
       "week": 27,
-      "focus": "lines of evidence for evolutionary change"
+      "focus": "lines of evidence for evolutionary change",
+      "application": "population genetics, natural selection, phylogenetic inference, and model limits",
+      "evidence_target": "frequency calculations",
+      "vocabulary": [
+        "fossil record",
+        "homology",
+        "biogeography",
+        "molecular evidence",
+        "common ancestry",
+        "evolutionary inference"
+      ]
     },
     {
       "id": "u10-l02",
       "number": 2,
       "title": "Allele Frequencies & Population Variation",
       "week": 27,
-      "focus": "allele frequencies & population variation"
+      "focus": "allele frequencies & population variation",
+      "application": "population genetics, natural selection, phylogenetic inference, and model limits",
+      "evidence_target": "population model",
+      "vocabulary": [
+        "fossil record",
+        "homology",
+        "biogeography",
+        "molecular evidence",
+        "common ancestry",
+        "evolutionary inference"
+      ]
     },
     {
       "id": "u10-l03",
       "number": 3,
       "title": "Natural Selection & Fitness",
       "week": 27,
-      "focus": "natural selection & fitness"
+      "focus": "natural selection & fitness",
+      "application": "population genetics, natural selection, phylogenetic inference, and model limits",
+      "evidence_target": "phylogenetic evidence",
+      "vocabulary": [
+        "fossil record",
+        "homology",
+        "biogeography",
+        "molecular evidence",
+        "common ancestry",
+        "evolutionary inference"
+      ]
     },
     {
       "id": "u10-l04",
       "number": 4,
       "title": "Genetic Drift, Bottlenecks & Founder Effects",
       "week": 28,
-      "focus": "genetic drift, bottlenecks & founder effects"
+      "focus": "genetic drift, bottlenecks & founder effects",
+      "application": "population genetics, natural selection, phylogenetic inference, and model limits",
+      "evidence_target": "uncertainty",
+      "vocabulary": [
+        "allele frequency",
+        "Hardy–Weinberg model",
+        "natural selection",
+        "genetic drift",
+        "gene flow",
+        "mutation"
+      ]
     },
     {
       "id": "u10-l05",
       "number": 5,
       "title": "Gene Flow, Mutation & Population Structure",
       "week": 28,
-      "focus": "gene flow, mutation & population structure"
+      "focus": "gene flow, mutation & population structure",
+      "application": "population genetics, natural selection, phylogenetic inference, and model limits",
+      "evidence_target": "inference limits",
+      "vocabulary": [
+        "allele frequency",
+        "Hardy–Weinberg model",
+        "natural selection",
+        "genetic drift",
+        "gene flow",
+        "mutation"
+      ]
     },
     {
       "id": "u10-l06",
       "number": 6,
       "title": "Speciation & Reproductive Isolation",
       "week": 29,
-      "focus": "speciation & reproductive isolation"
+      "focus": "speciation & reproductive isolation",
+      "application": "population genetics, natural selection, phylogenetic inference, and model limits",
+      "evidence_target": "frequency calculations",
+      "vocabulary": [
+        "fitness",
+        "selection coefficient",
+        "bottleneck",
+        "founder effect",
+        "speciation",
+        "reproductive isolation"
+      ]
     },
     {
       "id": "u10-l07",
       "number": 7,
       "title": "Phylogenetic Analysis & Evidence Limits",
       "week": 29,
-      "focus": "phylogenetic analysis & evidence limits"
+      "focus": "phylogenetic analysis & evidence limits",
+      "application": "population genetics, natural selection, phylogenetic inference, and model limits",
+      "evidence_target": "population model",
+      "vocabulary": [
+        "fitness",
+        "selection coefficient",
+        "bottleneck",
+        "founder effect",
+        "speciation",
+        "reproductive isolation"
+      ]
     }
   ],
   "mastery": {
@@ -78,5 +148,7 @@
     "randomized": true,
     "retake_fresh_form": true
   },
-  "status": "architecture-locked-lessons-pending"
+  "status": "architecture-locked-lessons-pending",
+  "application": "population genetics, natural selection, phylogenetic inference, and model limits",
+  "laboratory_ref": "../../labs/laboratory-spine.json#unit-10"
 }
