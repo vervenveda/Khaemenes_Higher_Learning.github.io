@@ -1,5 +1,5 @@
 {
-  "schema": "khaemenes-bio101-unit-map-v1",
+  "schema": "khaemenes-bio101-unit-map-v2",
   "course": "BIO 101",
   "unit": 2,
   "title": "Molecular Foundations of Life",
@@ -26,49 +26,119 @@
       "number": 1,
       "title": "Water, Polarity & Hydrogen Bonding",
       "week": 3,
-      "focus": "water, polarity & hydrogen bonding"
+      "focus": "water, polarity & hydrogen bonding",
+      "application": "molecular structure–function analysis in biochemical and physiological systems",
+      "evidence_target": "controlled comparison",
+      "vocabulary": [
+        "polarity",
+        "hydrogen bond",
+        "cohesion",
+        "adhesion",
+        "solvent",
+        "hydrophilic"
+      ]
     },
     {
       "id": "u02-l02",
       "number": 2,
       "title": "Carbon Skeletons & Functional Groups",
       "week": 3,
-      "focus": "carbon skeletons & functional groups"
+      "focus": "carbon skeletons & functional groups",
+      "application": "molecular structure–function analysis in biochemical and physiological systems",
+      "evidence_target": "molecular model",
+      "vocabulary": [
+        "polarity",
+        "hydrogen bond",
+        "cohesion",
+        "adhesion",
+        "solvent",
+        "hydrophilic"
+      ]
     },
     {
       "id": "u02-l03",
       "number": 3,
       "title": "Carbohydrates & Lipids",
       "week": 3,
-      "focus": "carbohydrates & lipids"
+      "focus": "carbohydrates & lipids",
+      "application": "molecular structure–function analysis in biochemical and physiological systems",
+      "evidence_target": "qualitative/quantitative observations",
+      "vocabulary": [
+        "polarity",
+        "hydrogen bond",
+        "cohesion",
+        "adhesion",
+        "solvent",
+        "hydrophilic"
+      ]
     },
     {
       "id": "u02-l04",
       "number": 4,
       "title": "Proteins, Folding & Molecular Function",
       "week": 4,
-      "focus": "proteins, folding & molecular function"
+      "focus": "proteins, folding & molecular function",
+      "application": "molecular structure–function analysis in biochemical and physiological systems",
+      "evidence_target": "structure-function explanation",
+      "vocabulary": [
+        "carbon skeleton",
+        "functional group",
+        "isomer",
+        "monomer",
+        "polymer",
+        "dehydration synthesis"
+      ]
     },
     {
       "id": "u02-l05",
       "number": 5,
       "title": "Nucleic Acids & Information Molecules",
       "week": 4,
-      "focus": "nucleic acids & information molecules"
+      "focus": "nucleic acids & information molecules",
+      "application": "molecular structure–function analysis in biochemical and physiological systems",
+      "evidence_target": "controlled comparison",
+      "vocabulary": [
+        "carbon skeleton",
+        "functional group",
+        "isomer",
+        "monomer",
+        "polymer",
+        "dehydration synthesis"
+      ]
     },
     {
       "id": "u02-l06",
       "number": 6,
       "title": "pH, Buffers & Biological Conditions",
       "week": 5,
-      "focus": "ph, buffers & biological conditions"
+      "focus": "ph, buffers & biological conditions",
+      "application": "molecular structure–function analysis in biochemical and physiological systems",
+      "evidence_target": "molecular model",
+      "vocabulary": [
+        "carbohydrate",
+        "lipid",
+        "protein",
+        "nucleic acid",
+        "amino acid",
+        "nucleotide"
+      ]
     },
     {
       "id": "u02-l07",
       "number": 7,
       "title": "Molecular Structure–Function Investigation",
       "week": 5,
-      "focus": "molecular structure–function investigation"
+      "focus": "molecular structure–function investigation",
+      "application": "molecular structure–function analysis in biochemical and physiological systems",
+      "evidence_target": "qualitative/quantitative observations",
+      "vocabulary": [
+        "carbohydrate",
+        "lipid",
+        "protein",
+        "nucleic acid",
+        "amino acid",
+        "nucleotide"
+      ]
     }
   ],
   "mastery": {
@@ -78,5 +148,7 @@
     "randomized": true,
     "retake_fresh_form": true
   },
-  "status": "architecture-locked-lessons-pending"
+  "status": "architecture-locked-lessons-pending",
+  "application": "molecular structure–function analysis in biochemical and physiological systems",
+  "laboratory_ref": "../../labs/laboratory-spine.json#unit-02"
 }
