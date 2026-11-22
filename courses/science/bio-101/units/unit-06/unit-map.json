@@ -1,5 +1,5 @@
 {
-  "schema": "khaemenes-bio101-unit-map-v1",
+  "schema": "khaemenes-bio101-unit-map-v2",
   "course": "BIO 101",
   "unit": 6,
   "title": "Cell Communication, Homeostasis & Cell Cycle",
@@ -26,49 +26,119 @@
       "number": 1,
       "title": "Signals, Receptors & Specificity",
       "week": 15,
-      "focus": "signals, receptors & specificity"
+      "focus": "signals, receptors & specificity",
+      "application": "cell signaling, feedback, growth control, and perturbation-model reasoning",
+      "evidence_target": "pathway model",
+      "vocabulary": [
+        "ligand",
+        "receptor",
+        "signal transduction",
+        "second messenger",
+        "protein kinase",
+        "cellular response"
+      ]
     },
     {
       "id": "u06-l02",
       "number": 2,
       "title": "Signal Transduction & Cellular Response",
       "week": 15,
-      "focus": "signal transduction & cellular response"
+      "focus": "signal transduction & cellular response",
+      "application": "cell signaling, feedback, growth control, and perturbation-model reasoning",
+      "evidence_target": "perturbation evidence",
+      "vocabulary": [
+        "ligand",
+        "receptor",
+        "signal transduction",
+        "second messenger",
+        "protein kinase",
+        "cellular response"
+      ]
     },
     {
       "id": "u06-l03",
       "number": 3,
       "title": "Negative Feedback & Homeostasis",
       "week": 15,
-      "focus": "negative feedback & homeostasis"
+      "focus": "negative feedback & homeostasis",
+      "application": "cell signaling, feedback, growth control, and perturbation-model reasoning",
+      "evidence_target": "feedback analysis",
+      "vocabulary": [
+        "ligand",
+        "receptor",
+        "signal transduction",
+        "second messenger",
+        "protein kinase",
+        "cellular response"
+      ]
     },
     {
       "id": "u06-l04",
       "number": 4,
       "title": "Positive Feedback & Biological Amplification",
       "week": 16,
-      "focus": "positive feedback & biological amplification"
+      "focus": "positive feedback & biological amplification",
+      "application": "cell signaling, feedback, growth control, and perturbation-model reasoning",
+      "evidence_target": "model boundary",
+      "vocabulary": [
+        "homeostasis",
+        "negative feedback",
+        "positive feedback",
+        "set range",
+        "effector",
+        "feedback loop"
+      ]
     },
     {
       "id": "u06-l05",
       "number": 5,
       "title": "Cell Cycle, Mitosis & Checkpoints",
       "week": 16,
-      "focus": "cell cycle, mitosis & checkpoints"
+      "focus": "cell cycle, mitosis & checkpoints",
+      "application": "cell signaling, feedback, growth control, and perturbation-model reasoning",
+      "evidence_target": "pathway model",
+      "vocabulary": [
+        "homeostasis",
+        "negative feedback",
+        "positive feedback",
+        "set range",
+        "effector",
+        "feedback loop"
+      ]
     },
     {
       "id": "u06-l06",
       "number": 6,
       "title": "Apoptosis, Mutation & Cancer Models",
       "week": 17,
-      "focus": "apoptosis, mutation & cancer models"
+      "focus": "apoptosis, mutation & cancer models",
+      "application": "cell signaling, feedback, growth control, and perturbation-model reasoning",
+      "evidence_target": "perturbation evidence",
+      "vocabulary": [
+        "cell cycle",
+        "mitosis",
+        "cyclin",
+        "checkpoint",
+        "apoptosis",
+        "oncogene"
+      ]
     },
     {
       "id": "u06-l07",
       "number": 7,
       "title": "Systems Regulation Investigation & Model Limits",
       "week": 17,
-      "focus": "systems regulation investigation & model limits"
+      "focus": "systems regulation investigation & model limits",
+      "application": "cell signaling, feedback, growth control, and perturbation-model reasoning",
+      "evidence_target": "feedback analysis",
+      "vocabulary": [
+        "cell cycle",
+        "mitosis",
+        "cyclin",
+        "checkpoint",
+        "apoptosis",
+        "oncogene"
+      ]
     }
   ],
   "mastery": {
@@ -78,5 +148,7 @@
     "randomized": true,
     "retake_fresh_form": true
   },
-  "status": "architecture-locked-lessons-pending"
+  "status": "architecture-locked-lessons-pending",
+  "application": "cell signaling, feedback, growth control, and perturbation-model reasoning",
+  "laboratory_ref": "../../labs/laboratory-spine.json#unit-06"
 }
