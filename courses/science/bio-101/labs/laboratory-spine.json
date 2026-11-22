@@ -1,5 +1,5 @@
 {
-  "schema": "khaemenes-bio101-laboratory-spine-v1",
+  "schema": "khaemenes-bio101-laboratory-spine-v2",
   "course": "BIO 101",
   "minimum_investigations": 13,
   "portfolio_key": "khaemenes-bio101-laboratory-portfolio-v1",
@@ -18,6 +18,7 @@
   ],
   "investigations": [
     {
+      "id": "bio101-lab-01",
       "unit": 1,
       "weeks": [
         1,
@@ -33,9 +34,31 @@
         "uncertainty statement",
         "CER",
         "limitations"
-      ]
+      ],
+      "data_mode": "measurement / secondary-data / low-risk approved protocol",
+      "portfolio_artifacts": [
+        "question and prediction/hypothesis",
+        "approved method or analysis protocol",
+        "raw data / source register",
+        "analysis and figure(s)",
+        "claim-evidence-reasoning",
+        "uncertainty / limitations",
+        "revision or next-question note"
+      ],
+      "review_criteria": [
+        "question-method alignment",
+        "appropriate variables/controls or comparison logic",
+        "raw-data integrity and traceability",
+        "quantitative/visual analysis",
+        "uncertainty and limitations",
+        "claim proportional to evidence",
+        "reproducibility/revision",
+        "ethical and safety compliance"
+      ],
+      "completion_gate": "faculty-reviewed-evidence-required"
     },
     {
+      "id": "bio101-lab-02",
       "unit": 2,
       "weeks": [
         3,
@@ -50,9 +73,31 @@
         "molecular model",
         "qualitative/quantitative observations",
         "structure-function explanation"
-      ]
+      ],
+      "data_mode": "comparative molecular evidence / simulation or approved low-risk wet lab",
+      "portfolio_artifacts": [
+        "question and prediction/hypothesis",
+        "approved method or analysis protocol",
+        "raw data / source register",
+        "analysis and figure(s)",
+        "claim-evidence-reasoning",
+        "uncertainty / limitations",
+        "revision or next-question note"
+      ],
+      "review_criteria": [
+        "question-method alignment",
+        "appropriate variables/controls or comparison logic",
+        "raw-data integrity and traceability",
+        "quantitative/visual analysis",
+        "uncertainty and limitations",
+        "claim proportional to evidence",
+        "reproducibility/revision",
+        "ethical and safety compliance"
+      ],
+      "completion_gate": "faculty-reviewed-evidence-required"
     },
     {
+      "id": "bio101-lab-03",
       "unit": 3,
       "weeks": [
         6,
@@ -67,9 +112,31 @@
         "scale calculation",
         "transport data",
         "model revision"
-      ]
+      ],
+      "data_mode": "virtual microscopy / approved microscopy / membrane-model investigation",
+      "portfolio_artifacts": [
+        "question and prediction/hypothesis",
+        "approved method or analysis protocol",
+        "raw data / source register",
+        "analysis and figure(s)",
+        "claim-evidence-reasoning",
+        "uncertainty / limitations",
+        "revision or next-question note"
+      ],
+      "review_criteria": [
+        "question-method alignment",
+        "appropriate variables/controls or comparison logic",
+        "raw-data integrity and traceability",
+        "quantitative/visual analysis",
+        "uncertainty and limitations",
+        "claim proportional to evidence",
+        "reproducibility/revision",
+        "ethical and safety compliance"
+      ],
+      "completion_gate": "faculty-reviewed-evidence-required"
     },
     {
+      "id": "bio101-lab-04",
       "unit": 4,
       "weeks": [
         9,
@@ -85,9 +152,31 @@
         "graph/model",
         "uncertainty",
         "mechanistic claim"
-      ]
+      ],
+      "data_mode": "simulation or educator-approved enzyme-rate investigation",
+      "portfolio_artifacts": [
+        "question and prediction/hypothesis",
+        "approved method or analysis protocol",
+        "raw data / source register",
+        "analysis and figure(s)",
+        "claim-evidence-reasoning",
+        "uncertainty / limitations",
+        "revision or next-question note"
+      ],
+      "review_criteria": [
+        "question-method alignment",
+        "appropriate variables/controls or comparison logic",
+        "raw-data integrity and traceability",
+        "quantitative/visual analysis",
+        "uncertainty and limitations",
+        "claim proportional to evidence",
+        "reproducibility/revision",
+        "ethical and safety compliance"
+      ],
+      "completion_gate": "faculty-reviewed-evidence-required"
     },
     {
+      "id": "bio101-lab-05",
       "unit": 5,
       "weeks": [
         12,
@@ -102,9 +191,31 @@
         "rate proxy",
         "carbon/energy accounting",
         "limitations"
-      ]
+      ],
+      "data_mode": "simulation, plant-based, or educator-approved gas-exchange proxy",
+      "portfolio_artifacts": [
+        "question and prediction/hypothesis",
+        "approved method or analysis protocol",
+        "raw data / source register",
+        "analysis and figure(s)",
+        "claim-evidence-reasoning",
+        "uncertainty / limitations",
+        "revision or next-question note"
+      ],
+      "review_criteria": [
+        "question-method alignment",
+        "appropriate variables/controls or comparison logic",
+        "raw-data integrity and traceability",
+        "quantitative/visual analysis",
+        "uncertainty and limitations",
+        "claim proportional to evidence",
+        "reproducibility/revision",
+        "ethical and safety compliance"
+      ],
+      "completion_gate": "faculty-reviewed-evidence-required"
     },
     {
+      "id": "bio101-lab-06",
       "unit": 6,
       "weeks": [
         15,
@@ -119,9 +230,31 @@
         "perturbation evidence",
         "feedback analysis",
         "model boundary"
-      ]
+      ],
+      "data_mode": "secondary-data / pathway-model perturbation analysis",
+      "portfolio_artifacts": [
+        "question and prediction/hypothesis",
+        "approved method or analysis protocol",
+        "raw data / source register",
+        "analysis and figure(s)",
+        "claim-evidence-reasoning",
+        "uncertainty / limitations",
+        "revision or next-question note"
+      ],
+      "review_criteria": [
+        "question-method alignment",
+        "appropriate variables/controls or comparison logic",
+        "raw-data integrity and traceability",
+        "quantitative/visual analysis",
+        "uncertainty and limitations",
+        "claim proportional to evidence",
+        "reproducibility/revision",
+        "ethical and safety compliance"
+      ],
+      "completion_gate": "faculty-reviewed-evidence-required"
     },
     {
+      "id": "bio101-lab-07",
       "unit": 7,
       "weeks": [
         18,
@@ -137,9 +270,31 @@
         "observed/expected table",
         "chi-square reasoning",
         "interpretation"
-      ]
+      ],
+      "data_mode": "probability / pedigree / simulated inheritance data",
+      "portfolio_artifacts": [
+        "question and prediction/hypothesis",
+        "approved method or analysis protocol",
+        "raw data / source register",
+        "analysis and figure(s)",
+        "claim-evidence-reasoning",
+        "uncertainty / limitations",
+        "revision or next-question note"
+      ],
+      "review_criteria": [
+        "question-method alignment",
+        "appropriate variables/controls or comparison logic",
+        "raw-data integrity and traceability",
+        "quantitative/visual analysis",
+        "uncertainty and limitations",
+        "claim proportional to evidence",
+        "reproducibility/revision",
+        "ethical and safety compliance"
+      ],
+      "completion_gate": "faculty-reviewed-evidence-required"
     },
     {
+      "id": "bio101-lab-08",
       "unit": 8,
       "weeks": [
         21,
@@ -154,9 +309,31 @@
         "regulatory model",
         "comparison",
         "alternative explanation"
-      ]
+      ],
+      "data_mode": "sequence/expression dataset analysis",
+      "portfolio_artifacts": [
+        "question and prediction/hypothesis",
+        "approved method or analysis protocol",
+        "raw data / source register",
+        "analysis and figure(s)",
+        "claim-evidence-reasoning",
+        "uncertainty / limitations",
+        "revision or next-question note"
+      ],
+      "review_criteria": [
+        "question-method alignment",
+        "appropriate variables/controls or comparison logic",
+        "raw-data integrity and traceability",
+        "quantitative/visual analysis",
+        "uncertainty and limitations",
+        "claim proportional to evidence",
+        "reproducibility/revision",
+        "ethical and safety compliance"
+      ],
+      "completion_gate": "faculty-reviewed-evidence-required"
     },
     {
+      "id": "bio101-lab-09",
       "unit": 9,
       "weeks": [
         24,
@@ -172,9 +349,31 @@
         "chain of custody",
         "contamination check",
         "ethical boundary"
-      ]
+      ],
+      "data_mode": "virtual biotechnology / approved non-clinical molecular dataset",
+      "portfolio_artifacts": [
+        "question and prediction/hypothesis",
+        "approved method or analysis protocol",
+        "raw data / source register",
+        "analysis and figure(s)",
+        "claim-evidence-reasoning",
+        "uncertainty / limitations",
+        "revision or next-question note"
+      ],
+      "review_criteria": [
+        "question-method alignment",
+        "appropriate variables/controls or comparison logic",
+        "raw-data integrity and traceability",
+        "quantitative/visual analysis",
+        "uncertainty and limitations",
+        "claim proportional to evidence",
+        "reproducibility/revision",
+        "ethical and safety compliance"
+      ],
+      "completion_gate": "faculty-reviewed-evidence-required"
     },
     {
+      "id": "bio101-lab-10",
       "unit": 10,
       "weeks": [
         27,
@@ -190,9 +389,31 @@
         "phylogenetic evidence",
         "uncertainty",
         "inference limits"
-      ]
+      ],
+      "data_mode": "population-genetics / phylogeny dataset analysis",
+      "portfolio_artifacts": [
+        "question and prediction/hypothesis",
+        "approved method or analysis protocol",
+        "raw data / source register",
+        "analysis and figure(s)",
+        "claim-evidence-reasoning",
+        "uncertainty / limitations",
+        "revision or next-question note"
+      ],
+      "review_criteria": [
+        "question-method alignment",
+        "appropriate variables/controls or comparison logic",
+        "raw-data integrity and traceability",
+        "quantitative/visual analysis",
+        "uncertainty and limitations",
+        "claim proportional to evidence",
+        "reproducibility/revision",
+        "ethical and safety compliance"
+      ],
+      "completion_gate": "faculty-reviewed-evidence-required"
     },
     {
+      "id": "bio101-lab-11",
       "unit": 11,
       "weeks": [
         30,
@@ -207,9 +428,31 @@
         "population model",
         "energy/nutrient flow",
         "systems feedback"
-      ]
+      ],
+      "data_mode": "ecological field, simulation, or secondary dataset",
+      "portfolio_artifacts": [
+        "question and prediction/hypothesis",
+        "approved method or analysis protocol",
+        "raw data / source register",
+        "analysis and figure(s)",
+        "claim-evidence-reasoning",
+        "uncertainty / limitations",
+        "revision or next-question note"
+      ],
+      "review_criteria": [
+        "question-method alignment",
+        "appropriate variables/controls or comparison logic",
+        "raw-data integrity and traceability",
+        "quantitative/visual analysis",
+        "uncertainty and limitations",
+        "claim proportional to evidence",
+        "reproducibility/revision",
+        "ethical and safety compliance"
+      ],
+      "completion_gate": "faculty-reviewed-evidence-required"
     },
     {
+      "id": "bio101-lab-12",
       "unit": 12,
       "weeks": [
         33,
@@ -223,9 +466,31 @@
         "feedback model",
         "comparative analysis",
         "system limitation"
-      ]
+      ],
+      "data_mode": "comparative physiology dataset / non-invasive approved observation",
+      "portfolio_artifacts": [
+        "question and prediction/hypothesis",
+        "approved method or analysis protocol",
+        "raw data / source register",
+        "analysis and figure(s)",
+        "claim-evidence-reasoning",
+        "uncertainty / limitations",
+        "revision or next-question note"
+      ],
+      "review_criteria": [
+        "question-method alignment",
+        "appropriate variables/controls or comparison logic",
+        "raw-data integrity and traceability",
+        "quantitative/visual analysis",
+        "uncertainty and limitations",
+        "claim proportional to evidence",
+        "reproducibility/revision",
+        "ethical and safety compliance"
+      ],
+      "completion_gate": "faculty-reviewed-evidence-required"
     },
     {
+      "id": "bio101-lab-13",
       "unit": 13,
       "weeks": [
         35,
@@ -245,7 +510,44 @@
         "limitations",
         "revision history",
         "oral defense"
-      ]
+      ],
+      "data_mode": "independent design subject to educator safety/ethics approval",
+      "portfolio_artifacts": [
+        "question and prediction/hypothesis",
+        "approved method or analysis protocol",
+        "raw data / source register",
+        "analysis and figure(s)",
+        "claim-evidence-reasoning",
+        "uncertainty / limitations",
+        "revision or next-question note"
+      ],
+      "review_criteria": [
+        "question-method alignment",
+        "appropriate variables/controls or comparison logic",
+        "raw-data integrity and traceability",
+        "quantitative/visual analysis",
+        "uncertainty and limitations",
+        "claim proportional to evidence",
+        "reproducibility/revision",
+        "ethical and safety compliance"
+      ],
+      "completion_gate": "faculty-reviewed-evidence-required"
     }
-  ]
+  ],
+  "review_contract": {
+    "safety_review_required": true,
+    "faculty_review_required": true,
+    "auto_certification": false,
+    "required_review_criteria": [
+      "question-method alignment",
+      "appropriate variables/controls or comparison logic",
+      "raw-data integrity and traceability",
+      "quantitative/visual analysis",
+      "uncertainty and limitations",
+      "claim proportional to evidence",
+      "reproducibility/revision",
+      "ethical and safety compliance"
+    ],
+    "release_boundary": "No wet-lab activity proceeds without an instructor/educator-approved protocol appropriate to the learner, setting, materials, and applicable institutional rules."
+  }
 }
