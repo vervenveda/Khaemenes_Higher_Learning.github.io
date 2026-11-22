@@ -37,7 +37,8 @@
   "laboratories": {
     "investigations": 13,
     "portfolio_required": true,
-    "faculty_review": true
+    "faculty_review": true,
+    "review_contract_version": "v2"
   },
   "vocabulary": {
     "weeks": 36,
@@ -50,8 +51,16 @@
     "unit_questions_each": 10,
     "midterm_questions": 60,
     "final_questions": 100,
-    "question_bank_target_minimum": 220,
-    "retake_requires_fresh_form": true
+    "question_bank_target_minimum": 260,
+    "retake_requires_fresh_form": true,
+    "minimum_items_per_unit": 20,
+    "reasoning_types": [
+      "concept",
+      "evidence",
+      "quantitative",
+      "model",
+      "application"
+    ]
   },
   "evidence": {
     "laboratory_portfolio_key": "khaemenes-bio101-laboratory-portfolio-v1",
@@ -66,5 +75,13 @@
     "Laboratory evidence requires faculty/educator review.",
     "Protected cumulative assessments remain separate from public practice.",
     "No college credit, transfer, accreditation, or licensure claim is made."
-  ]
+  ],
+  "units": {
+    "schema": "khaemenes-bio101-unit-map-v2",
+    "lesson_metadata_required": [
+      "application",
+      "evidence_target",
+      "vocabulary"
+    ]
+  }
 }
