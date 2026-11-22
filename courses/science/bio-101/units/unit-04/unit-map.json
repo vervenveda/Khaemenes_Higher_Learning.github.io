@@ -1,5 +1,5 @@
 {
-  "schema": "khaemenes-bio101-unit-map-v1",
+  "schema": "khaemenes-bio101-unit-map-v2",
   "course": "BIO 101",
   "unit": 4,
   "title": "Enzymes, Metabolism & Bioenergetics",
@@ -26,49 +26,119 @@
       "number": 1,
       "title": "Enzymes & Activation-Energy Barriers",
       "week": 9,
-      "focus": "enzymes & activation-energy barriers"
+      "focus": "enzymes & activation-energy barriers",
+      "application": "enzyme kinetics, metabolic regulation, and quantitative rate evidence",
+      "evidence_target": "rate data",
+      "vocabulary": [
+        "enzyme",
+        "active site",
+        "substrate",
+        "activation energy",
+        "catalyst",
+        "denaturation"
+      ]
     },
     {
       "id": "u04-l02",
       "number": 2,
       "title": "Active Sites, Specificity & Molecular Conditions",
       "week": 9,
-      "focus": "active sites, specificity & molecular conditions"
+      "focus": "active sites, specificity & molecular conditions",
+      "application": "enzyme kinetics, metabolic regulation, and quantitative rate evidence",
+      "evidence_target": "replicates",
+      "vocabulary": [
+        "enzyme",
+        "active site",
+        "substrate",
+        "activation energy",
+        "catalyst",
+        "denaturation"
+      ]
     },
     {
       "id": "u04-l03",
       "number": 3,
       "title": "Reaction Rates, Temperature, pH & Concentration",
       "week": 9,
-      "focus": "reaction rates, temperature, ph & concentration"
+      "focus": "reaction rates, temperature, ph & concentration",
+      "application": "enzyme kinetics, metabolic regulation, and quantitative rate evidence",
+      "evidence_target": "graph/model",
+      "vocabulary": [
+        "enzyme",
+        "active site",
+        "substrate",
+        "activation energy",
+        "catalyst",
+        "denaturation"
+      ]
     },
     {
       "id": "u04-l04",
       "number": 4,
       "title": "ATP, Energy Coupling & Cellular Work",
       "week": 10,
-      "focus": "atp, energy coupling & cellular work"
+      "focus": "atp, energy coupling & cellular work",
+      "application": "enzyme kinetics, metabolic regulation, and quantitative rate evidence",
+      "evidence_target": "uncertainty",
+      "vocabulary": [
+        "reaction rate",
+        "saturation",
+        "competitive inhibition",
+        "allosteric regulation",
+        "cofactor",
+        "coenzyme"
+      ]
     },
     {
       "id": "u04-l05",
       "number": 5,
       "title": "Oxidation–Reduction & Electron Transfer",
       "week": 10,
-      "focus": "oxidation–reduction & electron transfer"
+      "focus": "oxidation–reduction & electron transfer",
+      "application": "enzyme kinetics, metabolic regulation, and quantitative rate evidence",
+      "evidence_target": "mechanistic claim",
+      "vocabulary": [
+        "reaction rate",
+        "saturation",
+        "competitive inhibition",
+        "allosteric regulation",
+        "cofactor",
+        "coenzyme"
+      ]
     },
     {
       "id": "u04-l06",
       "number": 6,
       "title": "Metabolic Pathways & Regulatory Logic",
       "week": 11,
-      "focus": "metabolic pathways & regulatory logic"
+      "focus": "metabolic pathways & regulatory logic",
+      "application": "enzyme kinetics, metabolic regulation, and quantitative rate evidence",
+      "evidence_target": "rate data",
+      "vocabulary": [
+        "ATP",
+        "energy coupling",
+        "redox",
+        "oxidation",
+        "reduction",
+        "metabolic pathway"
+      ]
     },
     {
       "id": "u04-l07",
       "number": 7,
       "title": "Enzyme Kinetics Investigation & Model Defense",
       "week": 11,
-      "focus": "enzyme kinetics investigation & model defense"
+      "focus": "enzyme kinetics investigation & model defense",
+      "application": "enzyme kinetics, metabolic regulation, and quantitative rate evidence",
+      "evidence_target": "replicates",
+      "vocabulary": [
+        "ATP",
+        "energy coupling",
+        "redox",
+        "oxidation",
+        "reduction",
+        "metabolic pathway"
+      ]
     }
   ],
   "mastery": {
@@ -78,5 +148,7 @@
     "randomized": true,
     "retake_fresh_form": true
   },
-  "status": "architecture-locked-lessons-pending"
+  "status": "architecture-locked-lessons-pending",
+  "application": "enzyme kinetics, metabolic regulation, and quantitative rate evidence",
+  "laboratory_ref": "../../labs/laboratory-spine.json#unit-04"
 }
