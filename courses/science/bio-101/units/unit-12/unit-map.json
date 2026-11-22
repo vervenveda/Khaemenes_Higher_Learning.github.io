@@ -1,5 +1,5 @@
 {
-  "schema": "khaemenes-bio101-unit-map-v1",
+  "schema": "khaemenes-bio101-unit-map-v2",
   "course": "BIO 101",
   "unit": 12,
   "title": "Physiology, Systems Integration & Comparative Biology",
@@ -25,49 +25,119 @@
       "number": 1,
       "title": "Tissues, Organs & Functional Integration",
       "week": 33,
-      "focus": "tissues, organs & functional integration"
+      "focus": "tissues, organs & functional integration",
+      "application": "comparative physiology, exchange systems, neural/endocrine regulation, and homeostasis",
+      "evidence_target": "physiological dataset",
+      "vocabulary": [
+        "tissue",
+        "organ",
+        "organ system",
+        "exchange surface",
+        "surface-area-to-volume ratio",
+        "transport system"
+      ]
     },
     {
       "id": "u12-l02",
       "number": 2,
       "title": "Transport Systems & Exchange Surfaces",
       "week": 33,
-      "focus": "transport systems & exchange surfaces"
+      "focus": "transport systems & exchange surfaces",
+      "application": "comparative physiology, exchange systems, neural/endocrine regulation, and homeostasis",
+      "evidence_target": "feedback model",
+      "vocabulary": [
+        "tissue",
+        "organ",
+        "organ system",
+        "exchange surface",
+        "surface-area-to-volume ratio",
+        "transport system"
+      ]
     },
     {
       "id": "u12-l03",
       "number": 3,
       "title": "Gas Exchange & Oxygen Transport",
       "week": 33,
-      "focus": "gas exchange & oxygen transport"
+      "focus": "gas exchange & oxygen transport",
+      "application": "comparative physiology, exchange systems, neural/endocrine regulation, and homeostasis",
+      "evidence_target": "comparative analysis",
+      "vocabulary": [
+        "tissue",
+        "organ",
+        "organ system",
+        "exchange surface",
+        "surface-area-to-volume ratio",
+        "transport system"
+      ]
     },
     {
       "id": "u12-l04",
       "number": 4,
       "title": "Osmoregulation & Water Balance",
       "week": 33,
-      "focus": "osmoregulation & water balance"
+      "focus": "osmoregulation & water balance",
+      "application": "comparative physiology, exchange systems, neural/endocrine regulation, and homeostasis",
+      "evidence_target": "system limitation",
+      "vocabulary": [
+        "tissue",
+        "organ",
+        "organ system",
+        "exchange surface",
+        "surface-area-to-volume ratio",
+        "transport system"
+      ]
     },
     {
       "id": "u12-l05",
       "number": 5,
       "title": "Neural and Endocrine Coordination",
       "week": 34,
-      "focus": "neural and endocrine coordination"
+      "focus": "neural and endocrine coordination",
+      "application": "comparative physiology, exchange systems, neural/endocrine regulation, and homeostasis",
+      "evidence_target": "physiological dataset",
+      "vocabulary": [
+        "osmoregulation",
+        "neuron",
+        "hormone",
+        "endocrine signaling",
+        "immune recognition",
+        "homeostatic integration"
+      ]
     },
     {
       "id": "u12-l06",
       "number": 6,
       "title": "Immune Defense & Biological Recognition",
       "week": 34,
-      "focus": "immune defense & biological recognition"
+      "focus": "immune defense & biological recognition",
+      "application": "comparative physiology, exchange systems, neural/endocrine regulation, and homeostasis",
+      "evidence_target": "feedback model",
+      "vocabulary": [
+        "osmoregulation",
+        "neuron",
+        "hormone",
+        "endocrine signaling",
+        "immune recognition",
+        "homeostatic integration"
+      ]
     },
     {
       "id": "u12-l07",
       "number": 7,
       "title": "Comparative Physiology Investigation & Systems Defense",
       "week": 34,
-      "focus": "comparative physiology investigation & systems defense"
+      "focus": "comparative physiology investigation & systems defense",
+      "application": "comparative physiology, exchange systems, neural/endocrine regulation, and homeostasis",
+      "evidence_target": "comparative analysis",
+      "vocabulary": [
+        "osmoregulation",
+        "neuron",
+        "hormone",
+        "endocrine signaling",
+        "immune recognition",
+        "homeostatic integration"
+      ]
     }
   ],
   "mastery": {
@@ -77,5 +147,7 @@
     "randomized": true,
     "retake_fresh_form": true
   },
-  "status": "architecture-locked-lessons-pending"
+  "status": "architecture-locked-lessons-pending",
+  "application": "comparative physiology, exchange systems, neural/endocrine regulation, and homeostasis",
+  "laboratory_ref": "../../labs/laboratory-spine.json#unit-12"
 }
