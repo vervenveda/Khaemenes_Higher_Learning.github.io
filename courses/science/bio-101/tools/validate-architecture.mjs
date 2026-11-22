@@ -38,6 +38,17 @@ if(map){
  need(Number(map.course?.mastery_target)===80,"course map declares 80% mastery target");
  const ids=lessons.map(x=>x.id);
  need(new Set(ids).size===ids.length,"lesson IDs unique");
+ for(let u=1;u<=13;u++){
+  const unitPath="units/unit-"+String(u).padStart(2,"0")+"/unit-map.json";
+  need(exists(unitPath),"unit map exists "+unitPath);
+  if(exists(unitPath)){
+   try{
+    const um=json(unitPath);
+    need(um.schema==="khaemenes-bio101-unit-map-v2","unit "+u+" uses v2 lesson metadata schema");
+    need(Array.isArray(um.lessons)&&um.lessons.every(x=>String(x.application||"").trim()&&String(x.evidence_target||"").trim()&&Array.isArray(x.vocabulary)&&x.vocabulary.length>=6),"unit "+u+" lessons bind application, evidence target, and vocabulary");
+   }catch(e){fail.push("unit "+u+" map parses: "+e.message)}
+  }
+ }
 }
 
 if(contract){
@@ -60,12 +71,22 @@ if(assess){
  need(assess.midterm?.questions===60,"midterm has 60 questions");
  need(assess.final?.questions===100,"final has 100 questions");
  need(assess.mastery_target===80,"assessment mastery target is 80%");
+ need(assess.question_bank?.target_minimum===260,"assessment bank target is at least 260");
+ need(assess.question_bank?.minimum_per_unit===20,"assessment bank requires at least 20 items per unit");
+ need(Array.isArray(assess.unit_blueprints)&&assess.unit_blueprints.length===13,"assessment map defines 13 unit blueprints");
+ need(assess.unit_blueprints?.every(x=>Object.values(x.selected_type_distribution||{}).reduce((a,b)=>a+Number(b||0),0)===10),"every unit blueprint selects 10 balanced questions");
+ need(Object.values(assess.midterm?.type_distribution||{}).reduce((a,b)=>a+Number(b||0),0)===60,"midterm blueprint distributes all 60 questions");
+ need(Object.values(assess.final?.type_distribution||{}).reduce((a,b)=>a+Number(b||0),0)===100,"final blueprint distributes all 100 questions");
 }
 if(labs){
  need(labs.minimum_investigations===13,"laboratory spine requires 13 investigations");
  need(Array.isArray(labs.investigations)&&labs.investigations.length===13,"laboratory spine defines 13 investigations");
  const units=labs.investigations?.map(x=>Number(x.unit))||[];
  need(new Set(units).size===13&&[...Array(13)].every((_,i)=>units.includes(i+1)),"one investigation mapped to every unit");
+ need(labs.schema==="khaemenes-bio101-laboratory-spine-v2","laboratory spine uses v2 review contract");
+ need(labs.review_contract?.safety_review_required===true,"laboratory spine requires safety review");
+ need(labs.review_contract?.faculty_review_required===true,"laboratory spine requires faculty review");
+ need(labs.investigations?.every(x=>String(x.id||"").trim()&&String(x.data_mode||"").trim()&&Array.isArray(x.portfolio_artifacts)&&x.portfolio_artifacts.length>=7&&Array.isArray(x.review_criteria)&&x.review_criteria.length>=8&&x.completion_gate==="faculty-reviewed-evidence-required"),"every investigation has portfolio, review, safety-ready metadata");
 }
 if(vocab){
  need(vocab.weeks===36,"vocabulary map has 36 weeks");
