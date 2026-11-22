@@ -1,5 +1,5 @@
 {
-  "schema": "khaemenes-bio101-unit-map-v1",
+  "schema": "khaemenes-bio101-unit-map-v2",
   "course": "BIO 101",
   "unit": 5,
   "title": "Photosynthesis, Respiration & Energy Transformation",
@@ -26,49 +26,119 @@
       "number": 1,
       "title": "Photosynthetic Pigments & Light Capture",
       "week": 12,
-      "focus": "photosynthetic pigments & light capture"
+      "focus": "photosynthetic pigments & light capture",
+      "application": "photosynthesis, respiration, carbon flow, and cellular energy accounting",
+      "evidence_target": "system boundary",
+      "vocabulary": [
+        "chlorophyll",
+        "photosystem",
+        "electron transport chain",
+        "chemiosmosis",
+        "photophosphorylation",
+        "light reaction"
+      ]
     },
     {
       "id": "u05-l02",
       "number": 2,
       "title": "Light Reactions & Chemiosmosis",
       "week": 12,
-      "focus": "light reactions & chemiosmosis"
+      "focus": "light reactions & chemiosmosis",
+      "application": "photosynthesis, respiration, carbon flow, and cellular energy accounting",
+      "evidence_target": "rate proxy",
+      "vocabulary": [
+        "chlorophyll",
+        "photosystem",
+        "electron transport chain",
+        "chemiosmosis",
+        "photophosphorylation",
+        "light reaction"
+      ]
     },
     {
       "id": "u05-l03",
       "number": 3,
       "title": "Carbon Fixation & Biomass",
       "week": 12,
-      "focus": "carbon fixation & biomass"
+      "focus": "carbon fixation & biomass",
+      "application": "photosynthesis, respiration, carbon flow, and cellular energy accounting",
+      "evidence_target": "carbon/energy accounting",
+      "vocabulary": [
+        "chlorophyll",
+        "photosystem",
+        "electron transport chain",
+        "chemiosmosis",
+        "photophosphorylation",
+        "light reaction"
+      ]
     },
     {
       "id": "u05-l04",
       "number": 4,
       "title": "Glycolysis & Pyruvate Processing",
       "week": 13,
-      "focus": "glycolysis & pyruvate processing"
+      "focus": "glycolysis & pyruvate processing",
+      "application": "photosynthesis, respiration, carbon flow, and cellular energy accounting",
+      "evidence_target": "limitations",
+      "vocabulary": [
+        "Calvin cycle",
+        "carbon fixation",
+        "Rubisco",
+        "G3P",
+        "stomata",
+        "limiting factor"
+      ]
     },
     {
       "id": "u05-l05",
       "number": 5,
       "title": "Citric Acid Cycle & Oxidative Phosphorylation",
       "week": 13,
-      "focus": "citric acid cycle & oxidative phosphorylation"
+      "focus": "citric acid cycle & oxidative phosphorylation",
+      "application": "photosynthesis, respiration, carbon flow, and cellular energy accounting",
+      "evidence_target": "system boundary",
+      "vocabulary": [
+        "Calvin cycle",
+        "carbon fixation",
+        "Rubisco",
+        "G3P",
+        "stomata",
+        "limiting factor"
+      ]
     },
     {
       "id": "u05-l06",
       "number": 6,
       "title": "Fermentation, Oxygen Limits & Metabolic Flexibility",
       "week": 14,
-      "focus": "fermentation, oxygen limits & metabolic flexibility"
+      "focus": "fermentation, oxygen limits & metabolic flexibility",
+      "application": "photosynthesis, respiration, carbon flow, and cellular energy accounting",
+      "evidence_target": "rate proxy",
+      "vocabulary": [
+        "glycolysis",
+        "pyruvate",
+        "citric acid cycle",
+        "oxidative phosphorylation",
+        "fermentation",
+        "respiratory quotient"
+      ]
     },
     {
       "id": "u05-l07",
       "number": 7,
       "title": "Energy Transformation Investigation & Carbon Accounting",
       "week": 14,
-      "focus": "energy transformation investigation & carbon accounting"
+      "focus": "energy transformation investigation & carbon accounting",
+      "application": "photosynthesis, respiration, carbon flow, and cellular energy accounting",
+      "evidence_target": "carbon/energy accounting",
+      "vocabulary": [
+        "glycolysis",
+        "pyruvate",
+        "citric acid cycle",
+        "oxidative phosphorylation",
+        "fermentation",
+        "respiratory quotient"
+      ]
     }
   ],
   "mastery": {
@@ -78,5 +148,7 @@
     "randomized": true,
     "retake_fresh_form": true
   },
-  "status": "architecture-locked-lessons-pending"
+  "status": "architecture-locked-lessons-pending",
+  "application": "photosynthesis, respiration, carbon flow, and cellular energy accounting",
+  "laboratory_ref": "../../labs/laboratory-spine.json#unit-05"
 }
