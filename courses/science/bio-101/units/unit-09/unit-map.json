@@ -1,5 +1,5 @@
 {
-  "schema": "khaemenes-bio101-unit-map-v1",
+  "schema": "khaemenes-bio101-unit-map-v2",
   "course": "BIO 101",
   "unit": 9,
   "title": "Genomics, Biotechnology & Bioethics",
@@ -26,49 +26,119 @@
       "number": 1,
       "title": "PCR Logic, Primers & Amplification",
       "week": 24,
-      "focus": "pcr logic, primers & amplification"
+      "focus": "pcr logic, primers & amplification",
+      "application": "PCR, electrophoresis, sequencing, genomics, and biotechnology evidence",
+      "evidence_target": "controls",
+      "vocabulary": [
+        "PCR",
+        "primer",
+        "template DNA",
+        "amplification",
+        "positive control",
+        "negative control"
+      ]
     },
     {
       "id": "u09-l02",
       "number": 2,
       "title": "Gel Electrophoresis & Molecular Separation",
       "week": 24,
-      "focus": "gel electrophoresis & molecular separation"
+      "focus": "gel electrophoresis & molecular separation",
+      "application": "PCR, electrophoresis, sequencing, genomics, and biotechnology evidence",
+      "evidence_target": "band/sequence evidence",
+      "vocabulary": [
+        "PCR",
+        "primer",
+        "template DNA",
+        "amplification",
+        "positive control",
+        "negative control"
+      ]
     },
     {
       "id": "u09-l03",
       "number": 3,
       "title": "DNA Sequencing & Genomic Comparison",
       "week": 24,
-      "focus": "dna sequencing & genomic comparison"
+      "focus": "dna sequencing & genomic comparison",
+      "application": "PCR, electrophoresis, sequencing, genomics, and biotechnology evidence",
+      "evidence_target": "chain of custody",
+      "vocabulary": [
+        "PCR",
+        "primer",
+        "template DNA",
+        "amplification",
+        "positive control",
+        "negative control"
+      ]
     },
     {
       "id": "u09-l04",
       "number": 4,
       "title": "Genomics, Databases & Biological Inference",
       "week": 25,
-      "focus": "genomics, databases & biological inference"
+      "focus": "genomics, databases & biological inference",
+      "application": "PCR, electrophoresis, sequencing, genomics, and biotechnology evidence",
+      "evidence_target": "contamination check",
+      "vocabulary": [
+        "gel electrophoresis",
+        "restriction enzyme",
+        "DNA fragment",
+        "sequencing",
+        "genome",
+        "bioinformatics"
+      ]
     },
     {
       "id": "u09-l05",
       "number": 5,
       "title": "CRISPR Concepts & Gene Editing Boundaries",
       "week": 25,
-      "focus": "crispr concepts & gene editing boundaries"
+      "focus": "crispr concepts & gene editing boundaries",
+      "application": "PCR, electrophoresis, sequencing, genomics, and biotechnology evidence",
+      "evidence_target": "ethical boundary",
+      "vocabulary": [
+        "gel electrophoresis",
+        "restriction enzyme",
+        "DNA fragment",
+        "sequencing",
+        "genome",
+        "bioinformatics"
+      ]
     },
     {
       "id": "u09-l06",
       "number": 6,
       "title": "Consent, Privacy & Biotechnology Ethics",
       "week": 26,
-      "focus": "consent, privacy & biotechnology ethics"
+      "focus": "consent, privacy & biotechnology ethics",
+      "application": "PCR, electrophoresis, sequencing, genomics, and biotechnology evidence",
+      "evidence_target": "controls",
+      "vocabulary": [
+        "CRISPR",
+        "guide RNA",
+        "gene editing",
+        "off-target effect",
+        "informed consent",
+        "genetic privacy"
+      ]
     },
     {
       "id": "u09-l07",
       "number": 7,
       "title": "Biotechnology Evidence Investigation & Chain of Custody",
       "week": 26,
-      "focus": "biotechnology evidence investigation & chain of custody"
+      "focus": "biotechnology evidence investigation & chain of custody",
+      "application": "PCR, electrophoresis, sequencing, genomics, and biotechnology evidence",
+      "evidence_target": "band/sequence evidence",
+      "vocabulary": [
+        "CRISPR",
+        "guide RNA",
+        "gene editing",
+        "off-target effect",
+        "informed consent",
+        "genetic privacy"
+      ]
     }
   ],
   "mastery": {
@@ -78,5 +148,7 @@
     "randomized": true,
     "retake_fresh_form": true
   },
-  "status": "architecture-locked-lessons-pending"
+  "status": "architecture-locked-lessons-pending",
+  "application": "PCR, electrophoresis, sequencing, genomics, and biotechnology evidence",
+  "laboratory_ref": "../../labs/laboratory-spine.json#unit-09"
 }
