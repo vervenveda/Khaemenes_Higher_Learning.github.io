@@ -1,5 +1,5 @@
 {
-  "schema": "khaemenes-bio101-unit-map-v1",
+  "schema": "khaemenes-bio101-unit-map-v2",
   "course": "BIO 101",
   "unit": 11,
   "title": "Ecology, Population Dynamics & Biogeochemical Systems",
@@ -26,49 +26,119 @@
       "number": 1,
       "title": "Energy Flow, Trophic Structure & Productivity",
       "week": 30,
-      "focus": "energy flow, trophic structure & productivity"
+      "focus": "energy flow, trophic structure & productivity",
+      "application": "population dynamics, trophic energy flow, nutrient cycling, and ecosystem feedback",
+      "evidence_target": "time-series or field data",
+      "vocabulary": [
+        "producer",
+        "consumer",
+        "trophic level",
+        "primary productivity",
+        "ecological efficiency",
+        "food web"
+      ]
     },
     {
       "id": "u11-l02",
       "number": 2,
       "title": "Exponential and Logistic Population Models",
       "week": 30,
-      "focus": "exponential and logistic population models"
+      "focus": "exponential and logistic population models",
+      "application": "population dynamics, trophic energy flow, nutrient cycling, and ecosystem feedback",
+      "evidence_target": "population model",
+      "vocabulary": [
+        "producer",
+        "consumer",
+        "trophic level",
+        "primary productivity",
+        "ecological efficiency",
+        "food web"
+      ]
     },
     {
       "id": "u11-l03",
       "number": 3,
       "title": "Competition, Predation & Community Interactions",
       "week": 30,
-      "focus": "competition, predation & community interactions"
+      "focus": "competition, predation & community interactions",
+      "application": "population dynamics, trophic energy flow, nutrient cycling, and ecosystem feedback",
+      "evidence_target": "energy/nutrient flow",
+      "vocabulary": [
+        "producer",
+        "consumer",
+        "trophic level",
+        "primary productivity",
+        "ecological efficiency",
+        "food web"
+      ]
     },
     {
       "id": "u11-l04",
       "number": 4,
       "title": "Succession, Biodiversity & Resilience",
       "week": 31,
-      "focus": "succession, biodiversity & resilience"
+      "focus": "succession, biodiversity & resilience",
+      "application": "population dynamics, trophic energy flow, nutrient cycling, and ecosystem feedback",
+      "evidence_target": "systems feedback",
+      "vocabulary": [
+        "exponential growth",
+        "logistic growth",
+        "carrying capacity",
+        "competition",
+        "predation",
+        "succession"
+      ]
     },
     {
       "id": "u11-l05",
       "number": 5,
       "title": "Carbon Cycling & Reservoirs",
       "week": 31,
-      "focus": "carbon cycling & reservoirs"
+      "focus": "carbon cycling & reservoirs",
+      "application": "population dynamics, trophic energy flow, nutrient cycling, and ecosystem feedback",
+      "evidence_target": "time-series or field data",
+      "vocabulary": [
+        "exponential growth",
+        "logistic growth",
+        "carrying capacity",
+        "competition",
+        "predation",
+        "succession"
+      ]
     },
     {
       "id": "u11-l06",
       "number": 6,
       "title": "Nitrogen Cycling, Nutrients & Human Impacts",
       "week": 32,
-      "focus": "nitrogen cycling, nutrients & human impacts"
+      "focus": "nitrogen cycling, nutrients & human impacts",
+      "application": "population dynamics, trophic energy flow, nutrient cycling, and ecosystem feedback",
+      "evidence_target": "population model",
+      "vocabulary": [
+        "carbon cycle",
+        "nitrogen cycle",
+        "reservoir",
+        "flux",
+        "biodiversity",
+        "resilience"
+      ]
     },
     {
       "id": "u11-l07",
       "number": 7,
       "title": "Ecosystem Data Investigation & Systems Model",
       "week": 32,
-      "focus": "ecosystem data investigation & systems model"
+      "focus": "ecosystem data investigation & systems model",
+      "application": "population dynamics, trophic energy flow, nutrient cycling, and ecosystem feedback",
+      "evidence_target": "energy/nutrient flow",
+      "vocabulary": [
+        "carbon cycle",
+        "nitrogen cycle",
+        "reservoir",
+        "flux",
+        "biodiversity",
+        "resilience"
+      ]
     }
   ],
   "mastery": {
@@ -78,5 +148,7 @@
     "randomized": true,
     "retake_fresh_form": true
   },
-  "status": "architecture-locked-lessons-pending"
+  "status": "architecture-locked-lessons-pending",
+  "application": "population dynamics, trophic energy flow, nutrient cycling, and ecosystem feedback",
+  "laboratory_ref": "../../labs/laboratory-spine.json#unit-11"
 }
