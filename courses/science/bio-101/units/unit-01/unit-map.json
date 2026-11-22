@@ -1,5 +1,5 @@
 {
-  "schema": "khaemenes-bio101-unit-map-v1",
+  "schema": "khaemenes-bio101-unit-map-v2",
   "course": "BIO 101",
   "unit": 1,
   "title": "College Biology Readiness, Safety & Scientific Reasoning",
@@ -25,49 +25,119 @@
       "number": 1,
       "title": "Laboratory Safety, Risk & Responsible Investigation",
       "week": 1,
-      "focus": "laboratory safety, risk & responsible investigation"
+      "focus": "laboratory safety, risk & responsible investigation",
+      "application": "laboratory planning, measurement quality, reproducibility, and evidence defense",
+      "evidence_target": "risk assessment",
+      "vocabulary": [
+        "hazard",
+        "risk",
+        "independent variable",
+        "dependent variable",
+        "control",
+        "uncertainty"
+      ]
     },
     {
       "id": "u01-l02",
       "number": 2,
       "title": "Variables, Controls & Experimental Logic",
       "week": 1,
-      "focus": "variables, controls & experimental logic"
+      "focus": "variables, controls & experimental logic",
+      "application": "laboratory planning, measurement quality, reproducibility, and evidence defense",
+      "evidence_target": "raw measurement table",
+      "vocabulary": [
+        "hazard",
+        "risk",
+        "independent variable",
+        "dependent variable",
+        "control",
+        "uncertainty"
+      ]
     },
     {
       "id": "u01-l03",
       "number": 3,
       "title": "Measurement, Units & Biological Uncertainty",
       "week": 1,
-      "focus": "measurement, units & biological uncertainty"
+      "focus": "measurement, units & biological uncertainty",
+      "application": "laboratory planning, measurement quality, reproducibility, and evidence defense",
+      "evidence_target": "graph",
+      "vocabulary": [
+        "hazard",
+        "risk",
+        "independent variable",
+        "dependent variable",
+        "control",
+        "uncertainty"
+      ]
     },
     {
       "id": "u01-l04",
       "number": 4,
       "title": "Graph Choice, Data Displays & Quantitative Claims",
       "week": 1,
-      "focus": "graph choice, data displays & quantitative claims"
+      "focus": "graph choice, data displays & quantitative claims",
+      "application": "laboratory planning, measurement quality, reproducibility, and evidence defense",
+      "evidence_target": "uncertainty statement",
+      "vocabulary": [
+        "hazard",
+        "risk",
+        "independent variable",
+        "dependent variable",
+        "control",
+        "uncertainty"
+      ]
     },
     {
       "id": "u01-l05",
       "number": 5,
       "title": "Replication, Variation & Reproducibility",
       "week": 2,
-      "focus": "replication, variation & reproducibility"
+      "focus": "replication, variation & reproducibility",
+      "application": "laboratory planning, measurement quality, reproducibility, and evidence defense",
+      "evidence_target": "CER",
+      "vocabulary": [
+        "replication",
+        "reproducibility",
+        "precision",
+        "accuracy",
+        "CER",
+        "limitation"
+      ]
     },
     {
       "id": "u01-l06",
       "number": 6,
       "title": "CER, Alternative Explanations & Limitations",
       "week": 2,
-      "focus": "cer, alternative explanations & limitations"
+      "focus": "cer, alternative explanations & limitations",
+      "application": "laboratory planning, measurement quality, reproducibility, and evidence defense",
+      "evidence_target": "limitations",
+      "vocabulary": [
+        "replication",
+        "reproducibility",
+        "precision",
+        "accuracy",
+        "CER",
+        "limitation"
+      ]
     },
     {
       "id": "u01-l07",
       "number": 7,
       "title": "Readiness Synthesis & Evidence Defense",
       "week": 2,
-      "focus": "readiness synthesis & evidence defense"
+      "focus": "readiness synthesis & evidence defense",
+      "application": "laboratory planning, measurement quality, reproducibility, and evidence defense",
+      "evidence_target": "risk assessment",
+      "vocabulary": [
+        "replication",
+        "reproducibility",
+        "precision",
+        "accuracy",
+        "CER",
+        "limitation"
+      ]
     }
   ],
   "mastery": {
@@ -77,5 +147,7 @@
     "randomized": true,
     "retake_fresh_form": true
   },
-  "status": "architecture-locked-lessons-pending"
+  "status": "architecture-locked-lessons-pending",
+  "application": "laboratory planning, measurement quality, reproducibility, and evidence defense",
+  "laboratory_ref": "../../labs/laboratory-spine.json#unit-01"
 }
