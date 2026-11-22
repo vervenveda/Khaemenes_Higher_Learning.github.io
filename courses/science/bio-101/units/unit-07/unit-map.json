@@ -1,5 +1,5 @@
 {
-  "schema": "khaemenes-bio101-unit-map-v1",
+  "schema": "khaemenes-bio101-unit-map-v2",
   "course": "BIO 101",
   "unit": 7,
   "title": "Meiosis, Mendelian Genetics & Quantitative Inheritance",
@@ -26,49 +26,119 @@
       "number": 1,
       "title": "Midterm Synthesis, Corrections & Genetics Bridge",
       "week": 18,
-      "focus": "midterm synthesis, corrections & genetics bridge"
+      "focus": "midterm synthesis, corrections & genetics bridge",
+      "application": "inheritance prediction, pedigree analysis, probability, and statistical fit",
+      "evidence_target": "probability model",
+      "vocabulary": [
+        "homologous chromosome",
+        "meiosis",
+        "synapsis",
+        "crossing over",
+        "independent assortment",
+        "gamete"
+      ]
     },
     {
       "id": "u07-l02",
       "number": 2,
       "title": "Meiosis & Chromosome Behavior",
       "week": 18,
-      "focus": "meiosis & chromosome behavior"
+      "focus": "meiosis & chromosome behavior",
+      "application": "inheritance prediction, pedigree analysis, probability, and statistical fit",
+      "evidence_target": "pedigree",
+      "vocabulary": [
+        "homologous chromosome",
+        "meiosis",
+        "synapsis",
+        "crossing over",
+        "independent assortment",
+        "gamete"
+      ]
     },
     {
       "id": "u07-l03",
       "number": 3,
       "title": "Crossing Over & Independent Assortment",
       "week": 18,
-      "focus": "crossing over & independent assortment"
+      "focus": "crossing over & independent assortment",
+      "application": "inheritance prediction, pedigree analysis, probability, and statistical fit",
+      "evidence_target": "observed/expected table",
+      "vocabulary": [
+        "homologous chromosome",
+        "meiosis",
+        "synapsis",
+        "crossing over",
+        "independent assortment",
+        "gamete"
+      ]
     },
     {
       "id": "u07-l04",
       "number": 4,
       "title": "Alleles, Genotypes & Phenotypes",
       "week": 19,
-      "focus": "alleles, genotypes & phenotypes"
+      "focus": "alleles, genotypes & phenotypes",
+      "application": "inheritance prediction, pedigree analysis, probability, and statistical fit",
+      "evidence_target": "chi-square reasoning",
+      "vocabulary": [
+        "allele",
+        "genotype",
+        "phenotype",
+        "dominance",
+        "segregation",
+        "testcross"
+      ]
     },
     {
       "id": "u07-l05",
       "number": 5,
       "title": "Probability Models & Punnett Reasoning",
       "week": 19,
-      "focus": "probability models & punnett reasoning"
+      "focus": "probability models & punnett reasoning",
+      "application": "inheritance prediction, pedigree analysis, probability, and statistical fit",
+      "evidence_target": "interpretation",
+      "vocabulary": [
+        "allele",
+        "genotype",
+        "phenotype",
+        "dominance",
+        "segregation",
+        "testcross"
+      ]
     },
     {
       "id": "u07-l06",
       "number": 6,
       "title": "Pedigrees, Sex Linkage & Statistical Evidence",
       "week": 20,
-      "focus": "pedigrees, sex linkage & statistical evidence"
+      "focus": "pedigrees, sex linkage & statistical evidence",
+      "application": "inheritance prediction, pedigree analysis, probability, and statistical fit",
+      "evidence_target": "probability model",
+      "vocabulary": [
+        "pedigree",
+        "sex linkage",
+        "probability",
+        "expected value",
+        "chi-square",
+        "degrees of freedom"
+      ]
     },
     {
       "id": "u07-l07",
       "number": 7,
       "title": "Inheritance Investigation & Chi-Square Reasoning",
       "week": 20,
-      "focus": "inheritance investigation & chi-square reasoning"
+      "focus": "inheritance investigation & chi-square reasoning",
+      "application": "inheritance prediction, pedigree analysis, probability, and statistical fit",
+      "evidence_target": "pedigree",
+      "vocabulary": [
+        "pedigree",
+        "sex linkage",
+        "probability",
+        "expected value",
+        "chi-square",
+        "degrees of freedom"
+      ]
     }
   ],
   "mastery": {
@@ -78,5 +148,7 @@
     "randomized": true,
     "retake_fresh_form": true
   },
-  "status": "architecture-locked-lessons-pending"
+  "status": "architecture-locked-lessons-pending",
+  "application": "inheritance prediction, pedigree analysis, probability, and statistical fit",
+  "laboratory_ref": "../../labs/laboratory-spine.json#unit-07"
 }
