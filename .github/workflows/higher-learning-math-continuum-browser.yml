@@ -1,0 +1,38 @@
+name: Higher Learning Mathematics Continuum Browser Certification
+
+on:
+  pull_request:
+    paths:
+      - 'courses/mathematics/**'
+      - 'courses/linear-algebra/**'
+      - 'courses/differential-equations/**'
+      - 'courses/advanced-geometric-topology/**'
+      - '.github/workflows/higher-learning-math-continuum-browser.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'courses/mathematics/**'
+      - 'courses/linear-algebra/**'
+      - 'courses/differential-equations/**'
+      - 'courses/advanced-geometric-topology/**'
+      - '.github/workflows/higher-learning-math-continuum-browser.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  chromium:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Certify Higher Learning mathematics continuum
+        run: node courses/mathematics/tools/validate-higher-learning-math-continuum-browser.mjs
